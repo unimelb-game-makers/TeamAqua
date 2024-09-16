@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * moveSpeed;
 
+        /*Play Animations here*/
         if(moveInput.x > 0 && moveInput.z == 0)
             anim.ChangeAnimationState("WalkRight");
         else if(moveInput.x < 0 && moveInput.z == 0)

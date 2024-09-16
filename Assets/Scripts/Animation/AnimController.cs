@@ -25,6 +25,7 @@ public class AnimController : MonoBehaviour
         }
     }
 
+    /*Call this function with animation name to play animation.*/
     public void ChangeAnimationState(string newAnimState)
     {
         if(currentAnimState == newAnimState) return;
