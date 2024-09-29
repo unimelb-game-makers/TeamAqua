@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class EnergyManager : MonoBehaviour
+{
+    public Image RemainingEnergy;
+    public float EnergyAmount = 100;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void LoseEnergy (float damage)
+    {
+        EnergyAmount -= damage;
+        RemainingEnergy.fillAmount = EnergyAmount / 100;
+    }
+
+    public void GainEnergy ( float healingAmount)
+    {
+        EnergyAmount += healingAmount;
+        EnergyAmount = Mathf.Clamp(EnergyAmount, 0, 100);
+        RemainingEnergy.fillAmount = EnergyAmount / 100;
+    }
+}
