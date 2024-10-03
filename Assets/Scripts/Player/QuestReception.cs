@@ -39,6 +39,7 @@ public class QuestReception : MonoBehaviour
             {
                 // player out of range
                 cue.SetActive(false);
+                DialogueManager.GetDial().ExitDialogueMode();
             }
     }
 }
