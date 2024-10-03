@@ -13,7 +13,7 @@ public class QuestReception : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     private EnergyManager EnergyMana;
     public float energyCost;
-        
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -31,7 +31,7 @@ public class QuestReception : MonoBehaviour
                 cue.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log(inkJSON.text);
+                    DialogueManager.GetDial().EnterDialougeMode(inkJSON);
                     EnergyMana.LoseEnergy(energyCost); 
                 }
             }
