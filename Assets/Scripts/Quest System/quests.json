@@ -1,0 +1,40 @@
+{
+    "quests" : [
+        {
+            "id" : 1,
+            "title" : "Test Quest",
+            "description" : "This is a test quest, you must collect a quest item and finish an objective.",
+            "quest_steps" : [
+                {
+                    "step" : 1,
+                    "description" : "Collect the quest item",
+                    "objective" : "Collect the quest item",
+                    "quest_item_id" : 1,
+                    "quest_item_amount" : 1,
+                    "active":true,
+                    "finished":false
+
+                },
+                {
+                    "step" : 2,
+                    "description" : "Touch the objective",
+                    "objective" : "Finish the objective",
+                    "quest_item_id" : -1,
+                    "quest_item_amount" : -1,
+                    "active":false,
+                    "finished":false
+                }
+            ],
+            "reward" : {
+                "experience" : 100,
+                "gold" : 100,
+                "item" : {
+                    "id" : -1,
+                    "amount" : 0
+                }
+            },
+            "active" : false,
+            "finished" : false
+        }
+    ]
+}
