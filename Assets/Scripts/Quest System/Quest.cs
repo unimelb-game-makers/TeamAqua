@@ -12,8 +12,9 @@ public class QuestData
     public int id;
     public string title;
     public string description;
-    public List<QuestStep> steps = new List<QuestStep>();
+    public List<QuestStep> quest_steps = new List<QuestStep>();
     public Reward reward;
+    public int current_step_number;
     public bool active;
     public bool finished;
     
