@@ -2,8 +2,8 @@
     "quests" : [
         {
             "id" : 1,
-            "title" : "Test Quest",
-            "description" : "This is a test quest, you must collect a quest item and finish an objective.",
+            "title" : "Test Quest 1: ",
+            "description" : "This is a test quest, you must collect a quest <color=green>item</color> and finish an <color=purple>objective</color>.",
             "quest_steps" : [
                 {
                     "step" : 1,
@@ -21,6 +21,44 @@
                     "objective" : "Finish the objective",
                     "quest_item_id" : -1,
                     "quest_item_amount" : -1,
+                    "active":false,
+                    "finished":false
+                }
+            ],
+            "reward" : {
+                "experience" : 100,
+                "gold" : 100,
+                "item" : {
+                    "id" : -1,
+                    "amount" : 0
+                }
+            },
+            "current_step_number":1,
+            "active" : false,
+            "finished" : false
+        },
+
+        {
+            "id" : 2,
+            "title" : "Help Maria: ",
+            "description" : "Maria \"My crops have been destroyed by the ocean, can you please give me <color=green>4 seeds</color>?\"",
+            "quest_steps" : [
+                {
+                    "step" : 1,
+                    "description" : "Collect the quest item",
+                    "objective" : "Go to the market.",
+                    "quest_item_id" : -1,
+                    "quest_item_amount" : -1,
+                    "active":true,
+                    "finished":false
+
+                },
+                {
+                    "step" : 2,
+                    "description" : "Touch the objective",
+                    "objective" : "Buy 4 seeds.",
+                    "quest_item_id" : 3,
+                    "quest_item_amount" : 4,
                     "active":false,
                     "finished":false
                 }
