@@ -63,6 +63,7 @@ public class QuestManager : MonoBehaviour
         // TODO: load the quests from the file when game starts
         // quests = ...
         // finished = ...
+        //
     }
 
     void Update()
