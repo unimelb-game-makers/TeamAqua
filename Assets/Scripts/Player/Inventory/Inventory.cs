@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
         SubtractItem(test_item, 3);
     }
 
-    /*Get the inventory item data of an item*/
+    /*Get the inventory item data of an item*/  
     public InventoryItem GetItemData(Item item)
     {
         foreach(var inventoryItem in inventory)
