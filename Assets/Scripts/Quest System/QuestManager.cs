@@ -1,3 +1,26 @@
+/**
+    Title:          QuestManager.cs
+    Author:         Bill Zhu
+    Verison:        1.0
+    Last Updated:   2024-10-05
+    Description:   This is a singleton class responsible for quest management
+                    in the game. It reads quests from a .json file and adds them
+                    to a list of quests. It also keeps track of the quests the player
+                    has finished. The class provides functions to add quests, complete
+                    steps in quests, and draw the quests in the UI.
+
+                    To use the functions:
+
+                    1. QuestManager.AddQuest(int id): This function adds a quest to the quest list. It reads the quest from the .json file and adds it to the list. Add it to NPC's etc.
+                        - or simply use the QuestGiver script by attaching it to an object
+                    
+                    2. QuestManager.CompleteStep(int id, int step): This function completes a specific step in a quest and moves to the next step. Use it when the player completes a task in the quest.
+
+                    - everything else is done automatically by the QuestManager
+    Edited by:
+*/
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

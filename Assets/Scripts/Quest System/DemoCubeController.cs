@@ -25,4 +25,13 @@ public class DemoCubeController : MonoBehaviour
             questManager.SetActive(true);
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Triggered");
+        if (other.tag == "Player")
+        {
+            questManager.SetActive(false);
+        }
+    }
 }
