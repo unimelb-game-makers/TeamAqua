@@ -12,12 +12,14 @@ public class QuestReception : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
     private EnergyManager EnergyMana;
+    private QuestManager QuestMana;
     public float energyCost;
     
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
+        QuestMana = GameObject.Find("QuestManager").GetComponent<QuestManager>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,8 @@ public class QuestReception : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     DialogueManager.GetDial().EnterDialougeMode(inkJSON);
+                    QuestMana.AddQuest(2);
+                    
                     EnergyMana.LoseEnergy(energyCost); 
                 }
             }
