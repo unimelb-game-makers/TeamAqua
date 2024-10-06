@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestReception : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class QuestReception : MonoBehaviour
     private EnergyManager EnergyMana;
     private QuestManager QuestMana;
     public float energyCost;
+    public Button[] button;
     
     void Start()
     {
@@ -34,7 +36,7 @@ public class QuestReception : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     DialogueManager.GetDial().EnterDialougeMode(inkJSON);
-                    QuestMana.AddQuest(2);
+                    //QuestMana.AddQuest(2);
                     
                     EnergyMana.LoseEnergy(energyCost); 
                 }
@@ -42,7 +44,12 @@ public class QuestReception : MonoBehaviour
             else
             {
                 // player out of range
+                foreach(Button buts in button)
+                {
+                    buts.gameObject.SetActive(false);
+                }
                 cue.SetActive(false);
+
                 DialogueManager.GetDial().ExitDialogueMode();
             }
     }

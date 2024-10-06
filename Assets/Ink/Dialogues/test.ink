@@ -1,7 +1,7 @@
 -> main
 
 === main ===
-this a test!
+this a test!  #speaker: tester
 rahhhh
 Do you take the quest
 

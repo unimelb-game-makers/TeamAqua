@@ -109,7 +109,7 @@ public class DialogueManager : MonoBehaviour
         int index = 0;
         foreach (Choice choice in currentChoices)
         {
-            ButtonPanel.SetActive(true);
+            //ButtonPanel.SetActive(true);
 
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = index; i < choices.Length; i++)
         {
-            ButtonPanel.SetActive(false);
+            //ButtonPanel.SetActive(false);
             choices[index].gameObject.SetActive(false);
         }
     }
