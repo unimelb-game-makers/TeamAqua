@@ -11,18 +11,12 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialText;
-    [Header("dialogue Choices UI")]
+    [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
-
-    [Header("Quest Choices UI")]
-    [SerializeField] private GameObject[] QuestChoices;
     public GameObject ButtonPanel;
     private TextMeshProUGUI[] choicesText;
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
-    private const string SPEAKER_TAG = "speaker";
-    private const string PORTRAIT_TAG = "portrait";
-    private const string LAYOUT_TAG = "layout";
 
 
     private static DialogueManager DialMana;
@@ -87,15 +81,13 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory()
     {
+        
 
         if (currentStory.canContinue)
         {
-            // set text for current dialogue
+
             dialText.text = currentStory.Continue();
-            // display choices
             DisplayChoices();
-            // handle tags in ink
-            HandleTags(currentStory.currentTags);
             
         }
         else
@@ -103,40 +95,6 @@ public class DialogueManager : MonoBehaviour
             
             ExitDialogueMode();
         }
-    }
-
-    private void HandleTags(List<string> currentTags)
-    {
-        foreach (string tag in currentTags)
-        {
-            // parse the tag
-            string[] splitTag = tag.Split(':');
-            if (splitTag.Length != 2)
-            {
-                Debug.LogError("error: tag could not be parsed: " + tag);
-            }
-            string tagKey = splitTag[0].Trim();
-            string tagValue = splitTag[1].Trim();
-
-            // handle the tag
-            switch (tagKey)
-            {
-                case SPEAKER_TAG:
-                    Debug.Log("speaker is " + tagValue);
-                    break;
-                case PORTRAIT_TAG:
-                    Debug.Log("portrait is " + tagValue);
-                    break;
-                case LAYOUT_TAG:
-                    Debug.Log("layout is " + tagValue);
-                    break;
-                default:
-                    Debug.LogWarning("tag came in but is not currently being handled: " + tag);
-                    break;
-            }
-        }
-
-        
     }
 
     private void DisplayChoices()
@@ -162,13 +120,7 @@ public class DialogueManager : MonoBehaviour
         for (int i = index; i < choices.Length; i++)
         {
             //ButtonPanel.SetActive(false);
-            choices[i].gameObject.SetActive(false);
+            choices[index].gameObject.SetActive(false);
         }
-    }
-
-    public void MakeChoice(int choiceIndex)
-    {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
     }
 }

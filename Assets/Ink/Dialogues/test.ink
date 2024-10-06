@@ -1,9 +1,9 @@
 -> main
 
 === main ===
-this a test!  #speaker: tester 
+this a test!  #speaker: tester
 rahhhh
-Do you take the quest?
+Do you take the quest
 
     + [CHOICE 0]
         -> chosen("refused.")
