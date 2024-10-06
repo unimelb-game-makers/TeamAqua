@@ -18,14 +18,15 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] QuestChoices;
     public GameObject ButtonPanel;
     private TextMeshProUGUI[] choicesText;
+    private TextMeshProUGUI[] QuestChoicesText;
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
-
-
     private static DialogueManager DialMana;
+
+    //TODO: make quest choices appear when u need them to
 
     private void Awake()
     {
@@ -47,6 +48,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         choicesText = new TextMeshProUGUI[choices.Length];
+        QuestChoicesText = new TextMeshProUGUI[QuestChoices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
         {
@@ -100,7 +102,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            
+            //DisplayQuestChoices();
             ExitDialogueMode();
         }
     }
@@ -163,6 +165,33 @@ public class DialogueManager : MonoBehaviour
         {
             //ButtonPanel.SetActive(false);
             choices[i].gameObject.SetActive(false);
+        }
+    }
+
+    private void DisplayQuestChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+        //check if UI can support number of choices coming in
+        if (currentChoices.Count > QuestChoices.Length)
+        {
+            Debug.Log("More quest choices given than UI could support. Num of choices given: " + currentChoices.Count);
+        }
+
+        int index = 0;
+        foreach (Choice choice in currentChoices)
+        {
+            //ButtonPanel.SetActive(true);
+
+            QuestChoices[index].gameObject.SetActive(true);
+            QuestChoicesText[index].text = choice.text;
+            index++;
+        }
+
+
+        for (int i = index; i < QuestChoices.Length; i++)
+        {
+            //ButtonPanel.SetActive(false);
+            QuestChoices[i].gameObject.SetActive(false);
         }
     }
 
