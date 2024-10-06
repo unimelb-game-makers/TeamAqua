@@ -1,30 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 //using UnityEngine.InputSystem;    
 
 // INPUT ACTION TO BE REWORKED
-/*
+
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject inventoryMenu;
-    //private bool _menuActivated;
+    [SerializeField] Inventory inventory;
+    [SerializeField] GameObject itemSlotPrefab;
+    [SerializeField] GameObject scrollParent;
+    [SerializeField] GameObject inventoryMenu;
+    private bool _menuActivated;
     //public InputAction menuAction;
-    public ItemSlot[] itemSlot; 
+    public List<ItemSlot> itemSlots = new List<ItemSlot>();
+    
     void Start()
     {
-
+        inventoryMenu.SetActive(false);
+        UpdateSlots();
     }
 
     void Update()
     {
-        if (menuAction.triggered && !_menuActivated)
+        if (Input.GetKeyDown(KeyCode.I) && !_menuActivated)
         {
+            UpdateSlots();
             inventoryMenu.SetActive(true);
             _menuActivated = true;
         }
-        
-        else if (menuAction.triggered && _menuActivated)
+        else if (Input.GetKeyDown(KeyCode.I) && _menuActivated)
         {
             inventoryMenu.SetActive(false);
             _menuActivated = false;
@@ -41,26 +47,40 @@ public class InventoryManager : MonoBehaviour
         //menuAction.Disable();
     }
 
-    public void AddItem(string item, int quantity, Sprite itemSprite)
+    public void UpdateSlots()
     {
-        for (int i = 0; i < itemSlot.Length; i++)
+        bool found;
+        //Get every element from inventory, and put it in a slot
+        foreach(var inventoryItem in inventory.inventory)
         {
-            if (!itemSlot[i].isFull)
+            found = false;
+            //Debug.Log($"Cycled {inventoryItem.item.itemName}");
+            foreach(var itemSlot in itemSlots)
             {
-                itemSlot[i].AddItem(item, quantity, itemSprite);
-                return;
+                if(itemSlot.item_data.item == inventoryItem.item)
+                {
+                    itemSlot.SetItem(inventoryItem);
+                    found = true;
+                    //Debug.Log($"Updated {inventoryItem.item.itemName}");
+                }
             }
-                
+            if(found == false)
+            {
+                //Debug.Log($"Instanced {inventoryItem.item.itemName}");
+                GameObject newItemSlot = Instantiate(itemSlotPrefab, scrollParent.transform);
+                newItemSlot.transform.SetParent(scrollParent.transform);
+                newItemSlot.GetComponent<ItemSlot>().SetItem(inventoryItem);
+                itemSlots.Add(newItemSlot.GetComponent<ItemSlot>());
+            }
         }
     }
 
     public void DeselectAllSlots()
     {
-        for (int i = 0; i < itemSlot.Length; i++)
+        foreach(var itemSlot in itemSlots)
         {
-            itemSlot[i].selectedShader.SetActive(false);
-            itemSlot[i].thisItemSelected = false;
+            itemSlot.selectedShader.SetActive(false);
+            itemSlot.thisItemSelected = false;
         }
     }
 }
-*/
