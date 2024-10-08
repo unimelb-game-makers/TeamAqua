@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2441432889653039573}
   - component: {fileID: 1815761670523736927}
   - component: {fileID: 6100549678245385701}
-  - component: {fileID: 3801246049944128584}
   m_Layer: 0
   m_Name: npc
   m_TagString: Creature
@@ -138,23 +137,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.96, y: 0.96, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3801246049944128584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4289783057018902598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f25ff4a2ba83094db3f93f0a4f874b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  DetectDist: 3
-  cue: {fileID: 7420532977242372586}
-  inkJSON: {fileID: 4900000, guid: 703868b5f95b17f4e98e36cffb355a5b, type: 3}
-  energyCost: 20
 --- !u!1 &7420532977242372586
 GameObject:
   m_ObjectHideFlags: 0
