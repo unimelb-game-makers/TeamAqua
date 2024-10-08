@@ -68,7 +68,7 @@ public class QuestManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && !DialogueSystem.DialMana.dialogueIsPlaying)  //added bool check to see if dialogue is on
+        if (Input.GetKeyDown(KeyCode.J) && !DialogueSystem.GetIsPlaying())  //added bool check to see if dialogue is on
         {
             if (!questCanvas.activeSelf)
             {
@@ -87,7 +87,7 @@ public class QuestManager : MonoBehaviour
             DrawText();
         }
 
-        if (DialogueSystem.DialMana.dialogueIsPlaying) // forcibly closes questlog if player enters dialogue
+        if (DialogueSystem.GetIsPlaying()) // forcibly closes questlog if player enters dialogue
         {
             questCanvas.SetActive(false);
         }
