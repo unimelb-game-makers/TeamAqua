@@ -25,9 +25,9 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying())
         {
-            DialogueSystem.GetDial().EnterDialougeMode(inkJSON);
+            DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
             EnergyMana.LoseEnergy(10);
             DialogueSystem.SetSpeakerName(gameObject.name); 
         }
