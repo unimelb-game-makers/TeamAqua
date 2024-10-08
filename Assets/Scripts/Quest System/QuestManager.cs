@@ -42,7 +42,6 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField] private RectTransform rt; // the rect transform of the questText
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
-
     private bool isScaled = false;
 
     void Awake()
@@ -64,11 +63,12 @@ public class QuestManager : MonoBehaviour
         // quests = ...
         // finished = ...
         //
+        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && !DialogueSystem.DialMana.dialogueIsPlaying)  //added bool check to see if dialogue is on
         {
             if (!questCanvas.activeSelf)
             {
@@ -77,6 +77,7 @@ public class QuestManager : MonoBehaviour
                 isScaled = false;
                 Time.timeScale = 0; // pause the game when the quest canvas is active
             }
+            
             else
             {
                 Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
@@ -84,6 +85,11 @@ public class QuestManager : MonoBehaviour
                 Time.timeScale = 1; // resume game when quest canvas is deactivated
             }
             DrawText();
+        }
+
+        if (DialogueSystem.DialMana.dialogueIsPlaying) // forcibly closes questlog if player enters dialogue
+        {
+            questCanvas.SetActive(false);
         }
 
         if (questCanvas.activeSelf && !isScaled)
