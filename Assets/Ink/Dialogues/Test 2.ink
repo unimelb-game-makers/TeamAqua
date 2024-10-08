@@ -9,9 +9,10 @@ How do u feel today?
     same bro
 
 - I hate calc2 #speaker:silly dev #portrait:silly_dev_base #layout:right
-do u take da quest? #speaker:npc #portrait:npc_base #layout:left
-+ [Yes, i accept the quest]
-    -> main
-+ [Nah, too busy]
+do u take da quest? #speaker:npc #portrait:npc_base #layout:left #quest: 0
++ [Yes, i accept the quest] 
+    nice
+    -> END
++ [Nah, too busy] 
     see u then.
     -> END

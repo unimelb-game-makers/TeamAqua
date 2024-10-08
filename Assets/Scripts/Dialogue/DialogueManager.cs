@@ -10,7 +10,10 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private TextMeshProUGUI dialText;
+    [SerializeField] private TextMeshProUGUI dialText; 
+    [SerializeField] private TextMeshProUGUI DisplayNameText;
+
+
     [Header("dialogue Choices UI")]
     [SerializeField] private GameObject[] choices;
 
@@ -24,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
+    private const string QUEST_TAG = "quest";
     private static DialogueManager DialMana;
 
     //TODO: make quest choices appear when u need them to
@@ -100,9 +104,10 @@ public class DialogueManager : MonoBehaviour
             HandleTags(currentStory.currentTags);
             
         }
+        
         else
-        {
-            //DisplayQuestChoices();
+        {      
+            
             ExitDialogueMode();
         }
     }
@@ -124,7 +129,7 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER_TAG:
-                    Debug.Log("speaker is " + tagValue);
+                    DisplayNameText.text = tagValue;
                     break;
                 case PORTRAIT_TAG:
                     Debug.Log("portrait is " + tagValue);
@@ -132,9 +137,14 @@ public class DialogueManager : MonoBehaviour
                 case LAYOUT_TAG:
                     Debug.Log("layout is " + tagValue);
                     break;
+                case QUEST_TAG:
+                    ButtonPanel.SetActive(false);
+                    DisplayQuestChoices();
+                    break;
                 default:
                     Debug.LogWarning("tag came in but is not currently being handled: " + tag);
                     break;
+                
             }
         }
 
@@ -153,7 +163,7 @@ public class DialogueManager : MonoBehaviour
         int index = 0;
         foreach (Choice choice in currentChoices)
         {
-            //ButtonPanel.SetActive(true);
+            ButtonPanel.SetActive(true);
 
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -163,7 +173,7 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = index; i < choices.Length; i++)
         {
-            //ButtonPanel.SetActive(false);
+            ButtonPanel.SetActive(false);
             choices[i].gameObject.SetActive(false);
         }
     }
