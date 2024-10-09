@@ -25,6 +25,7 @@ public class QuestReception : MonoBehaviour
     }
 
     // Update is called once per frame
+    //TODO: Change distance-based visual cue to be trigger-collider base
     void Update()
     {
         float distsqr = (player.position - transform.position).sqrMagnitude;
