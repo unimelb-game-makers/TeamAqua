@@ -16,6 +16,9 @@ public class DialogueSystem : MonoBehaviour
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
+    private const string LAYOUT_TAG = "layout";
+    private const string QUEST_TAG = "quest";
 
     public string speaker_name = "";
     public static DialogueSystem DialMana;
@@ -38,7 +41,7 @@ public class DialogueSystem : MonoBehaviour
 
     public static void SetSpeakerName(string name)
     {
-        DialMana.speaker_name = name;
+        //DialMana.speaker_name = name;
     }
 
     private void Start()
@@ -49,7 +52,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Update()
     {
-        charName.text = speaker_name + "\n============================================";
+        //charName.text = speaker_name + "\n============================================";
         if (!dialogueIsPlaying)
         {
             return;
@@ -86,9 +89,11 @@ public class DialogueSystem : MonoBehaviour
         if (currentStory.canContinue)
         {
             dialText.text = currentStory.Continue();
-
+            // handle tags in ink
+            HandleTags(currentStory.currentTags);
             if (currentStory.currentChoices.Count > 0) {
                 DisplayChoices();
+                
             } else {
                 ClearChoices();
             }
@@ -98,6 +103,42 @@ public class DialogueSystem : MonoBehaviour
             ExitDialogueMode();
         }
     }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            // parse the tag
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("error: tag could not be parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            // handle the tags aside from quests
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:
+                    charName.text = tagValue;
+                    break;
+                case PORTRAIT_TAG:
+                    Debug.Log("portrait is " + tagValue);
+                    break;
+                case LAYOUT_TAG:
+                    Debug.Log("layout is " + tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("tag came in but is not currently being handled: " + tag);
+                    break;
+                
+            }
+        }
+
+        
+    }
+
 
     // Displays the choice buttons
     private void DisplayChoices()
