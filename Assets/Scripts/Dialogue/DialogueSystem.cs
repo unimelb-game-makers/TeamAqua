@@ -17,8 +17,9 @@ public class DialogueSystem : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
+    [SerializeField] private Animator portraitAnim;
     private const string LAYOUT_TAG = "layout";
-    private const string QUEST_TAG = "quest";
+  
 
     public string speaker_name = "";
     public static DialogueSystem DialMana;
@@ -105,7 +106,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     private void HandleTags(List<string> currentTags)
-    {
+    {   //this handles all tags aside from quest
         foreach (string tag in currentTags)
         {
             // parse the tag
@@ -120,11 +121,12 @@ public class DialogueSystem : MonoBehaviour
             // handle the tags aside from quests
             switch (tagKey)
             {
-                case SPEAKER_TAG:
+                case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                     charName.text = tagValue;
                     break;
-                case PORTRAIT_TAG:
-                    Debug.Log("portrait is " + tagValue);
+                case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
+                    portraitAnim.Play(tagValue);
+                    //Debug.Log("portrait is " + tagValue);
                     break;
                 case LAYOUT_TAG:
                     Debug.Log("layout is " + tagValue);
@@ -134,9 +136,7 @@ public class DialogueSystem : MonoBehaviour
                     break;
                 
             }
-        }
-
-        
+        }        
     }
 
 

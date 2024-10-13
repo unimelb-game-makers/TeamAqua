@@ -3,7 +3,7 @@
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
 //in this script, im doing a line break every time a sentence ends or when it becomes too long, but for later scripts, //feel free to decide.
 
-You find yourself on a beach. #speaker:Narrator
+You find yourself on a beach. #speaker:Narrator 
 The sun glares over you, and your ship is in pieces around you. 
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
@@ -15,13 +15,13 @@ The creature has spotted you and they cry out in pain.
 ->Amelia_encounter
 
  ===choiceNO===
-You decide it’s probably best not to draw attention to yourself. #speaker:Narrator
+You decide it’s probably best not to draw attention to yourself. #speaker:Narrator 
 Besides, someone else might be able to help them out.
 You take a step in the opposite direction, which catches the attention of the creature in need.
 -> repeatNO0
 
 ===repeatNO0===
-Hey! #speaker:Amelia
+Hey! #speaker:Amelia #portrait:AmeliaHappy
 Are you seriously going to ignore someone in peril? 
 Get back here!
 + [NO]
@@ -30,7 +30,7 @@ Get back here!
     -> choiceYES
 
 ===repeatNO1===
-Hey! #speaker:Amelia
+Hey! #speaker:Amelia #portrait:AmeliaSad
 Are you seriously going to ignore someone in peril?
 Get back here!
 + [NO]
@@ -39,7 +39,7 @@ Get back here!
     -> choiceYES
     
 ===repeatNO2===
-Hey! #speaker:Amelia
+Hey! #speaker:Amelia #portrait:AmeliaHappy
 Are you seriously going to ignore someone in peril?
 Get back here!
 + [NO]
@@ -49,7 +49,7 @@ Get back here!
     
 ===repeatNO3===
 ...
-For real? #speaker:Amelia
+For real? #speaker:Amelia #portrait:AmeliaSad
 You can't just ignore me!
 Come back please! 
 + [NO]
@@ -60,7 +60,7 @@ Come back please!
 
 
 ===Amelia_encounter===
-Hey! What are you doing just standing there? Get me out of here! #speaker:Amelia
+Hey! What are you doing just standing there? Get me out of here! #speaker:Amelia #portrait:AmeliaSad
 What do you do? Do you help the creature? #speaker:Narrator
 + [NO]
     ->choiceNO
