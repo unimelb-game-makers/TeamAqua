@@ -24,13 +24,18 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && !_menuActivated)
+        if (Input.GetKeyDown(KeyCode.I) && !_menuActivated && !DialogueSystem.GetIsPlaying())
         {
             UpdateSlots();
             inventoryMenu.SetActive(true);
             _menuActivated = true;
         }
         else if (Input.GetKeyDown(KeyCode.I) && _menuActivated)
+        {
+            inventoryMenu.SetActive(false);
+            _menuActivated = false;
+        }
+        if (DialogueSystem.GetIsPlaying()) // forcibly closes inventory if player enters dialogue
         {
             inventoryMenu.SetActive(false);
             _menuActivated = false;

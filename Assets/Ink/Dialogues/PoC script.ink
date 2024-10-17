@@ -48,8 +48,8 @@ Get back here!
     -> choiceYES
     
 ===repeatNO3===
-...
-For real? #speaker:Amelia #portrait:AmeliaSad
+... #speaker:Amelia #portrait:AmeliaSad
+For real? 
 You can't just ignore me!
 Come back please! 
 + [NO]
@@ -187,14 +187,15 @@ You cast the fishing rod into the waters several times, hoping to catch the fish
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
 ===IncompleteQuest===
+this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
 I still need X more fish. #speaker:Amelia
 You better hurry before I change my mind.
 ->DONE
 
 ===CompleteQuest===
+this line of dialogue should play when player interacts with Amelia after completeing the quest. #speaker:silly dev
 After a few tries, you get the 10 fish you need. #speaker:Narrator
-You return back to Amelia, who’s sitting on the sand next to the
-wreckage of your ship.
+You return back to Amelia, who’s sitting on the sand next to the wreckage of your ship.
 Please tell me you caught some salmon. #speaker:Amelia
 I think so? #speaker:Noelle
 The fish are a lot different around here compared to home
