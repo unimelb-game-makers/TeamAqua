@@ -183,6 +183,7 @@ It’s nothing fancy, but it will do the trick.
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
 You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.
 +[Catch the fishes and convince Amelia #quest:1]
+    
     ->DONE      //first chunk of dialogue ends here
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
@@ -192,7 +193,7 @@ I still need X more fish. #speaker:Amelia
 You better hurry before I change my mind.
 ->DONE
 
-===CompleteQuest===
+===CompleteQuest=== 
 this line of dialogue should play when player interacts with Amelia after completeing the quest. #speaker:silly dev
 After a few tries, you get the 10 fish you need. #speaker:Narrator
 You return back to Amelia, who’s sitting on the sand next to the wreckage of your ship.

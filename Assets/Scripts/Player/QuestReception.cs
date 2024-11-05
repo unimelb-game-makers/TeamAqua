@@ -36,10 +36,9 @@ public class QuestReception : MonoBehaviour
                 cue.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    DialogueManager.GetDial().EnterDialougeMode(inkJSON);
+                    DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
                     //QuestMana.AddQuest(2);
-                    
-                    EnergyMana.LoseEnergy(energyCost); 
+                    //EnergyMana.LoseEnergy(energyCost); 
                 }
             }
             else
@@ -51,7 +50,7 @@ public class QuestReception : MonoBehaviour
                 }
                 cue.SetActive(false);
 
-                DialogueManager.GetDial().ExitDialogueMode();
+                DialogueSystem.GetDial().ExitDialogueMode();
             }
     }
 }

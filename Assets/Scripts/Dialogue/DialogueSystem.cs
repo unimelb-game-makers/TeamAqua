@@ -25,7 +25,7 @@ public class DialogueSystem : MonoBehaviour
     public static DialogueSystem DialMana;
 
     public bool displaying = false;
-
+    
     private void Awake()
     {
         if (DialMana != null)
@@ -33,6 +33,8 @@ public class DialogueSystem : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
         DialMana = this;
+        
+        
     }
 
     public static DialogueSystem GetDial()
@@ -62,14 +64,30 @@ public class DialogueSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !displaying && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
-        }
+        }  
 
-        
+        //================This is for testing knot-jump only, will be deleted later=========================================//
+        if (Input.GetKeyDown(KeyCode.C) && !displaying && currentStory.currentChoices.Count == 0)
+        {
+            currentStory.ChoosePathString("CompleteQuest");
+            ContinueStory();
+        }  
+        //==================================================================================================================//
+    }
+
+    public void MoveKnots()
+    { //handles moving between knots in ink, mostly for loading different dialogues before and after quest completion
+      //if dialogued moved past ||currentStory.ChoosePathString("IncompleteQuest")|| and player accepts quests:
+        //if quest complete blah blah: currentStory.ChoosePathString("CompleteQuest");
+        //if quest incomplete blah blah: currentStory.ChoosePathString("IncompleteQuest");
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        //might change the way we're implementing pause so it doesnt stop time altogether --> ocean shader still moves and maybe some other objects in the bg too, instead of the whole game freezing 
+        
         Time.timeScale = 0;
+        Debug.Log("time stopped");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -79,6 +97,7 @@ public class DialogueSystem : MonoBehaviour
     public void ExitDialogueMode()
     {
         Time.timeScale = 1;
+        Debug.Log("time resumed");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialText.text = "";
@@ -89,6 +108,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+            
             dialText.text = currentStory.Continue();
             // handle tags in ink
             HandleTags(currentStory.currentTags);
@@ -128,6 +148,7 @@ public class DialogueSystem : MonoBehaviour
                     portraitAnim.Play(tagValue);
                     //Debug.Log("portrait is " + tagValue);
                     break;
+
                 case LAYOUT_TAG:
                     Debug.Log("layout is " + tagValue);
                     break;
