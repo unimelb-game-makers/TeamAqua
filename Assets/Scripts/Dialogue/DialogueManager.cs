@@ -30,7 +30,20 @@ public class DialogueManager : MonoBehaviour
     private const string QUEST_TAG = "quest";
     private static DialogueManager DialMana;
 
-    //TODO: make quest choices appear when u need them to
+ 
+
+
+
+
+ 
+    //ALL CHANGES MOVED TO DialogueSystem; this is an old version, can prob delete this script
+
+
+
+
+
+
+
 
     private void Awake()
     {

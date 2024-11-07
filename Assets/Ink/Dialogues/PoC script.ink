@@ -1,3 +1,5 @@
+#id:1
+
 //SCENE X: CRASHLANDING ON NOON ISLAND
 //Comment1: as of rright now, we're using tags to let unity know when to display which portrait sprite, who is speak//etc and also when a choice is a quest-giving one
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
@@ -181,9 +183,7 @@ You look around for something to help you catch some fish. #speaker:Narrator
 In the wreckage of your old ship you find an old fishing rod.
 It’s nothing fancy, but it will do the trick.
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
-You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.
-+[Catch the fishes and convince Amelia #quest:1]
-    
+You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questA:1
     ->DONE      //first chunk of dialogue ends here
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
@@ -193,6 +193,10 @@ I still need X more fish. #speaker:Amelia
 You better hurry before I change my mind.
 ->DONE
 
+===SubmitQuest===
+    +[Finish quest?] -> CompleteQuest
+    +[Not yet] -> DONE
+    
 ===CompleteQuest=== 
 this line of dialogue should play when player interacts with Amelia after completeing the quest. #speaker:silly dev
 After a few tries, you get the 10 fish you need. #speaker:Narrator

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class DialogueSystem : MonoBehaviour
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
+    private const string ID_TAG = "id";
+    private int QuestSid;
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     [SerializeField] private Animator portraitAnim;
@@ -66,20 +69,60 @@ public class DialogueSystem : MonoBehaviour
             ContinueStory();
         }  
 
+        //for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
+        if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
+        {
+            ExitDialogueMode();
+        } 
+
         //================This is for testing knot-jump only, will be deleted later=========================================//
         if (Input.GetKeyDown(KeyCode.C) && !displaying && currentStory.currentChoices.Count == 0)
         {
-            currentStory.ChoosePathString("CompleteQuest");
-            ContinueStory();
+            MoveKnots();
+        }  
+
+        if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
+        {
+            QuestManager.instance.QuestCompleted = true;
+            MoveKnots();
         }  
         //==================================================================================================================//
     }
 
     public void MoveKnots()
     { //handles moving between knots in ink, mostly for loading different dialogues before and after quest completion
-      //if dialogued moved past ||currentStory.ChoosePathString("IncompleteQuest")|| and player accepts quests:
+        //if quest conditions fulfulliled: currentStory.ChoosePathString("SubmitQuest");
         //if quest complete blah blah: currentStory.ChoosePathString("CompleteQuest");
         //if quest incomplete blah blah: currentStory.ChoosePathString("IncompleteQuest");
+        /*
+        if (quest condition fulfilled, && QuestManager.instance.QuestCompleted == true)
+        {
+            currentStory.ChoosePathString("SubmitQuest");
+            ContinueStory();
+            if (currentStory.currentChoices[0])
+            {
+                QuestManager.instance.RemoveQuest(id);
+            }
+        }
+        */
+        if (/*quest condition fulfilled, &&*/ QuestManager.instance.QuestCompleted == true)
+        {
+            currentStory.ChoosePathString("SubmitQuest");
+            ContinueStory();
+            if (currentStory.currentChoices[0])
+            {
+                QuestManager.instance.RemoveQuest(QuestSid);    
+            }
+        }
+    
+        if (QuestManager.instance.QuestCompleted == false)
+        {
+            currentStory.ChoosePathString("IncompleteQuest");
+            ContinueStory();
+        }
+        
+
+        
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -108,7 +151,6 @@ public class DialogueSystem : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            
             dialText.text = currentStory.Continue();
             // handle tags in ink
             HandleTags(currentStory.currentTags);
@@ -127,6 +169,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void HandleTags(List<string> currentTags)
     {   //this handles all tags aside from quest
+
         foreach (string tag in currentTags)
         {
             // parse the tag
@@ -137,10 +180,19 @@ public class DialogueSystem : MonoBehaviour
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
-
+            
             // handle the tags aside from quests
             switch (tagKey)
             {
+                /*  --------------- might go unused, unsure if ID checking necessary or not 
+                case ID_TAG:        //check for ID at the top of each ink file and compare it to ID of quest
+                    id = int.Parse(tagValue); --> try to convert tagvalue to int
+                    break;
+                */
+                case "questA":
+                    QuestSid = int.Parse(tagValue);
+                    QuestManager.instance.AddQuest(QuestSid);
+                    break;
                 case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                     charName.text = tagValue;
                     break;

@@ -18,6 +18,14 @@
 
                     - everything else is done automatically by the QuestManager
     Edited by:
+    Steven, 11/6/2024: 
+        - added bool QuestComplete for testing of MoveKnots function in DialogueSystem
+            + if QuestComplete == true: move to chunk of dialogue that plays after quest is complete
+            + if QuestComplete == false: move to chunk of dialogue that plays when quest is incomplete but player tries to interact with npc
+        - issues: 
+            + might raise confusion between different quest ID, 
+            + assuming player can ONLY complete a quest upon interacting with an NPC again, this means that technically, player can only complete one quest at a time (cant interact with multiple NPC at the same time, maybe, but even if we could it would probably be a scripted encounter and we would eliminiate the option to complete quest before this multi-NPC interaction plays out)   --->  so the bool check QuestComplete could still work?
+        - fix: preferably, check for quest completion by quest[id].finished instead but steven has skill issue and does not know how to implement that without making a big mess rn
 */
 
 
@@ -43,7 +51,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private RectTransform rt; // the rect transform of the questText
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
     private bool isScaled = false;
-
+    public bool QuestCompleted;
     void Awake()
     {
         // Singleton setup
@@ -63,6 +71,7 @@ public class QuestManager : MonoBehaviour
         // quests = ...
         // finished = ...
         //
+        QuestCompleted = false;
         
     }
 
@@ -137,6 +146,7 @@ public class QuestManager : MonoBehaviour
                 }
                 if (questData.id == id && !quests.Contains(questData) && !questData.finished)
                 {
+                    QuestCompleted = false;
                     questData.active = true;
                     questData.current_step_number = 0;
                     quests.Add(questData);
@@ -167,6 +177,7 @@ public class QuestManager : MonoBehaviour
                     quests[i].current_step_number++;
                     if (quests[i].current_step_number == quests[i].quest_steps.Count)
                     {
+                        QuestCompleted = true;      //---> likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
                         RemoveQuest(id);
                     }
                     DrawText();
@@ -223,12 +234,13 @@ public class QuestManager : MonoBehaviour
             }
         }
     }
-    private void RemoveQuest(int id)
+    public void RemoveQuest(int id)     //--note: was previously private, not public
     {
         for (int i = quests.Count - 1; i >= 0; i--)
         {
             if (quests[i].id == id)
             {
+                QuestCompleted = false;
                 quests[i].finished = true;
                 quests.RemoveAt(i);
             }
@@ -239,4 +251,5 @@ public class QuestManager : MonoBehaviour
             rt.sizeDelta = new Vector2(rt.sizeDelta.x, rt.sizeDelta.y - 350);
         }
     }
+
 }
