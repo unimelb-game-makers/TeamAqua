@@ -69,22 +69,25 @@ public class DialogueSystem : MonoBehaviour
             ContinueStory();
         }  
 
-        //for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
+        // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
             ExitDialogueMode();
         } 
 
         //================This is for testing knot-jump only, will be deleted later=========================================//
+        
         if (Input.GetKeyDown(KeyCode.C) && !displaying && currentStory.currentChoices.Count == 0)
         {
             MoveKnots();
+            Debug.Log(QuestManager.instance.QuestCompleted);
         }  
 
         if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
         {
             QuestManager.instance.QuestCompleted = true;
             MoveKnots();
+            Debug.Log(QuestManager.instance.QuestCompleted);
         }  
         //==================================================================================================================//
     }
@@ -109,10 +112,6 @@ public class DialogueSystem : MonoBehaviour
         {
             currentStory.ChoosePathString("SubmitQuest");
             ContinueStory();
-            if (currentStory.currentChoices[0])
-            {
-                QuestManager.instance.RemoveQuest(QuestSid);    
-            }
         }
     
         if (QuestManager.instance.QuestCompleted == false)
@@ -189,9 +188,10 @@ public class DialogueSystem : MonoBehaviour
                     id = int.Parse(tagValue); --> try to convert tagvalue to int
                     break;
                 */
-                case "questA":
+                case "questA":      //---> this handles dialogue-based quest giving
                     QuestSid = int.Parse(tagValue);
                     QuestManager.instance.AddQuest(QuestSid);
+                    
                     break;
                 case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                     charName.text = tagValue;
@@ -200,7 +200,6 @@ public class DialogueSystem : MonoBehaviour
                     portraitAnim.Play(tagValue);
                     //Debug.Log("portrait is " + tagValue);
                     break;
-
                 case LAYOUT_TAG:
                     Debug.Log("layout is " + tagValue);
                     break;
@@ -252,6 +251,18 @@ public class DialogueSystem : MonoBehaviour
                     {
                         Debug.Log("Adding quest");
                         QuestManager.instance.AddQuest(questID);
+                    }
+               }
+//=======================================test remove quest======================================================
+               if (selectedChoice.tags[i].Contains("finish")) {
+                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
+                    Debug.Log("Quest ID: " + questID);
+
+                    // give quest to player
+                    if (questID > 0)
+                    {
+                        Debug.Log("Removing quest");
+                        QuestManager.instance.RemoveQuest(questID);
                     }
                }
             }

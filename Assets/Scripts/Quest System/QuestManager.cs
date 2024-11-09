@@ -71,7 +71,7 @@ public class QuestManager : MonoBehaviour
         // quests = ...
         // finished = ...
         //
-        QuestCompleted = false;
+        //QuestCompleted = false;
         
     }
 
@@ -177,7 +177,7 @@ public class QuestManager : MonoBehaviour
                     quests[i].current_step_number++;
                     if (quests[i].current_step_number == quests[i].quest_steps.Count)
                     {
-                        QuestCompleted = true;      //---> likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
+                        //QuestCompleted = true;      //---> likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
                         RemoveQuest(id);
                     }
                     DrawText();

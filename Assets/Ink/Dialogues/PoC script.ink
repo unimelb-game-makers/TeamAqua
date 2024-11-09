@@ -4,8 +4,9 @@
 //Comment1: as of rright now, we're using tags to let unity know when to display which portrait sprite, who is speak//etc and also when a choice is a quest-giving one
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
 //in this script, im doing a line break every time a sentence ends or when it becomes too long, but for later scripts, //feel free to decide.
-
+<color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 You find yourself on a beach. #speaker:Narrator 
+/*
 The sun glares over you, and your ship is in pieces around you. 
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
@@ -168,6 +169,7 @@ I didn’t say that! #speaker:Amelia
 Look, I’m grateful you saved me from that tree and all, and I do owe you for that, but it’s a bit much to just ask a random stranger to tag along with you. 
 Take care, and try not to die, okay?
 Amelia turns her back on Noelle, and starts walking off in the direction of the rainforests. #speaker:Narrator
+
 Before Amelia can leave however, her stomach rumbles.
 When was the last time you ate? #speaker:Noelle
 (sheepishly) It’s been a little while. #speaker:Amelia  
@@ -175,27 +177,43 @@ When was the last time you ate? #speaker:Noelle
 Hard to find food on this island when everything is trying to kill you.
 Would be pretty convenient if someone were to find some food for you. #speaker:Noelle
 Would save you a lot of effort of doing it yourself. #speaker:Amelia
-(sighs) Fine. #speaker:Amelia
+<b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
 Catch me some fish.
-10 of them, and maybe I will consider joining your party.
+*/
+VAR fish = 10
+VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
+{fish} of them, and maybe I will consider joining your party.
 You look around for something to help you catch some fish. #speaker:Narrator
 In the wreckage of your old ship you find an old fishing rod.
 It’s nothing fancy, but it will do the trick.
+
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
 You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questA:1
+A
+B
+POC quest has been added by the previous line of dialogue (id1)
+Below is the usual choice-based quest giver (id2)
++[Catch the fishes and convince Amelia #quest:2]
+    ->DONE      //first chunk of dialogue ends here
++[Nah thanks]
     ->DONE      //first chunk of dialogue ends here
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
-===IncompleteQuest===
-this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
-I still need X more fish. #speaker:Amelia
-You better hurry before I change my mind.
-->DONE
 
 ===SubmitQuest===
-    +[Finish quest?] -> CompleteQuest
-    +[Not yet] -> DONE
+Would you like to finish this quest? #speaker:Narrator
+text
+clicking on yes should remove quest with id 1 while no should do nothing
+    +[Finish quest? #finish:1] -> CompleteQuest
+    +[Not yet]
+    -> DONE
+    
+===IncompleteQuest===
+this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
+I still need {fish - remainingFish} more fish. #speaker:Amelia
+You better hurry before I change my mind.
+->DONE
     
 ===CompleteQuest=== 
 this line of dialogue should play when player interacts with Amelia after completeing the quest. #speaker:silly dev
