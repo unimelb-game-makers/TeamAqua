@@ -5,8 +5,11 @@
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
 //in this script, im doing a line break every time a sentence ends or when it becomes too long, but for later scripts, //feel free to decide.
 <color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
+
+<color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
+<color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
 You find yourself on a beach. #speaker:Narrator 
-/*
+
 The sun glares over you, and your ship is in pieces around you. 
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
@@ -180,7 +183,7 @@ Would save you a lot of effort of doing it yourself. #speaker:Amelia
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
 Catch me some fish.
-*/
+
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
 {fish} of them, and maybe I will consider joining your party.
