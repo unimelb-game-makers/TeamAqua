@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeed;       //adjust movement speed
+    private float speed;    //freezes movement or resume movement depending on condition check
 
     private Rigidbody rb;
     private Vector3 moveInput;
@@ -24,19 +25,26 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        moveVelocity = moveInput * moveSpeed;
-
-        /*Play Animations here*/
-        if(moveInput.x > 0 && moveInput.z == 0)
-            anim.ChangeAnimationState("WalkRight");
-        else if(moveInput.x < 0 && moveInput.z == 0)
-            anim.ChangeAnimationState("WalkLeft");
-        else if(moveInput.z > 0)
-            anim.ChangeAnimationState("WalkUp");
-        else if(moveInput.z < 0)
-            anim.ChangeAnimationState("WalkDown");
+        moveVelocity = moveInput * speed;
+        if (!DialogueSystem.GetDial().dialogueIsPlaying)
+        {
+            speed = moveSpeed;
+            /*Play Animations here*/
+            if(moveInput.x > 0 && moveInput.z == 0)
+                anim.ChangeAnimationState("WalkRight");
+            else if(moveInput.x < 0 && moveInput.z == 0)
+                anim.ChangeAnimationState("WalkLeft");
+            else if(moveInput.z > 0)
+                anim.ChangeAnimationState("WalkUp");
+            else if(moveInput.z < 0)
+                anim.ChangeAnimationState("WalkDown");
+            else
+                anim.ChangeAnimationState("Idle");
+        }
         else
-            anim.ChangeAnimationState("Idle");
+        {
+            speed = 0;
+        }
     }
 
     /*Handle Physics Calculations*/

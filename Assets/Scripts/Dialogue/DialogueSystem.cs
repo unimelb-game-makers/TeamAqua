@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 public class DialogueSystem : MonoBehaviour
 {
     [Header("Typing")]
-    [SerializeField] private float TypeSpeed = 0.05f;
+    [SerializeField] private float TypeSpeed = 0f;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
@@ -89,17 +89,17 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && canContinueNextLine && !displaying && currentStory.currentChoices.Count == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && canContinueNextLine && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             Debug.Log(dialText);
         }  
 
         // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
-            ExitDialogueMode();
+            StartCoroutine(ExitDialogueMode());
         } 
 
         //================This is for testing knot-jump only, will be deleted later=========================================//
@@ -149,9 +149,10 @@ public class DialogueSystem : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
-        //might change the way we're implementing pause so it doesnt stop time altogether --> ocean shader still moves and maybe some other objects in the bg too, instead of the whole game freezing 
+        // might change the way we're implementing pause so it doesnt stop time altogether --> ocean shader still moves and maybe some other objects in the bg too, instead of the whole game freezing 
+        // new error: Time.timeScale = 0 also messes with the StartCoroutine used to adjust dialogue-loading speed,
         
-        Time.timeScale = 0;
+        //Time.timeScale = 0;          
         Debug.Log("time stopped");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
@@ -159,9 +160,10 @@ public class DialogueSystem : MonoBehaviour
         ContinueStory();
     }
 
-    public void ExitDialogueMode()
+    public IEnumerator ExitDialogueMode()
     {
-        Time.timeScale = 1;
+        yield return new WaitForSeconds(0.2f);
+        //Time.timeScale = 1;
         Debug.Log("time resumed");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -176,7 +178,7 @@ public class DialogueSystem : MonoBehaviour
         if (currentStory.canContinue)
         {
             // dialText.text = currentStory.Continue();
-
+            
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);
@@ -195,7 +197,7 @@ public class DialogueSystem : MonoBehaviour
             */
         }else
         {
-            ExitDialogueMode();
+            StartCoroutine(ExitDialogueMode());
         }
     }
 
@@ -209,7 +211,7 @@ public class DialogueSystem : MonoBehaviour
         foreach (char letter in line.ToCharArray())
         {
             //shift hold + space key ---> loads entire line of dialogue instantly
-            if(Input.GetKeyDown(KeyCode.Space) && Input.GetKey(KeyCode.LeftShift))
+            if(Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Space))
             {
                 dialText.text = line;
                 break;
@@ -228,7 +230,7 @@ public class DialogueSystem : MonoBehaviour
             // otherwise, loads letters normally
             else
             {
-                 Debug.Log(letter);
+                Debug.Log(letter);
                 dialText.text += letter;
                 yield return new WaitForSeconds(TypeSpeed);
             }
