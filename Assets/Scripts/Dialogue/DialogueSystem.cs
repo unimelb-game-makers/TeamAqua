@@ -99,7 +99,7 @@ public class DialogueSystem : MonoBehaviour
         // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
-            StartCoroutine(ExitDialogueMode());
+            ExitDialogueMode();
         } 
 
         //================This is for testing knot-jump only, will be deleted later=========================================//
@@ -150,7 +150,6 @@ public class DialogueSystem : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         // might change the way we're implementing pause so it doesnt stop time altogether --> ocean shader still moves and maybe some other objects in the bg too, instead of the whole game freezing 
-        // new error: Time.timeScale = 0 also messes with the StartCoroutine used to adjust dialogue-loading speed,
         
         //Time.timeScale = 0;          
         Debug.Log("time stopped");
@@ -160,9 +159,9 @@ public class DialogueSystem : MonoBehaviour
         ContinueStory();
     }
 
-    public IEnumerator ExitDialogueMode()
+    public void ExitDialogueMode()
     {
-        yield return new WaitForSeconds(0.2f);
+        //yield return new WaitForSeconds(0.2f);
         //Time.timeScale = 1;
         Debug.Log("time resumed");
         dialogueIsPlaying = false;
@@ -197,7 +196,7 @@ public class DialogueSystem : MonoBehaviour
             */
         }else
         {
-            StartCoroutine(ExitDialogueMode());
+            ExitDialogueMode();
         }
     }
 
@@ -232,7 +231,8 @@ public class DialogueSystem : MonoBehaviour
             {
                 Debug.Log(letter);
                 dialText.text += letter;
-                yield return new WaitForSeconds(TypeSpeed);
+                //yield return new WaitForSecondsRealtime(TypeSpeed);       -> use if freezing time
+                yield return new WaitForSeconds(TypeSpeed);         // -> use if not freezing time
             }
 
         }
