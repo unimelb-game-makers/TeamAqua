@@ -1,15 +1,23 @@
--> main
+INCLUDE globals.ink
+
+{ mat == "": -> main | -> alreadychosen}
+//if variable mat is empty, go to knot main, else go to knot alreadychosen
 
 === main ===
 this a test!  #speaker: tester 
 rahhhh
-Do you take the quest?
+Do you take wood or water?
 
-    + [CHOICE 0]
-        -> chosen("refused.")
-    + [CHOICE 1]
-        -> chosen("accepted!")
+    + [WOOD]
+        -> chosen("wood")
+    + [WATER]
+        -> chosen("water")
         
-=== chosen(quest) ===
-You {quest}
+=== chosen(material) ===
+~mat = material
+You chose {mat}
+-> DONE
+
+==alreadychosen===
+you already chose {mat}
 -> END

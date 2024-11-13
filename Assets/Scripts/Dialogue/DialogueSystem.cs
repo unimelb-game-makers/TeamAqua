@@ -6,10 +6,13 @@ using Ink.Runtime;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.EventSystems;
+
 public class DialogueSystem : MonoBehaviour
 {
     [Header("Typing")]
-    [SerializeField] private float TypeSpeed = 0f;
+    [SerializeField] private float TypeSpeed = 0.04f;
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset LoadGlobalJSON;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
@@ -20,7 +23,6 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private GameObject leftDial;
     [SerializeField] private GameObject rightDial;
 
-
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private const string ID_TAG = "id";
@@ -30,6 +32,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private Animator portraitAnimLeft;
     [SerializeField] private Animator portraitAnimRight;
     private const string LAYOUT_TAG = "layout";
+    private DialogueVariable dialogueVariable;
   
 
     public string speaker_name = "";
@@ -41,9 +44,18 @@ public class DialogueSystem : MonoBehaviour
     private bool canContinueNextLine = false;
 
     [Header("Audio")]
-    [SerializeField] private AudioClip dialogueTypingSound;
-    private AudioSource audioSource;
+    [SerializeField] private AudioClip[] dialogueTypingSounds;
+    [SerializeField] private bool StopAudioSource;
+    [Range(1, 5)]
+    [SerializeField] private int AudioFrequency = 2;
+
+    [Range(-3, 3)]
+    [SerializeField] private float minPitch = 0.5f;
+    [Range(-3, 3)]
+    [SerializeField] private float maxPitch = 3f;
     
+    private AudioSource audioSource;
+    private bool HashApproach = true; //-> set to true if want predictable-ish dialogue speech
 
 
 
@@ -57,6 +69,8 @@ public class DialogueSystem : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
         DialMana = this;
+
+        dialogueVariable = new DialogueVariable(LoadGlobalJSON);
 
         audioSource = this.gameObject.AddComponent<AudioSource>();
         
@@ -79,6 +93,7 @@ public class DialogueSystem : MonoBehaviour
         dialoguePanel.SetActive(false);
         leftDial.SetActive(false);
         rightDial.SetActive(false);
+        StopAudioSource = true;
     }
 
     void Update()
@@ -89,7 +104,14 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && canContinueNextLine && currentStory.currentChoices.Count == 0)
+        if (Input.GetKeyDown(KeyCode.E) && canContinueNextLine && currentStory.currentChoices.Count == 0)
+        {
+            ContinueStory();
+            //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            Debug.Log(dialText);
+        }  
+        
+        if (Input.GetKeyDown(KeyCode.E) && canContinueNextLine && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
             //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
@@ -100,6 +122,7 @@ public class DialogueSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
             ExitDialogueMode();
+            audioSource.Stop();
         } 
 
         //================This is for testing knot-jump only, will be deleted later=========================================//
@@ -156,6 +179,7 @@ public class DialogueSystem : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        dialogueVariable.StartListening(currentStory);
         ContinueStory();
     }
 
@@ -164,13 +188,12 @@ public class DialogueSystem : MonoBehaviour
         //yield return new WaitForSeconds(0.2f);
         //Time.timeScale = 1;
         Debug.Log("time resumed");
+        dialogueVariable.StopListening(currentStory);
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialText.text = "";
         ClearChoices(); // Clear choice buttons on exit
     }
-
-
 
     private void ContinueStory()
     {
@@ -202,24 +225,31 @@ public class DialogueSystem : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {   //text effect: shows one character at a time instead of pasting the whole line of dialogue
-        dialText.text = "";
+
+        dialText.text = line;   //set text to full line, but set visible characters to 0
+        dialText.maxVisibleCharacters = 0;
+
+
+
         ClearChoices();
         canContinueNextLine = false;
 
         bool isRichText = false;
         foreach (char letter in line.ToCharArray())
         {
-            //shift hold + space key ---> loads entire line of dialogue instantly
-            if(Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Space))
+            /*      line skip stuffs (load the whole line of dialogue) below
+            //space key ---> loads entire line of dialogue instantly
+            if(Input.GetKeyDown(KeyCode.Space))
             {
-                dialText.text = line;
+                Debug.Log("line loaded");
+                dialText.maxVisibleCharacters = line.Length;
                 break;
             }
+            */
             //check for rich text
             if (letter == '<' || isRichText)
             {
                 isRichText = true;
-                dialText.text += letter;
                 if (letter == '>')
                 {
                     isRichText = false;
@@ -229,8 +259,9 @@ public class DialogueSystem : MonoBehaviour
             // otherwise, loads letters normally
             else
             {
+                PlayDialogueSound(dialText.maxVisibleCharacters, dialText.text[dialText.maxVisibleCharacters]);
                 Debug.Log(letter);
-                dialText.text += letter;
+                dialText.maxVisibleCharacters++;
                 //yield return new WaitForSecondsRealtime(TypeSpeed);       -> use if freezing time
                 yield return new WaitForSeconds(TypeSpeed);         // -> use if not freezing time
             }
@@ -268,7 +299,7 @@ public class DialogueSystem : MonoBehaviour
                     id = int.Parse(tagValue); --> try to convert tagvalue to int
                     break;
                 */
-                case "questA":      //---> this handles dialogue-based quest giving
+                case "questS":      //---> this handles dialogue-based quest giving
                     QuestSid = int.Parse(tagValue);
                     QuestManager.instance.AddQuest(QuestSid);
                     
@@ -382,7 +413,6 @@ public class DialogueSystem : MonoBehaviour
         ContinueStory();
     }
 
-
     // Clears all the current choice buttons
     private void ClearChoices()
     {
@@ -401,5 +431,67 @@ public class DialogueSystem : MonoBehaviour
     public static bool GetIsPlaying()
     {
         return DialMana.dialogueIsPlaying;
+    }
+
+    public void PlayDialogueSound(int currentDisplayedCharCount, char currentCharacter)
+    {
+        if (currentDisplayedCharCount % AudioFrequency == 0)
+        {
+            if (StopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            AudioClip soundClip = null;
+
+            //creating predictable speech by hashcode
+            if (HashApproach)
+            {   
+                //generate hashcode for each characters
+                int hashcode = currentCharacter.GetHashCode();
+                //sound clip
+                int predictableIndex = hashcode % dialogueTypingSounds.Length;
+                soundClip = dialogueTypingSounds[predictableIndex];
+                //pitch
+                int minPitchInt = (int) (minPitch * 100);
+                int maxPitchInt = (int) (maxPitch * 100);
+                int pitchRangeInt = maxPitchInt - minPitchInt;
+                
+                //cant divide by 0, no range so skip selection
+                if (pitchRangeInt != 0)
+                {
+                    int predictablePitchInt = (hashcode % pitchRangeInt) + minPitchInt;
+                    float predictablePitch = predictablePitchInt / 100f;
+                    audioSource.pitch = predictablePitch;
+                }
+
+                else
+                {       //set pitch to either minPitch or maxPitch
+                    audioSource.pitch = minPitch;
+                }
+
+            }
+            else
+            {
+                //sound clips
+                int randomIndex = Random.Range(0, dialogueTypingSounds.Length);
+                soundClip = dialogueTypingSounds[randomIndex];
+                //pitch
+                audioSource.pitch = Random.Range(minPitch, maxPitch);
+            }
+            
+            //play sounds
+            audioSource.PlayOneShot(soundClip);
+        }
+    }
+
+    public Ink.Runtime.Object GetVariableState(string variableName)
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariable.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null)
+        {
+            Debug.LogWarning("Ink Variable was found null: " + variableName);
+        }
+        return variableValue;
     }
 }

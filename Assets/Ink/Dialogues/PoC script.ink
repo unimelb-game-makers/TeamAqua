@@ -20,7 +20,16 @@ One tree seems to have fallen down, and underneath it...
 The creature has spotted you and they cry out in pain.
 ->Amelia_encounter
 
- ===choiceNO===
+===Amelia_encounter===
+Hey! What are you doing just standing there? Get me out of here! #speaker:Amelia #portrait:AmeliaSad
+What do you do? Do you help the creature? #speaker:Narrator
++ [NO]
+    ->choiceNO
+
++ [YES]
+    ->choiceYES
+
+ ===choiceNO===     //if Player does not help Amelia --> loops over and over again (fourth cycle gives slightly different dialogue)
 You decide it’s probably best not to draw attention to yourself. #speaker:Narrator 
 Besides, someone else might be able to help them out.
 You take a step in the opposite direction, which catches the attention of the creature in need.
@@ -64,22 +73,8 @@ Come back please!
     -> choiceYES
 
 
-
-===Amelia_encounter===
-Hey! What are you doing just standing there? Get me out of here! #speaker:Amelia #portrait:AmeliaSad
-What do you do? Do you help the creature? #speaker:Narrator
-+ [NO]
-    ->choiceNO
-
-+ [YES]
-    ->choiceYES
-
-
-
-
-  
-===choiceYES===
-It’s what your gut is telling you, and it’s high time you started listening to your gut. 
+===choiceYES=== //if player chooses to help Amelia
+It’s what your gut is telling you, and it’s high time you started listening to your gut. #speaker:Narrator
 You rush in and with a surge of power that feels like it came out of nowhere, you move the tree off the creature. 
 As it crashes to the ground next to you, the creature stands up slowly, face tensing in pain.
 
@@ -175,7 +170,7 @@ Amelia turns her back on Noelle, and starts walking off in the direction of the 
 
 Before Amelia can leave however, her stomach rumbles.
 When was the last time you ate? #speaker:Noelle
-(sheepishly) It’s been a little while. #speaker:Amelia  
+<i>sheepishly</i> It’s been a little while. #speaker:Amelia  
 //dev note might be able to add some sfx here for that sheepishly line? need more experimenting
 Hard to find food on this island when everything is trying to kill you.
 Would be pretty convenient if someone were to find some food for you. #speaker:Noelle
@@ -183,21 +178,20 @@ Would save you a lot of effort of doing it yourself. #speaker:Amelia
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
 Catch me some fish.
-
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
 {fish} of them, and maybe I will consider joining your party.
 You look around for something to help you catch some fish. #speaker:Narrator
 In the wreckage of your old ship you find an old fishing rod.
 It’s nothing fancy, but it will do the trick.
-
+VAR id = 1
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
-You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questA:1
+You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:{id}
 A
 B
 POC quest has been added by the previous line of dialogue (id1)
 Below is the usual choice-based quest giver (id2)
-+[Catch the fishes and convince Amelia #quest:2]
++[Catch the fishes #quest:2]
     ->DONE      //first chunk of dialogue ends here
 +[Nah thanks]
     ->DONE      //first chunk of dialogue ends here
@@ -208,7 +202,7 @@ Below is the usual choice-based quest giver (id2)
 Would you like to finish this quest? #speaker:Narrator
 text
 clicking on yes should remove quest with id 1 while no should do nothing
-    +[Finish quest? #finish:1] -> CompleteQuest
+    +[Finish quest? #finish:{id}] -> CompleteQuest
     +[Not yet]
     -> DONE
     
@@ -229,7 +223,7 @@ Huh. And where is your home? #speaker:Amelia
 Dusk Island. #speaker:Noelle
 It was until recently anyway.
 Sorry to hear about that. #speaker:Amelia
-Is that why you were on the ship when the storms—(stomach rumbles again) //add sound effects here
+Is that why you were on the ship when the storms <i>stomach rumbles again</i> //add sound effects here
 While I would love to keep chatting, gimme the fish, quickly!
 You hand over the fish, and Amelia hastily gobbles it all down, bones, scales and all. #speaker:Narrator
 You must have been pretty hungry... #speaker:Noelle
@@ -240,8 +234,7 @@ But the reality is I still barely know you.
 And if you can catch that many fish in a short span of time, I’m sure you’ll be able to survive fine on your own. 
 And I don’t really travel in groups anyway.
 But we had an agreement— #speaker:Noelle
-The haunting roar of a monstrous beast echoes throughout the
-island. Whatever you had to say is forgotten in the moment. //add sfx here
+The /*add sfx here*/ haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
 Rain begins to fall on the island. 
 Amelia looks up in horror.
 The Great Disaster... #speaker:Amelia
