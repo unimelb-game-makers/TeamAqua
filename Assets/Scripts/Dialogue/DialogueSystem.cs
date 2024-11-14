@@ -32,6 +32,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private Animator portraitAnimLeft;
     [SerializeField] private Animator portraitAnimRight;
     private const string LAYOUT_TAG = "layout";
+    private const string AUDIO_TAG = "audio";
     private DialogueVariable dialogueVariable;
   
 
@@ -43,18 +44,14 @@ public class DialogueSystem : MonoBehaviour
     private Coroutine displayLineCoroutine;
     private bool canContinueNextLine = false;
 
-    [Header("Audio")]
-    [SerializeField] private AudioClip[] dialogueTypingSounds;
-    [SerializeField] private bool StopAudioSource;
-    [Range(1, 5)]
-    [SerializeField] private int AudioFrequency = 2;
 
-    [Range(-3, 3)]
-    [SerializeField] private float minPitch = 0.5f;
-    [Range(-3, 3)]
-    [SerializeField] private float maxPitch = 3f;
-    
+    [Header("Audio")]
+    [SerializeField] private DialougeAudioInfo defaultAudioInfo;
+    [SerializeField] private DialougeAudioInfo[] audioInfos;
+    private DialougeAudioInfo currentAudioInfo;
+    private Dictionary<string, DialougeAudioInfo> audioInfoDictionary;
     private AudioSource audioSource;
+
     private bool HashApproach = true; //-> set to true if want predictable-ish dialogue speech
 
 
@@ -73,6 +70,7 @@ public class DialogueSystem : MonoBehaviour
         dialogueVariable = new DialogueVariable(LoadGlobalJSON);
 
         audioSource = this.gameObject.AddComponent<AudioSource>();
+        currentAudioInfo = defaultAudioInfo;
         
         
     }
@@ -93,7 +91,9 @@ public class DialogueSystem : MonoBehaviour
         dialoguePanel.SetActive(false);
         leftDial.SetActive(false);
         rightDial.SetActive(false);
-        StopAudioSource = true;
+        //StopAudioSource = true;
+
+        InitializeAudioDictionary();
     }
 
     void Update()
@@ -193,6 +193,7 @@ public class DialogueSystem : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialText.text = "";
         ClearChoices(); // Clear choice buttons on exit
+        SetCurrentAudioInfo(defaultAudioInfo.id);
     }
 
     private void ContinueStory()
@@ -206,9 +207,9 @@ public class DialogueSystem : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
             string nextLine = currentStory.Continue();
-            displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
             // handle tags in ink
             HandleTags(currentStory.currentTags);
+            displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
             /*
             if (currentStory.currentChoices.Count > 0) {
                 DisplayChoices();
@@ -342,6 +343,9 @@ public class DialogueSystem : MonoBehaviour
                 case LAYOUT_TAG:
                     Debug.Log("layout is " + tagValue);
                     break;
+                case AUDIO_TAG:
+                    SetCurrentAudioInfo(tagValue);
+                    break;
                 default:
                     Debug.LogWarning("tag came in but is not currently being handled: " + tag);
                     break;
@@ -433,8 +437,41 @@ public class DialogueSystem : MonoBehaviour
         return DialMana.dialogueIsPlaying;
     }
 
-    public void PlayDialogueSound(int currentDisplayedCharCount, char currentCharacter)
+    // Audio-related stuffs below
+    private void InitializeAudioDictionary()
     {
+        audioInfoDictionary = new Dictionary<string, DialougeAudioInfo>();
+        audioInfoDictionary.Add(defaultAudioInfo.id, defaultAudioInfo);
+        foreach (DialougeAudioInfo audioInfo in audioInfos)
+        {
+            audioInfoDictionary.Add(audioInfo.id, audioInfo);
+        }
+    }
+
+    private void SetCurrentAudioInfo(string id)
+    {
+        DialougeAudioInfo audioInfo = null;
+        audioInfoDictionary.TryGetValue(id, out audioInfo);
+        if (audioInfo != null)
+        {
+            this.currentAudioInfo = audioInfo;
+        }
+        else
+        {
+            Debug.Log("failed to find audio info for id: " + id);
+        }
+    }
+
+    public void PlayDialogueSound(int currentDisplayedCharCount, char currentCharacter)
+    {   
+        // set variables for the below based on config
+        AudioClip[] dialogueTypingSounds = currentAudioInfo.dialogueTypingSounds;
+        int AudioFrequency = currentAudioInfo.AudioFrequency;
+        float minPitch = currentAudioInfo.minPitch;
+        float maxPitch = currentAudioInfo.maxPitch;
+        bool StopAudioSource = currentAudioInfo.StopAudioSource;
+
+        // play sound based on config
         if (currentDisplayedCharCount % AudioFrequency == 0)
         {
             if (StopAudioSource)
@@ -484,6 +521,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
+    // Varibales stuffs
     public Ink.Runtime.Object GetVariableState(string variableName)
     {
         Ink.Runtime.Object variableValue = null;

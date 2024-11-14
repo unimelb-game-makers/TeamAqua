@@ -4,13 +4,13 @@
 //Comment1: as of rright now, we're using tags to let unity know when to display which portrait sprite, who is speak//etc and also when a choice is a quest-giving one
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
 //in this script, im doing a line break every time a sentence ends or when it becomes too long, but for later scripts, //feel free to decide.
-<color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
+<color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color> #speaker:Narrator #audio:2beep
 
 <color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 <color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
-You find yourself on a beach. #speaker:Narrator 
+You find yourself on a beach. #speaker:Narrator  #audio:animal
 
-The sun glares over you, and your ship is in pieces around you. 
+The sun glares over you, and your ship is in pieces around you. #audio:2beep
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
 The storms of yesterday seem to have died down for now. 
@@ -21,8 +21,8 @@ The creature has spotted you and they cry out in pain.
 ->Amelia_encounter
 
 ===Amelia_encounter===
-Hey! What are you doing just standing there? Get me out of here! #speaker:Amelia #portrait:AmeliaSad
-What do you do? Do you help the creature? #speaker:Narrator
+Hey! What are you doing just standing there? Get me out of here! #speaker:Amelia #portrait:AmeliaSad #audio:animal
+What do you do? Do you help the creature? #speaker:Narrator #audio:2beep
 + [NO]
     ->choiceNO
 
@@ -30,13 +30,13 @@ What do you do? Do you help the creature? #speaker:Narrator
     ->choiceYES
 
  ===choiceNO===     //if Player does not help Amelia --> loops over and over again (fourth cycle gives slightly different dialogue)
-You decide it’s probably best not to draw attention to yourself. #speaker:Narrator 
+You decide it’s probably best not to draw attention to yourself. #speaker:Narrator #audio:2beep
 Besides, someone else might be able to help them out.
 You take a step in the opposite direction, which catches the attention of the creature in need.
 -> repeatNO0
 
 ===repeatNO0===
-Hey! #speaker:Amelia #portrait:AmeliaHappy
+Hey! #speaker:Amelia #portrait:AmeliaHappy #audio:animal
 Are you seriously going to ignore someone in peril? 
 Get back here!
 + [NO]
@@ -45,7 +45,7 @@ Get back here!
     -> choiceYES
 
 ===repeatNO1===
-Hey! #speaker:Amelia #portrait:AmeliaSad
+Hey! #speaker:Amelia #portrait:AmeliaSad #audio:animal
 Are you seriously going to ignore someone in peril?
 Get back here!
 + [NO]
@@ -54,7 +54,7 @@ Get back here!
     -> choiceYES
     
 ===repeatNO2===
-Hey! #speaker:Amelia #portrait:AmeliaHappy
+Hey! #speaker:Amelia #portrait:AmeliaHappy #audio:animal
 Are you seriously going to ignore someone in peril?
 Get back here!
 + [NO]
@@ -63,7 +63,7 @@ Get back here!
     -> choiceYES
     
 ===repeatNO3===
-... #speaker:Amelia #portrait:AmeliaSad
+... #speaker:Amelia #portrait:AmeliaSad #audio:animal
 For real? 
 You can't just ignore me!
 Come back please! 
@@ -74,18 +74,18 @@ Come back please!
 
 
 ===choiceYES=== //if player chooses to help Amelia
-It’s what your gut is telling you, and it’s high time you started listening to your gut. #speaker:Narrator
+It’s what your gut is telling you, and it’s high time you started listening to your gut. #speaker:Narrator #audio:2beep
 You rush in and with a surge of power that feels like it came out of nowhere, you move the tree off the creature. 
 As it crashes to the ground next to you, the creature stands up slowly, face tensing in pain.
 
-That’s more like it. Thought for sure I would be a goner there. #speaker:Amelia
+That’s more like it. Thought for sure I would be a goner there. #speaker:Amelia #audio:animal
 
-Are you hurt? #speaker:Noelle
+Are you hurt? #speaker:Noelle #audio:default
 
 
-I’m a little bruised, but I would be a lot worse for wear if it wasn’t for you. #speaker:Amelia
-So thanks. 
-Amelia looks up at you, and recoils in horror. #speaker:Narrator
+I’m a little bruised, but I would be a lot worse for wear if it wasn’t for you. #speaker:Amelia #audio:animal
+So thanks.  
+Amelia looks up at you, and recoils in horror. #speaker:Narrator #audio:2beep
 
 Hey, wait a minute? Are you a - #speaker:Amelia
 human! #speaker:Amelia

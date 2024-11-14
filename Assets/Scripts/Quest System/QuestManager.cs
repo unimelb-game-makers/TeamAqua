@@ -146,7 +146,7 @@ public class QuestManager : MonoBehaviour
                 }
                 if (questData.id == id && !quests.Contains(questData) && !questData.finished)
                 {
-                    QuestCompleted = false;
+                    QuestCompleted = false;     //quest status is false at the start
                     questData.active = true;
                     questData.current_step_number = 0;
                     quests.Add(questData);
@@ -239,8 +239,8 @@ public class QuestManager : MonoBehaviour
         for (int i = quests.Count - 1; i >= 0; i--)
         {
             if (quests[i].id == id)
-            {
-                QuestCompleted = false;
+            {                              //in the DialogueSystem script, this quest status is manually turned true, 
+                QuestCompleted = false;    //<-- return the quest status to false after its removal, so other quests arent affected
                 quests[i].finished = true;
                 quests.RemoveAt(i);
             }
