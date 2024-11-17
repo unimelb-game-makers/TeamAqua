@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             speed = 0;
+            anim.ChangeAnimationState("Idle");
         }
     }
 

@@ -56,9 +56,12 @@ public class DialogueSystem : MonoBehaviour
 
 
 
-    //TODO: track state of dialogue: start(0) -> questgiving(1) -> incompletequest(2) -> completequest(3) 
+    // TODO: track state of dialogue: start(0) -> questgiving(1) -> incompletequest(2) -> completequest(3) 
     //stop playing dialogue (0) while repeatedly playing some dialogues such as (2) while quest is still ongoing
     // if (0) is already played and quests are already done, move to any further important dialogue such as (3) and then finally move to random idle dialogues
+
+    // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
+    // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more 
     private void Awake()
     {
         if (DialMana != null)
@@ -135,15 +138,19 @@ public class DialogueSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
         {
-            QuestManager.instance.QuestCompleted = true;    //--> manually turns bool true: this acts as the case where player has finished the quest
-            MoveKnots();
+            currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps
+            Debug.Log("vairable quest accessed and set to 10");
+            //QuestManager.instance.QuestCompleted = true;    //--> manually turns bool true: this acts as the case where player has finished the quest
+            //MoveKnots();
         }  
         //==================================================================================================================//
     }
 
+
+    // 11/16/2024: we might not even need MoveKnots() anymore if we use conditions check within the ink script itself actually
     public void MoveKnots()
     { //handles moving between knots in ink, mostly for loading different dialogues before and after quest completion
-        //if quest conditions fulfulliled: currentStory.ChoosePathString("SubmitQuest");
+        //if quest conditions fulfilled: currentStory.ChoosePathString("SubmitQuest");
         //if quest complete blah blah: currentStory.ChoosePathString("CompleteQuest");
         //if quest incomplete blah blah: currentStory.ChoosePathString("IncompleteQuest");
         /*
@@ -174,13 +181,15 @@ public class DialogueSystem : MonoBehaviour
     {
         // might change the way we're implementing pause so it doesnt stop time altogether --> ocean shader still moves and maybe some other objects in the bg too, instead of the whole game freezing 
         
-        //Time.timeScale = 0;          
+        //Time.timeScale = 0;   
+        Time.timeScale = 1;       
         Debug.Log("time stopped");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         dialogueVariable.StartListening(currentStory);
         ContinueStory();
+        
     }
 
     public void ExitDialogueMode()

@@ -1,15 +1,35 @@
-#id:1
+//ideally, use just local variables but it seems easier to work with global variables
 
+
+
+
+
+INCLUDE globals.ink
+VAR questSteps = ""         // <-- //delcaring the local var ends up reseting whatever change we did, make to it at the start, hence justifies the need to declare a global variable
+~ questSteps = quest_id1
 //SCENE X: CRASHLANDING ON NOON ISLAND
 //Comment1: as of rright now, we're using tags to let unity know when to display which portrait sprite, who is speak//etc and also when a choice is a quest-giving one
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
 //in this script, im doing a line break every time a sentence ends or when it becomes too long, but for later scripts, //feel free to decide.
-<color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color> #speaker:Narrator #audio:2beep
 
+current quest step is {questSteps} and current quest_id var is {quest_id1}
+
+//conditional check, if var quest is empty, load main dialogue, if quest var < 10 (fishes), go to incomplete quest, else, go to submit quest
+{ 
+    - questSteps == "": 
+        -> main 
+    - questSteps < 10: 
+        -> IncompleteQuest
+    - questSteps >= 10:
+        -> SubmitQuest 
+}
+        
+===main===
+<color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color> #speaker:Narrator #audio:2beep
+/*
 <color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 <color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
 You find yourself on a beach. #speaker:Narrator  #audio:animal
-
 The sun glares over you, and your ship is in pieces around you. #audio:2beep
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
@@ -177,6 +197,7 @@ Would be pretty convenient if someone were to find some food for you. #speaker:N
 Would save you a lot of effort of doing it yourself. #speaker:Amelia
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
+*/
 Catch me some fish.
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
@@ -187,6 +208,8 @@ It’s nothing fancy, but it will do the trick.
 VAR id = 1
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
 You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:{id}
+~ quest_id1 = 1
+current quest step is {questSteps}
 A
 B
 POC quest has been added by the previous line of dialogue (id1)
@@ -198,6 +221,7 @@ Below is the usual choice-based quest giver (id2)
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
 
+//if var quest >= 10 go here
 ===SubmitQuest===
 Would you like to finish this quest? #speaker:Narrator
 text
@@ -206,6 +230,7 @@ clicking on yes should remove quest with id 1 while no should do nothing
     +[Not yet]
     -> DONE
     
+//if var quest <10 go here
 ===IncompleteQuest===
 this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
 I still need {fish - remainingFish} more fish. #speaker:Amelia
