@@ -22,9 +22,16 @@ public class ItemHarvestSource : MonoBehaviour
     public Item HarvestResource()
     {
         amountClicks -= 1;
+        pop();
         if(amountClicks == 0) gameObject.SetActive(false);
         EnergyMana.LoseEnergy(energyCost);
         Debug.Log($"Harvested Item: {itemResource.name}");
         return itemResource;
+    }
+    void pop()
+    {
+        //Debug.Log("LeanTween Scale");
+        LeanTween.scale(gameObject, new Vector3(1.5f,1.5f,1.5f), 0.1f).setDelay(.1f).setEaseInOutBounce();
+        LeanTween.scale(gameObject, new Vector3(1f,1f,1f), 0.1f).setDelay(.2f).setEaseInOutBounce();
     }
 }

@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     public Item test_item;
     private void Start() {
         //AddItem(test_item);
-        SubtractItem(test_item, 3);
+        //SubtractItem(test_item, 3);
     }
 
     /*Get the inventory item data of an item*/  
