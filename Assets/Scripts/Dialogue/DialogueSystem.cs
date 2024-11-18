@@ -203,7 +203,6 @@ public class DialogueSystem : MonoBehaviour
         dialText.text = "";
         ClearChoices(); // Clear choice buttons on exit
         SetCurrentAudioInfo(defaultAudioInfo.id);
-        audioSource.Stop();
     }
 
     private void ContinueStory()
