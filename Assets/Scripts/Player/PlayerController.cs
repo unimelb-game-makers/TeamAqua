@@ -26,8 +26,9 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * speed;
-        if (!DialogueSystem.GetDial().dialogueIsPlaying)
-        {
+        if (!DialogueSystem.GetDial().dialogueIsPlaying)    //freezes movement if dialogue is playing,
+        {                                                   //quest system still uses timeScale = 0, 
+                                                            //will change if we decide to go with freezing player movements
             speed = moveSpeed;
             /*Play Animations here*/
             if(moveInput.x > 0 && moveInput.z == 0)

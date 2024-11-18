@@ -25,32 +25,12 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying())
+        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() )
         {
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
             EnergyMana.LoseEnergy(0);
             DialogueSystem.SetSpeakerName(gameObject.name); 
         }
-
-        /*
-            implement Quest Completer
-            if questItems enough in inventory, open 2 options (call SubmitQuest in ink)
-
-            [finish quest?]                     [Not yet]
-                |                                   |
-                |__ continue the dialogue           |__exit dialogue and nothing happens
-                 and remove the quest
-===========================================================================================================================
-        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() & quest condition fulfilled)
-        {
-            DialogueSystem.GetDial().MoveKnots();
-            DialogueSystem.SetSpeakerName(gameObject.name); 
-        }
-        */
-
-        // } else {
-        //     DialogueManager.GetDial().ExitDialogueMode();
-        // }
     }
 
     void OnTriggerEnter(Collider other)

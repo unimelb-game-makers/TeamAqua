@@ -17,6 +17,7 @@ public class QuestReception : MonoBehaviour
     public float energyCost;
     public Button[] button;
     
+    //=========================================THIS SCRIPT IS NOT BEING USED========================================================
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

@@ -25,5 +25,5 @@ text
 clicking on yes should remove quest with id 2 while no should do nothing
     +[Finish quest 2? #finish:{id}] -> DONE
     +[Not yet]
-    -> DONE
+    ->DONE
 

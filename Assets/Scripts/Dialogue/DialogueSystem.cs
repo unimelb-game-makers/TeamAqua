@@ -105,16 +105,9 @@ public class DialogueSystem : MonoBehaviour
         if (!dialogueIsPlaying)
         {
             return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && canContinueNextLine && currentStory.currentChoices.Count == 0)
-        {
-            ContinueStory();
-            //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            Debug.Log(dialText);
         }  
         
-        if (Input.GetKeyDown(KeyCode.E) && canContinueNextLine && currentStory.currentChoices.Count == 0)
+        if (Input.GetKeyDown(KeyCode.Space) &&!displaying && canContinueNextLine && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
             //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
@@ -203,6 +196,7 @@ public class DialogueSystem : MonoBehaviour
         dialText.text = "";
         ClearChoices(); // Clear choice buttons on exit
         SetCurrentAudioInfo(defaultAudioInfo.id);
+        audioSource.Stop(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
     }
 
     private void ContinueStory()
@@ -229,6 +223,7 @@ public class DialogueSystem : MonoBehaviour
             */
         }else
         {
+            Debug.Log("NO MORE DIALOGUE DETECTED");
             ExitDialogueMode();
         }
     }
@@ -247,15 +242,17 @@ public class DialogueSystem : MonoBehaviour
         bool isRichText = false;
         foreach (char letter in line.ToCharArray())
         {
-            /*      line skip stuffs (load the whole line of dialogue) below
-            //space key ---> loads entire line of dialogue instantly
-            if(Input.GetKeyDown(KeyCode.Space))
+            /*      //line skip stuffs (load the whole line of dialogue) below
+                    //space r ---> loads entire line of dialogue instantly
+                    //ISSUE: needs to spam the key for it to even work, sometimes wont even work at all
+            if(Input.GetKeyDown(KeyCode.R))
             {
                 Debug.Log("line loaded");
                 dialText.maxVisibleCharacters = line.Length;
                 break;
             }
             */
+            
             //check for rich text
             if (letter == '<' || isRichText)
             {

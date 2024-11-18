@@ -217,7 +217,7 @@ Below is the usual choice-based quest giver (id2)
 +[Catch the fishes #quest:2]
     ->DONE      //first chunk of dialogue ends here
 +[Nah thanks]
-    ->DONE      //first chunk of dialogue ends here
+    ->DONE     //first chunk of dialogue ends here
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
 
