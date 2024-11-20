@@ -26,11 +26,12 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
         
 ===main===
 <color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color> #speaker:Narrator #audio:2beep
-/*
+
 <color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 <color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
-You find yourself on a beach. #speaker:Narrator  #audio:animal
+You find yourself on a beach. #speaker:Narrator  #audio:2beep
 The sun glares over you, and your ship is in pieces around you. #audio:2beep
+/*
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
 The storms of yesterday seem to have died down for now. 
@@ -106,17 +107,19 @@ Are you hurt? #speaker:Noelle #audio:default
 I’m a little bruised, but I would be a lot worse for wear if it wasn’t for you. #speaker:Amelia #audio:animal
 So thanks.  
 Amelia looks up at you, and recoils in horror. #speaker:Narrator #audio:2beep
-
-Hey, wait a minute? Are you a - #speaker:Amelia
-human! #speaker:Amelia
-Amelia jumps back, and assumes a fighting stance, arms raised, ready to fight for her life. #speaker:Narrator
-Stay back! #speaker:Amelia
-Wait! I’m not going to hurt you. #speaker:Noelle
-Ha! #speaker:Amelia
+*/
+Hey, wait a minute? Are you a - #speaker:Amelia #audio:animal
+human!
+Amelia jumps back, and assumes a fighting stance, arms raised, ready to fight for her life. #speaker:Narrator #audio:2beep
+Stay back! #speaker:Amelia #audio:animal
+Wait! I’m not going to hurt you. #speaker:Noelle #audio:default 
+//////============================BELOW, AUDIO TAG ISNT UPDATED YET===============================================
+/*
+Ha! #speaker:Amelia #audio:2beep                  //<- test
 Likely story. You humans are all the same. 
 Can’t believe a lousy human was the one that came to my rescue. 
 I must have the worst luck ever.
-But I’m not human! #speaker:Noelle
+But I’m not human! #speaker:Noelle 
 Lies! #speaker:Amelia 
 Clearly you’re just trying to make me lower my guard down, 
 and then when I have my back turned, 

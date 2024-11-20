@@ -345,9 +345,6 @@ public class DialogueSystem : MonoBehaviour
                     
                     //Debug.Log("portrait is " + tagValue);
                     break;
-                case LAYOUT_TAG:
-                    Debug.Log("layout is " + tagValue);
-                    break;
                 case AUDIO_TAG:
                     SetCurrentAudioInfo(tagValue);
                     break;

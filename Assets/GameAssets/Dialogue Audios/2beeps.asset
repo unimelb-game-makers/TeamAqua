@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2beep
   dialogueTypingSounds:
-  - {fileID: 8300000, guid: 28e53ebc783886c4ba867397aae4ea81, type: 3}
-  - {fileID: 8300000, guid: 588cfd6734ec24d4dacff577e3d5772b, type: 3}
-  AudioFrequency: 2
-  minPitch: 0.5
+  - {fileID: 8300000, guid: 4d7c629ff16ab5349a61ef1e8cc39efc, type: 3}
+  - {fileID: 8300000, guid: 386232b8cef5eeb47aa5b97a212e156a, type: 3}
+  - {fileID: 8300000, guid: 72ce3076d5be15642af59f627a0828d7, type: 3}
+  - {fileID: 8300000, guid: 74e419542bba36441b683bcacc9a1095, type: 3}
+  AudioFrequency: 1
+  minPitch: 1.4
   maxPitch: 3
   StopAudioSource: 0
