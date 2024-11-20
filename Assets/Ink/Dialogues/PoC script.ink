@@ -214,10 +214,11 @@ A
 B
 POC quest has been added by the previous line of dialogue (id1)
 Below is the usual choice-based quest giver (id2)
-+[Catch the fishes #quest:2]
++[Catch the fishes #quest:2 #done]
     ->DONE      //first chunk of dialogue ends here
-+[Nah thanks]
-    ->DONE     //first chunk of dialogue ends here
++[Nah thanks #done]
+    ->END     //first chunk of dialogue ends here
+//the hashtag done is to exit dialogue mode upon click since DONE or END leads u to an empty dialogue box and then takes 1 more click to acutally exit
 
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
 
@@ -227,14 +228,14 @@ Would you like to finish this quest? #speaker:Narrator
 text
 clicking on yes should remove quest with id 1 while no should do nothing
     +[Finish quest? #finish:{id}] -> CompleteQuest
-    +[Not yet]
+    +[Not yet #done]
     -> DONE
     
 //if var quest <10 go here
 ===IncompleteQuest===
 this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
 I still need {fish - remainingFish} more fish. #speaker:Amelia
-You better hurry before I change my mind.
+You better hurry before I change my mind. 
 ->DONE
     
 ===CompleteQuest=== 

@@ -308,8 +308,7 @@ public class DialogueSystem : MonoBehaviour
                 */
                 case "questS":      //---> this handles dialogue-based quest giving
                     QuestSid = int.Parse(tagValue);
-                    QuestManager.instance.AddQuest(QuestSid);
-                    
+                    QuestManager.instance.AddQuest(QuestSid);     
                     break;
                 case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                     //charName.text = tagValue;
@@ -413,6 +412,10 @@ public class DialogueSystem : MonoBehaviour
                         Debug.Log("Removing quest");
                         QuestManager.instance.RemoveQuest(questID);
                     }
+               }
+
+               if (selectedChoice.tags[i].Contains("done")) {
+                    ExitDialogueMode();
                }
             }
         }
