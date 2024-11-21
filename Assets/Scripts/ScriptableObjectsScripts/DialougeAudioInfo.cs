@@ -10,9 +10,9 @@ public class DialougeAudioInfo : ScriptableObject
     [Range(1, 5)]
     public int AudioFrequency = 2;
 
-    [Range(-3, 3)]
+    [Range(-3, 5)]
     public float minPitch = 0.5f;
-    [Range(-3, 3)]
+    [Range(-3, 5)]
     public float maxPitch = 3f;
 
     public bool StopAudioSource;

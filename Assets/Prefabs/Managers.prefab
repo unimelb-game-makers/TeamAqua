@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5164233157051024739}
   - component: {fileID: 5226022024995795719}
+  - component: {fileID: 8911776482022760709}
   m_Layer: 0
   m_Name: Dialogue Manager (1)
   m_TagString: Untagged
@@ -59,10 +60,24 @@ MonoBehaviour:
   portraitAnimRight: {fileID: 0}
   speaker_name: 2
   displaying: 0
+--- !u!114 &8911776482022760709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321442253821170306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9b98ba21ae4d34bb7ca73054770487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   defaultAudioInfo: {fileID: 11400000, guid: c62a60f7d48b41148b1afb30c7643ec5, type: 2}
   audioInfos:
   - {fileID: 11400000, guid: 768b1bab1b4644446b47322b2e8b4b09, type: 2}
   - {fileID: 11400000, guid: a7ebe7a60e2ac4a46bb264931c5c6d13, type: 2}
+  currentAudioInfo: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &2372742851206032733
 GameObject:
   m_ObjectHideFlags: 0
