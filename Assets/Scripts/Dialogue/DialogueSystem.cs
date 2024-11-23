@@ -24,7 +24,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private GameObject rightDial;
 
     private Story currentStory;
-    public bool dialogueIsPlaying { get; private set; }
+    [SerializeField]public bool dialogueIsPlaying { get; private set; }
     private const string ID_TAG = "id";
     private int QuestSid;
     private const string SPEAKER_TAG = "speaker";
@@ -45,10 +45,14 @@ public class DialogueSystem : MonoBehaviour
     private bool canContinueNextLine = false;
 
 
-    //AUDIO stuffs below       //lazy refrsctoring, currently just setting the variables used in this script as the variables used in the DialogueAudioManager script
-    private DialougeAudioInfo dfltAudioInfo = DialogueAudioManager.GetAudioMana().defaultAudioInfo;
-    private DialougeAudioInfo currAudioInfo = DialogueAudioManager.GetAudioMana().currentAudioInfo;
-    private AudioSource audioSource = DialogueAudioManager.GetAudioMana().audioSource;
+    [Header("Audio")]
+    [SerializeField] private DialougeAudioInfo defaultAudioInfo;
+    [SerializeField] private DialougeAudioInfo[] audioInfos;
+    private DialougeAudioInfo currentAudioInfo;
+    private Dictionary<string, DialougeAudioInfo> audioInfoDictionary;
+    private AudioSource audioSource;
+
+    private bool HashApproach = true; //-> set to true if want predictable-ish dialogue speech
 
 
 
@@ -68,8 +72,8 @@ public class DialogueSystem : MonoBehaviour
 
         dialogueVariable = new DialogueVariable(LoadGlobalJSON);
 
-        //audioSource = this.gameObject.AddComponent<AudioSource>();
-        currAudioInfo = dfltAudioInfo;
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        currentAudioInfo = defaultAudioInfo;
         
         
     }
@@ -92,7 +96,7 @@ public class DialogueSystem : MonoBehaviour
         rightDial.SetActive(false);
         //StopAudioSource = true;
 
-        DialogueAudioManager.GetAudioMana().InitializeAudioDictionary();
+        InitializeAudioDictionary();
     }
 
     void Update()
@@ -103,7 +107,7 @@ public class DialogueSystem : MonoBehaviour
             return;
         }  
         
-        if (Input.GetKeyDown(KeyCode.Space) &&!displaying && canContinueNextLine && currentStory.currentChoices.Count == 0)
+        if (Input.GetKeyDown(KeyCode.E) &&!displaying && canContinueNextLine && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
             //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
@@ -113,8 +117,9 @@ public class DialogueSystem : MonoBehaviour
         // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
-            ExitDialogueMode();
-            //audioSource.Stop();
+            StartCoroutine(ExitDialogueMode());
+            audioSource.Stop();
+            Debug.Log("E to exit");
         } 
 
         //================This is for testing knot-jump only, will be deleted later=========================================//
@@ -181,18 +186,18 @@ public class DialogueSystem : MonoBehaviour
         
     }
 
-    public void ExitDialogueMode()
+    public IEnumerator ExitDialogueMode()
     {
-        //yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.2f);      //wait check to resolve all same-key-input errors
         //Time.timeScale = 1;
         Debug.Log("time resumed");
         dialogueVariable.StopListening(currentStory);
-        dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialText.text = "";
         ClearChoices(); // Clear choice buttons on exit
-        DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(dfltAudioInfo.id);
+        SetCurrentAudioInfo(defaultAudioInfo.id);
         audioSource.Stop(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
+        dialogueIsPlaying = false;
     }
 
     private void ContinueStory()
@@ -220,7 +225,7 @@ public class DialogueSystem : MonoBehaviour
         }else
         {
             Debug.Log("NO MORE DIALOGUE DETECTED");
-            ExitDialogueMode();
+            StartCoroutine(ExitDialogueMode());
         }
     }
 
@@ -262,8 +267,8 @@ public class DialogueSystem : MonoBehaviour
             // otherwise, loads letters normally
             else
             {
-                DialogueAudioManager.GetAudioMana().PlayDialogueSound(dialText.maxVisibleCharacters, dialText.text[dialText.maxVisibleCharacters]);
-                Debug.Log(letter);
+                PlayDialogueSound(dialText.maxVisibleCharacters, dialText.text[dialText.maxVisibleCharacters]);
+                //Debug.Log(letter);
                 dialText.maxVisibleCharacters++;
                 //yield return new WaitForSecondsRealtime(TypeSpeed);       -> use if freezing time
                 yield return new WaitForSeconds(TypeSpeed);         // -> use if not freezing time
@@ -341,8 +346,11 @@ public class DialogueSystem : MonoBehaviour
                     
                     //Debug.Log("portrait is " + tagValue);
                     break;
+                case LAYOUT_TAG:
+                    Debug.Log("layout is " + tagValue);
+                    break;
                 case AUDIO_TAG:
-                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue);
+                    SetCurrentAudioInfo(tagValue);
                     break;
                 default:
                     Debug.LogWarning("tag came in but is not currently being handled: " + tag);
@@ -408,7 +416,7 @@ public class DialogueSystem : MonoBehaviour
                }
 
                if (selectedChoice.tags[i].Contains("done")) {
-                    ExitDialogueMode();
+                    StartCoroutine(ExitDialogueMode());
                }
             }
         }
@@ -437,6 +445,90 @@ public class DialogueSystem : MonoBehaviour
     public static bool GetIsPlaying()
     {
         return DialMana.dialogueIsPlaying;
+    }
+
+    // Audio-related stuffs below
+    private void InitializeAudioDictionary()
+    {
+        audioInfoDictionary = new Dictionary<string, DialougeAudioInfo>();
+        audioInfoDictionary.Add(defaultAudioInfo.id, defaultAudioInfo);
+        foreach (DialougeAudioInfo audioInfo in audioInfos)
+        {
+            audioInfoDictionary.Add(audioInfo.id, audioInfo);
+        }
+    }
+
+    private void SetCurrentAudioInfo(string id)
+    {
+        DialougeAudioInfo audioInfo = null;
+        audioInfoDictionary.TryGetValue(id, out audioInfo);
+        if (audioInfo != null)
+        {
+            this.currentAudioInfo = audioInfo;
+        }
+        else
+        {
+            Debug.Log("failed to find audio info for id: " + id);
+        }
+    }
+
+    public void PlayDialogueSound(int currentDisplayedCharCount, char currentCharacter)
+    {   
+        // set variables for the below based on config
+        AudioClip[] dialogueTypingSounds = currentAudioInfo.dialogueTypingSounds;
+        int AudioFrequency = currentAudioInfo.AudioFrequency;
+        float minPitch = currentAudioInfo.minPitch;
+        float maxPitch = currentAudioInfo.maxPitch;
+        bool StopAudioSource = currentAudioInfo.StopAudioSource;
+
+        // play sound based on config
+        if (currentDisplayedCharCount % AudioFrequency == 0)
+        {
+            if (StopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            AudioClip soundClip = null;
+
+            //creating predictable speech by hashcode
+            if (HashApproach)
+            {   
+                //generate hashcode for each characters
+                int hashcode = currentCharacter.GetHashCode();
+                //sound clip
+                int predictableIndex = hashcode % dialogueTypingSounds.Length;
+                soundClip = dialogueTypingSounds[predictableIndex];
+                //pitch
+                int minPitchInt = (int) (minPitch * 100);
+                int maxPitchInt = (int) (maxPitch * 100);
+                int pitchRangeInt = maxPitchInt - minPitchInt;
+                
+                //cant divide by 0, no range so skip selection
+                if (pitchRangeInt != 0)
+                {
+                    int predictablePitchInt = (hashcode % pitchRangeInt) + minPitchInt;
+                    float predictablePitch = predictablePitchInt / 100f;
+                    audioSource.pitch = predictablePitch;
+                }
+
+                else
+                {       //set pitch to either minPitch or maxPitch
+                    audioSource.pitch = minPitch;
+                }
+
+            }
+            else
+            {
+                //sound clips
+                int randomIndex = Random.Range(0, dialogueTypingSounds.Length);
+                soundClip = dialogueTypingSounds[randomIndex];
+                //pitch
+                audioSource.pitch = Random.Range(minPitch, maxPitch);
+            }
+            
+            //play sounds
+            audioSource.PlayOneShot(soundClip);
+        }
     }
 
     // Varibales stuffs

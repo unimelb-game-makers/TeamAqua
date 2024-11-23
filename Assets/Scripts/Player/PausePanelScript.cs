@@ -6,12 +6,24 @@ public class PausePanelScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject PausedPanel;
-    private bool isPaused = true;
+    public static PausePanelScript PauseManager;
+    public bool isPaused = true;
+
+    private void Awake()
+    {
+        PauseManager = this;
+    }
+
+    public static PausePanelScript instance()
+    {
+        return PauseManager;
+    }
     void Start()
     {
-        PausedPanel.SetActive(false);
+        //PausedPanel.SetActive(false);
         //isPaused = true;
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -23,6 +35,7 @@ public class PausePanelScript : MonoBehaviour
                 PausedPanel.SetActive(true);
                 Time.timeScale = 0;
                 isPaused = true;
+                Debug.Log("E to pauseeee");
             }
 
             else
@@ -30,7 +43,14 @@ public class PausePanelScript : MonoBehaviour
                 PausedPanel.SetActive(false);
                 Time.timeScale = 1;
                 isPaused = false;
+                Debug.Log("E to unpaused");
             }
         }
     }
+
+    public static bool GetIsPlaused()
+    {
+        return PauseManager.isPaused;
+    }
+    
 }

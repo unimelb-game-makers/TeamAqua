@@ -198,9 +198,9 @@ When was the last time you ate? #speaker:Noelle
 Hard to find food on this island when everything is trying to kill you.
 Would be pretty convenient if someone were to find some food for you. #speaker:Noelle
 Would save you a lot of effort of doing it yourself. #speaker:Amelia
+*/
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
-*/
 Catch me some fish.
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
