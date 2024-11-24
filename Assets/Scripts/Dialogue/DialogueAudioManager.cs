@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class DialogueAudioManager : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class DialogueAudioManager : MonoBehaviour
 
     private bool HashApproach = true; //-> set to true if want predictable-ish dialogue speech
     // Start is called before the first frame update
-
 
 
     //===========================REFRACTORING STILL IN PROCESS============================================
@@ -48,7 +48,7 @@ public class DialogueAudioManager : MonoBehaviour
 
     // Audio-related stuffs below
     public void InitializeAudioDictionary()
-    {
+    {   //sets up audio dictionary, map each char to an audio frequency
         audioInfoDictionary = new Dictionary<string, DialougeAudioInfo>();
         audioInfoDictionary.Add(defaultAudioInfo.id, defaultAudioInfo);
         foreach (DialougeAudioInfo audioInfo in audioInfos)
@@ -58,7 +58,7 @@ public class DialogueAudioManager : MonoBehaviour
     }
 
     public void SetCurrentAudioInfo(string id)
-    {
+    {   // plays the audio associated with the given id
         DialougeAudioInfo audioInfo = null;
         audioInfoDictionary.TryGetValue(id, out audioInfo);
         if (audioInfo != null)
@@ -72,7 +72,8 @@ public class DialogueAudioManager : MonoBehaviour
     }
 
     public void PlayDialogueSound(int currentDisplayedCharCount, char currentCharacter)
-    {   
+    {   // plays the audio for [number] of characters that loads on the screen
+
         // set variables for the below based on config
         AudioClip[] dialogueTypingSounds = currentAudioInfo.dialogueTypingSounds;
         int AudioFrequency = currentAudioInfo.AudioFrequency;
@@ -128,5 +129,12 @@ public class DialogueAudioManager : MonoBehaviour
             //play sounds
             audioSource.PlayOneShot(soundClip);
         }
+    }
+
+    public void ExitAudio()
+    {
+        //exits out of audio, to use in exit dialogue mode
+        SetCurrentAudioInfo(defaultAudioInfo.id);
+        audioSource.Stop();
     }
 }
