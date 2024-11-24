@@ -31,7 +31,7 @@ public class ItemHarvestSource : MonoBehaviour
     void pop()
     {
         //Debug.Log("LeanTween Scale");
-        LeanTween.scale(gameObject, new Vector3(1.5f,1.5f,1.5f), 0.1f).setDelay(.1f).setEaseInOutBounce();
+        LeanTween.scale(gameObject, new Vector3(.8f,.8f,.8f), 0.1f).setDelay(.1f).setEaseInOutBounce();
         LeanTween.scale(gameObject, new Vector3(1f,1f,1f), 0.1f).setDelay(.2f).setEaseInOutBounce();
     }
 }
