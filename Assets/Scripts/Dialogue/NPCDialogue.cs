@@ -29,7 +29,7 @@ public class NPCDialogue : MonoBehaviour
         {
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
             EnergyMana.LoseEnergy(0);
-            DialogueSystem.SetSpeakerName(gameObject.name); 
+            //DialogueSystem.SetSpeakerName(gameObject.name); 
         }
     }
 
