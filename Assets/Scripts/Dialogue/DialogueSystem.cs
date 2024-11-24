@@ -9,6 +9,8 @@ using UnityEngine.EventSystems;
 
 public class DialogueSystem : MonoBehaviour
 {
+    [SerializeField] private InputProvider playerInputProvider;
+
     [Header("Typing")]
     [SerializeField] private float TypeSpeed = 0.04f;
     [Header("Load Globals JSON")]
@@ -132,6 +134,7 @@ public class DialogueSystem : MonoBehaviour
         Debug.Log("time stopped");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        playerInputProvider.can_move = false;// Setting the Input provider here.
         dialoguePanel.SetActive(true);
         dialogueVariable.StartListening(currentStory);
         ContinueStory();
@@ -149,6 +152,7 @@ public class DialogueSystem : MonoBehaviour
         DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         dialogueIsPlaying = false;
+        playerInputProvider.can_move = true;// Setting the Input Provider Here.
     }
 
     public void ContinueStory()

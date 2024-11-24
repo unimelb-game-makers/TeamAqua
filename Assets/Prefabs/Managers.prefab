@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03d73978c9744dce90f3ab9d86ddf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   TypeSpeed: 0
   LoadGlobalJSON: {fileID: 4900000, guid: e9e06513af637584c9d7f55c00b27a53, type: 3}
   dialoguePanel: {fileID: 0}
