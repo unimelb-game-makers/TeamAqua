@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<AnimController>();
+        
+        if(inputProvider.can_move == false){
+            inputProvider.can_move = true;
+        }
     }
 
     // Update is called once per frame
