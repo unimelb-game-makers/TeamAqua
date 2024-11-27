@@ -85,6 +85,7 @@ public class DialogueChoices : MonoBehaviour
                     if (questID > 0)
                     {
                         Debug.Log("Removing quest");
+                        NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
                         QuestManager.instance.RemoveQuest(questID);
                     }
                }

@@ -6,16 +6,26 @@ using UnityEngine;
 public class NPCDialogue : MonoBehaviour
 {
     public TextAsset inkJSON;
-    public GameObject indicator;
-    [SerializeField] bool isQuestGiver = false;
+    public GameObject dialogueCue;
+    public GameObject questCue;
+    [SerializeField] public bool HasQuest;      //  <--- really unstable way to do things rn, will wait for quest- inventory integration before continuing
 
-    [SerializeField] int questID = 0;
+    [SerializeField] int questID;   //quest id is handled in the ink script itself so this might go unsused
 
     private bool isInRange;
-
+    public static NPCDialogue npcDialogue;
     private EnergyManager EnergyMana;
     
     // Start is called before the first frame update
+    public void Awake()
+    {
+        npcDialogue = this;
+    }
+
+    public static NPCDialogue instance()
+    {
+        return npcDialogue;
+    }
     void Start()
     {
         EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
@@ -35,18 +45,32 @@ public class NPCDialogue : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if(HasQuest)
         {
-            indicator.SetActive(true);
-            isInRange = true;
+            if (other.CompareTag("Player"))
+            {
+                questCue.SetActive(true);
+                dialogueCue.SetActive(false);
+                isInRange = true;
+            }
+        }
+        else
+        {
+            if (other.CompareTag("Player"))
+            {
+                questCue.SetActive(false);
+                dialogueCue.SetActive(true);
+                isInRange = true;
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") /*&& quest incomplete or non-existent*/)
         {
-            indicator.SetActive(false);
+            questCue.SetActive(false);
+            dialogueCue.SetActive(false);
             isInRange = false;
         }
     }
