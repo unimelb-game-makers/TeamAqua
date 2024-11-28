@@ -24,21 +24,25 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && !_menuActivated && !DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.I) && UIinputProvider.instance().UI_canOpen[1] && !_menuActivated && !DialogueSystem.GetIsPlaying())
         {
             UpdateSlots();
+            JournalManager.instance().journalCanvas.SetActive(false);       //<- temporary only, will likely use bool check
             inventoryMenu.SetActive(true);
             _menuActivated = true;
+            UIinputProvider.instance().SendUIinput(1);
         }
         else if (Input.GetKeyDown(KeyCode.I) && _menuActivated)
         {
             inventoryMenu.SetActive(false);
             _menuActivated = false;
+            UIinputProvider.instance().SendUIinput(0);
         }
-        if (DialogueSystem.GetIsPlaying()) // forcibly closes inventory if player enters dialogue
+        if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes inventory if player enters dialogue
         {
             inventoryMenu.SetActive(false);
             _menuActivated = false;
+            UIinputProvider.instance().SendUIinput(0);
         }
         UpdateSlots();
     }

@@ -52,6 +52,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
     private bool isScaled = false;
     public bool QuestCompleted;
+    public bool questOpen = false;
 
     [SerializeField] private Inventory inventory; // the inventory of the player
     
@@ -80,11 +81,14 @@ public class QuestManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && !DialogueSystem.GetIsPlaying())  //added bool check to see if dialogue is on
+        if (Input.GetKeyDown(KeyCode.J) && UIinputProvider.instance().UI_canOpen[2] && !DialogueSystem.GetIsPlaying())  //added bool check to see if dialogue is on
         {
             if (!questCanvas.activeSelf)
             {
+                JournalManager.instance().journalCanvas.SetActive(false);
                 questCanvas.SetActive(true);
+                UIinputProvider.instance().SendUIinput(2);
+                questOpen = true;
                 Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
                 isScaled = false;
                 Time.timeScale = 0; // pause the game when the quest canvas is active
@@ -94,14 +98,18 @@ public class QuestManager : MonoBehaviour
             {
                 Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
                 questCanvas.SetActive(false);
+                UIinputProvider.instance().SendUIinput(0);
+                questOpen = false;
                 Time.timeScale = 1; // resume game when quest canvas is deactivated
             }
             DrawText();
         }
 
-        if (DialogueSystem.GetIsPlaying()) // forcibly closes questlog if player enters dialogue
+        if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes questlog if player enters dialogue
         {
             questCanvas.SetActive(false);
+            UIinputProvider.instance().SendUIinput(0);
+            questOpen = false;
         }
 
         if (questCanvas.activeSelf && !isScaled)

@@ -7,7 +7,7 @@ public class PausePanelScript : MonoBehaviour
     // Start is called before the first frame update
     public GameObject PausedPanel;
     public static PausePanelScript PauseManager;
-    public bool isPaused = true;
+    public bool isPaused = false;
 
     private void Awake()
     {
@@ -20,8 +20,8 @@ public class PausePanelScript : MonoBehaviour
     }
     void Start()
     {
-        //PausedPanel.SetActive(false);
-        //isPaused = true;
+        PausedPanel.SetActive(false);
+        isPaused = false;
     }
     
 

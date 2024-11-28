@@ -81,7 +81,7 @@ public class DialogueChoices : MonoBehaviour
                     int questID = int.Parse(selectedChoice.tags[i].Substring(7));
                     Debug.Log("Quest ID: " + questID);
 
-                    // give quest to player
+                    // finishes the quest upon interaction
                     if (questID > 0)
                     {
                         Debug.Log("Removing quest");

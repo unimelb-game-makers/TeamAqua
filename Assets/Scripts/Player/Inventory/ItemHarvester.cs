@@ -5,12 +5,12 @@ using UnityEngine;
 public class ItemHarvester : MonoBehaviour
 {
     [SerializeField] Inventory inventory;
-    ItemHarvestSource source = null;
+    public ItemHarvestSource source = null;
 
     // Update is called once per frame
     void Update()
     {
-        if(source != null && Input.GetKeyDown(KeyCode.E))
+        if(source != null && source.amountClicks > 0 && Input.GetKeyDown(KeyCode.E))
         {
             inventory.AddItem(source.HarvestResource());
         }

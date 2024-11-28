@@ -135,6 +135,7 @@ public class DialogueSystem : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         playerInputProvider.can_move = false;// Setting the Input provider here.
+        //UIinputProvider.instance().SendUIinput(5);
         dialoguePanel.SetActive(true);
         dialogueVariable.StartListening(currentStory);
         ContinueStory();
@@ -153,6 +154,7 @@ public class DialogueSystem : MonoBehaviour
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
+        //UIinputProvider.instance().SendUIinput(0);
     }
 
     public void ContinueStory()

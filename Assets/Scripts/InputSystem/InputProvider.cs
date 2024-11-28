@@ -10,6 +10,7 @@ Not sure whether to make it a Scriptable object or a Singleton.
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 [CreateAssetMenu(fileName = "InputProvider", menuName = "ScriptableObjects/InputProvider", order = 3)]
 public class InputProvider : ScriptableObject
