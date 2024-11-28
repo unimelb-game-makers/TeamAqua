@@ -61,6 +61,34 @@ public class Inventory : MonoBehaviour
         }
         else return 0;
     }
+
+    public bool HasItem(int item_id, int amount)
+    {
+        foreach(var inventoryItem in inventory)
+        {
+            if(inventoryItem.item.itemID == item_id && inventoryItem.count >= amount)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void RemoveItem(int item_id, int amount)
+    {
+        foreach(var inventoryItem in inventory)
+        {
+            if(inventoryItem.item.itemID == item_id)
+            {
+                inventoryItem.count -= amount;
+                if(inventoryItem.count <= 0)
+                {
+                    inventory.Remove(inventoryItem);
+                }
+                return;
+            }
+        }
+    }
 }
 /*
 This is the type that the inventory list will use 

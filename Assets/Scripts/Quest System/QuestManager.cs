@@ -52,6 +52,9 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
     private bool isScaled = false;
     public bool QuestCompleted;
+
+    [SerializeField] private Inventory inventory; // the inventory of the player
+    
     void Awake()
     {
         // Singleton setup
@@ -111,15 +114,15 @@ public class QuestManager : MonoBehaviour
         }
 
         // Debugging/testing purposes
-        // if (Input.GetKeyDown(KeyCode.L))
-        // {
-        //     AddQuest(1);
-        //     AddQuest(2);
-        // }
-        // if (Input.GetKeyDown(KeyCode.K))
-        // {
-        //     CompleteStep(1, 1);
-        // }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AddQuest(1);
+            AddQuest(2);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            CompleteStep(1, 1);
+        }
     }
 
     //=============================== Singleton Methods (Accessible from other scripts) ================================//
@@ -165,15 +168,39 @@ public class QuestManager : MonoBehaviour
         Parameters: int id - the id of the quest, int step - the step number to complete
         Return: void
     */
-    public void CompleteStep(int id, int step)
+    public void CompleteStep(int id, int step, bool objective = false)
     {
-        step = step - 1; // convert to 0-based index
+        // check for quest type
+        if (!objective) {
+            if (quests[id-1].quest_steps[step-1].quest_item_id != -1) {
+                // check if the player has the item in their inventory
+                Debug.Log("Checking for item in inventory");
+                if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
+                    print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
+
+                    // remove the item from the inventory
+                    inventory.RemoveItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount);
+                } else {
+                    Debug.Log("item not found in inventory");
+                    return;
+                }
+            }
+        }
+
+        // if (objective) {
+        //     if (quests[id-1].)
+        // }
+
         for (int i = 0; i < quests.Count; i++)
         {
             if (quests[i].id == id)
             {
-                if (quests[i].current_step_number == step)
+                Debug.Log("Quest ID: " + id);
+                Debug.Log("Quest Step: " + step);
+                Debug.Log("Current Step: " + quests[i].current_step_number);
+                if (quests[i].current_step_number == step-1)
                 {
+                    Debug.Log("Step: " + step);
                     quests[i].current_step_number++;
                     if (quests[i].current_step_number == quests[i].quest_steps.Count)
                     {
@@ -182,6 +209,23 @@ public class QuestManager : MonoBehaviour
                     }
                     DrawText();
                 }
+            }
+        }
+    }
+
+    public void CompleteCurrentStep(int id)
+    {
+        for (int i = 0; i < quests.Count; i++)
+        {
+            if (quests[i].id == id)
+            {
+                quests[i].current_step_number++;
+                if (quests[i].current_step_number == quests[i].quest_steps.Count)
+                {
+                    //QuestCompleted = true;      //---> likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
+                    RemoveQuest(id);
+                }
+                DrawText();
             }
         }
     }
@@ -250,6 +294,11 @@ public class QuestManager : MonoBehaviour
         {
             rt.sizeDelta = new Vector2(rt.sizeDelta.x, rt.sizeDelta.y - 350);
         }
+    }
+
+    public List<QuestData> GetQuests()
+    {
+        return quests;
     }
 
 }

@@ -9,8 +9,10 @@
                     "step" : 1,
                     "description" : "Collect the quest item",
                     "objective" : "Collect the quest item",
+                    "objective_type" : "GATHER",
                     "quest_item_id" : 1,
                     "quest_item_amount" : 1,
+                    "location": "None",
                     "active":true,
                     "finished":false
 
@@ -19,8 +21,10 @@
                     "step" : 2,
                     "description" : "Touch the objective",
                     "objective" : "Finish the objective",
+                    "objective_type" : "LOCATION",
                     "quest_item_id" : -1,
                     "quest_item_amount" : -1,
+                    "location": "(3,0,3)",
                     "active":false,
                     "finished":false
                 }
@@ -47,8 +51,10 @@
                     "step" : 1,
                     "description" : "Collect the quest item",
                     "objective" : "Go to the market.",
+                    "objective_type" : "LOCATION",
                     "quest_item_id" : -1,
                     "quest_item_amount" : -1,
+                    "location": "(4,0,3)",
                     "active":true,
                     "finished":false
 
@@ -57,8 +63,10 @@
                     "step" : 2,
                     "description" : "Touch the objective",
                     "objective" : "Buy 4 seeds.",
+                    "objective_type" : "TALK",
                     "quest_item_id" : 3,
                     "quest_item_amount" : 4,
+                    "location": "None",
                     "active":false,
                     "finished":false
                 }

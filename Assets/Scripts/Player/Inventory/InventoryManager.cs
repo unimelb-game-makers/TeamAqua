@@ -40,6 +40,7 @@ public class InventoryManager : MonoBehaviour
             inventoryMenu.SetActive(false);
             _menuActivated = false;
         }
+        UpdateSlots();
     }
 
     private void OnEnable()
