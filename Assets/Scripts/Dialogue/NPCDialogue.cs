@@ -37,7 +37,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() )
         {
-            QuestManager.Instance().CheckStep(questID, 1);
+            //QuestManager.Instance().CheckStep(questID, 1);
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
             EnergyMana.LoseEnergy(0);
             //DialogueSystem.SetSpeakerName(gameObject.name); 

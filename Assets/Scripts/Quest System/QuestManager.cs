@@ -80,7 +80,7 @@ public class QuestManager : MonoBehaviour
         // finished = ...
         //
         //QuestCompleted = false;
-        
+        OnDisableQ();
     }
 
     void Update()
@@ -89,31 +89,19 @@ public class QuestManager : MonoBehaviour
         {
             if (!questCanvas.activeSelf)
             {
-                JournalManager.instance().journalCanvas.SetActive(false);
-                questCanvas.SetActive(true);
-                UIinputProvider.instance().SendUIinput(2);
-                questOpen = true;
-                Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
-                isScaled = false;
-                Time.timeScale = 0; // pause the game when the quest canvas is active
+                OnEnableQ();
             }
             
             else
             {
-                Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
-                questCanvas.SetActive(false);
-                UIinputProvider.instance().SendUIinput(0);
-                questOpen = false;
-                Time.timeScale = 1; // resume game when quest canvas is deactivated
+                OnDisableQ();
             }
             DrawText();
         }
 
         if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes questlog if player enters dialogue
         {
-            questCanvas.SetActive(false);
-            UIinputProvider.instance().SendUIinput(0);
-            questOpen = false;
+            OnDisableQ();
         }
 
         if (questCanvas.activeSelf && !isScaled)
@@ -144,6 +132,25 @@ public class QuestManager : MonoBehaviour
         Parameters: int id - the id of the quest to add
         Return: void
     */
+    public void OnEnableQ()
+    {
+        //JournalManager.instance().journalCanvas.SetActive(false);
+        questCanvas.SetActive(true);
+        UIinputProvider.instance().SendUIinput(2);
+        questOpen = true;
+        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        isScaled = false;
+        Time.timeScale = 0; // pause the game when the quest canvas is active
+    }
+
+    public void OnDisableQ()
+    {
+        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        questCanvas.SetActive(false);
+        UIinputProvider.instance().SendUIinput(0);
+        questOpen = false;
+        Time.timeScale = 1; // resume game when quest canvas is deactivated
+    }
     public void AddQuest(int id)
     {
         Quest quest = JsonUtility.FromJson<Quest>(jsonFile.text);

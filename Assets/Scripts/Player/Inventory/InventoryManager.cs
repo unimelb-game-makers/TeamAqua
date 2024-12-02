@@ -18,7 +18,8 @@ public class InventoryManager : MonoBehaviour
     
     void Start()
     {
-        inventoryMenu.SetActive(false);
+        //inventoryMenu.SetActive(false);
+        OnDisableI();
         UpdateSlots();
     }
 
@@ -26,35 +27,34 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I) && UIinputProvider.instance().UI_canOpen[1] && !_menuActivated && !DialogueSystem.GetIsPlaying())
         {
-            UpdateSlots();
-            JournalManager.instance().journalCanvas.SetActive(false);       //<- temporary only, will likely use bool check
-            inventoryMenu.SetActive(true);
-            _menuActivated = true;
-            UIinputProvider.instance().SendUIinput(1);
+            OnEnableI();
         }
         else if (Input.GetKeyDown(KeyCode.I) && _menuActivated)
         {
-            inventoryMenu.SetActive(false);
-            _menuActivated = false;
-            UIinputProvider.instance().SendUIinput(0);
+            OnDisableI();
         }
         if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes inventory if player enters dialogue
         {
-            inventoryMenu.SetActive(false);
-            _menuActivated = false;
-            UIinputProvider.instance().SendUIinput(0);
+            OnDisableI();
         }
         UpdateSlots();
     }
 
-    private void OnEnable()
+    private void OnEnableI()
     {
         //menuAction.Enable();
+        UpdateSlots();
+        inventoryMenu.SetActive(true);
+        _menuActivated = true;
+        UIinputProvider.instance().SendUIinput(1);
     }
 
-    private void OnDisable()
+    private void OnDisableI()
     {
         //menuAction.Disable();
+        inventoryMenu.SetActive(false);
+        _menuActivated = false;
+        UIinputProvider.instance().SendUIinput(0);
     }
 
     public void UpdateSlots()

@@ -16,7 +16,7 @@ public class JournalManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnDisableJ();
     }
 
     private void Awake()
@@ -34,29 +34,18 @@ public class JournalManager : MonoBehaviour
         {
             if (!journalCanvas.activeSelf)
             {
-                journalCanvas.SetActive(true);
-                UIinputProvider.instance().SendUIinput(4);
-                isOpen = true;
-                Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
-                isScaled = false;
-                Time.timeScale = 0; // pause the game when the journal canvas is active
+                OnEnableJ();
             }
             
             else
             {
-                isOpen = false;
-                Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
-                journalCanvas.SetActive(false);
-                UIinputProvider.instance().SendUIinput(0);
-                Time.timeScale = 1; // resume game when journal canvas is deactivated
+                OnDisableJ();
             }
         }
 
         if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes journal if player enters dialogue
         {
-            journalCanvas.SetActive(false);
-            isOpen = false;
-            UIinputProvider.instance().SendUIinput(0);
+            OnDisableJ();
         }
 
         if (journalCanvas.activeSelf && !isScaled)
@@ -69,4 +58,24 @@ public class JournalManager : MonoBehaviour
         }
         
     }
+
+    public void OnEnableJ()
+    {
+        journalCanvas.SetActive(true);
+        UIinputProvider.instance().SendUIinput(4);
+        isOpen = true;
+        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        isScaled = false;
+        Time.timeScale = 0; // pause the game when the journal canvas is active
+    }
+
+    public void OnDisableJ()
+    {
+        isOpen = false;
+        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        journalCanvas.SetActive(false);
+        UIinputProvider.instance().SendUIinput(0);
+        Time.timeScale = 1; // resume game when journal canvas is deactivated
+    }
 }
+
