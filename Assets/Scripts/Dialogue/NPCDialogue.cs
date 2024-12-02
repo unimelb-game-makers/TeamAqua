@@ -10,7 +10,7 @@ public class NPCDialogue : MonoBehaviour
     public GameObject questCue;
     [SerializeField] public bool HasQuest;      //  <--- really unstable way to do things rn, will wait for quest- inventory integration before continuing
 
-    [SerializeField] int questID;   //quest id is handled in the ink script itself so this might go unsused
+    [SerializeField] public int questID;
 
     private bool isInRange;
     public static NPCDialogue npcDialogue;
@@ -37,6 +37,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() )
         {
+            QuestManager.Instance().CheckStep(questID, 1);
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
             EnergyMana.LoseEnergy(0);
             //DialogueSystem.SetSpeakerName(gameObject.name); 

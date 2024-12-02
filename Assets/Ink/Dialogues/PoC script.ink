@@ -1,5 +1,6 @@
 //ideally, use just local variables but it seems easier to work with global variables
-
+EXTERNAL checkQuestStatus(id, steps)     
+//this checks the completion status of quest
 
 
 
@@ -16,11 +17,13 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
 
 //conditional check, if var quest is empty, load main dialogue, if quest var < 10 (fishes), go to incomplete quest, else, go to submit quest
 { 
-    - questSteps == "": 
+    - questSteps == "":     // if empty, go to main
         -> main 
-    - questSteps < 10: 
+    - questSteps < 10 && questSteps != "":
+        ~checkQuestStatus(1, 1)
         -> IncompleteQuest
     - questSteps >= 10:
+        ~checkQuestStatus(1, 1)
         -> SubmitQuest 
 }
         
@@ -227,6 +230,7 @@ Below is the usual choice-based quest giver (id2)
 
 //if var quest >= 10 go here
 ===SubmitQuest===
+//~checkQuestStatus(1, 1)
 Would you like to finish this quest? #speaker:Narrator
 text
 clicking on yes should remove quest with id 1 while no should do nothing
@@ -236,6 +240,7 @@ clicking on yes should remove quest with id 1 while no should do nothing
     
 //if var quest <10 go here
 ===IncompleteQuest===
+//~checkQuestStatus(1, 1)
 this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
 I still need {fish - remainingFish} more fish. #speaker:Amelia
 You better hurry before I change my mind. 

@@ -31,20 +31,12 @@ public class DialogueSystem : MonoBehaviour
     private Coroutine displayLineCoroutine;
     private bool canContinueNextLine = false;
 
-    // TODO: track state of dialogue: start(0) -> questgiving(1) -> incompletequest(2) -> completequest(3) 
-    // stop playing dialogue (0) while repeatedly playing some dialogues such as (2) while quest is still ongoing
-    // if (0) is already played and quests are already done, move to any further important dialogue such as (3) and then finally move to random idle dialogues
+    private Inventory inventory;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more 
 
-    // REFRACTOR:
-    // 1. separate audio stuffs into different script, attached to the same gameobject
-    // 1.2 separate choices stuffs into different script, attached to the same gameobject
-    // 1.3 separate tags handling into different script, attached to the same gameobject
-    // 2. separate ink variable manipulation stuffs into own script
-    // 3.1. integrate with quest and inventory
-    // 3.2. integrate with input provider
+    //TODO (URGENT): Figure out where to call QuestManager.questMana().CompleteStep(1,1) to somehow check both id and steps at the same time, accessing the questSteps variable in ink to update the logic in there.
 
     //...
     //final: code clean up and debug
@@ -103,7 +95,7 @@ public class DialogueSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
         {
-            currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps
+            currentStory.variablesState["quest_id1"] = 10;
             Debug.Log("vairable quest accessed and set to 10");
         }  
         //==================================================================================================================//
@@ -130,6 +122,7 @@ public class DialogueSystem : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON)
     {       
         //Time.timeScale = 0;   
+
         Time.timeScale = 1;       
         Debug.Log("time stopped");
         currentStory = new Story(inkJSON.text);
@@ -138,6 +131,12 @@ public class DialogueSystem : MonoBehaviour
         //UIinputProvider.instance().SendUIinput(5);
         dialoguePanel.SetActive(true);
         dialogueVariable.StartListening(currentStory);
+        currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     //no issue when function empty, arguments none
+        {
+            Debug.Log("Function binded to ink at " + id + steps);
+            QuestManager.Instance().CompleteStep(id, steps);
+        });
+        //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps        
         ContinueStory();
         
     }
@@ -152,6 +151,7 @@ public class DialogueSystem : MonoBehaviour
         dialText.text = "";
         DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
+        currentStory.UnbindExternalFunction("checkQuestStatus");
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
         //UIinputProvider.instance().SendUIinput(0);
@@ -161,6 +161,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+    
             // dialText.text = currentStory.Continue();
             
             if (displayLineCoroutine != null)

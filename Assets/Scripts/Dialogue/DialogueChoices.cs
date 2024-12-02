@@ -106,8 +106,8 @@ public class DialogueChoices : MonoBehaviour
     public void ClearChoices(Story currentStory)
     {
         displaying = false;
-        Debug.Log("Clearing choices");
-        Debug.Log(currentStory.currentChoices.Count);
+        //Debug.Log("Clearing choices");
+        //Debug.Log(currentStory.currentChoices.Count);
         foreach (GameObject c in choiceButton)
         {
             c.GetComponent<Button>().onClick.RemoveAllListeners();

@@ -68,6 +68,10 @@ public class QuestManager : MonoBehaviour
             Destroy(gameObject); // Ensure that there's only one instance of the QuestManager
         }
     }
+    public static QuestManager Instance()
+    {
+        return instance;
+    }
 
     void Start()
     {
@@ -176,25 +180,54 @@ public class QuestManager : MonoBehaviour
         Parameters: int id - the id of the quest, int step - the step number to complete
         Return: void
     */
-    public void CompleteStep(int id, int step, bool objective = false)
-    {
-        // check for quest type
-        if (!objective) {
-            if (quests[id-1].quest_steps[step-1].quest_item_id != -1) {
-                // check if the player has the item in their inventory
-                Debug.Log("Checking for item in inventory");
-                if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
-                    print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
 
-                    // remove the item from the inventory
-                    inventory.RemoveItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount);
-                } else {
-                    Debug.Log("item not found in inventory");
-                    return;
+    /*
+    public void CheckStep(int id, int step, bool objective = false, bool QuestCon = false)
+    {
+        if (quests != null)
+        {
+            // check for quest type
+            if (!objective) {
+                if (quests[id-1].quest_steps[step-1].quest_item_id != -1) {
+                    // check if the player has the item in their inventory
+                    Debug.Log("Checking for item in inventory");
+                    if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
+                        print ("questcon is fulfilled" + (quests[id-1].quest_steps[step-1].quest_item_id));
+                        //questcon is fulfilled
+                        QuestCon = true;
+                    } else {
+                        Debug.Log("questcon not yet fulfiled");
+                        QuestCon = false;
+                    }
                 }
             }
         }
+        // if (objective) {
+        //     if (quests[id-1].)
+        // }
+    }
+    */
+    public void CompleteStep(int id, int step, bool objective = false)
+    {
+        if (quests != null)
+        {
+            // check for quest type
+            if (!objective) {
+                if (quests[id-1].quest_steps[step-1].quest_item_id != -1) {
+                    // check if the player has the item in their inventory
+                    Debug.Log("Checking for item in inventory");
+                    if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
+                        print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
 
+                        // remove the item from the inventory
+                        inventory.RemoveItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount);
+                    } else {
+                        Debug.Log("item not found in inventory");
+                        return;
+                    }
+                }
+            }
+        }
         // if (objective) {
         //     if (quests[id-1].)
         // }
@@ -245,6 +278,8 @@ public class QuestManager : MonoBehaviour
         Parameters: none
         Return: void
     */
+
+    
     private void DrawText() 
     {
         if (quests.Count == 0)

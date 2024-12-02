@@ -76,7 +76,7 @@ public class DialogueTags : MonoBehaviour
                         leftDial.SetActive(true);
                         rightDial.SetActive(false);
                         charNameLeft.text = tagValue;
-                        Debug.Log(tagValue);
+                        //Debug.Log(tagValue);
                     }
                     else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
                     {
@@ -88,7 +88,7 @@ public class DialogueTags : MonoBehaviour
                         leftDial.SetActive(false);
                         rightDial.SetActive(true);
                         charNameRight.text = tagValue;
-                        Debug.Log(tagValue);
+                        //Debug.Log(tagValue);
                     }
                     break;
                 case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
@@ -103,9 +103,6 @@ public class DialogueTags : MonoBehaviour
                     }
                     
                     //Debug.Log("portrait is " + tagValue);
-                    break;
-                case LAYOUT_TAG:
-                    Debug.Log("layout is " + tagValue);
                     break;
                 case AUDIO_TAG:
                     DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue);

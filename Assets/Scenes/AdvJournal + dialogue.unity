@@ -2994,7 +2994,7 @@ MonoBehaviour:
   Scroll_View_rect_transform: {fileID: 2132690558}
   QuestCompleted: 0
   questOpen: 0
-  inventory: {fileID: 0}
+  inventory: {fileID: 1024015731}
 --- !u!4 &1580950486
 Transform:
   m_ObjectHideFlags: 0
@@ -4855,7 +4855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7282576084333328487, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0009530881
+      value: 0.00016595428
       objectReference: {fileID: 0}
     - target: {fileID: 7381001008163311382, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_IsActive
