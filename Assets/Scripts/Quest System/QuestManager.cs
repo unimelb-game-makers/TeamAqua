@@ -34,6 +34,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Ink.Parsed;
 
 public class QuestManager : MonoBehaviour
 {
@@ -191,30 +192,15 @@ public class QuestManager : MonoBehaviour
     /*
     public void CheckStep(int id, int step, bool objective = false, bool QuestCon = false)
     {
-        if (quests != null)
-        {
-            // check for quest type
-            if (!objective) {
-                if (quests[id-1].quest_steps[step-1].quest_item_id != -1) {
-                    // check if the player has the item in their inventory
-                    Debug.Log("Checking for item in inventory");
-                    if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
-                        print ("questcon is fulfilled" + (quests[id-1].quest_steps[step-1].quest_item_id));
-                        //questcon is fulfilled
-                        QuestCon = true;
-                    } else {
-                        Debug.Log("questcon not yet fulfiled");
-                        QuestCon = false;
-                    }
-                }
-            }
-        }
-        // if (objective) {
-        //     if (quests[id-1].)
-        // }
+        probably takes in id and steps and story?
+        check in inventory or elsewhere for completion status of a quest
+        if quest status is completed,
+            story.variablestate("quest_id" + id) = "YES"
+        else:
+            break
     }
     */
-    public void CompleteStep(int id, int step, bool objective = false)
+    public void CompleteStep(int id, int step, Ink.Runtime.Story story, bool objective = false)
     {
         if (quests != null)
         {
@@ -228,6 +214,7 @@ public class QuestManager : MonoBehaviour
 
                         // remove the item from the inventory
                         inventory.RemoveItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount);
+                        story.variablesState["quest_id" + id] = "YES";
                     } else {
                         Debug.Log("item not found in inventory");
                         return;

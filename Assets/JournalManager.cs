@@ -49,9 +49,9 @@ public class JournalManager : MonoBehaviour
         }
 
         if (journalCanvas.activeSelf && !isScaled)
-        {
-            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
-            if (Scroll_View_rect_transform.localScale.y >= 1)
+        {       // horizontal fade animation
+            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0.05f, 0, 0);
+            if (Scroll_View_rect_transform.localScale.x >= 1)
             {
                 isScaled = true;
             }
@@ -64,7 +64,7 @@ public class JournalManager : MonoBehaviour
         journalCanvas.SetActive(true);
         UIinputProvider.instance().SendUIinput(4);
         isOpen = true;
-        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        Scroll_View_rect_transform.localScale = new Vector3(0, 1, 1); // reset scale for animation
         isScaled = false;
         Time.timeScale = 0; // pause the game when the journal canvas is active
     }
@@ -72,7 +72,7 @@ public class JournalManager : MonoBehaviour
     public void OnDisableJ()
     {
         isOpen = false;
-        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        Scroll_View_rect_transform.localScale = new Vector3(0, 1, 1); // reset scale for animation
         journalCanvas.SetActive(false);
         UIinputProvider.instance().SendUIinput(0);
         Time.timeScale = 1; // resume game when journal canvas is deactivated

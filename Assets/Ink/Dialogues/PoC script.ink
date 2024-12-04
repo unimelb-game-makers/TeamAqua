@@ -6,8 +6,13 @@ EXTERNAL checkQuestStatus(id, steps)
 
 
 INCLUDE globals.ink
+INCLUDE PoC post-quest.ink
 VAR questSteps = ""         // <-- //delcaring the local var ends up reseting whatever change we did, make to it at the start, hence justifies the need to declare a global variable
 ~ questSteps = quest_id1
+
+VAR steps = 0
+
+
 //SCENE X: CRASHLANDING ON NOON ISLAND
 //Comment1: as of rright now, we're using tags to let unity know when to display which portrait sprite, who is speak//etc and also when a choice is a quest-giving one
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
@@ -19,12 +24,13 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
 { 
     - questSteps == "":     // if empty, go to main
         -> main 
-    - questSteps < 10 && questSteps != "":
-        ~checkQuestStatus(1, 1)
-        -> IncompleteQuest
-    - questSteps >= 10:
-        ~checkQuestStatus(1, 1)
-        -> SubmitQuest 
+    - questSteps != "":
+        ~checkQuestStatus(1, 2)
+        - questSteps == "NO" && questSteps != "":
+            -> IncompleteQuest
+        - questSteps == "YES":
+            ~checkQuestStatus(1, 1)
+            -> SubmitQuest 
 }
         
 ===main===
@@ -204,6 +210,7 @@ Would save you a lot of effort of doing it yourself. #speaker:Amelia
 */
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
+~ temp examGrade = FLOAT(RANDOM(50, 100)) / 100         //testing
 Catch me some fish.
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
@@ -214,20 +221,29 @@ It’s nothing fancy, but it will do the trick.
 VAR id = 1
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
 You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:{id}
-~ quest_id1 = 1
+~ quest_id1 = "NO"
 current quest step is {questSteps}
 A
 B
 POC quest has been added by the previous line of dialogue (id1)
 Below is the usual choice-based quest giver (id2)
-+[Catch the fishes #quest:2 #done]
++[Catch the fishes #quest:3 #done]
     ->DONE      //first chunk of dialogue ends here
 +[Nah thanks #done]
     ->END     //first chunk of dialogue ends here
 //the hashtag done is to exit dialogue mode upon click since DONE or END leads u to an empty dialogue box and then takes 1 more click to acutally exit
-
+s
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
 
+//if var quest <10 go here
+===IncompleteQuest===
+//~checkQuestStatus(1, 1)
+this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
+I still need {fish - remainingFish} more fish. #speaker:Amelia
+You better hurry before I change my mind. 
+->DONE
+
+//=====================================After quest completion===========================================    
 //if var quest >= 10 go here
 ===SubmitQuest===
 //~checkQuestStatus(1, 1)
@@ -238,14 +254,7 @@ clicking on yes should remove quest with id 1 while no should do nothing
     +[Not yet #done]
     -> DONE
     
-//if var quest <10 go here
-===IncompleteQuest===
-//~checkQuestStatus(1, 1)
-this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
-I still need {fish - remainingFish} more fish. #speaker:Amelia
-You better hurry before I change my mind. 
-->DONE
-    
+
 ===CompleteQuest=== 
 this line of dialogue should play when player interacts with Amelia after completeing the quest. #speaker:silly dev
 After a few tries, you get the 10 fish you need. #speaker:Narrator

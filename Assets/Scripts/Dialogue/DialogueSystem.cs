@@ -131,10 +131,12 @@ public class DialogueSystem : MonoBehaviour
         //UIinputProvider.instance().SendUIinput(5);
         dialoguePanel.SetActive(true);
         dialogueVariable.StartListening(currentStory);
-        currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     //no issue when function empty, arguments none
-        {
+        currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
+        {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
             Debug.Log("Function binded to ink at " + id + steps);
-            QuestManager.Instance().CompleteStep(id, steps);
+            QuestManager.Instance().CompleteStep(id, steps, currentStory);
+            //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
+            
         });
         //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps        
         ContinueStory();

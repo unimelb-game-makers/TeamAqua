@@ -82,6 +82,37 @@
             "current_step_number":1,
             "active" : false,
             "finished" : false
+        },
+
+        {
+            "id" : 3,
+                "title" : "Help Amelia: ",
+                "description" : "Maria \"My crops have been destroyed by the ocean, can you please give me <color=green>10 fishes</color>?\"",
+                "quest_steps" : [
+                    {
+                        "step" : 1,
+                        "description" : "Collect the quest item",
+                        "objective" : "Collect fishs",
+                        "objective_type" : "GATHER",
+                        "quest_item_id" : -1,
+                        "quest_item_amount" : 10,
+                        "location": "(4,0,3)",
+                        "active":true,
+                        "finished":false
+
+                    }
+                ],
+                "reward" : {
+                    "experience" : 100,
+                    "gold" : 100,
+                    "item" : {
+                        "id" : -1,
+                        "amount" : 0
+                    }
+                },
+                "current_step_number":1,
+                "active" : false,
+                "finished" : false
         }
     ]
 }

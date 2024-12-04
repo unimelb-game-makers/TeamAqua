@@ -11,7 +11,7 @@ public class DialogueChoices : MonoBehaviour
 
     [Header ("Choices")]
     [SerializeField] public GameObject[] choiceButton;
-    private Story currentStory;
+    //private Story currentStory;
 
     public bool displaying = false;
     public static DialogueChoices DialChoice;
