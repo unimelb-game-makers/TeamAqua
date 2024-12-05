@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCWander : MonoBehaviour
+public class NPCWander : State
 {
     public float speed = 3;
     public Vector3[] waypoints;
     private int currentIndex = 0;
     private float threshold = 0.1f;
-    public void Update()
+    public override void Process()
     {
         if (waypoints.Length == 0)
         {
@@ -17,11 +17,11 @@ public class NPCWander : MonoBehaviour
         }
 
         Vector3 targetWaypoint = waypoints[currentIndex];
-        if (Vector3.Distance(transform.position, targetWaypoint) <= threshold)
+        if (Vector3.Distance(statemachine.transform.position, targetWaypoint) <= threshold)
         {
             currentIndex = (currentIndex + 1) % waypoints.Length;
         }
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+        statemachine.transform.position = Vector3.MoveTowards(statemachine.transform.position, targetWaypoint, speed * Time.deltaTime);
     }
     
 }

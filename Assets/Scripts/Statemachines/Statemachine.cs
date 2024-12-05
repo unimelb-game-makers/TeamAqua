@@ -6,6 +6,7 @@ public class Statemachine : MonoBehaviour
 {
     /*currentState should be set in the editor*/
     public State currentState;
+    public List<State> StatesList;
 
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,8 @@ public class Statemachine : MonoBehaviour
         /*Call each state's start logic*/
         foreach(State childState in GetComponentsInChildren<State>()){
             childState.Ready();
+            childState.statemachine = this;
+            StatesList.Add(childState);
         }
     }
 
