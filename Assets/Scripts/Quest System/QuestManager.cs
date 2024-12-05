@@ -122,7 +122,7 @@ public class QuestManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            CompleteStep(1, 1);
+            //CompleteStep(1, 1);
         }
     }
 
