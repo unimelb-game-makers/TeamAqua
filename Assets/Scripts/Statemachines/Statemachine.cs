@@ -17,6 +17,7 @@ public class Statemachine : MonoBehaviour
             childState.statemachine = this;
             StatesList.Add(childState);
         }
+        currentState.Enter();
     }
 
     // Update is called once per frame
