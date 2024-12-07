@@ -655,7 +655,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 1848230478}
-  StatesList: []
+  StatesList:
+  - {fileID: 1848230478}
+  - {fileID: 1068170875}
 --- !u!1 &1771546249
 GameObject:
   m_ObjectHideFlags: 3

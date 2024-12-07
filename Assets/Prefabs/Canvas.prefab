@@ -4605,7 +4605,6 @@ GameObject:
   - component: {fileID: 334436334348679335}
   - component: {fileID: 7429534888452304562}
   - component: {fileID: 419808978962052375}
-  - component: {fileID: 8628212346754160273}
   - component: {fileID: 6383460362675583144}
   m_Layer: 5
   m_Name: InventoryCanvas
@@ -4680,24 +4679,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &8628212346754160273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8668430170635105969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0539979906c57446a1289835a3f9788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  itemSlotPrefab: {fileID: 3806037446139548810, guid: 8142eb043ca5d1d4c96a284dab9b0dc1, type: 3}
-  scrollParent: {fileID: 7759595439577924301}
-  inventoryMenu: {fileID: 6934857751675440553}
-  itemSlots:
-  - {fileID: 8447110748348747920}
 --- !u!114 &6383460362675583144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4898,14 +4879,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5045211119807147967, guid: 8142eb043ca5d1d4c96a284dab9b0dc1, type: 3}
   m_PrefabInstance: {fileID: 5814548714109264840}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8447110748348747920 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2705334372040045400, guid: 8142eb043ca5d1d4c96a284dab9b0dc1, type: 3}
-  m_PrefabInstance: {fileID: 5814548714109264840}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc613269fa8ea440b66a77202431e8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

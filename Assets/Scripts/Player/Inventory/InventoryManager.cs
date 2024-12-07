@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager invMana;
     [SerializeField] Inventory inventory;
     [SerializeField] GameObject itemSlotPrefab;
     [SerializeField] GameObject scrollParent;
@@ -16,6 +17,16 @@ public class InventoryManager : MonoBehaviour
     //public InputAction menuAction;
     public List<ItemSlot> itemSlots = new List<ItemSlot>();
     
+    void Awake()
+    {
+        invMana = this;
+    }
+
+    public static InventoryManager instance()
+    {
+        return invMana;
+    }
+    /*
     void Start()
     {
         //inventoryMenu.SetActive(false);
@@ -56,7 +67,7 @@ public class InventoryManager : MonoBehaviour
         _menuActivated = false;
         UIinputProvider.instance().SendUIinput(0);
     }
-
+    */
     public void UpdateSlots()
     {
         bool found;

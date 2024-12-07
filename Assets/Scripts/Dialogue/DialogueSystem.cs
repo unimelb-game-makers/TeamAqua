@@ -104,9 +104,10 @@ public class DialogueSystem : MonoBehaviour
 
     // 11/16/2024: we might not even need MoveKnots() anymore if we use conditions check within the ink script itself actually
     //left in in case it could be recycled for dialogue skip feature
+    /*
     public void MoveKnots()
     { 
-        if (/*quest condition fulfilled, &&*/ QuestManager.instance.QuestCompleted == true)
+        if (/*quest condition fulfilled, &&* QuestManager.instance.QuestCompleted == true)
         {
             currentStory.ChoosePathString("SubmitQuest");
             ContinueStory();
@@ -118,6 +119,7 @@ public class DialogueSystem : MonoBehaviour
             ContinueStory();
         }   
     }
+    */
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {       
@@ -134,7 +136,7 @@ public class DialogueSystem : MonoBehaviour
         currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
         {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
             Debug.Log("Function binded to ink at " + id + steps);
-            QuestManager.Instance().CompleteStep(id, steps, currentStory);
+            //QuestManager.Instance().CompleteStep(id, steps, currentStory);
             //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
             
         });

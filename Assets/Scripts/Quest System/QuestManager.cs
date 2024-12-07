@@ -54,7 +54,7 @@ public class QuestManager : MonoBehaviour
     private bool isScaled = false;
     public bool QuestCompleted;
     public bool questOpen = false;
-
+    
     [SerializeField] private Inventory inventory; // the inventory of the player
     
     void Awake()
@@ -73,7 +73,7 @@ public class QuestManager : MonoBehaviour
     {
         return instance;
     }
-
+    /*  ========================================= Migrated to UIstatemachine ======================================================
     void Start()
     {
         // TODO: load the quests from the file when game starts
@@ -81,7 +81,7 @@ public class QuestManager : MonoBehaviour
         // finished = ...
         //
         //QuestCompleted = false;
-        OnDisableQ();
+        OnDisableQ();        
     }
 
     void Update()
@@ -132,7 +132,7 @@ public class QuestManager : MonoBehaviour
         AddQuest: This function adds a quest to the quest list. It reads the quest from the .json file and adds it to the list.
         Parameters: int id - the id of the quest to add
         Return: void
-    */
+    
     public void OnEnableQ()
     {
         //JournalManager.instance().journalCanvas.SetActive(false);
@@ -152,6 +152,7 @@ public class QuestManager : MonoBehaviour
         questOpen = false;
         Time.timeScale = 1; // resume game when quest canvas is deactivated
     }
+    */
     public void AddQuest(int id)
     {
         Quest quest = JsonUtility.FromJson<Quest>(jsonFile.text);
