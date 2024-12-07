@@ -1,3 +1,12 @@
+
+
+
+
+
+// =========================== UNUSED BUT KEPT IN CASE WE REVERT BACK TO THIS METHOD ==================================
+
+
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,3 +63,4 @@ public class UIinputProvider : MonoBehaviour
 
     }    
 }
+*/

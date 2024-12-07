@@ -3,16 +3,14 @@ using UnityEngine.UI;
 
 public class InventoryOn : UIState
 {
-    [SerializeField] public UIState inventoryOff;
+    [SerializeField] public UIState All_UI_Off;
     [SerializeField] GameObject inventoryMenu;
-    private bool _menuActivated;
     public override void UIEnter()
     {
         Debug.Log("entering inventory on state");
         //menuAction.Enable();
         InventoryManager.instance().UpdateSlots();
         inventoryMenu.SetActive(true);
-        _menuActivated = true;
         
     }
 
@@ -20,12 +18,13 @@ public class InventoryOn : UIState
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            UIstatemachine.ChangeUIState(inventoryOff);
+            UIstatemachine.ChangeUIState(All_UI_Off);
         }
 
         if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes inventory if player enters dialogue
         {
-            UIstatemachine.ChangeUIState(inventoryOff);
+            UIstatemachine.ChangeUIState(All_UI_Off /*UI_Off_State*/);
+            // ->>> solution: make a new Ui_Off_State to handle all inputs for moving to xxxOn state and turning said state off
         }
         InventoryManager.instance().UpdateSlots();
     }

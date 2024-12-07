@@ -1,4 +1,5 @@
-using System.Collections;
+
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -14,6 +15,7 @@ public class JournalManager : MonoBehaviour
     private bool isScaled = false;
     public bool isOpen = false;
     // Start is called before the first frame update
+    /*
     void Start()
     {
         OnDisableJ();
@@ -78,4 +80,4 @@ public class JournalManager : MonoBehaviour
         Time.timeScale = 1; // resume game when journal canvas is deactivated
     }
 }
-
+*/

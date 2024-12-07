@@ -5,7 +5,7 @@ using TMPro;
 
 public class QuestOn : UIState
 {
-    [SerializeField] UIState questOff;
+    [SerializeField] UIState All_UI_Off;
     [SerializeField] private GameObject questCanvas; // the canvas that displays the quests
 
     [SerializeField] private RectTransform rt; // the rect transform of the questText
@@ -27,12 +27,12 @@ public class QuestOn : UIState
     {
         /*Changing States*/
         if(Input.GetKeyDown(KeyCode.J)){
-            UIstatemachine.ChangeUIState(questOff);
+            UIstatemachine.ChangeUIState(All_UI_Off);
         }
 
         if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes questlog if player enters dialogue
         {
-            UIstatemachine.ChangeUIState(questOff);
+            UIstatemachine.ChangeUIState(All_UI_Off);
         }
 
         if (questCanvas.activeSelf && !isScaled)

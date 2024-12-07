@@ -13,7 +13,7 @@ using System;
 public abstract class UIState : MonoBehaviour
 {
     public UIStatemachine UIstatemachine; //A reference to the parent statemachine for the state to call ChangeState()
-    public virtual void UIOff(){}
+    //public virtual void UIOff(){}
     public virtual void UIEnter(){} //Called when entering the new state
     public virtual void UIExit(){}
     public virtual void UIReady(){}
