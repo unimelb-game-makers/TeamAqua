@@ -1615,6 +1615,17 @@ Transform:
   - {fileID: 776418969}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &819309766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 382666531717231743, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3c509c2c4e51c4e961654a0b01b40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904599332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1694,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &955975097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5347945760130529741, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fc148193217a3479df226a2c058dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1023076871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7759595439577924301, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
@@ -3237,6 +3259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 382666531717231743, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: DialoguePanel
+      value: 
+      objectReference: {fileID: 4488191064588938497}
     - target: {fileID: 724087580844319506, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'choiceButton.Array.data[0]'
       value: 
@@ -3246,13 +3272,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673719366}
     - target: {fileID: 863641324275516595, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: EnergyAmount
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 863641324275516595, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: RemainingEnergy
       value: 
       objectReference: {fileID: 3008058714874533174}
+    - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: StatesList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 819309766}
+    - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 785816725}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: StatesList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: UI_canvases.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 819309766}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'UI_canvases.Array.data[0]'
       value: 
@@ -3265,6 +3319,14 @@ PrefabInstance:
       propertyPath: 'UI_canvases.Array.data[2]'
       value: 
       objectReference: {fileID: 1108697980}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'UI_canvases.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1208105645}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'UI_canvases.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1208105645}
     - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.389167
@@ -3338,6 +3400,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1841379938}
     - target: {fileID: 3389511054512593486, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 3389511054512593486, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: dialogueOn
+      value: 
+      objectReference: {fileID: 819309766}
+    - target: {fileID: 3389511054512593486, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: questCanvas
       value: 
       objectReference: {fileID: 1358170212}
@@ -3346,9 +3416,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2132690558}
     - target: {fileID: 4114959930011251316, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 4114959930011251316, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: dialogueOn
+      value: 
+      objectReference: {fileID: 819309766}
+    - target: {fileID: 4114959930011251316, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: inventoryMenu
       value: 
       objectReference: {fileID: 1057077829}
+    - target: {fileID: 4947494200136949143, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 4947494200136949143, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: dialogueOn
+      value: 
+      objectReference: {fileID: 819309766}
     - target: {fileID: 4947494200136949143, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: journalCanvas
       value: 
@@ -3365,6 +3451,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 4488191064588938497}
+    - target: {fileID: 5347945760130529741, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 1208105645}
     - target: {fileID: 8591276593801274279, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: leftDial
       value: 
@@ -3617,6 +3707,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1739055405672620888, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739055405672620888, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739055405672620888, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1851707180976419438, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3773,6 +3875,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4265032327316277684, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4608092034141759168, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_text
       value: 'Dusk Island, xx/xx/19xx
@@ -3855,6 +3961,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2110660370}
+    - target: {fileID: 8384621045060625704, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_Name
+      value: Paused Game Panel
+      objectReference: {fileID: 0}
     - target: {fileID: 8680448076126172676, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 2

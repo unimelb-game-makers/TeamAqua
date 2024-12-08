@@ -17,7 +17,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private TextAsset LoadGlobalJSON;
 
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] public GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialText;
 
     private Story currentStory;
@@ -64,7 +64,7 @@ public class DialogueSystem : MonoBehaviour
     private void Start()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
+        //dialoguePanel.SetActive(false);
         DialogueAudioManager.GetAudioMana().InitializeAudioDictionary();
     }
 

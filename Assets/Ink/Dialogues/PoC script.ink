@@ -2,9 +2,6 @@
 EXTERNAL checkQuestStatus(id, steps)     
 //this checks the completion status of quest
 
-
-
-
 INCLUDE globals.ink
 INCLUDE PoC post-quest.ink
 VAR questSteps = ""         // <-- //delcaring the local var ends up reseting whatever change we did, make to it at the start, hence justifies the need to declare a global variable
@@ -36,11 +33,15 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
 ===main===
 <color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color> #speaker:Narrator #audio:2beep
 
+
+/*
+
+
 <color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 <color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
 You find yourself on a beach. #speaker:Narrator  #audio:2beep
 The sun glares over you, and your ship is in pieces around you. #audio:2beep
-/*
+
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
 The storms of yesterday seem to have died down for now. 
@@ -116,14 +117,14 @@ Are you hurt? #speaker:Noelle #audio:default
 I’m a little bruised, but I would be a lot worse for wear if it wasn’t for you. #speaker:Amelia #audio:animal
 So thanks.  
 Amelia looks up at you, and recoils in horror. #speaker:Narrator #audio:2beep
-*/
+
 Hey, wait a minute? Are you a - #speaker:Amelia #audio:animal
 human!
 Amelia jumps back, and assumes a fighting stance, arms raised, ready to fight for her life. #speaker:Narrator #audio:2beep
 Stay back! #speaker:Amelia #audio:animal
 Wait! I’m not going to hurt you. #speaker:Noelle #audio:default 
 //////============================BELOW, AUDIO TAG ISNT UPDATED YET===============================================
-/*
+
 Ha! #speaker:Amelia #audio:2beep                  //<- test
 Likely story. You humans are all the same. 
 Can’t believe a lousy human was the one that came to my rescue. 
@@ -207,10 +208,11 @@ When was the last time you ate? #speaker:Noelle
 Hard to find food on this island when everything is trying to kill you.
 Would be pretty convenient if someone were to find some food for you. #speaker:Noelle
 Would save you a lot of effort of doing it yourself. #speaker:Amelia
-*/
+
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
 ~ temp examGrade = FLOAT(RANDOM(50, 100)) / 100         //testing
+*/
 Catch me some fish.
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
@@ -277,7 +279,7 @@ But the reality is I still barely know you.
 And if you can catch that many fish in a short span of time, I’m sure you’ll be able to survive fine on your own. 
 And I don’t really travel in groups anyway.
 But we had an agreement— #speaker:Noelle
-The /*add sfx here*/ haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
+The haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
 Rain begins to fall on the island. 
 Amelia looks up in horror.
 The Great Disaster... #speaker:Amelia

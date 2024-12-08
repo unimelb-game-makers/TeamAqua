@@ -35,7 +35,9 @@ But the reality is I still barely know you.
 And if you can catch that many fish in a short span of time, I’m sure you’ll be able to survive fine on your own. 
 And I don’t really travel in groups anyway.
 But we had an agreement— #speaker:Noelle
-The /*add sfx here*/ haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
+The /*add sfx here*/ 
+
+/*haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
 Rain begins to fall on the island. 
 Amelia looks up in horror.
 The Great Disaster... #speaker:Amelia
@@ -53,7 +55,5 @@ To outrun the floods.
 Now come on, we need to go.
 Amelia takes Noelle’s hand, and drags her towards the rainforests deeper in-land. #speaker:Narrator
 ->DONE
-
-
-
 */
+

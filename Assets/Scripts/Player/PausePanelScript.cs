@@ -18,6 +18,7 @@ public class PausePanelScript : MonoBehaviour
     {
         return PauseManager;
     }
+    /*
     void Start()
     {
         PausedPanel.SetActive(false);
@@ -47,6 +48,7 @@ public class PausePanelScript : MonoBehaviour
             }
         }
     }
+    */
 
     public static bool GetIsPlaused()
     {

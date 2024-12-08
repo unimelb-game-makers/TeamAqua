@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class InventoryOn : UIState
 {
     [SerializeField] public UIState All_UI_Off;
+    public UIState paused;
     [SerializeField] GameObject inventoryMenu;
     public override void UIEnter()
     {
@@ -19,9 +20,17 @@ public class InventoryOn : UIState
         if (Input.GetKeyDown(KeyCode.I))
         {
             UIstatemachine.ChangeUIState(All_UI_Off);
+            
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIstatemachine.ChangeUIState(All_UI_Off);
+            UIstatemachine.ChangeUIState(paused);
         }
 
-        if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes inventory if player enters dialogue
+
+        if (DialogueSystem.GetIsPlaying()) // forcibly closes inventory if player enters dialogue
         {
             UIstatemachine.ChangeUIState(All_UI_Off /*UI_Off_State*/);
             // ->>> solution: make a new Ui_Off_State to handle all inputs for moving to xxxOn state and turning said state off

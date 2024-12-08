@@ -13,29 +13,40 @@ public class All_UI_Off_State: UIState
     */
     public override void UIEnter()
     {
-
+        Debug.Log("Entering all UI on state");
         foreach ( GameObject canvas in UI_canvases)
         {   // takes in list of all UI canvases and set them to inactive
-            canvas.SetActive(false);
+            if (canvas.activeSelf)
+            {
+                canvas.SetActive(false);
+                Time.timeScale = 1;     // time resumes
+            }
         }
     }
 
     public override void UIProcess()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
+    {   // i dont know a better way to access list in c# than indexing tbh.....
+        if (Input.GetKeyDown(KeyCode.I) && !DialogueSystem.GetIsPlaying())
         {   //inventory
             UIstatemachine.ChangeUIState(StatesList[0]);
         }
         
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && !DialogueSystem.GetIsPlaying())
         {   //quest
             UIstatemachine.ChangeUIState(StatesList[1]);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) && !DialogueSystem.GetIsPlaying())
         {   //journal
             UIstatemachine.ChangeUIState(StatesList[2]);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetIsPlaying())
+        {   //pause
+            //this.UIEnter();
+            UIstatemachine.ChangeUIState(StatesList[3]);
+        }
+
         /*
         if (Input.GetKeyDown(KeyCode.M))
         {

@@ -51,7 +51,7 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField] private RectTransform rt; // the rect transform of the questText
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
-    private bool isScaled = false;
+    //private bool isScaled = false;
     public bool QuestCompleted;
     public bool questOpen = false;
     

@@ -4,10 +4,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIStatemachine : MonoBehaviour
+
+// NEXT: migrate dialogue and pause UIs state here too, 
+// NOTE: priority order: PAUSE >> DiALOUGE >> ANY OTHER UIs
+
 {
     /*currentState should be set in the editor*/
     public UIState currentState;
-    public List<UIState> StatesList;
+    public List<UIState> StatesList ;//{ get; }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,13 @@ public class UIStatemachine : MonoBehaviour
     {
         /*Process the current state's update logic*/
         if(currentState != null)
-            currentState.UIProcess();      
+            currentState.UIProcess();   
+        /*
+        if (DialogueSystem.GetIsPlaying()) // forcibly closes questlog if player enters dialogue
+        {
+            this.ChangeUIState(StatesList[5]);
+        }   
+        */
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -43,5 +53,14 @@ public class UIStatemachine : MonoBehaviour
         
         currentState = newState;
         currentState.UIEnter();
+    }
+
+    public bool CheckPause()
+    {
+        if (currentState == StatesList[3])
+        {
+            return true;
+        }
+        return false;
     }
 }

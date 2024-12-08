@@ -5,7 +5,8 @@ using TMPro;
 
 public class JournalOn : UIState
 {
-    [SerializeField] UIState All_UI_Off;
+    [SerializeField] public UIState All_UI_Off;
+    public UIState paused;
     [SerializeField] public GameObject journalCanvas; // the canvas that displays the quests
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
     private bool isScaled = false;
@@ -24,7 +25,14 @@ public class JournalOn : UIState
             UIstatemachine.ChangeUIState(All_UI_Off);
         }
 
-        if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes questlog if player enters dialogue
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIstatemachine.ChangeUIState(All_UI_Off);
+            UIstatemachine.ChangeUIState(paused);
+        }
+        
+
+        if (DialogueSystem.GetIsPlaying()) // forcibly closes questlog if player enters dialogue
         {
             UIstatemachine.ChangeUIState(All_UI_Off);
         }
