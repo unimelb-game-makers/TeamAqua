@@ -5,6 +5,7 @@ public class All_UI_Off_State: UIState
 {
     [SerializeField] 
     public List<UIState> StatesList;
+    public UIState PauseOn;
     public List<GameObject> UI_canvases;
     /*
     [SerializeField] public UIState questOn;
@@ -46,7 +47,7 @@ public class All_UI_Off_State: UIState
         if (Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetIsPlaying())
         {   //pause
             //this.UIEnter();
-            UIstatemachine.ChangeUIState(StatesList[3]);
+            UIstatemachine.ChangeUIState(PauseOn);
         }
 
         /*

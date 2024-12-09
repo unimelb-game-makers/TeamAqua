@@ -139,7 +139,7 @@ public class DialogueSystem : MonoBehaviour
         currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
         {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
             Debug.Log("Function binded to ink at " + id + steps);
-            //QuestManager.Instance().CompleteStep(id, steps, currentStory);
+            QuestManager.Instance().CompleteStep(id, steps, currentStory);
             //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
             
         });
@@ -155,13 +155,13 @@ public class DialogueSystem : MonoBehaviour
         Debug.Log("time resumed");
         dialogueVariable.StopListening(currentStory);
         //dialoguePanel.SetActive(false);
-        UIstatemachine.ChangeUIState(All_UI_Off);
         dialText.text = "";
         DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
-        currentStory.UnbindExternalFunction("checkQuestStatus");
+        //currentStory.UnbindExternalFunction("checkQuestStatus");
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
+        UIstatemachine.ChangeUIState(All_UI_Off);
         //UIinputProvider.instance().SendUIinput(0);
 
     }

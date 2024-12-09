@@ -2,7 +2,6 @@
 //if var quest >= 10 go here
 /*
 ===SubmitQuest===
-//~checkQuestStatus(1, 1)
 Would you like to finish this quest? #speaker:Narrator
 text
 clicking on yes should remove quest with id 1 while no should do nothing

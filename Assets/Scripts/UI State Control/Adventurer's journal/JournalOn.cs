@@ -27,15 +27,12 @@ public class JournalOn : UIState
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            UIstatemachine.ChangeUIState(All_UI_Off);
+            //UIstatemachine.ChangeUIState(All_UI_Off);
             UIstatemachine.ChangeUIState(paused);
         }
         
 
-        if (DialogueSystem.GetIsPlaying()) // forcibly closes questlog if player enters dialogue
-        {
-            UIstatemachine.ChangeUIState(All_UI_Off);
-        }
+        
 
         if (journalCanvas.activeSelf && !isScaled)
         {       // horizontal fade animation

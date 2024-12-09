@@ -67,7 +67,7 @@ public class DialogueChoices : MonoBehaviour
                if (selectedChoice.tags[i].Contains("quest")) {
                     // for substring 6
                     int questID = int.Parse(selectedChoice.tags[i].Substring(6));
-                    Debug.Log("Quest ID: " + questID);
+                    Debug.Log("Adding Quest ID: " + questID);
 
                     // give quest to player
                     if (questID > 0)
@@ -79,7 +79,7 @@ public class DialogueChoices : MonoBehaviour
                 //steven's change below, needs more testing
                if (selectedChoice.tags[i].Contains("finish")) {
                     int questID = int.Parse(selectedChoice.tags[i].Substring(7));
-                    Debug.Log("Quest ID: " + questID);
+                    Debug.Log("Finishing Quest ID: " + questID);
 
                     // finishes the quest upon interaction
                     if (questID > 0)

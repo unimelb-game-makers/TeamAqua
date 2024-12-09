@@ -12,6 +12,7 @@ public class PauseOn : UIState
     {
         Debug.Log("Entering paused state");
         pausePanel.SetActive(true);
+        All_UI_Off.UIEnter();
         Time.timeScale = 0;
     }
 
@@ -21,10 +22,18 @@ public class PauseOn : UIState
         {
             UIstatemachine.ChangeUIState(All_UI_Off);
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            return;
+        }
+
     }
 
     public override void UIExit()
     {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
         Debug.Log("exiting pause state");
     }
 

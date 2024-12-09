@@ -1,13 +1,16 @@
+
+
 //ideally, use just local variables but it seems easier to work with global variables
 EXTERNAL checkQuestStatus(id, steps)     
 //this checks the completion status of quest
 
-INCLUDE globals.ink
-INCLUDE PoC post-quest.ink
-VAR questSteps = ""         // <-- //delcaring the local var ends up reseting whatever change we did, make to it at the start, hence justifies the need to declare a global variable
-~ questSteps = quest_id1
 
-VAR steps = 0
+
+
+INCLUDE globals.ink
+//INCLUDE PoC post-quest.ink
+VAR questSteps = ""         // <-- //delcaring the local var ends up reseting whatever change we did make to it at the start, hence justifies the need to declare a global variable
+~ questSteps = quest_id1
 
 
 //SCENE X: CRASHLANDING ON NOON ISLAND
@@ -21,27 +24,23 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
 { 
     - questSteps == "":     // if empty, go to main
         -> main 
-    - questSteps != "":
-        ~checkQuestStatus(1, 2)
-        - questSteps == "NO" && questSteps != "":
-            -> IncompleteQuest
-        - questSteps == "YES":
-            ~checkQuestStatus(1, 1)
-            -> SubmitQuest 
+    
+    - questSteps == "NO":   //================================ failed here ==========
+        quest step is {questSteps} and current quest_id var is {quest_id1}
+        -> IncompleteQuest
+    - questSteps == "YES":
+        ~checkQuestStatus(1, 1)
+        -> SubmitQuest 
 }
         
 ===main===
 <color=\#3A6DE3>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color> #speaker:Narrator #audio:2beep
 
-
-/*
-
-
 <color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 <color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
 You find yourself on a beach. #speaker:Narrator  #audio:2beep
 The sun glares over you, and your ship is in pieces around you. #audio:2beep
-
+/*
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
 The storms of yesterday seem to have died down for now. 
@@ -212,7 +211,6 @@ Would save you a lot of effort of doing it yourself. #speaker:Amelia
 <b><i>sighs</i></b> Fine. #speaker:Amelia
 //same devnote 
 ~ temp examGrade = FLOAT(RANDOM(50, 100)) / 100         //testing
-*/
 Catch me some fish.
 VAR fish = 10
 VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 for testing purposes, this var will be updated in code, likely in MoveKnots()
@@ -220,6 +218,7 @@ VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 fo
 You look around for something to help you catch some fish. #speaker:Narrator
 In the wreckage of your old ship you find an old fishing rod.
 It’s nothing fancy, but it will do the trick.
+*/
 VAR id = 1
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
 You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:{id}
@@ -234,15 +233,16 @@ Below is the usual choice-based quest giver (id2)
 +[Nah thanks #done]
     ->END     //first chunk of dialogue ends here
 //the hashtag done is to exit dialogue mode upon click since DONE or END leads u to an empty dialogue box and then takes 1 more click to acutally exit
-s
+
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED FISH:
 
 //if var quest <10 go here
 ===IncompleteQuest===
 //~checkQuestStatus(1, 1)
 this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
-I still need {fish - remainingFish} more fish. #speaker:Amelia
+I still need 10 more fish. #speaker:Amelia
 You better hurry before I change my mind. 
+~ quest_id1 = "YES"
 ->DONE
 
 //=====================================After quest completion===========================================    
@@ -279,7 +279,7 @@ But the reality is I still barely know you.
 And if you can catch that many fish in a short span of time, I’m sure you’ll be able to survive fine on your own. 
 And I don’t really travel in groups anyway.
 But we had an agreement— #speaker:Noelle
-The haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
+The /*add sfx here*/ haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. 
 Rain begins to fall on the island. 
 Amelia looks up in horror.
 The Great Disaster... #speaker:Amelia
@@ -297,3 +297,9 @@ To outrun the floods.
 Now come on, we need to go.
 Amelia takes Noelle’s hand, and drags her towards the rainforests deeper in-land. #speaker:Narrator
 ->DONE
+
+
+
+/*
+
+*/

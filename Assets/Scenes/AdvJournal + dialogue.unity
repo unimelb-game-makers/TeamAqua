@@ -157,9 +157,9 @@ MonoBehaviour:
   questCue: {fileID: 515589819}
   HasQuest: 1
   questID: 3
-  EnergyMana: {fileID: 0}
-  DialogueOn: {fileID: 0}
-  UIstatemachine: {fileID: 0}
+  EnergyMana: {fileID: 1923082902}
+  DialogueOn: {fileID: 819309766}
+  UIstatemachine: {fileID: 156287969}
 --- !u!135 &15283153
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   HasQuest: 1
   questID: 1
   EnergyMana: {fileID: 1923082902}
-  DialogueOn: {fileID: 0}
+  DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &716248917
 SphereCollider:
@@ -2911,9 +2911,9 @@ MonoBehaviour:
   questCue: {fileID: 1369715988}
   HasQuest: 0
   questID: 0
-  EnergyMana: {fileID: 0}
-  DialogueOn: {fileID: 0}
-  UIstatemachine: {fileID: 0}
+  EnergyMana: {fileID: 1923082902}
+  DialogueOn: {fileID: 819309766}
+  UIstatemachine: {fileID: 156287969}
 --- !u!135 &2105921593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3316,12 +3316,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 785816725}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: PauseOn
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: StatesList.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: UI_canvases.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[3]'
@@ -3346,7 +3350,7 @@ PrefabInstance:
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'UI_canvases.Array.data[3]'
       value: 
-      objectReference: {fileID: 1208105645}
+      objectReference: {fileID: 4488191064588938497}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'UI_canvases.Array.data[4]'
       value: 

@@ -25,16 +25,10 @@ public class InventoryOn : UIState
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            UIstatemachine.ChangeUIState(All_UI_Off);
+            //UIstatemachine.ChangeUIState(All_UI_Off);
             UIstatemachine.ChangeUIState(paused);
         }
 
-
-        if (DialogueSystem.GetIsPlaying()) // forcibly closes inventory if player enters dialogue
-        {
-            UIstatemachine.ChangeUIState(All_UI_Off /*UI_Off_State*/);
-            // ->>> solution: make a new Ui_Off_State to handle all inputs for moving to xxxOn state and turning said state off
-        }
         InventoryManager.instance().UpdateSlots();
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIStatemachine : MonoBehaviour
 
-// NEXT: migrate dialogue and pause UIs state here too, 
+// NEXT: migrate dialogue state here too, 
 // NOTE: priority order: PAUSE >> DiALOUGE >> ANY OTHER UIs
 
 {

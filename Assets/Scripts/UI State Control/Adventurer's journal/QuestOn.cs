@@ -34,15 +34,11 @@ public class QuestOn : UIState
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            UIstatemachine.ChangeUIState(All_UI_Off);
+            //UIstatemachine.ChangeUIState(All_UI_Off);
             UIstatemachine.ChangeUIState(paused);
         }
 
-        if (DialogueSystem.GetIsPlaying()) // forcibly closes questlog if player enters dialogue
-        {
-            UIstatemachine.ChangeUIState(All_UI_Off);
-        }
-
+       
         if (questCanvas.activeSelf && !isScaled)
         {
             Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);

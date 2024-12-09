@@ -38,7 +38,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() )
+        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() && !UIstatemachine.CheckPause() )
         {
             //QuestManager.Instance().CheckStep(questID, 1);
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON);

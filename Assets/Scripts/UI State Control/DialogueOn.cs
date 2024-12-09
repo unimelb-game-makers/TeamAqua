@@ -24,13 +24,14 @@ public class DialogueOn : UIState
     {
         if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying())
         {
-            UIstatemachine.ChangeUIState(All_UI_Off);
             StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+            
         }
     }
 
     public override void UIExit()
     {
+        StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
         Debug.Log("exiting dialogue mode");
     }
 
