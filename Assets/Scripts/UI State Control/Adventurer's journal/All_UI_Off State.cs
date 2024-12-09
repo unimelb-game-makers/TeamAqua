@@ -13,14 +13,16 @@ public class All_UI_Off_State: UIState
     */
     public override void UIEnter()
     {
-        Debug.Log("Entering all UI on state");
+        Debug.Log("Entering all UI off state");
         foreach ( GameObject canvas in UI_canvases)
         {   // takes in list of all UI canvases and set them to inactive
             if (canvas.activeSelf)
             {
                 canvas.SetActive(false);
                 Time.timeScale = 1;     // time resumes
+                break;  //break out of loop if found the active UI
             }
+            
         }
     }
 

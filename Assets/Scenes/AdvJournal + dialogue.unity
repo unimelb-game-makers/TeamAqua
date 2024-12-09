@@ -157,6 +157,9 @@ MonoBehaviour:
   questCue: {fileID: 515589819}
   HasQuest: 1
   questID: 3
+  EnergyMana: {fileID: 0}
+  DialogueOn: {fileID: 0}
+  UIstatemachine: {fileID: 0}
 --- !u!135 &15283153
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1345,6 +1348,9 @@ MonoBehaviour:
   questCue: {fileID: 603113140}
   HasQuest: 1
   questID: 1
+  EnergyMana: {fileID: 1923082902}
+  DialogueOn: {fileID: 0}
+  UIstatemachine: {fileID: 156287969}
 --- !u!135 &716248917
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2698,6 +2704,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
   m_PrefabInstance: {fileID: 3431080731849939244}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1923082902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 863641324275516595, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7caab514b9338df4f898d607074b29c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926477931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,6 +2911,9 @@ MonoBehaviour:
   questCue: {fileID: 1369715988}
   HasQuest: 0
   questID: 0
+  EnergyMana: {fileID: 0}
+  DialogueOn: {fileID: 0}
+  UIstatemachine: {fileID: 0}
 --- !u!135 &2105921593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3260,6 +3280,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 382666531717231743, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: All_UI_Off
+      value: 
+      objectReference: {fileID: 785816725}
+    - target: {fileID: 382666531717231743, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: DialoguePanel
       value: 
       objectReference: {fileID: 4488191064588938497}
@@ -3297,7 +3321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: UI_canvases.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[3]'
@@ -3326,7 +3350,7 @@ PrefabInstance:
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'UI_canvases.Array.data[4]'
       value: 
-      objectReference: {fileID: 1208105645}
+      objectReference: {fileID: 4488191064588938497}
     - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.389167
@@ -3448,9 +3472,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 843810235889381955}
     - target: {fileID: 5226022024995795719, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: All_UI_Off
+      value: 
+      objectReference: {fileID: 785816725}
+    - target: {fileID: 5226022024995795719, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: dialogueOn
+      value: 
+      objectReference: {fileID: 819309766}
+    - target: {fileID: 5226022024995795719, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 4488191064588938497}
+    - target: {fileID: 5226022024995795719, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: UIstatemachine
+      value: 
+      objectReference: {fileID: 156287969}
     - target: {fileID: 5347945760130529741, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: pausePanel
       value: 

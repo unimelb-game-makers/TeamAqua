@@ -17,7 +17,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private TextAsset LoadGlobalJSON;
 
     [Header("Dialogue UI")]
-    [SerializeField] public GameObject dialoguePanel;
+    //[SerializeField] public GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialText;
 
     private Story currentStory;
@@ -30,8 +30,9 @@ public class DialogueSystem : MonoBehaviour
 
     private Coroutine displayLineCoroutine;
     private bool canContinueNextLine = false;
-
-    private Inventory inventory;
+    public UIStatemachine UIstatemachine;
+    public UIState dialogueOn;
+    public UIState All_UI_Off;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more 
@@ -84,13 +85,14 @@ public class DialogueSystem : MonoBehaviour
         }  
 
         // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
+        /*
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
             StartCoroutine(ExitDialogueMode());
             //audioSource.Stop();
             Debug.Log("E to exit");
         } 
-
+        */
         //================This is for testing knot-jump only, will be deleted later=========================================// 
 
         if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
@@ -131,7 +133,8 @@ public class DialogueSystem : MonoBehaviour
         dialogueIsPlaying = true;
         playerInputProvider.can_move = false;// Setting the Input provider here.
         //UIinputProvider.instance().SendUIinput(5);
-        dialoguePanel.SetActive(true);
+        UIstatemachine.ChangeUIState(dialogueOn);
+        //dialoguePanel.SetActive(true);
         dialogueVariable.StartListening(currentStory);
         currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
         {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
@@ -151,7 +154,8 @@ public class DialogueSystem : MonoBehaviour
         //Time.timeScale = 1;
         Debug.Log("time resumed");
         dialogueVariable.StopListening(currentStory);
-        dialoguePanel.SetActive(false);
+        //dialoguePanel.SetActive(false);
+        UIstatemachine.ChangeUIState(All_UI_Off);
         dialText.text = "";
         DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
@@ -159,6 +163,7 @@ public class DialogueSystem : MonoBehaviour
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
         //UIinputProvider.instance().SendUIinput(0);
+
     }
 
     public void ContinueStory()

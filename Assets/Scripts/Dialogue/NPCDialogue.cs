@@ -14,7 +14,10 @@ public class NPCDialogue : MonoBehaviour
 
     private bool isInRange;
     public static NPCDialogue npcDialogue;
-    private EnergyManager EnergyMana;
+    public EnergyManager EnergyMana;
+
+    public UIState DialogueOn;
+    public UIStatemachine UIstatemachine;
     
     // Start is called before the first frame update
     public void Awake()
@@ -28,7 +31,7 @@ public class NPCDialogue : MonoBehaviour
     }
     void Start()
     {
-        EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
+        //EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
         
     }
 
@@ -39,6 +42,7 @@ public class NPCDialogue : MonoBehaviour
         {
             //QuestManager.Instance().CheckStep(questID, 1);
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
+            //UIstatemachine.ChangeUIState(DialogueOn);
             EnergyMana.LoseEnergy(0);
             //DialogueSystem.SetSpeakerName(gameObject.name); 
         }
