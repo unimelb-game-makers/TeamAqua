@@ -11,6 +11,7 @@ public class UIStatemachine : MonoBehaviour
 {
     /*currentState should be set in the editor*/
     public UIState currentState;
+    public UIState paused;
     public List<UIState> StatesList ;//{ get; }
     // Start is called before the first frame update
     void Start()
@@ -57,7 +58,7 @@ public class UIStatemachine : MonoBehaviour
 
     public bool CheckPause()
     {
-        if (currentState == StatesList[3])
+        if (currentState == paused)
         {
             return true;
         }

@@ -157,7 +157,7 @@ MonoBehaviour:
   questCue: {fileID: 515589819}
   HasQuest: 1
   questID: 3
-  EnergyMana: {fileID: 1923082902}
+  EnergyMana: {fileID: 0}
   DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &15283153
@@ -873,6 +873,7 @@ MonoBehaviour:
   itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
   amountClicks: 2
   energyCost: 20
+  popFactor: 0.8
 --- !u!65 &297592574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1348,7 +1349,7 @@ MonoBehaviour:
   questCue: {fileID: 603113140}
   HasQuest: 1
   questID: 1
-  EnergyMana: {fileID: 1923082902}
+  EnergyMana: {fileID: 0}
   DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &716248917
@@ -2379,6 +2380,7 @@ MonoBehaviour:
   itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
   amountClicks: 2
   energyCost: 20
+  popFactor: 0.8
 --- !u!65 &1681379316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2469,6 +2471,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1710111360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7605395225366640446, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1716098563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,17 +2711,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
   m_PrefabInstance: {fileID: 3431080731849939244}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1923082902 stripped
+--- !u!114 &1923082905
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 863641324275516595, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1710111360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7caab514b9338df4f898d607074b29c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 640c0968ddf4e1f4cb4916fb51fd95b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RemainingEnergy: {fileID: 3008058714874533174}
+  EnergyAmount: 100
 --- !u!1 &1926477931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,7 +2921,7 @@ MonoBehaviour:
   questCue: {fileID: 1369715988}
   HasQuest: 0
   questID: 0
-  EnergyMana: {fileID: 1923082902}
+  EnergyMana: {fileID: 0}
   DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &2105921593
@@ -3279,6 +3289,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 155054851000950099, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 382666531717231743, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: All_UI_Off
       value: 
@@ -3300,9 +3314,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3008058714874533174}
     - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: StatesList.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2001855836170567660}
     - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[3]'
       value: 
@@ -3327,6 +3349,10 @@ PrefabInstance:
       propertyPath: UI_canvases.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'StatesList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2001855836170567660}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[3]'
       value: 
@@ -3520,9 +3546,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1340423891}
     - target: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 955975097}
+    - target: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1024015731}
+    - target: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: All_UI_Off
+      value: 
+      objectReference: {fileID: 785816725}
     - target: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: scrollParent
       value: 
@@ -3532,14 +3566,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057077829}
     - target: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: UIstatemachine
+      value: 
+      objectReference: {fileID: 156287969}
+    - target: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'itemSlots.Array.data[0]'
       value: 
       objectReference: {fileID: 1927589064}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 863641324275516595, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7605395225366640446, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1923082905}
   m_SourcePrefab: {fileID: 100100000, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+--- !u!114 &2001855836170567660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8866377315572337723, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0539979906c57446a1289835a3f9788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &2238368845438077892
 SpriteRenderer:
   m_ObjectHideFlags: 0

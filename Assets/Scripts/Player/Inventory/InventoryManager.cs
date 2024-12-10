@@ -6,12 +6,14 @@ using UnityEngine;
 
 // INPUT ACTION TO BE REWORKED
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : UIState
 {
     public static InventoryManager invMana;
     [SerializeField] Inventory inventory;
     [SerializeField] GameObject itemSlotPrefab;
     [SerializeField] GameObject scrollParent;
+    [SerializeField] public UIState All_UI_Off;
+    public UIState paused;
     [SerializeField] GameObject inventoryMenu;
     private bool _menuActivated;
     //public InputAction menuAction;
@@ -26,48 +28,34 @@ public class InventoryManager : MonoBehaviour
     {
         return invMana;
     }
-    /*
-    void Start()
+    
+    public override void UIEnter()
     {
         //inventoryMenu.SetActive(false);
-        OnDisableI();
-        UpdateSlots();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I) && UIinputProvider.instance().UI_canOpen[1] && !_menuActivated && !DialogueSystem.GetIsPlaying())
-        {
-            OnEnableI();
-        }
-        else if (Input.GetKeyDown(KeyCode.I) && _menuActivated)
-        {
-            OnDisableI();
-        }
-        if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes inventory if player enters dialogue
-        {
-            OnDisableI();
-        }
-        UpdateSlots();
-    }
-
-    private void OnEnableI()
-    {
+        Debug.Log("entering inventory on state");
         //menuAction.Enable();
-        UpdateSlots();
+        InventoryManager.instance().UpdateSlots();
         inventoryMenu.SetActive(true);
-        _menuActivated = true;
-        UIinputProvider.instance().SendUIinput(1);
+        UpdateSlots();
     }
 
-    private void OnDisableI()
+    public override void UIProcess()
     {
-        //menuAction.Disable();
-        inventoryMenu.SetActive(false);
-        _menuActivated = false;
-        UIinputProvider.instance().SendUIinput(0);
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            UIstatemachine.ChangeUIState(All_UI_Off);
+            
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //UIstatemachine.ChangeUIState(All_UI_Off);
+            UIstatemachine.ChangeUIState(paused);
+        }
+
+        UpdateSlots();
     }
-    */
+
     public void UpdateSlots()
     {
         bool found;
@@ -103,5 +91,11 @@ public class InventoryManager : MonoBehaviour
             itemSlot.selectedShader.SetActive(false);
             itemSlot.thisItemSelected = false;
         }
+    }
+
+    
+    public override void UIExit()
+    {
+        Debug.Log("Exiting InventoryOn state");
     }
 }
