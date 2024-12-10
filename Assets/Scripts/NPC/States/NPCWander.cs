@@ -14,6 +14,9 @@ public class NPCWander : State
     {
         Debug.Log("Entering Wander State");
     }
+    public override void Exit(){
+        Debug.Log("Exiting Wander State");
+    }
     public override void Process()
     {
         /*Changing States*/
@@ -35,7 +38,10 @@ public class NPCWander : State
         }
         statemachine.transform.position = Vector3.MoveTowards(statemachine.transform.position, targetWaypoint, speed * Time.deltaTime);
     }
-    public override void Exit(){
-        Debug.Log("Exiting Wander State");
+    public override void TriggerEnter(Collider other)
+    {
+        if(other.tag == "Player"){
+            statemachine.ChangeState(idleState);
+        }
     }
 }

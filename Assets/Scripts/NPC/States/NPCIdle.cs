@@ -10,6 +10,10 @@ public class NPCIdle : State
     {
         Debug.Log("Entering Idle State");
     }
+    public override void Exit()
+    {
+        Debug.Log("Exiting Idle State");
+    }
 
     public override void Process()
     {
@@ -18,8 +22,10 @@ public class NPCIdle : State
             statemachine.ChangeState(wanderState);
         }
     }
-    public override void Exit()
+    public override void TriggerExit(Collider other)
     {
-        Debug.Log("Exiting Idle State");
+        if(other.tag == "Player"){
+            statemachine.ChangeState(wanderState);
+        }
     }
 }
