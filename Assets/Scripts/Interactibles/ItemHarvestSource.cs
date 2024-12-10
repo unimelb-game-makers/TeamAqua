@@ -11,11 +11,15 @@ public class ItemHarvestSource : MonoBehaviour
     [SerializeField] Item itemResource;
     [SerializeField] public int amountClicks = 1;
     [SerializeField] int energyCost;
+    [SerializeField] float popFactor = 0.8f;
     private EnergyManager EnergyMana;
+
+    private Vector3 orig_scale; //save value of the original scale for tweening
 
     void Start()
     {
         EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
+        orig_scale = transform.localScale;
     }
 
     /*Maybe change it so that player can harvest multiples of item*/
@@ -29,13 +33,10 @@ public class ItemHarvestSource : MonoBehaviour
         EnergyMana.LoseEnergy(energyCost);
         Debug.Log($"Harvested Item: {itemResource.name}");
         return itemResource;
-        
-        
     }
     void pop()
     {
-        //Debug.Log("LeanTween Scale");
-        LeanTween.scale(gameObject, new Vector3(.8f,.8f,.8f), 0.1f).setDelay(.1f).setEaseInOutBounce();
-        LeanTween.scale(gameObject, new Vector3(1f,1f,1f), 0.1f).setDelay(.2f).setEaseInOutBounce();
+        LeanTween.scale(gameObject, orig_scale * popFactor, 0.1f).setDelay(.1f).setEaseInOutBounce();
+        LeanTween.scale(gameObject, orig_scale, 0.1f).setDelay(.2f).setEaseInOutBounce();
     }
 }
