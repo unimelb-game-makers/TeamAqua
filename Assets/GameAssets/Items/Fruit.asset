@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf8ecc639e9c2a84db3758873de3cff1, type: 3}
-  m_Name: Copper
+  m_Name: Fruit
   m_EditorClassIdentifier: 
   itemID: 0
-  itemName: 
-  sprite: {fileID: 0}
+  itemName: Fruit
+  sprite: {fileID: 21300000, guid: df332bb31fd43d149bcbf0060a6c77f5, type: 3}
