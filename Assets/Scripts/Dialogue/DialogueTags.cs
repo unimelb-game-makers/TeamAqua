@@ -67,7 +67,8 @@ public class DialogueTags : MonoBehaviour
                 */
                 case "questS":      //---> this handles dialogue-based quest giving
                     QuestSid = int.Parse(tagValue);
-                    QuestManager.instance.AddQuest(QuestSid);     
+                    QuestManager.instance.AddQuest(QuestSid);   
+                    Debug.Log("questS working on C#-end");  
                     break;
                 case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                     //charName.text = tagValue;

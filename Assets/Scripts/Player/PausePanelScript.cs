@@ -2,21 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PausePanelScript : MonoBehaviour
+public class PausePanelScript : UIState
 {
     // Start is called before the first frame update
     public GameObject PausedPanel;
-    public static PausePanelScript PauseManager;
+    public UIState All_UI_Off;
     public bool isPaused = false;
 
-    private void Awake()
+
+    public override void UIEnter()
     {
-        PauseManager = this;
+        Debug.Log("Entering paused state");
+        PausedPanel.SetActive(true);
+        All_UI_Off.UIEnter();
+        Time.timeScale = 0;
     }
 
-    public static PausePanelScript instance()
+    public override void UIProcess()
     {
-        return PauseManager;
+        if (Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetIsPlaying() && UIstatemachine.CheckPause())
+        {
+            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            UIstatemachine.ChangeUIState(All_UI_Off);
+        }
+    
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            return;
+        }
     }
     /*
     void Start()
@@ -50,9 +63,11 @@ public class PausePanelScript : MonoBehaviour
     }
     */
 
-    public static bool GetIsPlaused()
+    public override void UIExit()
     {
-        return PauseManager.isPaused;
+        PausedPanel.SetActive(false);
+        Time.timeScale = 1;
+        Debug.Log("exiting pause state");
     }
-    
+
 }

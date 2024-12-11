@@ -18,8 +18,9 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
 //Comment2: line breaks indicate that line of dialogue only loads when player clicks 'E' to continue
 //in this script, im doing a line break every time a sentence ends or when it becomes too long, but for later scripts, //feel free to decide.
 
+~checkQuestStatus(1, 1)
+~ questSteps = quest_id1
 current quest step is {questSteps} and current quest_id var is {quest_id1}
-
 //conditional check, if var quest is empty, load main dialogue, if quest var < 10 (fishes), go to incomplete quest, else, go to submit quest
 { 
     - questSteps == "":     // if empty, go to main
@@ -27,6 +28,7 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
     
     - questSteps == "NO":   //================================ failed here ==========
         quest step is {questSteps} and current quest_id var is {quest_id1}
+        ~checkQuestStatus(1, 1)
         -> IncompleteQuest
     - questSteps == "YES":
         ~checkQuestStatus(1, 1)
@@ -221,14 +223,12 @@ It’s nothing fancy, but it will do the trick.
 */
 VAR id = 1
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
-You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:{id}
+You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:1
 ~ quest_id1 = "NO"
 current quest step is {questSteps}
-A
-B
 POC quest has been added by the previous line of dialogue (id1)
 Below is the usual choice-based quest giver (id2)
-+[Catch the fishes #quest:3 #done]
++[Catch the fishes #quest:2 #done]
     ->DONE      //first chunk of dialogue ends here
 +[Nah thanks #done]
     ->END     //first chunk of dialogue ends here
@@ -242,7 +242,7 @@ Below is the usual choice-based quest giver (id2)
 this line of dialogue should play when player interacts with Amelia before completeing the quest. #speaker:silly dev
 I still need 10 more fish. #speaker:Amelia
 You better hurry before I change my mind. 
-~ quest_id1 = "YES"
+//~ quest_id1 = "YES"
 ->DONE
 
 //=====================================After quest completion===========================================    

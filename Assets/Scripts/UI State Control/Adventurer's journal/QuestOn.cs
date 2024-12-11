@@ -10,7 +10,7 @@ public class QuestOn : UIState
     UIState dialogueOn;
     [SerializeField] private GameObject questCanvas; // the canvas that displays the quests
 
-    [SerializeField] private RectTransform rt; // the rect transform of the questText
+    [SerializeField] public RectTransform rt; // the rect transform of the questText
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
     private bool isScaled = false;
     public bool QuestCompleted;
@@ -24,9 +24,11 @@ public class QuestOn : UIState
         Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
         isScaled = false;
         Time.timeScale = 0; // pause the game when the quest canvas is active
+        
     }
     public override void UIProcess()
     {
+        QuestManager.Instance().DrawText();
         /*Changing States*/
         if(Input.GetKeyDown(KeyCode.J)){
             UIstatemachine.ChangeUIState(All_UI_Off);
@@ -38,6 +40,10 @@ public class QuestOn : UIState
             UIstatemachine.ChangeUIState(paused);
         }
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            QuestManager.Instance().CompleteStep(1,2);
+        }
        
         if (questCanvas.activeSelf && !isScaled)
         {

@@ -157,7 +157,7 @@ MonoBehaviour:
   questCue: {fileID: 515589819}
   HasQuest: 1
   questID: 3
-  EnergyMana: {fileID: 0}
+  EnergyMana: {fileID: 1923082905}
   DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &15283153
@@ -964,6 +964,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301508344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2664636784483693474, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+  m_PrefabInstance: {fileID: 2001855836170567659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bd14400bb21754e8f8b83cad54bd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &415731703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1360,7 @@ MonoBehaviour:
   questCue: {fileID: 603113140}
   HasQuest: 1
   questID: 1
-  EnergyMana: {fileID: 0}
+  EnergyMana: {fileID: 1923082905}
   DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &716248917
@@ -2921,7 +2932,7 @@ MonoBehaviour:
   questCue: {fileID: 1369715988}
   HasQuest: 0
   questID: 0
-  EnergyMana: {fileID: 0}
+  EnergyMana: {fileID: 1923082905}
   DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &2105921593
@@ -3216,7 +3227,8 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1024015731}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7862821317946191050, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3316,7 +3328,7 @@ PrefabInstance:
     - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: paused
       value: 
-      objectReference: {fileID: 955975097}
+      objectReference: {fileID: 301508344}
     - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: StatesList.Array.size
       value: 6
@@ -3328,7 +3340,7 @@ PrefabInstance:
     - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[3]'
       value: 
-      objectReference: {fileID: 955975097}
+      objectReference: {fileID: 301508344}
     - target: {fileID: 982367271428371153, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[4]'
       value: 
@@ -3337,10 +3349,14 @@ PrefabInstance:
       propertyPath: 'StatesList.Array.data[5]'
       value: 
       objectReference: {fileID: 785816725}
+    - target: {fileID: 1267039144783851863, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: PauseOn
       value: 
-      objectReference: {fileID: 955975097}
+      objectReference: {fileID: 301508344}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: StatesList.Array.size
       value: 5
@@ -3356,7 +3372,7 @@ PrefabInstance:
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[3]'
       value: 
-      objectReference: {fileID: 955975097}
+      objectReference: {fileID: 301508344}
     - target: {fileID: 1301943277026691728, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'StatesList.Array.data[4]'
       value: 
@@ -3446,9 +3462,17 @@ PrefabInstance:
       value: Managers
       objectReference: {fileID: 0}
     - target: {fileID: 2664636784483693474, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: All_UI_Off
+      value: 
+      objectReference: {fileID: 785816725}
+    - target: {fileID: 2664636784483693474, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: PausedPanel
       value: 
       objectReference: {fileID: 1208105645}
+    - target: {fileID: 2664636784483693474, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: UIstatemachine
+      value: 
+      objectReference: {fileID: 156287969}
     - target: {fileID: 3389511054512593486, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: rt
       value: 
@@ -4034,6 +4058,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6938456175672860346, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7282576084333328487, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.00014793209
@@ -4105,6 +4133,10 @@ PrefabInstance:
     - target: {fileID: 8736303814812231783, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_SizeDelta.x
       value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141002026708062141, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
