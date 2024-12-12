@@ -38,11 +38,11 @@ public class All_UI_Off_State: UIState
         {   //quest
             UIstatemachine.ChangeUIState(StatesList[1]);
         }
-
+        /*
         if (Input.GetKeyDown(KeyCode.H) && !DialogueSystem.GetIsPlaying())
         {   //journal
             UIstatemachine.ChangeUIState(StatesList[2]);
-        }
+        }   */
 
         if (Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetIsPlaying())
         {   //pause

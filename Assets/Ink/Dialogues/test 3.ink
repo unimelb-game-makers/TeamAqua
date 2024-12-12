@@ -24,7 +24,7 @@ after this line of dialogue, u should be taken to SubmitQuest knot and complete 
 Would you like to finish this quest? #speaker:Narrator
 text
 clicking on yes should remove quest with id 2 while no should do nothing
-~ checkQuestStatus(2, 1)
+~ checkQuestStatus(3, 1)
     +[Finish quest 2?  #done] -> DONE
     +[Not yet #done]
     ->DONE

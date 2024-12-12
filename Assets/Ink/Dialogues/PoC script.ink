@@ -28,10 +28,10 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
     
     - questSteps == "NO":   //================================ failed here ==========
         quest step is {questSteps} and current quest_id var is {quest_id1}
-        ~checkQuestStatus(1, 1)
+        //~checkQuestStatus(1, 1)
         -> IncompleteQuest
     - questSteps == "YES":
-        ~checkQuestStatus(1, 1)
+        //~checkQuestStatus(1, 1)
         -> SubmitQuest 
 }
         

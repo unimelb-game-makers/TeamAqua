@@ -44,7 +44,7 @@ using TMPro;
 using UnityEngine.UI;
 using Ink.Parsed;
 
-public class QuestManager : MonoBehaviour
+public class QuestManager : UIState
 {
     // Singleton instance
     public static QuestManager instance;
@@ -62,6 +62,10 @@ public class QuestManager : MonoBehaviour
     //private bool isScaled = false;
     public bool QuestCompleted;
     public bool questOpen = false;
+
+    [SerializeField] UIState All_UI_Off;
+    public UIState paused;
+    private bool isScaled = false;
     
     [SerializeField] private Inventory inventory; // the inventory of the player
     
@@ -80,6 +84,45 @@ public class QuestManager : MonoBehaviour
     public static QuestManager Instance()
     {
         return instance;
+    }
+
+    public override void UIEnter()
+    {
+        Debug.Log("Entering questOn State");
+        questCanvas.SetActive(true);
+        questOpen = true;
+        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
+        isScaled = false;
+        Time.timeScale = 0; // pause the game when the quest canvas is active
+        
+    }
+    public override void UIProcess()
+    {
+        QuestManager.Instance().DrawText();
+        /*Changing States*/
+        if(Input.GetKeyDown(KeyCode.J)){
+            UIstatemachine.ChangeUIState(All_UI_Off);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //UIstatemachine.ChangeUIState(All_UI_Off);
+            UIstatemachine.ChangeUIState(paused);
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            QuestManager.Instance().CompleteStep(1,2);
+        }
+       
+        if (questCanvas.activeSelf && !isScaled)
+        {
+            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
+            if (Scroll_View_rect_transform.localScale.y >= 1)
+            {
+                isScaled = true;
+            }
+        }
     }
     /*  ========================================= Migrated to UIstatemachine ======================================================
     void Start()
@@ -213,30 +256,52 @@ public class QuestManager : MonoBehaviour
     public bool CheckStatus(int id, int step, Ink.Runtime.Story story)
     {  
         // checking if quest log is empty
-        Debug.Log("number of quests is" + quests.Count);
+        Debug.Log("number of quests is " + quests.Count);
         // checking if quest objective type is gather
         if (quests.Count != 0)
         {
-            Debug.Log("quest obj type is " + quests[id-1].quest_steps[step - 1].quest_item_id);
-            if (quests[id-1].quest_steps[step-1].quest_item_id != -1) 
-            {
-                // check if the player has the item in their inventory
-                Debug.Log("Checking for item in inventory");
-                if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
-                    print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
-                    quests[id-1].quest_steps[step-1].finished = true;
-                    Debug.Log("Item found, setting quest status to finished");
-                    // remove the item from the inventory
-                    story.variablesState["quest_id" + id] = "YES";
-                    Debug.Log("quest_id" + id);
-                    Debug.Log(story.variablesState["quest_id" + id]);   // set off trigger in ink to move to a different part of the story
-                    return true;
-                } 
-                else {
-                    Debug.Log("item not found in inventory, quest status remains unfinished");
-                    quests[id-1].finished = false;
+            Debug.Log("quest obj type is " + quests[id-1].quest_steps[step - 1].objective_type);
+            switch (quests[id-1].quest_steps[step-1].objective_type)
+            {   
+                // TYPE : GATHER
+                case "GATHER":
+                    Debug.Log("QUEST TYPE IS GATHER");
+                    //if (quests[id-1].quest_steps[step-1].quest_item_id != -1) 
+                
+                    // check if the player has the item in their inventory
+                    Debug.Log("Checking for item in inventory");
+                    if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
+                        print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
+                        quests[id-1].quest_steps[step-1].finished = true;
+                        Debug.Log("Item found, setting quest status to finished");
+                        // remove the item from the inventory
+                        story.variablesState["quest_id" + id] = "YES";
+                        Debug.Log("quest_id" + id);
+                        Debug.Log(story.variablesState["quest_id" + id]);   // set off trigger in ink to move to a different part of the story
+                        return true;
+                    } 
+                    else {
+                        Debug.Log("item not found in inventory, quest status remains unfinished");
+                        quests[id-1].finished = false;
+                        return false;
+                    }
+
+                // TYPE : LOCATION
+                case "LOCATION":
+
+                    Debug.Log("QUEST TYPE IS LOCATION");
+                    /* approach: probably set invisible collider at the target location, each with their own ID (scriptable object?).if collided, then come back here to set story.variablestate("quest_id" + id) = "YES"
+                    */
                     return false;
-                }
+                    //break;
+
+                // TYPE : TALK
+                case "TALK":
+                    Debug.Log("QUEST TYPE IS TALK");
+                    /* approach: place ink tag at the end of the dictated convo with the relevant NPC(s), if parses through said tag then come back here to set story.variablestate("quest_id" + id) = "YES"
+                    */
+                    return false;
+                    //break;
             }
             Debug.Log("objective type was not GATHER (-1 detected)");
             return false;
@@ -381,4 +446,8 @@ public class QuestManager : MonoBehaviour
         return quests;
     }
 
+    public override void UIExit()
+    {
+        Debug.Log("Exiting QuestON State");
+    }
 }
