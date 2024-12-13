@@ -61,7 +61,7 @@ public class QuestManager : UIState
     [SerializeField] private RectTransform Scroll_View_rect_transform; // the rect transform of the scroll view
     //private bool isScaled = false;
     public bool QuestCompleted;
-    public bool questOpen = false;
+    //public bool questOpen = false;
 
     [SerializeField] UIState All_UI_Off;
     public UIState paused;
@@ -90,7 +90,6 @@ public class QuestManager : UIState
     {
         Debug.Log("Entering questOn State");
         questCanvas.SetActive(true);
-        questOpen = true;
         Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
         isScaled = false;
         Time.timeScale = 0; // pause the game when the quest canvas is active
@@ -98,10 +97,12 @@ public class QuestManager : UIState
     }
     public override void UIProcess()
     {
-        QuestManager.Instance().DrawText();
+        DrawText();
         /*Changing States*/
         if(Input.GetKeyDown(KeyCode.J)){
             UIstatemachine.ChangeUIState(All_UI_Off);
+            Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1);
+            isScaled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -112,7 +113,7 @@ public class QuestManager : UIState
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            QuestManager.Instance().CompleteStep(1,2);
+            CompleteStep(1,2);
         }
        
         if (questCanvas.activeSelf && !isScaled)
@@ -448,6 +449,7 @@ public class QuestManager : UIState
 
     public override void UIExit()
     {
+        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
         Debug.Log("Exiting QuestON State");
     }
 }
