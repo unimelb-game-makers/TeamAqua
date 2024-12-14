@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public TextAsset inkJSON;
+    [SerializeField] public TextAsset inkJSON;
+    [SerializeField] public int DialogueTypeID;
     public GameObject dialogueCue;
     public GameObject questCue;
     [SerializeField] public bool HasQuest;      //  <--- really unstable way to do things rn, will wait for quest- inventory integration before continuing
 
-    [SerializeField] public int questID;
+    //[SerializeField] public int questID;
 
     private bool isInRange;
     public static NPCDialogue npcDialogue;
     public EnergyManager EnergyMana;
-
-    public UIState DialogueOn;
     public UIStatemachine UIstatemachine;
     
     // Start is called before the first frame update
@@ -41,7 +40,7 @@ public class NPCDialogue : MonoBehaviour
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() && !UIstatemachine.CheckPause() )
         {
             //QuestManager.Instance().CheckStep(questID, 1);
-            DialogueSystem.GetDial().EnterDialogueMode(inkJSON);
+            DialogueSystem.GetDial().EnterDialogueMode(inkJSON, DialogueTypeID);
             //UIstatemachine.ChangeUIState(DialogueOn);
             EnergyMana.LoseEnergy(0);
             //DialogueSystem.SetSpeakerName(gameObject.name); 

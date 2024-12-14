@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using UnityEngine;
 
 public class DialogueOn : UIState
@@ -22,6 +23,12 @@ public class DialogueOn : UIState
 
     public override void UIProcess()
     {
+        if (Input.GetKeyDown(KeyCode.E) /*&& a bunch of other conditions*/)
+        {
+            DialogueSystem.GetDial().ContinueStory();
+            Debug.Log("story is continued");
+        }  
+
         if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying())
         {
             StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());

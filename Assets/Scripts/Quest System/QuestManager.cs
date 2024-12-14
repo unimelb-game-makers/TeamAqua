@@ -254,6 +254,20 @@ public class QuestManager : UIState
     }
     */
 
+    public bool CheckStart(int id, int step)
+    {
+        // returns whether a quest step has been started or not, mostly used for quest type LOCATION
+        //check if quest type is location
+        if (quests[id-1].quest_steps[step-1].objective_type == "LOCATION")
+        {
+            // check if the quest step's active status is true
+            if (quests[id-1].quest_steps[step-1].active == true)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public bool CheckStatus(int id, int step, Ink.Runtime.Story story)
     {  
         // checking if quest log is empty

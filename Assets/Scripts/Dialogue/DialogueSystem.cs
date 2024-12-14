@@ -76,7 +76,7 @@ public class DialogueSystem : MonoBehaviour
         {
             return;
         }  
-        
+        /*   ========== ==testing to move thse inputs to DialogueNPC state, ========== 
         if (Input.GetKeyDown(KeyCode.E) &&!displaying && canContinueNextLine && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
@@ -85,14 +85,14 @@ public class DialogueSystem : MonoBehaviour
         }  
 
         // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
-        /*
+        
         if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
         {
             StartCoroutine(ExitDialogueMode());
             //audioSource.Stop();
             Debug.Log("E to exit");
         } 
-        */
+        
         //================This is for testing knot-jump only, will be deleted later=========================================// 
 
         if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
@@ -101,6 +101,7 @@ public class DialogueSystem : MonoBehaviour
             Debug.Log("vairable quest accessed and set to 10");
         }  
         //==================================================================================================================//
+        */
     }
 
 
@@ -123,28 +124,35 @@ public class DialogueSystem : MonoBehaviour
     }
     */
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
     {       
         //Time.timeScale = 0;   
+        if (DialogueTypeID == 0)
+        {
+            Time.timeScale = 1;       
+            Debug.Log("time stopped");
+            currentStory = new Story(inkJSON.text);
+            dialogueIsPlaying = true;
+            playerInputProvider.can_move = false;// Setting the Input provider here.
+            //UIinputProvider.instance().SendUIinput(5);
+            UIstatemachine.ChangeUIState(dialogueOn);
+            //dialoguePanel.SetActive(true);
+            dialogueVariable.StartListening(currentStory);
+            currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
+            {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
+                Debug.Log("Function binded to ink at " + id + steps);
+                QuestManager.Instance().CheckStatus(id, steps, currentStory);
+                //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
+                
+            });
+            //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps        
+            ContinueStory();
+        }
 
-        Time.timeScale = 1;       
-        Debug.Log("time stopped");
-        currentStory = new Story(inkJSON.text);
-        dialogueIsPlaying = true;
-        playerInputProvider.can_move = false;// Setting the Input provider here.
-        //UIinputProvider.instance().SendUIinput(5);
-        UIstatemachine.ChangeUIState(dialogueOn);
-        //dialoguePanel.SetActive(true);
-        dialogueVariable.StartListening(currentStory);
-        currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
-        {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
-            Debug.Log("Function binded to ink at " + id + steps);
-            QuestManager.Instance().CheckStatus(id, steps, currentStory);
-            //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
-            
-        });
-        //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps        
-        ContinueStory();
+        if (DialogueTypeID == 1)
+        {
+            Debug.Log("dialogue triggers collided");
+        }
         
     }
 

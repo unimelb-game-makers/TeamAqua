@@ -1,3 +1,4 @@
+/*
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
@@ -18,6 +19,7 @@ public class QuestReception : MonoBehaviour
     public Button[] button;
     
     //=========================================THIS SCRIPT IS NOT BEING USED========================================================
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -55,3 +57,4 @@ public class QuestReception : MonoBehaviour
             }
     }
 }
+*/
