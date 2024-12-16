@@ -153,12 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 5e493214820f5ff4097f795b44393971, type: 3}
+  DialogueTypeID: 0
   dialogueCue: {fileID: 1716098563}
   questCue: {fileID: 515589819}
   HasQuest: 1
-  questID: 3
   EnergyMana: {fileID: 1923082905}
-  DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &15283153
 SphereCollider:
@@ -1356,12 +1355,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 0e2601ab21e262d438c1c693cc032082, type: 3}
+  DialogueTypeID: 0
   dialogueCue: {fileID: 7420532976980006292}
   questCue: {fileID: 603113140}
   HasQuest: 1
-  questID: 1
   EnergyMana: {fileID: 1923082905}
-  DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &716248917
 SphereCollider:
@@ -3062,12 +3060,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: df1fe5b520f81934fb4fb225bc8cf7a3, type: 3}
+  DialogueTypeID: 0
   dialogueCue: {fileID: 140969645}
   questCue: {fileID: 1369715988}
   HasQuest: 0
-  questID: 0
   EnergyMana: {fileID: 1923082905}
-  DialogueOn: {fileID: 819309766}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &2105921593
 SphereCollider:
@@ -4034,6 +4031,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1770458810821696958, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770458810821696958, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -704
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770458810821696958, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 316
+      objectReference: {fileID: 0}
     - target: {fileID: 1851707180976419438, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4047,8 +4056,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1181832895}
     - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1191.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 900.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973483611865918890, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -449.99988
       objectReference: {fileID: 0}
     - target: {fileID: 2009531965583272039, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4198,6 +4235,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3632874400532945616, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4265032327316277684, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4252,6 +4293,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 6010513065203860825, guid: b3b37e0f937595d4ebca85cc6d8cba82, type: 2}
+    - target: {fileID: 5502065186062059033, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502065186062059033, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 266
+      objectReference: {fileID: 0}
     - target: {fileID: 5636398940133645026, guid: 4b711160d4be8eb44be5f1765b5e74b5, type: 3}
       propertyPath: m_Name
       value: Adventurer's Journal

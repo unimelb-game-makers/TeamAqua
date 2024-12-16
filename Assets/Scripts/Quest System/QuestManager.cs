@@ -71,6 +71,7 @@ public class QuestManager : UIState
     
     void Awake()
     {
+        
         // Singleton setup
         if (instance == null)
         {
@@ -115,14 +116,37 @@ public class QuestManager : UIState
         {
             CompleteStep(1,2);
         }
+
+        
        
+        // if (questCanvas.activeSelf && !isScaled)
+        // {
+        //     Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
+        //     if (Scroll_View_rect_transform.localScale.y >= 1)
+        //     {
+        //         isScaled = true;
+        //     }
+        // }
+    }
+
+    void Update()
+    {
         if (questCanvas.activeSelf && !isScaled)
         {
-            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
+            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 1f, 0);
+            Debug.Log("Scaling up");
             if (Scroll_View_rect_transform.localScale.y >= 1)
             {
                 isScaled = true;
             }
+        }
+
+        // Debugging/testing purposes
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AddQuest(1);
+            AddQuest(2);
+            
         }
     }
     /*  ========================================= Migrated to UIstatemachine ======================================================
@@ -157,14 +181,7 @@ public class QuestManager : UIState
             OnDisableQ();
         }
 
-        if (questCanvas.activeSelf && !isScaled)
-        {
-            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
-            if (Scroll_View_rect_transform.localScale.y >= 1)
-            {
-                isScaled = true;
-            }
-        }
+        
 
         // Debugging/testing purposes
         if (Input.GetKeyDown(KeyCode.L))
@@ -207,6 +224,7 @@ public class QuestManager : UIState
     */
     public void AddQuest(int id)
     {
+        Debug.Log("number of quests is " + quests.Count);
         Quest quest = JsonUtility.FromJson<Quest>(jsonFile.text);
         if (quest != null)
         {
@@ -217,11 +235,13 @@ public class QuestManager : UIState
                 {
                     if (quests[i].id == id)
                     {
-                        return;
+                        Debug.Log("Quest already in list");
+                        break;
                     }
                 }
                 if (questData.id == id && !quests.Contains(questData) && !questData.finished)
                 {
+                    Debug.Log("Adding quest: " + questData.title);
                     QuestCompleted = false;     //quest status is false at the start
                     questData.active = true;
                     questData.current_step_number = 0;
@@ -229,11 +249,15 @@ public class QuestManager : UIState
                 }
             }
         }
-        DrawText();
-        if (quests.Count > 1)
+        
+        Debug.Log("number of quests is " + quests.Count);
+        if (quests.Count > 0)
         {
+            Debug.Log("Scaling up222");
             rt.sizeDelta = new Vector2(rt.sizeDelta.x, rt.sizeDelta.y + 350);
         }
+
+        DrawText();
     }
 
     /**
