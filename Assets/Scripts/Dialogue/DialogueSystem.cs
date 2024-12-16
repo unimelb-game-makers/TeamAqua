@@ -77,6 +77,7 @@ public class DialogueSystem : MonoBehaviour
             return;
         }  
         /*   ========== ==testing to move thse inputs to DialogueNPC state, ========== 
+        =====>>>>>>>> migration works
         if (Input.GetKeyDown(KeyCode.E) &&!displaying && canContinueNextLine && currentStory.currentChoices.Count == 0)
         {
             ContinueStory();
@@ -126,7 +127,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
     {       
-        //Time.timeScale = 0;   
+        //Time.timeScale = 0;         this works  
         if (DialogueTypeID == 0)
         {
             Time.timeScale = 1;       
@@ -151,7 +152,23 @@ public class DialogueSystem : MonoBehaviour
 
         if (DialogueTypeID == 1)
         {
+            //really praying the dialogue system is sustainable enough to handle my shitty code 
+            //:pray::pray::pray:pray::pray::pray::pray:pray:
+            //changine to UI state done in child trigger points
+            currentStory = new Story(inkJSON.text);
+            dialogueIsPlaying = true;
+            playerInputProvider.can_move = true;// Setting the Input provider here.
+            //UIstatemachine.ChangeUIState(dialogueOn);     <<< tested and works
+            dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
+            currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
+            {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
+                Debug.Log("Function binded to ink at " + id + steps);
+                QuestManager.Instance().CheckStatus(id, steps, currentStory);
+                //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
+                
+            });
+            ContinueStory();
         }
         
     }
@@ -267,6 +284,14 @@ public class DialogueSystem : MonoBehaviour
         return DialMana.dialogueIsPlaying;
     }
 
+    public bool GetChoicesDisplay()
+    {
+        if (currentStory.currentChoices.Count == 0)
+        {
+            return true;
+        }
+        return false;
+    }
 
 
     // Varibales stuffs, incomplete rn, pending scope from narrative designer

@@ -12,7 +12,10 @@ public class DialogueGameplay : UIState
 
 
 //================================ honestly not sure what to do with this state ==========================================
+// WHAT IF:
+/*
 
+*/
     public override void UIEnter()
     {
         Debug.Log("Entering dialogue mode");
@@ -27,7 +30,7 @@ public class DialogueGameplay : UIState
     public override void UIProcess()
     {
         /*  
-        if (triggers.collided)
+        if (triggers.collided////// or a function call here (dialogue trig is collided))
         {
             DialogueSystem.GetDial().ContinueStory();
             Debug.Log("story is continued");

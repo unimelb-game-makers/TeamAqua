@@ -2304,8 +2304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9251b682e33eaf54180398dfcbdddc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  step: 0
+  id: 2
+  step: 1
+  inkJSON: {fileID: 4900000, guid: 0e2601ab21e262d438c1c693cc032082, type: 3}
 --- !u!65 &1429666361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2321,7 +2322,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

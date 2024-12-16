@@ -23,13 +23,13 @@ public class DialogueOn : UIState
 
     public override void UIProcess()
     {
-        if (Input.GetKeyDown(KeyCode.E) /*&& a bunch of other conditions*/)
+        if (Input.GetKeyDown(KeyCode.E) && DialogueSystem.GetDial().GetChoicesDisplay() /*&& a bunch of other conditions*/)
         {
             DialogueSystem.GetDial().ContinueStory();
             Debug.Log("story is continued");
         }  
 
-        if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying() && DialogueSystem.GetDial().GetChoicesDisplay())
         {
             StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
             
