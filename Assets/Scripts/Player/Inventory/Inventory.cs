@@ -5,23 +5,26 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    
-    public List<InventoryItem> inventory = new List<InventoryItem>();
-    
-    /*Testing AddItem function*/
-    public Item test_item;
-    private void Start() {
+    public static Inventory inventory;
+    public List<InventoryItem> inventoryItems = new List<InventoryItem>();
+    private void Awake()
+    {
+        inventory = this;
+    }
+
+    private void Start()
+    {
         //AddItem(test_item);
         //SubtractItem(test_item, 3);
     }
 
-    /*Get the inventory item data of an item*/  
+    /*Get the inventory item data of an item*/
     public InventoryItem GetItemData(Item item)
     {
-        foreach(var inventoryItem in inventory)
+        foreach (var inventoryItem in inventoryItems)
         {
             /*Found item*/
-            if(inventoryItem.item == item)
+            if (inventoryItem.item == item)
             {
                 return inventoryItem;
             }
@@ -34,7 +37,7 @@ public class Inventory : MonoBehaviour
     {
         /*Go through inventory list and see if item already in*/
         InventoryItem inventoryItem = GetItemData(item);
-        if(inventoryItem != null)
+        if (inventoryItem != null)
         {
             inventoryItem.count++;
         }
@@ -42,17 +45,17 @@ public class Inventory : MonoBehaviour
         else
         {
             inventoryItem = new InventoryItem(item);
-            inventory.Add(inventoryItem);
+            inventoryItems.Add(inventoryItem);
         }
     }
-    
+
     /*Returns 1 if successfully subtracted item. Else 0*/
     public int SubtractItem(Item item, int amount)
     {
         InventoryItem inventoryItem = GetItemData(item);
-        if(inventoryItem != null)
+        if (inventoryItem != null)
         {
-            if(amount <= inventoryItem.count)
+            if (amount <= inventoryItem.count)
             {
                 inventoryItem.count -= amount;
                 return 1;
@@ -64,9 +67,9 @@ public class Inventory : MonoBehaviour
 
     public bool HasItem(int item_id, int amount)
     {
-        foreach(var inventoryItem in inventory)
+        foreach (var inventoryItem in inventoryItems)
         {
-            if(inventoryItem.item.itemID == item_id && inventoryItem.count >= amount)
+            if (inventoryItem.item.itemID == item_id && inventoryItem.count >= amount)
             {
                 return true;
             }
@@ -76,14 +79,14 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(int item_id, int amount)
     {
-        foreach(var inventoryItem in inventory)
+        foreach (var inventoryItem in inventoryItems)
         {
-            if(inventoryItem.item.itemID == item_id)
+            if (inventoryItem.item.itemID == item_id)
             {
                 inventoryItem.count -= amount;
-                if(inventoryItem.count <= 0)
+                if (inventoryItem.count <= 0)
                 {
-                    inventory.Remove(inventoryItem);
+                    inventoryItems.Remove(inventoryItem);
                 }
                 return;
             }
