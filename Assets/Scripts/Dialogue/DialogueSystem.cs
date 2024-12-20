@@ -168,7 +168,7 @@ public class DialogueSystem : MonoBehaviour
                 //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
                 
             });
-            ContinueStory();
+            //ContinueStory();
         }
         
     }
