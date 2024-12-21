@@ -869,10 +869,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9b0d1d536f72d4e9ea704bed53c1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
-  amountClicks: 2
-  energyCost: 20
-  popFactor: 0.8
+  harvestList:
+  - itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
+    amount: 2
+    energyCost: 10
 --- !u!65 &297592574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1755,10 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce4ea9369036374899c0dfa9a36e391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory:
-  - item: {fileID: 11400000, guid: b07322a5e3c00c84db09b03da559872e, type: 2}
-    count: 5
-  test_item: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
+  inventoryItems: []
 --- !u!4 &1024015732
 Transform:
   m_ObjectHideFlags: 0
@@ -2304,6 +2301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9251b682e33eaf54180398dfcbdddc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LocationReached: 0
   id: 2
   step: 1
   inkJSON: {fileID: 4900000, guid: 0e2601ab21e262d438c1c693cc032082, type: 3}
@@ -2521,10 +2519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9b0d1d536f72d4e9ea704bed53c1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
-  amountClicks: 2
-  energyCost: 20
-  popFactor: 0.8
+  harvestList:
+  - itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
+    amount: 3
+    energyCost: 10
 --- !u!65 &1681379316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3064,7 +3062,7 @@ MonoBehaviour:
   DialogueTypeID: 0
   dialogueCue: {fileID: 140969645}
   questCue: {fileID: 1369715988}
-  HasQuest: 0
+  HasQuest: 1
   EnergyMana: {fileID: 1923082905}
   UIstatemachine: {fileID: 156287969}
 --- !u!135 &2105921593

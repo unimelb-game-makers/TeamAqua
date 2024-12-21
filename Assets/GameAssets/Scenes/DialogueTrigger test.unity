@@ -2449,6 +2449,7 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: c180c5844b2aead40adbfa3e5139e17b, type: 3}
   dialogueTypeID: 1
   dialogueTrigger: cutscene0
+  dialTrigger: 0
 --- !u!65 &840889687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2485,7 +2486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &871425706
 Transform:
   m_ObjectHideFlags: 0
@@ -4271,7 +4272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 703868b5f95b17f4e98e36cffb355a5b, type: 3}
-  DialogueTypeID: 1
+  DialogueTypeID: 0
   dialogueCue: {fileID: 140969645}
   questCue: {fileID: 1369715988}
   HasQuest: 0

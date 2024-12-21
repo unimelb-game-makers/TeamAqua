@@ -20,7 +20,7 @@ public class DialogueSystem : MonoBehaviour
     //[SerializeField] public GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialText;
 
-    private Story currentStory;
+    public Story currentStory;
     [SerializeField]public bool dialogueIsPlaying { get; private set; }
     private DialogueVariable dialogueVariable;
   
@@ -146,6 +146,12 @@ public class DialogueSystem : MonoBehaviour
                 //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
                 
             });
+            currentStory.BindExternalFunction("SetOffDial2ndVarTrig", () =>
+            {
+                //currentStory.variablesState["cutscene0"] = "AAAAAA";
+                //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
+                DialogueTriggerControl.instance().Trigger();
+            });
             //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps        
             ContinueStory();
         }
@@ -165,8 +171,13 @@ public class DialogueSystem : MonoBehaviour
             {   //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
                 Debug.Log("Function binded to ink at " + id + steps);
                 QuestManager.Instance().CheckStatus(id, steps, currentStory);
-                //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
-                
+                //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory   
+            });
+            currentStory.BindExternalFunction("SetOffDial2ndVarTrig", () =>
+            {
+                //currentStory.variablesState["cutscene0"] = "AAAAAA";
+                //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
+                DialogueTriggerControl.instance().Trigger();
             });
             //ContinueStory();
         }
