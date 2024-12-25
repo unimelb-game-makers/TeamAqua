@@ -21,6 +21,7 @@ public class UIStatemachine : MonoBehaviour
             childState.UIReady();
             childState.UIstatemachine = this;
             StatesList.Add(childState);
+            TurnOff(childState);
         }
         currentState.UIEnter(); 
     }
@@ -51,9 +52,11 @@ public class UIStatemachine : MonoBehaviour
     public void ChangeUIState(UIState newState){
         if(currentState != null)
             currentState.UIExit();
+            TurnOff(currentState);
         
         currentState = newState;
         currentState.UIEnter();
+        TurnOn(currentState);
     }
 
     public bool CheckPause()
@@ -63,5 +66,11 @@ public class UIStatemachine : MonoBehaviour
             return true;
         }
         return false;
+    }
+    private void TurnOff(UIState state){
+        state.gameObject.SetActive(false);
+    }
+    private void TurnOn(UIState state){
+        state.gameObject.SetActive(true);
     }
 }

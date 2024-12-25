@@ -8,32 +8,20 @@ using UnityEngine;
 
 public class InventoryManager : UIState
 {
-    public static InventoryManager invMana;
+    public UIState All_UI_Off;
+    public UIState paused;
     [SerializeField] GameObject itemSlotPrefab;
     [SerializeField] GameObject scrollParent;
-    [SerializeField] public UIState All_UI_Off;
-    public UIState paused;
     [SerializeField] GameObject inventoryMenu;
     private bool _menuActivated;
     //public InputAction menuAction;
     public List<ItemSlot> itemSlots = new List<ItemSlot>();
-
-    void Awake()
-    {
-        invMana = this;
-    }
-
-    public static InventoryManager instance()
-    {
-        return invMana;
-    }
 
     public override void UIEnter()
     {
         //inventoryMenu.SetActive(false);
         Debug.Log("entering inventory on state");
         //menuAction.Enable();
-        InventoryManager.instance().UpdateSlots();
         inventoryMenu.SetActive(true);
         UpdateSlots();
     }

@@ -10,7 +10,7 @@ public class ItemHarvester : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (source != null && source.currentItem().amount > 0 && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && source != null && source.currentItem().amount > 0)
         {
             inventory.AddItem(source.HarvestResource());
         }
