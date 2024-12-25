@@ -16,7 +16,6 @@ public class DialogueTriggerPoints : UIState
 
     this works for now, next is to check story end, decide when to call exitdialoguemode, 
     */
-    public List<GameObject> TrigPoints;
     public UIState All_UI_Off;
     [SerializeField] public GameObject DialoguePanel;
     public bool Collided = false;   // to record which trig point has alr been hit, avoiding the same trig point activating multiple times
@@ -51,16 +50,16 @@ public class DialogueTriggerPoints : UIState
             }
         }
     }
-
-    public override void UIExit()
-    {
-        base.UIExit();
-    }
     public void OnTriggerExit(Collider other)
     {
         if(other.CompareTag("Player")){
             UIstatemachine.ChangeUIState(All_UI_Off);
             Collided = true;    // remembers that this trig point has already been collided
         }
+    }
+
+    public override void UIExit()
+    {
+        this.gameObject.SetActive(false);
     }
 }

@@ -1,6 +1,10 @@
 //throw all global variables in here i guess... and quest steps too
 
 VAR mat = ""
+VAR cutscene0 = ""
+
+
+//quest id stuffs below 
 VAR quest_id1 = ""
 VAR quest_id2 = ""
 VAR quest_id3 = ""

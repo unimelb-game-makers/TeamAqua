@@ -236,7 +236,7 @@ public class QuestManager : UIState
                     if (quests[i].id == id)
                     {
                         Debug.Log("Quest already in list");
-                        break;
+                        break;  // -> turning return into break seems to make it multiple of the same quest can be added to the list
                     }
                 }
                 if (questData.id == id && !quests.Contains(questData) && !questData.finished)
@@ -284,17 +284,24 @@ public class QuestManager : UIState
         //check if quest log is empty
         if (quests.Count != 0)
         {
+            Debug.Log("quest count passed, checking for quest step type...");
             //check if quest type is location
             if (quests[id-1].quest_steps[step-1].objective_type == "LOCATION")
             {
+                Debug.Log("quest type is location");
                 // check if the quest step's active status is true
                 if (quests[id-1].quest_steps[step-1].active == true)
                 {
+                    Debug.Log("quest step status is ACTIVE");
                     return true;
                 }
+                Debug.Log("quest step status was not active...");
+                return false;
             }
+            Debug.Log("quest type wasnt location");
             return false;
         }
+        Debug.Log("quest count was 0, no quests yet");
         return false;
     }
     public bool CheckStatus(int id, int step, Ink.Runtime.Story story)
@@ -336,6 +343,12 @@ public class QuestManager : UIState
                     Debug.Log("QUEST TYPE IS LOCATION");
                     /* approach: probably set invisible collider at the target location, each with their own ID (scriptable object?).if collided, then come back here to set story.variablestate("quest_id" + id) = "YES"
                     */
+                    if (QuestLocationTrigger.instance().LocationReached)    // bool set off upon reaching designated location
+                    {
+                        Debug.Log("location reached, setting off dialogue trigger variable");
+                        story.variablesState["quest_id" + id] = "yes";  // set off dialogue var to move on to submitquest
+                    }
+                    Debug.Log("quest mana: location not reached, bool still false");
                     return false;
                     //break;
 
