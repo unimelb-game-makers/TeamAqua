@@ -29,13 +29,9 @@ public class DialogueTriggerPoints : UIState
     public override void UIEnter()
     {
         Debug.Log("Entering dialogue trigger point child mode");
-        if (!DialogueSystem.GetIsPlaying() && Collided)
-        {
-            UIstatemachine.ChangeUIState(All_UI_Off);
-        }
-        All_UI_Off.UIEnter();
         DialoguePanel.SetActive(true);
         DialogueSystem.GetIsPlaying();
+        
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -61,5 +57,6 @@ public class DialogueTriggerPoints : UIState
     public override void UIExit()
     {
         this.gameObject.SetActive(false);
+        Debug.Log("exiting child dialogue triggers");
     }
 }

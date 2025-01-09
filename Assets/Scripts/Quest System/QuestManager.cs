@@ -117,20 +117,6 @@ public class QuestManager : UIState
             CompleteStep(1,2);
         }
 
-        
-       
-        // if (questCanvas.activeSelf && !isScaled)
-        // {
-        //     Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
-        //     if (Scroll_View_rect_transform.localScale.y >= 1)
-        //     {
-        //         isScaled = true;
-        //     }
-        // }
-    }
-
-    void Update()
-    {
         if (questCanvas.activeSelf && !isScaled)
         {
             Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 1f, 0);
@@ -148,6 +134,39 @@ public class QuestManager : UIState
             AddQuest(2);
             
         }
+        
+       
+        // if (questCanvas.activeSelf && !isScaled)
+        // {
+        //     Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 0.05f, 0);
+        //     if (Scroll_View_rect_transform.localScale.y >= 1)
+        //     {
+        //         isScaled = true;
+        //     }
+        // }
+    }
+
+    void Update()
+    {
+        //this logic has been moved to UIProcess since we inherit from UIState now
+        
+        /*if (questCanvas.activeSelf && !isScaled)
+        {
+            Scroll_View_rect_transform.localScale = Scroll_View_rect_transform.localScale + new Vector3(0, 1f, 0);
+            Debug.Log("Scaling up");
+            if (Scroll_View_rect_transform.localScale.y >= 1)
+            {
+                isScaled = true;
+            }
+        }
+
+        // Debugging/testing purposes
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AddQuest(1);
+            AddQuest(2);
+            
+        }*/
     }
     /*  ========================================= Migrated to UIstatemachine ======================================================
     void Start()

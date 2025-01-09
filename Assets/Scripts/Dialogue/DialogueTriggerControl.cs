@@ -32,6 +32,11 @@ public class DialogueTriggerControl : MonoBehaviour
     void Start()
     {
         //TrigPoints.SetActive(false);
+        if (dialTrigger)
+        {
+            TrigPoints.SetActive(true);
+        }
+        
         story = new Story(inkJSON.text);
         //set the child trigger points to inactive, if pre-chase convo yet to be started
         // for future uses, if no initial convo exists, just set the dialogue trig variable to anything but empty

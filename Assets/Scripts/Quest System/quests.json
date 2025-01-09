@@ -54,7 +54,7 @@
                     "objective_type" : "LOCATION",
                     "quest_item_id" : -1,
                     "quest_item_amount" : -1,
-                    "location": "(4,0,3)",
+                    "location": "(4,0,3)",  
                     "active":true,
                     "finished":false
 
@@ -96,7 +96,38 @@
                         "objective_type" : "GATHER",
                         "quest_item_id" : 1,
                         "quest_item_amount" : 10,
-                        "location": "(4,0,3)",
+                        "location": "None",
+                        "active":true,
+                        "finished":false
+
+                    }
+                ],
+                "reward" : {
+                    "experience" : 100,
+                    "gold" : 100,
+                    "item" : {
+                        "id" : -1,
+                        "amount" : 0
+                    }
+                },
+                "current_step_number":1,
+                "active" : false,
+                "finished" : false
+        },
+
+        {
+            "id" : 4,
+                "title" : "talk test : ",
+                "description" : "NPC \"talk to this other npc for me pls\"",
+                "quest_steps" : [
+                    {
+                        "step" : 1,
+                        "description" : "Talk to NPC, get items",
+                        "objective" : "talk to NPC.",
+                        "objective_type" : "TALK",
+                        "quest_item_id" : 3,
+                        "quest_item_amount" : 4,
+                        "location": "None",
                         "active":true,
                         "finished":false
 
@@ -114,5 +145,6 @@
                 "active" : false,
                 "finished" : false
         }
+
     ]
 }

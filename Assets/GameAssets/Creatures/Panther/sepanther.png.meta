@@ -1,0 +1,1567 @@
+fileFormatVersion: 2
+guid: ccaa1b2fc22042b4ba8b69088933ced2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3796166071716575030
+    second: sepanther_0
+  - first:
+      213: 5084150808484898592
+    second: sepanther_1
+  - first:
+      213: 1439529672502843067
+    second: sepanther_2
+  - first:
+      213: 2098187040651625180
+    second: sepanther_3
+  - first:
+      213: -8897885986395312754
+    second: sepanther_4
+  - first:
+      213: 3034265843712804049
+    second: sepanther_5
+  - first:
+      213: -7315995035430719668
+    second: sepanther_6
+  - first:
+      213: 5236024892139641371
+    second: sepanther_7
+  - first:
+      213: -7338430776771978195
+    second: sepanther_8
+  - first:
+      213: 7891106827683010573
+    second: sepanther_9
+  - first:
+      213: -912604751396533609
+    second: sepanther_10
+  - first:
+      213: 8282230376530488327
+    second: sepanther_11
+  - first:
+      213: -7793677409155251343
+    second: sepanther_12
+  - first:
+      213: 8753893480143200549
+    second: sepanther_13
+  - first:
+      213: 2902467701643767808
+    second: sepanther_14
+  - first:
+      213: 9128525397605926899
+    second: sepanther_15
+  - first:
+      213: 4737938679729754817
+    second: sepanther_16
+  - first:
+      213: 7140892287726641623
+    second: sepanther_17
+  - first:
+      213: -592435125232122222
+    second: sepanther_18
+  - first:
+      213: -2728158685148169111
+    second: sepanther_19
+  - first:
+      213: -7370114407003636262
+    second: sepanther_20
+  - first:
+      213: 8577849014596180749
+    second: sepanther_21
+  - first:
+      213: -4128267679972244736
+    second: sepanther_22
+  - first:
+      213: 3224450557105513188
+    second: sepanther_23
+  - first:
+      213: -7355412748509392431
+    second: sepanther_24
+  - first:
+      213: -2094187338303607555
+    second: sepanther_25
+  - first:
+      213: 865265739625117208
+    second: sepanther_26
+  - first:
+      213: 2889961426841736902
+    second: sepanther_27
+  - first:
+      213: 3093419550067293774
+    second: sepanther_28
+  - first:
+      213: -6893217433373068035
+    second: sepanther_29
+  - first:
+      213: -4638527158799553603
+    second: sepanther_30
+  - first:
+      213: -1203915041377514610
+    second: sepanther_31
+  - first:
+      213: 6667420768365739353
+    second: sepanther_32
+  - first:
+      213: 1598361650164177424
+    second: sepanther_33
+  - first:
+      213: 8048702754599998020
+    second: sepanther_34
+  - first:
+      213: 6853667364552887487
+    second: sepanther_35
+  - first:
+      213: -6022660677222378319
+    second: sepanther_36
+  - first:
+      213: -6884496550036685965
+    second: sepanther_37
+  - first:
+      213: 3060089329341326383
+    second: sepanther_38
+  - first:
+      213: 1717451155768622384
+    second: sepanther_39
+  - first:
+      213: -2105033487642711271
+    second: sepanther_40
+  - first:
+      213: 5455344032858310209
+    second: sepanther_41
+  - first:
+      213: 2936361817581880443
+    second: sepanther_42
+  - first:
+      213: 5691687237903052777
+    second: sepanther_43
+  - first:
+      213: -6589738746265056656
+    second: sepanther_44
+  - first:
+      213: -8839923585351729029
+    second: sepanther_45
+  - first:
+      213: 7579229198387850923
+    second: sepanther_46
+  - first:
+      213: -4282638331488594835
+    second: sepanther_47
+  - first:
+      213: -6074813095550004845
+    second: sepanther_48
+  - first:
+      213: 878613373929098533
+    second: sepanther_49
+  - first:
+      213: -8339694749172735306
+    second: sepanther_50
+  - first:
+      213: -8443709439308676729
+    second: sepanther_51
+  - first:
+      213: -1251395696360584001
+    second: sepanther_52
+  - first:
+      213: -7902435050203561340
+    second: sepanther_53
+  - first:
+      213: 2812489160068103276
+    second: sepanther_54
+  - first:
+      213: -3962299773041100026
+    second: sepanther_55
+  - first:
+      213: -1572509387350777984
+    second: sepanther_56
+  - first:
+      213: -1968650146379673321
+    second: sepanther_57
+  - first:
+      213: -8608822479762296380
+    second: sepanther_58
+  - first:
+      213: 4193873402337589381
+    second: sepanther_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sepanther_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 4521
+        width: 1317
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac881fa121f415bc0800000000000000
+      internalID: -3796166071716575030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_1
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 4521
+        width: 1317
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027e14c29388e8640800000000000000
+      internalID: 5084150808484898592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_2
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 4512
+        width: 1335
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb69a253c9c3af310800000000000000
+      internalID: 1439529672502843067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_3
+      rect:
+        serializedVersion: 2
+        x: 4625
+        y: 4504
+        width: 1350
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd24e5e2ff14e1d10800000000000000
+      internalID: 2098187040651625180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_4
+      rect:
+        serializedVersion: 2
+        x: 6154
+        y: 4497
+        width: 1368
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d2bf0a6db548480800000000000000
+      internalID: -8897885986395312754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_5
+      rect:
+        serializedVersion: 2
+        x: 7684
+        y: 4492
+        width: 1385
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d44a9865b0eb1a20800000000000000
+      internalID: 3034265843712804049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_6
+      rect:
+        serializedVersion: 2
+        x: 9214
+        y: 4489
+        width: 1401
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f61aee64d587a90800000000000000
+      internalID: -7315995035430719668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_7
+      rect:
+        serializedVersion: 2
+        x: 10744
+        y: 4486
+        width: 1417
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a1613d5e81aa840800000000000000
+      internalID: 5236024892139641371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3848
+        width: 1430
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c56b5d618a82a90800000000000000
+      internalID: -7338430776771978195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_9
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 3849
+        width: 1445
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0894b4d9d7d28d60800000000000000
+      internalID: 7891106827683010573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_10
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 3852
+        width: 1459
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a0da450d6c553f0800000000000000
+      internalID: -912604751396533609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_11
+      rect:
+        serializedVersion: 2
+        x: 4602
+        y: 3850
+        width: 1470
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70cac0575a460f270800000000000000
+      internalID: 8282230376530488327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_12
+      rect:
+        serializedVersion: 2
+        x: 6138
+        y: 3844
+        width: 1478
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173805560bb47d390800000000000000
+      internalID: -7793677409155251343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_13
+      rect:
+        serializedVersion: 2
+        x: 7672
+        y: 3842
+        width: 1478
+        height: 618
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5212b857db31c7970800000000000000
+      internalID: 8753893480143200549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_14
+      rect:
+        serializedVersion: 2
+        x: 9206
+        y: 3840
+        width: 1479
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00075882ff2a74820800000000000000
+      internalID: 2902467701643767808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_15
+      rect:
+        serializedVersion: 2
+        x: 10740
+        y: 3838
+        width: 1479
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7ce6feb790fae70800000000000000
+      internalID: 9128525397605926899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3199
+        width: 1478
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c210e4602a80c140800000000000000
+      internalID: 4737938679729754817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_17
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 3198
+        width: 1478
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1e54d93bb891360800000000000000
+      internalID: 7140892287726641623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_18
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 3197
+        width: 1478
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2964318746f37c7f0800000000000000
+      internalID: -592435125232122222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_19
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 3193
+        width: 1477
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96cb8d85122a32ad0800000000000000
+      internalID: -2728158685148169111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_20
+      rect:
+        serializedVersion: 2
+        x: 6140
+        y: 3190
+        width: 1477
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add3f80def718b990800000000000000
+      internalID: -7370114407003636262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_21
+      rect:
+        serializedVersion: 2
+        x: 7674
+        y: 3189
+        width: 1477
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b90fb3b34aa0770800000000000000
+      internalID: 8577849014596180749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_22
+      rect:
+        serializedVersion: 2
+        x: 9209
+        y: 3189
+        width: 1475
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0034785ea6275b6c0800000000000000
+      internalID: -4128267679972244736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_23
+      rect:
+        serializedVersion: 2
+        x: 10743
+        y: 3191
+        width: 1474
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2a514a2bc8fbc20800000000000000
+      internalID: 3224450557105513188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2557
+        width: 1473
+        height: 629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1d7bc63135ce990800000000000000
+      internalID: -7355412748509392431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_25
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 2558
+        width: 1472
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfcea4716b3ffe2e0800000000000000
+      internalID: -2094187338303607555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_26
+      rect:
+        serializedVersion: 2
+        x: 3073
+        y: 2561
+        width: 1470
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 816bba61b9a020c00800000000000000
+      internalID: 865265739625117208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_27
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2564
+        width: 1466
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c69b752b943b1820800000000000000
+      internalID: 2889961426841736902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_28
+      rect:
+        serializedVersion: 2
+        x: 6142
+        y: 2569
+        width: 1464
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e720fe0b80eea20800000000000000
+      internalID: 3093419550067293774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_29
+      rect:
+        serializedVersion: 2
+        x: 7676
+        y: 2574
+        width: 1461
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4b444244f5650a0800000000000000
+      internalID: -6893217433373068035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_30
+      rect:
+        serializedVersion: 2
+        x: 9211
+        y: 2560
+        width: 1470
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb20c20024a0afb0800000000000000
+      internalID: -4638527158799553603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_31
+      rect:
+        serializedVersion: 2
+        x: 10746
+        y: 2551
+        width: 1478
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b81f206a5da4fe0800000000000000
+      internalID: -1203915041377514610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_32
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1910
+        width: 1485
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d70820ddf678c50800000000000000
+      internalID: 6667420768365739353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_33
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1912
+        width: 1492
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a94acc3758e2610800000000000000
+      internalID: 1598361650164177424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_34
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1919
+        width: 1497
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44214aee28cb2bf60800000000000000
+      internalID: 8048702754599998020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_35
+      rect:
+        serializedVersion: 2
+        x: 4615
+        y: 1931
+        width: 1503
+        height: 618
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcccd0e72e1d1f50800000000000000
+      internalID: 6853667364552887487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_36
+      rect:
+        serializedVersion: 2
+        x: 6150
+        y: 1936
+        width: 1508
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4527306063b6ca0800000000000000
+      internalID: -6022660677222378319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_37
+      rect:
+        serializedVersion: 2
+        x: 7685
+        y: 1946
+        width: 1512
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b39a50dda5570a0800000000000000
+      internalID: -6884496550036685965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_38
+      rect:
+        serializedVersion: 2
+        x: 9220
+        y: 1959
+        width: 1515
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f246a50380f977a20800000000000000
+      internalID: 3060089329341326383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_39
+      rect:
+        serializedVersion: 2
+        x: 10755
+        y: 1977
+        width: 1517
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d3caa0abc95d710800000000000000
+      internalID: 1717451155768622384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_40
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1331
+        width: 1515
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b21c8223b69c2e0800000000000000
+      internalID: -2105033487642711271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_41
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1324
+        width: 1509
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14601168e7645bb40800000000000000
+      internalID: 5455344032858310209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_42
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 1317
+        width: 1504
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b740dfcf38d00c820800000000000000
+      internalID: 2936361817581880443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_43
+      rect:
+        serializedVersion: 2
+        x: 4621
+        y: 1311
+        width: 1496
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efe5d3136fecfe40800000000000000
+      internalID: 5691687237903052777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_44
+      rect:
+        serializedVersion: 2
+        x: 6156
+        y: 1306
+        width: 1486
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a4e32368b8c84a0800000000000000
+      internalID: -6589738746265056656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_45
+      rect:
+        serializedVersion: 2
+        x: 7690
+        y: 1303
+        width: 1477
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b704385c558425580800000000000000
+      internalID: -8839923585351729029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_46
+      rect:
+        serializedVersion: 2
+        x: 9225
+        y: 1300
+        width: 1465
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae2d29acc4de2960800000000000000
+      internalID: 7579229198387850923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_47
+      rect:
+        serializedVersion: 2
+        x: 10759
+        y: 1298
+        width: 1453
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64962eb0230194c0800000000000000
+      internalID: -4282638331488594835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_48
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 659
+        width: 1441
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391d9d2ecade1bba0800000000000000
+      internalID: -6074813095550004845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_49
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 659
+        width: 1428
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d83ff5536713c00800000000000000
+      internalID: 878613373929098533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_50
+      rect:
+        serializedVersion: 2
+        x: 3092
+        y: 660
+        width: 1415
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b26e5cafc3734c80800000000000000
+      internalID: -8339694749172735306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_51
+      rect:
+        serializedVersion: 2
+        x: 4626
+        y: 662
+        width: 1403
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781c46b600be1da80800000000000000
+      internalID: -8443709439308676729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_52
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 664
+        width: 1391
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc89fc8e3622aee0800000000000000
+      internalID: -1251395696360584001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_53
+      rect:
+        serializedVersion: 2
+        x: 7696
+        y: 668
+        width: 1380
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4824504d039e45290800000000000000
+      internalID: -7902435050203561340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_54
+      rect:
+        serializedVersion: 2
+        x: 9231
+        y: 670
+        width: 1369
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cfe786df7f70720800000000000000
+      internalID: 2812489160068103276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_55
+      rect:
+        serializedVersion: 2
+        x: 10766
+        y: 673
+        width: 1358
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b364e79551309c0800000000000000
+      internalID: -3962299773041100026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_56
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 40
+        width: 1347
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f5df03b035d2ae0800000000000000
+      internalID: -1572509387350777984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_57
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 46
+        width: 1336
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711d40a4f13fda4e0800000000000000
+      internalID: -1968650146379673321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_58
+      rect:
+        serializedVersion: 2
+        x: 3099
+        y: 53
+        width: 1326
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1fe5fe091578880800000000000000
+      internalID: -8608822479762296380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sepanther_59
+      rect:
+        serializedVersion: 2
+        x: 4634
+        y: 62
+        width: 1317
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5887a4ba3a1a33a30800000000000000
+      internalID: 4193873402337589381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

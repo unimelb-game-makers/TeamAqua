@@ -12,11 +12,6 @@ public class DialogueOn : UIState
     public override void UIEnter()
     {
         Debug.Log("Entering dialogue mode");
-        if (!DialogueSystem.GetIsPlaying())
-        {
-            UIstatemachine.ChangeUIState(All_UI_Off);
-        }
-        All_UI_Off.UIEnter();
         DialoguePanel.SetActive(true);
         DialogueSystem.GetIsPlaying();
     }
@@ -32,14 +27,15 @@ public class DialogueOn : UIState
         if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying() && DialogueSystem.GetDial().GetChoicesDisplay())
         {
             StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
-            
         }
     }
 
     public override void UIExit()
     {
         StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+        DialoguePanel.SetActive(false);
         Debug.Log("exiting dialogue mode");
+        
     }
 
 
