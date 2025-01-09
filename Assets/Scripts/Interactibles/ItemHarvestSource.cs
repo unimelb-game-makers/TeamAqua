@@ -29,11 +29,12 @@ public class ItemHarvestSource : MonoBehaviour
             pop();
             if (currentItem().amount == 0)
             {
-                itemIDX++;
-                if (itemIDX >= harvestList.Length)
+                if (itemIDX + 1 >= harvestList.Length)
                     gameObject.SetActive(false);
+                else
+                    itemIDX++;
             }
-            EnergyMana.LoseEnergy(currentItem().energyCost);
+            //EnergyMana.LoseEnergy(currentItem().energyCost);
             Debug.Log($"Harvested Item: {currentItem().itemResource.name}");
             return currentItem().itemResource;
         }

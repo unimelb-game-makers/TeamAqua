@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemHarvester : MonoBehaviour
 {
-    [SerializeField] Inventory inventory;
     public ItemHarvestSource source = null;
 
     // Update is called once per frame
@@ -12,7 +11,8 @@ public class ItemHarvester : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && source != null && source.currentItem().amount > 0)
         {
-            inventory.AddItem(source.HarvestResource());
+            Debug.Log($"currentItem.amount = {source.currentItem().amount}");
+            Inventory.inventory.AddItem(source.HarvestResource());
         }
     }
     private void OnTriggerEnter(Collider other)

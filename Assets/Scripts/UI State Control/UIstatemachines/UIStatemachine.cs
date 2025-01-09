@@ -23,6 +23,7 @@ public class UIStatemachine : MonoBehaviour
             StatesList.Add(childState);
             TurnOff(childState);
         }
+        TurnOn(currentState);
         currentState.UIEnter(); 
     }
 

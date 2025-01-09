@@ -24,8 +24,10 @@ public class DialogueTags : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        leftDial.SetActive(false);
-        rightDial.SetActive(false);
+        if(leftDial)
+            leftDial.SetActive(false);
+        if(rightDial)
+            rightDial.SetActive(false);
     }
 
     // Update is called once per frame

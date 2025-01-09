@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000056636556}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3812445550166552601
@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7369729419404430967
 Transform:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3978161355419233629
 Transform:
   m_ObjectHideFlags: 0
@@ -445,8 +445,8 @@ MonoBehaviour:
   dialText: {fileID: 0}
   displaying: 0
   UIstatemachine: {fileID: 0}
-  dialogueOn: {fileID: 0}
-  All_UI_Off: {fileID: 0}
+  dialogueOn: {fileID: 382666531717231743}
+  All_UI_Off: {fileID: 1301943277026691728}
 --- !u!114 &8911776482022760709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIstatemachine: {fileID: 0}
   PausedPanel: {fileID: 0}
-  All_UI_Off: {fileID: 0}
+  All_UI_Off: {fileID: 1301943277026691728}
   isPaused: 1
 --- !u!1 &2372742851206032733
 GameObject:
@@ -577,6 +577,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6849386562059110533}
   - {fileID: 5164233157051024739}
   - {fileID: 6138906332533952156}
   - {fileID: 7686960783581931674}
@@ -628,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIstatemachine: {fileID: 0}
-  All_UI_Off: {fileID: 0}
+  All_UI_Off: {fileID: 1301943277026691728}
   DialoguePanel: {fileID: 0}
 --- !u!1 &3317180734056682888
 GameObject:
@@ -851,7 +852,7 @@ MonoBehaviour:
   questState: {fileID: 0}
   journalState: {fileID: 0}
   dialogueState: {fileID: 0}
-  PauseOn: {fileID: 0}
+  PauseOn: {fileID: 2664636784483693474}
 --- !u!1 &5017475017330582709
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,8 +905,8 @@ MonoBehaviour:
   rt: {fileID: 0}
   Scroll_View_rect_transform: {fileID: 0}
   QuestCompleted: 0
-  All_UI_Off: {fileID: 0}
-  paused: {fileID: 0}
+  All_UI_Off: {fileID: 1301943277026691728}
+  paused: {fileID: 5347945760130529741}
   inventory: {fileID: 0}
 --- !u!1 &5113949283691246198
 GameObject:
@@ -1028,7 +1029,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7224548699179005776}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999613
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1123,6 +1124,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &5174391932027479980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6849386562059110533}
+  - component: {fileID: 6827327088618626540}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6849386562059110533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174391932027479980}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2306620006358448608}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6827327088618626540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174391932027479980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce4ea9369036374899c0dfa9a36e391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryItems: []
 --- !u!1 &6041572003198272176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIstatemachine: {fileID: 0}
   All_UI_Off: {fileID: 1301943277026691728}
-  paused: {fileID: 0}
+  paused: {fileID: 5347945760130529741}
   journalCanvas: {fileID: 0}
   Scroll_View_rect_transform: {fileID: 0}
 --- !u!1 &7605395225366640446
@@ -1290,6 +1336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6138906332533952156}
+  - component: {fileID: 7413411068754097681}
   m_Layer: 0
   m_Name: EnergyManager
   m_TagString: Untagged
@@ -1312,6 +1359,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2306620006358448608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7413411068754097681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605395225366640446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640c0968ddf4e1f4cb4916fb51fd95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RemainingEnergy: {fileID: 0}
+  EnergyAmount: 100
 --- !u!1 &8094442959441932845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5591306019828569780
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,7 +1419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIstatemachine: {fileID: 0}
   All_UI_Off: {fileID: 1301943277026691728}
-  paused: {fileID: 0}
+  paused: {fileID: 5347945760130529741}
   questCanvas: {fileID: 0}
   rt: {fileID: 0}
   Scroll_View_rect_transform: {fileID: 0}
