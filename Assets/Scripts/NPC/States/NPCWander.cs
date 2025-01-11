@@ -5,8 +5,9 @@ using UnityEngine;
 public class NPCWander : State
 {
     [SerializeField] State idleState;
+    [SerializeField] State delayIdleState;
     public float speed = 3;
-    public Vector3[] waypoints;
+    public Transform[] waypoints;
     private int currentIndex = 0;
     private float threshold = 0.1f;
 
@@ -31,10 +32,11 @@ public class NPCWander : State
             return;
         }
 
-        Vector3 targetWaypoint = waypoints[currentIndex];
+        Vector3 targetWaypoint = waypoints[currentIndex].position;
         if (Vector3.Distance(statemachine.transform.position, targetWaypoint) <= threshold)
         {
             currentIndex = (currentIndex + 1) % waypoints.Length;
+            statemachine.ChangeState(delayIdleState);
         }
         statemachine.transform.position = Vector3.MoveTowards(statemachine.transform.position, targetWaypoint, speed * Time.deltaTime);
     }

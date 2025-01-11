@@ -12,7 +12,7 @@ using UnityEngine;
 
 public abstract class State : MonoBehaviour
 {
-    public Statemachine statemachine; //A reference to the parent statemachine for the state to call ChangeState()
+    [NonSerialized] public Statemachine statemachine; //A reference to the parent statemachine for the state to call ChangeState()
     public virtual void Enter(){} //Called when entering the new state
     public virtual void Exit(){} //Called when exiting the state
     public virtual void Ready(){} //Called in the statemachine start function
