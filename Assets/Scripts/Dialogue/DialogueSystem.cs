@@ -32,6 +32,7 @@ public class DialogueSystem : MonoBehaviour
     private bool canContinueNextLine = false;
     public UIStatemachine UIstatemachine;
     public UIState dialogueOn;
+    public UIState dialogueGame;
     public UIState All_UI_Off;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
@@ -158,13 +159,11 @@ public class DialogueSystem : MonoBehaviour
 
         if (DialogueTypeID == 1)
         {
-            //really praying the dialogue system is sustainable enough to handle my shitty code 
-            //:pray::pray::pray:pray::pray::pray::pray:pray:
             //changine to UI state done in child trigger points
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true;// Setting the Input provider here.
-            //UIstatemachine.ChangeUIState(dialogueOn);     <<< tested and works
+            UIstatemachine.ChangeUIState(dialogueGame);     //<<< tested and works
             dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
             currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     

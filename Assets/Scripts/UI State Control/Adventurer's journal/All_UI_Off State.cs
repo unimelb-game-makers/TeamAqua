@@ -16,6 +16,13 @@ public class All_UI_Off_State: UIState
     */
     public override void UIEnter()
     {
+
+
+        /* All UI states turned off when entering this state, following inv state, all other states should be child of UIstatemachine, with UI elements attached under their respective manager. Unsure how to proceed with dialogue stuffs, very chaotic.
+        */
+
+
+
         Debug.Log("Entering all UI off state");
         
         //Make sure all states are turned off

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DialogueTriggerPoints : UIState
+public class DialogueTriggerPoints : MonoBehaviour
 {
     /*
     THE BIG IDEA: same logic as other mode of dialogue, but instead of every key E, its every time u collide with a trigger point
@@ -26,22 +26,19 @@ public class DialogueTriggerPoints : UIState
 
 //================================ honestly not sure what to do with this state ==========================================
 
-    public override void UIEnter()
-    {
-        Debug.Log("Entering dialogue trigger point child mode");
-        DialoguePanel.SetActive(true);
-        DialogueSystem.GetIsPlaying();
-        
-    }
+    
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player")){
             if (!Collided)
             {
-                UIEnter();
+                Debug.Log("Entering dialogue trigger point child mode");
+                DialoguePanel.SetActive(true);
+                DialogueSystem.GetIsPlaying();
+                //UIEnter();    < what did this line do....
                 DialogueSystem.GetDial().ContinueStory();
                 Debug.Log("entering dial trig ui state");
-                UIstatemachine.ChangeUIState(this);
+                //UIstatemachine.ChangeUIState(this);
                 //Collided = false;
             }
         }
@@ -49,14 +46,11 @@ public class DialogueTriggerPoints : UIState
     public void OnTriggerExit(Collider other)
     {
         if(other.CompareTag("Player")){
-            UIstatemachine.ChangeUIState(All_UI_Off);
+            //UIstatemachine.ChangeUIState(All_UI_Off);
             Collided = true;    // remembers that this trig point has already been collided
+            Debug.Log("exiting child dialogue triggers");
+            DialoguePanel.SetActive(false);
+            this.gameObject.SetActive(false);
         }
-    }
-
-    public override void UIExit()
-    {
-        this.gameObject.SetActive(false);
-        Debug.Log("exiting child dialogue triggers");
     }
 }

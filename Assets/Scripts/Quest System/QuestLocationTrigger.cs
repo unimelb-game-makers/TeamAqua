@@ -38,7 +38,7 @@ public class QuestLocationTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("collider hit, checking quest step status... ");
-        if (QuestManager.Instance().CheckStart(id, step))
+        if (QuestManager.Instance().CheckStart(id, step))   //location off-limit if quest step not acive yet.
         {
             if (other.CompareTag("Player"))
             {

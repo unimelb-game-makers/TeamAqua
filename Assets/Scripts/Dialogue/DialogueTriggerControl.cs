@@ -4,15 +4,16 @@ using Ink.Runtime;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DialogueTriggerControl : MonoBehaviour
+public class DialogueTriggerControl : UIState
 {
     public static DialogueTriggerControl inst;
     public GameObject TrigPoints;
     public TextAsset inkJSON;
     public int dialogueTypeID;
     public string dialogueTrigger;
-    Story story;
+    Story story = DialogueSystem.GetDial().currentStory;        //might want to access the story from dialogue sys instead?
     public bool dialTrigger;
+    public GameObject[] trigPoints;
 
 
 // ===================== REUSABILITY: need dial trigger to be set true for triggers to work ==============================
@@ -37,7 +38,7 @@ public class DialogueTriggerControl : MonoBehaviour
             TrigPoints.SetActive(true);
         }
         
-        story = new Story(inkJSON.text);
+        //story = new Story(inkJSON.text);
         //set the child trigger points to inactive, if pre-chase convo yet to be started
         // for future uses, if no initial convo exists, just set the dialogue trig variable to anything but empty
         story.ObserveVariable(dialogueTrigger, (variableName, newValue) =>
@@ -53,12 +54,25 @@ public class DialogueTriggerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("variable state is " + story.variablesState[dialogueTrigger]);   
+        //Debug.Log("variable state is " + story.variablesState[dialogueTrigger]);  
+        /* 
         if (Input.GetKeyDown(KeyCode.X))
         {
             story.variablesState[dialogueTrigger] = "AAAAAA";
             Debug.Log(story.variablesState[dialogueTrigger]);
         }
+        */
+
+        // WIP
+        /*
+        foreach (GameObject trig in GetComponentsInChildren<GameObject>())
+        {
+            if (trig.GetComponent<Collider>().CompareTag("Player"))
+            {
+                trigs
+            }
+        }
+        */
     }
 
     public void Trigger()   //this almost took in string id, but that created a var not delcared bug. so we end up using dialogueTrigger as a string instead 
