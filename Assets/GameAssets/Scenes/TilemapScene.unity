@@ -18218,8 +18218,24 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 454926669010518043, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 922774388745250848, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_Size
+      value: 0.99999785
+      objectReference: {fileID: 0}
+    - target: {fileID: 922774388745250848, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1154967158338733638, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565966934998939628, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
@@ -18266,12 +18282,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 3812445550166552601, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5078622477034457869, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00030233408
+      value: 0.000012022439
       objectReference: {fileID: 0}
     - target: {fileID: 6041572003198272176, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499541002192029627, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6747471627110480588, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
