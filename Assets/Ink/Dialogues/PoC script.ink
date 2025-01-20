@@ -40,9 +40,9 @@ current quest step is {questSteps} and current quest_id var is {quest_id1}
 
 <color=green>colored text</color> normal <color=\#9EED8A><i><b>everything text</b></i>text</color>
 <color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
-You find yourself on a beach. #speaker:Narrator  #audio:2beep
-The sun glares over you, and your ship is in pieces around you. #audio:2beep
-/*
+You find yourself on a beach. #speaker:Narrator  #audio:lex
+The sun glares over you, and your ship is in pieces around you. #audio:lex
+
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
 The storms of yesterday seem to have died down for now. 
@@ -106,7 +106,7 @@ Come back please!
 
 
 ===choiceYES=== //if player chooses to help Amelia
-It’s what your gut is telling you, and it’s high time you started listening to your gut. #speaker:Narrator #audio:2beep
+It’s what your gut is telling you, and it’s high time you started listening to your gut. #speaker:Narrator #audio:lex
 You rush in and with a surge of power that feels like it came out of nowhere, you move the tree off the creature. 
 As it crashes to the ground next to you, the creature stands up slowly, face tensing in pain.
 
@@ -117,7 +117,7 @@ Are you hurt? #speaker:Noelle #audio:default
 
 I’m a little bruised, but I would be a lot worse for wear if it wasn’t for you. #speaker:Amelia #audio:animal
 So thanks.  
-Amelia looks up at you, and recoils in horror. #speaker:Narrator #audio:2beep
+Amelia looks up at you, and recoils in horror. #speaker:Narrator #audio:lex
 
 Hey, wait a minute? Are you a - #speaker:Amelia #audio:animal
 human!
@@ -220,7 +220,7 @@ VAR remainingFish = 0//remaining var should actually be 0, currently set to 1 fo
 You look around for something to help you catch some fish. #speaker:Narrator
 In the wreckage of your old ship you find an old fishing rod.
 It’s nothing fancy, but it will do the trick.
-*/
+
 VAR id = 1
 You find a spot on the beach where there are dark shapes of various sizes slowly moving about. 
 You cast the fishing rod into the waters several times, hoping to catch the fish you need for your potential party member.    #questS:1

@@ -163,7 +163,7 @@ public class DialogueSystem : MonoBehaviour
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true;// Setting the Input provider here.
-            UIstatemachine.ChangeUIState(dialogueGame);     //<<< tested and works
+            UIstatemachine.ChangeUIState(dialogueGame);     
             dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
             currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     

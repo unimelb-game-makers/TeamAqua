@@ -51,6 +51,7 @@ public class DialogueTriggerPoints : MonoBehaviour
             Debug.Log("exiting child dialogue triggers");
             DialoguePanel.SetActive(false);
             this.gameObject.SetActive(false);
+
         }
     }
 }

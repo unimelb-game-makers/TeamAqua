@@ -42,7 +42,7 @@ public class NPCDialogue : MonoBehaviour
             //QuestManager.Instance().CheckStep(questID, 1);
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON, DialogueTypeID);
             //UIstatemachine.ChangeUIState(DialogueOn);
-            EnergyMana.LoseEnergy(0);
+            EnergyMana.LoseEnergy(20);
             //DialogueSystem.SetSpeakerName(gameObject.name); 
         }
     }
