@@ -3524,8 +3524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Source: {fileID: 2143145102}
   newClip: {fileID: 8300000, guid: 476237d636c13804e93d2056ccc2e9df, type: 3}
-  delay: 0
-  VolDownSpeed: 0
+  fadeSpeed: 5
+  delayTrack: 0
 --- !u!1 &1681379314
 GameObject:
   m_ObjectHideFlags: 0
@@ -12464,7 +12464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000004134333}
+  m_AnchoredPosition: {x: 0, y: 0.000020980835}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6803148718949260126
