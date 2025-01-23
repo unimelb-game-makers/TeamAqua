@@ -1537,6 +1537,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &556580074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 105800495383659587, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
+  m_PrefabInstance: {fileID: 659306408729501147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &571690309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,6 +3510,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5469580839611288937, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
   m_PrefabInstance: {fileID: 659306408729501147}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1554603882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556580074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ae60ef4cd0e6e43aca375e2e1a88ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 2143145102}
+  newClip: {fileID: 8300000, guid: 476237d636c13804e93d2056ccc2e9df, type: 3}
+  delay: 0
+  VolDownSpeed: 0
 --- !u!1 &1681379314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,7 +4373,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5580,7 +5601,10 @@ PrefabInstance:
     - {fileID: 7862821317946191050, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 105800495383659587, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1554603882}
   m_SourcePrefab: {fileID: 100100000, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
 --- !u!224 &668588669329482521
 RectTransform:
@@ -12440,7 +12464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000005853438}
+  m_AnchoredPosition: {x: 0, y: -0.000004134333}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6803148718949260126
