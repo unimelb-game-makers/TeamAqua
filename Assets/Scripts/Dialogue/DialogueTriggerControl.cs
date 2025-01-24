@@ -37,10 +37,10 @@ public class DialogueTriggerControl : UIState
     // Start is called before the first frame update
     public override void UIEnter()
     {
-
+        /*
         foreach(GameObject triggers in GetComponentsInChildren<GameObject>()){
             trigPoints.Add(triggers);
-        }
+        }*/
 
         //TrigPoints.SetActive(false);
         if (dialTrigger)
@@ -67,7 +67,7 @@ public class DialogueTriggerControl : UIState
     // Update is called once per frame
     public override void UIProcess()
     {   /*
-        if ()
+        if (last index of trig point collided)
         {
             UIExit();
         }
