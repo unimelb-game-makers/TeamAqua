@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1431617894848234735}
   - component: {fileID: 5606325591142375236}
   - component: {fileID: 649331953964727499}
+  - component: {fileID: 4487357032059417108}
   m_Layer: 0
   m_Name: PushBlock
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.614322, y: 0.6125001, z: -7.3966403}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,3 +108,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4487357032059417108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414966875357424245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e2a563dff2d35498d36a1d060402c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move_distance: 0.25
+  tween_time: 0.25
