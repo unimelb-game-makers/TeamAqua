@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using Kuroneko.AudioDelivery;
+using Kuroneko.UtilityDelivery;
 
 public class PuzzleZone : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class PuzzleZone : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             playerEntered = true;
             puzzleCam.gameObject.SetActive(true);
+            ServiceLocator.Instance.Get<IAudioService>().Play("PUZZLE_ENTER");
         }
     }
     private void OnTriggerExit(Collider other) {
