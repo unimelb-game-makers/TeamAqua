@@ -31,8 +31,10 @@ public class Puzzle : MonoBehaviour
         }
         //If all switches are on, then open the door
         Debug.Log("Opening Door");
-        if(door)
-            door.SetActive(false);
+        if(door){
+            //door.SetActive(false);
+            LeanTween.moveLocalY(door, -0.3f, 0.5f);   
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
