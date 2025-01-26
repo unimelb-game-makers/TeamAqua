@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PushBlock : MonoBehaviour
 {
-    public float move_distance = 0.25f;
+    public bool can_push = true;
+    public float move_distance = 0.2500f;
     public float tween_time = 0.25f;
 
     private void OnCollisionEnter(Collision other) {
@@ -43,8 +44,10 @@ public class PushBlock : MonoBehaviour
         
         direction *= dir;
         
-        //Move the block if it is not facing an obstacle.
-        if(!Physics.Raycast(transform.position, direction, move_distance))
+        //Move the block if it is not facing an obstacle and currently tweening.
+        if(!Physics.Raycast(transform.position, direction, move_distance, -1, QueryTriggerInteraction.Ignore)
+            && can_push && !LeanTween.isTweening(gameObject)){
             LeanTween.move(gameObject, transform.position + direction * move_distance, tween_time);
+        }
     }
 }
