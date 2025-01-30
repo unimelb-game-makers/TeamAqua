@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// UNUSED ----> GO TO DialogueTriggerPoints.cs
 //Not sure if should inehrit from UIstate or should just make dialogue states have their own class
 public class DialogueGameplay : UIState
 {
@@ -13,17 +13,17 @@ public class DialogueGameplay : UIState
 
 //================================ honestly not sure what to do with this state ==========================================
 // WHAT IF:
-/*
+/* 
+using UItriggerenter and UItriggerexit to go in and out of dialogue state,
+in parent game object collider, call enter dialogue mode, parent takes the ink json file
+each time hit a collider, enter state (exit collider calls trig exit)
+each time state is called, call continuestory()
 
 */
     public override void UIEnter()
     {
         Debug.Log("Entering dialogue mode");
-        if (!DialogueSystem.GetIsPlaying())
-        {
-            UIstatemachine.ChangeUIState(All_UI_Off);
-        }
-        All_UI_Off.UIEnter();
+        
         DialoguePanel.SetActive(true);
         DialogueSystem.GetIsPlaying();
     }
