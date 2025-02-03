@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Kuroneko.AudioDelivery;
 using Kuroneko.UtilityDelivery;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundChanger : MonoBehaviour
 {
@@ -11,9 +13,21 @@ public class SoundChanger : MonoBehaviour
     public AudioClip newClip;   // the replacement track
     public float fadeSpeed;
     public float delayTrack;     // the time delay before new track is played
+    public AudioMixerGroup MixerBgm;
 
 /*=======DEV NOTE: maybe use scriptable objects to have ids on the tracks, so we can use strings to load whichever track we want
 without having to declare a public audioclip newClip. We might also be able to store data like volume, pitch, each track's unique properties (if they have) in there as well
+
+
+2/2/25
+functions todo
+
+Play()
+
+Swap()
+
+
+making changed to audio delivery code to add fade out
 */
     void Awake()
     {
@@ -27,12 +41,18 @@ without having to declare a public audioclip newClip. We might also be able to s
     // Start is called before the first frame update
     void Start()
     {
-        Source =  GameObject.Find("AudioSource").GetComponent<AudioSource>();  // get the audio source component from the scene
+        //Source =  GameObject.Find("AudioSource").GetComponent<AudioSource>();  // get the audio source component from the scene
+        Source = MixerBgm.GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Play("SUNEATER");
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             StartCoroutine(ChangeSound(fadeSpeed, delayTrack, "SUNEATER", "FLUTTERING_CRITTER"));
@@ -42,6 +62,11 @@ without having to declare a public audioclip newClip. We might also be able to s
         {
             StartCoroutine(ChangeSound(fadeSpeed, delayTrack, "FLUTTERING_CRITTER", "SUNEATER"));
         }
+    }
+    public void Play(string id)
+    {
+        // play an audio, to be used when no other audio is currently playing
+        ServiceLocator.Instance.Get<IAudioService>().Play(id);
     }
 
     public IEnumerator ChangeSound(float FadeTime, float delay, string id, string old_id) 
@@ -55,11 +80,11 @@ without having to declare a public audioclip newClip. We might also be able to s
         // fade out volume
         while (Source.volume > 0) {
             Source.volume -= startVolume * Time.deltaTime / FadeTime;
-
+            Debug.Log("fading out audio");
             yield return null;
         }
         // switch track
-        Source.Stop();
+        //Source.Stop();
         ServiceLocator.Instance.Get<IAudioService>().Stop(old_id);
         Source.volume = startVolume;
         //ServiceLocator.Instance.Get<IAudioService>().

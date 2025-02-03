@@ -1,0 +1,1615 @@
+fileFormatVersion: 2
+guid: f876cc8ddfc75b0478805acf5b68a951
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5980161306769745637
+    second: Noelle_Idle_0
+  - first:
+      213: -6913438889786837843
+    second: Noelle_Idle_1
+  - first:
+      213: -280509502587078937
+    second: Noelle_Idle_2
+  - first:
+      213: -8883150889589443245
+    second: Noelle_Idle_3
+  - first:
+      213: 6149142246027644003
+    second: Noelle_Idle_4
+  - first:
+      213: 4932283021239728447
+    second: Noelle_Idle_5
+  - first:
+      213: -3136679502245523955
+    second: Noelle_Idle_6
+  - first:
+      213: 345512156528374437
+    second: Noelle_Idle_7
+  - first:
+      213: -4065580009299625982
+    second: Noelle_Idle_8
+  - first:
+      213: -2502874393861239307
+    second: Noelle_Idle_9
+  - first:
+      213: -7036980956516662188
+    second: Noelle_Idle_10
+  - first:
+      213: -5397243925097547247
+    second: Noelle_Idle_11
+  - first:
+      213: -3966268041224770929
+    second: Noelle_Idle_12
+  - first:
+      213: -269095171213370698
+    second: Noelle_Idle_13
+  - first:
+      213: -7171824519256913522
+    second: Noelle_Idle_14
+  - first:
+      213: -8412413397980960721
+    second: Noelle_Idle_15
+  - first:
+      213: 1534614693570790909
+    second: Noelle_Idle_16
+  - first:
+      213: 2356366404209466575
+    second: Noelle_Idle_17
+  - first:
+      213: -4599819881674805051
+    second: Noelle_Idle_18
+  - first:
+      213: 3926371435767898373
+    second: Noelle_Idle_19
+  - first:
+      213: 3407062872682731274
+    second: Noelle_Idle_20
+  - first:
+      213: 3241252777902792575
+    second: Noelle_Idle_21
+  - first:
+      213: 7289403456853124913
+    second: Noelle_Idle_22
+  - first:
+      213: -3285411420151882904
+    second: Noelle_Idle_23
+  - first:
+      213: 8853718719098924325
+    second: Noelle_Idle_24
+  - first:
+      213: -3207812209700577201
+    second: Noelle_Idle_25
+  - first:
+      213: 5580635483173924157
+    second: Noelle_Idle_26
+  - first:
+      213: -7198093748355064465
+    second: Noelle_Idle_27
+  - first:
+      213: -1131362595952643845
+    second: Noelle_Idle_28
+  - first:
+      213: 1208271149072348710
+    second: Noelle_Idle_29
+  - first:
+      213: 7652764512531625465
+    second: Noelle_Idle_30
+  - first:
+      213: 221936278684792031
+    second: Noelle_Idle_31
+  - first:
+      213: 6491700202205872070
+    second: Noelle_Idle_32
+  - first:
+      213: 7979470518215151642
+    second: Noelle_Idle_33
+  - first:
+      213: -2875824709983674064
+    second: Noelle_Idle_34
+  - first:
+      213: -657876731515888161
+    second: Noelle_Idle_35
+  - first:
+      213: 8222166425940619129
+    second: Noelle_Idle_36
+  - first:
+      213: 7395577883868766633
+    second: Noelle_Idle_37
+  - first:
+      213: 7442356290493597621
+    second: Noelle_Idle_38
+  - first:
+      213: 5754134265474592145
+    second: Noelle_Idle_39
+  - first:
+      213: 6921837630548248568
+    second: Noelle_Idle_40
+  - first:
+      213: 2615347484375501063
+    second: Noelle_Idle_41
+  - first:
+      213: -6679852367334994390
+    second: Noelle_Idle_42
+  - first:
+      213: -1068003490379858654
+    second: Noelle_Idle_43
+  - first:
+      213: 7727207217821949358
+    second: Noelle_Idle_44
+  - first:
+      213: -5275306850038137617
+    second: Noelle_Idle_45
+  - first:
+      213: 8938956729384450560
+    second: Noelle_Idle_46
+  - first:
+      213: 5442588393493170771
+    second: Noelle_Idle_47
+  - first:
+      213: -653676399192224560
+    second: Noelle_Idle_48
+  - first:
+      213: 1141860717235549177
+    second: Noelle_Idle_49
+  - first:
+      213: -229988646965012366
+    second: Noelle_Idle_50
+  - first:
+      213: -2973060016991384045
+    second: Noelle_Idle_51
+  - first:
+      213: 7761150663051721074
+    second: Noelle_Idle_52
+  - first:
+      213: -92295409762673057
+    second: Noelle_Idle_53
+  - first:
+      213: 1539758266139410195
+    second: Noelle_Idle_54
+  - first:
+      213: -4876543132330888438
+    second: Noelle_Idle_55
+  - first:
+      213: 2913766946537647855
+    second: Noelle_Idle_56
+  - first:
+      213: 6553369221009691832
+    second: Noelle_Idle_57
+  - first:
+      213: 8352824592752429734
+    second: Noelle_Idle_58
+  - first:
+      213: 3936387555324192963
+    second: Noelle_Idle_59
+  - first:
+      213: -4627896491161031148
+    second: Noelle_Idle_60
+  - first:
+      213: -3539801659440623958
+    second: Noelle_Idle_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Noelle_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3461
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19147ac9f2320da0800000000000000
+      internalID: -5980161306769745637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 3461
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da472ed65f78e00a0800000000000000
+      internalID: -6913438889786837843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 4038
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6fc26f71e6b1cf0800000000000000
+      internalID: -280509502587078937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 4038
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35573d3b455b8b480800000000000000
+      internalID: -8883150889589443245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 4038
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c43df0b44265550800000000000000
+      internalID: 6149142246027644003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 4038
+        width: 344
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f393fa4864df27440800000000000000
+      internalID: 4932283021239728447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 3461
+        width: 345
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e086e8c964874d0800000000000000
+      internalID: -3136679502245523955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 3461
+        width: 345
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2f37bc9718bc400800000000000000
+      internalID: 345512156528374437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 3461
+        width: 345
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20834cb95882497c0800000000000000
+      internalID: -4065580009299625982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 3461
+        width: 345
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdca74eff0044dd0800000000000000
+      internalID: -2502874393861239307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 3461
+        width: 345
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454c2a38a1f975e90800000000000000
+      internalID: -7036980956516662188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 3461
+        width: 345
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11afc66fe332915b0800000000000000
+      internalID: -5397243925097547247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 3461
+        width: 344
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a20de0b3cf4f8c0800000000000000
+      internalID: -3966268041224770929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2884
+        width: 345
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6badd051e5bf34cf0800000000000000
+      internalID: -269095171213370698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2884
+        width: 345
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e894142099f887c90800000000000000
+      internalID: -7171824519256913522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2884
+        width: 345
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28ab9dd59a114b80800000000000000
+      internalID: -8412413397980960721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 2884
+        width: 345
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5c16ddeeb0c4510800000000000000
+      internalID: 1534614693570790909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 2884
+        width: 345
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fccd19392ce73b020800000000000000
+      internalID: 2356366404209466575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2884
+        width: 345
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c07ef140382a20c0800000000000000
+      internalID: -4599819881674805051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 2884
+        width: 345
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501af2d94064d7630800000000000000
+      internalID: 3926371435767898373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 2884
+        width: 345
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a071dad91a1584f20800000000000000
+      internalID: 3407062872682731274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 2787
+        y: 2884
+        width: 345
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fd4268a3e3bfc20800000000000000
+      internalID: 3241252777902792575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1730
+        width: 349
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1372c36b2d9292560800000000000000
+      internalID: 7289403456853124913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2307
+        width: 346
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bd5d068bfd762d0800000000000000
+      internalID: -3285411420151882904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1730
+        width: 350
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d2e19144abeda70800000000000000
+      internalID: 8853718719098924325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2307
+        width: 346
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40e2ae7acf8b73d0800000000000000
+      internalID: -3207812209700577201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1730
+        width: 350
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3da58b8766627d40800000000000000
+      internalID: 5580635483173924157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 2307
+        width: 347
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d165d7fdb3b1c90800000000000000
+      internalID: -7198093748355064465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 1730
+        width: 350
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0341496b79c40f0800000000000000
+      internalID: -1131362595952643845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 2307
+        width: 347
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6267fc85534a4c010800000000000000
+      internalID: 1208271149072348710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1730
+        width: 350
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5b92f27c4143a60800000000000000
+      internalID: 7652764512531625465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 2307
+        width: 347
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd477cd9ed9741300800000000000000
+      internalID: 221936278684792031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 2307
+        width: 348
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfffcc70f6271a50800000000000000
+      internalID: 6491700202205872070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 2307
+        width: 348
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a109ae5c826ccbe60800000000000000
+      internalID: 7979470518215151642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2307
+        width: 349
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031e12db9a40718d0800000000000000
+      internalID: -2875824709983674064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 2307
+        width: 348
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd10082990ced6f0800000000000000
+      internalID: -657876731515888161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1730
+        width: 350
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f655e2dc00b1270800000000000000
+      internalID: 8222166425940619129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 1730
+        width: 350
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1abb4e6ee52a660800000000000000
+      internalID: 7395577883868766633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 1730
+        width: 350
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7c3ca6d9f884760800000000000000
+      internalID: 7442356290493597621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 1730
+        width: 348
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d2483b0aacadf40800000000000000
+      internalID: 5754134265474592145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1153
+        width: 349
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f782c9c6ae4f0060800000000000000
+      internalID: 6921837630548248568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1153
+        width: 348
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709c96a2ea49b4420800000000000000
+      internalID: 2615347484375501063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 1153
+        width: 348
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e02fcc9a56c43a0800000000000000
+      internalID: -6679852367334994390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1153
+        width: 347
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22df709eb70bd21f0800000000000000
+      internalID: -1068003490379858654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 1153
+        width: 347
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead9c1c260e8c3b60800000000000000
+      internalID: 7727207217821949358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 1153
+        width: 346
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecba42ae585ac6b0800000000000000
+      internalID: -5275306850038137617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 1153
+        width: 346
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a3c85e8cd8d0c70800000000000000
+      internalID: 8938956729384450560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 1153
+        width: 345
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a03dcce45f78b40800000000000000
+      internalID: 5442588393493170771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 1153
+        width: 344
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc471c37ccade6f0800000000000000
+      internalID: -653676399192224560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 576
+        width: 344
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f33cc1c544b8df00800000000000000
+      internalID: 1141860717235549177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 576
+        width: 345
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278174b4b8aeeccf0800000000000000
+      internalID: -229988646965012366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 345
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ecf4f9aa19db6d0800000000000000
+      internalID: -2973060016991384045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 576
+        width: 345
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2793c7f586525bb60800000000000000
+      internalID: 7761150663051721074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e52b650d918bef0800000000000000
+      internalID: -92295409762673057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 576
+        width: 345
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ff53d2cf15e5510800000000000000
+      internalID: 1539758266139410195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03fb81bbd9035cb0800000000000000
+      internalID: -4876543132330888438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 576
+        width: 345
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feea6ae9997cf6820800000000000000
+      internalID: 2913766946537647855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 0
+        width: 345
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4d244d59e32fa50800000000000000
+      internalID: 6553369221009691832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 576
+        width: 345
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aac72246b13be370800000000000000
+      internalID: 8352824592752429734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 576
+        width: 345
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8ed5d20abd0a630800000000000000
+      internalID: 3936387555324192963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 576
+        width: 345
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ee11339a866cfb0800000000000000
+      internalID: -4627896491161031148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 576
+        width: 345
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae04b9352910eec0800000000000000
+      internalID: -3539801659440623958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1543 @@
+fileFormatVersion: 2
+guid: 4fd3cbe91efade84ab3cae368118c1d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4130488908343229684
+    second: Gator_Idle_0
+  - first:
+      213: -8730993549759785723
+    second: Gator_Idle_1
+  - first:
+      213: -8596335721789284833
+    second: Gator_Idle_2
+  - first:
+      213: -8193294679069991153
+    second: Gator_Idle_3
+  - first:
+      213: 2061775098137073121
+    second: Gator_Idle_4
+  - first:
+      213: -474932231224386819
+    second: Gator_Idle_5
+  - first:
+      213: 1998567805398583335
+    second: Gator_Idle_6
+  - first:
+      213: -5815965954560344767
+    second: Gator_Idle_7
+  - first:
+      213: 1791277718061874988
+    second: Gator_Idle_8
+  - first:
+      213: 7415384211902818597
+    second: Gator_Idle_9
+  - first:
+      213: 6235659008209778447
+    second: Gator_Idle_10
+  - first:
+      213: 1883370184661288763
+    second: Gator_Idle_11
+  - first:
+      213: 6895379522435013301
+    second: Gator_Idle_12
+  - first:
+      213: -3618406621734636756
+    second: Gator_Idle_13
+  - first:
+      213: 784770763591854741
+    second: Gator_Idle_14
+  - first:
+      213: -1269329073246473725
+    second: Gator_Idle_15
+  - first:
+      213: 5011098720377684984
+    second: Gator_Idle_16
+  - first:
+      213: -6927534118824088256
+    second: Gator_Idle_17
+  - first:
+      213: 6143356777085839465
+    second: Gator_Idle_18
+  - first:
+      213: 4652127161466278183
+    second: Gator_Idle_19
+  - first:
+      213: 3249839771194068664
+    second: Gator_Idle_20
+  - first:
+      213: -2005925030493816339
+    second: Gator_Idle_21
+  - first:
+      213: -2336252288094706580
+    second: Gator_Idle_22
+  - first:
+      213: 4333599439789154288
+    second: Gator_Idle_23
+  - first:
+      213: 6353083835149281910
+    second: Gator_Idle_24
+  - first:
+      213: -1151766364248010000
+    second: Gator_Idle_25
+  - first:
+      213: -2352746963355093070
+    second: Gator_Idle_26
+  - first:
+      213: -4335372311763865607
+    second: Gator_Idle_27
+  - first:
+      213: 2470911421313289686
+    second: Gator_Idle_28
+  - first:
+      213: -8089835379732419962
+    second: Gator_Idle_29
+  - first:
+      213: 2151908875319570397
+    second: Gator_Idle_30
+  - first:
+      213: 251341017955732538
+    second: Gator_Idle_31
+  - first:
+      213: -278842260830962114
+    second: Gator_Idle_32
+  - first:
+      213: 3549756570588115414
+    second: Gator_Idle_33
+  - first:
+      213: -1175377564324994618
+    second: Gator_Idle_34
+  - first:
+      213: 784452075206559650
+    second: Gator_Idle_35
+  - first:
+      213: 971955663351229091
+    second: Gator_Idle_36
+  - first:
+      213: -191051392362510939
+    second: Gator_Idle_37
+  - first:
+      213: -8904838269149704011
+    second: Gator_Idle_38
+  - first:
+      213: 8319346513739624016
+    second: Gator_Idle_39
+  - first:
+      213: -2075460084181042041
+    second: Gator_Idle_40
+  - first:
+      213: 4188784813515780750
+    second: Gator_Idle_41
+  - first:
+      213: -2619857451253460075
+    second: Gator_Idle_42
+  - first:
+      213: -7219252121586596324
+    second: Gator_Idle_43
+  - first:
+      213: 1071648894653022346
+    second: Gator_Idle_44
+  - first:
+      213: 7081783608413484426
+    second: Gator_Idle_45
+  - first:
+      213: 5945339443034585903
+    second: Gator_Idle_46
+  - first:
+      213: -6205278014093057366
+    second: Gator_Idle_47
+  - first:
+      213: -1672769064912413148
+    second: Gator_Idle_48
+  - first:
+      213: 6462998030041561698
+    second: Gator_Idle_49
+  - first:
+      213: 5510817688071462618
+    second: Gator_Idle_50
+  - first:
+      213: 7545095405029146764
+    second: Gator_Idle_51
+  - first:
+      213: -6634924247841292703
+    second: Gator_Idle_52
+  - first:
+      213: 7587498309955909035
+    second: Gator_Idle_53
+  - first:
+      213: 1096772479048245946
+    second: Gator_Idle_54
+  - first:
+      213: 2868374532406190271
+    second: Gator_Idle_55
+  - first:
+      213: -1933443854582982648
+    second: Gator_Idle_56
+  - first:
+      213: 2586340661795357066
+    second: Gator_Idle_57
+  - first:
+      213: 1466297604371643846
+    second: Gator_Idle_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gator_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc3d7227c1725930800000000000000
+      internalID: 4130488908343229684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1157
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505575210a745d680800000000000000
+      internalID: -8730993549759785723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1157
+        width: 789
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e9fb4d43ea3b880800000000000000
+      internalID: -8596335721789284833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f5fe936e19b4e80800000000000000
+      internalID: -8193294679069991153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 1156
+        width: 789
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5d43b2785ec9c10800000000000000
+      internalID: 2061775098137073121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa9c79e6a3b869f0800000000000000
+      internalID: -474932231224386819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 1156
+        width: 789
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728805484d65cbb10800000000000000
+      internalID: 1998567805398583335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d3aa457c9894fa0800000000000000
+      internalID: -5815965954560344767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 1156
+        width: 789
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f762f0895ebd810800000000000000
+      internalID: 1791277718061874988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529e18ff6acb8e660800000000000000
+      internalID: 7415384211902818597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 1156
+        width: 789
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07fecc74d2898650800000000000000
+      internalID: 6235659008209778447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b374c455433132a10800000000000000
+      internalID: 1883370184661288763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 4721
+        y: 1156
+        width: 789
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5badd32742f41bf50800000000000000
+      internalID: 6895379522435013301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 1350
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23f5924956d8cdc0800000000000000
+      internalID: -3618406621734636756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 5508
+        y: 1156
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a21020ad014ea00800000000000000
+      internalID: 784770763591854741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 1350
+        width: 787
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302711edeef626ee0800000000000000
+      internalID: -1269329073246473725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 965
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3c68a7cbffa8540800000000000000
+      internalID: 5011098720377684984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 965
+        width: 789
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d671e2c647cdf90800000000000000
+      internalID: -6927534118824088256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 965
+        width: 789
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968a0ba9076914550800000000000000
+      internalID: 6143356777085839465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 966
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721d42d510daf8040800000000000000
+      internalID: 4652127161466278183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 966
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be85f2bd00c91d20800000000000000
+      internalID: 3249839771194068664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 966
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9f95700d58924e0800000000000000
+      internalID: -2005925030493816339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 4721
+        y: 966
+        width: 789
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64eb660ce6f39fd0800000000000000
+      internalID: -2336252288094706580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 5508
+        y: 967
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffd677eab9042c30800000000000000
+      internalID: 4333599439789154288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 774
+        width: 788
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a69568610ba2850800000000000000
+      internalID: 6353083835149281910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 774
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f211c2189a1400f0800000000000000
+      internalID: -1151766364248010000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 774
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b737da2a1d595fd0800000000000000
+      internalID: -2352746963355093070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 774
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff204c2ad9a5d3c0800000000000000
+      internalID: -4335372311763865607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 774
+        width: 789
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd85d2a8d07a4220800000000000000
+      internalID: 2470911421313289686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 774
+        width: 789
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a69ab75912bbf80800000000000000
+      internalID: -8089835379732419962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 774
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfee6688bd1ddd10800000000000000
+      internalID: 2151908875319570397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 774
+        width: 787
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c8cbcf251fc7300800000000000000
+      internalID: 251341017955732538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 581
+        width: 788
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ebdcee07a512cf0800000000000000
+      internalID: -278842260830962114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 581
+        width: 788
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d173052bc4434130800000000000000
+      internalID: 3549756570588115414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 581
+        width: 788
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1e179255830bfe0800000000000000
+      internalID: -1175377564324994618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 581
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a74106910fe2ea00800000000000000
+      internalID: 784452075206559650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 581
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aaaa73b6841d7d00800000000000000
+      internalID: 971955663351229091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 580
+        width: 788
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5836855cf395df0800000000000000
+      internalID: -191051392362510939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 580
+        width: 788
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0170926c8ab6480800000000000000
+      internalID: -8904838269149704011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 580
+        width: 787
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ea5d29391447370800000000000000
+      internalID: 8319346513739624016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 788
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cf2e8bc0c7233e0800000000000000
+      internalID: -2075460084181042041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82b822489d812a30800000000000000
+      internalID: 4188784813515780750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 386
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59390e7578564abd0800000000000000
+      internalID: -2619857451253460075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1688d4d17010db90800000000000000
+      internalID: -7219252121586596324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 386
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80cbb9edf24fde00800000000000000
+      internalID: 1071648894653022346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a857ba3cbac874260800000000000000
+      internalID: 7081783608413484426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 386
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2bf13349b6128250800000000000000
+      internalID: 5945339443034585903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2217de58c62e9a0800000000000000
+      internalID: -6205278014093057366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 385
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e12aee56129c8e0800000000000000
+      internalID: -1672769064912413148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a3da4477e21b950800000000000000
+      internalID: 6462998030041561698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 385
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade507f5d7b5a7c40800000000000000
+      internalID: 5510817688071462618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80c1359b4095b860800000000000000
+      internalID: 7545095405029146764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 385
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e3bc7cc830ce3a0800000000000000
+      internalID: -6634924247841292703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 192
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba57cca33853c4960800000000000000
+      internalID: 7587498309955909035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 385
+        width: 787
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2681d32c4883f00800000000000000
+      internalID: 1096772479048245946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 192
+        width: 787
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb029de90738ec720800000000000000
+      internalID: 2868374532406190271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8085b6ede070b25e0800000000000000
+      internalID: -1933443854582982648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 0
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81067ef02784e320800000000000000
+      internalID: 2586340661795357066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 0
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdf39307e5595410800000000000000
+      internalID: 1466297604371643846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

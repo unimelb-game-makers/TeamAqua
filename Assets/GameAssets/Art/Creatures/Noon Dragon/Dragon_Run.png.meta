@@ -1,0 +1,1735 @@
+fileFormatVersion: 2
+guid: d35f31d2070f50542a0300f38442a681
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4318381476386210770
+    second: Dragon_Run_0
+  - first:
+      213: -6124274624434287083
+    second: Dragon_Run_1
+  - first:
+      213: 5533463060133835289
+    second: Dragon_Run_2
+  - first:
+      213: 7984463391388404571
+    second: Dragon_Run_3
+  - first:
+      213: 6141652090108475233
+    second: Dragon_Run_4
+  - first:
+      213: -5968452253734629972
+    second: Dragon_Run_5
+  - first:
+      213: -506138203862590722
+    second: Dragon_Run_6
+  - first:
+      213: 8209638760997219640
+    second: Dragon_Run_7
+  - first:
+      213: -949175418694126996
+    second: Dragon_Run_8
+  - first:
+      213: -3883913737689051132
+    second: Dragon_Run_9
+  - first:
+      213: -5140380708322355582
+    second: Dragon_Run_10
+  - first:
+      213: 5915637819199466616
+    second: Dragon_Run_11
+  - first:
+      213: -5780873276929843055
+    second: Dragon_Run_12
+  - first:
+      213: -2730128232710023828
+    second: Dragon_Run_13
+  - first:
+      213: -7395534655223656376
+    second: Dragon_Run_14
+  - first:
+      213: -2827631466017011894
+    second: Dragon_Run_15
+  - first:
+      213: -6194114719506835309
+    second: Dragon_Run_16
+  - first:
+      213: -7892835431829183058
+    second: Dragon_Run_17
+  - first:
+      213: 7743869101400092402
+    second: Dragon_Run_18
+  - first:
+      213: -317445784905498013
+    second: Dragon_Run_19
+  - first:
+      213: 334275661902565623
+    second: Dragon_Run_20
+  - first:
+      213: -4060344054170501557
+    second: Dragon_Run_21
+  - first:
+      213: -1365804847968333822
+    second: Dragon_Run_22
+  - first:
+      213: 6594899961483264509
+    second: Dragon_Run_23
+  - first:
+      213: 557236642115261532
+    second: Dragon_Run_24
+  - first:
+      213: -5775405171333638205
+    second: Dragon_Run_25
+  - first:
+      213: 2735175244101611171
+    second: Dragon_Run_26
+  - first:
+      213: 8864365753613996035
+    second: Dragon_Run_27
+  - first:
+      213: 682651414966525712
+    second: Dragon_Run_28
+  - first:
+      213: 6497801817440779330
+    second: Dragon_Run_29
+  - first:
+      213: 1923482244301881143
+    second: Dragon_Run_30
+  - first:
+      213: -7427306062082126436
+    second: Dragon_Run_31
+  - first:
+      213: -5844136252244857434
+    second: Dragon_Run_32
+  - first:
+      213: -7500483726741660183
+    second: Dragon_Run_33
+  - first:
+      213: 2093792026248446652
+    second: Dragon_Run_34
+  - first:
+      213: 292555032900572689
+    second: Dragon_Run_35
+  - first:
+      213: 4849070011072085648
+    second: Dragon_Run_36
+  - first:
+      213: 23474285022161070
+    second: Dragon_Run_37
+  - first:
+      213: 1797299647086906046
+    second: Dragon_Run_38
+  - first:
+      213: -3896905101207439465
+    second: Dragon_Run_39
+  - first:
+      213: -6361328623605489239
+    second: Dragon_Run_40
+  - first:
+      213: -3696243832361434013
+    second: Dragon_Run_41
+  - first:
+      213: 2863617433972075507
+    second: Dragon_Run_42
+  - first:
+      213: -4685103600517413761
+    second: Dragon_Run_43
+  - first:
+      213: -3708578689828539178
+    second: Dragon_Run_44
+  - first:
+      213: -4184167439560452727
+    second: Dragon_Run_45
+  - first:
+      213: -7832075798557821086
+    second: Dragon_Run_46
+  - first:
+      213: 6884177122797748352
+    second: Dragon_Run_47
+  - first:
+      213: 3331264363090978507
+    second: Dragon_Run_48
+  - first:
+      213: 4061974595694892971
+    second: Dragon_Run_49
+  - first:
+      213: 6997958895838480028
+    second: Dragon_Run_50
+  - first:
+      213: 5942632532306098063
+    second: Dragon_Run_51
+  - first:
+      213: 5967760434026543953
+    second: Dragon_Run_52
+  - first:
+      213: 3782904367053975228
+    second: Dragon_Run_53
+  - first:
+      213: 6901167094819139998
+    second: Dragon_Run_54
+  - first:
+      213: -6136141466226678413
+    second: Dragon_Run_55
+  - first:
+      213: 4829303474551234877
+    second: Dragon_Run_56
+  - first:
+      213: 5921947609655689757
+    second: Dragon_Run_57
+  - first:
+      213: -1716926230128727974
+    second: Dragon_Run_58
+  - first:
+      213: 5823923873122238075
+    second: Dragon_Run_59
+  - first:
+      213: -7966096382949064683
+    second: Dragon_Run_60
+  - first:
+      213: 1349618090813635166
+    second: Dragon_Run_61
+  - first:
+      213: -4125669610592232674
+    second: Dragon_Run_62
+  - first:
+      213: -131070656962977973
+    second: Dragon_Run_63
+  - first:
+      213: 2944534986981430545
+    second: Dragon_Run_64
+  - first:
+      213: 4375767020813556669
+    second: Dragon_Run_65
+  - first:
+      213: -1263212394189610249
+    second: Dragon_Run_66
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon_Run_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 4926
+        width: 884
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c7f5f4de60214c0800000000000000
+      internalID: -4318381476386210770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_1
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 4926
+        width: 883
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ec7a74da4320ba0800000000000000
+      internalID: -6124274624434287083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_2
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 4925
+        width: 882
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912f50de55fcacc40800000000000000
+      internalID: 5533463060133835289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_3
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 4925
+        width: 880
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b01d5a6238ece60800000000000000
+      internalID: 7984463391388404571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_4
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 4924
+        width: 879
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16773fc39088b3550800000000000000
+      internalID: 6141652090108475233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_5
+      rect:
+        serializedVersion: 2
+        x: 4457
+        y: 4923
+        width: 879
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad84452c4ccb2da0800000000000000
+      internalID: -5968452253734629972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_6
+      rect:
+        serializedVersion: 2
+        x: 5348
+        y: 4922
+        width: 879
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa14873cf5d9f8f0800000000000000
+      internalID: -506138203862590722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_7
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 4922
+        width: 879
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d6483e4fe7ee170800000000000000
+      internalID: 8209638760997219640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_8
+      rect:
+        serializedVersion: 2
+        x: 7131
+        y: 4922
+        width: 879
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6234335cf9d3d2f0800000000000000
+      internalID: -949175418694126996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 4220
+        width: 879
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400d8ce8801991ac0800000000000000
+      internalID: -3883913737689051132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_10
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 4218
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286dc2e0bf2b9a8b0800000000000000
+      internalID: -5140380708322355582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_11
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 4211
+        width: 879
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c20411141981250800000000000000
+      internalID: 5915637819199466616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_12
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 4211
+        width: 879
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1906c0d026636cfa0800000000000000
+      internalID: -5780873276929843055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_13
+      rect:
+        serializedVersion: 2
+        x: 3568
+        y: 4211
+        width: 879
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65dd0256d2ac1ad0800000000000000
+      internalID: -2730128232710023828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_14
+      rect:
+        serializedVersion: 2
+        x: 4457
+        y: 4211
+        width: 879
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8409d4f0a68cd5990800000000000000
+      internalID: -7395534655223656376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_15
+      rect:
+        serializedVersion: 2
+        x: 5348
+        y: 4211
+        width: 879
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47c650c92c32c8d0800000000000000
+      internalID: -2827631466017011894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_16
+      rect:
+        serializedVersion: 2
+        x: 6238
+        y: 4211
+        width: 879
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398d6cdfa751a0aa0800000000000000
+      internalID: -6194114719506835309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_17
+      rect:
+        serializedVersion: 2
+        x: 7129
+        y: 4211
+        width: 879
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea564372ef3077290800000000000000
+      internalID: -7892835431829183058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_18
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3509
+        width: 879
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe63104befb77b60800000000000000
+      internalID: 7743869101400092402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_19
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 3509
+        width: 879
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36243439db4389bf0800000000000000
+      internalID: -317445784905498013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_20
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 3511
+        width: 879
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0d2c481f593a400800000000000000
+      internalID: 334275661902565623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_21
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 3513
+        width: 879
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e3c496892c6a7c0800000000000000
+      internalID: -4060344054170501557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_22
+      rect:
+        serializedVersion: 2
+        x: 3569
+        y: 3513
+        width: 879
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20057542abfab0de0800000000000000
+      internalID: -1365804847968333822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_23
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 3525
+        width: 879
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1827dd29ac58b50800000000000000
+      internalID: 6594899961483264509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_24
+      rect:
+        serializedVersion: 2
+        x: 5344
+        y: 3528
+        width: 879
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c549c1d06c3bbb700800000000000000
+      internalID: 557236642115261532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_25
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 3528
+        width: 883
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c754b89893a9dfa0800000000000000
+      internalID: -5775405171333638205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_26
+      rect:
+        serializedVersion: 2
+        x: 7119
+        y: 3528
+        width: 884
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae6e17946b45f520800000000000000
+      internalID: 2735175244101611171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2826
+        width: 883
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300dc4fffad840b70800000000000000
+      internalID: 8864365753613996035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_28
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 2812
+        width: 884
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f5f7658d3497900800000000000000
+      internalID: 682651414966525712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_29
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 2812
+        width: 884
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24cf17d7354dc2a50800000000000000
+      internalID: 6497801817440779330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_30
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 2813
+        width: 884
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f726ff8e491ba10800000000000000
+      internalID: 1923482244301881143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_31
+      rect:
+        serializedVersion: 2
+        x: 3559
+        y: 2813
+        width: 884
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d4d73fc78ece890800000000000000
+      internalID: -7427306062082126436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_32
+      rect:
+        serializedVersion: 2
+        x: 4449
+        y: 2814
+        width: 884
+        height: 704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad66f9ca0575eea0800000000000000
+      internalID: -5844136252244857434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_33
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 2815
+        width: 883
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed17ff2acde8e790800000000000000
+      internalID: -7500483726741660183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_34
+      rect:
+        serializedVersion: 2
+        x: 6230
+        y: 2816
+        width: 883
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2851621c4ae0d10800000000000000
+      internalID: 2093792026248446652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_35
+      rect:
+        serializedVersion: 2
+        x: 7120
+        y: 2817
+        width: 883
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1169a4d904d5f0400800000000000000
+      internalID: 292555032900572689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2115
+        width: 882
+        height: 701
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e73fccb7b5b4340800000000000000
+      internalID: 4849070011072085648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_37
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 2116
+        width: 882
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea82a14ecb5635000800000000000000
+      internalID: 23474285022161070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_38
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 2117
+        width: 881
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebacc8ba18a41f810800000000000000
+      internalID: 1797299647086906046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_39
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 2117
+        width: 881
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7977f1705796be9c0800000000000000
+      internalID: -3896905101207439465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_40
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 2118
+        width: 880
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a16872125508b7a0800000000000000
+      internalID: -6361328623605489239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_41
+      rect:
+        serializedVersion: 2
+        x: 4453
+        y: 2118
+        width: 880
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3644ed861dd44bcc0800000000000000
+      internalID: -3696243832361434013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_42
+      rect:
+        serializedVersion: 2
+        x: 5344
+        y: 2119
+        width: 879
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb658452ec9db720800000000000000
+      internalID: 2863617433972075507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_43
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 2119
+        width: 879
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74814b191b2bfeb0800000000000000
+      internalID: -4685103600517413761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_44
+      rect:
+        serializedVersion: 2
+        x: 7125
+        y: 2117
+        width: 879
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4bf2b945b788cc0800000000000000
+      internalID: -3708578689828539178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_45
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1413
+        width: 879
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9855e34e1e9dee5c0800000000000000
+      internalID: -4184167439560452727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_46
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1410
+        width: 879
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267f60dae80ee4390800000000000000
+      internalID: -7832075798557821086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_47
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 1406
+        width: 879
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0800b378e92898f50800000000000000
+      internalID: 6884177122797748352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_48
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 1403
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6a4f6d9470b3e20800000000000000
+      internalID: 3331264363090978507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_49
+      rect:
+        serializedVersion: 2
+        x: 3571
+        y: 1403
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba71e0f9f580f5830800000000000000
+      internalID: 4061974595694892971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_50
+      rect:
+        serializedVersion: 2
+        x: 4462
+        y: 1403
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96cc3bf98ebd1160800000000000000
+      internalID: 6997958895838480028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_51
+      rect:
+        serializedVersion: 2
+        x: 5351
+        y: 1403
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87f8ce7dc8787250800000000000000
+      internalID: 5942632532306098063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_52
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 1403
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b78c60f7eb1d250800000000000000
+      internalID: 5967760434026543953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_53
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 1403
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbea689aa739f7430800000000000000
+      internalID: 3782904367053975228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_54
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 701
+        width: 879
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e913f46a8eed5cf50800000000000000
+      internalID: 6901167094819139998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_55
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 701
+        width: 881
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375a30ed8db08daa0800000000000000
+      internalID: -6136141466226678413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_56
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 703
+        width: 882
+        height: 691
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31af216ce1250340800000000000000
+      internalID: 4829303474551234877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_57
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 710
+        width: 884
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d124004a9fbfe2250800000000000000
+      internalID: 5921947609655689757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_58
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 714
+        width: 885
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5860abb0b04c28e0800000000000000
+      internalID: -1716926230128727974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_59
+      rect:
+        serializedVersion: 2
+        x: 4450
+        y: 715
+        width: 885
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e3e58f7ebb2d050800000000000000
+      internalID: 5823923873122238075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_60
+      rect:
+        serializedVersion: 2
+        x: 5339
+        y: 715
+        width: 886
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5100ccfbb8db27190800000000000000
+      internalID: -7966096382949064683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_61
+      rect:
+        serializedVersion: 2
+        x: 6229
+        y: 715
+        width: 887
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a3365c08ecab210800000000000000
+      internalID: 1349618090813635166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_62
+      rect:
+        serializedVersion: 2
+        x: 7119
+        y: 715
+        width: 887
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b9600195daeb6c0800000000000000
+      internalID: -4125669610592232674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 885
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f9e339ee75e2ef0800000000000000
+      internalID: -131070656962977973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_64
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 12
+        width: 886
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115dcb748f61dd820800000000000000
+      internalID: 2944534986981430545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_65
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 12
+        width: 886
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb167febe8d9bc30800000000000000
+      internalID: 4375767020813556669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Run_66
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 12
+        width: 886
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f22570350b287ee0800000000000000
+      internalID: -1263212394189610249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

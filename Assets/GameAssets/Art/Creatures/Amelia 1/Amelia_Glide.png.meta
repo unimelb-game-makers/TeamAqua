@@ -1,0 +1,1735 @@
+fileFormatVersion: 2
+guid: 9aad2d696ca45364294c34ce96f46da9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4008270051999814146
+    second: Amelia_Glide_0
+  - first:
+      213: 1906265158414724372
+    second: Amelia_Glide_1
+  - first:
+      213: -6222435338941167898
+    second: Amelia_Glide_2
+  - first:
+      213: 4943441437673214309
+    second: Amelia_Glide_3
+  - first:
+      213: 987883211442075373
+    second: Amelia_Glide_4
+  - first:
+      213: -3092243421087974491
+    second: Amelia_Glide_5
+  - first:
+      213: 7261369609252344760
+    second: Amelia_Glide_6
+  - first:
+      213: -5212147628021592856
+    second: Amelia_Glide_7
+  - first:
+      213: 8403902693315448078
+    second: Amelia_Glide_8
+  - first:
+      213: 5132198310572711751
+    second: Amelia_Glide_9
+  - first:
+      213: -4580227645050662998
+    second: Amelia_Glide_10
+  - first:
+      213: -4802458408085201460
+    second: Amelia_Glide_11
+  - first:
+      213: -2426670042663913422
+    second: Amelia_Glide_12
+  - first:
+      213: 6954380095521427894
+    second: Amelia_Glide_13
+  - first:
+      213: -2738566697614274521
+    second: Amelia_Glide_14
+  - first:
+      213: 5702118999185098899
+    second: Amelia_Glide_15
+  - first:
+      213: -4324247702411289872
+    second: Amelia_Glide_16
+  - first:
+      213: -7029049463822086802
+    second: Amelia_Glide_17
+  - first:
+      213: -8472895459330082283
+    second: Amelia_Glide_18
+  - first:
+      213: 6148188598431434683
+    second: Amelia_Glide_19
+  - first:
+      213: -3109352470283587961
+    second: Amelia_Glide_20
+  - first:
+      213: -7387489018478123778
+    second: Amelia_Glide_21
+  - first:
+      213: -8134017989778109791
+    second: Amelia_Glide_22
+  - first:
+      213: 2272774859288642535
+    second: Amelia_Glide_23
+  - first:
+      213: 8312239757228962410
+    second: Amelia_Glide_24
+  - first:
+      213: 5941776531802372722
+    second: Amelia_Glide_25
+  - first:
+      213: -567487852496749152
+    second: Amelia_Glide_26
+  - first:
+      213: 2091781051462144721
+    second: Amelia_Glide_27
+  - first:
+      213: 554805706196249422
+    second: Amelia_Glide_28
+  - first:
+      213: 4059961664206256894
+    second: Amelia_Glide_29
+  - first:
+      213: -3807850991920170696
+    second: Amelia_Glide_30
+  - first:
+      213: 8664228080172249859
+    second: Amelia_Glide_31
+  - first:
+      213: -5291223467742304746
+    second: Amelia_Glide_32
+  - first:
+      213: 8394451209656027871
+    second: Amelia_Glide_33
+  - first:
+      213: 6638425860299255130
+    second: Amelia_Glide_34
+  - first:
+      213: 6677904997178433534
+    second: Amelia_Glide_35
+  - first:
+      213: -1926732083635393336
+    second: Amelia_Glide_36
+  - first:
+      213: -1485719615852665273
+    second: Amelia_Glide_37
+  - first:
+      213: -2099646877322161621
+    second: Amelia_Glide_38
+  - first:
+      213: -5334056237912611988
+    second: Amelia_Glide_39
+  - first:
+      213: -570662908341395837
+    second: Amelia_Glide_40
+  - first:
+      213: 8210483133888324653
+    second: Amelia_Glide_41
+  - first:
+      213: -4845729487998209656
+    second: Amelia_Glide_42
+  - first:
+      213: 3917744523626916645
+    second: Amelia_Glide_43
+  - first:
+      213: 6008354443348015319
+    second: Amelia_Glide_44
+  - first:
+      213: 6218469050352358727
+    second: Amelia_Glide_45
+  - first:
+      213: 9031553355049350375
+    second: Amelia_Glide_46
+  - first:
+      213: 239601221714113436
+    second: Amelia_Glide_47
+  - first:
+      213: 290962279399971730
+    second: Amelia_Glide_48
+  - first:
+      213: 2132877278711725537
+    second: Amelia_Glide_49
+  - first:
+      213: 6799480545016082881
+    second: Amelia_Glide_50
+  - first:
+      213: 4219965057645354090
+    second: Amelia_Glide_51
+  - first:
+      213: -3155244541496849662
+    second: Amelia_Glide_52
+  - first:
+      213: 3051894657527578003
+    second: Amelia_Glide_53
+  - first:
+      213: -4037545298848436125
+    second: Amelia_Glide_54
+  - first:
+      213: 710463329819389615
+    second: Amelia_Glide_55
+  - first:
+      213: -1146392633840021748
+    second: Amelia_Glide_56
+  - first:
+      213: 4278888581718315134
+    second: Amelia_Glide_57
+  - first:
+      213: -2007798520025874600
+    second: Amelia_Glide_58
+  - first:
+      213: 6964787225720172501
+    second: Amelia_Glide_59
+  - first:
+      213: -9070092705881239158
+    second: Amelia_Glide_60
+  - first:
+      213: 3465497176242916062
+    second: Amelia_Glide_61
+  - first:
+      213: 1089693381287096122
+    second: Amelia_Glide_62
+  - first:
+      213: 8691782375634052381
+    second: Amelia_Glide_63
+  - first:
+      213: 7718260066093888163
+    second: Amelia_Glide_64
+  - first:
+      213: 8603899854064187216
+    second: Amelia_Glide_65
+  - first:
+      213: -5497789681694580869
+    second: Amelia_Glide_66
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Amelia_Glide_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3778
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2021945206c30a730800000000000000
+      internalID: 4008270051999814146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_1
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 3778
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d630fcf0a647a10800000000000000
+      internalID: 1906265158414724372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_2
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 3778
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e60390f60875a9a0800000000000000
+      internalID: -6222435338941167898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_3
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 3778
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561557ccbc1aa9440800000000000000
+      internalID: 4943441437673214309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_4
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 3778
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6b399fb8aa5bd00800000000000000
+      internalID: 987883211442075373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_5
+      rect:
+        serializedVersion: 2
+        x: 5161
+        y: 3778
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab330fedf42615d0800000000000000
+      internalID: -3092243421087974491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_6
+      rect:
+        serializedVersion: 2
+        x: 6193
+        y: 3778
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b39d4eef2195c460800000000000000
+      internalID: 7261369609252344760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_7
+      rect:
+        serializedVersion: 2
+        x: 7225
+        y: 3778
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecc0e2f85bbaa7b0800000000000000
+      internalID: -5212147628021592856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_8
+      rect:
+        serializedVersion: 2
+        x: 8257
+        y: 3778
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d040a49f8a0a470800000000000000
+      internalID: 8403902693315448078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3241
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fdb820c2b393740800000000000000
+      internalID: 5132198310572711751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_10
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 3241
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafc4525933cf60c0800000000000000
+      internalID: -4580227645050662998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_11
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 3241
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd5e79b58d3a5db0800000000000000
+      internalID: -4802458408085201460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_12
+      rect:
+        serializedVersion: 2
+        x: 3097
+        y: 3241
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2387fe7047cb25ed0800000000000000
+      internalID: -2426670042663913422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_13
+      rect:
+        serializedVersion: 2
+        x: 4128
+        y: 3241
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b11a9ad9dbe28060800000000000000
+      internalID: 6954380095521427894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_14
+      rect:
+        serializedVersion: 2
+        x: 5160
+        y: 3241
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7209cfa1918aef9d0800000000000000
+      internalID: -2738566697614274521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_15
+      rect:
+        serializedVersion: 2
+        x: 6192
+        y: 3241
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3980f65c40ff12f40800000000000000
+      internalID: 5702118999185098899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_16
+      rect:
+        serializedVersion: 2
+        x: 7224
+        y: 3241
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fad9f020af2df3c0800000000000000
+      internalID: -4324247702411289872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_17
+      rect:
+        serializedVersion: 2
+        x: 8256
+        y: 3241
+        width: 1032
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d0c3011ccc37e90800000000000000
+      internalID: -7029049463822086802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2704
+        width: 1032
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a3c97987a3a6a80800000000000000
+      internalID: -8472895459330082283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_19
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 2704
+        width: 1031
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7cc9da4f0c25550800000000000000
+      internalID: 6148188598431434683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_20
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 2704
+        width: 1031
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e634ff66c59d4d0800000000000000
+      internalID: -3109352470283587961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_21
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 2704
+        width: 1032
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef42387d0ed5a7990800000000000000
+      internalID: -7387489018478123778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_22
+      rect:
+        serializedVersion: 2
+        x: 4127
+        y: 2704
+        width: 1032
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa83a2fbb92e1f80800000000000000
+      internalID: -8134017989778109791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_23
+      rect:
+        serializedVersion: 2
+        x: 5159
+        y: 2704
+        width: 1032
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3865e51b48a8f10800000000000000
+      internalID: 2272774859288642535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_24
+      rect:
+        serializedVersion: 2
+        x: 6191
+        y: 2704
+        width: 1032
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62f281e4020b5370800000000000000
+      internalID: 8312239757228962410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_25
+      rect:
+        serializedVersion: 2
+        x: 7223
+        y: 2703
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a35d8564e657250800000000000000
+      internalID: 5941776531802372722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_26
+      rect:
+        serializedVersion: 2
+        x: 8255
+        y: 2703
+        width: 1032
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0adf4990ec0ef18f0800000000000000
+      internalID: -567487852496749152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2165
+        width: 1030
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d25b4898cf770d10800000000000000
+      internalID: 2091781051462144721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_28
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 2164
+        width: 1031
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bef2da9d013b700800000000000000
+      internalID: 554805706196249422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_29
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 2163
+        width: 1031
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efab7bc7f91e75830800000000000000
+      internalID: 4059961664206256894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_30
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 2162
+        width: 1031
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839bafc92bbc72bc0800000000000000
+      internalID: -3807850991920170696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_31
+      rect:
+        serializedVersion: 2
+        x: 4127
+        y: 2161
+        width: 1031
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303b1aba8858d3870800000000000000
+      internalID: 8664228080172249859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_32
+      rect:
+        serializedVersion: 2
+        x: 5159
+        y: 2160
+        width: 1031
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616620a4a4cc196b0800000000000000
+      internalID: -5291223467742304746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_33
+      rect:
+        serializedVersion: 2
+        x: 6191
+        y: 2159
+        width: 1031
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda45e346e41f7470800000000000000
+      internalID: 8394451209656027871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_34
+      rect:
+        serializedVersion: 2
+        x: 7223
+        y: 2157
+        width: 1031
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d67e6e52d602c50800000000000000
+      internalID: 6638425860299255130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_35
+      rect:
+        serializedVersion: 2
+        x: 8255
+        y: 2156
+        width: 1031
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff50a0c63facac50800000000000000
+      internalID: 6677904997178433534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1618
+        width: 1030
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc6091d06fd245e0800000000000000
+      internalID: -1926732083635393336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_37
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1617
+        width: 1029
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746a54d81e9a16be0800000000000000
+      internalID: -1485719615852665273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_38
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1615
+        width: 1029
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22547b1a4e8cd2e0800000000000000
+      internalID: -2099646877322161621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_39
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 1614
+        width: 1029
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c632347dc10a9f5b0800000000000000
+      internalID: -5334056237912611988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_40
+      rect:
+        serializedVersion: 2
+        x: 4129
+        y: 1613
+        width: 1028
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ed1ddbb199418f0800000000000000
+      internalID: -570662908341395837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_41
+      rect:
+        serializedVersion: 2
+        x: 5161
+        y: 1612
+        width: 1029
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24efb5c8ee71f170800000000000000
+      internalID: 8210483133888324653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_42
+      rect:
+        serializedVersion: 2
+        x: 6193
+        y: 1611
+        width: 1029
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8813b3654b280ccb0800000000000000
+      internalID: -4845729487998209656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_43
+      rect:
+        serializedVersion: 2
+        x: 7226
+        y: 1610
+        width: 1028
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ba38b13ef9e5630800000000000000
+      internalID: 3917744523626916645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_44
+      rect:
+        serializedVersion: 2
+        x: 8258
+        y: 1610
+        width: 1028
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8f5685886f16350800000000000000
+      internalID: 6008354443348015319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_45
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1073
+        width: 1028
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745530987a07c4650800000000000000
+      internalID: 6218469050352358727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_46
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1074
+        width: 1028
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e434b9dce5865d70800000000000000
+      internalID: 9031553355049350375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_47
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 1075
+        width: 1028
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93f40caa0c335300800000000000000
+      internalID: 239601221714113436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_48
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 1076
+        width: 1028
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b5caac6a4b90400800000000000000
+      internalID: 290962279399971730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_49
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 1078
+        width: 1029
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed3d13a590899d10800000000000000
+      internalID: 2132877278711725537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_50
+      rect:
+        serializedVersion: 2
+        x: 5162
+        y: 1079
+        width: 1029
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1fcdec78b9c5e50800000000000000
+      internalID: 6799480545016082881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_51
+      rect:
+        serializedVersion: 2
+        x: 6194
+        y: 1080
+        width: 1029
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c13819cd3509a30800000000000000
+      internalID: 4219965057645354090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_52
+      rect:
+        serializedVersion: 2
+        x: 7226
+        y: 1081
+        width: 1029
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b07948ec15634d0800000000000000
+      internalID: -3155244541496849662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_53
+      rect:
+        serializedVersion: 2
+        x: 8258
+        y: 1082
+        width: 1029
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39df7d975028a5a20800000000000000
+      internalID: 3051894657527578003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 547
+        width: 1030
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360379941f1c7f7c0800000000000000
+      internalID: -4037545298848436125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_55
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 548
+        width: 1030
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae63df52a21cd900800000000000000
+      internalID: 710463329819389615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_56
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 549
+        width: 1030
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f47de29f13710f0800000000000000
+      internalID: -1146392633840021748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_57
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 550
+        width: 1030
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e709bca9e7aa16b30800000000000000
+      internalID: 4278888581718315134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_58
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 552
+        width: 1030
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f7d4142edd224e0800000000000000
+      internalID: -2007798520025874600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_59
+      rect:
+        serializedVersion: 2
+        x: 5162
+        y: 553
+        width: 1030
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfaa3da415e7a060800000000000000
+      internalID: 6964787225720172501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_60
+      rect:
+        serializedVersion: 2
+        x: 6194
+        y: 554
+        width: 1030
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81561a4dbe802280800000000000000
+      internalID: -9070092705881239158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_61
+      rect:
+        serializedVersion: 2
+        x: 7226
+        y: 554
+        width: 1031
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda0410225be71030800000000000000
+      internalID: 3465497176242916062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_62
+      rect:
+        serializedVersion: 2
+        x: 8258
+        y: 555
+        width: 1030
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f26b95b5e5f1f00800000000000000
+      internalID: 1089693381287096122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_63
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 19
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d152ba4050a6f9870800000000000000
+      internalID: 8691782375634052381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_64
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 19
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2fb9313a4cc1b60800000000000000
+      internalID: 7718260066093888163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_65
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 19
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057f784f451376770800000000000000
+      internalID: 8603899854064187216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Glide_66
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 19
+        width: 1031
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f59ccb96de3b3b0800000000000000
+      internalID: -5497789681694580869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

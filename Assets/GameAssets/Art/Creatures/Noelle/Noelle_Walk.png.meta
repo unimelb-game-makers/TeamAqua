@@ -1,0 +1,1663 @@
+fileFormatVersion: 2
+guid: 3db5688deeb4b1d4abd265580203a4f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8588889789447681332
+    second: Noelle_Walk_0
+  - first:
+      213: 1516117272496338602
+    second: Noelle_Walk_1
+  - first:
+      213: 5848829563299770125
+    second: Noelle_Walk_2
+  - first:
+      213: -6487239510146743443
+    second: Noelle_Walk_3
+  - first:
+      213: 2746806972756278364
+    second: Noelle_Walk_4
+  - first:
+      213: -7269024433389572960
+    second: Noelle_Walk_5
+  - first:
+      213: 7693012792456522631
+    second: Noelle_Walk_6
+  - first:
+      213: 4114554015235992346
+    second: Noelle_Walk_7
+  - first:
+      213: -3091081010119249687
+    second: Noelle_Walk_8
+  - first:
+      213: 6081078493479702648
+    second: Noelle_Walk_9
+  - first:
+      213: 4812385059611550817
+    second: Noelle_Walk_10
+  - first:
+      213: 1461206446726643693
+    second: Noelle_Walk_11
+  - first:
+      213: -989348574197500270
+    second: Noelle_Walk_12
+  - first:
+      213: 6281546009150259637
+    second: Noelle_Walk_13
+  - first:
+      213: -1559511296114831520
+    second: Noelle_Walk_14
+  - first:
+      213: -7461391628700608416
+    second: Noelle_Walk_15
+  - first:
+      213: 5698866745216987298
+    second: Noelle_Walk_16
+  - first:
+      213: -7283937123962305451
+    second: Noelle_Walk_17
+  - first:
+      213: -8922761785713047552
+    second: Noelle_Walk_18
+  - first:
+      213: -8048182889951950941
+    second: Noelle_Walk_19
+  - first:
+      213: -5940599726442832036
+    second: Noelle_Walk_20
+  - first:
+      213: 3963212113269141200
+    second: Noelle_Walk_21
+  - first:
+      213: 1960318769528394564
+    second: Noelle_Walk_22
+  - first:
+      213: 8605831488267084174
+    second: Noelle_Walk_23
+  - first:
+      213: 1847176786589624067
+    second: Noelle_Walk_24
+  - first:
+      213: -6984741289527534717
+    second: Noelle_Walk_25
+  - first:
+      213: 3305356654085380899
+    second: Noelle_Walk_26
+  - first:
+      213: 6447619544657873776
+    second: Noelle_Walk_27
+  - first:
+      213: -4025432475349254998
+    second: Noelle_Walk_28
+  - first:
+      213: -2478708876137233779
+    second: Noelle_Walk_29
+  - first:
+      213: 7674629344123412679
+    second: Noelle_Walk_30
+  - first:
+      213: 60904941769481282
+    second: Noelle_Walk_31
+  - first:
+      213: 4917491702518823620
+    second: Noelle_Walk_32
+  - first:
+      213: 5512785318056123648
+    second: Noelle_Walk_33
+  - first:
+      213: -5096457595185533000
+    second: Noelle_Walk_34
+  - first:
+      213: 7970244238948880125
+    second: Noelle_Walk_35
+  - first:
+      213: -6410876140194509032
+    second: Noelle_Walk_36
+  - first:
+      213: 8243719266079999171
+    second: Noelle_Walk_37
+  - first:
+      213: 8691457723016712563
+    second: Noelle_Walk_38
+  - first:
+      213: -4393170232277551914
+    second: Noelle_Walk_39
+  - first:
+      213: -6664661987884671170
+    second: Noelle_Walk_40
+  - first:
+      213: 6452803585179862046
+    second: Noelle_Walk_41
+  - first:
+      213: 9039128825103065732
+    second: Noelle_Walk_42
+  - first:
+      213: -1524852284129122819
+    second: Noelle_Walk_43
+  - first:
+      213: -4816876034645880713
+    second: Noelle_Walk_44
+  - first:
+      213: 8121644014176062139
+    second: Noelle_Walk_45
+  - first:
+      213: 1109898467394160662
+    second: Noelle_Walk_46
+  - first:
+      213: -1272298078935893920
+    second: Noelle_Walk_47
+  - first:
+      213: -5031641430419127365
+    second: Noelle_Walk_48
+  - first:
+      213: -8397032474639633287
+    second: Noelle_Walk_49
+  - first:
+      213: -8075908860168028820
+    second: Noelle_Walk_50
+  - first:
+      213: 2131377544385992562
+    second: Noelle_Walk_51
+  - first:
+      213: -1033227552662234965
+    second: Noelle_Walk_52
+  - first:
+      213: -3201318214183641417
+    second: Noelle_Walk_53
+  - first:
+      213: 667367296935741729
+    second: Noelle_Walk_54
+  - first:
+      213: 8309722989359025375
+    second: Noelle_Walk_55
+  - first:
+      213: 9081051386964204594
+    second: Noelle_Walk_56
+  - first:
+      213: 244948173932363998
+    second: Noelle_Walk_57
+  - first:
+      213: -3008086305825475776
+    second: Noelle_Walk_58
+  - first:
+      213: -6601958202599221154
+    second: Noelle_Walk_59
+  - first:
+      213: -8570482593940714784
+    second: Noelle_Walk_60
+  - first:
+      213: 3153706062455249223
+    second: Noelle_Walk_61
+  - first:
+      213: 4139152166496975598
+    second: Noelle_Walk_62
+  - first:
+      213: -2179216315490813358
+    second: Noelle_Walk_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Noelle_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4186
+        width: 345
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4353203f1cdd13770800000000000000
+      internalID: 8588889789447681332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 4186
+        width: 345
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa67af860a45a0510800000000000000
+      internalID: 1516117272496338602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 4186
+        width: 345
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f2948df773b2150800000000000000
+      internalID: 5848829563299770125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 4186
+        width: 345
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6303d05902b8f5a0800000000000000
+      internalID: -6487239510146743443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 4185
+        width: 346
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c34b5736e9e1620800000000000000
+      internalID: 2746806972756278364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 4184
+        width: 347
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aced207acc3f1b90800000000000000
+      internalID: -7269024433389572960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 4183
+        width: 348
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b28ea106213ca60800000000000000
+      internalID: 7693012792456522631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 4183
+        width: 348
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b6c47b315d91930800000000000000
+      internalID: 4114554015235992346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3586
+        width: 349
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0f2e3d2364a15d0800000000000000
+      internalID: -3091081010119249687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3586
+        width: 350
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870102fbba4546450800000000000000
+      internalID: 6081078493479702648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 3588
+        width: 350
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1642b80f6b609c240800000000000000
+      internalID: 4812385059611550817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 3584
+        width: 350
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deff6a0858f374410800000000000000
+      internalID: 1461206446726643693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 3581
+        width: 350
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2963beba6b02542f0800000000000000
+      internalID: -989348574197500270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 3582
+        width: 349
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b18ca370d88c2750800000000000000
+      internalID: 6281546009150259637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 3583
+        width: 349
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06fcdd32db08b5ae0800000000000000
+      internalID: -1559511296114831520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 3588
+        width: 348
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0681a3988dfc37890800000000000000
+      internalID: -7461391628700608416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2996
+        width: 348
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0f1f26c11761f40800000000000000
+      internalID: 5698866745216987298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 2998
+        width: 348
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55442f717c14aea90800000000000000
+      internalID: -7283937123962305451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_18
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 2997
+        width: 347
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008c4234e6bfb2480800000000000000
+      internalID: -8922761785713047552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_19
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 2993
+        width: 347
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7890d7d4c1f4090800000000000000
+      internalID: -8048182889951950941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_20
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 2991
+        width: 346
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f97900600ce8da0800000000000000
+      internalID: -5940599726442832036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_21
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 2993
+        width: 346
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0deaee44b68200730800000000000000
+      internalID: 3963212113269141200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_22
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 2990
+        width: 346
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4435540e883743b10800000000000000
+      internalID: 1960318769528394564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_23
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 2989
+        width: 345
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81e707942e0e6770800000000000000
+      internalID: 8605831488267084174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2392
+        width: 345
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307a50a208d72a910800000000000000
+      internalID: 1847176786589624067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_25
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2393
+        width: 345
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b15bdcdc6311f90800000000000000
+      internalID: -6984741289527534717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_26
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2395
+        width: 345
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b9bb64d5cfedd20800000000000000
+      internalID: 3305356654085380899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_27
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 2395
+        width: 345
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bc23e90db8a7950800000000000000
+      internalID: 6447619544657873776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_28
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 2395
+        width: 345
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac7c77cd7ac228c0800000000000000
+      internalID: -4025432475349254998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_29
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 2395
+        width: 345
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d828b30f86bd99dd0800000000000000
+      internalID: -2478708876137233779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_30
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 2395
+        width: 345
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0e34ff9b2c18a60800000000000000
+      internalID: 7674629344123412679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_31
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 2395
+        width: 345
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c5c3bc8b068d000800000000000000
+      internalID: 60904941769481282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_32
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1798
+        width: 346
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cab09246a07e3440800000000000000
+      internalID: 4917491702518823620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_33
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1798
+        width: 346
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d59bde909518c40800000000000000
+      internalID: 5512785318056123648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_34
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1798
+        width: 347
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bfef12c1deb549b0800000000000000
+      internalID: -5096457595185533000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_35
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1798
+        width: 347
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfec6ab38eefb9e60800000000000000
+      internalID: 7970244238948880125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_36
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 1798
+        width: 347
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fcda4ed1ef707a0800000000000000
+      internalID: -6410876140194509032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_37
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 1798
+        width: 348
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c40eb2def2976270800000000000000
+      internalID: 8243719266079999171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_38
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 1797
+        width: 348
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3719cb0ffb24e9870800000000000000
+      internalID: 8691457723016712563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_39
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 1795
+        width: 348
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4b64323f25803c0800000000000000
+      internalID: -4393170232277551914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1195
+        width: 349
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3fd510ab3d5283a0800000000000000
+      internalID: -6664661987884671170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_41
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1194
+        width: 350
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14430c1ca6fc8950800000000000000
+      internalID: 6452803585179862046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_42
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1194
+        width: 350
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482234b66cf617d70800000000000000
+      internalID: 9039128825103065732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_43
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 1194
+        width: 350
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df56a853de2a6dae0800000000000000
+      internalID: -1524852284129122819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_44
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1195
+        width: 350
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77017d374c4072db0800000000000000
+      internalID: -4816876034645880713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_45
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1199
+        width: 350
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba44295330e5b070800000000000000
+      internalID: 8121644014176062139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_46
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 1203
+        width: 349
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61887cd86c6276f00800000000000000
+      internalID: 1109898467394160662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_47
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 1206
+        width: 347
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0683d9c53a3e75ee0800000000000000
+      internalID: -1272298078935893920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_48
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 610
+        width: 347
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3cabe17c40c2ab0800000000000000
+      internalID: -5031641430419127365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_49
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 609
+        width: 346
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9747fa5247fb77b80800000000000000
+      internalID: -8397032474639633287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_50
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 608
+        width: 345
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d314ffdab9cef80800000000000000
+      internalID: -8075908860168028820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_51
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 605
+        width: 345
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2771f57859c249d10800000000000000
+      internalID: 2131377544385992562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_52
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 604
+        width: 345
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8db6fd30d39a1f0800000000000000
+      internalID: -1033227552662234965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_53
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 604
+        width: 345
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be9896ab02a293d0800000000000000
+      internalID: -3201318214183641417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_54
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 605
+        width: 345
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129419c4507f24900800000000000000
+      internalID: 667367296935741729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_55
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 603
+        width: 344
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc44a23801125370800000000000000
+      internalID: 8309722989359025375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_56
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 345
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cd11b7f10660e70800000000000000
+      internalID: 9081051386964204594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_57
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 4
+        width: 345
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed08e9ff01b366300800000000000000
+      internalID: 244948173932363998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_58
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 4
+        width: 345
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0433e8f31712146d0800000000000000
+      internalID: -3008086305825475776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_59
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 4
+        width: 345
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58d8105ef12164a0800000000000000
+      internalID: -6601958202599221154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_60
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 5
+        width: 345
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eace7a3d778f0980800000000000000
+      internalID: -8570482593940714784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_61
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 6
+        width: 345
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74914aa64f634cb20800000000000000
+      internalID: 3153706062455249223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_62
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 7
+        width: 345
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea375b17f8317930800000000000000
+      internalID: 4139152166496975598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Noelle_Walk_63
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 7
+        width: 344
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a3f6a9e4ed1c1e0800000000000000
+      internalID: -2179216315490813358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

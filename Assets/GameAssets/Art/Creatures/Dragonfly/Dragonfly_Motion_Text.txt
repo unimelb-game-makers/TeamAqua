@@ -1,0 +1,13 @@
+Total Images: 101
+Individual Image Width: 868
+Individual Image Height: 615
+Individual Image Width with Padding: 868
+Individual Image Height with Padding: 615
+Images Across: 11
+Images Down : 10
+Top Padding: 0
+Bottom Padding: 0
+Left Padding: 0
+Right Padding: 0
+Horizontal Space Between Images: 0
+Vertical Space Between Images: 0

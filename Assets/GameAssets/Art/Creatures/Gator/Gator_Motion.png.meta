@@ -1,0 +1,1543 @@
+fileFormatVersion: 2
+guid: 3c3eff98fa5e96641b74d23ea126cce8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8840458722763304660
+    second: Gator_Motion_0
+  - first:
+      213: -2121602814938900671
+    second: Gator_Motion_1
+  - first:
+      213: 6037787714564342669
+    second: Gator_Motion_2
+  - first:
+      213: -4502742205633543955
+    second: Gator_Motion_3
+  - first:
+      213: 3437950503732734612
+    second: Gator_Motion_4
+  - first:
+      213: -1593511571814610568
+    second: Gator_Motion_5
+  - first:
+      213: 7592712448238204489
+    second: Gator_Motion_6
+  - first:
+      213: 5670154276997384606
+    second: Gator_Motion_7
+  - first:
+      213: -6980107748229200533
+    second: Gator_Motion_8
+  - first:
+      213: -607947979855711494
+    second: Gator_Motion_9
+  - first:
+      213: -4239336492348725981
+    second: Gator_Motion_10
+  - first:
+      213: 6188377394395731730
+    second: Gator_Motion_11
+  - first:
+      213: 3248164673596210988
+    second: Gator_Motion_12
+  - first:
+      213: -1497415963827095867
+    second: Gator_Motion_13
+  - first:
+      213: 7367984308355732971
+    second: Gator_Motion_14
+  - first:
+      213: 7363641828550734714
+    second: Gator_Motion_15
+  - first:
+      213: -1349895929878974185
+    second: Gator_Motion_16
+  - first:
+      213: 9119002418702616363
+    second: Gator_Motion_17
+  - first:
+      213: 714810275272332242
+    second: Gator_Motion_18
+  - first:
+      213: 2585069875949676351
+    second: Gator_Motion_19
+  - first:
+      213: 5026926636389847009
+    second: Gator_Motion_20
+  - first:
+      213: -491413753008248231
+    second: Gator_Motion_21
+  - first:
+      213: -8100980114748303116
+    second: Gator_Motion_22
+  - first:
+      213: -7425505984756989815
+    second: Gator_Motion_23
+  - first:
+      213: -7033887899610619124
+    second: Gator_Motion_24
+  - first:
+      213: -5089727786261855177
+    second: Gator_Motion_25
+  - first:
+      213: -5464146459805539089
+    second: Gator_Motion_26
+  - first:
+      213: -1270352072797469621
+    second: Gator_Motion_27
+  - first:
+      213: 1405937999799157217
+    second: Gator_Motion_28
+  - first:
+      213: -8732242881094917941
+    second: Gator_Motion_29
+  - first:
+      213: -8192555912367834400
+    second: Gator_Motion_30
+  - first:
+      213: 1701930271817304603
+    second: Gator_Motion_31
+  - first:
+      213: -3773796091525861429
+    second: Gator_Motion_32
+  - first:
+      213: -1422692751593823237
+    second: Gator_Motion_33
+  - first:
+      213: 5367988852150360610
+    second: Gator_Motion_34
+  - first:
+      213: 1133036474031035451
+    second: Gator_Motion_35
+  - first:
+      213: -2411912013799564702
+    second: Gator_Motion_36
+  - first:
+      213: -7828151361789648463
+    second: Gator_Motion_37
+  - first:
+      213: -1714595075103786968
+    second: Gator_Motion_38
+  - first:
+      213: 6062462626634226121
+    second: Gator_Motion_39
+  - first:
+      213: -5848134492113958479
+    second: Gator_Motion_40
+  - first:
+      213: -7868014227657609159
+    second: Gator_Motion_41
+  - first:
+      213: 7141994521316301791
+    second: Gator_Motion_42
+  - first:
+      213: 3360229007753205616
+    second: Gator_Motion_43
+  - first:
+      213: 8407199508877885568
+    second: Gator_Motion_44
+  - first:
+      213: 5542508558153866184
+    second: Gator_Motion_45
+  - first:
+      213: -7135816991105749963
+    second: Gator_Motion_46
+  - first:
+      213: 7891367389881284501
+    second: Gator_Motion_47
+  - first:
+      213: -799262567970090540
+    second: Gator_Motion_48
+  - first:
+      213: 5084009886374836815
+    second: Gator_Motion_49
+  - first:
+      213: 454659974822644832
+    second: Gator_Motion_50
+  - first:
+      213: 8607340939856590083
+    second: Gator_Motion_51
+  - first:
+      213: 5254634676691899055
+    second: Gator_Motion_52
+  - first:
+      213: -4787621720081740058
+    second: Gator_Motion_53
+  - first:
+      213: 7407431977888119332
+    second: Gator_Motion_54
+  - first:
+      213: 5898846939934945486
+    second: Gator_Motion_55
+  - first:
+      213: -8097451590835589231
+    second: Gator_Motion_56
+  - first:
+      213: -5977366642494800008
+    second: Gator_Motion_57
+  - first:
+      213: 8782303511536278089
+    second: Gator_Motion_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gator_Motion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de6fcd9e5e9faa70800000000000000
+      internalID: 8840458722763304660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1164
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14719150b7d8e82e0800000000000000
+      internalID: -2121602814938900671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_2
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8343d3dfe78ac350800000000000000
+      internalID: 6037787714564342669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_3
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1164
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0cd0e02db0381c0800000000000000
+      internalID: -4502742205633543955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_4
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a6d52a4cd06bf20800000000000000
+      internalID: 3437950503732734612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_5
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1164
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87904801ba5b2e9e0800000000000000
+      internalID: -1593511571814610568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_6
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946bce66ebbbe5960800000000000000
+      internalID: 7592712448238204489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_7
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 1164
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99471ee54f60be40800000000000000
+      internalID: 5670154276997384606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_8
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65c8d43cfca12f90800000000000000
+      internalID: -6980107748229200533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_9
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 1164
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2b8ca88822097f0800000000000000
+      internalID: -607947979855711494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_10
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3252432dbe9da25c0800000000000000
+      internalID: -4239336492348725981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_11
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 1165
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217d309e37881e550800000000000000
+      internalID: 6188377394395731730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_12
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 1358
+        width: 788
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2fbca5af8cc31d20800000000000000
+      internalID: 3248164673596210988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_13
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 1165
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c636135d1c183be0800000000000000
+      internalID: -1497415963827095867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_14
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 1358
+        width: 787
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be51232f0b6504660800000000000000
+      internalID: 7367984308355732971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_15
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 1165
+        width: 787
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7379f39a39e03660800000000000000
+      internalID: 7363641828550734714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 972
+        width: 788
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71171d7cdc4344de0800000000000000
+      internalID: -1349895929878974185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_17
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 972
+        width: 788
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2782b0a2643d8e70800000000000000
+      internalID: 9119002418702616363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_18
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 972
+        width: 788
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3186b78248be900800000000000000
+      internalID: 714810275272332242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_19
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 973
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f372b8b1b5300e320800000000000000
+      internalID: 2585069875949676351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_20
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 968
+        width: 789
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef47f9542b33c540800000000000000
+      internalID: 5026926636389847009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_21
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 968
+        width: 789
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95aa3369bc52e29f0800000000000000
+      internalID: -491413753008248231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_22
+      rect:
+        serializedVersion: 2
+        x: 4721
+        y: 974
+        width: 789
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f89ce7a189839f80800000000000000
+      internalID: -8100980114748303116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_23
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 974
+        width: 787
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980c50d16ad43f890800000000000000
+      internalID: -7425505984756989815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 773
+        width: 787
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c036ac1f83c926e90800000000000000
+      internalID: -7033887899610619124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_25
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 777
+        width: 787
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7344d608b87ad59b0800000000000000
+      internalID: -5089727786261855177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_26
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 581
+        width: 786
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4259ebeb37b24b0800000000000000
+      internalID: -5464146459805539089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_27
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 776
+        width: 787
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44c939358dce5ee0800000000000000
+      internalID: -1270352072797469621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_28
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 582
+        width: 787
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1804e6925e28310800000000000000
+      internalID: 1405937999799157217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_29
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 776
+        width: 787
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc067e37d57d0d680800000000000000
+      internalID: -8732242881094917941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_30
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 583
+        width: 787
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaf9c0cdc13e4e80800000000000000
+      internalID: -8192555912367834400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_31
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 775
+        width: 786
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a8724a0987e9710800000000000000
+      internalID: 1701930271817304603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_32
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 585
+        width: 788
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfe7ddf278c0abc0800000000000000
+      internalID: -3773796091525861429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_33
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 775
+        width: 786
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf32abcea74914ce0800000000000000
+      internalID: -1422692751593823237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_34
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 586
+        width: 788
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22adda29b6dee7a40800000000000000
+      internalID: 5367988852150360610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_35
+      rect:
+        serializedVersion: 2
+        x: 4723
+        y: 775
+        width: 786
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b345e288baa59bf00800000000000000
+      internalID: 1133036474031035451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_36
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 585
+        width: 787
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26adaf36dca278ed0800000000000000
+      internalID: -2411912013799564702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_37
+      rect:
+        serializedVersion: 2
+        x: 5510
+        y: 775
+        width: 786
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1a980dfc1dc5390800000000000000
+      internalID: -7828151361789648463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_38
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 581
+        width: 786
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828fdce0dd88438e0800000000000000
+      internalID: -1714595075103786968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_39
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 584
+        width: 787
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c95d9c73a1322450800000000000000
+      internalID: 6062462626634226121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 391
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b986d60aa047dea0800000000000000
+      internalID: -5848134492113958479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_41
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 391
+        width: 788
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930bfb81fb23fc290800000000000000
+      internalID: -7868014227657609159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_42
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 390
+        width: 788
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb18de5d267d1360800000000000000
+      internalID: 7141994521316301791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_43
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 390
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077d713ba7ee1ae20800000000000000
+      internalID: 3360229007753205616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_44
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 390
+        width: 789
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080418af86f5ca470800000000000000
+      internalID: 8407199508877885568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_45
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 389
+        width: 789
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbd25d0b22faec40800000000000000
+      internalID: 5542508558153866184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_46
+      rect:
+        serializedVersion: 2
+        x: 4721
+        y: 389
+        width: 789
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ce1f6f04c78fc90800000000000000
+      internalID: -7135816991105749963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_47
+      rect:
+        serializedVersion: 2
+        x: 5508
+        y: 389
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597b9f1b4d4c38d60800000000000000
+      internalID: 7891367389881284501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 788
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d150e9dde278e4f0800000000000000
+      internalID: -799262567970090540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a32ff2e080e8640800000000000000
+      internalID: 5084009886374836815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_50
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 194
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c44e496d64f4600800000000000000
+      internalID: 454659974822644832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_51
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 0
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30534dc2bfa637770800000000000000
+      internalID: 8607340939856590083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_52
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 194
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa29ba0f5663ce840800000000000000
+      internalID: 5254634676691899055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_53
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 0
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee45975963fe8db0800000000000000
+      internalID: -4787621720081740058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_54
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 194
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42af3eb332c7cc660800000000000000
+      internalID: 7407431977888119332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_55
+      rect:
+        serializedVersion: 2
+        x: 3148
+        y: 194
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0f837d90aecd150800000000000000
+      internalID: 5898846939934945486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_56
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 194
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fa2562ea210af80800000000000000
+      internalID: -8097451590835589231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_57
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 194
+        width: 788
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ff3d545b02c0da0800000000000000
+      internalID: -5977366642494800008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gator_Motion_58
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 194
+        width: 787
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a19ca538201e970800000000000000
+      internalID: 8782303511536278089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

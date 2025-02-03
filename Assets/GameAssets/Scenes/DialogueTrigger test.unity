@@ -954,7 +954,7 @@ MonoBehaviour:
   harvestList:
   - itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
     amount: 3
-    energyCost: 12
+    energyCost: 50
 --- !u!65 &297592574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3616,6 +3616,7 @@ MonoBehaviour:
   newClip: {fileID: 8300000, guid: 476237d636c13804e93d2056ccc2e9df, type: 3}
   fadeSpeed: 5
   delayTrack: 0
+  MixerBgm: {fileID: 0}
 --- !u!1 &1681379314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6835,7 +6836,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 9190375166426613947}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999832
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12554,7 +12555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00002502091}
+  m_AnchoredPosition: {x: 0, y: 0.000045101035}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6803148718949260126

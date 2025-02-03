@@ -15,11 +15,14 @@ public class EnergyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            LoseEnergy(20);
+        }
     }
-    public void LoseEnergy (float damage)
+    public void LoseEnergy (float loss)
     {
-        EnergyAmount -= damage;
+        EnergyAmount -= loss;
         RemainingEnergy.fillAmount = EnergyAmount / 100;
     }
 

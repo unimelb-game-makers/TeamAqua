@@ -1,0 +1,2311 @@
+fileFormatVersion: 2
+guid: 3786292d53c7c31449e82a46f78f9380
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6582657098884758789
+    second: Hornbill_Motion_0
+  - first:
+      213: 6678104664097861946
+    second: Hornbill_Motion_1
+  - first:
+      213: -1635726514966399349
+    second: Hornbill_Motion_2
+  - first:
+      213: 1847807251482351446
+    second: Hornbill_Motion_3
+  - first:
+      213: -1813113961826930705
+    second: Hornbill_Motion_4
+  - first:
+      213: 1104746420404136169
+    second: Hornbill_Motion_5
+  - first:
+      213: 6911047852230238123
+    second: Hornbill_Motion_6
+  - first:
+      213: -3143897062998152553
+    second: Hornbill_Motion_7
+  - first:
+      213: -606746019851179433
+    second: Hornbill_Motion_8
+  - first:
+      213: 360380331422899045
+    second: Hornbill_Motion_9
+  - first:
+      213: 2336345392797436005
+    second: Hornbill_Motion_10
+  - first:
+      213: -2751200771041930163
+    second: Hornbill_Motion_11
+  - first:
+      213: 2260685781234515288
+    second: Hornbill_Motion_12
+  - first:
+      213: -7235296101397392756
+    second: Hornbill_Motion_13
+  - first:
+      213: 8105724745272415952
+    second: Hornbill_Motion_14
+  - first:
+      213: -855124363940794504
+    second: Hornbill_Motion_15
+  - first:
+      213: 1581932489659276663
+    second: Hornbill_Motion_16
+  - first:
+      213: 4395037507415707355
+    second: Hornbill_Motion_17
+  - first:
+      213: -4080369822678647969
+    second: Hornbill_Motion_18
+  - first:
+      213: 8240043606805607555
+    second: Hornbill_Motion_19
+  - first:
+      213: 8011204238466437136
+    second: Hornbill_Motion_20
+  - first:
+      213: -432908888841032959
+    second: Hornbill_Motion_21
+  - first:
+      213: -7699667541225200050
+    second: Hornbill_Motion_22
+  - first:
+      213: 6491209519714460911
+    second: Hornbill_Motion_23
+  - first:
+      213: 408287681424845013
+    second: Hornbill_Motion_24
+  - first:
+      213: -4585719582777338298
+    second: Hornbill_Motion_25
+  - first:
+      213: 6254429487255144300
+    second: Hornbill_Motion_26
+  - first:
+      213: 1741046829523651603
+    second: Hornbill_Motion_27
+  - first:
+      213: 4575597941067385887
+    second: Hornbill_Motion_28
+  - first:
+      213: 4877181777203509983
+    second: Hornbill_Motion_29
+  - first:
+      213: 1667898435927866133
+    second: Hornbill_Motion_30
+  - first:
+      213: 1272046207249812575
+    second: Hornbill_Motion_31
+  - first:
+      213: 7288062993112605397
+    second: Hornbill_Motion_32
+  - first:
+      213: 2418839449940994381
+    second: Hornbill_Motion_33
+  - first:
+      213: 5152657859129187554
+    second: Hornbill_Motion_34
+  - first:
+      213: 4416429628915843563
+    second: Hornbill_Motion_35
+  - first:
+      213: 6787369786463408867
+    second: Hornbill_Motion_36
+  - first:
+      213: -2906137788976709796
+    second: Hornbill_Motion_37
+  - first:
+      213: 5970260075423664611
+    second: Hornbill_Motion_38
+  - first:
+      213: 7004695013797375926
+    second: Hornbill_Motion_39
+  - first:
+      213: -3466104612279387407
+    second: Hornbill_Motion_40
+  - first:
+      213: -266862222621124751
+    second: Hornbill_Motion_41
+  - first:
+      213: 2752761362546159564
+    second: Hornbill_Motion_42
+  - first:
+      213: -4292426761975540133
+    second: Hornbill_Motion_43
+  - first:
+      213: 4488080377551124618
+    second: Hornbill_Motion_44
+  - first:
+      213: 3494445181079188348
+    second: Hornbill_Motion_45
+  - first:
+      213: 8619128134093982624
+    second: Hornbill_Motion_46
+  - first:
+      213: 881292745415466363
+    second: Hornbill_Motion_47
+  - first:
+      213: -617561765174647295
+    second: Hornbill_Motion_48
+  - first:
+      213: 2079804951455977624
+    second: Hornbill_Motion_49
+  - first:
+      213: -7177441984346715950
+    second: Hornbill_Motion_50
+  - first:
+      213: -2202205657440108574
+    second: Hornbill_Motion_51
+  - first:
+      213: -4215680234549523770
+    second: Hornbill_Motion_52
+  - first:
+      213: 8261063514072309080
+    second: Hornbill_Motion_53
+  - first:
+      213: -815604138744668443
+    second: Hornbill_Motion_54
+  - first:
+      213: -7873208685606745062
+    second: Hornbill_Motion_55
+  - first:
+      213: 551335182711787953
+    second: Hornbill_Motion_56
+  - first:
+      213: -1719509600220147300
+    second: Hornbill_Motion_57
+  - first:
+      213: -497725678648198907
+    second: Hornbill_Motion_58
+  - first:
+      213: 4236113142266714261
+    second: Hornbill_Motion_59
+  - first:
+      213: 8831440595283578093
+    second: Hornbill_Motion_60
+  - first:
+      213: -7361868031343386968
+    second: Hornbill_Motion_61
+  - first:
+      213: -1718261166588562545
+    second: Hornbill_Motion_62
+  - first:
+      213: 659249718491007260
+    second: Hornbill_Motion_63
+  - first:
+      213: 6397168484631640861
+    second: Hornbill_Motion_64
+  - first:
+      213: 5375034845439529309
+    second: Hornbill_Motion_65
+  - first:
+      213: 368134487266897853
+    second: Hornbill_Motion_66
+  - first:
+      213: 7982626615488128813
+    second: Hornbill_Motion_67
+  - first:
+      213: 8575375297880599669
+    second: Hornbill_Motion_68
+  - first:
+      213: 5091809911935138545
+    second: Hornbill_Motion_69
+  - first:
+      213: 3962679809706471376
+    second: Hornbill_Motion_70
+  - first:
+      213: -413101765304011369
+    second: Hornbill_Motion_71
+  - first:
+      213: -960024525818296697
+    second: Hornbill_Motion_72
+  - first:
+      213: -3647030976032942867
+    second: Hornbill_Motion_73
+  - first:
+      213: -2456751105133861678
+    second: Hornbill_Motion_74
+  - first:
+      213: 778266843938951256
+    second: Hornbill_Motion_75
+  - first:
+      213: -3986460510906408080
+    second: Hornbill_Motion_76
+  - first:
+      213: -3193735115264082037
+    second: Hornbill_Motion_77
+  - first:
+      213: 7419058083073084198
+    second: Hornbill_Motion_78
+  - first:
+      213: -8774686651533437064
+    second: Hornbill_Motion_79
+  - first:
+      213: 7928763309464520880
+    second: Hornbill_Motion_80
+  - first:
+      213: -8519799191599662764
+    second: Hornbill_Motion_81
+  - first:
+      213: 1298420393501936187
+    second: Hornbill_Motion_82
+  - first:
+      213: -8496337324350784450
+    second: Hornbill_Motion_83
+  - first:
+      213: 5742124783059877963
+    second: Hornbill_Motion_84
+  - first:
+      213: -5813547213025580123
+    second: Hornbill_Motion_85
+  - first:
+      213: -5582510806517705057
+    second: Hornbill_Motion_86
+  - first:
+      213: -744166396609165274
+    second: Hornbill_Motion_87
+  - first:
+      213: -3669000611044206828
+    second: Hornbill_Motion_88
+  - first:
+      213: -4708170657108258880
+    second: Hornbill_Motion_89
+  - first:
+      213: -749857576065671604
+    second: Hornbill_Motion_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hornbill_Motion_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 5600
+        width: 562
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dba3941cb4a5b50800000000000000
+      internalID: 6582657098884758789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_1
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 5597
+        width: 563
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31be645fc46dac50800000000000000
+      internalID: 6678104664097861946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_2
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 5591
+        width: 566
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b867dbda66bbc49e0800000000000000
+      internalID: -1635726514966399349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_3
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 5583
+        width: 579
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6571ff5b7eab4a910800000000000000
+      internalID: 1847807251482351446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_4
+      rect:
+        serializedVersion: 2
+        x: 2637
+        y: 5575
+        width: 605
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef2100457686d6e0800000000000000
+      internalID: -1813113961826930705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_5
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 5569
+        width: 633
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8a2132409d45f00800000000000000
+      internalID: 1104746420404136169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_6
+      rect:
+        serializedVersion: 2
+        x: 3953
+        y: 5565
+        width: 651
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafd8e1c769f8ef50800000000000000
+      internalID: 6911047852230238123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_7
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 5563
+        width: 657
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ae99d3742ae54d0800000000000000
+      internalID: -3143897062998152553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_8
+      rect:
+        serializedVersion: 2
+        x: 5276
+        y: 5563
+        width: 656
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a63e9a5b76497f0800000000000000
+      internalID: -606746019851179433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_9
+      rect:
+        serializedVersion: 2
+        x: 5939
+        y: 5563
+        width: 651
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bdf768004500500800000000000000
+      internalID: 360380331422899045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_10
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4946
+        width: 647
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568cf4a91cd5c6020800000000000000
+      internalID: 2336345392797436005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_11
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 4947
+        width: 644
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44d348a975c1d9d0800000000000000
+      internalID: -2751200771041930163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_12
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 4950
+        width: 640
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d724b8db19f5f10800000000000000
+      internalID: 2260685781234515288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_13
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 4953
+        width: 633
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82907fa780179b90800000000000000
+      internalID: -7235296101397392756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_14
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 4957
+        width: 625
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d65e09b5b15d7070800000000000000
+      internalID: 8105724745272415952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_15
+      rect:
+        serializedVersion: 2
+        x: 3319
+        y: 4962
+        width: 613
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fe680fbecf124f0800000000000000
+      internalID: -855124363940794504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_16
+      rect:
+        serializedVersion: 2
+        x: 3980
+        y: 4968
+        width: 591
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d5ac8c73724f510800000000000000
+      internalID: 1581932489659276663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_17
+      rect:
+        serializedVersion: 2
+        x: 4640
+        y: 4973
+        width: 561
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde080cb35f4efc30800000000000000
+      internalID: 4395037507415707355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_18
+      rect:
+        serializedVersion: 2
+        x: 5299
+        y: 4978
+        width: 547
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bf307d34d9f57c0800000000000000
+      internalID: -4080369822678647969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_19
+      rect:
+        serializedVersion: 2
+        x: 5958
+        y: 4981
+        width: 548
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3847065b0048a5270800000000000000
+      internalID: 8240043606805607555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 4364
+        width: 551
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01055e84fc38d2f60800000000000000
+      internalID: 8011204238466437136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_21
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 4360
+        width: 553
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b6584c8affdf9f0800000000000000
+      internalID: -432908888841032959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_22
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 4350
+        width: 555
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46aaa47a29452590800000000000000
+      internalID: -7699667541225200050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_23
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 4339
+        width: 554
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4e6319aa8651a50800000000000000
+      internalID: 6491209519714460911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_24
+      rect:
+        serializedVersion: 2
+        x: 2659
+        y: 4330
+        width: 553
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8ee79ab778aa500800000000000000
+      internalID: 408287681424845013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_25
+      rect:
+        serializedVersion: 2
+        x: 3318
+        y: 4326
+        width: 551
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646110de5504c50c0800000000000000
+      internalID: -4585719582777338298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_26
+      rect:
+        serializedVersion: 2
+        x: 3976
+        y: 4325
+        width: 561
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6742943b723cc650800000000000000
+      internalID: 6254429487255144300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_27
+      rect:
+        serializedVersion: 2
+        x: 4634
+        y: 4325
+        width: 585
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31cc313fdd0792810800000000000000
+      internalID: 1741046829523651603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_28
+      rect:
+        serializedVersion: 2
+        x: 5293
+        y: 4326
+        width: 611
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c8458b51acf7f30800000000000000
+      internalID: 4575597941067385887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_29
+      rect:
+        serializedVersion: 2
+        x: 5952
+        y: 4326
+        width: 629
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda39376cfa3fa340800000000000000
+      internalID: 4877181777203509983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 3709
+        width: 637
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bf8e26ac0952710800000000000000
+      internalID: 1667898435927866133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_31
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 3710
+        width: 639
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c0201394737a110800000000000000
+      internalID: 1272046207249812575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_32
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 3711
+        width: 638
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2a52dada6642560800000000000000
+      internalID: 7288062993112605397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_33
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 3713
+        width: 638
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d492f660aa1719120800000000000000
+      internalID: 2418839449940994381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_34
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 3715
+        width: 639
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec158ed50be18740800000000000000
+      internalID: 5152657859129187554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_35
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 3718
+        width: 638
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be10a07295f4a4d30800000000000000
+      internalID: 4416429628915843563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_36
+      rect:
+        serializedVersion: 2
+        x: 3971
+        y: 3722
+        width: 636
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2de591cd4913e50800000000000000
+      internalID: 6787369786463408867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_37
+      rect:
+        serializedVersion: 2
+        x: 4629
+        y: 3726
+        width: 631
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f34bb04135ba7d0800000000000000
+      internalID: -2906137788976709796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_38
+      rect:
+        serializedVersion: 2
+        x: 5287
+        y: 3731
+        width: 622
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9035428ef9ad250800000000000000
+      internalID: 5970260075423664611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_39
+      rect:
+        serializedVersion: 2
+        x: 5945
+        y: 3736
+        width: 603
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bfa759a00da53160800000000000000
+      internalID: 7004695013797375926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_40
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 3122
+        width: 575
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa7eb6283ce5efc0800000000000000
+      internalID: -3466104612279387407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_41
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 3125
+        width: 561
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17752b0f83aeb4cf0800000000000000
+      internalID: -266862222621124751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_42
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 3127
+        width: 562
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfebfddfd5c33620800000000000000
+      internalID: 2752761362546159564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_43
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 3128
+        width: 562
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56511c2a9c3e64c0800000000000000
+      internalID: -4292426761975540133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_44
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 3128
+        width: 562
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88f553135dd84e30800000000000000
+      internalID: 4488080377551124618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_45
+      rect:
+        serializedVersion: 2
+        x: 3307
+        y: 3128
+        width: 562
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73fc49b063ce7030800000000000000
+      internalID: 3494445181079188348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_46
+      rect:
+        serializedVersion: 2
+        x: 3965
+        y: 3125
+        width: 563
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab4f323f5b4d9770800000000000000
+      internalID: 8619128134093982624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_47
+      rect:
+        serializedVersion: 2
+        x: 4621
+        y: 3119
+        width: 566
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d1e99251bfa3c00800000000000000
+      internalID: 881292745415466363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_48
+      rect:
+        serializedVersion: 2
+        x: 5276
+        y: 3111
+        width: 579
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106e6e7b8dafd67f0800000000000000
+      internalID: -617561765174647295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_49
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 3103
+        width: 605
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890d1a58593fcdc10800000000000000
+      internalID: 2079804951455977624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2479
+        width: 632
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d80a0ffa8a946c90800000000000000
+      internalID: -7177441984346715950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_51
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 2475
+        width: 651
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef3de15f913071e0800000000000000
+      internalID: -2202205657440108574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_52
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2473
+        width: 657
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca4a0d8925ee75c0800000000000000
+      internalID: -4215680234549523770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_53
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 2473
+        width: 656
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d583f3f7135a270800000000000000
+      internalID: 8261063514072309080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_54
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 2473
+        width: 652
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee19c86b546ea4f0800000000000000
+      internalID: -815604138744668443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_55
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 2474
+        width: 647
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cc3eb1a6ebcb290800000000000000
+      internalID: -7873208685606745062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_56
+      rect:
+        serializedVersion: 2
+        x: 3969
+        y: 2475
+        width: 644
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b116b57d6cb6a700800000000000000
+      internalID: 551335182711787953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_57
+      rect:
+        serializedVersion: 2
+        x: 4630
+        y: 2478
+        width: 640
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91110301231328e0800000000000000
+      internalID: -1719509600220147300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_58
+      rect:
+        serializedVersion: 2
+        x: 5292
+        y: 2481
+        width: 633
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5097590e129b719f0800000000000000
+      internalID: -497725678648198907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_59
+      rect:
+        serializedVersion: 2
+        x: 5953
+        y: 2485
+        width: 625
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598db218572b9ca30800000000000000
+      internalID: 4236113142266714261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_60
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1872
+        width: 613
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec87d03e649f8a70800000000000000
+      internalID: 8831440595283578093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_61
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 1878
+        width: 591
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae1974c70465d990800000000000000
+      internalID: -7361868031343386968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_62
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1883
+        width: 561
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83f32e92928728e0800000000000000
+      internalID: -1718261166588562545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_63
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 1888
+        width: 547
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19cee84020262900800000000000000
+      internalID: 659249718491007260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_64
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1891
+        width: 548
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1bfac6d7de47c850800000000000000
+      internalID: 6397168484631640861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_65
+      rect:
+        serializedVersion: 2
+        x: 3321
+        y: 1892
+        width: 551
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5115c9b6b5f79a40800000000000000
+      internalID: 5375034845439529309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_66
+      rect:
+        serializedVersion: 2
+        x: 3980
+        y: 1888
+        width: 553
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf2d1f9d50eb1500800000000000000
+      internalID: 368134487266897853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_67
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 1878
+        width: 555
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27afbeec9cf7ce60800000000000000
+      internalID: 7982626615488128813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_68
+      rect:
+        serializedVersion: 2
+        x: 5296
+        y: 1867
+        width: 554
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c25dd266ad10770800000000000000
+      internalID: 8575375297880599669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_69
+      rect:
+        serializedVersion: 2
+        x: 5954
+        y: 1858
+        width: 553
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1faf4b8232eb9a640800000000000000
+      internalID: 5091809911935138545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_70
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1236
+        width: 551
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfaa20ba444ef630800000000000000
+      internalID: 3962679809706471376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_71
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1235
+        width: 561
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795b7f6122e544af0800000000000000
+      internalID: -413101765304011369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_72
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1235
+        width: 585
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78600fab7ce4da2f0800000000000000
+      internalID: -960024525818296697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_73
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 1236
+        width: 611
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4d5bc66a4236dc0800000000000000
+      internalID: -3647030976032942867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_74
+      rect:
+        serializedVersion: 2
+        x: 2657
+        y: 1236
+        width: 629
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4a2f4e2edd7edd0800000000000000
+      internalID: -2456751105133861678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_75
+      rect:
+        serializedVersion: 2
+        x: 3316
+        y: 1237
+        width: 637
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85012753295fcca00800000000000000
+      internalID: 778266843938951256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_76
+      rect:
+        serializedVersion: 2
+        x: 3975
+        y: 1238
+        width: 639
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0732d48594f3da8c0800000000000000
+      internalID: -3986460510906408080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_77
+      rect:
+        serializedVersion: 2
+        x: 4635
+        y: 1239
+        width: 638
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f3ef375d29da3d0800000000000000
+      internalID: -3193735115264082037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_78
+      rect:
+        serializedVersion: 2
+        x: 5294
+        y: 1241
+        width: 638
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bcf89c40ac5f660800000000000000
+      internalID: 7419058083073084198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_79
+      rect:
+        serializedVersion: 2
+        x: 5951
+        y: 1243
+        width: 639
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877dcff0bfc0a3680800000000000000
+      internalID: -8774686651533437064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_80
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 628
+        width: 638
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b888c8b830a80e60800000000000000
+      internalID: 7928763309464520880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_81
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 632
+        width: 636
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459ba0b66c793c980800000000000000
+      internalID: -8519799191599662764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_82
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 636
+        width: 631
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a4ec3f77ae40210800000000000000
+      internalID: 1298420393501936187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_83
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 641
+        width: 622
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cbd221832f61a80800000000000000
+      internalID: -8496337324350784450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_84
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 646
+        width: 603
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40404e211020bf40800000000000000
+      internalID: 5742124783059877963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_85
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 650
+        width: 575
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abe5aa7c91225fa0800000000000000
+      internalID: -5813547213025580123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_86
+      rect:
+        serializedVersion: 2
+        x: 3967
+        y: 653
+        width: 561
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f969bb6bfffe682b0800000000000000
+      internalID: -5582510806517705057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_87
+      rect:
+        serializedVersion: 2
+        x: 4625
+        y: 655
+        width: 562
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6280454ea903ca5f0800000000000000
+      internalID: -744166396609165274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_88
+      rect:
+        serializedVersion: 2
+        x: 5284
+        y: 656
+        width: 562
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417d40a2267151dc0800000000000000
+      internalID: -3669000611044206828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_89
+      rect:
+        serializedVersion: 2
+        x: 5943
+        y: 656
+        width: 562
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf05297bb739aeb0800000000000000
+      internalID: -4708170657108258880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hornbill_Motion_90
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 38
+        width: 562
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e587ae188f795f0800000000000000
+      internalID: -749857576065671604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

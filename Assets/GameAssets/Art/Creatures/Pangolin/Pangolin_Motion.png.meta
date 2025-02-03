@@ -1,0 +1,2023 @@
+fileFormatVersion: 2
+guid: 803a8bf608d6a874389680c418e4c5a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4177324676745949819
+    second: Pangolin_Motion_0
+  - first:
+      213: 4875210467918163882
+    second: Pangolin_Motion_1
+  - first:
+      213: 6892536484449184176
+    second: Pangolin_Motion_2
+  - first:
+      213: 8458453750549873876
+    second: Pangolin_Motion_3
+  - first:
+      213: 1216604058998290530
+    second: Pangolin_Motion_4
+  - first:
+      213: 7092999539992404629
+    second: Pangolin_Motion_5
+  - first:
+      213: 2262834322888570721
+    second: Pangolin_Motion_6
+  - first:
+      213: -8939410341340063358
+    second: Pangolin_Motion_7
+  - first:
+      213: 1654740054884187212
+    second: Pangolin_Motion_8
+  - first:
+      213: 6213319721026317207
+    second: Pangolin_Motion_9
+  - first:
+      213: 1129311521461123063
+    second: Pangolin_Motion_10
+  - first:
+      213: -1458497152521685744
+    second: Pangolin_Motion_11
+  - first:
+      213: 7304479721682073797
+    second: Pangolin_Motion_12
+  - first:
+      213: -8486875196578472889
+    second: Pangolin_Motion_13
+  - first:
+      213: 1130956869184270161
+    second: Pangolin_Motion_14
+  - first:
+      213: -1148545228182833021
+    second: Pangolin_Motion_15
+  - first:
+      213: -3786888647742423401
+    second: Pangolin_Motion_16
+  - first:
+      213: 1899558126799430626
+    second: Pangolin_Motion_17
+  - first:
+      213: -4372038375278805060
+    second: Pangolin_Motion_18
+  - first:
+      213: 4165579569888509079
+    second: Pangolin_Motion_19
+  - first:
+      213: 8816668088445106885
+    second: Pangolin_Motion_20
+  - first:
+      213: -5624367773480916939
+    second: Pangolin_Motion_21
+  - first:
+      213: -549556388767282629
+    second: Pangolin_Motion_22
+  - first:
+      213: -1074308322668263006
+    second: Pangolin_Motion_23
+  - first:
+      213: -3653407555131144682
+    second: Pangolin_Motion_24
+  - first:
+      213: 2801534717545742722
+    second: Pangolin_Motion_25
+  - first:
+      213: 934386763971637037
+    second: Pangolin_Motion_26
+  - first:
+      213: 2565736673053050249
+    second: Pangolin_Motion_27
+  - first:
+      213: -7181292302450711470
+    second: Pangolin_Motion_28
+  - first:
+      213: 8857569311731820501
+    second: Pangolin_Motion_29
+  - first:
+      213: -5260925964760282306
+    second: Pangolin_Motion_30
+  - first:
+      213: 1028944614986201773
+    second: Pangolin_Motion_31
+  - first:
+      213: -2309714616007329645
+    second: Pangolin_Motion_32
+  - first:
+      213: -1699814717123084164
+    second: Pangolin_Motion_33
+  - first:
+      213: 5936547740334153061
+    second: Pangolin_Motion_34
+  - first:
+      213: -8258914354435807875
+    second: Pangolin_Motion_35
+  - first:
+      213: -2737992988690385233
+    second: Pangolin_Motion_36
+  - first:
+      213: 3769771852739986396
+    second: Pangolin_Motion_37
+  - first:
+      213: 7757070484745058557
+    second: Pangolin_Motion_38
+  - first:
+      213: 8213689003163309666
+    second: Pangolin_Motion_39
+  - first:
+      213: -525958343403577892
+    second: Pangolin_Motion_40
+  - first:
+      213: 5918657034959274728
+    second: Pangolin_Motion_41
+  - first:
+      213: 2719264186089463693
+    second: Pangolin_Motion_42
+  - first:
+      213: -7336708536032324187
+    second: Pangolin_Motion_43
+  - first:
+      213: 5605311616231725095
+    second: Pangolin_Motion_44
+  - first:
+      213: 8738025419995210333
+    second: Pangolin_Motion_45
+  - first:
+      213: -7033063577238711454
+    second: Pangolin_Motion_46
+  - first:
+      213: 3098972792402738958
+    second: Pangolin_Motion_47
+  - first:
+      213: -1946941810609711763
+    second: Pangolin_Motion_48
+  - first:
+      213: -148388905161679198
+    second: Pangolin_Motion_49
+  - first:
+      213: 9064699418739738654
+    second: Pangolin_Motion_50
+  - first:
+      213: -4594249612038096610
+    second: Pangolin_Motion_51
+  - first:
+      213: -1186156688135114115
+    second: Pangolin_Motion_52
+  - first:
+      213: -1382781494659316726
+    second: Pangolin_Motion_53
+  - first:
+      213: -5170242491996396533
+    second: Pangolin_Motion_54
+  - first:
+      213: 8872479755639956748
+    second: Pangolin_Motion_55
+  - first:
+      213: 3211035013396271468
+    second: Pangolin_Motion_56
+  - first:
+      213: -796821822522944488
+    second: Pangolin_Motion_57
+  - first:
+      213: 34078550545017137
+    second: Pangolin_Motion_58
+  - first:
+      213: 5798621967811954252
+    second: Pangolin_Motion_59
+  - first:
+      213: -4675553709793277417
+    second: Pangolin_Motion_60
+  - first:
+      213: 645608362488753858
+    second: Pangolin_Motion_61
+  - first:
+      213: -6699314607656026940
+    second: Pangolin_Motion_62
+  - first:
+      213: -1636466127100329711
+    second: Pangolin_Motion_63
+  - first:
+      213: -644776644742951796
+    second: Pangolin_Motion_64
+  - first:
+      213: -7290612287051687774
+    second: Pangolin_Motion_65
+  - first:
+      213: -2044586804257447155
+    second: Pangolin_Motion_66
+  - first:
+      213: -7830392161470667658
+    second: Pangolin_Motion_67
+  - first:
+      213: 8844234787463779305
+    second: Pangolin_Motion_68
+  - first:
+      213: -8500081695886519251
+    second: Pangolin_Motion_69
+  - first:
+      213: 7571616061867935809
+    second: Pangolin_Motion_70
+  - first:
+      213: 385969820162591317
+    second: Pangolin_Motion_71
+  - first:
+      213: 8731902924264717044
+    second: Pangolin_Motion_72
+  - first:
+      213: -7567772950895908401
+    second: Pangolin_Motion_73
+  - first:
+      213: -8619582987109667108
+    second: Pangolin_Motion_74
+  - first:
+      213: 625152314299505114
+    second: Pangolin_Motion_75
+  - first:
+      213: 5069468345233635037
+    second: Pangolin_Motion_76
+  - first:
+      213: -5704971678058426630
+    second: Pangolin_Motion_77
+  - first:
+      213: 5172595251389868109
+    second: Pangolin_Motion_78
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pangolin_Motion_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2694
+        width: 787
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d8513c6592706c0800000000000000
+      internalID: -4177324676745949819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_1
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 2694
+        width: 787
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf2781371a38a340800000000000000
+      internalID: 4875210467918163882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_2
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 2694
+        width: 788
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b963051a6537af50800000000000000
+      internalID: 6892536484449184176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_3
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 2694
+        width: 788
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4889e0fd6726570800000000000000
+      internalID: 8458453750549873876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_4
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 2694
+        width: 788
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26834e022fe32e010800000000000000
+      internalID: 1216604058998290530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_5
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 2694
+        width: 788
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 592a14550856f6260800000000000000
+      internalID: 7092999539992404629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_6
+      rect:
+        serializedVersion: 2
+        x: 4729
+        y: 2694
+        width: 788
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167b551e3d3376f10800000000000000
+      internalID: 2262834322888570721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_7
+      rect:
+        serializedVersion: 2
+        x: 5516
+        y: 2694
+        width: 789
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289d8f658a5d0f380800000000000000
+      internalID: -8939410341340063358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_8
+      rect:
+        serializedVersion: 2
+        x: 6304
+        y: 2694
+        width: 788
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c7bfe0051d6f610800000000000000
+      internalID: 1654740054884187212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2358
+        width: 789
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79be3bfdd552a3650800000000000000
+      internalID: 6213319721026317207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_10
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 2358
+        width: 789
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7327d68de1caf00800000000000000
+      internalID: 1129311521461123063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_11
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2358
+        width: 790
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015b606319062cbe0800000000000000
+      internalID: -1458497152521685744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_12
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 2358
+        width: 790
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c877e72b99be5560800000000000000
+      internalID: 7304479721682073797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_13
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 2358
+        width: 790
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74cddde59ff883a80800000000000000
+      internalID: -8486875196578472889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_14
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2358
+        width: 790
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f240cc747f1bf00800000000000000
+      internalID: 1130956869184270161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_15
+      rect:
+        serializedVersion: 2
+        x: 4727
+        y: 2358
+        width: 790
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38831b1433c8f00f0800000000000000
+      internalID: -1148545228182833021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_16
+      rect:
+        serializedVersion: 2
+        x: 5515
+        y: 2358
+        width: 790
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e7a53b6d4427bc0800000000000000
+      internalID: -3786888647742423401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_17
+      rect:
+        serializedVersion: 2
+        x: 6303
+        y: 2358
+        width: 789
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e326125d069c5a10800000000000000
+      internalID: 1899558126799430626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2022
+        width: 789
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf712103466353c0800000000000000
+      internalID: -4372038375278805060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_19
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2022
+        width: 790
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c34d27c8c1fc930800000000000000
+      internalID: 4165579569888509079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_20
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2021
+        width: 790
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cafa4ae9e81b5a70800000000000000
+      internalID: 8816668088445106885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_21
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 2021
+        width: 790
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538e3872f4b32f1b0800000000000000
+      internalID: -5624367773480916939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_22
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 2020
+        width: 790
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3aca7740659f58f0800000000000000
+      internalID: -549556388767282629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_23
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 2020
+        width: 790
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9cc10c54a4711f0800000000000000
+      internalID: -1074308322668263006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_24
+      rect:
+        serializedVersion: 2
+        x: 4727
+        y: 2019
+        width: 790
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6160ea86f2d7c4dc0800000000000000
+      internalID: -3653407555131144682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_25
+      rect:
+        serializedVersion: 2
+        x: 5515
+        y: 2019
+        width: 790
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2810d318bfc01e620800000000000000
+      internalID: 2801534717545742722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_26
+      rect:
+        serializedVersion: 2
+        x: 6303
+        y: 2019
+        width: 789
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f2b5dafcb97fc00800000000000000
+      internalID: 934386763971637037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1682
+        width: 789
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985058809e35b9320800000000000000
+      internalID: 2565736673053050249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_28
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1682
+        width: 790
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254ad24f2bce65c90800000000000000
+      internalID: -7181292302450711470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_29
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1682
+        width: 790
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d72d2f0c586cea70800000000000000
+      internalID: 8857569311731820501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_30
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1681
+        width: 790
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b85d865bf6df6b0800000000000000
+      internalID: -5260925964760282306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_31
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 1681
+        width: 790
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daabdcdfcab874e00800000000000000
+      internalID: 1028944614986201773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_32
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 1681
+        width: 790
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398fa5c4bce32ffd0800000000000000
+      internalID: -2309714616007329645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_33
+      rect:
+        serializedVersion: 2
+        x: 4727
+        y: 1682
+        width: 790
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70c5e1558b0968e0800000000000000
+      internalID: -1699814717123084164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_34
+      rect:
+        serializedVersion: 2
+        x: 5515
+        y: 1682
+        width: 790
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dd3c677bad26250800000000000000
+      internalID: 5936547740334153061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_35
+      rect:
+        serializedVersion: 2
+        x: 6303
+        y: 1683
+        width: 789
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75aa79f621726d80800000000000000
+      internalID: -8258914354435807875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1347
+        width: 789
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6799f12e1b00ad0800000000000000
+      internalID: -2737992988690385233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_37
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1348
+        width: 790
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd345d6e68be05430800000000000000
+      internalID: 3769771852739986396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_38
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1349
+        width: 790
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df875e4d186a6ab60800000000000000
+      internalID: 7757070484745058557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_39
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1348
+        width: 790
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266d41161a2ecf170800000000000000
+      internalID: 8213689003163309666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_40
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 1347
+        width: 790
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cddd6ce5cab63b8f0800000000000000
+      internalID: -525958343403577892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_41
+      rect:
+        serializedVersion: 2
+        x: 3939
+        y: 1346
+        width: 790
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e24d14073b432250800000000000000
+      internalID: 5918657034959274728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_42
+      rect:
+        serializedVersion: 2
+        x: 4727
+        y: 1345
+        width: 790
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fdd46be54ccb520800000000000000
+      internalID: 2719264186089463693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_43
+      rect:
+        serializedVersion: 2
+        x: 5516
+        y: 1345
+        width: 789
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a597314576ce2a90800000000000000
+      internalID: -7336708536032324187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_44
+      rect:
+        serializedVersion: 2
+        x: 6304
+        y: 1344
+        width: 788
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728dcdc77311acd40800000000000000
+      internalID: 5605311616231725095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1008
+        width: 789
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52e52dc2d3b34970800000000000000
+      internalID: 8738025419995210333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_46
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1007
+        width: 789
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263d2f370f9856e90800000000000000
+      internalID: -7033063577238711454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_47
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 1007
+        width: 789
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ff3cbe553c10b20800000000000000
+      internalID: 3098972792402738958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_48
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 1007
+        width: 788
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6590441db21bf4e0800000000000000
+      internalID: -1946941810609711763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_49
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 1007
+        width: 788
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae9a33b311d0fdf0800000000000000
+      internalID: -148388905161679198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_50
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 674
+        width: 788
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e180ca138184ccd70800000000000000
+      internalID: 9064699418739738654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_51
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 1007
+        width: 788
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e193ef8b152fd30c0800000000000000
+      internalID: -4594249612038096610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_52
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 675
+        width: 788
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72b0c3d6cce98fe0800000000000000
+      internalID: -1186156688135114115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_53
+      rect:
+        serializedVersion: 2
+        x: 4729
+        y: 1007
+        width: 788
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0409d09e8f5fcce0800000000000000
+      internalID: -1382781494659316726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_54
+      rect:
+        serializedVersion: 2
+        x: 4729
+        y: 676
+        width: 788
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04acedb8db9f38b0800000000000000
+      internalID: -5170242491996396533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_55
+      rect:
+        serializedVersion: 2
+        x: 5517
+        y: 1007
+        width: 788
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05a3cf4451612b70800000000000000
+      internalID: 8872479755639956748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_56
+      rect:
+        serializedVersion: 2
+        x: 5517
+        y: 677
+        width: 788
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6193d6f453ef8c20800000000000000
+      internalID: 3211035013396271468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_57
+      rect:
+        serializedVersion: 2
+        x: 6305
+        y: 1008
+        width: 787
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8149d3f26ce11f4f0800000000000000
+      internalID: -796821822522944488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_58
+      rect:
+        serializedVersion: 2
+        x: 6305
+        y: 678
+        width: 787
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13922bbd242197000800000000000000
+      internalID: 34078550545017137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_59
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 672
+        width: 788
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c46453215f7d87050800000000000000
+      internalID: 5798621967811954252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_60
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 672
+        width: 788
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a038f4ca81d1fb0800000000000000
+      internalID: -4675553709793277417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_61
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 673
+        width: 788
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cee9269269a5f800800000000000000
+      internalID: 645608362488753858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_62
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 674
+        width: 788
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccb31cdbd04703a0800000000000000
+      internalID: -6699314607656026940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_63
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 788
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111c93f4aba1a49e0800000000000000
+      internalID: -1636466127100329711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_64
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 343
+        width: 788
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cc0aace0b4d07f0800000000000000
+      internalID: -644776644742951796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_65
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 342
+        width: 789
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a89f2390ca82da90800000000000000
+      internalID: -7290612287051687774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_66
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 342
+        width: 789
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03a8cb522b20a3e0800000000000000
+      internalID: -2044586804257447155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_67
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 342
+        width: 789
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674a98bf0dbd45390800000000000000
+      internalID: -7830392161470667658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_68
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 342
+        width: 789
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e35ee03ea80dba70800000000000000
+      internalID: 8844234787463779305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_69
+      rect:
+        serializedVersion: 2
+        x: 4728
+        y: 342
+        width: 789
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2452e2abb4a90a80800000000000000
+      internalID: -8500081695886519251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_70
+      rect:
+        serializedVersion: 2
+        x: 5516
+        y: 342
+        width: 789
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148c74f21b8c31960800000000000000
+      internalID: 7571616061867935809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_71
+      rect:
+        serializedVersion: 2
+        x: 6304
+        y: 342
+        width: 788
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a00d8a18d3b5500800000000000000
+      internalID: 385969820162591317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 789
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa3efd2273fd2970800000000000000
+      internalID: 8731902924264717044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_73
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 6
+        width: 788
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc92a01d89ed9f690800000000000000
+      internalID: -7567772950895908401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_74
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 6
+        width: 788
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdee35511f6116880800000000000000
+      internalID: -8619582987109667108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_75
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 6
+        width: 788
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9d558b7bcfca800800000000000000
+      internalID: 625152314299505114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_76
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 6
+        width: 788
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6fcbdc99e5a5640800000000000000
+      internalID: 5069468345233635037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_77
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 6
+        width: 787
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afec9ab2c7ed3d0b0800000000000000
+      internalID: -5704971678058426630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pangolin_Motion_78
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 6
+        width: 787
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4827fdb9ffb8c740800000000000000
+      internalID: 5172595251389868109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

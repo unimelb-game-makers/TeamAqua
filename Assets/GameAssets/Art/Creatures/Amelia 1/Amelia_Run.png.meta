@@ -1,0 +1,2071 @@
+fileFormatVersion: 2
+guid: 7b9dc5fd3a35ec143b06192dcc7024cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5090633057067261881
+    second: Amelia_Run_0
+  - first:
+      213: -6948082447048532295
+    second: Amelia_Run_1
+  - first:
+      213: -1024881638131348920
+    second: Amelia_Run_2
+  - first:
+      213: -1711537954843456649
+    second: Amelia_Run_3
+  - first:
+      213: 4373067842413427048
+    second: Amelia_Run_4
+  - first:
+      213: -5260371091635935270
+    second: Amelia_Run_5
+  - first:
+      213: -782040159207883545
+    second: Amelia_Run_6
+  - first:
+      213: -5264326950242552993
+    second: Amelia_Run_7
+  - first:
+      213: 5806137764955181389
+    second: Amelia_Run_8
+  - first:
+      213: 8603922601054197600
+    second: Amelia_Run_9
+  - first:
+      213: -6793479287382868258
+    second: Amelia_Run_10
+  - first:
+      213: -4779421881389568509
+    second: Amelia_Run_11
+  - first:
+      213: -7335288572783734990
+    second: Amelia_Run_12
+  - first:
+      213: -3348932350154239282
+    second: Amelia_Run_13
+  - first:
+      213: 859307996361843960
+    second: Amelia_Run_14
+  - first:
+      213: 3790155981333623367
+    second: Amelia_Run_15
+  - first:
+      213: 2068532064309524020
+    second: Amelia_Run_16
+  - first:
+      213: 7799343663683338666
+    second: Amelia_Run_17
+  - first:
+      213: -4119579961521587572
+    second: Amelia_Run_18
+  - first:
+      213: 3984459841867572773
+    second: Amelia_Run_19
+  - first:
+      213: 811792068745749460
+    second: Amelia_Run_20
+  - first:
+      213: 7576655182735493707
+    second: Amelia_Run_21
+  - first:
+      213: 7014953666781630662
+    second: Amelia_Run_22
+  - first:
+      213: -997915625476112860
+    second: Amelia_Run_23
+  - first:
+      213: 9028006154313612410
+    second: Amelia_Run_24
+  - first:
+      213: -7769132359375915142
+    second: Amelia_Run_25
+  - first:
+      213: 7590753008404010582
+    second: Amelia_Run_26
+  - first:
+      213: 3975458201776885706
+    second: Amelia_Run_27
+  - first:
+      213: -4094200085892398161
+    second: Amelia_Run_28
+  - first:
+      213: 5502426882921159691
+    second: Amelia_Run_29
+  - first:
+      213: 3373067385402103842
+    second: Amelia_Run_30
+  - first:
+      213: 6721945045343632002
+    second: Amelia_Run_31
+  - first:
+      213: -3791476218249882185
+    second: Amelia_Run_32
+  - first:
+      213: -2653182757210288147
+    second: Amelia_Run_33
+  - first:
+      213: -7857880176738543218
+    second: Amelia_Run_34
+  - first:
+      213: 8481952634973767351
+    second: Amelia_Run_35
+  - first:
+      213: -45388289449750643
+    second: Amelia_Run_36
+  - first:
+      213: -4817283551110522888
+    second: Amelia_Run_37
+  - first:
+      213: -6585300607427103101
+    second: Amelia_Run_38
+  - first:
+      213: 4930951136504329009
+    second: Amelia_Run_39
+  - first:
+      213: -1955360386773972682
+    second: Amelia_Run_40
+  - first:
+      213: -6110020544368259969
+    second: Amelia_Run_41
+  - first:
+      213: -8716579851944676019
+    second: Amelia_Run_42
+  - first:
+      213: 9102064286801229452
+    second: Amelia_Run_43
+  - first:
+      213: 1659441296529195503
+    second: Amelia_Run_44
+  - first:
+      213: 7389689482837701345
+    second: Amelia_Run_45
+  - first:
+      213: 2854128583237629107
+    second: Amelia_Run_46
+  - first:
+      213: 7607081983994585655
+    second: Amelia_Run_47
+  - first:
+      213: -5282052418951338174
+    second: Amelia_Run_48
+  - first:
+      213: -4066104639963126946
+    second: Amelia_Run_49
+  - first:
+      213: -1733432038200608257
+    second: Amelia_Run_50
+  - first:
+      213: -7237646931991280665
+    second: Amelia_Run_51
+  - first:
+      213: 1980168463595159090
+    second: Amelia_Run_52
+  - first:
+      213: 8466528639531431736
+    second: Amelia_Run_53
+  - first:
+      213: -3220092239721045619
+    second: Amelia_Run_54
+  - first:
+      213: 1692142919400295538
+    second: Amelia_Run_55
+  - first:
+      213: 1763453700292593384
+    second: Amelia_Run_56
+  - first:
+      213: 932346496879449988
+    second: Amelia_Run_57
+  - first:
+      213: -6724976880103143646
+    second: Amelia_Run_58
+  - first:
+      213: -6915153161714715780
+    second: Amelia_Run_59
+  - first:
+      213: -3155394468198686116
+    second: Amelia_Run_60
+  - first:
+      213: -3776419656451383471
+    second: Amelia_Run_61
+  - first:
+      213: -296147137959318788
+    second: Amelia_Run_62
+  - first:
+      213: 706039953672438445
+    second: Amelia_Run_63
+  - first:
+      213: 3076557426943959968
+    second: Amelia_Run_64
+  - first:
+      213: 4734055928045264749
+    second: Amelia_Run_65
+  - first:
+      213: -4630482598365149826
+    second: Amelia_Run_66
+  - first:
+      213: 6656605181672116538
+    second: Amelia_Run_67
+  - first:
+      213: 3589316487335429316
+    second: Amelia_Run_68
+  - first:
+      213: 6089437937094910220
+    second: Amelia_Run_69
+  - first:
+      213: -5122340057144834221
+    second: Amelia_Run_70
+  - first:
+      213: 5349445266269939238
+    second: Amelia_Run_71
+  - first:
+      213: 6796051407074780224
+    second: Amelia_Run_72
+  - first:
+      213: 469459613810719224
+    second: Amelia_Run_73
+  - first:
+      213: -2745772260736394627
+    second: Amelia_Run_74
+  - first:
+      213: -2487139843257634690
+    second: Amelia_Run_75
+  - first:
+      213: 2345355544104379071
+    second: Amelia_Run_76
+  - first:
+      213: 4988243634609492008
+    second: Amelia_Run_77
+  - first:
+      213: -5449795724964473919
+    second: Amelia_Run_78
+  - first:
+      213: 6080162681616724324
+    second: Amelia_Run_79
+  - first:
+      213: 5278911923430041083
+    second: Amelia_Run_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Amelia_Run_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bfda584bcf85a640800000000000000
+      internalID: 5090633057067261881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_1
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be9b81b3d3739f90800000000000000
+      internalID: -6948082447048532295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_2
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a4c568493e6c1f0800000000000000
+      internalID: -1024881638131348920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_3
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b05f55c456f38e0800000000000000
+      internalID: -1711537954843456649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_4
+      rect:
+        serializedVersion: 2
+        x: 3056
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8697cbd780240bc30800000000000000
+      internalID: 4373067842413427048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_5
+      rect:
+        serializedVersion: 2
+        x: 3816
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad76e40ec586ff6b0800000000000000
+      internalID: -5260371091635935270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_6
+      rect:
+        serializedVersion: 2
+        x: 4576
+        y: 4725
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ecf25e5e92a525f0800000000000000
+      internalID: -782040159207883545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_7
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 4723
+        width: 742
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53f645c78a51f6b0800000000000000
+      internalID: -5264326950242552993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_8
+      rect:
+        serializedVersion: 2
+        x: 6096
+        y: 4721
+        width: 742
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d415225f88b839050800000000000000
+      internalID: 5806137764955181389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 4130
+        width: 743
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0675ac62506476770800000000000000
+      internalID: 8603922601054197600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_10
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 4129
+        width: 743
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edef19ed496b8b1a0800000000000000
+      internalID: -6793479287382868258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_11
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 4130
+        width: 744
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30eab001f151cadb0800000000000000
+      internalID: -4779421881389568509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_12
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 4133
+        width: 744
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f4e3638e1d33a90800000000000000
+      internalID: -7335288572783734990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_13
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 4137
+        width: 746
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec21e3c55c33681d0800000000000000
+      internalID: -3348932350154239282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_14
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 4139
+        width: 746
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4ecc3e110eceb00800000000000000
+      internalID: 859307996361843960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_15
+      rect:
+        serializedVersion: 2
+        x: 4573
+        y: 4138
+        width: 747
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74276bea8c6599430800000000000000
+      internalID: 3790155981333623367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_16
+      rect:
+        serializedVersion: 2
+        x: 5333
+        y: 4137
+        width: 748
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436bca3f3f6e4bc10800000000000000
+      internalID: 2068532064309524020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_17
+      rect:
+        serializedVersion: 2
+        x: 6092
+        y: 4137
+        width: 748
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa10a0b4db5dc3c60800000000000000
+      internalID: 7799343663683338666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3546
+        width: 749
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a30b9f9df44d6c0800000000000000
+      internalID: -4119579961521587572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_19
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 3546
+        width: 750
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52663589d15ab4730800000000000000
+      internalID: 3984459841867572773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_20
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 3546
+        width: 750
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3e111e590144b00800000000000000
+      internalID: 811792068745749460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_21
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 3546
+        width: 751
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a4290febfa52960800000000000000
+      internalID: 7576655182735493707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_22
+      rect:
+        serializedVersion: 2
+        x: 3049
+        y: 3546
+        width: 752
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0d750713f1a5160800000000000000
+      internalID: 7014953666781630662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_23
+      rect:
+        serializedVersion: 2
+        x: 3808
+        y: 3547
+        width: 753
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e3fab9601b622f0800000000000000
+      internalID: -997915625476112860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_24
+      rect:
+        serializedVersion: 2
+        x: 4567
+        y: 3547
+        width: 754
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c37e1d3cbe94d70800000000000000
+      internalID: 9028006154313612410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_25
+      rect:
+        serializedVersion: 2
+        x: 5326
+        y: 3548
+        width: 755
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77f762284f7e2490800000000000000
+      internalID: -7769132359375915142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_26
+      rect:
+        serializedVersion: 2
+        x: 6085
+        y: 3549
+        width: 755
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65616a3c4a5c75960800000000000000
+      internalID: 7590753008404010582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2960
+        width: 757
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf0350fb2aab2730800000000000000
+      internalID: 3975458201776885706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_28
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 2961
+        width: 758
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa38201c6ba7e27c0800000000000000
+      internalID: -4094200085892398161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_29
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 2960
+        width: 759
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c531fc81c8c5c40800000000000000
+      internalID: 5502426882921159691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_30
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 2959
+        width: 758
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228195e6aea8fce20800000000000000
+      internalID: 3373067385402103842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_31
+      rect:
+        serializedVersion: 2
+        x: 3041
+        y: 2960
+        width: 759
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a77638765294d50800000000000000
+      internalID: 6721945045343632002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_32
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 2960
+        width: 760
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5dfd4b778f16bc0800000000000000
+      internalID: -3791476218249882185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_33
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 2961
+        width: 760
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def0a48e6500e2bd0800000000000000
+      internalID: -2653182757210288147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_34
+      rect:
+        serializedVersion: 2
+        x: 5319
+        y: 2961
+        width: 761
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e895ae1bc9333f290800000000000000
+      internalID: -7857880176738543218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_35
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 2961
+        width: 761
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6cc417bf2f5b570800000000000000
+      internalID: 8481952634973767351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2371
+        width: 760
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f826a579fbe5ff0800000000000000
+      internalID: -45388289449750643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_37
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 2371
+        width: 760
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f799b12222952db0800000000000000
+      internalID: -4817283551110522888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_38
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 2371
+        width: 760
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386b42becff4c94a0800000000000000
+      internalID: -6585300607427103101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_39
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 2370
+        width: 760
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1333620fee14e6440800000000000000
+      internalID: 4930951136504329009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_40
+      rect:
+        serializedVersion: 2
+        x: 3041
+        y: 2369
+        width: 759
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6398772961a2dd4e0800000000000000
+      internalID: -1955360386773972682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_41
+      rect:
+        serializedVersion: 2
+        x: 3801
+        y: 2369
+        width: 759
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c479aefa8d43ba0800000000000000
+      internalID: -6110020544368259969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_42
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 2368
+        width: 758
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45b28c9ecc780780800000000000000
+      internalID: -8716579851944676019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_43
+      rect:
+        serializedVersion: 2
+        x: 5322
+        y: 2368
+        width: 759
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c867e897e37015e70800000000000000
+      internalID: 9102064286801229452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_44
+      rect:
+        serializedVersion: 2
+        x: 6083
+        y: 2369
+        width: 757
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe18c3d2115870710800000000000000
+      internalID: 1659441296529195503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_45
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1780
+        width: 757
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e23bf0be637d8660800000000000000
+      internalID: 7389689482837701345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_46
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1780
+        width: 756
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4fa2b13d6eb9720800000000000000
+      internalID: 2854128583237629107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_47
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1779
+        width: 756
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7326549a2c8c19960800000000000000
+      internalID: 7607081983994585655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_48
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1778
+        width: 755
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247a96b7f4162b6b0800000000000000
+      internalID: -5282052418951338174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_49
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 1777
+        width: 754
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e532e638f5b4297c0800000000000000
+      internalID: -4066104639963126946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_50
+      rect:
+        serializedVersion: 2
+        x: 3808
+        y: 1777
+        width: 753
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff975c0debc91f7e0800000000000000
+      internalID: -1733432038200608257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_51
+      rect:
+        serializedVersion: 2
+        x: 4568
+        y: 1777
+        width: 753
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3c6f84676be8b90800000000000000
+      internalID: -7237646931991280665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_52
+      rect:
+        serializedVersion: 2
+        x: 5329
+        y: 1776
+        width: 752
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e350ce9b8fa7b10800000000000000
+      internalID: 1980168463595159090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_53
+      rect:
+        serializedVersion: 2
+        x: 6089
+        y: 1776
+        width: 751
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83731f7a0f62f7570800000000000000
+      internalID: 8466528639531431736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_54
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1186
+        width: 751
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d816f633b2fef43d0800000000000000
+      internalID: -3220092239721045619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_55
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1186
+        width: 750
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c0c041503bb7710800000000000000
+      internalID: 1692142919400295538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_56
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 1186
+        width: 750
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6c9c71ccb097810800000000000000
+      internalID: 1763453700292593384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_57
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 1186
+        width: 749
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487541af23c50fc00800000000000000
+      internalID: 932346496879449988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_58
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 1186
+        width: 749
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227ccb278251ca2a0800000000000000
+      internalID: -6724976880103143646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_59
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 1187
+        width: 749
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73339466d07800a0800000000000000
+      internalID: -6915153161714715780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_60
+      rect:
+        serializedVersion: 2
+        x: 4573
+        y: 1187
+        width: 748
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52e8ccf279c534d0800000000000000
+      internalID: -3155394468198686116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_61
+      rect:
+        serializedVersion: 2
+        x: 5333
+        y: 1187
+        width: 747
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f996ea456779bc0800000000000000
+      internalID: -3776419656451383471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_62
+      rect:
+        serializedVersion: 2
+        x: 6093
+        y: 1188
+        width: 747
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfaafa04fbfd3ebf0800000000000000
+      internalID: -296147137959318788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_63
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 599
+        width: 746
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da201ebd89b5cc900800000000000000
+      internalID: 706039953672438445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_64
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 596
+        width: 746
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3a514fda022ba20800000000000000
+      internalID: 3076557426943959968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_65
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 593
+        width: 744
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f58f1d8ceb2b140800000000000000
+      internalID: 4734055928045264749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_66
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 590
+        width: 744
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7541d13c983dbfb0800000000000000
+      internalID: -4630482598365149826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_67
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 589
+        width: 744
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31579ff423016c50800000000000000
+      internalID: 6656605181672116538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_68
+      rect:
+        serializedVersion: 2
+        x: 3815
+        y: 589
+        width: 744
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4c4160450dfc130800000000000000
+      internalID: 3589316487335429316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_69
+      rect:
+        serializedVersion: 2
+        x: 4576
+        y: 589
+        width: 743
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0164526a87028450800000000000000
+      internalID: 6089437937094910220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_70
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 590
+        width: 743
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357c02b7bdac9e8b0800000000000000
+      internalID: -5122340057144834221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_71
+      rect:
+        serializedVersion: 2
+        x: 6096
+        y: 591
+        width: 742
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6262a69802c0d3a40800000000000000
+      internalID: 5349445266269939238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_72
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3
+        width: 742
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0446cf96fbc605e50800000000000000
+      internalID: 6796051407074780224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_73
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 4
+        width: 742
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9749d080bd38600800000000000000
+      internalID: 469459613810719224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_74
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a9fa43dae05e9d0800000000000000
+      internalID: -2745772260736394627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_75
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7078ef6d77eb7dd0800000000000000
+      internalID: -2487139843257634690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_76
+      rect:
+        serializedVersion: 2
+        x: 3056
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2a55ee0706c8020800000000000000
+      internalID: 2345355544104379071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_77
+      rect:
+        serializedVersion: 2
+        x: 3816
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8209006282dc93540800000000000000
+      internalID: 4988243634609492008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_78
+      rect:
+        serializedVersion: 2
+        x: 4576
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3dc0399af6e54b0800000000000000
+      internalID: -5449795724964473919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_79
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461f95eaeb3116450800000000000000
+      internalID: 6080162681616724324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Run_80
+      rect:
+        serializedVersion: 2
+        x: 6096
+        y: 5
+        width: 742
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf52f9cec66724940800000000000000
+      internalID: 5278911923430041083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

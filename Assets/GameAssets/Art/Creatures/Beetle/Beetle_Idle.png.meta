@@ -1,0 +1,2551 @@
+fileFormatVersion: 2
+guid: f0aa32846c9de444ca0c45d0fc474300
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -681296081612547810
+    second: Beetle_Idle_0
+  - first:
+      213: 6310802981389237232
+    second: Beetle_Idle_1
+  - first:
+      213: -4401832630927921292
+    second: Beetle_Idle_2
+  - first:
+      213: -950727321664563131
+    second: Beetle_Idle_3
+  - first:
+      213: 7174754701006357770
+    second: Beetle_Idle_4
+  - first:
+      213: 4668626603687833241
+    second: Beetle_Idle_5
+  - first:
+      213: 8761739169383590589
+    second: Beetle_Idle_6
+  - first:
+      213: 1989200872060732709
+    second: Beetle_Idle_7
+  - first:
+      213: -611894695206898275
+    second: Beetle_Idle_8
+  - first:
+      213: -4128362340230882316
+    second: Beetle_Idle_9
+  - first:
+      213: 4759429920886909581
+    second: Beetle_Idle_10
+  - first:
+      213: -7405483925793253401
+    second: Beetle_Idle_11
+  - first:
+      213: 954653314195234040
+    second: Beetle_Idle_12
+  - first:
+      213: 3895839917409565535
+    second: Beetle_Idle_13
+  - first:
+      213: -5170456721115820383
+    second: Beetle_Idle_14
+  - first:
+      213: -1998974082599834305
+    second: Beetle_Idle_15
+  - first:
+      213: -5258385198853959728
+    second: Beetle_Idle_16
+  - first:
+      213: -6003745480179454102
+    second: Beetle_Idle_17
+  - first:
+      213: -8758652707075919286
+    second: Beetle_Idle_18
+  - first:
+      213: -1073397941277712803
+    second: Beetle_Idle_19
+  - first:
+      213: 2963522879339157024
+    second: Beetle_Idle_20
+  - first:
+      213: 1313137219268601981
+    second: Beetle_Idle_21
+  - first:
+      213: 4746471773417810402
+    second: Beetle_Idle_22
+  - first:
+      213: 5254681832714195274
+    second: Beetle_Idle_23
+  - first:
+      213: 8799600766485669350
+    second: Beetle_Idle_24
+  - first:
+      213: -3666703959481422477
+    second: Beetle_Idle_25
+  - first:
+      213: -2605540981587357823
+    second: Beetle_Idle_26
+  - first:
+      213: -5987506845251167798
+    second: Beetle_Idle_27
+  - first:
+      213: 6616593787427701081
+    second: Beetle_Idle_28
+  - first:
+      213: 4980844119111161415
+    second: Beetle_Idle_29
+  - first:
+      213: -1942933561575084017
+    second: Beetle_Idle_30
+  - first:
+      213: -3795732859430753037
+    second: Beetle_Idle_31
+  - first:
+      213: 5809228325255357808
+    second: Beetle_Idle_32
+  - first:
+      213: 6985176892187719745
+    second: Beetle_Idle_33
+  - first:
+      213: 3741517244616039957
+    second: Beetle_Idle_34
+  - first:
+      213: 2643339931126404153
+    second: Beetle_Idle_35
+  - first:
+      213: 9009973236672270352
+    second: Beetle_Idle_36
+  - first:
+      213: 7783487371677912932
+    second: Beetle_Idle_37
+  - first:
+      213: -4120900109522489054
+    second: Beetle_Idle_38
+  - first:
+      213: -2291158232767595100
+    second: Beetle_Idle_39
+  - first:
+      213: -2368075130827246669
+    second: Beetle_Idle_40
+  - first:
+      213: 5032777372271465880
+    second: Beetle_Idle_41
+  - first:
+      213: -5093960462591476464
+    second: Beetle_Idle_42
+  - first:
+      213: 1575006116425277793
+    second: Beetle_Idle_43
+  - first:
+      213: -5083215795336116635
+    second: Beetle_Idle_44
+  - first:
+      213: 4124544132082236906
+    second: Beetle_Idle_45
+  - first:
+      213: 5849638058628098124
+    second: Beetle_Idle_46
+  - first:
+      213: 1697306821075583550
+    second: Beetle_Idle_47
+  - first:
+      213: -1161042509318110770
+    second: Beetle_Idle_48
+  - first:
+      213: 2814948866670494617
+    second: Beetle_Idle_49
+  - first:
+      213: 1855316626010330869
+    second: Beetle_Idle_50
+  - first:
+      213: -6061423953689145100
+    second: Beetle_Idle_51
+  - first:
+      213: -5008022475109498506
+    second: Beetle_Idle_52
+  - first:
+      213: 8963110297016194157
+    second: Beetle_Idle_53
+  - first:
+      213: 2807547212648142263
+    second: Beetle_Idle_54
+  - first:
+      213: -4227472122469994274
+    second: Beetle_Idle_55
+  - first:
+      213: 5035378818115351730
+    second: Beetle_Idle_56
+  - first:
+      213: -1865523302526969107
+    second: Beetle_Idle_57
+  - first:
+      213: 1169958452159655123
+    second: Beetle_Idle_58
+  - first:
+      213: 2038866637006972255
+    second: Beetle_Idle_59
+  - first:
+      213: -980001181507404400
+    second: Beetle_Idle_60
+  - first:
+      213: -3270208009415424188
+    second: Beetle_Idle_61
+  - first:
+      213: -4130259507162683170
+    second: Beetle_Idle_62
+  - first:
+      213: -125865006778833018
+    second: Beetle_Idle_63
+  - first:
+      213: -6433547771483504992
+    second: Beetle_Idle_64
+  - first:
+      213: 4260288070313898272
+    second: Beetle_Idle_65
+  - first:
+      213: -3929237542444683895
+    second: Beetle_Idle_66
+  - first:
+      213: -6248574414756911060
+    second: Beetle_Idle_67
+  - first:
+      213: -1175438409334102669
+    second: Beetle_Idle_68
+  - first:
+      213: -2947315487458162515
+    second: Beetle_Idle_69
+  - first:
+      213: -6793254424962232712
+    second: Beetle_Idle_70
+  - first:
+      213: -3742068071429199030
+    second: Beetle_Idle_71
+  - first:
+      213: -3603396581479355637
+    second: Beetle_Idle_72
+  - first:
+      213: 8884935682217844989
+    second: Beetle_Idle_73
+  - first:
+      213: -7869673074379661369
+    second: Beetle_Idle_74
+  - first:
+      213: 595126010931822692
+    second: Beetle_Idle_75
+  - first:
+      213: -8800838771543736371
+    second: Beetle_Idle_76
+  - first:
+      213: 8700412153088804781
+    second: Beetle_Idle_77
+  - first:
+      213: -7646476381793980295
+    second: Beetle_Idle_78
+  - first:
+      213: -123283991305629320
+    second: Beetle_Idle_79
+  - first:
+      213: 4383438627642139235
+    second: Beetle_Idle_80
+  - first:
+      213: -3384294693539975326
+    second: Beetle_Idle_81
+  - first:
+      213: -7560322038297877179
+    second: Beetle_Idle_82
+  - first:
+      213: -2692583305307083380
+    second: Beetle_Idle_83
+  - first:
+      213: -7850296306016396311
+    second: Beetle_Idle_84
+  - first:
+      213: 7946876706902011969
+    second: Beetle_Idle_85
+  - first:
+      213: -7778961744698582417
+    second: Beetle_Idle_86
+  - first:
+      213: 9066852481179021711
+    second: Beetle_Idle_87
+  - first:
+      213: -2232607839308950175
+    second: Beetle_Idle_88
+  - first:
+      213: -4032121013095722325
+    second: Beetle_Idle_89
+  - first:
+      213: -3973359954461438835
+    second: Beetle_Idle_90
+  - first:
+      213: 9087528635773515867
+    second: Beetle_Idle_91
+  - first:
+      213: 2577679142214442005
+    second: Beetle_Idle_92
+  - first:
+      213: -1904123329287905910
+    second: Beetle_Idle_93
+  - first:
+      213: -6237244953380110053
+    second: Beetle_Idle_94
+  - first:
+      213: -8712964954122416917
+    second: Beetle_Idle_95
+  - first:
+      213: -7317948035870814556
+    second: Beetle_Idle_96
+  - first:
+      213: 6448759613525378871
+    second: Beetle_Idle_97
+  - first:
+      213: 5788439646882675582
+    second: Beetle_Idle_98
+  - first:
+      213: -8102683774249531536
+    second: Beetle_Idle_99
+  - first:
+      213: -2226729311292939511
+    second: Beetle_Idle_100
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Beetle_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5327
+        width: 729
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e195e9cc2dc8b86f0800000000000000
+      internalID: -681296081612547810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 5327
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb7e2120e9749750800000000000000
+      internalID: 6310802981389237232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 5327
+        width: 729
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f61d84b8c89e2c0800000000000000
+      internalID: -4401832630927921292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 5327
+        width: 729
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548dce1c9865ec2f0800000000000000
+      internalID: -950727321664563131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 5327
+        width: 729
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a054c081369d19360800000000000000
+      internalID: 7174754701006357770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 3641
+        y: 5327
+        width: 728
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e60cd192b4ac040800000000000000
+      internalID: 4668626603687833241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 4370
+        y: 5327
+        width: 727
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba2cb55a53f79970800000000000000
+      internalID: 8761739169383590589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 5099
+        y: 5327
+        width: 726
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525c31667af0b9b10800000000000000
+      internalID: 1989200872060732709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 5828
+        y: 5327
+        width: 725
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d953f34440d1287f0800000000000000
+      internalID: -611894695206898275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 6557
+        y: 5327
+        width: 724
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb1076135c15b6c0800000000000000
+      internalID: -4128362340230882316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 7286
+        y: 5327
+        width: 722
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a64d7eb44ec0240800000000000000
+      internalID: 4759429920886909581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 4735
+        width: 721
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e75a3dfa9f6a3990800000000000000
+      internalID: -7405483925793253401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 4735
+        width: 721
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc914c912c9f3d00800000000000000
+      internalID: 954653314195234040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 4735
+        width: 719
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bfbfa83cdc01630800000000000000
+      internalID: 3895839917409565535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 4735
+        width: 718
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ae4c53a109de38b0800000000000000
+      internalID: -5170456721115820383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 2924
+        y: 4735
+        width: 717
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3dac63b9a73244e0800000000000000
+      internalID: -1998974082599834305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 4735
+        width: 709
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df432295867607b0800000000000000
+      internalID: -5258385198853959728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 4396
+        y: 4735
+        width: 701
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6feb048b496eaca0800000000000000
+      internalID: -6003745480179454102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 4143
+        width: 641
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42f9bba4c3037680800000000000000
+      internalID: -8758652707075919286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 5131
+        y: 4735
+        width: 693
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e918f62468a11f0800000000000000
+      internalID: -1073397941277712803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 4144
+        width: 641
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026d0ca7b5c802920800000000000000
+      internalID: 2963522879339157024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 5867
+        y: 4735
+        width: 685
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7869d7f753393210800000000000000
+      internalID: 1313137219268601981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 5912
+        y: 4144
+        width: 641
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9acf61eeaded140800000000000000
+      internalID: 4746471773417810402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 6603
+        y: 4735
+        width: 678
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41d0ae49416ce840800000000000000
+      internalID: 5254681832714195274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 6640
+        y: 4145
+        width: 641
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e522ab56467e1a70800000000000000
+      internalID: 8799600766485669350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 7338
+        y: 4735
+        width: 670
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d67960d204d1dc0800000000000000
+      internalID: -3666703959481422477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 7367
+        y: 4146
+        width: 641
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f43c0384247dbd0800000000000000
+      internalID: -2605540981587357823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 4143
+        width: 664
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac995965f3a18eca0800000000000000
+      internalID: -5987506845251167798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 3554
+        width: 643
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9514fa25efcd2db50800000000000000
+      internalID: 6616593787427701081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 4143
+        width: 659
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746d63136538f1540800000000000000
+      internalID: 4980844119111161415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 4143
+        width: 654
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00f12848305905e0800000000000000
+      internalID: -1942933561575084017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 4143
+        width: 650
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc2a533319d25bc0800000000000000
+      internalID: -3795732859430753037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 2994
+        y: 4143
+        width: 646
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075abf912668e9050800000000000000
+      internalID: 5809228325255357808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 4143
+        width: 644
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148bd18df5550f060800000000000000
+      internalID: 6985176892187719745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3555
+        width: 645
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e565e4c1a8ce330800000000000000
+      internalID: 3741517244616039957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 3556
+        width: 647
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934156f89a70fa420800000000000000
+      internalID: 2643339931126404153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 3557
+        width: 650
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01090affbead90d70800000000000000
+      internalID: 9009973236672270352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3558
+        width: 653
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46fc99e9680840c60800000000000000
+      internalID: 7783487371677912932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 3559
+        width: 657
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2213b011f2f9fc6c0800000000000000
+      internalID: -4120900109522489054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 4436
+        y: 3559
+        width: 661
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4adfca3f9bb2430e0800000000000000
+      internalID: -2291158232767595100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 5158
+        y: 3560
+        width: 666
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3fa911738e22fd0800000000000000
+      internalID: -2368075130827246669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 5880
+        y: 3561
+        width: 672
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8955dd3fa5408d540800000000000000
+      internalID: 5032777372271465880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 6602
+        y: 3562
+        width: 679
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01db95fb2fd9e49b0800000000000000
+      internalID: -5093960462591476464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 7324
+        y: 3563
+        width: 684
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161a898d7bb8bd510800000000000000
+      internalID: 1575006116425277793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2971
+        width: 691
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566065a8a2ac479b0800000000000000
+      internalID: -5083215795336116635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 2972
+        width: 697
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedfe2d09035d3930800000000000000
+      internalID: 4124544132082236906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 2972
+        width: 705
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48222552d61e2150800000000000000
+      internalID: 5849638058628098124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2973
+        width: 710
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32ce01af8b0e8710800000000000000
+      internalID: 1697306821075583550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 2924
+        y: 2973
+        width: 716
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec147fe3df523efe0800000000000000
+      internalID: -1161042509318110770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 2973
+        width: 718
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99388ca7415b01720800000000000000
+      internalID: 2814948866670494617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 4377
+        y: 2972
+        width: 719
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f6d83734a86fb910800000000000000
+      internalID: 1855316626010330869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 5104
+        y: 2972
+        width: 720
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f09057670f71eba0800000000000000
+      internalID: -6061423953689145100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 5831
+        y: 2972
+        width: 721
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6710defa71eef7ab0800000000000000
+      internalID: -5008022475109498506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 6558
+        y: 2971
+        width: 722
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64db48935d536c70800000000000000
+      internalID: 8963110297016194157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 7286
+        y: 2970
+        width: 722
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5d70c905966f620800000000000000
+      internalID: 2807547212648142263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2378
+        width: 723
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed03f42b0800555c0800000000000000
+      internalID: -4227472122469994274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 2377
+        width: 725
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4ba434b5241e540800000000000000
+      internalID: 5035378818115351730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 2376
+        width: 724
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea9aa8b0745c16e0800000000000000
+      internalID: -1865523302526969107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 2375
+        width: 725
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc21f673078c3010800000000000000
+      internalID: 1169958452159655123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 2375
+        width: 727
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f55223b67628b4c10800000000000000
+      internalID: 2038866637006972255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2374
+        width: 726
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09db9c02e165662f0800000000000000
+      internalID: -980001181507404400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 4370
+        y: 2373
+        width: 726
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44708294423ed92d0800000000000000
+      internalID: -3270208009415424188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 5097
+        y: 2373
+        width: 728
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8636d7cde5ea6c0800000000000000
+      internalID: -4130259507162683170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_63
+      rect:
+        serializedVersion: 2
+        x: 5825
+        y: 2372
+        width: 728
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687ab457176d04ef0800000000000000
+      internalID: -125865006778833018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_64
+      rect:
+        serializedVersion: 2
+        x: 6552
+        y: 2371
+        width: 729
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae3833636277b6a0800000000000000
+      internalID: -6433547771483504992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_65
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 2370
+        width: 728
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021f4ef8d659f1b30800000000000000
+      internalID: 4260288070313898272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1777
+        width: 729
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98da47ce54b8879c0800000000000000
+      internalID: -3929237542444683895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_67
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1777
+        width: 729
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28e1d71daa9849a0800000000000000
+      internalID: -6248574414756911060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_68
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1776
+        width: 729
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3756a449ef000bfe0800000000000000
+      internalID: -1175438409334102669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_69
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 1776
+        width: 730
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da88c010e280917d0800000000000000
+      internalID: -2947315487458162515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_70
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 1776
+        width: 730
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e864bb71389b1a0800000000000000
+      internalID: -6793254424962232712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_71
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 1775
+        width: 730
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ba1255ae0811cc0800000000000000
+      internalID: -3742068071429199030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_72
+      rect:
+        serializedVersion: 2
+        x: 4367
+        y: 1775
+        width: 730
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0be01896e92efdc0800000000000000
+      internalID: -3603396581479355637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_73
+      rect:
+        serializedVersion: 2
+        x: 5095
+        y: 1775
+        width: 730
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0a9c6bde1ad4b70800000000000000
+      internalID: 8884935682217844989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_74
+      rect:
+        serializedVersion: 2
+        x: 5823
+        y: 1775
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfd42fb80e49c290800000000000000
+      internalID: -7869673074379661369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_75
+      rect:
+        serializedVersion: 2
+        x: 6551
+        y: 1775
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460cf2e24ff424800800000000000000
+      internalID: 595126010931822692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_76
+      rect:
+        serializedVersion: 2
+        x: 7279
+        y: 1775
+        width: 729
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf76a024c32dd580800000000000000
+      internalID: -8800838771543736371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1183
+        width: 729
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da78958a1c21eb870800000000000000
+      internalID: 8700412153088804781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_78
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97071c75e3242e590800000000000000
+      internalID: -7646476381793980295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_79
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8715cb3fcd10a4ef0800000000000000
+      internalID: -123283991305629320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_80
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362e557153a15dc30800000000000000
+      internalID: 4383438627642139235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_81
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f6f4038e19801d0800000000000000
+      internalID: -3384294693539975326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_82
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 545a2b79927541790800000000000000
+      internalID: -7560322038297877179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_83
+      rect:
+        serializedVersion: 2
+        x: 4367
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d260fefb502aad0800000000000000
+      internalID: -2692583305307083380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_84
+      rect:
+        serializedVersion: 2
+        x: 5095
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebd4523a152e0390800000000000000
+      internalID: -7850296306016396311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_85
+      rect:
+        serializedVersion: 2
+        x: 5823
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14078b4b24af84e60800000000000000
+      internalID: 7946876706902011969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_86
+      rect:
+        serializedVersion: 2
+        x: 6551
+        y: 1183
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a53e502839b0490800000000000000
+      internalID: -7778961744698582417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_87
+      rect:
+        serializedVersion: 2
+        x: 7279
+        y: 1183
+        width: 729
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f817b8b1b4ee3dd70800000000000000
+      internalID: 9066852481179021711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 591
+        width: 729
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165dc3fbffe2401e0800000000000000
+      internalID: -2232607839308950175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_89
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba29a0b3d470b08c0800000000000000
+      internalID: -4032121013095722325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_90
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c40955c2acbd8c0800000000000000
+      internalID: -3973359954461438835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_91
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58787d75236d1e70800000000000000
+      internalID: 9087528635773515867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_92
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c10a0d581c5c320800000000000000
+      internalID: 2577679142214442005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_93
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d9245abe13395e0800000000000000
+      internalID: -1904123329287905910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_94
+      rect:
+        serializedVersion: 2
+        x: 4367
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b114ea0e2cad079a0800000000000000
+      internalID: -6237244953380110053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_95
+      rect:
+        serializedVersion: 2
+        x: 5095
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec0b199984551780800000000000000
+      internalID: -8712964954122416917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_96
+      rect:
+        serializedVersion: 2
+        x: 5823
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae0725980d617a90800000000000000
+      internalID: -7317948035870814556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_97
+      rect:
+        serializedVersion: 2
+        x: 6551
+        y: 591
+        width: 730
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737c01693b89e7950800000000000000
+      internalID: 6448759613525378871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_98
+      rect:
+        serializedVersion: 2
+        x: 7279
+        y: 591
+        width: 729
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7bba3cb03ba45050800000000000000
+      internalID: 5788439646882675582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 729
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0770984890c7d8f80800000000000000
+      internalID: -8102683774249531536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetle_Idle_100
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 0
+        width: 730
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9032f653d711911e0800000000000000
+      internalID: -2226729311292939511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
