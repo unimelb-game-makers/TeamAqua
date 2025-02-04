@@ -6,14 +6,16 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SoundChanger : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    public static SoundChanger instance;
+    public static AudioManager Instance;
     public AudioSource Source; // the original track
     public AudioClip newClip;   // the replacement track
     public float fadeSpeed;
     public float delayTrack;     // the time delay before new track is played
     public AudioMixerGroup MixerBgm;
+    public SoundDatabase soundDatabase;
+    private string currentBgm = string.Empty;
 
 /*=======DEV NOTE: maybe use scriptable objects to have ids on the tracks, so we can use strings to load whichever track we want
 without having to declare a public audioclip newClip. We might also be able to store data like volume, pitch, each track's unique properties (if they have) in there as well
@@ -29,15 +31,14 @@ Swap()
 
 making changed to audio delivery code to add fade out
 */
-    void Awake()
+    private void Awake()
     {
-        instance = this;    //should there be multiple instances of soundchangers in a scene....
+        if (Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
     }
-
-    public static SoundChanger Instance()
-    {
-        return instance;
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,7 @@ making changed to audio delivery code to add fade out
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Play("SUNEATER");
+            PlayBGM("SUNEATER");
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -62,11 +63,6 @@ making changed to audio delivery code to add fade out
         {
             StartCoroutine(ChangeSound(fadeSpeed, delayTrack, "FLUTTERING_CRITTER", "SUNEATER"));
         }
-    }
-    public void Play(string id)
-    {
-        // play an audio, to be used when no other audio is currently playing
-        ServiceLocator.Instance.Get<IAudioService>().Play(id);
     }
 
     public IEnumerator ChangeSound(float FadeTime, float delay, string id, string old_id) 
@@ -83,13 +79,51 @@ making changed to audio delivery code to add fade out
             Debug.Log("fading out audio");
             yield return null;
         }
-        // switch track
-        //Source.Stop();
-        ServiceLocator.Instance.Get<IAudioService>().Stop(old_id);
+        Stop(old_id);
         Source.volume = startVolume;
-        //ServiceLocator.Instance.Get<IAudioService>().
-        ServiceLocator.Instance.Get<IAudioService>().Play(id);
-        //Source.clip = newClip;
-        //Source.PlayDelayed(delay);    <- playdelayed wont work anymore, may need to use start coroutine in tandem with audio delivery plug-in
+        Play(id);
+    }
+    
+    public void PlayBGM(string clipName)
+    {
+        if (string.IsNullOrEmpty(currentBgm))
+        {
+            Stop(currentBgm);
+        }
+
+        currentBgm = clipName;
+        Play(currentBgm);
+    }
+    
+    public void Play(string clipName, string instanceId = "")
+    {
+        if (soundDatabase.TryGetSound(clipName, out Sound sound))
+            sound.config.Play(instanceId);
+        else
+            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+    }
+
+    public void Pause(string clipName, string instanceId = "")
+    {
+        if (soundDatabase.TryGetSound(clipName, out Sound sound))
+            sound.config.Pause(instanceId);
+        else
+            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+    }
+
+    public void Resume(string clipName, string instanceId = "")
+    {
+        if (soundDatabase.TryGetSound(clipName, out Sound sound))
+            sound.config.Resume(instanceId);
+        else
+            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+    }
+
+    public void Stop(string clipName, string instanceId = "")
+    {
+        if (soundDatabase.TryGetSound(clipName, out Sound sound))
+            sound.config.Stop(instanceId);
+        else
+            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
     }
 }

@@ -41,9 +41,7 @@ public class Puzzle : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             playerEntered = true;
             puzzleCam.gameObject.SetActive(true);
-
-            //StartCoroutine(SoundChanger.instance.ChangeSound(3, 0, "PUZZLE_ENTER"));  //<_ used sound changer script as middlemen to add features not included in plugins such as fade-out effects, delay inbetween switching tracks.
-            ServiceLocator.Instance.Get<IAudioService>().Play("PUZZLE_ENTER");
+            AudioManager.Instance.Play("PUZZLE_ENTER");
         }
     }
     private void OnTriggerExit(Collider other) {
