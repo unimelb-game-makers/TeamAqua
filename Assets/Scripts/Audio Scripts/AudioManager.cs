@@ -1,21 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using Kuroneko.AudioDelivery;
-using Kuroneko.UtilityDelivery;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public AudioSource Source; // the original track
-    public AudioClip newClip;   // the replacement track
     public float fadeSpeed;
-    public float delayTrack;     // the time delay before new track is played
-    public AudioMixerGroup MixerBgm;
     public SoundDatabase soundDatabase;
-    private string currentBgm = string.Empty;
+    
+    private string _currentBgm = string.Empty;
 
 /*=======DEV NOTE: maybe use scriptable objects to have ids on the tracks, so we can use strings to load whichever track we want
 without having to declare a public audioclip newClip. We might also be able to store data like volume, pitch, each track's unique properties (if they have) in there as well
@@ -33,66 +26,44 @@ making changed to audio delivery code to add fade out
 */
     private void Awake()
     {
-        if (Instance != this)
+        if (Instance != null && Instance != this)
             Destroy(gameObject);
         else
             Instance = this;
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Source =  GameObject.Find("AudioSource").GetComponent<AudioSource>();  // get the audio source component from the scene
-        Source = MixerBgm.GetComponent<AudioSource>();
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            PlayBGM("SUNEATER");
+            StartCoroutine(PlayBGM("SUNEATER"));
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            StartCoroutine(ChangeSound(fadeSpeed, delayTrack, "SUNEATER", "FLUTTERING_CRITTER"));
-        }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StartCoroutine(ChangeSound(fadeSpeed, delayTrack, "FLUTTERING_CRITTER", "SUNEATER"));
+            StartCoroutine(PlayBGM("FLUTTERING_CRITTER"));
         }
     }
 
-    public IEnumerator ChangeSound(float FadeTime, float delay, string id, string old_id) 
+    public IEnumerator PlayBGM(string clipName)
     {
-        // id is the id used to identify each track
-        // fades the volume gradually over {FadeTime} amount of time, 
-        // and then wait for {delay} amount of time, and then switches to new audio
-
-        //if want abrupt switch, set FadeTime and delay to 0
-        float startVolume = Source.volume;
-        // fade out volume
-        while (Source.volume > 0) {
-            Source.volume -= startVolume * Time.deltaTime / FadeTime;
-            Debug.Log("fading out audio");
-            yield return null;
-        }
-        Stop(old_id);
-        Source.volume = startVolume;
-        Play(id);
-    }
-    
-    public void PlayBGM(string clipName)
-    {
-        if (string.IsNullOrEmpty(currentBgm))
+        if (!string.IsNullOrEmpty(_currentBgm) && soundDatabase.TryGetSound(_currentBgm, out Sound current))
         {
-            Stop(currentBgm);
+            // Stops the current playing BGM
+            AudioSource source = current.config.Get();
+            if (source)
+            {
+                float startVolume = source.volume;
+                while (source.volume > 0)
+                {
+                    source.volume -= startVolume * Time.deltaTime / fadeSpeed;
+                    yield return null;
+                }
+            }
+            Stop(_currentBgm);
         }
-
-        currentBgm = clipName;
-        Play(currentBgm);
+        // PLays the next BGM
+        _currentBgm = clipName;
+        Play(_currentBgm);
     }
     
     public void Play(string clipName, string instanceId = "")
