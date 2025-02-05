@@ -1295,7 +1295,56 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Amelia_Idle_0: -7302072580933595064
+      Amelia_Idle_1: -7309281902429325919
+      Amelia_Idle_10: 7771623629127738031
+      Amelia_Idle_11: -6779072650993660719
+      Amelia_Idle_12: -1918920202651701334
+      Amelia_Idle_13: 3741400863844417712
+      Amelia_Idle_14: -5762340349962056999
+      Amelia_Idle_15: 2966576632793361086
+      Amelia_Idle_16: -8918382157509176395
+      Amelia_Idle_17: -5835721533418391659
+      Amelia_Idle_18: 4956636608345306472
+      Amelia_Idle_19: 218212549440871480
+      Amelia_Idle_2: -6816587966633349277
+      Amelia_Idle_20: -359716900837685722
+      Amelia_Idle_21: 7530527754697950183
+      Amelia_Idle_22: -1427813819368974685
+      Amelia_Idle_23: -2419816965225741260
+      Amelia_Idle_24: -906489583011454625
+      Amelia_Idle_25: -8253712113644550384
+      Amelia_Idle_26: 1229919966145306610
+      Amelia_Idle_27: 6301652053211312808
+      Amelia_Idle_28: -4845178795714958421
+      Amelia_Idle_29: -3789000136991039115
+      Amelia_Idle_3: 6869945305988939641
+      Amelia_Idle_30: 6432952536365144018
+      Amelia_Idle_31: 2191070257382414438
+      Amelia_Idle_32: 1517593534697640962
+      Amelia_Idle_33: 8931416178965689778
+      Amelia_Idle_34: 8029953229428627314
+      Amelia_Idle_35: -4789066486121420865
+      Amelia_Idle_36: -3597585472474314441
+      Amelia_Idle_37: -1258031677398991092
+      Amelia_Idle_38: 4102151382599487225
+      Amelia_Idle_39: 6316094326345611071
+      Amelia_Idle_4: -5221142762665653044
+      Amelia_Idle_40: 45781860701380321
+      Amelia_Idle_41: 172526673860404304
+      Amelia_Idle_42: -1051449401863251179
+      Amelia_Idle_43: 3929392580470058006
+      Amelia_Idle_44: -4003722728922349040
+      Amelia_Idle_45: 5375122507084886691
+      Amelia_Idle_46: -37376504000465109
+      Amelia_Idle_47: 3034408794402328835
+      Amelia_Idle_48: -4215847077561854140
+      Amelia_Idle_5: -194316809555943342
+      Amelia_Idle_6: -4623420943457068838
+      Amelia_Idle_7: 2100910581558544611
+      Amelia_Idle_8: -517836336379067437
+      Amelia_Idle_9: -84114228004431928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

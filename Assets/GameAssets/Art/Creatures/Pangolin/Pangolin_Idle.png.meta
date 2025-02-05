@@ -1511,7 +1511,65 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pangolin_Idle_0: -1526581666681609227
+      Pangolin_Idle_1: 2473482110211661052
+      Pangolin_Idle_10: -2702668426281167715
+      Pangolin_Idle_11: 3754567591855927189
+      Pangolin_Idle_12: 6268513657650668519
+      Pangolin_Idle_13: -2503688609961456801
+      Pangolin_Idle_14: -810088098149961736
+      Pangolin_Idle_15: 214727171649395872
+      Pangolin_Idle_16: -1169381174096660307
+      Pangolin_Idle_17: -6862887990125833404
+      Pangolin_Idle_18: 981415527425855617
+      Pangolin_Idle_19: -8069101669714996382
+      Pangolin_Idle_2: 6698122862542005956
+      Pangolin_Idle_20: 6955193789700804109
+      Pangolin_Idle_21: -6475706284229504628
+      Pangolin_Idle_22: 714103882913999544
+      Pangolin_Idle_23: 8555045629610773864
+      Pangolin_Idle_24: 276610721872924004
+      Pangolin_Idle_25: 8179057994424238785
+      Pangolin_Idle_26: -8959428115915595389
+      Pangolin_Idle_27: -5281551481901200457
+      Pangolin_Idle_28: -1768722700065641775
+      Pangolin_Idle_29: 8941420572642699312
+      Pangolin_Idle_3: 32411142707938924
+      Pangolin_Idle_30: -8110639812231046197
+      Pangolin_Idle_31: 8351365999179248787
+      Pangolin_Idle_32: -2091562610240846219
+      Pangolin_Idle_33: 5528186593444250989
+      Pangolin_Idle_34: 7670185520474597958
+      Pangolin_Idle_35: -5777043087943412994
+      Pangolin_Idle_36: 6476691665411046379
+      Pangolin_Idle_37: -7324240064084754643
+      Pangolin_Idle_38: -1197278186886469829
+      Pangolin_Idle_39: 6057246256477301754
+      Pangolin_Idle_4: 3786361292014314590
+      Pangolin_Idle_40: 3977052064073542671
+      Pangolin_Idle_41: 3441504434139168207
+      Pangolin_Idle_42: 1710079394383150813
+      Pangolin_Idle_43: 6999657353067752904
+      Pangolin_Idle_44: -4515066252830864249
+      Pangolin_Idle_45: -4479411883841494182
+      Pangolin_Idle_46: -3760891652207535770
+      Pangolin_Idle_47: -4637715093322860431
+      Pangolin_Idle_48: -9100070107372336291
+      Pangolin_Idle_49: -2082291429838859723
+      Pangolin_Idle_5: 107729263372526933
+      Pangolin_Idle_50: 441608901113154338
+      Pangolin_Idle_51: -5665186585284503731
+      Pangolin_Idle_52: -4920214376083312297
+      Pangolin_Idle_53: 4619115873779652822
+      Pangolin_Idle_54: 5971543690956599258
+      Pangolin_Idle_55: 7041606529774958475
+      Pangolin_Idle_56: 2229038840684426726
+      Pangolin_Idle_57: 270366207652535776
+      Pangolin_Idle_6: -7739741672320974665
+      Pangolin_Idle_7: 617370017611149789
+      Pangolin_Idle_8: -6113263082769859160
+      Pangolin_Idle_9: 3892472609836040982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
