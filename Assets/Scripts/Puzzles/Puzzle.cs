@@ -42,12 +42,14 @@ public class Puzzle : MonoBehaviour
             playerEntered = true;
             puzzleCam.gameObject.SetActive(true);
             AudioManager.Instance.Play("PUZZLE_ENTER");
+            //AudioManager.Instance.SwapBGM("id", 5);
         }
     }
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("Player")){
             playerEntered = false;
             puzzleCam.gameObject.SetActive(false);
+            AudioManager.Instance.Stop("PUZZLE_ENTER");
         }
     }
 }

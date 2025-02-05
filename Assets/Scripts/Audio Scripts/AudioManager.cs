@@ -5,7 +5,6 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public float fadeSpeed;
     public SoundDatabase soundDatabase;
     
     private string _currentBgm = string.Empty;
@@ -36,20 +35,21 @@ making changed to audio delivery code to add fade out
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            StartCoroutine(PlayBGM("SUNEATER"));
+            StartCoroutine(SwapBGM("SUNEATER", 0));
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            StartCoroutine(PlayBGM("FLUTTERING_CRITTER"));
+            StartCoroutine(SwapBGM("FLUTTERING_CRITTER", 0));
         }
     }
 
-    public IEnumerator PlayBGM(string clipName)
+    public IEnumerator SwapBGM(string clipName, float fadeSpeed)
     {
         if (!string.IsNullOrEmpty(_currentBgm) && soundDatabase.TryGetSound(_currentBgm, out Sound current))
         {
             // Stops the current playing BGM
             AudioSource source = current.config.Get();
+            
             if (source)
             {
                 float startVolume = source.volume;
