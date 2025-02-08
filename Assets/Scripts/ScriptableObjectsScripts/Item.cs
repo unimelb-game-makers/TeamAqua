@@ -5,6 +5,7 @@ public class Item : ScriptableObject
 {
     public int itemID;
     public string itemName;
+ // public string itemAudioName;
     public Sprite sprite;
 }
 

@@ -153,7 +153,17 @@ public class DialogueSystem : MonoBehaviour
                 //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
                 DialogueTriggerControl.instance().Trigger();
             });
-            //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps        
+            //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps    
+
+            currentStory.BindExternalFunction("PlayBGM", (string id) =>
+            {// this is for starting a track during dialogue
+                AudioManager.Instance.Play(id);
+            });
+
+            currentStory.BindExternalFunction("SwapBGM", (string id, int FadeSpeed) =>
+            {// this is for switching out tracks mid-dialogue                
+                AudioManager.Instance.SwapBGM(id, FadeSpeed);
+            });
             ContinueStory();
         }
 

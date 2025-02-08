@@ -955,6 +955,7 @@ MonoBehaviour:
   - itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
     amount: 3
     energyCost: 50
+    AudioName: Collect_2
 --- !u!65 &297592574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3612,7 +3613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ae60ef4cd0e6e43aca375e2e1a88ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeSpeed: 5
   soundDatabase: {fileID: 11400000, guid: d658596a8b0a24f31ad0b681d6eff0a0, type: 2}
 --- !u!1 &1681379314
 GameObject:
@@ -3649,6 +3649,7 @@ MonoBehaviour:
   - itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
     amount: 2
     energyCost: 20
+    AudioName: Collect_1
 --- !u!65 &1681379316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6833,7 +6834,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 9190375166426613947}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9995348
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12552,7 +12553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00026123266}
+  m_AnchoredPosition: {x: 0, y: 0.000013452405}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6803148718949260126

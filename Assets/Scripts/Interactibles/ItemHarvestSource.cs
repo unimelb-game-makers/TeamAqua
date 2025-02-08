@@ -34,7 +34,8 @@ public class ItemHarvestSource : MonoBehaviour
                 else
                     itemIDX++;
             }
-            //EnergyMana.LoseEnergy(currentItem().energyCost);
+            EnergyMana.LoseEnergy(currentItem().energyCost);
+            AudioManager.Instance.Play(currentItem().AudioName);
             Debug.Log($"Harvested Item: {currentItem().itemResource.name}");
             return currentItem().itemResource;
         }
@@ -59,5 +60,7 @@ public class HarvestData
     public Item itemResource;
     public int amount = 1;
     public int energyCost;
+
+    public string AudioName;
 
 }

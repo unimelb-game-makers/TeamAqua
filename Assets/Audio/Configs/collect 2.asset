@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dc514b984f8ee74eb10d3180f200a69, type: 3}
-  m_Name: Beep
+  m_Name: collect 2
   m_EditorClassIdentifier: 
   isUsingClips: 0
-  clip: {fileID: 8300000, guid: 4d7c629ff16ab5349a61ef1e8cc39efc, type: 3}
+  clip: {fileID: 8300000, guid: d5afb38e0a8389247b108c1adcedc00a, type: 3}
   clips: []
   mixerGroup: {fileID: 24300002, guid: c5f84b84c067147da8381c49898db830, type: 2}
   volume: 1

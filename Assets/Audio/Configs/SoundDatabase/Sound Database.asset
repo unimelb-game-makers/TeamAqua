@@ -19,3 +19,7 @@ MonoBehaviour:
     config: {fileID: 11400000, guid: 052110a66974aa54f8f85fecde652256, type: 2}
   - id: FLUTTERING_CRITTER
     config: {fileID: 11400000, guid: ba7f93d1f468f7e47b1c8f223decfc39, type: 2}
+  - id: Collect_1
+    config: {fileID: 11400000, guid: 452fcec8162764bccb8bb3270aa9133a, type: 2}
+  - id: Collect_2
+    config: {fileID: 11400000, guid: e0bf614e5e473854fa36a2450489a9ab, type: 2}
