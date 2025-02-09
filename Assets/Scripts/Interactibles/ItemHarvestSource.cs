@@ -11,12 +11,10 @@ public class ItemHarvestSource : MonoBehaviour
 {
     [SerializeField] HarvestData[] harvestList;
     private int itemIDX = 0;
-    private EnergyManager EnergyMana;
     private Vector3 orig_scale; //save value of the original scale for tweening
     float popFactor = 0.8f;
     void Start()
     {
-        EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
         orig_scale = transform.localScale;
     }
 
@@ -34,8 +32,8 @@ public class ItemHarvestSource : MonoBehaviour
                 else
                     itemIDX++;
             }
-            if (EnergyMana != null)
-                EnergyMana.LoseEnergy(currentItem().energyCost);
+            if (EnergyManager.energyManager != null)
+                EnergyManager.energyManager.LoseEnergy(currentItem().energyCost);
             
             AudioManager.Instance.Play(currentItem().AudioName);
             Debug.Log($"Harvested Item: {currentItem().itemResource.name}");

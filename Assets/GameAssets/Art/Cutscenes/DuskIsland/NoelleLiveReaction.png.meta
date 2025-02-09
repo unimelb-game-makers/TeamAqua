@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NoelleLiveReaction_0: 6188010447057768184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

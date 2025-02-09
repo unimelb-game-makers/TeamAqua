@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class EnergyManager : MonoBehaviour
 {
+    public static EnergyManager energyManager;
     public Image RemainingEnergy;
     public float EnergyAmount = 100;
     void Start()
     {
-        
+        energyManager = this;
     }
 
     // Update is called once per frame
