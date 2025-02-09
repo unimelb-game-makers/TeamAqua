@@ -13,7 +13,7 @@ public class Switch : MonoBehaviour
             
             //Tell the Puzzle Parent to check all switches.
             if(puzzle)
-                puzzle.CheckFinished();
+                puzzle.TryOpenDoor();
             
             Debug.Log("Switched On");
         }

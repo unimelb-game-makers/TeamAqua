@@ -8,6 +8,12 @@ public class PushBlock : MonoBehaviour
     public bool can_push = true;
     public float move_distance = 0.2500f;
     public float tween_time = 0.25f;
+    [NonSerialized] public Vector3 startPos;
+
+    public void Start(){
+        startPos = transform.position;
+    }
+
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){

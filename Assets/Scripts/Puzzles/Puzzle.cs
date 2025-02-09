@@ -10,6 +10,7 @@ public class Puzzle : MonoBehaviour
     public CinemachineVirtualCamera puzzleCam;
     public GameObject door;
     public Switch[] switches;
+    public List<PushBlock> pushBlocks = new List<PushBlock>();
     private bool playerEntered = false;
 
     private void Start() {
@@ -23,18 +24,25 @@ public class Puzzle : MonoBehaviour
         }
     }
 
-    public void CheckFinished(){
+    private void ResetPuzzle(){
+        foreach(var pb in pushBlocks){
+            pb.transform.position = pb.startPos;
+        }
+    }
+
+    private bool isFinished(){
         //Check all Switches are on
         foreach(var _switch in switches){
             if(!_switch.On)
-                return;
+                return false;
         }
+        return true;
+    }
+
+    public void TryOpenDoor(){
         //If all switches are on, then open the door
-        Debug.Log("Opening Door");
-        if(door){
-            //door.SetActive(false);
-            LeanTween.moveLocalY(door, -0.3f, 0.5f);   
-        }
+        if(isFinished() && door)
+            LeanTween.moveLocalY(door, -0.3f, 0.5f);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -50,6 +58,10 @@ public class Puzzle : MonoBehaviour
             playerEntered = false;
             puzzleCam.gameObject.SetActive(false);
             AudioManager.Instance.Stop("PUZZLE_ENTER");
+            
+            //Reset the puzzle if it is not completed
+            if(!isFinished())
+                ResetPuzzle();
         }
     }
 }
