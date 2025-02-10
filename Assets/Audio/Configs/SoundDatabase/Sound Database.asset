@@ -23,3 +23,7 @@ MonoBehaviour:
     config: {fileID: 11400000, guid: 452fcec8162764bccb8bb3270aa9133a, type: 2}
   - id: Collect_2
     config: {fileID: 11400000, guid: e0bf614e5e473854fa36a2450489a9ab, type: 2}
+  - id: Ceremony
+    config: {fileID: 11400000, guid: 0fc4828cd08aa1b47aa07f67652fce47, type: 2}
+  - id: Into_the_storm
+    config: {fileID: 11400000, guid: 599355f72a6b0644fba8dbbe506af6d1, type: 2}
