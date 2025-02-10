@@ -10,11 +10,11 @@ A birthday tune is hummed as you sit around a campfire with your family, embers 
 We are gathered here today to celebrate the coming of age of our dear Noelle. Next in line to the Tempest family name, #speaker: Noelle's Mother
 the finest of any family here on this little island.
 A beacon of hope against any and all creatures that lurk in the shadow. 
-Cutscene art of chalice being handed over. Maybe water sloshing sound effects? #for programmers
+Cutscene art of chalice being handed over. Maybe water sloshing sound effects? #cutscene:Noelle_Cup
 … #speaker: Narrator
 Are you ready to make all of us proud? #speaker: Noelle's Mother
 You stare at the chalice, then at your grandfather and parents. Eager claps follow as you nod. #speaker: Narrator
-Excellent! #speaker: Noelle's Mother
+Excellent! #speaker: Noelle's Mother #cutscene:Noelle_half_body
 What are you waiting for then? Drink up! Awaken your inner potential!
 You stare at the chalice with a deep breath and take a gulp. #speaker: Narrator
 

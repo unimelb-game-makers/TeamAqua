@@ -629,13 +629,14 @@ GameObject:
   - component: {fileID: 1160775797}
   - component: {fileID: 1160775799}
   - component: {fileID: 1160775798}
+  - component: {fileID: 1160775800}
   m_Layer: 5
   m_Name: Image 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1160775797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -643,16 +644,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160775796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 245592895908807573}
+  m_Father: {fileID: 8278847470800466734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 333.79996}
   m_SizeDelta: {x: 1288, y: 950}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160775798
@@ -675,7 +676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2603017091314390388, guid: 003154313ea3ccb499e6fb7a47e30f95, type: 3}
+  m_Sprite: {fileID: 6698122862542005956, guid: df512d359c415b5429c243b43aebfc9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -693,6 +694,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160775796}
   m_CullTransparentMesh: 1
+--- !u!95 &1160775800
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160775796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0af7012f0408f764faae1037ef460ac0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1469847185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,8 +1175,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1160775797}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1566,13 +1588,14 @@ GameObject:
   - component: {fileID: 8278847470800466734}
   - component: {fileID: 8700576307735893223}
   - component: {fileID: 7492039398044017668}
+  - component: {fileID: 8700576307735893224}
   m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1555969972457636737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,6 +3286,7 @@ MonoBehaviour:
   rightDial: {fileID: 2995459315290688817}
   portraitAnimLeft: {fileID: 6031596958081047735}
   portraitAnimRight: {fileID: 228464349755280135}
+  cutSceneAnim: {fileID: 1160775800}
 --- !u!1 &7928559422159694348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,6 +3340,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1160775797}
   - {fileID: 6311137276673237357}
   - {fileID: 2559417474073512146}
   - {fileID: 5518160677667987974}
@@ -3345,6 +3370,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490082290320330904}
   m_CullTransparentMesh: 1
+--- !u!95 &8700576307735893224
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490082290320330904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10e90ae1984bef44c897a8509e579321, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &9094030186219320732
 RectTransform:
   m_ObjectHideFlags: 0
