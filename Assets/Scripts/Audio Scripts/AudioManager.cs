@@ -35,21 +35,25 @@ making changed to audio delivery code to add fade out
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            StartCoroutine(SwapBGM("SUNEATER", 0));
+            StartCoroutine(SwapBGM("BGM_ISLAND_SUNEATER", 1));
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            StartCoroutine(SwapBGM("FLUTTERING_CRITTER", 0));
+            StartCoroutine(SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", 0));
         }
     }
 
     public IEnumerator SwapBGM(string clipName, float fadeSpeed)
     {
-        if (!string.IsNullOrEmpty(_currentBgm) && soundDatabase.TryGetSound(_currentBgm, out Sound current))
+        if ( string.IsNullOrEmpty(_currentBgm) && soundDatabase.TryGetSound(_currentBgm, out Sound current))
         {
+
+
+            // didnt seem to get pass this if statement
+
             // Stops the current playing BGM
             AudioSource source = current.config.Get();
-            
+            Debug.Log("audio manager: first if statement passed");
             if (source)
             {
                 float startVolume = source.volume;
@@ -57,13 +61,17 @@ making changed to audio delivery code to add fade out
                 {
                     source.volume -= startVolume * Time.deltaTime / fadeSpeed;
                     yield return null;
+                    Debug.Log("stop playing pls");
                 }
             }
             Stop(_currentBgm);
+            Debug.Log(_currentBgm + "stopped playing");
         }
         // PLays the next BGM
+       // Stop(_currentBgm);
         _currentBgm = clipName;
         Play(_currentBgm);
+        Debug.Log("bgm changed to " + _currentBgm );
     }
     
     public void Play(string clipName, string instanceId = "")
@@ -92,7 +100,7 @@ making changed to audio delivery code to add fade out
 
     public void Stop(string clipName, string instanceId = "")
     {
-        if (soundDatabase.TryGetSound(clipName, out Sound sound))
+        if (soundDatabase.TryGetSound(clipName, out Sound sound))       //this check passed 2/11/25
             sound.config.Stop(instanceId);
         else
             Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");

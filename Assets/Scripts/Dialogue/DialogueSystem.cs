@@ -132,7 +132,7 @@ public class DialogueSystem : MonoBehaviour
         if (DialogueTypeID == 0)
         {
             Time.timeScale = 1;       
-            Debug.Log("time stopped");
+            //Debug.Log("time stopped");
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false;// Setting the Input provider here.
@@ -162,7 +162,14 @@ public class DialogueSystem : MonoBehaviour
 
             currentStory.BindExternalFunction("SwapBGM", (string id, int FadeSpeed) =>
             {// this is for switching out tracks mid-dialogue                
-                AudioManager.Instance.SwapBGM(id, FadeSpeed);
+                StartCoroutine(AudioManager.Instance.SwapBGM(id, FadeSpeed));
+                Debug.Log("binded audio function works");
+            });
+
+            currentStory.BindExternalFunction("ChangeCutscene", (string SceneName)=>
+            {
+                Cutscene_1.Instance.SceneChanger(SceneName);
+                Debug.Log("binded scene changing function works");
             });
             ContinueStory();
         }

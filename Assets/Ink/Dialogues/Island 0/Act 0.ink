@@ -1,6 +1,9 @@
 INCLUDE ../globals.ink
 EXTERNAL SetOffDial2ndVarTrig()
 
+
+
+
 /*
 Noelle lights up a fire. Her parents exit from the family house, and gather around a fire, humming a birthday tune. Her grandfather hobbles in not too far behind. He takes a seat on a chair on a small mound overlooking the fire, his cane at his side. From his cloak he takes out a chalice, and passes it to Noelle’s mother. Noelle’s mother smiles at her only daughter. #for programmers 
 */
