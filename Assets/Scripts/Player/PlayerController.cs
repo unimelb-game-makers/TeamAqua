@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private InputProvider inputProvider;
     [SerializeField] private float moveSpeed;       //adjust movement speed
+    [SerializeField] private Transform spriteTransform;
     private float speed;    //freezes movement or resume movement depending on condition check
 
     private Rigidbody rb;
@@ -35,14 +36,21 @@ public class PlayerController : MonoBehaviour
         {                                                   
             speed = moveSpeed;
             /*Play Animations here*/
-            if(moveInput.x > 0 && moveInput.z == 0)
-                anim.ChangeAnimationState("WalkRight");
-            else if(moveInput.x < 0 && moveInput.z == 0)
-                anim.ChangeAnimationState("WalkLeft");
-            else if(moveInput.z > 0)
-                anim.ChangeAnimationState("WalkUp");
-            else if(moveInput.z < 0)
-                anim.ChangeAnimationState("WalkDown");
+            
+            if(moveInput.x > 0 && moveInput.z == 0){// Walk Right
+                anim.ChangeAnimationState("Walk");
+                spriteTransform.rotation = Quaternion.Euler(0,180,0);
+            }
+            else if(moveInput.x < 0 && moveInput.z == 0){// Walk Left
+                anim.ChangeAnimationState("Walk");
+                spriteTransform.rotation = Quaternion.identity;
+            }   
+            else if(moveInput.z > 0){// Walk Up
+                anim.ChangeAnimationState("Walk");
+            }   
+            else if(moveInput.z < 0){// Walk Down
+                anim.ChangeAnimationState("Walk");
+            }
             else
                 anim.ChangeAnimationState("Idle");
         }
