@@ -18,8 +18,10 @@ public class DialogueTags : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     [SerializeField] private Animator portraitAnimLeft;
     [SerializeField] private Animator portraitAnimRight;
+    [SerializeField] private Animator cutSceneAnim;
     private const string LAYOUT_TAG = "layout";
     private const string AUDIO_TAG = "audio";
+    private const string CUTSCENE_TAG = "cutscene";
     public static DialogueTags dialTags;
     // Start is called before the first frame update
     void Start()
@@ -114,6 +116,12 @@ public class DialogueTags : MonoBehaviour
                     Debug.LogWarning("tag came in but is not currently being handled: " + tag);
                     break;
                 
+
+
+                case CUTSCENE_TAG:  //change speaker portrait depending on portrait tag
+                    cutSceneAnim.Play(tagValue);
+                    Debug.Log("cutscene frame is " + tagValue);
+                    break;
             }
         }        
     }

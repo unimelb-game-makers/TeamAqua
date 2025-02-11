@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: Sound Database
   m_EditorClassIdentifier: 
   sounds:
-  - id: PUZZLE_ENTER
+  - id: BGM_PUZZLE_ENTER
     config: {fileID: 11400000, guid: 452fcec8162764bccb8bb3270aa9133a, type: 2}
-  - id: SUNEATER
+  - id: BGM_ISLAND_SUNEATER
     config: {fileID: 11400000, guid: 052110a66974aa54f8f85fecde652256, type: 2}
-  - id: FLUTTERING_CRITTER
+  - id: BGM_ISLAND_FLUTTERING_CRITTER
     config: {fileID: 11400000, guid: ba7f93d1f468f7e47b1c8f223decfc39, type: 2}
-  - id: Collect_1
+  - id: BGM_SFX_COLLECT_1
     config: {fileID: 11400000, guid: 452fcec8162764bccb8bb3270aa9133a, type: 2}
-  - id: Collect_2
+  - id: BGM_SFX_COLLECT_2
     config: {fileID: 11400000, guid: e0bf614e5e473854fa36a2450489a9ab, type: 2}
+  - id: BGM_CUTSCENE_CEREMONY
+    config: {fileID: 11400000, guid: 0fc4828cd08aa1b47aa07f67652fce47, type: 2}
+  - id: BGM_CUTSCENE_INTO_THE_STORM
+    config: {fileID: 11400000, guid: 599355f72a6b0644fba8dbbe506af6d1, type: 2}
