@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class DialogueTags : MonoBehaviour
 {
@@ -76,26 +77,50 @@ public class DialogueTags : MonoBehaviour
                     break;
                 case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                     //charName.text = tagValue;
-                    if (tagValue == "Noelle")   // player's portrait on left hand side
+                    /*
+                    if(SceneManager.GetActiveScene().name == "Cutscene 1")
                     {
-                        leftDial.SetActive(true);
-                        rightDial.SetActive(false);
-                        charNameLeft.text = tagValue;
-                        //Debug.Log(tagValue);
+                        if (tagValue == "Noelle")   // player's portrait on left hand side
+                        {
+                            charNameLeft.text = tagValue;
+                            //Debug.Log(tagValue);
+                        }
+                        else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
+                        {
+                            continue;
+                        }
+                        else      // every other characters' portraits on right hand side
+                        {
+                            charNameRight.text = tagValue;
+                            //Debug.Log(tagValue);
+                        }
+                        break;
                     }
-                    else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
+                    else */
                     {
-                        leftDial.SetActive(false);
-                        rightDial.SetActive(false);
-                    }
-                    else      // every other characters' portraits on right hand side
-                    {           
-                        leftDial.SetActive(false);
-                        rightDial.SetActive(true);
-                        charNameRight.text = tagValue;
-                        //Debug.Log(tagValue);
-                    }
-                    break;
+                        if (tagValue == "Noelle")   // player's portrait on left hand side
+                        {
+                        
+                            leftDial.SetActive(true);
+                            rightDial.SetActive(false);
+                            charNameLeft.text = tagValue;
+                            //Debug.Log(tagValue);
+                        }
+                        else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
+                        {
+                            leftDial.SetActive(false);
+                            rightDial.SetActive(false);
+                        }
+                        else      // every other characters' portraits on right hand side
+                        {           
+                            leftDial.SetActive(false);
+                            rightDial.SetActive(true);
+                            charNameRight.text = tagValue;
+                            //Debug.Log(tagValue);
+                        }
+                        break;
+                    }      
+
                 case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
                     if (tagValue == "Noelle")
                     {
