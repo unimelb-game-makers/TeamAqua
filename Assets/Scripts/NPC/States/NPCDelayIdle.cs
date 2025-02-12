@@ -10,11 +10,14 @@ public class NPCDelayIdle : State
     [SerializeField] State idleState;
     [SerializeField] float waitSeconds;
 
+    [SerializeField] AnimState animState;
+
     public override void Enter()
     {
         if(waitSeconds != 0){
             StartCoroutine(delayIdle());
         }
+        animState.playAnim();
     }
 
     public override void TriggerEnter(Collider other)

@@ -13,9 +13,12 @@ public class NPCIdle : State
     [SerializeField] public TextAsset inkJSON;
     [SerializeField] public int DialogueTypeID;     //0 is default dialogue, 1 is second dialogue mode
 
+    [SerializeField] AnimState animState;
+
     public override void Enter()
     {
         Debug.Log("Entering Idle State");
+        animState.playAnim();
     }
     public override void Exit()
     {

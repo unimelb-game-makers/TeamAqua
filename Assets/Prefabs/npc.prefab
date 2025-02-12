@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6830398679937636507}
   - component: {fileID: 8949693904064122482}
+  - component: {fileID: 8944138080954761710}
   m_Layer: 0
   m_Name: DelayIdleState
   m_TagString: Untagged
@@ -47,6 +48,21 @@ MonoBehaviour:
   wanderState: {fileID: 6692025950271968024}
   idleState: {fileID: 5820136995533611578}
   waitSeconds: 2
+  animState: {fileID: 8944138080954761710}
+--- !u!114 &8944138080954761710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358320520512859425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24c1e596e8dbe24a8d252c2d065a21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animController: {fileID: 2525054289269900745}
+  _animation: beetle_idle
 --- !u!1 &3438088665681576827
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5952247614605051955}
   - component: {fileID: 5820136995533611578}
+  - component: {fileID: 517117697032648876}
   m_Layer: 0
   m_Name: IdleState
   m_TagString: Untagged
@@ -94,6 +111,21 @@ MonoBehaviour:
   wanderState: {fileID: 6692025950271968024}
   inkJSON: {fileID: 0}
   DialogueTypeID: 0
+  animState: {fileID: 517117697032648876}
+--- !u!114 &517117697032648876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438088665681576827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24c1e596e8dbe24a8d252c2d065a21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animController: {fileID: 2525054289269900745}
+  _animation: beetle_idle
 --- !u!1 &4289783057018902598
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,8 +137,11 @@ GameObject:
   - component: {fileID: 834860108166409299}
   - component: {fileID: 2441432889653039573}
   - component: {fileID: 1815761670523736927}
+  - component: {fileID: 3976017136592804747}
   - component: {fileID: 6100549678245385701}
   - component: {fileID: 199261024932402032}
+  - component: {fileID: 100616013028039948}
+  - component: {fileID: 2525054289269900745}
   m_Layer: 0
   m_Name: npc
   m_TagString: Creature
@@ -177,7 +212,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de9a3ca24eadcb94d8b5a80dd23d6c3d, type: 3}
+  m_Sprite: {fileID: -681296081612547810, guid: f0aa32846c9de444ca0c45d0fc474300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -210,11 +245,34 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &3976017136592804747
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289783057018902598}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15502119
+  m_Height: 6.2008476
+  m_Direction: 1
+  m_Center: {x: 0.37499428, y: 0.43914258, z: 0}
 --- !u!65 &6100549678245385701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -234,8 +292,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.96, y: 0.96, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9.344492, y: 8.324486, z: 0.36557293}
+  m_Center: {x: 0.6126642, y: -0.1171571, z: 0.0035600662}
 --- !u!114 &199261024932402032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +308,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: {fileID: 6692025950271968024}
   StatesList: []
+--- !u!95 &100616013028039948
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289783057018902598}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 242c167c2f017f148a68d3bda24f2d18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2525054289269900745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289783057018902598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b7b5a66779c4744beb7f1dc9a38c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 100616013028039948}
 --- !u!1 &4535966461188079630
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6860437689515443058}
   - component: {fileID: 6692025950271968024}
+  - component: {fileID: 8183477838947951631}
   m_Layer: 0
   m_Name: WanderState
   m_TagString: Untagged
@@ -450,7 +544,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleState: {fileID: 5820136995533611578}
   delayIdleState: {fileID: 8949693904064122482}
+  animState: {fileID: 8183477838947951631}
   speed: 0.5
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &8183477838947951631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397795217930651927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24c1e596e8dbe24a8d252c2d065a21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animController: {fileID: 2525054289269900745}
+  _animation: beetle_walk

@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemHarvester : MonoBehaviour
 {
-    public ItemHarvestSource source = null;
+    [NonSerialized] public ItemHarvestSource source = null;
 
     // Update is called once per frame
     void Update()
