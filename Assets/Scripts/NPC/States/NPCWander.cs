@@ -49,7 +49,7 @@ public class NPCWander : State
 
         //Change direction that the sprite is facing
         if(curPosition.x < targetWaypoint.x){ //Face right
-        statemachine.transform.rotation = Quaternion.Euler(0,180,0);
+            statemachine.transform.rotation = Quaternion.Euler(0,180,0);
         }else{ //Face Left
             statemachine.transform.rotation = Quaternion.identity;
         }
