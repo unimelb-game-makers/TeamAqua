@@ -17,7 +17,9 @@ public class NPCDelayIdle : State
         if(waitSeconds != 0){
             StartCoroutine(delayIdle());
         }
-        animState.playAnim();
+        
+        if(animState != null)
+            animState.playAnim();
     }
 
     public override void TriggerEnter(Collider other)

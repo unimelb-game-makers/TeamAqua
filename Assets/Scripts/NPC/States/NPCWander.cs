@@ -25,7 +25,7 @@ public class NPCWander : State
     }
     public override void Process()
     {
-        Vector3 curWaypoint = waypoints[currentIndex].position;
+        Vector3 targetWaypoint = waypoints[currentIndex].position;
         Vector3 curPosition = statemachine.transform.position;
 
         /*Changing States*/
@@ -40,10 +40,7 @@ public class NPCWander : State
             return;
         }
 
-        Vector3 targetWaypoint = new Vector3(curWaypoint.x, 0, curWaypoint.z);
-        Vector3 curPos = new Vector3(curPosition.x, 0, curPosition.z);
-
-        if (Vector3.Distance(curPos, targetWaypoint) <= threshold)
+        if (distanceBetween(curPosition, targetWaypoint) <= threshold)
         {
             currentIndex = (currentIndex + 1) % waypoints.Length;
             statemachine.ChangeState(delayIdleState);
@@ -51,7 +48,7 @@ public class NPCWander : State
         statemachine.transform.position = Vector3.MoveTowards(curPosition, targetWaypoint, speed * Time.deltaTime);
 
         //Change direction that the sprite is facing
-        if(curPos.x < targetWaypoint.x){ //Face right
+        if(curPosition.x < targetWaypoint.x){ //Face right
         statemachine.transform.rotation = Quaternion.Euler(0,180,0);
         }else{ //Face Left
             statemachine.transform.rotation = Quaternion.identity;
@@ -63,5 +60,10 @@ public class NPCWander : State
         if(other.tag == "Player"){
             statemachine.ChangeState(idleState);
         }
+    }
+
+    //Neglect the y distance
+    private float distanceBetween(Vector3 v1, Vector3 v2){
+        return Vector2.Distance(new Vector2(v1.x, v1.z), new Vector2(v2.x, v2.z));
     }
 }

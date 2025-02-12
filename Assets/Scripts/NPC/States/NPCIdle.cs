@@ -18,7 +18,8 @@ public class NPCIdle : State
     public override void Enter()
     {
         Debug.Log("Entering Idle State");
-        animState.playAnim();
+        if(animState != null)
+            animState.playAnim();
     }
     public override void Exit()
     {
