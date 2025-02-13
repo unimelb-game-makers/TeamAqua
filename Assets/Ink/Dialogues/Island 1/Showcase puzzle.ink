@@ -6,7 +6,7 @@ VAR id = 1
 VAR questSteps = ""
 ~ questSteps = quest_id2
 a
-~TurnOffBarrier(0)
+
 //~checkQuestStatus(2,1)    -> calling this here throws an index error in most cases, hence a check down below
 
 
@@ -53,6 +53,9 @@ Not done yet lil squid #speaker:The Suspicious Avian
 ===SubmitQuest===
 Would you like to finish this quest? #speaker:Narrator
 ~ checkQuestStatus(2, 1)
-    +[Finish #finish:2  #done] -> DONE
-    +[Not yet #done]        -> DONE
+    +[Finish #finish:2  #done] 
+    ~TurnOffBarrier(0)
+    -> DONE
+    +[Not yet #done]    
+    -> DONE
 
