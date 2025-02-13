@@ -15,13 +15,13 @@ public class NPCWander : State
 
     public override void Enter()
     {
-        Debug.Log("Entering Wander State");
+        //Debug.Log("Entering Wander State");
         
         if(animState != null)
             animState.playAnim();
     }
     public override void Exit(){
-        Debug.Log("Exiting Wander State");
+        //Debug.Log("Exiting Wander State");
     }
     public override void Process()
     {
