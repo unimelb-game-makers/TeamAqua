@@ -261,9 +261,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4124
-        width: 5984
-        height: 578
+        y: 4123
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: Amelia_Idle_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3535
-        width: 749
-        height: 579
+        x: 748
+        y: 4123
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: Amelia_Idle_2
       rect:
         serializedVersion: 2
-        x: 748
-        y: 3535
-        width: 749
-        height: 579
+        x: 1496
+        y: 4123
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: Amelia_Idle_3
       rect:
         serializedVersion: 2
-        x: 1496
-        y: 3534
-        width: 749
-        height: 581
+        x: 2244
+        y: 4123
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: Amelia_Idle_4
       rect:
         serializedVersion: 2
-        x: 2244
-        y: 3534
-        width: 749
-        height: 581
+        x: 2992
+        y: 4123
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: Amelia_Idle_5
       rect:
         serializedVersion: 2
-        x: 2993
-        y: 3534
+        x: 3740
+        y: 4123
         width: 748
-        height: 582
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +386,10 @@ TextureImporter:
       name: Amelia_Idle_6
       rect:
         serializedVersion: 2
-        x: 3741
-        y: 3534
+        x: 4488
+        y: 4123
         width: 748
-        height: 582
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +407,10 @@ TextureImporter:
       name: Amelia_Idle_7
       rect:
         serializedVersion: 2
-        x: 4489
-        y: 3534
+        x: 5236
+        y: 4123
         width: 748
-        height: 583
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: Amelia_Idle_8
       rect:
         serializedVersion: 2
-        x: 5237
+        x: 0
         y: 3534
-        width: 747
-        height: 583
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +449,10 @@ TextureImporter:
       name: Amelia_Idle_9
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2944
-        width: 746
-        height: 585
+        x: 748
+        y: 3534
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,10 +470,10 @@ TextureImporter:
       name: Amelia_Idle_10
       rect:
         serializedVersion: 2
-        x: 5
-        y: 2356
-        width: 743
-        height: 588
+        x: 1496
+        y: 3534
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: Amelia_Idle_11
       rect:
         serializedVersion: 2
-        x: 750
-        y: 2944
-        width: 746
-        height: 585
+        x: 2244
+        y: 3534
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,10 +512,10 @@ TextureImporter:
       name: Amelia_Idle_12
       rect:
         serializedVersion: 2
-        x: 753
-        y: 2356
-        width: 743
-        height: 588
+        x: 2992
+        y: 3534
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +533,10 @@ TextureImporter:
       name: Amelia_Idle_13
       rect:
         serializedVersion: 2
-        x: 1499
-        y: 2944
-        width: 745
-        height: 586
+        x: 3740
+        y: 3534
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,9 +554,9 @@ TextureImporter:
       name: Amelia_Idle_14
       rect:
         serializedVersion: 2
-        x: 1501
-        y: 2356
-        width: 743
+        x: 4488
+        y: 3534
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -575,10 +575,10 @@ TextureImporter:
       name: Amelia_Idle_15
       rect:
         serializedVersion: 2
-        x: 2247
-        y: 2944
-        width: 745
-        height: 586
+        x: 5236
+        y: 3534
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,9 +596,9 @@ TextureImporter:
       name: Amelia_Idle_16
       rect:
         serializedVersion: 2
-        x: 2250
-        y: 2356
-        width: 742
+        x: 0
+        y: 2945
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -617,10 +617,10 @@ TextureImporter:
       name: Amelia_Idle_17
       rect:
         serializedVersion: 2
-        x: 2995
-        y: 2944
-        width: 745
-        height: 587
+        x: 748
+        y: 2945
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,9 +638,9 @@ TextureImporter:
       name: Amelia_Idle_18
       rect:
         serializedVersion: 2
-        x: 2998
-        y: 2356
-        width: 742
+        x: 1496
+        y: 2945
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -659,10 +659,10 @@ TextureImporter:
       name: Amelia_Idle_19
       rect:
         serializedVersion: 2
-        x: 3744
-        y: 2944
-        width: 744
-        height: 587
+        x: 2244
+        y: 2945
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -680,10 +680,10 @@ TextureImporter:
       name: Amelia_Idle_20
       rect:
         serializedVersion: 2
-        x: 3746
-        y: 2356
-        width: 742
-        height: 590
+        x: 2992
+        y: 2945
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -701,10 +701,10 @@ TextureImporter:
       name: Amelia_Idle_21
       rect:
         serializedVersion: 2
-        x: 4492
-        y: 2944
-        width: 744
-        height: 588
+        x: 3740
+        y: 2945
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -722,10 +722,10 @@ TextureImporter:
       name: Amelia_Idle_22
       rect:
         serializedVersion: 2
-        x: 4494
-        y: 2356
-        width: 742
-        height: 590
+        x: 4488
+        y: 2945
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -743,10 +743,10 @@ TextureImporter:
       name: Amelia_Idle_23
       rect:
         serializedVersion: 2
-        x: 5240
-        y: 2944
-        width: 744
-        height: 588
+        x: 5236
+        y: 2945
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -764,9 +764,9 @@ TextureImporter:
       name: Amelia_Idle_24
       rect:
         serializedVersion: 2
-        x: 5243
-        y: 2357
-        width: 741
+        x: 0
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -785,9 +785,9 @@ TextureImporter:
       name: Amelia_Idle_25
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1768
-        width: 741
+        x: 748
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -806,9 +806,9 @@ TextureImporter:
       name: Amelia_Idle_26
       rect:
         serializedVersion: 2
-        x: 755
-        y: 1768
-        width: 741
+        x: 1496
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -827,9 +827,9 @@ TextureImporter:
       name: Amelia_Idle_27
       rect:
         serializedVersion: 2
-        x: 1503
-        y: 1768
-        width: 741
+        x: 2244
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -848,9 +848,9 @@ TextureImporter:
       name: Amelia_Idle_28
       rect:
         serializedVersion: 2
-        x: 2251
-        y: 1768
-        width: 742
+        x: 2992
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -869,9 +869,9 @@ TextureImporter:
       name: Amelia_Idle_29
       rect:
         serializedVersion: 2
-        x: 2999
-        y: 1768
-        width: 742
+        x: 3740
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -890,9 +890,9 @@ TextureImporter:
       name: Amelia_Idle_30
       rect:
         serializedVersion: 2
-        x: 3747
-        y: 1768
-        width: 742
+        x: 4488
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -911,9 +911,9 @@ TextureImporter:
       name: Amelia_Idle_31
       rect:
         serializedVersion: 2
-        x: 4494
-        y: 1768
-        width: 743
+        x: 5236
+        y: 2356
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -932,9 +932,9 @@ TextureImporter:
       name: Amelia_Idle_32
       rect:
         serializedVersion: 2
-        x: 5242
-        y: 1768
-        width: 742
+        x: 0
+        y: 1767
+        width: 748
         height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -953,10 +953,10 @@ TextureImporter:
       name: Amelia_Idle_33
       rect:
         serializedVersion: 2
-        x: 6
-        y: 1179
-        width: 743
-        height: 588
+        x: 748
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -974,10 +974,10 @@ TextureImporter:
       name: Amelia_Idle_34
       rect:
         serializedVersion: 2
-        x: 754
-        y: 1179
-        width: 743
-        height: 588
+        x: 1496
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -995,18 +995,18 @@ TextureImporter:
       name: Amelia_Idle_35
       rect:
         serializedVersion: 2
-        x: 1501
-        y: 1179
-        width: 744
-        height: 587
+        x: 2244
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb721098761d98db0800000000000000
+      spriteID: dd326d03d67b7ae4fa96970a0e4bac91
       internalID: -4789066486121420865
       vertices: []
       indices: 
@@ -1016,18 +1016,18 @@ TextureImporter:
       name: Amelia_Idle_36
       rect:
         serializedVersion: 2
-        x: 2249
-        y: 1179
-        width: 744
-        height: 587
+        x: 2992
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7390018d21fc21ec0800000000000000
+      spriteID: 3b94723ae95f89341935218e6aea5885
       internalID: -3597585472474314441
       vertices: []
       indices: 
@@ -1037,18 +1037,18 @@ TextureImporter:
       name: Amelia_Idle_37
       rect:
         serializedVersion: 2
-        x: 2996
-        y: 1179
-        width: 745
-        height: 586
+        x: 3740
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0fb170dad29a8ee0800000000000000
+      spriteID: 91c7fdd9e6c539041bb1c6ba4701aa3d
       internalID: -1258031677398991092
       vertices: []
       indices: 
@@ -1058,18 +1058,18 @@ TextureImporter:
       name: Amelia_Idle_38
       rect:
         serializedVersion: 2
-        x: 3744
-        y: 1179
-        width: 745
-        height: 585
+        x: 4488
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9fe48b6c2f4cde830800000000000000
+      spriteID: 4e4b9e26b2c5ed14baf5798d9b03ad65
       internalID: 4102151382599487225
       vertices: []
       indices: 
@@ -1079,18 +1079,18 @@ TextureImporter:
       name: Amelia_Idle_39
       rect:
         serializedVersion: 2
-        x: 4491
-        y: 1179
-        width: 746
-        height: 585
+        x: 5236
+        y: 1767
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f37b0b1635647a750800000000000000
+      spriteID: cb01a3f1b10c74e4e8b7a9a7afa05ac9
       internalID: 6316094326345611071
       vertices: []
       indices: 
@@ -1100,18 +1100,18 @@ TextureImporter:
       name: Amelia_Idle_40
       rect:
         serializedVersion: 2
-        x: 5239
-        y: 1179
-        width: 745
-        height: 584
+        x: 0
+        y: 1178
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1ee13481c56a2a000800000000000000
+      spriteID: 4efd70ae1fd4b3841a58c314cf413820
       internalID: 45781860701380321
       vertices: []
       indices: 
@@ -1121,18 +1121,18 @@ TextureImporter:
       name: Amelia_Idle_41
       rect:
         serializedVersion: 2
-        x: 2
-        y: 590
-        width: 747
-        height: 583
+        x: 748
+        y: 1178
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 054aab58810f46200800000000000000
+      spriteID: 3e36c2ef7b5b4b04dab2ae7f1288075c
       internalID: 172526673860404304
       vertices: []
       indices: 
@@ -1142,18 +1142,18 @@ TextureImporter:
       name: Amelia_Idle_42
       rect:
         serializedVersion: 2
-        x: 750
-        y: 590
-        width: 747
-        height: 582
+        x: 1496
+        y: 1178
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 51bd4aef6508861f0800000000000000
+      spriteID: 93db8607e11e35148ba9d12ffd360fa9
       internalID: -1051449401863251179
       vertices: []
       indices: 
@@ -1163,18 +1163,18 @@ TextureImporter:
       name: Amelia_Idle_43
       rect:
         serializedVersion: 2
-        x: 1497
-        y: 590
+        x: 2244
+        y: 1178
         width: 748
-        height: 582
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 61c29fdabb1088630800000000000000
+      spriteID: 9b1b0c68286c2be4889539f9988a5e89
       internalID: 3929392580470058006
       vertices: []
       indices: 
@@ -1184,18 +1184,18 @@ TextureImporter:
       name: Amelia_Idle_44
       rect:
         serializedVersion: 2
-        x: 2245
-        y: 590
+        x: 2992
+        y: 1178
         width: 748
-        height: 581
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0120d63046bef68c0800000000000000
+      spriteID: 47133613dc90f2c4ea3fa71eec9f5d76
       internalID: -4003722728922349040
       vertices: []
       indices: 
@@ -1205,18 +1205,18 @@ TextureImporter:
       name: Amelia_Idle_45
       rect:
         serializedVersion: 2
-        x: 2992
-        y: 590
-        width: 749
-        height: 580
+        x: 3740
+        y: 1178
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3a2700b0175489a40800000000000000
+      spriteID: f0e53eb10a71f3f47b1f5e698c87047f
       internalID: 5375122507084886691
       vertices: []
       indices: 
@@ -1226,18 +1226,18 @@ TextureImporter:
       name: Amelia_Idle_46
       rect:
         serializedVersion: 2
-        x: 3740
-        y: 590
-        width: 749
-        height: 580
+        x: 4488
+        y: 1178
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b273b1484463b7ff0800000000000000
+      spriteID: 6ca48efa44240d54a9f3de6a6916b54a
       internalID: -37376504000465109
       vertices: []
       indices: 
@@ -1247,18 +1247,18 @@ TextureImporter:
       name: Amelia_Idle_47
       rect:
         serializedVersion: 2
-        x: 4488
-        y: 590
-        width: 1496
-        height: 579
+        x: 5236
+        y: 1178
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3011ca5b8b26c1a20800000000000000
+      spriteID: 2ecfc88d08e984c4b81b2b83c557b448
       internalID: 3034408794402328835
       vertices: []
       indices: 
@@ -1269,18 +1269,312 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 3741
-        height: 578
+        y: 589
+        width: 748
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4479e826b6d4e75c0800000000000000
+      spriteID: bff513e1ae953e24cacb5399f2deee9f
       internalID: -4215847077561854140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878cf679fb4f3fa40aa0c5b4240a7413
+      internalID: -289337507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd46d14ea0ca6749a15a45bcb389a49
+      internalID: 1685218584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01097815f57068848af98dce90a89c03
+      internalID: -2077379866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fcae17133cd3f48a5bb858df508ed0
+      internalID: -645608938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16e5648c543a6942b3d60adc49e296a
+      internalID: -440899589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 4488
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd49b257fb34b6949981546095575b9e
+      internalID: 402117692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 5236
+        y: 589
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4513ea9ca12df744f84e07ae15e8a80d
+      internalID: 1880824164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf44303b3ff98ad49a4406582ee34c06
+      internalID: 639168275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c337ccb86483aa408d496241048b6d7
+      internalID: -382209667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacd23d9874e649478ecd9902f344d88
+      internalID: 120709568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b8f0c7566e2634796d3da9a14fc621
+      internalID: -644067281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167eef0b0ee8f4347a8573fabb3e8954
+      internalID: -1731631859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f61ff5b5e8a57a4da94c75fbe016be7
+      internalID: 114411518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 5236
+        y: 0
+        width: 748
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbb6a16de8770c4aac148ec12088095
+      internalID: -33026469
       vertices: []
       indices: 
       edges: []
@@ -1288,7 +1582,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 59d284358a1f3474583acccacb21604b
     internalID: 0
     vertices: []
     indices: 
@@ -1340,8 +1634,22 @@ TextureImporter:
       Amelia_Idle_46: -37376504000465109
       Amelia_Idle_47: 3034408794402328835
       Amelia_Idle_48: -4215847077561854140
+      Amelia_Idle_49: -289337507
       Amelia_Idle_5: -194316809555943342
+      Amelia_Idle_50: 1685218584
+      Amelia_Idle_51: -2077379866
+      Amelia_Idle_52: -645608938
+      Amelia_Idle_53: -440899589
+      Amelia_Idle_54: 402117692
+      Amelia_Idle_55: 1880824164
+      Amelia_Idle_56: 639168275
+      Amelia_Idle_57: -382209667
+      Amelia_Idle_58: 120709568
+      Amelia_Idle_59: -644067281
       Amelia_Idle_6: -4623420943457068838
+      Amelia_Idle_60: -1731631859
+      Amelia_Idle_61: 114411518
+      Amelia_Idle_62: -33026469
       Amelia_Idle_7: 2100910581558544611
       Amelia_Idle_8: -517836336379067437
       Amelia_Idle_9: -84114228004431928
