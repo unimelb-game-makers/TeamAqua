@@ -2,40 +2,25 @@
     "quests" : [
         {
             "id" : 1,
-            "title" : "Test Quest 1: ",
-            "description" : "This is a test quest, you must collect a quest <color=green>item</color> and finish an <color=purple>objective</color>.",
+            "title" : "Find 10 berries",
+            "description" : "Find <color=blue>10</color> <color=green>berries</color>,and click <color=green>'E'</color>. to collect and bring them back to <color=yellow>Amelia</color>",
             "quest_steps" : [
                 {
                     "step" : 1,
-                    "description" : "Collect the quest item",
-                    "objective" : "Collect the quest item",
+                    "description" : "Collect 10 berries",
+                    "objective" : "Collect 10 berries",
                     "objective_type" : "GATHER",
                     "quest_item_id" : 1,
-                    "quest_item_amount" : 1,
+                    "quest_item_amount" : 10,
                     "location": "None",
                     "active":true,
                     "finished":false
 
-                },
-                {
-                    "step" : 2,
-                    "description" : "Touch the objective",
-                    "objective" : "Finish the objective",
-                    "objective_type" : "LOCATION",
-                    "quest_item_id" : -1,
-                    "quest_item_amount" : -1,
-                    "location": "(3,0,3)",
-                    "active":false,
-                    "finished":false
                 }
             ],
             "reward" : {
-                "experience" : 100,
-                "gold" : 100,
-                "item" : {
-                    "id" : -1,
-                    "amount" : 0
-                }
+                "Amelia's trust": 10,
+                "Tutorial quests completed": 1
             },
             "current_step_number":0,
             "active" : false,
@@ -44,30 +29,18 @@
 
         {
             "id" : 2,
-            "title" : "Help Maria: ",
-            "description" : "Maria \"My crops have been destroyed by the ocean, can you please give me <color=green>4 seeds</color>?\"",
+            "title" : "Reach the village ",
+            "description" : "Solve the locking mechanism of the gate and enter the settlement",
             "quest_steps" : [
                 {
                     "step" : 1,
-                    "description" : "Collect the quest item",
-                    "objective" : "Go to the market.",
+                    "description" : "solve the puzzle",
+                    "objective" : "enter the village",
                     "objective_type" : "LOCATION",
                     "quest_item_id" : -1,
                     "quest_item_amount" : -1,
                     "location": "(4,0,3)",  
                     "active":true,
-                    "finished":false
-
-                },
-                {
-                    "step" : 2,
-                    "description" : "Touch the objective",
-                    "objective" : "Buy 4 seeds.",
-                    "objective_type" : "TALK",
-                    "quest_item_id" : 3,
-                    "quest_item_amount" : 4,
-                    "location": "None",
-                    "active":false,
                     "finished":false
                 }
             ],

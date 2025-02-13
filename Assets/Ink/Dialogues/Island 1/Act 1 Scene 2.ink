@@ -2,6 +2,13 @@
 //interactions: dialogue cont, choices, 
 //global ink:
 //dev approval: in progress
+
+
+
+START:
+//to start this file: walk further into forest
+
+
 You and Amelia walk through the thickets of the rainforests. #for programmer
 Ahead you spot a clearing. #for programmer
 I don’t know about this - a lot of humans live in these parts. #speaker: Amelia
@@ -13,7 +20,7 @@ Do you want to head into the clearing? #speaker: Narrator
 
 
 ===choiceYeswecantaffordtowastetime=== //if player chooses for Noelle and Amelia to pass through clearing
-Augh, fine. #speaker: Amelia
+Augh, fine. #speaker: Amelia 
 You and Amelia enter the clearing, and spot several treetops. #for programmer
 Stop! # speaker: Elder
 An elderly figure jumps down from the tallest tree to block your way. #for programmer
@@ -26,8 +33,8 @@ Name and purpose. Now. #Elder
 It appears that you’re in a tight spot. How do you wish to deescalate the situation:
 +[Say nothing.]
     ->choiceSaynothing
-+[Run.]
-    -> choiceRun
+//+[Run.]
+   // -> choiceRun
 +[Say the truth]
     -> choiceSaythetruth
 
@@ -35,11 +42,15 @@ It appears that you’re in a tight spot. How do you wish to deescalate the situ
 You heard her the first time. Now let us leave. #speaker: Amelia
 I can’t have outsiders knowing where we live. #speaker: Elder
 ->DONE
+
+/*
 ===choiceRun===
+//NOTE: delayed to alpha
 Noelle glances at Amelia, and Amelia nods understandingly. #for programmer
 You both make a run for the thickets. #for programmer
 After them! #speaker: Elder
 ->DONE
+*/
 
 ===choiceSaythetruth
 My name is Noelle Tempest, and this is Amelia. #speaker: Noelle

@@ -125,6 +125,8 @@ MonoBehaviour:
   - itemResource: {fileID: 11400000, guid: 716916954584f9b4392e7bbcf1d05d5f, type: 2}
     amount: 5
     energyCost: 5
+    AudioName: BGM_SFX_HARVEST_WOOD
   - itemResource: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
     amount: 5
     energyCost: 5
+    AudioName: BGM_SFX_HARVEST_WOOD

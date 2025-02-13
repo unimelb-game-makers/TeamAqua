@@ -4,7 +4,7 @@
 //Dev review: complete
 
 chores: add speaker portraits.
-EXTERNAL SwapBGM(id, FadeSpeed)
+EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL ChangeCutscene(SceneName)
 EXTERNAL PlayBGM(id)
 ~PlayBGM("BGM_CUTSCENE_CEREMONY")
@@ -15,7 +15,7 @@ knees
 our
 a
 
-~SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", 1) 
+//~SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", "BGM_CUTSCENE_CEREMONY", 1) 
 
 #cutscene:A0_DEFAULT
 A birthday tune is hummed as you sit around a campfire with your family, embers floating by your feet. #speaker: Narrator #cutscene:A0S1
@@ -30,7 +30,8 @@ Excellent! #speaker: Noelle's Mother
 What are you waiting for then? Drink up! Awaken your inner potential! #cutscene: A0S6
 You stare at the chalice with a deep breath and take a gulp. #speaker: Narrator
 
-~SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", 1)      //doesnt work rn
+~SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", "BGM_CUTSCENE_CEREMONY", 1) 
+//~SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", 1)      //doesnt work rn
 //change bgm right after this line
 
 The taste of iron spreads on your tongue. In seconds, you begin to choke and fall to your knees, struggling to catch your breath. #cutscene: A0S7

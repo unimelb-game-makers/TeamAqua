@@ -101,9 +101,10 @@ public class QuestManager : UIState
         DrawText();
         /*Changing States*/
         if(Input.GetKeyDown(KeyCode.J)){
-            UIstatemachine.ChangeUIState(All_UI_Off);
             Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1);
             isScaled = false;
+            questCanvas.SetActive(false);
+            UIstatemachine.ChangeUIState(All_UI_Off);
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
