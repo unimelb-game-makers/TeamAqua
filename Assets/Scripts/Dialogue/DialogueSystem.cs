@@ -168,11 +168,20 @@ public class DialogueSystem : MonoBehaviour
                 Debug.Log("binded audio function works");
             });
 
+            currentStory.BindExternalFunction("TurnOffBarrier", (int id) =>
+            {
+                //currentStory.variablesState["cutscene0"] = "AAAAAA";
+                //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
+                BarrierManager.Instance.TurnOffBarrier(id);
+            });
+
             currentStory.BindExternalFunction("ChangeCutscene", (string SceneName)=>
             {
                 Cutscene_1.Instance.SceneChanger(SceneName);
                 Debug.Log("binded scene changing function works");
             });
+
+
             ContinueStory();
         }
 

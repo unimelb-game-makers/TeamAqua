@@ -45,12 +45,7 @@
                 }
             ],
             "reward" : {
-                "experience" : 100,
-                "gold" : 100,
-                "item" : {
-                    "id" : -1,
-                    "amount" : 0
-                }
+                "village": 1
             },
             "current_step_number":1,
             "active" : false,

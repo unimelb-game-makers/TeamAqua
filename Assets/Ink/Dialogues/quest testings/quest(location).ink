@@ -1,4 +1,4 @@
-INCLUDE ../globals.ink
+INCLUDE ../Global var storage/globals.ink
 EXTERNAL checkQuestStatus(id, step)
 
 VAR quest_Steps = ""
@@ -11,7 +11,7 @@ quest step is {quest_Steps} and quest_id2 is {quest_id2}
     - quest_Steps == "":
     quest step is {quest_Steps} and quest_id2 is {quest_id2}
         -> GiveQuest
-    - quest_Steps == "yes":
+    - quest_Steps == "FINISHED":
     quest step is {quest_Steps} and quest_id2 is {quest_id2}
         -> SubmitQuest
 }

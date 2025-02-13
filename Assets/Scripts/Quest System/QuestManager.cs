@@ -115,7 +115,7 @@ public class QuestManager : UIState
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            CompleteStep(1,2);
+            AddQuest(1);
         }
 
         if (questCanvas.activeSelf && !isScaled)
@@ -169,80 +169,7 @@ public class QuestManager : UIState
             
         }*/
     }
-    /*  ========================================= Migrated to UIstatemachine ======================================================
-    void Start()
-    {
-        // TODO: load the quests from the file when game starts
-        // quests = ...
-        // finished = ...
-        //
-        //QuestCompleted = false;
-        OnDisableQ();        
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.J) && UIinputProvider.instance().UI_canOpen[2] && !DialogueSystem.GetIsPlaying())  //added bool check to see if dialogue is on
-        {
-            if (!questCanvas.activeSelf)
-            {
-                OnEnableQ();
-            }
-            
-            else
-            {
-                OnDisableQ();
-            }
-            DrawText();
-        }
-
-        if (DialogueSystem.GetIsPlaying() || PausePanelScript.instance().isPaused) // forcibly closes questlog if player enters dialogue
-        {
-            OnDisableQ();
-        }
-
-        
-
-        // Debugging/testing purposes
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            AddQuest(1);
-            AddQuest(2);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            //CompleteStep(1, 1);
-        }
-    }
-
-    //=============================== Singleton Methods (Accessible from other scripts) ================================//
-
-    /**
-        AddQuest: This function adds a quest to the quest list. It reads the quest from the .json file and adds it to the list.
-        Parameters: int id - the id of the quest to add
-        Return: void
-    
-    public void OnEnableQ()
-    {
-        //JournalManager.instance().journalCanvas.SetActive(false);
-        questCanvas.SetActive(true);
-        UIinputProvider.instance().SendUIinput(2);
-        questOpen = true;
-        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
-        isScaled = false;
-        Time.timeScale = 0; // pause the game when the quest canvas is active
-    }
-
-    public void OnDisableQ()
-    {
-        Scroll_View_rect_transform.localScale = new Vector3(1, 0, 1); // reset scale for animation
-        questCanvas.SetActive(false);
-        UIinputProvider.instance().SendUIinput(0);
-        questOpen = false;
-        Time.timeScale = 1; // resume game when quest canvas is deactivated
-    }
-    */
-    public void AddQuest(int id)
+        public void AddQuest(int id)
     {
         Debug.Log("number of quests is " + quests.Count);
         Quest quest = JsonUtility.FromJson<Quest>(jsonFile.text);
@@ -329,7 +256,7 @@ public class QuestManager : UIState
         // checking if quest log is empty
         Debug.Log("number of quests is " + quests.Count);
         // checking if quest objective type is gather
-        if (quests.Count != 0)
+        if (quests.Count != 0 && id >= quests.Count)
         {
             Debug.Log("quest obj type is " + quests[id-1].quest_steps[step - 1].objective_type);
             switch (quests[id-1].quest_steps[step-1].objective_type)
@@ -346,7 +273,7 @@ public class QuestManager : UIState
                         quests[id-1].quest_steps[step-1].finished = true;
                         Debug.Log("Item found, setting quest status to finished");
                         // remove the item from the inventory
-                        story.variablesState["quest_id" + id] = "YES";
+                        story.variablesState["quest_id" + id] = "FINISHED";
                         Debug.Log("quest_id" + id);
                         Debug.Log(story.variablesState["quest_id" + id]);   // set off trigger in ink to move to a different part of the story
                         return true;
@@ -366,7 +293,8 @@ public class QuestManager : UIState
                     if (QuestLocationTrigger.instance().LocationReached)    // bool set off upon reaching designated location
                     {
                         Debug.Log("location reached, setting off dialogue trigger variable");
-                        story.variablesState["quest_id" + id] = "yes";  // set off dialogue var to move on to submitquest
+                        story.variablesState["quest_id" + id] = "FINISHED";  // set off dialogue var to move on to submitquest
+                        return true;
                     }
                     Debug.Log("quest mana: location not reached, bool still false");
                     return false;

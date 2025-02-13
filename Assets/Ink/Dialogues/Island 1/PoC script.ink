@@ -1,7 +1,8 @@
 
 
 //ideally, use just local variables but it seems easier to work with global variables
-EXTERNAL checkQuestStatus(id, steps)     
+EXTERNAL checkQuestStatus(id, steps)
+
 //this checks the completion status of quest
 
 
@@ -24,12 +25,13 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
 { 
     - questSteps == "":     // if empty, go to main
         -> main 
-    
-    - questSteps == "NO":   //================================ failed here ==========
-        quest step is {questSteps} and current quest_id var is {quest_id1}
+    - questSteps == "NOT_ACCEPTED":
+        -> TakeQuest
+    - questSteps == "NOT_FINISHED":   //================================ failed here ==========
+        //quest step is {questSteps} and current quest_id var is {quest_id1}
         //~checkQuestStatus(1, 1)
         -> IncompleteQuest
-    - questSteps == "YES":
+    - questSteps == "FINISHED":
         //~checkQuestStatus(1, 1)
         -> SubmitQuest 
 }
@@ -41,7 +43,7 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
 //<color=red>colored text</color> normal <color=blue><i><b>everything text</b></i>text</color>
 You find yourself on a beach. #speaker:Narrator 
 The sun glares over you, and your ship is in pieces around you. 
-
+/*
 In stark contrast to the raging waters that overwhelmed you and your ship last night,
 calm waves now wash over shore. 
 The storms of yesterday seem to have died down for now. 
@@ -211,7 +213,7 @@ Would save you a lot of effort of doing it yourself. #speaker:Amelia #portrait:A
 <b><i>sighs</i></b> Fine. #speaker:Amelia #portrait:AmeliaAngry
 //~ temp examGrade = FLOAT(RANDOM(50, 100)) / 100         //testing
 Find me some berries.
-
+*/
 10 of them, and maybe I will consider joining your party.
 You look around for some bushes 
 VAR id = 1
