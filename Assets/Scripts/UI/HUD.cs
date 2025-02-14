@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Kuroneko.UIDelivery;
 
-public class HUD : MonoBehaviour
+namespace UI
 {
-    // Start is called before the first frame update
-    void Start()
+    public class HUD : Popup
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void InitPopup()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
