@@ -11,7 +11,7 @@ public class PushBlock : MonoBehaviour
     [NonSerialized] public Vector3 startPos;
 
     private float time = 0.0f;
-    private float pushDuration = 0.5f;
+    private float pushDuration = 0.85f;
 
     public void Start(){
         startPos = transform.position;

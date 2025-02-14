@@ -125,3 +125,4 @@ MonoBehaviour:
   - itemResource: {fileID: 11400000, guid: b07322a5e3c00c84db09b03da559872e, type: 2}
     amount: 3
     energyCost: 5
+    AudioName: Collect_1
