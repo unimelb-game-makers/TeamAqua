@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8ecc639e9c2a84db3758873de3cff1, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
-  itemID: 0
+  itemID: 2
   itemName: Mushroom
   sprite: {fileID: 5760383657493585661, guid: 8fe063144a856ae4d9f2cd92ffe6b59f, type: 3}

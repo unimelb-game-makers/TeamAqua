@@ -76,27 +76,6 @@ public class DialogueTags : MonoBehaviour
                     Debug.Log("questS working on C#-end");  
                     break;
                 case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
-                    //charName.text = tagValue;
-                    /*
-                    if(SceneManager.GetActiveScene().name == "Cutscene 1")
-                    {
-                        if (tagValue == "Noelle")   // player's portrait on left hand side
-                        {
-                            charNameLeft.text = tagValue;
-                            //Debug.Log(tagValue);
-                        }
-                        else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
-                        {
-                            continue;
-                        }
-                        else      // every other characters' portraits on right hand side
-                        {
-                            charNameRight.text = tagValue;
-                            //Debug.Log(tagValue);
-                        }
-                        break;
-                    }
-                    else */
                     {
                         if (tagValue == "Noelle")   // player's portrait on left hand side
                         {
@@ -104,18 +83,21 @@ public class DialogueTags : MonoBehaviour
                             leftDial.SetActive(true);
                             rightDial.SetActive(false);
                             charNameLeft.text = tagValue;
+                            DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue);
                             //Debug.Log(tagValue);
                         }
                         else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
                         {
                             leftDial.SetActive(false);
                             rightDial.SetActive(false);
+                            DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo("default");
                         }
                         else      // every other characters' portraits on right hand side
                         {           
                             leftDial.SetActive(false);
                             rightDial.SetActive(true);
                             charNameRight.text = tagValue;
+                            DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue);
                             //Debug.Log(tagValue);
                         }
                         break;

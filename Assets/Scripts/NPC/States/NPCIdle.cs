@@ -25,7 +25,7 @@ public class NPCIdle : NPCState
 
     public override void Process()
     {
-        if(Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying())
+        if(inkJSON && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying())
         {
             DialogueSystem.GetDial().EnterDialogueMode(inkJSON, DialogueTypeID);
         }

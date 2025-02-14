@@ -15,7 +15,6 @@ public class NPCDialogue : MonoBehaviour
 
     private bool isInRange;
     public static NPCDialogue npcDialogue;
-    public EnergyManager EnergyMana;
     public UIStatemachine UIstatemachine;
     
     // Start is called before the first frame update
@@ -55,6 +54,7 @@ public class NPCDialogue : MonoBehaviour
                 questCue.SetActive(true);
                 dialogueCue.SetActive(false);
                 isInRange = true;
+                Debug.Log("in range for dialogue");
             }
         }
         else

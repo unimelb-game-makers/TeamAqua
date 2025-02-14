@@ -160,10 +160,19 @@ public class DialogueSystem : MonoBehaviour
                 AudioManager.Instance.Play(id);
             });
 
-            currentStory.BindExternalFunction("SwapBGM", (string id, int FadeSpeed) =>
+            currentStory.BindExternalFunction("SwapBGM", (string new_id, string old_id , int FadeSpeed) =>
             {// this is for switching out tracks mid-dialogue                
-                StartCoroutine(AudioManager.Instance.SwapBGM(id, FadeSpeed));
+                //StartCoroutine(AudioManager.Instance.SwapBGM(id, FadeSpeed));
+                AudioManager.Instance.Stop(old_id);
+                AudioManager.Instance.Play(new_id);
                 Debug.Log("binded audio function works");
+            });
+
+            currentStory.BindExternalFunction("TurnOffBarrier", (int id) =>
+            {
+                //currentStory.variablesState["cutscene0"] = "AAAAAA";
+                //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
+                BarrierManager.Instance.TurnOffBarrier(id);
             });
 
             currentStory.BindExternalFunction("ChangeCutscene", (string SceneName)=>
@@ -171,6 +180,8 @@ public class DialogueSystem : MonoBehaviour
                 Cutscene_1.Instance.SceneChanger(SceneName);
                 Debug.Log("binded scene changing function works");
             });
+
+
             ContinueStory();
         }
 

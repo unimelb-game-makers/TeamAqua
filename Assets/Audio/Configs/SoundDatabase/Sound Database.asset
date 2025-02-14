@@ -27,3 +27,9 @@ MonoBehaviour:
     config: {fileID: 11400000, guid: 0fc4828cd08aa1b47aa07f67652fce47, type: 2}
   - id: BGM_CUTSCENE_INTO_THE_STORM
     config: {fileID: 11400000, guid: 599355f72a6b0644fba8dbbe506af6d1, type: 2}
+  - id: BGM_SFX_WALKING
+    config: {fileID: 11400000, guid: 0693b1baaee74c242bb3d2c9cb146342, type: 2}
+  - id: BGM_SFX_HARVEST_WOOD
+    config: {fileID: 11400000, guid: 04eb81ef9e74a6f40a4c70187eda6dac, type: 2}
+  - id: 
+    config: {fileID: 0}

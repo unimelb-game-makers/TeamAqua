@@ -40,16 +40,20 @@ public class PlayerController : MonoBehaviour
             if(moveInput.x > 0 && moveInput.z == 0){// Walk Right
                 anim.ChangeAnimationState("Walk");
                 spriteTransform.rotation = Quaternion.Euler(0,180,0);
+                //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
             else if(moveInput.x < 0 && moveInput.z == 0){// Walk Left
                 anim.ChangeAnimationState("Walk");
                 spriteTransform.rotation = Quaternion.identity;
+                //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }   
             else if(moveInput.z > 0){// Walk Up
                 anim.ChangeAnimationState("Walk");
+                //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }   
             else if(moveInput.z < 0){// Walk Down
                 anim.ChangeAnimationState("Walk");
+                //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
             else
                 anim.ChangeAnimationState("Idle");
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             speed = 0;
             anim.ChangeAnimationState("Idle");
+            //AudioManager.Instance.Stop("BGM_SFX_WALKING");
         }
     }
 
