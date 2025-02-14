@@ -40,7 +40,7 @@ namespace UI
     
         private void ShowInventory()
         {
-            ShowTab(JournalTab.Quest);
+            ShowTab(JournalTab.Inventory);
         }
 
         private void ShowQuest()
@@ -50,12 +50,11 @@ namespace UI
 
         private void ShowMap()
         {
-            ShowTab(JournalTab.Quest);
+            ShowTab(JournalTab.Map);
         }
 
         private void ShowTab(JournalTab tab)
         {
-            if (currentTab == tab) return;
             currentTab = tab;
             inventoryPopup.SetActive(tab == JournalTab.Inventory);
             questPopup.SetActive(tab == JournalTab.Quest);
