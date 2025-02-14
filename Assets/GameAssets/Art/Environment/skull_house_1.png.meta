@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skull_house_1_0: 3279613329009889345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

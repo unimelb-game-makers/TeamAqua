@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tribal_house_0: 616156942157660133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

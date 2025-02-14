@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      guardhouse_0: 8112358864890306133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

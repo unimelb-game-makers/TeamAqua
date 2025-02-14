@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shipwreck_0: 5551047795832300603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
