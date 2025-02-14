@@ -116,13 +116,13 @@ TextureImporter:
       name: Rectangle 93_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 4
         y: 8
-        width: 418
+        width: 434
         height: 105
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 25, w: 0}
+      border: {x: 17, y: 0, z: 25, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
