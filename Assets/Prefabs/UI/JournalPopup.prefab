@@ -534,8 +534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -21.067688, y: 23.545471}
-  m_SizeDelta: {x: -737.0393, y: -372.6297}
+  m_AnchoredPosition: {x: -30.98822, y: 29.323303}
+  m_SizeDelta: {x: -756.8802, y: -424.2404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6522408399616164284
 GameObject:
@@ -681,6 +681,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 945452731163924766}
     m_Modifications:
+    - target: {fileID: 1454461106340852890, guid: 62636a2b8bdb249729cf512324f939d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2358901523334144783, guid: 62636a2b8bdb249729cf512324f939d2, type: 3}
       propertyPath: m_Name
       value: InventoryPopup
@@ -874,6 +878,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4125280112690335883, guid: 7aea6949edeaf41e39af5a0064b1df78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6803749075294862921, guid: 7aea6949edeaf41e39af5a0064b1df78, type: 3}
       propertyPath: m_Name
       value: MapPopup
@@ -978,6 +986,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3094654849269396601, guid: d96a0504c3d8b4a97892073449fa94cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217206565876650263, guid: d96a0504c3d8b4a97892073449fa94cb, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

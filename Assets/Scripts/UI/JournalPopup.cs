@@ -55,6 +55,8 @@ namespace UI
 
         private void ShowTab(JournalTab tab)
         {
+            if (currentTab == tab) return;
+            currentTab = tab;
             inventoryPopup.SetActive(tab == JournalTab.Inventory);
             questPopup.SetActive(tab == JournalTab.Quest);
             mapPopup.SetActive(tab == JournalTab.Map);

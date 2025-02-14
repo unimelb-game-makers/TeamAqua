@@ -340,9 +340,9 @@ MonoBehaviour:
   showSequence: {fileID: 0}
   hideSequence: {fileID: 0}
   resetSequence: {fileID: 0}
-  resumeButton: {fileID: 0}
-  settingsButton: {fileID: 0}
-  quitButton: {fileID: 0}
+  resumeButton: {fileID: 476321151299167838}
+  settingsButton: {fileID: 3646204048416809576}
+  quitButton: {fileID: 7509214339724857693}
 --- !u!1 &1236117621814304932
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +810,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 6113421568921605560}
   m_OnClick:
     m_PersistentCalls:

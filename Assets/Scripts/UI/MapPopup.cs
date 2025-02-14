@@ -6,7 +6,6 @@ namespace UI
     {
         protected override void InitPopup()
         {
-            throw new System.NotImplementedException();
         }
     }
 }
