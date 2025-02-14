@@ -57,10 +57,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.067914486
+  m_Radius: 0.039078712
   m_Height: 0.434181
   m_Direction: 1
-  m_Center: {x: -0.032705784, y: 0.001014933, z: 0}
+  m_Center: {x: -0.022589684, y: 0.001014933, z: 0}
 --- !u!54 &7409998503361624279
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289cd575e83f03447803f8097039044f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
 --- !u!1 &4410410664079695968
 GameObject:
   m_ObjectHideFlags: 0

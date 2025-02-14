@@ -42,7 +42,7 @@ public class Puzzle : MonoBehaviour
     public void TryOpenDoor(){
         //If all switches are on, then open the door
         if(isFinished() && door)
-            LeanTween.moveLocalY(door, -0.3f, 0.5f);
+            LeanTween.moveY(door, door.transform.position.y - 0.3f, 0.5f);
     }
 
     private void OnTriggerEnter(Collider other) {

@@ -10,6 +10,9 @@ public class PushBlock : MonoBehaviour
     public float tween_time = 0.25f;
     [NonSerialized] public Vector3 startPos;
 
+    private float time = 0.0f;
+    private float pushDuration = 0.5f;
+
     public void Start(){
         startPos = transform.position;
     }
@@ -17,8 +20,23 @@ public class PushBlock : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){
-            PushDirection(other.transform.position);
+            time = 0;
         }
+    }
+
+    void OnCollisionStay(Collision collision) {
+        if(collision.gameObject.CompareTag("Player")){
+            time += Time.deltaTime;
+            if(time >= pushDuration){
+                PushDirection(collision.transform.position);
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (time > 0)
+            Debug.Log(time);
     }
 
     private void PushDirection(Vector3 playerPos){
