@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using Kuroneko.UIDelivery;
-using UnityEngine;
 
-public class MapPopup : Popup
+namespace UI
 {
-    protected override void InitPopup()
+    public class MapPopup : Popup
     {
-        throw new System.NotImplementedException();
+        protected override void InitPopup()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,10 +1,13 @@
 using Kuroneko.UIDelivery;
 
-public static class UIHelper
+namespace UI
 {
-    public static void SetActive(this Popup popup, bool active)
+    public static class UIHelper
     {
-        if (active) popup.ShowPopup();
-        else popup.HidePopup();
+        public static void SetActive(this Popup popup, bool active)
+        {
+            if (active) popup.ShowPopup();
+            else popup.HidePopup();
+        }
     }
 }

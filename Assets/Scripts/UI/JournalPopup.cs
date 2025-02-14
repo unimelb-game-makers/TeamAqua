@@ -3,59 +3,62 @@ using Kuroneko.UIDelivery;
 using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable]
-public enum JournalTab
+namespace UI
 {
-    INVENTORY,
-    QUEST,
-    MAP,
-}
+    [Serializable]
+    public enum JournalTab
+    {
+        Inventory,
+        Quest,
+        Map,
+    }
 
-public class JournalPopup : Popup
-{
-    [SerializeField] private JournalTab currentTab = JournalTab.INVENTORY;
-    [SerializeField] private InventoryPopup inventoryPopup;
-    [SerializeField] private QuestPopup questPopup;
-    [SerializeField] private MapPopup mapPopup;
+    public class JournalPopup : Popup
+    {
+        [SerializeField] private JournalTab currentTab = JournalTab.Inventory;
+        [SerializeField] private InventoryPopup inventoryPopup;
+        [SerializeField] private QuestPopup questPopup;
+        [SerializeField] private MapPopup mapPopup;
     
     
-    [SerializeField] private Button inventoryButton;
-    [SerializeField] private Button questButtion;
-    [SerializeField] private Button mapButton;
+        [SerializeField] private Button inventoryButton;
+        [SerializeField] private Button questButtion;
+        [SerializeField] private Button mapButton;
     
-    protected override void InitPopup()
-    {
-        inventoryButton.onClick.AddListener(ShowInventory);
-        questButtion.onClick.AddListener(ShowQuest);
-        mapButton.onClick.AddListener(ShowMap);
-    }
+        protected override void InitPopup()
+        {
+            inventoryButton.onClick.AddListener(ShowInventory);
+            questButtion.onClick.AddListener(ShowQuest);
+            mapButton.onClick.AddListener(ShowMap);
+        }
 
-    public override void ShowPopup()
-    {
-        base.ShowPopup();
-        ShowTab(currentTab);
-    }
+        public override void ShowPopup()
+        {
+            base.ShowPopup();
+            ShowTab(currentTab);
+        }
     
-    private void ShowInventory()
-    {
-        ShowTab(JournalTab.QUEST);
-    }
+        private void ShowInventory()
+        {
+            ShowTab(JournalTab.Quest);
+        }
 
-    private void ShowQuest()
-    {
-        ShowTab(JournalTab.QUEST);
-    }
+        private void ShowQuest()
+        {
+            ShowTab(JournalTab.Quest);
+        }
 
-    private void ShowMap()
-    {
-        ShowTab(JournalTab.QUEST);
-    }
+        private void ShowMap()
+        {
+            ShowTab(JournalTab.Quest);
+        }
 
-    private void ShowTab(JournalTab tab)
-    {
-        inventoryPopup.SetActive(tab == JournalTab.INVENTORY);
-        questPopup.SetActive(tab == JournalTab.QUEST);
-        mapPopup.SetActive(tab == JournalTab.MAP);
-    }
+        private void ShowTab(JournalTab tab)
+        {
+            inventoryPopup.SetActive(tab == JournalTab.Inventory);
+            questPopup.SetActive(tab == JournalTab.Quest);
+            mapPopup.SetActive(tab == JournalTab.Map);
+        }
 
+    }
 }
