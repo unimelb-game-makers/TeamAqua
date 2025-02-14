@@ -1,37 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Rendering.PostProcessing;
 
-public class NPCWander : State
+public class NPCWander : NPCState
 {
     [SerializeField] State idleState;
     [SerializeField] State delayIdleState;
-    [SerializeField] AnimState animState;
     public float speed = 3;
     public Transform[] waypoints;
     private int currentIndex = 0;
     private float threshold = 0.1f;
 
+    //Dynamically updated variables
+    Vector3 targetWaypoint;
+    Vector3 curPosition;
+
     public override void Enter()
     {
-        //Debug.Log("Entering Wander State");
-        
-        if(animState != null)
-            animState.playAnim();
-    }
-    public override void Exit(){
-        //Debug.Log("Exiting Wander State");
+        PlayStateAnimation();
     }
     public override void Process()
     {
-        Vector3 targetWaypoint = waypoints[currentIndex].position;
-        Vector3 curPosition = statemachine.transform.position;
-
-        /*Changing States*/
-        if(Input.GetKeyDown(KeyCode.Space)){
-            statemachine.ChangeState(idleState);
-        }
+        targetWaypoint = waypoints[currentIndex].position;
+        curPosition = statemachine.transform.position;
 
         /*Wandering Logic*/
         if (waypoints.Length == 0)
@@ -53,7 +46,6 @@ public class NPCWander : State
         }else{ //Face Left
             statemachine.transform.rotation = Quaternion.identity;
         }
-
     }
     public override void TriggerEnter(Collider other)
     {

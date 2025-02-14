@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NPCDelayIdle : State
+public class NPCDelayIdle : NPCState
 {
     [SerializeField] State wanderState;
     [SerializeField] State idleState;
     [SerializeField] float waitSeconds;
-
-    [SerializeField] AnimState animState;
 
     public override void Enter()
     {
@@ -18,13 +16,12 @@ public class NPCDelayIdle : State
             StartCoroutine(delayIdle());
         }
         
-        if(animState != null)
-            animState.playAnim();
+        PlayStateAnimation();
     }
 
     public override void TriggerEnter(Collider other)
     {
-        if(other.tag == "Player"){
+        if(other.CompareTag("Player")){
             statemachine.ChangeState(idleState);
         }
     }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NPCIdle : State
+public class NPCIdle : NPCState
 {
     [SerializeField] State wanderState;
 
@@ -13,13 +13,10 @@ public class NPCIdle : State
     [SerializeField] public TextAsset inkJSON;
     [SerializeField] public int DialogueTypeID;     //0 is default dialogue, 1 is second dialogue mode
 
-    [SerializeField] AnimState animState;
-
     public override void Enter()
     {
         Debug.Log("Entering Idle State");
-        if(animState != null)
-            animState.playAnim();
+        PlayStateAnimation();
     }
     public override void Exit()
     {
