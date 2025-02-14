@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Noelle_TALK_distant_0: 1489535042398957824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Noelle_TALK_cheerful_0: -6195056464851290244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
