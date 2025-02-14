@@ -51,10 +51,11 @@ public class UIStatemachine : MonoBehaviour
 
     /*This function will be called in each state when they want to change*/
     public void ChangeUIState(UIState newState){
-        if(currentState != null)
+        if (currentState != null)
+        {
             currentState.UIExit();
-            TurnOff(currentState);
-        
+            TurnOff(currentState);    
+        }
         currentState = newState;
         currentState.UIEnter();
         TurnOn(currentState);
