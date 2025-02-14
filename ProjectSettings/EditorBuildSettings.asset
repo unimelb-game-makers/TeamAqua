@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GameAssets/Scenes/Old stuffs/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/GameAssets/Scenes/Start.unity
+    guid: 77ec2a780fc0f4b7c863abead1c30533
   - enabled: 1
-    path: Assets/GameAssets/Scenes/Dusk Island/Cutscene 1.unity
-    guid: d71ea69649bb4814c83400b9abf0e201
+    path: Assets/GameAssets/Scenes/Islands/NoonIsland.unity
+    guid: 9b6e45fd6e257f34ba99d3695267a9be
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
