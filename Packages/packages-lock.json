@@ -9,6 +9,15 @@
       },
       "hash": "974404adec95cdbfd5e724ae0d70b4b1e42bd186"
     },
+    "com.kamzhanyue.ui-delivery": {
+      "version": "https://github.com/kam-zhan-yue/ui-delivery.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.kamzhanyue.utility-delivery": "0.1.0"
+      },
+      "hash": "d313866619f9878e8bea91c8147f6e14fec6a459"
+    },
     "com.kamzhanyue.utility-delivery": {
       "version": "https://github.com/kam-zhan-yue/utility-delivery.git",
       "depth": 0,
