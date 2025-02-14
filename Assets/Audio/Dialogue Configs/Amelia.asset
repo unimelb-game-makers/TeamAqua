@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Amelia
   dialogueTypingSounds:
-  - {fileID: 8300000, guid: 4d7c629ff16ab5349a61ef1e8cc39efc, type: 3}
-  - {fileID: 8300000, guid: 386232b8cef5eeb47aa5b97a212e156a, type: 3}
-  - {fileID: 8300000, guid: 72ce3076d5be15642af59f627a0828d7, type: 3}
-  - {fileID: 8300000, guid: 74e419542bba36441b683bcacc9a1095, type: 3}
+  - {fileID: 8300000, guid: b93b78e15bfdaf4439b3077fab015ea8, type: 3}
+  - {fileID: 8300000, guid: b93b78e15bfdaf4439b3077fab015ea8, type: 3}
   AudioFrequency: 1
   minPitch: 2.94
   maxPitch: 5

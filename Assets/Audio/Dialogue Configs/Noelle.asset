@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Noelle
   dialogueTypingSounds:
-  - {fileID: 8300000, guid: 4d7c629ff16ab5349a61ef1e8cc39efc, type: 3}
-  - {fileID: 8300000, guid: 386232b8cef5eeb47aa5b97a212e156a, type: 3}
-  - {fileID: 8300000, guid: 72ce3076d5be15642af59f627a0828d7, type: 3}
-  - {fileID: 8300000, guid: 74e419542bba36441b683bcacc9a1095, type: 3}
+  - {fileID: 8300000, guid: 809ab8e54fa61804195a9869efb40d66, type: 3}
+  - {fileID: 8300000, guid: fd37a62e0b488694885d090bab826f89, type: 3}
+  - {fileID: 8300000, guid: 8f016e7a1b8949d4085020a6c346915a, type: 3}
+  - {fileID: 8300000, guid: 29272ef8ca7ce0041ab98a181240a89c, type: 3}
+  - {fileID: 8300000, guid: 7f44397f89c665344984f766027e5312, type: 3}
+  - {fileID: 8300000, guid: 3f708e660d940344d9316940961030e9, type: 3}
   AudioFrequency: 1
   minPitch: 2.94
   maxPitch: 5
