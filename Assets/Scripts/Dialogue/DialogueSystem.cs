@@ -1,11 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
-using UnityEngine.UI;
-using Unity.VisualScripting;
-using UnityEngine.EventSystems;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -34,6 +32,12 @@ public class DialogueSystem : MonoBehaviour
     public UIState dialogueOn;
     public UIState dialogueGame;
     public UIState All_UI_Off;
+
+    public static Action OnDialogueStart;
+    public static Action<List<Choice>> OnDialogueChoices;
+    public static Action<string> OnDialogueContinue;
+    public static Action<List<string>> OnDialogueTags;
+    public static Action OnDialogueEnd;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more 
@@ -130,6 +134,7 @@ public class DialogueSystem : MonoBehaviour
         //Time.timeScale = 0;         this works  
         if (DialogueTypeID == 0)
         {
+            OnDialogueStart.Invoke();
             Time.timeScale = 1;       
             //Debug.Log("time stopped");
             currentStory = new Story(inkJSON.text);
@@ -207,7 +212,7 @@ public class DialogueSystem : MonoBehaviour
             });
             //ContinueStory();
         }
-        
+      
     }
 
     public IEnumerator ExitDialogueMode()
@@ -240,6 +245,8 @@ public class DialogueSystem : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
             string nextLine = currentStory.Continue();
+            OnDialogueContinue.Invoke(nextLine);
+            OnDialogueTags.Invoke(currentStory.currentTags);
             // handle tags in ink
             DialogueTags.Instance().HandleTags(currentStory.currentTags);
             displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
