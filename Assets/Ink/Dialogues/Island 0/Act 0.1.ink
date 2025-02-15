@@ -3,11 +3,13 @@
 //Global ink: not needed
 //Dev review: complete
 
-
+//chores: add speaker portraits.
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL ChangeCutscene(SceneName)
 EXTERNAL PlayBGM(id)
 ~PlayBGM("BGM_CUTSCENE_CEREMONY")
+
+
 
 //~SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", "BGM_CUTSCENE_CEREMONY", 1) 
 
@@ -39,7 +41,7 @@ and by the time the sensation subsides, you notice your reflection in the spille
 
 Your grandfather stands up with his cane and glares daggers at you. A gnarled, bony finger points at your face—
 Monster! #speaker: Noelle's Grandfather
-No, no, I can't be— #speaker: Noelle. #cutscene: A0S11
+No, no, I can't be— #speaker: Noelle #cutscene: A0S11
 And yet, you clearly are. #speaker: Noelle's Mother
 Your mother’s face twists with anger. She whirls to your father. #speaker: Narrator
 Well this is great, just great. Our only heir, a monster! #speaker: Noelle's Mother
@@ -53,7 +55,7 @@ Our darling Noelle was moments away from completing her coming of age ritual #cu
 when a vicious creature attacked her out of nowhere.
 The creature was ultimately slain by yours truly, but at the tragic cost of our dear daughter’s life.
 How terrible this day is, for the Tempest family to be robbed of its only heir, by a creature no less. 
-You can’t do this! I’m your daughter! #speaker: Noelle.
+You can’t do this! I’m your daughter! #speaker: Noelle
 Not anymore. Not after what you've become. #speaker: Noelle's Mother
 But what about the family? You have no other heirs. #speaker: Noelle
 I’m sure we can make one up. #speaker: Noelle's Mother #cutscene: A0S14
@@ -71,7 +73,7 @@ Monster! #speaker: Noelle’s Grandfather
 You run towards the waters, your parents’ pursuit not far behind. #speaker: Narrator #cutscene: A0S17
 Clouds start gathering in the sky and thunder rumbles as rain starts bucketing down. You spot a small boat on the docks and run towards it.
 Untie the knots. #cutscene: A0S18
-Come on! #speaker: Noelle.
+Come on! #speaker: Noelle
 Right before your parents can catch you, you grab an oar and start paddling for your life. #speaker: Narrator
 That’s right, you better run! #speaker: Noelle’s Mother #cutscene: A0S19
 Run and run and run, and never come back! #cutscene: A0S20
@@ -82,5 +84,4 @@ A number of shadows move underneath the surface, #cutscene: A0S22
 but before you can get a better look, a giant wave crashes— and everything goes dark. #cutscene: A0S23
 
 END #cutscene: A0S24
-~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_INTO_THE_STORM", 5) 
 ~ChangeCutscene("NoonIsland")

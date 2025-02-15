@@ -13,7 +13,7 @@ using JetBrains.Annotations;
 public class Cutscene_1 : MonoBehaviour
 {
     public static Cutscene_1 Instance;
-    public UnityEngine.UI.Image background;
+    //public UnityEngine.UI.Image background;
   //  public Sprite[] sprites;
     [SerializeField] public TextAsset inkJSON;
 
