@@ -12,6 +12,8 @@ namespace UI
 
         protected override void InitPopup()
         {
+            DialogueSystem.OnDialogueStart += OnDialogueStart;
+            DialogueSystem.OnDialogueEnd += OnDialogueEnd;
         }
 
         private void Update()
@@ -44,6 +46,18 @@ namespace UI
                 journalPopup.ShowPopup();
             else if(journalPopup.isShowing && !journalPopup.isAnimating)
                 journalPopup.HidePopup();
+        }
+
+        private void OnDialogueStart()
+        {
+            hud.HidePopup();
+            dialoguePopup.ShowPopup();
+        }
+
+        private void OnDialogueEnd()
+        {
+            hud.ShowPopup();
+            dialoguePopup.HidePopup();
         }
     }
 }

@@ -27,10 +27,8 @@ namespace UI
         
         protected override void InitPopup()
         {
-            DialogueSystem.OnDialogueStart += OnDialogueStart;
             DialogueSystem.OnDialogueContinue += OnDialogueContinue;
             DialogueSystem.OnDialogueTags += OnDialogueTags;
-            DialogueSystem.OnDialogueEnd += OnDialogueEnd;
         }
 
         private void Update()
@@ -56,9 +54,9 @@ namespace UI
             }
         }
 
-        private void OnDialogueStart()
+        public override void ShowPopup()
         {
-            ShowPopup();
+            base.ShowPopup();
             choicePopup.HidePopup();
         }
 
@@ -71,12 +69,7 @@ namespace UI
         {
             characterPopup.HandleTags(tags);
         }
-
-        private void OnDialogueEnd()
-        {
-            HidePopup();
-        }
-
+        
         private IEnumerator DisplayLine(string line, List<Choice> choices)
         {
             currentChoices = choices;
@@ -124,10 +117,8 @@ namespace UI
         
         private void OnDestroy()
         {
-            DialogueSystem.OnDialogueStart -= OnDialogueStart;
             DialogueSystem.OnDialogueContinue -= OnDialogueContinue;
             DialogueSystem.OnDialogueTags -= OnDialogueTags;
-            DialogueSystem.OnDialogueEnd -= OnDialogueEnd;
         }
     }
 }
