@@ -262,7 +262,7 @@ public class DialogueSystem : MonoBehaviour
                     if (questID > 0)
                     {
                         Debug.Log("Removing quest");
-                        NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
+                        //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
                         QuestManager.instance.RemoveQuest(questID);
                     }
                 }
@@ -275,7 +275,6 @@ public class DialogueSystem : MonoBehaviour
 
         // Now process the choice and continue the story
         currentStory.ChooseChoiceIndex(choiceIndex);
-        
         ContinueStory();
     }
     
