@@ -21,7 +21,6 @@ public class ItemHarvester : MonoBehaviour
         if (other.gameObject.CompareTag("ItemResource"))
         {
             source = other.gameObject.GetComponent<ItemHarvestSource>();
-            Debug.Log("Entered a Resource");
         }
     }
     private void OnTriggerExit(Collider other)

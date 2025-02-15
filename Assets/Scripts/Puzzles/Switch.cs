@@ -14,15 +14,11 @@ public class Switch : MonoBehaviour
             //Tell the Puzzle Parent to check all switches.
             if(puzzle)
                 puzzle.TryOpenDoor();
-            
-            Debug.Log("Switched On");
         }
-        Debug.Log("entered");
     }
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("SwitchInteractible")){
             On = false;
-            Debug.Log("Switched Off");
         }
     }
 }

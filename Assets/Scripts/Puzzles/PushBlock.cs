@@ -33,12 +33,6 @@ public class PushBlock : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (time > 0)
-            Debug.Log(time);
-    }
-
     private void PushDirection(Vector3 playerPos){
         //Calculate the direction to move first
         double x_value = playerPos.x - transform.position.x;
@@ -65,6 +59,7 @@ public class PushBlock : MonoBehaviour
         if(!Physics.Raycast(transform.position, direction, move_distance, -1, QueryTriggerInteraction.Ignore)
             && can_push && !LeanTween.isTweening(gameObject)){
             LeanTween.move(gameObject, transform.position + direction * move_distance, tween_time);
+            time = 0;
         }
     }
 }
