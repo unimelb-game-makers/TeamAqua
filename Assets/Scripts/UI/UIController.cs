@@ -8,6 +8,7 @@ namespace UI
         [SerializeField] private HUD hud;
         [SerializeField] private JournalPopup journalPopup;
         [SerializeField] private PausePopup pausePopup;
+        [SerializeField] private DialoguePopup dialoguePopup;
 
         protected override void InitPopup()
         {
@@ -27,6 +28,8 @@ namespace UI
 
         private void TogglePause()
         {
+            if (dialoguePopup.isShowing)
+                return;
             if (!pausePopup.isShowing && !pausePopup.isAnimating)
                 pausePopup.ShowPopup();
             else if (pausePopup.isShowing && !pausePopup.isAnimating)
@@ -35,6 +38,8 @@ namespace UI
 
         private void ToggleJournal()
         {
+            if (dialoguePopup.isShowing)
+                return;
             if (!journalPopup.isShowing && !journalPopup.isAnimating)
                 journalPopup.ShowPopup();
             else if(journalPopup.isShowing && !journalPopup.isAnimating)

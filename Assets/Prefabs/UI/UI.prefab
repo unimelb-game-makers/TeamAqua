@@ -57,6 +57,7 @@ MonoBehaviour:
   hud: {fileID: 586353050066503688}
   journalPopup: {fileID: 318491484240200585}
   pausePopup: {fileID: 509115738497189828}
+  dialoguePopup: {fileID: 6733426363166227172}
 --- !u!1 &8166385614512116945
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +509,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7729947257613736703, guid: 2b27fdd9dcd9942fe8431e78e074982a, type: 3}
   m_PrefabInstance: {fileID: 5907232835366100606}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6733426363166227172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 903916675609453722, guid: 2b27fdd9dcd9942fe8431e78e074982a, type: 3}
+  m_PrefabInstance: {fileID: 5907232835366100606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb0844f138ad420f92c99c3be88b61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6064143993253907803
 PrefabInstance:
   m_ObjectHideFlags: 0

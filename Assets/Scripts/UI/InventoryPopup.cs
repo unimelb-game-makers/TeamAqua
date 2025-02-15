@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace UI
@@ -8,9 +10,10 @@ namespace UI
     public class InventoryPopup : Popup
     {
         [SerializeField] private RectTransform popupHolder;
-        [SerializeField] private GameObject samplePopupItem;
+        [SerializeField] private InventoryPopupItem samplePopupItem;
 
-        public List<InventoryPopupItem> items = new();
+        [NonSerialized, ShowInInspector, ReadOnly]
+        private List<InventoryPopupItem> items = new();
         protected override void InitPopup()
         {
             
@@ -31,8 +34,8 @@ namespace UI
                 samplePopupItem.gameObject.SetActiveFast(true);
                 for (int i = 0; i < itemsToSpawn; i++)
                 {
-                    GameObject item = Instantiate(samplePopupItem, popupHolder);
-                    items.Add(item.GetComponent<InventoryPopupItem>());
+                    InventoryPopupItem item = Instantiate(samplePopupItem, popupHolder);
+                    items.Add(item);
                 }
             }
             
