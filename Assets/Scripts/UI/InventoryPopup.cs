@@ -11,6 +11,7 @@ namespace UI
     {
         [SerializeField] private RectTransform popupHolder;
         [SerializeField] private InventoryPopupItem samplePopupItem;
+        [SerializeField] private RectTransform emptyDescription;
 
         [NonSerialized, ShowInInspector, ReadOnly]
         private List<InventoryPopupItem> items = new();
@@ -38,7 +39,7 @@ namespace UI
                     items.Add(item);
                 }
             }
-            
+
             samplePopupItem.gameObject.SetActiveFast(false);
 
             for (int i = 0; i < items.Count; i++)
@@ -48,6 +49,9 @@ namespace UI
                 items[i].Init(data[i]);
                 items[i].gameObject.SetActiveFast(true);
             }
+
+            emptyDescription.gameObject.SetActiveFast(data.Count == 0);
+            popupHolder.gameObject.SetActiveFast(data.Count > 0);
         }
     }
 }
