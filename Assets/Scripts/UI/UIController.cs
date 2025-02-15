@@ -19,9 +19,9 @@ namespace UI
             {
                 TogglePause();
             }
-            else if (Input.GetKeyDown(KeyCode.Q))
+            else if (Input.GetKeyDown(KeyCode.Tab))
             {
-                ShowJournal();
+                ToggleJournal();
             }
         }
 
@@ -33,10 +33,12 @@ namespace UI
                 pausePopup.HidePopup();
         }
 
-        private void ShowJournal()
+        private void ToggleJournal()
         {
             if (!journalPopup.isShowing && !journalPopup.isAnimating)
                 journalPopup.ShowPopup();
+            else if(journalPopup.isShowing && !journalPopup.isAnimating)
+                journalPopup.HidePopup();
         }
     }
 }
