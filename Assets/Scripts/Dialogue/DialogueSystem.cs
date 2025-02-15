@@ -202,18 +202,13 @@ public class DialogueSystem : MonoBehaviour
     public IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);      //wait check to resolve all same-key-input errors
-        //Time.timeScale = 1;
         Debug.Log("time resumed");
         dialogueVariable.StopListening(currentStory);
-        //dialoguePanel.SetActive(false);
-        DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
         OnDialogueEnd?.Invoke();
-        //UIinputProvider.instance().SendUIinput(0);
-
     }
 
     public void ContinueStory()

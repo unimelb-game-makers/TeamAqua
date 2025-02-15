@@ -10,7 +10,7 @@ public class NPCDialogueHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying() && !UIStatemachine.uiStatemachine.CheckPause())
+        if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying())
         {
             dialogueSource.PlayDialogue();
         }

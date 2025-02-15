@@ -15,6 +15,7 @@ public class BarrierManager : MonoBehaviour
         else
             Instance = this;
     }
+    
     void Start()
     {
         
@@ -23,19 +24,15 @@ public class BarrierManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TurnOffBarrier(int id)
     {
-        barriers[id].gameObject.SetActive(false);
+        if (id < barriers.Count)
+            barriers[id].gameObject.SetActive(false);
     }
 
     public void TurnOnBarrier(int id)
     {
-        barriers[id].gameObject.SetActive(true);
+        if (id < barriers.Count)
+            barriers[id].gameObject.SetActive(true);
     }
 }

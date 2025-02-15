@@ -51,6 +51,8 @@ namespace UI
         private void OnDialogueStart()
         {
             hud.HidePopup();
+            if(journalPopup.isShowing)
+                journalPopup.HidePopup();
             dialoguePopup.ShowPopup();
         }
 
