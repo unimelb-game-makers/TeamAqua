@@ -54,6 +54,7 @@ MonoBehaviour:
   showSequence: {fileID: 0}
   hideSequence: {fileID: 0}
   resetSequence: {fileID: 0}
+  titleText: {fileID: 4516374708926129535}
   questText: {fileID: 5200322991226694000}
 --- !u!1 &2926278433659028152
 GameObject:
