@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce0306779621a6428d4e9cd681deb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animState: {fileID: 8944138080954761710}
   wanderState: {fileID: 6692025950271968024}
   idleState: {fileID: 5820136995533611578}
   waitSeconds: 2
-  animState: {fileID: 8944138080954761710}
 --- !u!114 &8944138080954761710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,10 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b47a38fe8f32846ae68462007ceea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderState: {fileID: 6692025950271968024}
-  inkJSON: {fileID: 4900000, guid: 3de097eb3c70cd7459bee63bcb9ad1a0, type: 3}
-  DialogueTypeID: 0
   animState: {fileID: 517117697032648876}
+  wanderState: {fileID: 6692025950271968024}
 --- !u!114 &517117697032648876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 834860108166409299}
+  - component: {fileID: 4638408617763413951}
   - component: {fileID: 2441432889653039573}
   - component: {fileID: 1815761670523736927}
   - component: {fileID: 3976017136592804747}
@@ -169,6 +168,20 @@ Transform:
   - {fileID: 6830398679937636507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4638408617763413951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289783057018902598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f14a4b36195844bbc0a12986fb0d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+  statemachine: {fileID: 199261024932402032}
 --- !u!212 &2441432889653039573
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -542,9 +555,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1203a20fa903f464d8b7af0d23e32020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animState: {fileID: 8183477838947951631}
   idleState: {fileID: 5820136995533611578}
   delayIdleState: {fileID: 8949693904064122482}
-  animState: {fileID: 8183477838947951631}
   speed: 0.5
   waypoints:
   - {fileID: 0}

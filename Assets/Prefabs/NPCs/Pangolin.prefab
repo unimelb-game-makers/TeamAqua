@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1203a20fa903f464d8b7af0d23e32020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animState: {fileID: 1953222660969491519}
   idleState: {fileID: 6361178436725187514}
   delayIdleState: {fileID: 7062994091054707987}
-  animState: {fileID: 1953222660969491519}
   speed: 0.2
   waypoints:
   - {fileID: 0}
@@ -202,10 +202,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce0306779621a6428d4e9cd681deb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animState: {fileID: 8377907045513522240}
   wanderState: {fileID: 7799344584084432687}
   idleState: {fileID: 6361178436725187514}
   waitSeconds: 1
-  animState: {fileID: 8377907045513522240}
 --- !u!114 &8377907045513522240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,10 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b47a38fe8f32846ae68462007ceea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderState: {fileID: 7799344584084432687}
-  inkJSON: {fileID: 4900000, guid: 3de097eb3c70cd7459bee63bcb9ad1a0, type: 3}
-  DialogueTypeID: 0
   animState: {fileID: 4507325109072591419}
+  wanderState: {fileID: 7799344584084432687}
 --- !u!114 &4507325109072591419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2469287587022671635}
+  - component: {fileID: 4277046004946261861}
   - component: {fileID: 5750064825519153280}
   - component: {fileID: 7464096326583413734}
   - component: {fileID: 6728408275900994008}
@@ -394,6 +393,20 @@ Transform:
   - {fileID: 2400498954580477607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4277046004946261861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461211502339563153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f14a4b36195844bbc0a12986fb0d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+  statemachine: {fileID: 3584645897367758289}
 --- !u!212 &5750064825519153280
 SpriteRenderer:
   m_ObjectHideFlags: 0

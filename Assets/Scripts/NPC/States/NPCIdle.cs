@@ -9,10 +9,6 @@ public class NPCIdle : NPCState
 {
     [SerializeField] State wanderState;
 
-    //dialogue stuffs below
-    [SerializeField] public TextAsset inkJSON;
-    [SerializeField] public int DialogueTypeID;     //0 is default dialogue, 1 is second dialogue mode
-
     public override void Enter()
     {
         Debug.Log("Entering Idle State");
@@ -21,14 +17,6 @@ public class NPCIdle : NPCState
     public override void Exit()
     {
         Debug.Log("Exiting Idle State");
-    }
-
-    public override void Process()
-    {
-        if(inkJSON && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying())
-        {
-            DialogueSystem.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
-        }
     }
 
 

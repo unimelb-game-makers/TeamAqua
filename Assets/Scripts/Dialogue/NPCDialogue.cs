@@ -13,68 +13,30 @@ public class NPCDialogue : MonoBehaviour
 
     //[SerializeField] public int questID;
 
-    private bool isInRange;
-    public static NPCDialogue npcDialogue;
-    public UIStatemachine UIstatemachine;
-    
-    // Start is called before the first frame update
-    public void Awake()
-    {
-        npcDialogue = this;
+    public void PlayDialogue(){
+        DialogueSystem.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
+        /*
+        //QuestManager.Instance().CheckStep(questID, 1);
+        //UIstatemachine.ChangeUIState(DialogueOn);
+        //DialogueSystem.SetSpeakerName(gameObject.name); 
+        */
     }
 
-    public static NPCDialogue instance()
-    {
-        return npcDialogue;
-    }
-    void Start()
-    {
-        //EnergyMana = GameObject.Find("EnergyManager").GetComponent<EnergyManager>();
-        
+    // Called when HasQuest is true
+    public void IndicateQuest(){
+        questCue.SetActive(true);
+        dialogueCue.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() && !UIstatemachine.CheckPause() )
-        {
-            //QuestManager.Instance().CheckStep(questID, 1);
-            DialogueSystem.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
-            //UIstatemachine.ChangeUIState(DialogueOn);
-            //DialogueSystem.SetSpeakerName(gameObject.name); 
-        }
+    // Called when HasQuest is false
+    public void IndicateDialogue(){
+        questCue.SetActive(false);
+        dialogueCue.SetActive(true);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if(HasQuest)
-        {
-            if (other.CompareTag("Player"))
-            {
-                questCue.SetActive(true);
-                dialogueCue.SetActive(false);
-                isInRange = true;
-                Debug.Log("in range for dialogue");
-            }
-        }
-        else
-        {
-            if (other.CompareTag("Player"))
-            {
-                questCue.SetActive(false);
-                dialogueCue.SetActive(true);
-                isInRange = true;
-            }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player") /*&& quest incomplete or non-existent*/)
-        {
-            questCue.SetActive(false);
-            dialogueCue.SetActive(false);
-            isInRange = false;
-        }
+    // Called when Player exits NPC
+    public void HideIndicators(){
+        questCue.SetActive(false);
+        dialogueCue.SetActive(false);
     }
 }

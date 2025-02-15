@@ -40,9 +40,7 @@ public class ItemHarvestSource : MonoBehaviour
             return currentItem().itemResource;
         }
         else
-        {
             return null;
-        }
     }
     public HarvestData currentItem()
     {

@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1203a20fa903f464d8b7af0d23e32020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animState: {fileID: 0}
   idleState: {fileID: 4349148426647512500}
   delayIdleState: {fileID: 1296113550299957741}
-  animState: {fileID: 0}
   speed: 1
   waypoints:
   - {fileID: 0}
@@ -62,6 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2822038277027019258}
+  - component: {fileID: 8136541807607038632}
   - component: {fileID: 2650405208292425756}
   - component: {fileID: 9221851579953475787}
   - component: {fileID: 4600571754234493626}
@@ -95,6 +96,20 @@ Transform:
   - {fileID: 4773902188955071269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8136541807607038632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480440755303678776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f14a4b36195844bbc0a12986fb0d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+  statemachine: {fileID: 7688859077568226078}
 --- !u!212 &2650405208292425756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -358,10 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b47a38fe8f32846ae68462007ceea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderState: {fileID: 2289706746735372377}
-  inkJSON: {fileID: 4900000, guid: 3de097eb3c70cd7459bee63bcb9ad1a0, type: 3}
-  DialogueTypeID: 0
   animState: {fileID: 0}
+  wanderState: {fileID: 2289706746735372377}
 --- !u!1 &5749497242214765732
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce0306779621a6428d4e9cd681deb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animState: {fileID: 0}
   wanderState: {fileID: 2289706746735372377}
   idleState: {fileID: 4349148426647512500}
   waitSeconds: 2
-  animState: {fileID: 0}

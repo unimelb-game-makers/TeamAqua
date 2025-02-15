@@ -12,7 +12,11 @@ public class UIStatemachine : MonoBehaviour
     /*currentState should be set in the editor*/
     public UIState currentState;
     public UIState paused;
-    public List<UIState> StatesList ;//{ get; }
+    public List<UIState> StatesList;
+
+    // Declaring Singleton
+    public static UIStatemachine uiStatemachine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,10 @@ public class UIStatemachine : MonoBehaviour
             TurnOff(childState);
         }
         TurnOn(currentState);
-        currentState.UIEnter(); 
+        currentState.UIEnter();
+
+        // Initialize singleton 
+        uiStatemachine = this;
     }
 
     // Update is called once per frame

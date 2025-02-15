@@ -115,8 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animState: {fileID: 4622868073843146488}
   wanderState: {fileID: 7676380013405568833}
-  inkJSON: {fileID: 4900000, guid: 3de097eb3c70cd7459bee63bcb9ad1a0, type: 3}
-  DialogueTypeID: 0
 --- !u!114 &4622868073843146488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3849503128907647850}
+  - component: {fileID: 6081408429837655315}
   - component: {fileID: 233415763551586176}
   - component: {fileID: 2573145739525454253}
   - component: {fileID: 6268503043563416342}
@@ -463,6 +462,7 @@ GameObject:
   - component: {fileID: 4381530314067008463}
   - component: {fileID: 8209687158267877732}
   - component: {fileID: 1130475256973602011}
+  - component: {fileID: 7555173281025391573}
   m_Layer: 0
   m_Name: Amelia
   m_TagString: Creature
@@ -492,6 +492,20 @@ Transform:
   - {fileID: 976259530392968253}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6081408429837655315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383165320316243045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f14a4b36195844bbc0a12986fb0d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 7555173281025391573}
+  statemachine: {fileID: 4381530314067008463}
 --- !u!212 &233415763551586176
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -664,3 +678,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8209687158267877732}
+--- !u!114 &7555173281025391573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383165320316243045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 45715c65d01e4d7449751d42db72a62e, type: 3}
+  DialogueTypeID: 0
+  dialogueCue: {fileID: 3745413417900482826}
+  questCue: {fileID: 0}
+  HasQuest: 0
