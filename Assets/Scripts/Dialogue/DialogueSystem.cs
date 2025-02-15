@@ -134,7 +134,7 @@ public class DialogueSystem : MonoBehaviour
         //Time.timeScale = 0;         this works  
         if (DialogueTypeID == 0)
         {
-            OnDialogueStart.Invoke();
+            OnDialogueStart?.Invoke();
             Time.timeScale = 1;       
             //Debug.Log("time stopped");
             currentStory = new Story(inkJSON.text);
@@ -245,8 +245,8 @@ public class DialogueSystem : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
             string nextLine = currentStory.Continue();
-            OnDialogueContinue.Invoke(nextLine);
-            OnDialogueTags.Invoke(currentStory.currentTags);
+            OnDialogueContinue?.Invoke(nextLine);
+            OnDialogueTags?.Invoke(currentStory.currentTags);
             // handle tags in ink
             DialogueTags.Instance().HandleTags(currentStory.currentTags);
             displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
