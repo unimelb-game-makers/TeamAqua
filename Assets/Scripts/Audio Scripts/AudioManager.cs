@@ -68,7 +68,7 @@ making changed to audio delivery code to add fade out
             Debug.Log(_currentBgm + "stopped playing");
         }
         // PLays the next BGM
-       // Stop(_currentBgm);
+        // Stop(_currentBgm);
         _currentBgm = clipName;
         Play(_currentBgm);
         Debug.Log("bgm changed to " + _currentBgm );

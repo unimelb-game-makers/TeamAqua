@@ -49,17 +49,10 @@ public class PushBlock : MonoBehaviour
         double blockValue;
         Vector3 direction;
         int dir;
-
-        if(is_x){
-            playerValue = playerPos.x;
-            blockValue = transform.position.x;
-            direction = new Vector3(1, 0, 0);
-        }
-        else{
-            playerValue = playerPos.z;
-            blockValue = transform.position.z;
-            direction = new Vector3(0, 0, 1);
-        }
+        
+        playerValue = is_x ? playerPos.x : playerPos.z;
+        blockValue = is_x ? transform.position.x : transform.position.z;
+        direction = is_x ? new Vector3(1,0,0) : new Vector3(0, 0, 1);
         
         if(playerValue > blockValue)
             dir = -1;
