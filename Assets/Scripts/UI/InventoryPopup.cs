@@ -8,9 +8,9 @@ namespace UI
     public class InventoryPopup : Popup
     {
         [SerializeField] private RectTransform popupHolder;
-        [SerializeField] private InventoryPopupItem samplePopupItem;
+        [SerializeField] private GameObject samplePopupItem;
 
-        private readonly List<InventoryPopupItem> items = new();
+        public List<InventoryPopupItem> items = new();
         protected override void InitPopup()
         {
             
@@ -31,8 +31,8 @@ namespace UI
                 samplePopupItem.gameObject.SetActiveFast(true);
                 for (int i = 0; i < itemsToSpawn; i++)
                 {
-                    InventoryPopupItem item = Instantiate(samplePopupItem, popupHolder);
-                    items.Add(item);
+                    GameObject item = Instantiate(samplePopupItem, popupHolder);
+                    items.Add(item.GetComponent<InventoryPopupItem>());
                 }
             }
             
@@ -42,11 +42,8 @@ namespace UI
                 items[i].gameObject.SetActiveFast(false);
             for (int i = 0; i < data.Count; i++)
             {
-                if (data.Count < items.Count)
-                {
-                    items[i].Init(data[i]);
-                    items[i].gameObject.SetActiveFast(true);
-                }
+                items[i].Init(data[i]);
+                items[i].gameObject.SetActiveFast(true);
             }
         }
     }

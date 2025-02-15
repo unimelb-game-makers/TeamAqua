@@ -108,8 +108,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6119130450880730290}
-  - {fileID: 6145465254140339928}
   - {fileID: 6307392952151124023}
+  - {fileID: 6145465254140339928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -211,9 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d52306c415149328b11d0f5fe48b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImage: {fileID: 0}
-  nameText: {fileID: 0}
-  countText: {fileID: 0}
+  itemImage: {fileID: 914383701908545354}
+  nameText: {fileID: 2338417973285202536}
+  countText: {fileID: 306953697616527231}
 --- !u!1 &4420353548881457585
 GameObject:
   m_ObjectHideFlags: 0
