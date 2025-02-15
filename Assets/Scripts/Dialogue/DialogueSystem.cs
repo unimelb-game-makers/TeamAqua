@@ -34,8 +34,7 @@ public class DialogueSystem : MonoBehaviour
     public UIState All_UI_Off;
 
     public static Action OnDialogueStart;
-    public static Action<List<Choice>> OnDialogueChoices;
-    public static Action<string> OnDialogueContinue;
+    public static Action<string, List<Choice>> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
 
@@ -245,24 +244,64 @@ public class DialogueSystem : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
             string nextLine = currentStory.Continue();
-            OnDialogueContinue?.Invoke(nextLine);
+            OnDialogueContinue?.Invoke(nextLine, currentStory.currentChoices);
             OnDialogueTags?.Invoke(currentStory.currentTags);
             // handle tags in ink
             DialogueTags.Instance().HandleTags(currentStory.currentTags);
             displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
-            /*
-            if (currentStory.currentChoices.Count > 0) {
-                DisplayChoices();
-                
-            } else {
-                ClearChoices();
-            }
-            */
         }else
         {
             Debug.Log("NO MORE DIALOGUE DETECTED");
             StartCoroutine(ExitDialogueMode());
         }
+    }
+
+    public void ChooseChoice(int choiceIndex)
+    {
+        // Retrieve the selected choice
+        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
+
+        // Check if the selected choice has the "quest" tag
+        if (selectedChoice.tags != null)
+        {
+            for (int i = 0; i < selectedChoice.tags.Count; i++)
+            {
+                if (selectedChoice.tags[i].Contains("quest")) {
+                    // for substring 6
+                    int questID = int.Parse(selectedChoice.tags[i].Substring(6));
+                    Debug.Log("Adding Quest ID: " + questID);
+
+                    // give quest to player
+                    if (questID > 0)
+                    {
+                        Debug.Log("Adding quest");
+                        QuestManager.instance.AddQuest(questID);
+                    }
+                }
+                //steven's change below, needs more testing
+                if (selectedChoice.tags[i].Contains("finish")) {
+                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
+                    Debug.Log("Finishing Quest ID: " + questID);
+
+                    // finishes the quest upon interaction
+                    if (questID > 0)
+                    {
+                        Debug.Log("Removing quest");
+                        NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
+                        QuestManager.instance.RemoveQuest(questID);
+                    }
+                }
+
+                if (selectedChoice.tags[i].Contains("done")) {
+                    StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+                }
+            }
+        }
+
+        // Now process the choice and continue the story
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        
+        ContinueStory();
     }
 
     private IEnumerator DisplayLine(string line)

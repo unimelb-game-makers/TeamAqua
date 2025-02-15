@@ -1,15 +1,21 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 using Kuroneko.UIDelivery;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
 {
     public class DialoguePopup : Popup
     {
+        [Header("Setup")]
+        [SerializeField] private float typeSpeed = 0.04f;
+        
+        [Header("UI Components")]
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private DialogueCharacterPopupItem leftCharacter;
         [SerializeField] private DialogueCharacterPopupItem rightCharacter;
@@ -22,17 +28,17 @@ namespace UI
             DialogueSystem.OnDialogueContinue += OnDialogueContinue;
             DialogueSystem.OnDialogueTags += OnDialogueTags;
             DialogueSystem.OnDialogueEnd += OnDialogueEnd;
-            DialogueSystem.OnDialogueChoices += OnDialogueChoices;
         }
 
         private void OnDialogueStart()
         {
-            
+            ShowPopup();
+            choicePopup.HidePopup();
         }
 
-        private void OnDialogueContinue(string story)
+        private void OnDialogueContinue(string story, List<Choice> choices)
         {
-            
+            StartCoroutine(DisplayLine(story, choices));
         }
 
         private void OnDialogueTags(List<string> tags)
@@ -42,12 +48,42 @@ namespace UI
 
         private void OnDialogueEnd()
         {
-            
+            HidePopup();
         }
 
-        private void OnDialogueChoices(List<Choice> choices)
+        private IEnumerator DisplayLine(string line, List<Choice> choices)
         {
-            
+            choicePopup.HidePopup();
+            dialogueText.text = line;   //set text to full line, but set visible characters to 0
+            dialogueText.maxVisibleCharacters = 0;
+            bool isRichText = false;
+            foreach (char letter in line.ToCharArray())
+            {
+                //check for rich text
+                if (letter == '<' || isRichText)
+                {
+                    isRichText = true;
+                    if (letter == '>')
+                    {
+                        isRichText = false;
+                    }
+                }
+
+                // otherwise, loads letters normally
+                else
+                {
+                    if (dialogueText.maxVisibleCharacters < dialogueText.text.Length)
+                        DialogueAudioManager.GetAudioMana().PlayDialogueSound(dialogueText.maxVisibleCharacters, dialogueText.text[dialogueText.maxVisibleCharacters]);
+                    dialogueText.maxVisibleCharacters++;
+                    yield return new WaitForSeconds(typeSpeed);         // -> use if not freezing time
+                }
+            }
+
+            if (choices.Count > 0)
+            {
+                choicePopup.Init(choices);
+                choicePopup.ShowPopup();
+            }
         }
 
         private void OnDestroy()
@@ -56,7 +92,6 @@ namespace UI
             DialogueSystem.OnDialogueContinue -= OnDialogueContinue;
             DialogueSystem.OnDialogueTags -= OnDialogueTags;
             DialogueSystem.OnDialogueEnd -= OnDialogueEnd;
-            DialogueSystem.OnDialogueChoices -= OnDialogueChoices;
         }
     }
 }

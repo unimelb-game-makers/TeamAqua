@@ -56,50 +56,7 @@ public class DialogueChoices : MonoBehaviour
     // When a choice is selected, continue the story with the chosen option
     public void OnChoiceSelected(int choiceIndex, Story currentStory)
     {
-        // Retrieve the selected choice
-        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
-
-        // Check if the selected choice has the "quest" tag
-        if (selectedChoice.tags != null)
-        {
-            for (int i = 0; i < selectedChoice.tags.Count; i++)
-            {
-               if (selectedChoice.tags[i].Contains("quest")) {
-                    // for substring 6
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(6));
-                    Debug.Log("Adding Quest ID: " + questID);
-
-                    // give quest to player
-                    if (questID > 0)
-                    {
-                        Debug.Log("Adding quest");
-                        QuestManager.instance.AddQuest(questID);
-                    }
-               }
-                //steven's change below, needs more testing
-               if (selectedChoice.tags[i].Contains("finish")) {
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
-                    Debug.Log("Finishing Quest ID: " + questID);
-
-                    // finishes the quest upon interaction
-                    if (questID > 0)
-                    {
-                        Debug.Log("Removing quest");
-                        //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
-                        QuestManager.instance.RemoveQuest(questID);
-                    }
-               }
-
-               if (selectedChoice.tags[i].Contains("done")) {
-                    StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
-               }
-            }
-        }
-
-        // Now process the choice and continue the story
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        
-        DialogueSystem.Instance().ContinueStory();
+        DialogueSystem.Instance().ChooseChoice(choiceIndex);
     }
 
     // Clears all the current choice buttons
