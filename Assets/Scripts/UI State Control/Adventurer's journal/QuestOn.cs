@@ -28,7 +28,6 @@ public class QuestOn : UIState
     }
     public override void UIProcess()
     {
-        QuestManager.Instance().DrawText();
         /*Changing States*/
         if(Input.GetKeyDown(KeyCode.J)){
             UIstatemachine.ChangeUIState(All_UI_Off);
