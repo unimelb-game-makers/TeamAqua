@@ -8,23 +8,24 @@ public class NPCDialogueHandler : MonoBehaviour
     [NonSerialized] public NPCDialogue dialogueSource = null;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying())
         {
             dialogueSource.PlayDialogue();
         }
     }
+    
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Creature")){
-            dialogueSource = other.gameObject.GetComponent<NPC>().dialogue;
-            
-            if(dialogueSource.HasQuest){
+        if (!other.gameObject.CompareTag("Creature")) return;
+        if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
+        {
+            dialogueSource = npc.dialogue;
+            if(dialogueSource.HasQuest)
                 dialogueSource.IndicateQuest();
-            } else{
+            else
                 dialogueSource.IndicateDialogue();
-            }
         }
     }
     private void OnTriggerExit(Collider other)
