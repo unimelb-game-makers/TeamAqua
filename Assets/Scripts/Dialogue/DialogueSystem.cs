@@ -9,14 +9,8 @@ public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] private InputProvider playerInputProvider;
 
-    [Header("Typing")]
-    [SerializeField] private float TypeSpeed = 0.04f;
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset LoadGlobalJSON;
-
-    [Header("Dialogue UI")]
-    //[SerializeField] public GameObject dialoguePanel;
-    [SerializeField] private TextMeshProUGUI dialText;
 
     public Story currentStory;
     [SerializeField]public bool dialogueIsPlaying { get; private set; }
@@ -25,13 +19,6 @@ public class DialogueSystem : MonoBehaviour
     private static DialogueSystem instance;
 
     public bool displaying = false;
-
-    private Coroutine displayLineCoroutine;
-    private bool canContinueNextLine = false;
-    public UIStatemachine UIstatemachine;
-    public UIState dialogueOn;
-    public UIState dialogueGame;
-    public UIState All_UI_Off;
 
     public static Action OnDialogueStart;
     public static Action<string, List<Choice>> OnDialogueContinue;
@@ -140,7 +127,6 @@ public class DialogueSystem : MonoBehaviour
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false;// Setting the Input provider here.
             //UIinputProvider.instance().SendUIinput(5);
-            UIstatemachine.ChangeUIState(dialogueOn);
             //dialoguePanel.SetActive(true);
             dialogueVariable.StartListening(currentStory);
             currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
@@ -194,7 +180,6 @@ public class DialogueSystem : MonoBehaviour
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true;// Setting the Input provider here.
-            UIstatemachine.ChangeUIState(dialogueGame);     
             dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
             currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
@@ -221,13 +206,12 @@ public class DialogueSystem : MonoBehaviour
         Debug.Log("time resumed");
         dialogueVariable.StopListening(currentStory);
         //dialoguePanel.SetActive(false);
-        dialText.text = "";
         DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
-        UIstatemachine.ChangeUIState(All_UI_Off);
+        OnDialogueEnd?.Invoke();
         //UIinputProvider.instance().SendUIinput(0);
 
     }
@@ -236,20 +220,11 @@ public class DialogueSystem : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-    
-            // dialText.text = currentStory.Continue();
-            
-            if (displayLineCoroutine != null)
-            {
-                StopCoroutine(displayLineCoroutine);
-            }
             string nextLine = currentStory.Continue();
             OnDialogueContinue?.Invoke(nextLine, currentStory.currentChoices);
             OnDialogueTags?.Invoke(currentStory.currentTags);
-            // handle tags in ink
-            DialogueTags.Instance().HandleTags(currentStory.currentTags);
-            displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
-        }else
+        }
+        else
         {
             Debug.Log("NO MORE DIALOGUE DETECTED");
             StartCoroutine(ExitDialogueMode());
@@ -303,63 +278,6 @@ public class DialogueSystem : MonoBehaviour
         
         ContinueStory();
     }
-
-    private IEnumerator DisplayLine(string line)
-    {   //text effect: shows one character at a time instead of pasting the whole line of dialogue
-
-        dialText.text = line;   //set text to full line, but set visible characters to 0
-        dialText.maxVisibleCharacters = 0;
-
-
-
-        DialogueChoices.Instance().ClearChoices(currentStory);
-        canContinueNextLine = false;
-
-        bool isRichText = false;
-        foreach (char letter in line.ToCharArray())
-        {
-            /*      //line skip stuffs (load the whole line of dialogue) below
-                    //space r ---> loads entire line of dialogue instantly
-                    //ISSUE: needs to spam the key for it to even work, sometimes wont even work at all
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log("line loaded");
-                dialText.maxVisibleCharacters = line.Length;
-                break;
-            }
-            */
-            
-            //check for rich text
-            if (letter == '<' || isRichText)
-            {
-                isRichText = true;
-                if (letter == '>')
-                {
-                    isRichText = false;
-                }
-            }
-
-            // otherwise, loads letters normally
-            else
-            {
-                DialogueAudioManager.GetAudioMana().PlayDialogueSound(dialText.maxVisibleCharacters, dialText.text[dialText.maxVisibleCharacters]);         //could try to ESC out of audio more elegantly, its blasting index error rn
-                //Debug.Log(letter);
-                dialText.maxVisibleCharacters++;
-                //yield return new WaitForSecondsRealtime(TypeSpeed);       -> use if freezing time
-                yield return new WaitForSeconds(TypeSpeed);         // -> use if not freezing time
-            }
-
-        }
-        if (currentStory.currentChoices.Count > 0) {
-            DialogueChoices.Instance().DisplayChoices(currentStory);
-            
-        } else {
-            DialogueChoices.Instance().ClearChoices(currentStory);
-        }
-
-        canContinueNextLine = true;
-    }
-
     
     public static bool GetIsPlaying()
     {

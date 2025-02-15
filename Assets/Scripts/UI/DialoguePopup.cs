@@ -17,10 +17,13 @@ namespace UI
         
         [Header("UI Components")]
         [SerializeField] private TMP_Text dialogueText;
-        [SerializeField] private DialogueCharacterPopupItem leftCharacter;
-        [SerializeField] private DialogueCharacterPopupItem rightCharacter;
+        [SerializeField] private DialogueCharacterPopup characterPopup;
         [SerializeField] private DialogueChoicePopup choicePopup;
         [SerializeField] private Image fastForward;
+
+        private Coroutine lineCoroutine = null;
+        private string currentLine;
+        private List<Choice> currentChoices = new List<Choice>();
         
         protected override void InitPopup()
         {
@@ -28,6 +31,29 @@ namespace UI
             DialogueSystem.OnDialogueContinue += OnDialogueContinue;
             DialogueSystem.OnDialogueTags += OnDialogueTags;
             DialogueSystem.OnDialogueEnd += OnDialogueEnd;
+        }
+
+        private void Update()
+        {
+            if (isShowing && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
+            {
+                PressNext();
+            }
+        }
+
+        private void PressNext()
+        {
+            // Skip to the end of the line if possible
+            if (lineCoroutine != null)
+            {
+                StopCoroutine(lineCoroutine);
+                EndCoroutine();
+            }
+            // Else, continue if there are no choices
+            else if (currentChoices.Count == 0)
+            {
+                DialogueSystem.Instance().ContinueStory();
+            }
         }
 
         private void OnDialogueStart()
@@ -38,12 +64,12 @@ namespace UI
 
         private void OnDialogueContinue(string story, List<Choice> choices)
         {
-            StartCoroutine(DisplayLine(story, choices));
+            lineCoroutine = StartCoroutine(DisplayLine(story, choices));
         }
 
         private void OnDialogueTags(List<string> tags)
         {
-            
+            characterPopup.HandleTags(tags);
         }
 
         private void OnDialogueEnd()
@@ -53,6 +79,8 @@ namespace UI
 
         private IEnumerator DisplayLine(string line, List<Choice> choices)
         {
+            currentChoices = choices;
+            currentLine = line;
             choicePopup.HidePopup();
             dialogueText.text = line;   //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
@@ -78,14 +106,22 @@ namespace UI
                     yield return new WaitForSeconds(typeSpeed);         // -> use if not freezing time
                 }
             }
-
-            if (choices.Count > 0)
-            {
-                choicePopup.Init(choices);
-                choicePopup.ShowPopup();
-            }
+            
+            EndCoroutine();
         }
 
+        private void EndCoroutine()
+        {
+            dialogueText.maxVisibleCharacters = currentLine.Length;
+            if (currentChoices.Count > 0)
+            {
+                choicePopup.Init(currentChoices);
+                choicePopup.ShowPopup();
+            }
+
+            lineCoroutine = null; 
+        }
+        
         private void OnDestroy()
         {
             DialogueSystem.OnDialogueStart -= OnDialogueStart;

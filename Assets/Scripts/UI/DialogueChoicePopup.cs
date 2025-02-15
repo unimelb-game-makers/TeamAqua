@@ -39,6 +39,8 @@ namespace UI
                 }
             }
             
+            samplePopupItem.gameObject.SetActiveFast(false);
+            
             for (int i = 0; i < popupItems.Count; i++)
                 popupItems[i].gameObject.SetActiveFast(false);
 
