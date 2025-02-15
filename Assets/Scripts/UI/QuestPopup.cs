@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Kuroneko.UIDelivery;
+using Kuroneko.UtilityDelivery;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -10,8 +12,22 @@ namespace UI
     {
         [SerializeField] private TMP_Text titleText;
         [SerializeField] private TMP_Text questText;
+        [SerializeField] private Button nextButton;
+        [SerializeField] private Button previousButton;
+        [SerializeField] private Button cancelButton;
+
+        private List<QuestData> questData = new();
+        private int index = 0;
         protected override void InitPopup()
         {
+            Debug.Log("QuestPopup InitPopup");
+            nextButton.onClick.AddListener(NextQuest);
+            previousButton.onClick.AddListener(PreviousQuest);
+            cancelButton.onClick.AddListener(CancelQuest);
+            
+            nextButton.gameObject.SetActiveFast(false);
+            previousButton.gameObject.SetActiveFast(false);
+            cancelButton.gameObject.SetActiveFast(false);
         }
 
         private List<QuestData> GetData()
@@ -22,20 +38,26 @@ namespace UI
         public override void ShowPopup()
         {
             base.ShowPopup();
-            List<QuestData> quests = GetData();
-            if (quests.Count == 0)
+            questData = GetData();
+            if (questData.Count == 0)
             {
                 titleText.text = "Quests";
                 questText.text = "No Quests,  You're All Done!";
             }
             else
             {
-                ShowQuest(quests[0]);
+                ShowQuest(0);
             }
         }
 
-        private void ShowQuest(QuestData quest)
+        private void ShowQuest(int nextIndex)
         {
+            index = nextIndex; 
+            // Activate the buttons
+            nextButton.gameObject.SetActiveFast(index < questData.Count - 1);
+            previousButton.gameObject.SetActiveFast(index > 0);
+            
+            QuestData quest = questData[index];
             questText.text = "";
             titleText.text = quest.title;
             // write the quest into the questText
@@ -56,6 +78,21 @@ namespace UI
             questText.text += "\n"
                               + "<color=green>Reward: " + quest.reward.exp + " exp " + quest.reward.gold +
                               " gold</color>";
+        }
+
+        private void NextQuest()
+        {
+            ShowQuest(index + 1);
+        }
+
+        private void PreviousQuest()
+        {
+            ShowQuest(index - 1);
+        }
+
+        private void CancelQuest()
+        {
+            
         }
     }
 }
