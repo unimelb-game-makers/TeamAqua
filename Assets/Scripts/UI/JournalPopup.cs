@@ -1,6 +1,7 @@
 using System;
 using Kuroneko.UIDelivery;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
@@ -21,15 +22,19 @@ namespace UI
         [SerializeField] private MapPopup mapPopup;
     
     
-        [SerializeField] private Button inventoryButton;
-        [SerializeField] private Button questButtion;
-        [SerializeField] private Button mapButton;
+        [SerializeField] private JournalTabButton inventoryButton;
+        [SerializeField] private JournalTabButton questButton;
+        [SerializeField] private JournalTabButton mapButton;
     
         protected override void InitPopup()
         {
-            inventoryButton.onClick.AddListener(ShowInventory);
-            questButtion.onClick.AddListener(ShowQuest);
-            mapButton.onClick.AddListener(ShowMap);
+        }
+
+        private void Start()
+        {
+            inventoryButton.AddListener(ShowInventory);
+            questButton.AddListener(ShowQuest);
+            mapButton.AddListener(ShowMap);
         }
 
         public override void ShowPopup()
@@ -59,6 +64,10 @@ namespace UI
             inventoryPopup.SetActive(tab == JournalTab.Inventory);
             questPopup.SetActive(tab == JournalTab.Quest);
             mapPopup.SetActive(tab == JournalTab.Map);
+            
+            inventoryButton.SetActive(tab == JournalTab.Inventory);
+            questButton.SetActive(tab == JournalTab.Quest);
+            mapButton.SetActive(tab == JournalTab.Map);
         }
 
     }

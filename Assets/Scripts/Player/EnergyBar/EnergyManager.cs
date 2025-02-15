@@ -1,36 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnergyManager : MonoBehaviour
 {
-    public static EnergyManager energyManager;
-    public Image RemainingEnergy;
-    public float EnergyAmount = 100;
-    void Start()
+    public const float MAX_ENERGY = 100f;
+    public static EnergyManager Instance;
+    public static Action<float> OnEnergyChanged;
+    
+    private float energyAmount = 100;
+    
+    private void Awake()
     {
-        energyManager = this;
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
+        energyAmount = MAX_ENERGY;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        OnEnergyChanged?.Invoke(energyAmount);
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             LoseEnergy(20);
         }
     }
+    
     public void LoseEnergy (float loss)
     {
-        EnergyAmount -= loss;
-        RemainingEnergy.fillAmount = EnergyAmount / 100;
+        energyAmount -= loss;
+        OnEnergyChanged?.Invoke(energyAmount);
     }
 
     public void GainEnergy ( float healingAmount)
     {
-        EnergyAmount += healingAmount;
-        EnergyAmount = Mathf.Clamp(EnergyAmount, 0, 100);
-        RemainingEnergy.fillAmount = EnergyAmount / 100;
+        energyAmount += healingAmount;
+        energyAmount = Mathf.Clamp(energyAmount, 0, MAX_ENERGY);
+        OnEnergyChanged?.Invoke(energyAmount);
     }
 }

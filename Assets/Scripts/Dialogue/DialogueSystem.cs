@@ -1,24 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
-using UnityEngine.UI;
-using Unity.VisualScripting;
-using UnityEngine.EventSystems;
 
 public class DialogueSystem : MonoBehaviour
 {
     [SerializeField] private InputProvider playerInputProvider;
 
-    [Header("Typing")]
-    [SerializeField] private float TypeSpeed = 0.04f;
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset LoadGlobalJSON;
-
-    [Header("Dialogue UI")]
-    //[SerializeField] public GameObject dialoguePanel;
-    [SerializeField] private TextMeshProUGUI dialText;
 
     public Story currentStory;
     [SerializeField]public bool dialogueIsPlaying { get; private set; }
@@ -28,12 +20,10 @@ public class DialogueSystem : MonoBehaviour
 
     public bool displaying = false;
 
-    private Coroutine displayLineCoroutine;
-    private bool canContinueNextLine = false;
-    public UIStatemachine UIstatemachine;
-    public UIState dialogueOn;
-    public UIState dialogueGame;
-    public UIState All_UI_Off;
+    public static Action OnDialogueStart;
+    public static Action<string, List<Choice>> OnDialogueContinue;
+    public static Action<List<string>> OnDialogueTags;
+    public static Action OnDialogueEnd;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more 
@@ -130,13 +120,13 @@ public class DialogueSystem : MonoBehaviour
         //Time.timeScale = 0;         this works  
         if (DialogueTypeID == 0)
         {
+            OnDialogueStart?.Invoke();
             Time.timeScale = 1;       
             //Debug.Log("time stopped");
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false;// Setting the Input provider here.
             //UIinputProvider.instance().SendUIinput(5);
-            UIstatemachine.ChangeUIState(dialogueOn);
             //dialoguePanel.SetActive(true);
             dialogueVariable.StartListening(currentStory);
             currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
@@ -190,7 +180,6 @@ public class DialogueSystem : MonoBehaviour
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true;// Setting the Input provider here.
-            UIstatemachine.ChangeUIState(dialogueGame);     
             dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
             currentStory.BindExternalFunction("checkQuestStatus", (int id, int steps) =>     
@@ -207,113 +196,82 @@ public class DialogueSystem : MonoBehaviour
             });
             //ContinueStory();
         }
-        
+      
     }
 
     public IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);      //wait check to resolve all same-key-input errors
-        //Time.timeScale = 1;
         Debug.Log("time resumed");
         dialogueVariable.StopListening(currentStory);
-        //dialoguePanel.SetActive(false);
-        dialText.text = "";
-        DialogueChoices.Instance().ClearChoices(currentStory); // Clear choice buttons on exit
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true;// Setting the Input Provider Here.
-        UIstatemachine.ChangeUIState(All_UI_Off);
-        //UIinputProvider.instance().SendUIinput(0);
-
+        OnDialogueEnd?.Invoke();
     }
 
     public void ContinueStory()
     {
         if (currentStory.canContinue)
         {
-    
-            // dialText.text = currentStory.Continue();
-            
-            if (displayLineCoroutine != null)
-            {
-                StopCoroutine(displayLineCoroutine);
-            }
             string nextLine = currentStory.Continue();
-            // handle tags in ink
-            DialogueTags.Instance().HandleTags(currentStory.currentTags);
-            displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
-            /*
-            if (currentStory.currentChoices.Count > 0) {
-                DisplayChoices();
-                
-            } else {
-                ClearChoices();
-            }
-            */
-        }else
+            OnDialogueContinue?.Invoke(nextLine, currentStory.currentChoices);
+            OnDialogueTags?.Invoke(currentStory.currentTags);
+        }
+        else
         {
             Debug.Log("NO MORE DIALOGUE DETECTED");
             StartCoroutine(ExitDialogueMode());
         }
     }
 
-    private IEnumerator DisplayLine(string line)
-    {   //text effect: shows one character at a time instead of pasting the whole line of dialogue
+    public void ChooseChoice(int choiceIndex)
+    {
+        // Retrieve the selected choice
+        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
 
-        dialText.text = line;   //set text to full line, but set visible characters to 0
-        dialText.maxVisibleCharacters = 0;
-
-
-
-        DialogueChoices.Instance().ClearChoices(currentStory);
-        canContinueNextLine = false;
-
-        bool isRichText = false;
-        foreach (char letter in line.ToCharArray())
+        // Check if the selected choice has the "quest" tag
+        if (selectedChoice.tags != null)
         {
-            /*      //line skip stuffs (load the whole line of dialogue) below
-                    //space r ---> loads entire line of dialogue instantly
-                    //ISSUE: needs to spam the key for it to even work, sometimes wont even work at all
-            if(Input.GetKeyDown(KeyCode.R))
+            for (int i = 0; i < selectedChoice.tags.Count; i++)
             {
-                Debug.Log("line loaded");
-                dialText.maxVisibleCharacters = line.Length;
-                break;
-            }
-            */
-            
-            //check for rich text
-            if (letter == '<' || isRichText)
-            {
-                isRichText = true;
-                if (letter == '>')
-                {
-                    isRichText = false;
+                if (selectedChoice.tags[i].Contains("quest")) {
+                    // for substring 6
+                    int questID = int.Parse(selectedChoice.tags[i].Substring(6));
+                    Debug.Log("Adding Quest ID: " + questID);
+
+                    // give quest to player
+                    if (questID > 0)
+                    {
+                        Debug.Log("Adding quest");
+                        QuestManager.instance.AddQuest(questID);
+                    }
+                }
+                //steven's change below, needs more testing
+                if (selectedChoice.tags[i].Contains("finish")) {
+                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
+                    Debug.Log("Finishing Quest ID: " + questID);
+
+                    // finishes the quest upon interaction
+                    if (questID > 0)
+                    {
+                        Debug.Log("Removing quest");
+                        //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
+                        QuestManager.instance.RemoveQuest(questID);
+                    }
+                }
+
+                if (selectedChoice.tags[i].Contains("done")) {
+                    StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
                 }
             }
-
-            // otherwise, loads letters normally
-            else
-            {
-                DialogueAudioManager.GetAudioMana().PlayDialogueSound(dialText.maxVisibleCharacters, dialText.text[dialText.maxVisibleCharacters]);         //could try to ESC out of audio more elegantly, its blasting index error rn
-                //Debug.Log(letter);
-                dialText.maxVisibleCharacters++;
-                //yield return new WaitForSecondsRealtime(TypeSpeed);       -> use if freezing time
-                yield return new WaitForSeconds(TypeSpeed);         // -> use if not freezing time
-            }
-
-        }
-        if (currentStory.currentChoices.Count > 0) {
-            DialogueChoices.Instance().DisplayChoices(currentStory);
-            
-        } else {
-            DialogueChoices.Instance().ClearChoices(currentStory);
         }
 
-        canContinueNextLine = true;
+        // Now process the choice and continue the story
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
-
     
     public static bool GetIsPlaying()
     {

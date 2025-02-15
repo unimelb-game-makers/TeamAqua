@@ -31,5 +31,3 @@ MonoBehaviour:
     config: {fileID: 11400000, guid: 0693b1baaee74c242bb3d2c9cb146342, type: 2}
   - id: BGM_SFX_HARVEST_WOOD
     config: {fileID: 11400000, guid: 04eb81ef9e74a6f40a4c70187eda6dac, type: 2}
-  - id: 
-    config: {fileID: 0}
