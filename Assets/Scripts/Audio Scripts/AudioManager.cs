@@ -9,20 +9,6 @@ public class AudioManager : MonoBehaviour
     
     private string _currentBgm = string.Empty;
 
-/*=======DEV NOTE: maybe use scriptable objects to have ids on the tracks, so we can use strings to load whichever track we want
-without having to declare a public audioclip newClip. We might also be able to store data like volume, pitch, each track's unique properties (if they have) in there as well
-
-
-2/2/25
-functions todo
-
-Play()
-
-Swap()
-
-
-making changed to audio delivery code to add fade out
-*/
     private void Awake()
     {
         if (Instance != null && Instance != this)

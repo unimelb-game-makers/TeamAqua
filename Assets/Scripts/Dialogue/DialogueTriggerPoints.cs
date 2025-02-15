@@ -36,7 +36,7 @@ public class DialogueTriggerPoints : MonoBehaviour
                 DialoguePanel.SetActive(true);
                 DialogueSystem.GetIsPlaying();
                 //UIEnter();    < what did this line do....
-                DialogueSystem.GetDial().ContinueStory();
+                DialogueSystem.Instance().ContinueStory();
                 Debug.Log("entering dial trig ui state");
                 //UIstatemachine.ChangeUIState(this);
                 //Collided = false;

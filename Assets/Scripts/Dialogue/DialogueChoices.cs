@@ -91,7 +91,7 @@ public class DialogueChoices : MonoBehaviour
                }
 
                if (selectedChoice.tags[i].Contains("done")) {
-                    StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+                    StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
                }
             }
         }
@@ -99,7 +99,7 @@ public class DialogueChoices : MonoBehaviour
         // Now process the choice and continue the story
         currentStory.ChooseChoiceIndex(choiceIndex);
         
-        DialogueSystem.GetDial().ContinueStory();
+        DialogueSystem.Instance().ContinueStory();
     }
 
     // Clears all the current choice buttons

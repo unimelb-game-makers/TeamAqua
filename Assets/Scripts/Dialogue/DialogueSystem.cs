@@ -23,8 +23,8 @@ public class DialogueSystem : MonoBehaviour
     public Story currentStory;
     [SerializeField]public bool dialogueIsPlaying { get; private set; }
     private DialogueVariable dialogueVariable;
-  
-    public static DialogueSystem DialMana;
+
+    private static DialogueSystem instance;
 
     public bool displaying = false;
 
@@ -44,23 +44,22 @@ public class DialogueSystem : MonoBehaviour
     //final: code clean up and debug
     private void Awake()
     {
-        if (DialMana != null)
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        else
+            instance = this;
+        if (instance != null)
         {
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
-        DialMana = this;
+        instance = this;
 
         dialogueVariable = new DialogueVariable(LoadGlobalJSON);
-
-        //audioSource = this.gameObject.AddComponent<AudioSource>();
-        //currentAudioInfo = defaultAudioInfo;
-        
-        
     }
 
-    public static DialogueSystem GetDial()
+    public static DialogueSystem Instance()
     {
-        return DialMana;
+        return instance;
     }
 
     private void Start()
@@ -319,7 +318,7 @@ public class DialogueSystem : MonoBehaviour
     public static bool GetIsPlaying()
     {
         // check if dialogue is playing or not, call this when status check needed.
-        return DialMana.dialogueIsPlaying;
+        return instance.dialogueIsPlaying;
     }
 
     public bool GetChoicesDisplay()
@@ -344,172 +343,3 @@ public class DialogueSystem : MonoBehaviour
         return variableValue;
     }
 }
-
-//=====================================================Refractored stuffs=======================================================
-
-
-//choice related stuffs
-
-/*
-    // can possibly refractor choice-related stuffs into its own script
-    // Displays the choice buttons
-    private void DisplayChoices()
-    {
-        ClearChoices();
-        displaying = true;
-
-        for (int i = 0; i < currentStory.currentChoices.Count; i++)
-        {
-            Choice choice = currentStory.currentChoices[i];
-            choiceButton[i].SetActive(true);
-            choiceButton[i].GetComponentInChildren<TextMeshProUGUI>().text = choice.text;
-
-            // Add listener for the button
-            int choiceIndex = i;
-            choiceButton[i].GetComponent<Button>().onClick.AddListener(() => OnChoiceSelected(choiceIndex));
-        }
-    }
-
-    // When a choice is selected, continue the story with the chosen option
-    private void OnChoiceSelected(int choiceIndex)
-    {
-        // Retrieve the selected choice
-        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
-
-        // Check if the selected choice has the "quest" tag
-        if (selectedChoice.tags != null)
-        {
-            for (int i = 0; i < selectedChoice.tags.Count; i++)
-            {
-               if (selectedChoice.tags[i].Contains("quest")) {
-                    // for substring 6
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(6));
-                    Debug.Log("Quest ID: " + questID);
-
-                    // give quest to player
-                    if (questID > 0)
-                    {
-                        Debug.Log("Adding quest");
-                        QuestManager.instance.AddQuest(questID);
-                    }
-               }
-                //steven's change below, needs more testing
-               if (selectedChoice.tags[i].Contains("finish")) {
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
-                    Debug.Log("Quest ID: " + questID);
-
-                    // give quest to player
-                    if (questID > 0)
-                    {
-                        Debug.Log("Removing quest");
-                        QuestManager.instance.RemoveQuest(questID);
-                    }
-               }
-
-               if (selectedChoice.tags[i].Contains("done")) {
-                    StartCoroutine(ExitDialogueMode());
-               }
-            }
-        }
-
-        // Now process the choice and continue the story
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        
-        ContinueStory();
-    }
-
-    // Clears all the current choice buttons
-    private void ClearChoices()
-    {
-        displaying = false;
-        Debug.Log("Clearing choices");
-        Debug.Log(currentStory.currentChoices.Count);
-        foreach (GameObject c in choiceButton)
-        {
-            c.GetComponent<Button>().onClick.RemoveAllListeners();
-            c.GetComponentInChildren<TextMeshProUGUI>().text = "";
-            c.SetActive(false);
-
-        }
-    }
-    */
-
-    /*
-            private void HandleTags(List<string> currentTags)
-        {   //this handles all tags aside from quest
-
-            foreach (string tag in currentTags)
-            {
-                // parse the tag
-                string[] splitTag = tag.Split(':');
-                if (splitTag.Length != 2)
-                {
-                    Debug.LogError("error: tag could not be parsed: " + tag);
-                }
-                string tagKey = splitTag[0].Trim();
-                string tagValue = splitTag[1].Trim();
-                
-                // handle the tags aside from quests
-                switch (tagKey)
-                {
-                    /*  --------------- might go unused, unsure if ID checking necessary or not 
-                    case ID_TAG:        //check for ID at the top of each ink file and compare it to ID of quest
-                        id = int.Parse(tagValue); --> try to convert tagvalue to int
-                        break;*/
-                    /*
-                    case "questS":      //---> this handles dialogue-based quest giving
-                        QuestSid = int.Parse(tagValue);
-                        QuestManager.instance.AddQuest(QuestSid);     
-                        break;
-                    case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
-                        //charName.text = tagValue;
-                        if (tagValue == "Noelle")   // player's portrait on left hand side
-                        {
-                            leftDial.SetActive(true);
-                            rightDial.SetActive(false);
-                            charNameLeft.text = tagValue;
-                            Debug.Log(tagValue);
-                        }
-                        else if (tagValue == "Narrator")    // Narrator doesnt have any portraits or name tag, just empty
-                        {
-                            leftDial.SetActive(false);
-                            rightDial.SetActive(false);
-                        }
-                        else      // every other characters' portraits on right hand side
-                        {           
-                            leftDial.SetActive(false);
-                            rightDial.SetActive(true);
-                            charNameRight.text = tagValue;
-                            Debug.Log(tagValue);
-                        }
-                        break;
-                    case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
-                        if (tagValue == "Noelle")
-                        {
-                            portraitAnimLeft.Play(tagValue);
-                        }
-
-                        else
-                        {
-                            portraitAnimRight.Play(tagValue);
-                        }
-                        
-                        //Debug.Log("portrait is " + tagValue);
-                        break;
-                    case LAYOUT_TAG:
-                        Debug.Log("layout is " + tagValue);
-                        break;
-                    case AUDIO_TAG:
-                        DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue);
-                        break;
-                    default:
-                        Debug.LogWarning("tag came in but is not currently being handled: " + tag);
-                        break;
-                    
-                }
-            }        
-        }
-    */
-
-    
-

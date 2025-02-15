@@ -25,7 +25,7 @@ public class QuestLocationTrigger : MonoBehaviour
     }
     void Start()
     {
-        story = DialogueSystem.GetDial().currentStory;
+        story = DialogueSystem.Instance().currentStory;
     
     }
 
@@ -47,7 +47,7 @@ public class QuestLocationTrigger : MonoBehaviour
                 // Issue qith quest manager: indexing doesnt work if quests are added out of order, if u add quest 10 as your first quest, it will throw index 9 at the quest list but since its the very first quest, the index should be 0
                 //story = DialogueSystem.GetDial().currentStory;
                 //QuestManager.Instance().CheckStatus(id,step, story);
-                Debug.Log("location reached, dialogue trigger " + "quest_id" + id + " switched to " + DialogueSystem.GetDial().currentStory.variablesState["quest_id" + id]);
+                Debug.Log("location reached, dialogue trigger " + "quest_id" + id + " switched to " + DialogueSystem.Instance().currentStory.variablesState["quest_id" + id]);
                 LocationReached = true;
                 return;
             }

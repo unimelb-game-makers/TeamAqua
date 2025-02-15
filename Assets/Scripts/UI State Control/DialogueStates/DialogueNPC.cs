@@ -18,21 +18,21 @@ public class DialogueOn : UIState
 
     public override void UIProcess()
     {
-        if (Input.GetKeyDown(KeyCode.E) && DialogueSystem.GetDial().GetChoicesDisplay() /*&& a bunch of other conditions*/)
+        if (Input.GetKeyDown(KeyCode.E) && DialogueSystem.Instance().GetChoicesDisplay() /*&& a bunch of other conditions*/)
         {
-            DialogueSystem.GetDial().ContinueStory();
+            DialogueSystem.Instance().ContinueStory();
             Debug.Log("story is continued");
         }  
 
-        if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying() && DialogueSystem.GetDial().GetChoicesDisplay())
+        if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying() && DialogueSystem.Instance().GetChoicesDisplay())
         {
-            StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+            StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
         }
     }
 
     public override void UIExit()
     {
-        StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+        StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
         DialoguePanel.SetActive(false);
         Debug.Log("exiting dialogue mode");
         

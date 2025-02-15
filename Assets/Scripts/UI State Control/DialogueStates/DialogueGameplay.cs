@@ -44,14 +44,14 @@ each time state is called, call continuestory()
 
         if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying())
         {
-            StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+            StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
             
         }
     }
 
     public override void UIExit()
     {
-        StartCoroutine(DialogueSystem.GetDial().ExitDialogueMode());
+        StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
         Debug.Log("exiting dialogue mode");
     }
 

@@ -1,6 +1,7 @@
 using Kuroneko.UIDelivery;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -10,8 +11,11 @@ namespace UI
         [SerializeField] private DialogueCharacterPopupItem leftCharacter;
         [SerializeField] private DialogueCharacterPopupItem rightCharacter;
         [SerializeField] private DialogueChoicePopup choicePopup;
+        [SerializeField] private Image fastForward;
+        
         protected override void InitPopup()
         {
+            
         }
     }
 }

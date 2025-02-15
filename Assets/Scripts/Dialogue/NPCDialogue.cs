@@ -39,7 +39,7 @@ public class NPCDialogue : MonoBehaviour
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !DialogueSystem.GetIsPlaying() && !UIstatemachine.CheckPause() )
         {
             //QuestManager.Instance().CheckStep(questID, 1);
-            DialogueSystem.GetDial().EnterDialogueMode(inkJSON, DialogueTypeID);
+            DialogueSystem.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
             //UIstatemachine.ChangeUIState(DialogueOn);
             //DialogueSystem.SetSpeakerName(gameObject.name); 
         }

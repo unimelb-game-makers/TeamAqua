@@ -325,6 +325,7 @@ MonoBehaviour:
   leftCharacter: {fileID: 519578522940634624}
   rightCharacter: {fileID: 98933216785665601}
   choicePopup: {fileID: 6081123425129908140}
+  fastForward: {fileID: 5823336302995672066}
 --- !u!1 &1554208532184846621
 GameObject:
   m_ObjectHideFlags: 0

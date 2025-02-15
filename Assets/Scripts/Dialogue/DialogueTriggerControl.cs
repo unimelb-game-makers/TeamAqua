@@ -115,7 +115,7 @@ public class DialogueTriggerControl : UIState
             if (other.CompareTag("Player"))
             {
                 Debug.Log("entering parent dialogue trigger, onwards are child triggers");
-                DialogueSystem.GetDial().EnterDialogueMode(inkJSON, dialogueTypeID);
+                DialogueSystem.Instance().EnterDialogueMode(inkJSON, dialogueTypeID);
                 //dialoguePanel.SetActive(true);
             }
         }
