@@ -57,6 +57,7 @@ namespace UI
         public override void ShowPopup()
         {
             base.ShowPopup();
+            characterPopup.ShowPopup();
             choicePopup.HidePopup();
         }
 

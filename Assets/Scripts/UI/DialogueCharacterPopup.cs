@@ -25,6 +25,14 @@ namespace UI
             cutscene.gameObject.SetActiveFast(false);
         }
 
+
+        public override void ShowPopup()
+        {
+            base.ShowPopup();
+            leftCharacter.gameObject.SetActiveFast(false);
+            rightCharacter.gameObject.SetActiveFast(false);
+        }
+
         public void HandleTags(List<string> tags)
         {
             foreach (string inkTag in tags)
