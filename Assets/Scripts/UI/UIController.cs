@@ -61,5 +61,11 @@ namespace UI
             hud.ShowPopup();
             dialoguePopup.HidePopup();
         }
+
+        private void OnDestroy()
+        {
+            DialogueSystem.OnDialogueStart -= OnDialogueStart;
+            DialogueSystem.OnDialogueEnd -= OnDialogueEnd; 
+        }
     }
 }
