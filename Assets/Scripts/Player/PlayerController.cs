@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveInput;
     private Vector3 moveVelocity;
     private string currentAnimState;
+    private Vector3 spriteScale;
 
     AnimController anim;
 
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
         if(inputProvider.can_move == false){
             inputProvider.can_move = true;
         }
+        spriteScale = spriteTransform.localScale;
     }
 
     // Update is called once per frame
@@ -39,12 +41,12 @@ public class PlayerController : MonoBehaviour
             
             if(moveInput.x > 0 && moveInput.z == 0){// Walk Right
                 anim.ChangeAnimationState("Walk");
-                spriteTransform.rotation = Quaternion.Euler(0,180,0);
+                spriteTransform.localScale = new Vector3(-spriteScale.x, spriteScale.y, spriteScale.z);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
             else if(moveInput.x < 0 && moveInput.z == 0){// Walk Left
                 anim.ChangeAnimationState("Walk");
-                spriteTransform.rotation = Quaternion.identity;
+                spriteTransform.localScale = spriteScale;
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }   
             else if(moveInput.z > 0){// Walk Up
