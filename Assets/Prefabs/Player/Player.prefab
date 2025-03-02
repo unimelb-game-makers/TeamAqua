@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   moveSpeed: 1.2
-  spriteTransform: {fileID: 1423168511011074290}
+  spriteTransform: {fileID: 6391069182455531222}
 --- !u!114 &8893293428448203259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 1423168511011074290}
   - component: {fileID: 7498922723279976638}
   - component: {fileID: 5514603575849100926}
-  - component: {fileID: 1297990507946064307}
+  - component: {fileID: 6391069182455531222}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -264,7 +264,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1297990507946064307
+--- !u!114 &6391069182455531222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4410410664079695968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac41eae1507d687a4bdc57e2bb466cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cabe368758ae221d8bab2aba1aa21bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboard: 1

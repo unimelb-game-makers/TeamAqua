@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private InputProvider inputProvider;
     [SerializeField] private float moveSpeed;       //adjust movement speed
-    [SerializeField] private Transform spriteTransform;
+    [SerializeField] private SpriteTransformer spriteTransform;
     private float speed;    //freezes movement or resume movement depending on condition check
 
     private Rigidbody rb;
@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
         if(inputProvider.can_move == false){
             inputProvider.can_move = true;
         }
-        spriteScale = spriteTransform.localScale;
     }
 
     // Update is called once per frame
@@ -39,14 +38,14 @@ public class PlayerController : MonoBehaviour
             speed = moveSpeed;
             /*Play Animations here*/
             
-            if(moveInput.x > 0 && moveInput.z == 0){// Walk Right
+            if(moveInput.x > 0){// Walk Right
                 anim.ChangeAnimationState("Walk");
-                spriteTransform.localScale = new Vector3(-spriteScale.x, spriteScale.y, spriteScale.z);
+                spriteTransform.flipX(true);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
-            else if(moveInput.x < 0 && moveInput.z == 0){// Walk Left
+            else if(moveInput.x < 0){// Walk Left  && moveInput.z == 0
                 anim.ChangeAnimationState("Walk");
-                spriteTransform.localScale = spriteScale;
+                spriteTransform.flipX(false);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }   
             else if(moveInput.z > 0){// Walk Up
