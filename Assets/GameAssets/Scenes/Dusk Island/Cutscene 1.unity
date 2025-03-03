@@ -886,12 +886,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: audioInfos.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'audioInfos.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bfff8c4a39495b84a813769081e632c6, type: 2}
+    - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'audioInfos.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a49a34d35621b0a4ea70396dd7ade2b0, type: 2}
     - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: 'audioInfos.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: bfff8c4a39495b84a813769081e632c6, type: 2}
+      objectReference: {fileID: 11400000, guid: 32c0af1bc2b63e541b8528b4ff8cacac, type: 2}
+    - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'audioInfos.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 581c0c2d15c4b2e40b54b27be33e96ab, type: 2}
+    - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'audioInfos.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 581c0c2d15c4b2e40b54b27be33e96ab, type: 2}
+    - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'audioInfos.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 581c0c2d15c4b2e40b54b27be33e96ab, type: 2}
+    - target: {fileID: 2618458829798037349, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
+      propertyPath: 'audioInfos.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 581c0c2d15c4b2e40b54b27be33e96ab, type: 2}
     - target: {fileID: 2956593814488491868, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
       propertyPath: m_BlockingMask.m_Bits
       value: 127

@@ -64,7 +64,7 @@ namespace UI
                       rightCharacter.gameObject.SetActiveFast(tagValue != "Noelle" && tagValue != "Narrator");
                         leftCharacter.SetName(tagValue);
                      rightCharacter.SetName(tagValue);
-                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue == "Narrator" ? "default" : tagValue);
+                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue == "Narrator" ? "Narrator" : tagValue);
                     break;
 
                 case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
