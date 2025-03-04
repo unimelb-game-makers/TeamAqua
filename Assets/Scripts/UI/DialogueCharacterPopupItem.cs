@@ -14,12 +14,13 @@ namespace UI
 
         public void SetName(string characterName)
         {
-             nameText.SetText(characterName);
+            nameText.SetText(characterName);
         }
         
         public void PlayAnim(string animName)
         {
             animator.Play(animName);
+            Debug.Log("portrait sprite is: " + animName);
         }
     }
 }
