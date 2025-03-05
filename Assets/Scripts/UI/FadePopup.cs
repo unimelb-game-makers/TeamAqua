@@ -10,6 +10,8 @@ namespace UI
     {
         [SerializeField] private Image fadeImage;
         [SerializeField] private TextMeshProUGUI dayText;
+        private static readonly float  FADE_DURATION = 2.0f;
+        private static readonly float WAIT_DURATION = 1.0f;
         
 
         protected override void InitPopup()
@@ -17,22 +19,65 @@ namespace UI
             DayNight.OnDayChange += OnDayChange;
         }
 
-        private void OnDayChange(float currentAlpha, float targetAlpha)
-        {
-            dayText.text = "DAY " + DayNight.currentDay;
+ 
+        
+        // private void OnDayChange(float previousDay, float nextDay)
+        // {
+        //     dayText.text = "DAY " + previousDay;
+        //     // Fade In
+        //     LeanTween.alpha(fadeImage.rectTransform, 1f, FADE_DURATION);
+            
+        //     // Wait a bit to transition the text
+        //     LeanTween.delayedCall(WAIT_DURATION / 2, () => 
+        //     {
+        //         dayText.text = "DAY " + nextDay;
+        //     });
+            
+        //     // Fade Out
+        //     LeanTween.delayedCall(WAIT_DURATION, () => 
+        //     {
+        //         LeanTween.alpha(fadeImage.rectTransform, 0f, FADE_DURATION);
+        //         DayNight.StartNewDay();
+        //     });
+        // }
 
-            LeanTween.alpha(fadeImage.rectTransform, targetAlpha, DayNight.duration); // gradually turn Alpha of Image
-            LeanTween.value(gameObject, currentAlpha, targetAlpha, DayNight.duration)
-            .setOnUpdate((float alpha) => {
-                Color color = dayText.color;
-                color.a = alpha;
-                dayText.color = color;
-            }); // gradually turn Alpha of Text
-        }
-        private void OnDestroy()
+        private void OnDayChange(float previousDay, float nextDay)
         {
-            DayNight.OnDayChange -= OnDayChange;
+            // Start Fade In
+            dayText.text = "DAY " + previousDay;
+            Fade(1f, () =>
+            {
+                // Wait and change text after fade-in
+                LeanTween.delayedCall(WAIT_DURATION, () =>
+                {
+                    dayText.text = "DAY " + nextDay;
+                    // Start Fade Out
+                    LeanTween.delayedCall(WAIT_DURATION, () =>
+                    {
+                        Fade(0f, () =>
+                        {
+                            DayNight.StartNewDay();
+                        });
+                    });   
+                });
+            });
         }
+
+        private void Fade(float targetAlpha, System.Action onComplete)
+        {
+            LeanTween.value(gameObject, fadeImage.color.a, targetAlpha, FADE_DURATION).setOnUpdate((float alpha) =>
+            {
+                // Update both fade panel and text alpha
+                Color fadeColor = fadeImage.color;
+                fadeColor.a = alpha;
+                fadeImage.color = fadeColor;
+
+                Color textColor = dayText.color;
+                textColor.a = alpha;
+                dayText.color = textColor;
+            }).setOnComplete(onComplete);
+        }
+
     }
 
 }

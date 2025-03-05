@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-    public static bool isPlayerShip = false;
+    public static bool isNearPlayer = false;
     public GameObject uiPanel;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Ship : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Ensure player has "Player" tag
         {
-            isPlayerShip = true;
+            isNearPlayer = true;
             uiPanel.SetActive(true);
             Debug.Log("Player entered the ship.");
         }
@@ -32,7 +32,7 @@ public class Ship : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isPlayerShip = false;
+            isNearPlayer = false;
             uiPanel.SetActive(false);
             Debug.Log("Player exited the ship.");
         }

@@ -6,7 +6,7 @@ public class DayNight : MonoBehaviour
 {
     [SerializeField] public Light directionalLight; 
     [SerializeField] public Color targetColor = Color.black;
-    [SerializeField] public static float duration = 1f;
+    private static readonly float  LIGHT_DURATION = 1.0f;
 
     private Color initialColor;
 
@@ -14,7 +14,10 @@ public class DayNight : MonoBehaviour
     private bool firstTime = true;
     private float lerpTime = 0f; 
     public static Action<float, float> OnDayChange;
-    public static int currentDay = 1;
+
+    public static float previousDay = 1;
+    public static float nextDay = 2;
+
 
     private void Start()
     {
@@ -42,7 +45,7 @@ public class DayNight : MonoBehaviour
 
     private void ChangeLight()
     {
-        lerpTime += Time.deltaTime / duration; 
+        lerpTime += Time.deltaTime / LIGHT_DURATION; 
         directionalLight.color = Color.Lerp(initialColor, targetColor, lerpTime);
 
         if (lerpTime >= 1f) 
@@ -52,6 +55,12 @@ public class DayNight : MonoBehaviour
         }
     }
 
+    public static void StartNewDay()
+    {
+        previousDay = nextDay;
+        nextDay++;
+    }
+
     private void Update()
     {
         if (shouldChangeColor &&　firstTime)
@@ -59,11 +68,9 @@ public class DayNight : MonoBehaviour
             ChangeLight();
         }
         if (shouldChangeColor && Input.GetKeyDown(KeyCode.E) 
-            && Ship.isPlayerShip)
+            && Ship.isNearPlayer)
         {
-            currentDay++;
-            OnDayChange?.Invoke(0f, 1f);
-            LeanTween.delayedCall(5f, () => OnDayChange?.Invoke(1f, 0f));
+            OnDayChange?.Invoke(previousDay, nextDay);
         }
         
     }
