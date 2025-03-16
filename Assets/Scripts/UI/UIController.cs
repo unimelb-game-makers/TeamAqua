@@ -31,16 +31,26 @@ namespace UI
         private void TogglePause()
         {
             if (dialoguePopup.isShowing)
+            {
+                dialoguePopup.HidePopup();
+                StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
                 return;
-            if (!pausePopup.isShowing && !pausePopup.isAnimating)
+            }
+            if (!pausePopup.isShowing && !pausePopup.isAnimating )
+            {
+                if(journalPopup.isShowing)
+                {
+                    journalPopup.HidePopup();
+                }
                 pausePopup.ShowPopup();
+            }
             else if (pausePopup.isShowing && !pausePopup.isAnimating)
                 pausePopup.HidePopup();
         }
 
         private void ToggleJournal()
         {
-            if (dialoguePopup.isShowing)
+            if (dialoguePopup.isShowing || pausePopup.isShowing)
                 return;
             if (!journalPopup.isShowing && !journalPopup.isAnimating)
                 journalPopup.ShowPopup();
@@ -50,6 +60,8 @@ namespace UI
 
         private void OnDialogueStart()
         {
+            if (pausePopup.isShowing)
+                return;
             hud.HidePopup();
             if(journalPopup.isShowing)
                 journalPopup.HidePopup();

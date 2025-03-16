@@ -117,6 +117,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
     {       
+        
         //Time.timeScale = 0;         this works  
         if (DialogueTypeID == 0)
         {
