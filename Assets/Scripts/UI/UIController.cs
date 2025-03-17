@@ -7,7 +7,7 @@ namespace UI
     {
         [SerializeField] private HUD hud;
         [SerializeField] private JournalPopup journalPopup;
-        [SerializeField] private PausePopup pausePopup;
+        [SerializeField] public PausePopup pausePopup;
         [SerializeField] private DialoguePopup dialoguePopup;
 
         protected override void InitPopup()
@@ -62,6 +62,7 @@ namespace UI
         {
             if (pausePopup.isShowing)
                 return;
+                // IN PROCESS: HOW TO PREVENT ENTERDIALOGUEMODE IF PAUSE IS SHOWING
             hud.HidePopup();
             if(journalPopup.isShowing)
                 journalPopup.HidePopup();
