@@ -9,6 +9,7 @@ namespace UI
         [SerializeField] private JournalPopup journalPopup;
         [SerializeField] public PausePopup pausePopup;
         [SerializeField] private DialoguePopup dialoguePopup;
+        [SerializeField] private FadePopup fadePopup;
 
         protected override void InitPopup()
         {
