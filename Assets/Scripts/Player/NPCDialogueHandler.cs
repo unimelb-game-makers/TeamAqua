@@ -1,16 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
 
 public class NPCDialogueHandler : MonoBehaviour
 {
     [NonSerialized] public NPCDialogue dialogueSource = null;
+    [SerializeField] public UIController UIcontroller = null;
 
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying() && !UIcontroller.pausePopup.isShowing /*&& not paused*/)
         {
             dialogueSource.PlayDialogue();
         }
