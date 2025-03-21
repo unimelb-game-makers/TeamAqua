@@ -19,31 +19,11 @@ namespace UI
             DayNight.OnDayChange += OnDayChange;
         }
 
- 
-        
-        // private void OnDayChange(float previousDay, float nextDay)
-        // {
-        //     dayText.text = "DAY " + previousDay;
-        //     // Fade In
-        //     LeanTween.alpha(fadeImage.rectTransform, 1f, FADE_DURATION);
-            
-        //     // Wait a bit to transition the text
-        //     LeanTween.delayedCall(WAIT_DURATION / 2, () => 
-        //     {
-        //         dayText.text = "DAY " + nextDay;
-        //     });
-            
-        //     // Fade Out
-        //     LeanTween.delayedCall(WAIT_DURATION, () => 
-        //     {
-        //         LeanTween.alpha(fadeImage.rectTransform, 0f, FADE_DURATION);
-        //         DayNight.StartNewDay();
-        //     });
-        // }
 
         private void OnDayChange(float previousDay, float nextDay)
         {
             // Start Fade In
+            ShowPopup();
             dayText.text = "DAY " + previousDay;
             Fade(1f, () =>
             {
@@ -57,6 +37,7 @@ namespace UI
                         Fade(0f, () =>
                         {
                             DayNight.StartNewDay();
+                            HidePopup();
                         });
                     });   
                 });
