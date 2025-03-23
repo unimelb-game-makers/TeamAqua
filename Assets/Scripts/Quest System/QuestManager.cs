@@ -37,12 +37,8 @@
 */
 
 
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using Ink.Parsed;
 
 public class QuestManager : MonoBehaviour
 {
@@ -50,7 +46,7 @@ public class QuestManager : MonoBehaviour
     public static QuestManager instance;
 
     private List<QuestData> quests = new List<QuestData>(); // list of all the quests the player has
-    private List<QuestData> finised = new List<QuestData>(); // list of all the quests the player has finished
+    private List<QuestData> finished = new List<QuestData>(); // list of all the quests the player has finished
 
     // TODO: when saving the game, save these lists to a file
 
@@ -58,6 +54,8 @@ public class QuestManager : MonoBehaviour
     private TextAsset jsonFile; // the .json file that contains the quests
 
     public bool QuestCompleted;
+
+    // just talk to a person
 
     //public bool questOpen = false;
 
@@ -84,7 +82,7 @@ public class QuestManager : MonoBehaviour
 
     public void AddQuest(int id)
     {
-        Debug.Log("number of quests is " + quests.Count);
+        Debug.Log("Adding to quest: number of quests is " + quests.Count);
         Quest quest = JsonUtility.FromJson<Quest>(jsonFile.text);
         if (quest != null)
         {
@@ -219,16 +217,13 @@ public class QuestManager : MonoBehaviour
 
                 // TYPE : TALK
                 case "TALK":
-                    Debug.Log("QUEST TYPE IS TALK");
                     /* approach: place ink tag at the end of the dictated convo with the relevant NPC(s), if parses through said tag then come back here to set story.variablestate("quest_id" + id) = "YES"
                     */
                     return false;
                 //break;
             }
-            Debug.Log("objective type was not GATHER (-1 detected)");
             return false;
         }
-        Debug.Log("no quests found in quest log ");
         return false;
     }
 
@@ -284,7 +279,9 @@ public class QuestManager : MonoBehaviour
                     quests[i].current_step_number++;
                     if (quests[i].current_step_number == quests[i].quest_steps.Count)
                     {
-                        //QuestCompleted = true;      //---> likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
+                        // QuestCompleted = true;
+                        //   likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt
+                        //  submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
                         RemoveQuest(id);
                     }
                 }

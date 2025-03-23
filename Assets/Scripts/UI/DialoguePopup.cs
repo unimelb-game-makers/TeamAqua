@@ -13,18 +13,26 @@ namespace UI
     public class DialoguePopup : Popup
     {
         [Header("Setup")]
-        [SerializeField] private float typeSpeed = 0.04f;
-        
+        [SerializeField]
+        private float typeSpeed = 0.04f;
+
         [Header("UI Components")]
-        [SerializeField] private TMP_Text dialogueText;
-        [SerializeField] private DialogueCharacterPopup characterPopup;
-        [SerializeField] private DialogueChoicePopup choicePopup;
-        [SerializeField] private Image fastForward;
+        [SerializeField]
+        private TMP_Text dialogueText;
+
+        [SerializeField]
+        private DialogueCharacterPopup characterPopup;
+
+        [SerializeField]
+        private DialogueChoicePopup choicePopup;
+
+        [SerializeField]
+        private Image fastForward;
 
         private Coroutine lineCoroutine = null;
         private string currentLine;
         private List<Choice> currentChoices = new List<Choice>();
-        
+
         protected override void InitPopup()
         {
             DialogueSystem.OnDialogueContinue += OnDialogueContinue;
@@ -70,13 +78,13 @@ namespace UI
         {
             characterPopup.HandleTags(tags);
         }
-        
+
         private IEnumerator DisplayLine(string line, List<Choice> choices)
         {
             currentChoices = choices;
             currentLine = line;
             choicePopup.HidePopup();
-            dialogueText.text = line;   //set text to full line, but set visible characters to 0
+            dialogueText.text = line; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
             bool isRichText = false;
             foreach (char letter in line.ToCharArray())
@@ -90,17 +98,21 @@ namespace UI
                         isRichText = false;
                     }
                 }
-
                 // otherwise, loads letters normally
                 else
                 {
                     if (dialogueText.maxVisibleCharacters < dialogueText.text.Length)
-                        DialogueAudioManager.GetAudioMana().PlayDialogueSound(dialogueText.maxVisibleCharacters, dialogueText.text[dialogueText.maxVisibleCharacters]);
+                        DialogueAudioManager
+                            .GetAudioMana()
+                            .PlayDialogueSound(
+                                dialogueText.maxVisibleCharacters,
+                                dialogueText.text[dialogueText.maxVisibleCharacters]
+                            );
                     dialogueText.maxVisibleCharacters++;
-                    yield return new WaitForSeconds(typeSpeed);         // -> use if not freezing time
+                    yield return new WaitForSeconds(typeSpeed); // -> use if not freezing time
                 }
             }
-            
+
             EndCoroutine();
         }
 
@@ -113,9 +125,9 @@ namespace UI
                 choicePopup.ShowPopup();
             }
 
-            lineCoroutine = null; 
+            lineCoroutine = null;
         }
-        
+
         private void OnDestroy()
         {
             DialogueSystem.OnDialogueContinue -= OnDialogueContinue;

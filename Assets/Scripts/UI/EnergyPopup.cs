@@ -7,11 +7,18 @@ namespace UI
 {
     public class EnergyPopup : Popup
     {
-        [SerializeField] private Slider energyBar;
-        [SerializeField] private Image energyFill;
-        [SerializeField] private Gradient energyGradient;
-        [SerializeField] private TMP_Text energyText;
-    
+        [SerializeField]
+        private Slider energyBar;
+
+        [SerializeField]
+        private Image energyFill;
+
+        [SerializeField]
+        private Gradient energyGradient;
+
+        [SerializeField]
+        private TMP_Text energyText;
+
         protected override void InitPopup()
         {
             EnergyManager.OnEnergyChanged += OnEnergyChanged;

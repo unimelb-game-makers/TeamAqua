@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory inventory;
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
+
     private void Awake()
     {
         inventory = this;
@@ -54,9 +55,11 @@ public class Inventory : MonoBehaviour
                 inventoryItem.count -= amount;
                 return 1;
             }
-            else return 0;
+            else
+                return 0;
         }
-        else return 0;
+        else
+            return 0;
     }
 
     public bool HasItem(int item_id, int amount)
@@ -87,8 +90,9 @@ public class Inventory : MonoBehaviour
         }
     }
 }
+
 /*
-This is the type that the inventory list will use 
+This is the type that the inventory list will use
 to keep track of each item and its count.
 */
 [Serializable]

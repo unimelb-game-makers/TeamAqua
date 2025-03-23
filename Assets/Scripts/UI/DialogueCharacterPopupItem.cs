@@ -7,20 +7,26 @@ namespace UI
 {
     public class DialogueCharacterPopupItem : MonoBehaviour
     {
-        [SerializeField] private Image nameHolder;
-        [SerializeField] private TMP_Text nameText;
-        [SerializeField] private Image characterSprite;
-        [SerializeField] private Animator animator;
+        [SerializeField]
+        private Image nameHolder;
+
+        [SerializeField]
+        private TMP_Text nameText;
+
+        [SerializeField]
+        private Image characterSprite;
+
+        [SerializeField]
+        private Animator animator;
 
         public void SetName(string characterName)
         {
             nameText.SetText(characterName);
         }
-        
+
         public void PlayAnim(string animName)
         {
             animator.Play(animName);
-            Debug.Log("portrait sprite is: " + animName);
         }
     }
 }
