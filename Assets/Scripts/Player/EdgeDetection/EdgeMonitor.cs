@@ -12,16 +12,16 @@ public class EdgeMonitor : MonoBehaviour
     {
         foreach(EdgeSensor sensor in GetComponentsInChildren<EdgeSensor>()){
             sensors.Add(sensor);
-            sensor.StartSensor(playerController);
+            sensor.StartSensor();
         }
-        Debug.Log(sensors);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         foreach(EdgeSensor sensor in sensors){
-            sensor.FollowPlayer();
+            sensor.FollowPlayer(playerController.transform.position, playerController.saveDirection);
         }
+        //Debug.Log(playerController.saveDirection);
     }
 }

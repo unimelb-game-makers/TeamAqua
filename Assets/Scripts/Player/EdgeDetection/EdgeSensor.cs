@@ -12,48 +12,54 @@ using UnityEngine;
 public class EdgeSensor : MonoBehaviour
 {
     public Vector3 blockDirection;
-    [NonSerialized] public PlayerController playerController;
 
     public Collider currentTileCollider;
+    public Collider nextTileCollider;
     private Vector3 followPosition;
     private Vector3 offset;
     private bool followPlayer = false;
-
+    bool started = false;
     // Enable the sensor to start detecting edges
-    public void StartSensor(PlayerController _playerController)
+    public void StartSensor()
     {
         // Raycast down and get a collider
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit))
+        if (Physics.Raycast(transform.position, -Vector3.up * 20, out hit, ~8))
         {
-            Debug.Log("Found an object - distance: " + hit.distance);
+            Debug.Log("Found an object: " + hit.collider);
             currentTileCollider = hit.collider;
         }
         offset = transform.localPosition;
 
-        playerController = _playerController;
         followPlayer = true;
     }
 
-    public void FollowPlayer(){
+    public void FollowPlayer(Vector3 playerPosition, Vector3 saveDirection){
         if(followPlayer == false)
             return;
         
-        followPosition = playerController.transform.position + offset;
-        if((playerController != null && currentTileCollider != null) || 
-            (playerController != null && currentTileCollider == null && playerController.saveDirection != blockDirection)){
+        followPosition = playerPosition + offset;
+        if((currentTileCollider != null) || (currentTileCollider == null && saveDirection != blockDirection)){
             transform.position = followPosition;
         }
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("FloorTile") && currentTileCollider != other){
-            currentTileCollider = other;
+            nextTileCollider = other;
+            if(currentTileCollider == null){
+                currentTileCollider = nextTileCollider;
+                nextTileCollider = null;
+            }
         }
     }
     
     private void OnTriggerExit(Collider other) {
-        if(other == currentTileCollider){
+        if(other == currentTileCollider && nextTileCollider != null){
+            currentTileCollider = nextTileCollider;
+            nextTileCollider = null;
+        }
+        else if(other == currentTileCollider && nextTileCollider == null){
             currentTileCollider = null;
         }
     }
