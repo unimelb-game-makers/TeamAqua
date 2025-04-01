@@ -175,7 +175,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NoelleShock
+  m_Name: NoelleShocked
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -405,7 +405,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NoelleSkeptical
+  m_Name: NoelleSceptical
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NoelleShock
+  m_Name: AmeliaNormal
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 7153029313621019183, guid: b76f748fa76af154b90457ef66338c8d, type: 3}
+      value: {fileID: -6588464515089719549, guid: 9b244442212cb3047a28a91ad2e3996d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 7153029313621019183, guid: b76f748fa76af154b90457ef66338c8d, type: 3}
+    - {fileID: -6588464515089719549, guid: 9b244442212cb3047a28a91ad2e3996d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
