@@ -1,16 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 //======== this is the script to call EnterDialogueMode for cutscene 1 ====================
 //NOTE: need sounds, maybe remove pausing.
 public class Cutscene_1 : MonoBehaviour
 {
     public static Cutscene_1 Instance;
+
     //public UnityEngine.UI.Image background;
-  //  public Sprite[] sprites;
-    [SerializeField] public TextAsset inkJSON;
+    //  public Sprite[] sprites;
+    [SerializeField]
+    public TextAsset inkJSON;
 
     private void Awake()
     {
@@ -19,13 +19,13 @@ public class Cutscene_1 : MonoBehaviour
         else
             Instance = this;
     }
+
     void Start()
     {
         DialogueSystem.Instance().EnterDialogueMode(inkJSON, 0);
         //AudioManager.Instance.Play("BGM_CUTSCENE_CEREMONY");
 
         // Create a temporary reference to the current scene.
-		
     }
 
     // Update is called once per frame
@@ -50,5 +50,4 @@ public class Cutscene_1 : MonoBehaviour
         SceneManager.LoadScene(SceneName);
         Debug.Log("scene changed to " + SceneManager.GetActiveScene());
     }
-
 }

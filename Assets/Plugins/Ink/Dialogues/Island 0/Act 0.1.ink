@@ -3,7 +3,6 @@
 //Global ink: not needed
 //Dev review: complete
 
-//chores: add speaker portraits.
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL ChangeCutscene(SceneName)
 EXTERNAL PlayBGM(id)
@@ -77,3 +76,4 @@ And everything turns black. #cutscene:A0S24
 //fade out the BGM track on ‘and everything turns black’
 ~ChangeCutscene("NoonIsland")
 ~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_INTO_THE_STORM", 4)
+->END
