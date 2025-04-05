@@ -23,7 +23,8 @@ public class EnergyManager : MonoBehaviour
         OnEnergyChanged?.Invoke(energyAmount);
     }
 
-    private void Update()
+    // Debug logic
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -33,7 +34,18 @@ public class EnergyManager : MonoBehaviour
 
     public void LoseEnergy(float loss)
     {
-        energyAmount -= loss;
+        if (energyAmount == 0)
+        {
+            return;
+        }
+
+        energyAmount = Math.Max(energyAmount - loss, 0);
+        OnEnergyChanged?.Invoke(energyAmount);
+    }
+
+    public void OnNextDay()
+    {
+        energyAmount = MAX_ENERGY;
         OnEnergyChanged?.Invoke(energyAmount);
     }
 

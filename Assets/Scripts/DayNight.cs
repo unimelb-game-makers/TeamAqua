@@ -1,7 +1,5 @@
 using UnityEngine;
-using System;
-using UnityEngine.UI;
-using System.Threading.Tasks;
+using UnityEngine.Assertions;
 
 public class DayNight : MonoBehaviour
 {
@@ -10,39 +8,43 @@ public class DayNight : MonoBehaviour
 
     [SerializeField]
     public Color targetColor = Color.black;
-    private static readonly float LIGHT_DURATION = 1.0f;
+    public DayCycle dayCycle;
+    private readonly float LIGHT_DURATION = 1.0f;
 
     private Color initialColor;
 
-    public static bool shouldChangeColor = false;
+    public bool shouldChangeColor = false;
     private bool firstTime = true;
     private float lerpTime = 0f;
-    public static Action<float, float> OnDayChange;
-
-    public static float previousDay = 1;
-    public static float nextDay = 2;
 
     private void Start()
     {
         initialColor = directionalLight.color;
+
+        Assert.IsNotNull(dayCycle, "dayCycle field is null in DayNight object");
     }
 
     private void OnEnable()
     {
-        EnergyManager.OnEnergyChanged += CheckEnergy;
+        DayCycle.OnNightChange += OnNightChang;
     }
 
     private void OnDisable()
     {
-        EnergyManager.OnEnergyChanged -= CheckEnergy;
+        DayCycle.OnNightChange -= OnNightChang;
     }
 
-    private void CheckEnergy(float energyAmount)
+    private void OnNightChang(bool isNight)
     {
-        if (energyAmount < 50)
+        if (isNight)
         {
             shouldChangeColor = true;
             lerpTime = 0f;
+        }
+        else
+        {
+            firstTime = false;
+            directionalLight.color = initialColor;
         }
     }
 
@@ -50,7 +52,6 @@ public class DayNight : MonoBehaviour
     {
         lerpTime += Time.deltaTime / LIGHT_DURATION;
         directionalLight.color = Color.Lerp(initialColor, targetColor, lerpTime);
-
         if (lerpTime >= 1f)
         {
             directionalLight.color = targetColor;
@@ -58,21 +59,12 @@ public class DayNight : MonoBehaviour
         }
     }
 
-    public static void StartNewDay()
+    private void FixedUpdate()
     {
-        previousDay = nextDay;
-        nextDay++;
-    }
-
-    private void Update()
-    {
+        //Todo This needs to handle the day cycle
         if (shouldChangeColor && firstTime)
         {
             ChangeLight();
-        }
-        if (shouldChangeColor && Input.GetKeyDown(KeyCode.E) && Ship.isNearPlayer)
-        {
-            OnDayChange?.Invoke(previousDay, nextDay);
         }
     }
 }
