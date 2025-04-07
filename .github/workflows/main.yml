@@ -6,7 +6,7 @@
 #  USER_GAME: Itch.io Project website( e.g. https://itch.io/user/game-name )
 
 #  Github Action Variables:
-#  UNITY_VERSION: Unity version (e.g. 2023.2.9f1)
+#  UNITY_VERSION: Unity version (2023.2.9f1)
 
 name: Actions 😎
 on: [push, pull_request]
