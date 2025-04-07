@@ -70,9 +70,9 @@ jobs:
         id: lfs-cache
         with:
           path: .git/lfs
-          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}-${{ github.sha }}
+          key: ${{ github.event_name }}-${{ matrix.targetPlatform }}-lfs-${{ hashFiles('.lfs-assets-id') }}-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+            ${{ github.event_name }}-${{ matrix.targetPlatform }}-lfs-${{ hashFiles('.lfs-assets-id') }}
 
       - name: Git LFS Pull
         run: |
@@ -85,9 +85,10 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: Library
-          key: ${{ github.event_name }}-Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}-${{ matrix.targetPlatform }}
+          key: ${{ github.event_name }}-Library-${{ matrix.targetPlatform }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
-            Library--${{ matrix.targetPlatform }}
+            restore-keys: |
+              ${{ github.event_name }}-Library-${{ matrix.targetPlatform }}-
 
       # Build
       - name: Build project 
