@@ -97,7 +97,7 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           unityVersion: ${{ vars.UNITY_VERSION }}
-          allowDirtyBuild: true
+          
 
       # Output
       - uses: actions/upload-artifact@v4
