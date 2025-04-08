@@ -3,8 +3,8 @@ guid: 109519cc37a3628499b40a8e4232e90b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3976415474040709718
-    second: IMG_4915_0
+      213: -6868013847534359659
+    second: example_scroll_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,19 +84,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_4915_0
+      name: example_scroll_0
       rect:
         serializedVersion: 2
         x: 177
@@ -127,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aaddf6eb13fe0d8c0800000000000000
-      internalID: -3976415474040709718
+      spriteID: 59b20414bc9efa0a0800000000000000
+      internalID: -6868013847534359659
       vertices: []
       indices: 
       edges: []
@@ -144,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_4915_0: -3976415474040709718
+      example_scroll_0: -6868013847534359659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
