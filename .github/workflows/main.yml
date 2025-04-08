@@ -95,6 +95,11 @@ jobs:
           restore-keys: |
               ${{ github.event_name }}-Library-${{ matrix.targetPlatform }}-
 
+      # DEBUG
+      - name: DEBUGGING
+        run: |
+          find ~/ -type f -name "NoelleCup"
+          
       # Build
       - name: Build project 
         uses: game-ci/unity-builder@v4
