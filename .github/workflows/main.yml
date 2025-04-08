@@ -63,7 +63,7 @@ jobs:
     steps:
       # Checkout
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           lfs: true
           
@@ -72,7 +72,7 @@ jobs:
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
       - name: Restore LFS cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4.2.0
         id: lfs-cache
         with:
           path: .git/lfs
@@ -86,23 +86,17 @@ jobs:
           git add .
           git reset --hard
 
-
       # Cache
-      - uses: actions/cache@v4
+      - uses: actions/cache@v4.2.0
         with:
           path: Library
           key: ${{ github.event_name }}-Library-${{ matrix.targetPlatform }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
               ${{ github.event_name }}-Library-${{ matrix.targetPlatform }}-
 
-      # DEBUG
-      - name: DEBUGGING
-        run: |
-          find ~/ -type f -name "NoelleCup"
-          
       # Build
       - name: Build project 
-        uses: game-ci/unity-builder@v4
+        uses: game-ci/unity-builder@v4.3.0
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
