@@ -9,8 +9,14 @@
 #  UNITY_VERSION: Unity version (2023.2.9f1)
 
 name: Actions 😎
-on: [push, pull_request]
-
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
 
   # check if the variables and secrets are set
