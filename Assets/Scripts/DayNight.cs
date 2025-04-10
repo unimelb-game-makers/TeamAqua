@@ -59,6 +59,7 @@ public class DayNight : MonoBehaviour
     {
         previousDay = nextDay;
         nextDay++;
+        WeatherManager.OnWeatherChanged?.Invoke(180.0f);
     }
 
     private void Update()

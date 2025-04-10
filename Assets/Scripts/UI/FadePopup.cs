@@ -19,6 +19,7 @@ namespace UI
             DayNight.OnDayChange += OnDayChange;
         }
 
+ 
 
         private void OnDayChange(float previousDay, float nextDay)
         {
@@ -58,6 +59,9 @@ namespace UI
                 dayText.color = textColor;
             }).setOnComplete(onComplete);
         }
+
+
+        
 
     }
 
