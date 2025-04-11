@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 050c4e294de56403c96a98227885e37f
+guid: d3969a3b614c14a449c14e83d69360e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6864607095030072812
-    second: IMG_4912_0
-  - first:
-      213: -7095396308457310508
-    second: IMG_4912_1
-  - first:
-      213: -723764786466793365
-    second: IMG_4912_2
+      213: -6775788512323735647
+    second: example_idk_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,39 +96,26 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_4912_1
+      name: example_idk_2_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 4
-        width: 767
-        height: 235
+        x: 177
+        y: 547
+        width: 1559
+        height: 1728
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f6b7a5618595740298120b9c4ba81f22
-      internalID: -63004150
+      spriteID: 1af65c96f3097f1a0800000000000000
+      internalID: -6775788512323735647
       vertices: []
       indices: 
       edges: []
@@ -142,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c4e6afae66922419e9c17baf6344d079
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,9 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_4912_0: -391250618
-      IMG_4912_1: -63004150
-      IMG_4912_2: -1611135535
+      example_idk_2_0: -6775788512323735647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
