@@ -37,10 +37,11 @@ public class NPCDialogueHandler : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Creature"))
             return;
-        CheckTag();
+
         if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
         {
             dialogueSource = npc.dialogue;
+            CheckTag();
             if (dialogueSource.HasQuest)
                 dialogueSource.IndicateQuest();
             else
