@@ -1,4 +1,4 @@
-INCLUDE ../Global var storage/globals.ink
+INCLUDE ../Island 1/Global var storage/globals.ink
 EXTERNAL checkQuestStatus(id, step)
 
 VAR quest_Steps = ""
