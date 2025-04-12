@@ -14,8 +14,7 @@ public class NPCDialogue : MonoBehaviour
     public GameObject questCue;
 
     [SerializeField]
-    public bool HasQuest;
-    public string questID;
+    public NpcData npcData;
 
     //[SerializeField] public int questID;
 

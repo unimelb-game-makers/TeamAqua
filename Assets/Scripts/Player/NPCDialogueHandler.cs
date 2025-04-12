@@ -30,6 +30,7 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             dialogueSource.PlayDialogue();
             AttachStory();
+            CheckTag();
         }
     }
 
@@ -41,8 +42,7 @@ public class NPCDialogueHandler : MonoBehaviour
         if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
         {
             dialogueSource = npc.dialogue;
-            CheckTag();
-            if (dialogueSource.HasQuest)
+            if (dialogueSource.npcData.HasQuest)
                 dialogueSource.IndicateQuest();
             else
                 dialogueSource.IndicateDialogue();
@@ -55,13 +55,14 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             dialogueSource.HideIndicators();
             dialogueSource = null;
+            story = null;
         }
     }
 
     public void AttachStory()
     {
         story = DialogueSystem.Instance().currentStory;
-        questID = dialogueSource.questID;
+        questID = dialogueSource.npcData.questID;
     }
 
     public void CheckTag()
@@ -75,9 +76,9 @@ public class NPCDialogueHandler : MonoBehaviour
         Debug.Log("story connected: " + story);
         Debug.Log("[pre-switch]the quest variable is: " + story.variablesState[questID]);
 
-        if (story.variablesState[questID] == "FINISHED")
+        if (story.variablesState[questID] == "FINISHED") //issue is that the story isnt exited correctly, making this statement linger and affect other NPCs
         {
-            dialogueSource.HasQuest = false;
+            dialogueSource.npcData.HasQuest = false;
             Debug.Log("[post_switch]the quest variable is: " + story.variablesState[questID]);
         }
     }
