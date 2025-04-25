@@ -52,7 +52,10 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             dialogueSource = npc.dialogue;
             if (dialogueSource.npcData.HasQuest)
+            {
+                DialogueSystem.Instance().npcData = dialogueSource.npcData;
                 dialogueSource.IndicateQuest();
+            }
             else
                 dialogueSource.IndicateDialogue();
         }
@@ -64,6 +67,7 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             dialogueSource.HideIndicators();
             dialogueSource = null;
+            DialogueSystem.Instance().npcData = null;
             DialogueSystem.Instance().currentStory = null;
         }
     }
