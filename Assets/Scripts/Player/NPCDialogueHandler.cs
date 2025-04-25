@@ -15,8 +15,17 @@ public class NPCDialogueHandler : MonoBehaviour
 
     [SerializeField]
     public UIController UIcontroller = null;
-    public Story story = null;
-    private string questID;
+
+    //public Story story = null;
+
+    //private string questID;
+
+    /* fix for HasQuest offshoring: call it in dialogue system, when click choice 'submit',
+    in here upon trigger enter, send the npc data to dialoguy system so it can access that npc's HasQuest
+    
+    */
+
+
 
     // Update is called once per frame
     private void Update()
@@ -29,7 +38,7 @@ public class NPCDialogueHandler : MonoBehaviour
         )
         {
             dialogueSource.PlayDialogue();
-            AttachStory();
+            //AttachStory();
             CheckTag();
         }
     }
@@ -55,31 +64,46 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             dialogueSource.HideIndicators();
             dialogueSource = null;
-            story = null;
+            DialogueSystem.Instance().currentStory = null;
         }
     }
 
     public void AttachStory()
     {
-        story = DialogueSystem.Instance().currentStory;
-        questID = dialogueSource.npcData.questID;
+        //story = DialogueSystem.Instance().currentStory;
+        //questID = dialogueSource.npcData.questID;
     }
 
     public void CheckTag()
     {
-        if (story == null)
+        if (DialogueSystem.Instance().currentStory == null)
         {
             Debug.Log("no storry found");
             return;
         }
 
-        Debug.Log("story connected: " + story);
-        Debug.Log("[pre-switch]the quest variable is: " + story.variablesState[questID]);
+        Debug.Log("story connected: " + DialogueSystem.Instance().currentStory);
+        Debug.Log(
+            "[pre-switch]the quest variable is: "
+                + DialogueSystem.Instance().currentStory.variablesState[
+                    dialogueSource.npcData.questID
+                ]
+        );
 
-        if (story.variablesState[questID] == "FINISHED") //issue is that the story isnt exited correctly, making this statement linger and affect other NPCs
+        if (
+            (string)
+                DialogueSystem.Instance().currentStory.variablesState[
+                    dialogueSource.npcData.questID
+                ] == "FINISHED"
+        )
         {
             dialogueSource.npcData.HasQuest = false;
-            Debug.Log("[post_switch]the quest variable is: " + story.variablesState[questID]);
+            Debug.Log(
+                "[post_switch]the quest variable is: "
+                    + DialogueSystem.Instance().currentStory.variablesState[
+                        dialogueSource.npcData.questID
+                    ]
+            );
         }
     }
 }
