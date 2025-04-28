@@ -186,7 +186,7 @@ public class DialogueSystem : MonoBehaviour
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
-                    Cutscene_1.Instance.SceneChanger(SceneName);
+                    OnSceneDialogueStarter.Instance.SceneChanger(SceneName);
                 }
             );
 

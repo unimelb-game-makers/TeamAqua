@@ -599,7 +599,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131119775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8acb71b3e6672e4c97e769c15bc6831, type: 3}
+  m_Script: {fileID: 11500000, guid: 7007e7c16f3dedf46b35d3fecb2d4b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 3de097eb3c70cd7459bee63bcb9ad1a0, type: 3}
@@ -4931,6 +4931,7 @@ MonoBehaviour:
   journalPopup: {fileID: 318491484713840033}
   pausePopup: {fileID: 509115738970827244}
   dialoguePopup: {fileID: 6733426362691933388}
+  fadePopup: {fileID: 0}
 --- !u!114 &4321753618525271398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8584,8 +8585,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is an example of text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8ab4447a688674cdbbc18bf94b9f1b77, type: 2}
-  m_sharedMaterial: {fileID: 3615903231602951263, guid: 8ab4447a688674cdbbc18bf94b9f1b77, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a7f5c3855fd704ef485823c8fce596be, type: 2}
+  m_sharedMaterial: {fileID: -879703909993265083, guid: a7f5c3855fd704ef485823c8fce596be, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8609,13 +8610,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535

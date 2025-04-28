@@ -11,7 +11,7 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
 ~ questSteps = quest_id1
 ~checkQuestStatus(1, 1)
 ~ questSteps = quest_id1
-~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_INTO_THE_STORM", 4)
+~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_TRANSFORMATION", 4)
 //current quest step is {questSteps} and current quest_id var is {quest_id1}
 //conditional check, if var quest is empty, load main dialogue, if quest var < 10 (berries), go to incomplete quest, else, go to submit quest
 { 
