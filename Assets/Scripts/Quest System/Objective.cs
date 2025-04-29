@@ -33,6 +33,9 @@ public class Objective : MonoBehaviour
             {
                 QuestManager.instance.CompleteCurrentStep(id);
 
+                PlayerPrefs.SetFloat("playerPositionX", player.position.x);
+                PlayerPrefs.SetFloat("playerPositionY", player.position.y);
+
                 Destroy(gameObject);
             }
         }
