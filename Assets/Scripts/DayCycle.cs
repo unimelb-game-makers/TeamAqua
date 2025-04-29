@@ -5,8 +5,23 @@ using UnityEngine.Assertions;
 public class DayCycle : MonoBehaviour
 {
     public static Action<int> OnDayChange;
+    public PlayerSave playerSave;
 
-    public int currentDay = 1;
+    public int _currentDay = 1;
+    public int currentDay
+    {
+        get { return _currentDay; }
+        set
+        {
+            if (_currentDay == value)
+            {
+                return;
+            }
+            _currentDay = value;
+            PlayerPrefs.SetInt("currentDay", _currentDay);
+            PlayerPrefs.Save();
+        }
+    }
 
     private bool isNight = false;
     public static Action<bool> OnNightChange;
@@ -17,6 +32,12 @@ public class DayCycle : MonoBehaviour
     {
         EnergyManager.OnEnergyChanged += CheckEnergy;
         Assert.IsNotNull(playerController, "playerController field is null in DayCycle object");
+        Assert.IsNotNull(playerSave, "playerSave field is null in DayCycle object");
+
+        if (playerSave.currentDay == 0)
+        {
+            _currentDay = playerSave.currentDay;
+        }
     }
 
     private void OnDisable()
@@ -58,7 +79,6 @@ public class DayCycle : MonoBehaviour
 
         playerController.handleNextDay();
         EnergyManager.Instance.OnNextDay();
-        // EnergyManager.ene
     }
 
     private void FixedUpdate()

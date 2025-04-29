@@ -1,13 +1,28 @@
 using System;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class EnergyManager : MonoBehaviour
 {
     public const float MAX_ENERGY = 100f;
     public static EnergyManager Instance;
     public static Action<float> OnEnergyChanged;
+    public PlayerSave playerSave;
 
-    private float energyAmount = 100;
+    private float _energyAmount = 100;
+    public float energyAmount
+    {
+        get { return _energyAmount; }
+        set
+        {
+            if (_energyAmount == value)
+            {
+                return;
+            }
+            _energyAmount = value;
+            PlayerPrefs.SetFloat("energyAmount", _energyAmount);
+        }
+    }
 
     private void Awake()
     {
@@ -15,7 +30,18 @@ public class EnergyManager : MonoBehaviour
             Destroy(gameObject);
         else
             Instance = this;
-        energyAmount = MAX_ENERGY;
+
+        Assert.IsNotNull(playerSave, "playerSave field is null in EnergyManager object");
+
+        float savedEnergyAmount = playerSave.energy;
+        if (savedEnergyAmount == 0)
+        {
+            _energyAmount = MAX_ENERGY;
+        }
+        else
+        {
+            _energyAmount = savedEnergyAmount;
+        }
     }
 
     private void Start()
