@@ -1,7 +1,7 @@
 using Kuroneko.UIDelivery;
 using UnityEngine;
 
-namespace UI
+namespace Popups
 {
     public class HUD : Popup
     {

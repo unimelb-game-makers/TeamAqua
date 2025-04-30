@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     [Serializable]
     public enum JournalTab

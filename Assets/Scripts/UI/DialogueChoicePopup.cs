@@ -4,7 +4,7 @@ using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
 using UnityEngine;
 
-namespace UI
+namespace Popups
 {
     public class DialogueChoicePopup : Popup
     {

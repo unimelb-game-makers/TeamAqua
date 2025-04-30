@@ -20,7 +20,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void PlayDialogue()
     {
-        DialogueSystem.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
+        DialogueManager.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
         /*
         //QuestManager.Instance().CheckStep(questID, 1);
         //UIstatemachine.ChangeUIState(DialogueOn);

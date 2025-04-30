@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private DialogueAudioPlayer dialogueAudioPlayer;
     [SerializeField]
     private InputProvider playerInputProvider;
 
@@ -20,7 +22,7 @@ public class DialogueSystem : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
     private DialogueVariable dialogueVariable;
 
-    private static DialogueSystem instance;
+    private static DialogueManager instance;
 
     public bool displaying = false;
 
@@ -30,6 +32,8 @@ public class DialogueSystem : MonoBehaviour
     public static Action OnDialogueEnd;
 
     public NpcData npcData = null;
+
+    public DialogueAudioPlayer DialogueAudioPlayer => dialogueAudioPlayer;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more
@@ -51,9 +55,10 @@ public class DialogueSystem : MonoBehaviour
         instance = this;
 
         dialogueVariable = new DialogueVariable(LoadGlobalJSON);
+        dialogueAudioPlayer = GetComponent<DialogueAudioPlayer>();
     }
 
-    public static DialogueSystem Instance()
+    public static DialogueManager Instance()
     {
         return instance;
     }
@@ -61,64 +66,16 @@ public class DialogueSystem : MonoBehaviour
     private void Start()
     {
         dialogueIsPlaying = false;
-        //dialoguePanel.SetActive(false);
-        DialogueAudioManager.GetAudioMana().InitializeAudioDictionary();
+        dialogueAudioPlayer.InitializeAudioDictionary();
     }
 
     void Update()
     {
-        //charName.text = speaker_name + "\n============================================";
         if (!dialogueIsPlaying)
         {
             return;
         }
-        /*   ========== ==testing to move thse inputs to DialogueNPC state, ==========
-        =====>>>>>>>> migration works
-        if (Input.GetKeyDown(KeyCode.E) &&!displaying && canContinueNextLine && currentStory.currentChoices.Count == 0)
-        {
-            ContinueStory();
-            //Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            Debug.Log(dialText);
-        }
-
-        // for player to get out of dialogue if they want, we may need to load the previous line of dialogue before they exited in the future
-        
-        if (Input.GetKeyDown(KeyCode.Escape) && !displaying && currentStory.currentChoices.Count == 0)
-        {
-            StartCoroutine(ExitDialogueMode());
-            //audioSource.Stop();
-            Debug.Log("E to exit");
-        }
-        
-        //================This is for testing knot-jump only, will be deleted later=========================================//
-
-        if (Input.GetKeyDown(KeyCode.X) && !displaying && currentStory.currentChoices.Count == 0)
-        {
-            currentStory.variablesState["quest_id1"] = 10;
-            Debug.Log("vairable quest accessed and set to 10");
-        }
-        //==================================================================================================================//
-        */
     }
-
-    // 11/16/2024: we might not even need MoveKnots() anymore if we use conditions check within the ink script itself actually
-    //left in in case it could be recycled for dialogue skip feature
-    /*
-    public void MoveKnots()
-    {
-        if (/*quest condition fulfilled, &&* QuestManager.instance.QuestCompleted == true)
-        {
-            currentStory.ChoosePathString("SubmitQuest");
-            ContinueStory();
-        }
-    
-        if (QuestManager.instance.QuestCompleted == false)
-        {
-            currentStory.ChoosePathString("IncompleteQuest");
-            ContinueStory();
-        }
-    }
-    */
 
     public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
     {
@@ -231,7 +188,7 @@ public class DialogueSystem : MonoBehaviour
         yield return new WaitForSeconds(0.2f); //wait check to resolve all same-key-input errors
         npcData = null;
         dialogueVariable.StopListening(currentStory);
-        DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
+        dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
         dialogueIsPlaying = false;
         playerInputProvider.can_move = true; // Setting the Input Provider Here.
@@ -290,7 +247,7 @@ public class DialogueSystem : MonoBehaviour
 
                 if (selectedChoice.tags[i].Contains("done"))
                 {
-                    StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+                    StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
                 }
             }
         }

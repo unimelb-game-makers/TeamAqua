@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
-    public static Inventory inventory;
+    public static InventoryManager instance;
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
     private void Awake()
     {
-        inventory = this;
+        instance = this;
     }
 
     /*Get the inventory item data of an item*/

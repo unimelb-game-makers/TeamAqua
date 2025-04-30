@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class DialogueAudioManager : MonoBehaviour
+public class DialogueAudioPlayer : MonoBehaviour
 {
-
     [Header("Audio")]
     [SerializeField] public DialougeAudioInfo defaultAudioInfo;
     [SerializeField] public DialougeAudioInfo[] audioInfos;
@@ -19,38 +18,13 @@ public class DialogueAudioManager : MonoBehaviour
 
     //===========================REFRACTORING STILL IN PROCESS============================================
 
-    public static DialogueAudioManager AudioManager;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void Awake()
-    {
-        if (AudioManager != null)
-        {
-            Debug.LogWarning("Found more than one Dialogue Audio Manager in the scene");
-        }
-        AudioManager = this;
-        audioSource = this.gameObject.AddComponent<AudioSource>();
-        currentAudioInfo = defaultAudioInfo;
-    }
-    public static DialogueAudioManager GetAudioMana()
-    {
-        return AudioManager;
-    }
-
     // Audio-related stuffs below
     public void InitializeAudioDictionary()
     {   //sets up audio dictionary, map each char to an audio frequency
-        audioInfoDictionary = new Dictionary<string, DialougeAudioInfo>();
-        audioInfoDictionary.Add(defaultAudioInfo.id, defaultAudioInfo);
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        currentAudioInfo = defaultAudioInfo;
+        
+        audioInfoDictionary = new Dictionary<string, DialougeAudioInfo> { { defaultAudioInfo.id, defaultAudioInfo } };
         foreach (DialougeAudioInfo audioInfo in audioInfos)
         {
             audioInfoDictionary.Add(audioInfo.id, audioInfo);

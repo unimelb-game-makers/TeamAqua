@@ -1,6 +1,6 @@
 using Kuroneko.UIDelivery;
 
-namespace UI
+namespace Popups
 {
     public static class UIHelper
     {

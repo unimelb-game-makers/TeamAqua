@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Ink.Runtime;
-using UI;
 using UnityEngine;
+using Popups;
 
 public class NPCDialogueHandler : MonoBehaviour
 {
@@ -33,7 +30,7 @@ public class NPCDialogueHandler : MonoBehaviour
         if (
             Input.GetKeyDown(KeyCode.E)
             && dialogueSource != null
-            && !DialogueSystem.GetIsPlaying()
+            && !DialogueManager.GetIsPlaying()
             && !UIcontroller.pausePopup.isShowing /*&& not paused*/
         )
         {
@@ -53,7 +50,7 @@ public class NPCDialogueHandler : MonoBehaviour
             dialogueSource = npc.dialogue;
             if (dialogueSource.npcData.HasQuest)
             {
-                DialogueSystem.Instance().npcData = dialogueSource.npcData;
+                DialogueManager.Instance().npcData = dialogueSource.npcData;
                 dialogueSource.IndicateQuest();
             }
             else
@@ -67,8 +64,8 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             dialogueSource.HideIndicators();
             dialogueSource = null;
-            DialogueSystem.Instance().npcData = null;
-            DialogueSystem.Instance().currentStory = null;
+            DialogueManager.Instance().npcData = null;
+            DialogueManager.Instance().currentStory = null;
         }
     }
 
@@ -80,23 +77,23 @@ public class NPCDialogueHandler : MonoBehaviour
 
     public void CheckTag()
     {
-        if (DialogueSystem.Instance().currentStory == null)
+        if (DialogueManager.Instance().currentStory == null)
         {
             Debug.Log("no storry found");
             return;
         }
 
-        Debug.Log("story connected: " + DialogueSystem.Instance().currentStory);
+        Debug.Log("story connected: " + DialogueManager.Instance().currentStory);
         Debug.Log(
             "[pre-switch]the quest variable is: "
-                + DialogueSystem.Instance().currentStory.variablesState[
+                + DialogueManager.Instance().currentStory.variablesState[
                     dialogueSource.npcData.questID
                 ]
         );
 
         if (
             (string)
-                DialogueSystem.Instance().currentStory.variablesState[
+                DialogueManager.Instance().currentStory.variablesState[
                     dialogueSource.npcData.questID
                 ] == "FINISHED"
         )
@@ -104,7 +101,7 @@ public class NPCDialogueHandler : MonoBehaviour
             dialogueSource.npcData.HasQuest = false;
             Debug.Log(
                 "[post_switch]the quest variable is: "
-                    + DialogueSystem.Instance().currentStory.variablesState[
+                    + DialogueManager.Instance().currentStory.variablesState[
                         dialogueSource.npcData.questID
                     ]
             );

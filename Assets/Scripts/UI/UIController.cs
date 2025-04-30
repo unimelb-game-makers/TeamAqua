@@ -1,7 +1,7 @@
 using Kuroneko.UIDelivery;
 using UnityEngine;
 
-namespace UI
+namespace Popups
 {
     public class UIController : Popup
     {
@@ -13,8 +13,8 @@ namespace UI
 
         protected override void InitPopup()
         {
-            DialogueSystem.OnDialogueStart += OnDialogueStart;
-            DialogueSystem.OnDialogueEnd += OnDialogueEnd;
+            DialogueManager.OnDialogueStart += OnDialogueStart;
+            DialogueManager.OnDialogueEnd += OnDialogueEnd;
         }
 
         private void Update()
@@ -34,7 +34,7 @@ namespace UI
             if (dialoguePopup.isShowing)
             {
                 dialoguePopup.HidePopup();
-                StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+                StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
                 return;
             }
             if (!pausePopup.isShowing && !pausePopup.isAnimating )
@@ -78,8 +78,8 @@ namespace UI
 
         private void OnDestroy()
         {
-            DialogueSystem.OnDialogueStart -= OnDialogueStart;
-            DialogueSystem.OnDialogueEnd -= OnDialogueEnd; 
+            DialogueManager.OnDialogueStart -= OnDialogueStart;
+            DialogueManager.OnDialogueEnd -= OnDialogueEnd; 
         }
     }
 }

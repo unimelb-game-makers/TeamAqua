@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class DayNight : MonoBehaviour
+public class DayManager : MonoBehaviour
 {
     [SerializeField]
     public Light directionalLight;

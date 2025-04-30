@@ -2,7 +2,7 @@ using Kuroneko.UIDelivery;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class PausePopup : Popup
     {

@@ -39,6 +39,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class QuestManager : MonoBehaviour
 {
@@ -58,9 +59,6 @@ public class QuestManager : MonoBehaviour
     // just talk to a person
 
     //public bool questOpen = false;
-
-    [SerializeField]
-    private Inventory inventory; // the inventory of the player
 
     void Awake()
     {
@@ -174,7 +172,7 @@ public class QuestManager : MonoBehaviour
                     // check if the player has the item in their inventory
                     Debug.Log("Checking for item in inventory");
                     if (
-                        inventory.HasItem(
+                        InventoryManager.instance.HasItem(
                             quests[id - 1].quest_steps[step - 1].quest_item_id,
                             quests[id - 1].quest_steps[step - 1].quest_item_amount
                         )
@@ -237,7 +235,7 @@ public class QuestManager : MonoBehaviour
                 // check if the player has the item in their inventory
                 Debug.Log("Checking for item in inventory");
                 if (
-                    inventory.HasItem(
+                    InventoryManager.instance.HasItem(
                         quests[id - 1].quest_steps[step - 1].quest_item_id,
                         quests[id - 1].quest_steps[step - 1].quest_item_amount
                     )
@@ -249,7 +247,7 @@ public class QuestManager : MonoBehaviour
                     );
 
                     // remove the item from the inventory
-                    inventory.RemoveItem(
+                    InventoryManager.instance.RemoveItem(
                         quests[id - 1].quest_steps[step - 1].quest_item_id,
                         quests[id - 1].quest_steps[step - 1].quest_item_amount
                     );

@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class DialoguePopup : Popup
     {
@@ -35,8 +35,8 @@ namespace UI
 
         protected override void InitPopup()
         {
-            DialogueSystem.OnDialogueContinue += OnDialogueContinue;
-            DialogueSystem.OnDialogueTags += OnDialogueTags;
+            DialogueManager.OnDialogueContinue += OnDialogueContinue;
+            DialogueManager.OnDialogueTags += OnDialogueTags;
         }
 
         private void Update()
@@ -58,7 +58,7 @@ namespace UI
             // Else, continue if there are no choices
             else if (currentChoices.Count == 0)
             {
-                DialogueSystem.Instance().ContinueStory();
+                DialogueManager.Instance().ContinueStory();
             }
         }
 
@@ -102,9 +102,7 @@ namespace UI
                 else
                 {
                     if (dialogueText.maxVisibleCharacters < dialogueText.text.Length)
-                        DialogueAudioManager
-                            .GetAudioMana()
-                            .PlayDialogueSound(
+                            DialogueManager.Instance().DialogueAudioPlayer.PlayDialogueSound(
                                 dialogueText.maxVisibleCharacters,
                                 dialogueText.text[dialogueText.maxVisibleCharacters]
                             );
@@ -130,8 +128,8 @@ namespace UI
 
         private void OnDestroy()
         {
-            DialogueSystem.OnDialogueContinue -= OnDialogueContinue;
-            DialogueSystem.OnDialogueTags -= OnDialogueTags;
+            DialogueManager.OnDialogueContinue -= OnDialogueContinue;
+            DialogueManager.OnDialogueTags -= OnDialogueTags;
         }
     }
 }
