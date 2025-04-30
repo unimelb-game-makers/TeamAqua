@@ -5,19 +5,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [NonSerialized] public Vector3 moveVelocity;
-    [NonSerialized] public Collider floorCollider;
-    [NonSerialized] public Vector3 moveInput;
-    [NonSerialized] public Vector3 saveDirection;
+    [SerializeField]
+    private InputProvider inputProvider;
 
-    [SerializeField] private InputProvider inputProvider;
-    [SerializeField] private float moveSpeed;       //adjust movement speed
-    [SerializeField] private SpriteTransformer spriteTransform;
-    
+    [SerializeField]
+    private float moveSpeed; //adjust movement speed
+
+    [SerializeField]
+    private Transform spriteTransform;
+    private float speed; //freezes movement or resume movement depending on condition check
+
     private Rigidbody rb;
-    private float speed;    //freezes movement or resume movement depending on condition check
-    private string currentAnimState;
+    private Vector3 moveInput;
+    private Vector3 moveVelocity;
+
     private Vector3 spriteScale;
+
+    private Vector3 spawnPoint;
 
     AnimController anim;
 
@@ -26,8 +30,10 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<AnimController>();
-        
-        if(inputProvider.can_move == false){
+        spawnPoint = transform.position;
+
+        if (inputProvider.can_move == false)
+        {
             inputProvider.can_move = true;
         }
     }
@@ -53,12 +59,14 @@ public class PlayerController : MonoBehaviour
                 anim.ChangeAnimationState("Walk");
                 spriteTransform.flipX(false);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
-            }   
-            else if(moveInput.z > 0){// Walk Up
+            }
+            else if (moveInput.z > 0)
+            { // Walk Up
                 anim.ChangeAnimationState("Walk");
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
-            }   
-            else if(moveInput.z < 0){// Walk Down
+            }
+            else if (moveInput.z < 0)
+            { // Walk Down
                 anim.ChangeAnimationState("Walk");
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
@@ -74,11 +82,13 @@ public class PlayerController : MonoBehaviour
     }
 
     /*Handle Physics Calculations*/
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         rb.velocity = moveVelocity;
     }
 
-    private void OnCollisionEnter(Collision other) {
-        floorCollider = other.collider;
+    public void handleNextDay()
+    {
+        transform.position = spawnPoint;
     }
 }

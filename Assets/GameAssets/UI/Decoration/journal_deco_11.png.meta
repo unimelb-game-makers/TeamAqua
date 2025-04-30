@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d3969a3b614c14a449c14e83d69360e1
+guid: 18a1c84e8917f6549b2bd0990757a968
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 993623620249454005
-    second: IMG_4914_0
+      213: -4585293256904642367
+    second: journal_deco_11_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,19 +84,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_4914_0
+      name: journal_deco_11_0
       rect:
         serializedVersion: 2
-        x: 177
-        y: 547
-        width: 1559
-        height: 1728
+        x: 302
+        y: 1936
+        width: 754
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b5086d0b6f0acd00800000000000000
-      internalID: 993623620249454005
+      spriteID: 1c07437a314cd50c0800000000000000
+      internalID: -4585293256904642367
       vertices: []
       indices: 
       edges: []
@@ -144,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_4914_0: 993623620249454005
+      journal_deco_11_0: -4585293256904642367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

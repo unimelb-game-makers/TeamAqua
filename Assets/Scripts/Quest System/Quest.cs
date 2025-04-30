@@ -17,9 +17,7 @@ public class QuestData
     public int current_step_number;
     public bool active;
     public bool finished;
-    
 }
-
 
 [System.Serializable]
 public class QuestStep

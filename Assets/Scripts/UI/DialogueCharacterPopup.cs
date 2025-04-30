@@ -57,20 +57,25 @@ namespace UI
                      QuestManager.instance.AddQuest(int.Parse(tagValue));   
                      Debug.Log("questS working on C#-end");
                      break;
+
                  case SPEAKER_TAG:   //change speaker name depending on the speaker tag 
                      // Noelle only apperas on the left
                      // Other characters only appear on the right
                     leftCharacter.gameObject.SetActiveFast(tagValue == "Noelle");
-                      rightCharacter.gameObject.SetActiveFast(tagValue != "Noelle" && tagValue != "Narrator");
-                        leftCharacter.SetName(tagValue);
-                     rightCharacter.SetName(tagValue);
-                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue == "Narrator" ? "default" : tagValue);
+                    leftCharacter.SetName(tagValue);
+                    rightCharacter.gameObject.SetActiveFast(tagValue != "Noelle" && tagValue != "Narrator");
+                    rightCharacter.SetName(tagValue);
+                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue == "Narrator" ? "Narrator" : tagValue);
                     break;
 
                 case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
-                    if (tagValue == "Noelle")
+                    if (tagValue.Contains("Noelle"))
+                    {
+                        //leftCharacter.gameObject.SetActiveFast(true);
                         leftCharacter.PlayAnim(tagValue);
+                    }
                     else
+                        //rightCharacter.gameObject.SetActiveFast(true);
                         rightCharacter.PlayAnim(tagValue);
                     break;
                 case AUDIO_TAG:

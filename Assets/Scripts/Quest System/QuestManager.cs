@@ -18,12 +18,12 @@
 
                     - everything else is done automatically by the QuestManager
     Edited by:
-    Steven, 11/6/2024: 
+    Steven, 11/6/2024:
         - added bool QuestComplete for testing of MoveKnots function in DialogueSystem
             + if QuestComplete == true: move to chunk of dialogue that plays after quest is complete
             + if QuestComplete == false: move to chunk of dialogue that plays when quest is incomplete but player tries to interact with npc
-        - issues: 
-            + might raise confusion between different quest ID, 
+        - issues:
+            + might raise confusion between different quest ID,
             + assuming player can ONLY complete a quest upon interacting with an NPC again, this means that technically, player can only complete one quest at a time (cant interact with multiple NPC at the same time, maybe, but even if we could it would probably be a scripted encounter and we would eliminiate the option to complete quest before this multi-NPC interaction plays out)   --->  so the bool check QuestComplete could still work?
         - fix: preferably, check for quest completion by quest[id].finished instead but steven has skill issue and does not know how to implement that without making a big mess rn
 
@@ -37,12 +37,8 @@
 */
 
 
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using Ink.Parsed;
 
 public class QuestManager : MonoBehaviour
 {
@@ -50,19 +46,24 @@ public class QuestManager : MonoBehaviour
     public static QuestManager instance;
 
     private List<QuestData> quests = new List<QuestData>(); // list of all the quests the player has
-    private List<QuestData> finised = new List<QuestData>(); // list of all the quests the player has finished
+    private List<QuestData> finished = new List<QuestData>(); // list of all the quests the player has finished
+
     // TODO: when saving the game, save these lists to a file
-    
-    [SerializeField] private TextAsset jsonFile; // the .json file that contains the quests
+
+    [SerializeField]
+    private TextAsset jsonFile; // the .json file that contains the quests
 
     public bool QuestCompleted;
+
+    // just talk to a person
+
     //public bool questOpen = false;
 
-    [SerializeField] private Inventory inventory; // the inventory of the player
-    
+    [SerializeField]
+    private Inventory inventory; // the inventory of the player
+
     void Awake()
     {
-        
         // Singleton setup
         if (instance == null)
         {
@@ -73,13 +74,15 @@ public class QuestManager : MonoBehaviour
             Destroy(gameObject); // Ensure that there's only one instance of the QuestManager
         }
     }
+
     public static QuestManager Instance()
     {
         return instance;
     }
+
     public void AddQuest(int id)
     {
-        Debug.Log("number of quests is " + quests.Count);
+        Debug.Log("Adding to quest: number of quests is " + quests.Count);
         Quest quest = JsonUtility.FromJson<Quest>(jsonFile.text);
         if (quest != null)
         {
@@ -91,20 +94,20 @@ public class QuestManager : MonoBehaviour
                     if (quests[i].id == id)
                     {
                         Debug.Log("Quest already in list");
-                        break;  // -> turning return into break seems to make it multiple of the same quest can be added to the list
+                        break; // -> turning return into break seems to make it multiple of the same quest can be added to the list
                     }
                 }
                 if (questData.id == id && !quests.Contains(questData) && !questData.finished)
                 {
                     Debug.Log("Adding quest: " + questData.title);
-                    QuestCompleted = false;     //quest status is false at the start
+                    QuestCompleted = false; //quest status is false at the start
                     questData.active = true;
                     questData.current_step_number = 0;
                     quests.Add(questData);
                 }
             }
         }
-        
+
         Debug.Log("number of quests is " + quests.Count);
     }
 
@@ -134,11 +137,11 @@ public class QuestManager : MonoBehaviour
         {
             Debug.Log("quest count passed, checking for quest step type...");
             //check if quest type is location
-            if (quests[id-1].quest_steps[step-1].objective_type == "LOCATION")
+            if (quests[id - 1].quest_steps[step - 1].objective_type == "LOCATION")
             {
                 Debug.Log("quest type is location");
                 // check if the quest step's active status is true
-                if (quests[id-1].quest_steps[step-1].active == true)
+                if (quests[id - 1].quest_steps[step - 1].active == true)
                 {
                     Debug.Log("quest step status is ACTIVE");
                     return true;
@@ -152,36 +155,47 @@ public class QuestManager : MonoBehaviour
         Debug.Log("quest count was 0, no quests yet");
         return false;
     }
+
     public bool CheckStatus(int id, int step, Ink.Runtime.Story story)
-    {  
+    {
         // checking if quest log is empty
         Debug.Log("number of quests is " + quests.Count);
         // checking if quest objective type is gather
         if (quests.Count != 0 && id >= quests.Count)
         {
-            Debug.Log("quest obj type is " + quests[id-1].quest_steps[step - 1].objective_type);
-            switch (quests[id-1].quest_steps[step-1].objective_type)
-            {   
+            Debug.Log("quest obj type is " + quests[id - 1].quest_steps[step - 1].objective_type);
+            switch (quests[id - 1].quest_steps[step - 1].objective_type)
+            {
                 // TYPE : GATHER
                 case "GATHER":
                     Debug.Log("QUEST TYPE IS GATHER");
-                    //if (quests[id-1].quest_steps[step-1].quest_item_id != -1) 
-                
+                    //if (quests[id-1].quest_steps[step-1].quest_item_id != -1)
+
                     // check if the player has the item in their inventory
                     Debug.Log("Checking for item in inventory");
-                    if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
-                        print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
-                        quests[id-1].quest_steps[step-1].finished = true;
+                    if (
+                        inventory.HasItem(
+                            quests[id - 1].quest_steps[step - 1].quest_item_id,
+                            quests[id - 1].quest_steps[step - 1].quest_item_amount
+                        )
+                    )
+                    {
+                        print(
+                            "Item found in inventory"
+                                + (quests[id - 1].quest_steps[step - 1].quest_item_id)
+                        );
+                        quests[id - 1].quest_steps[step - 1].finished = true;
                         Debug.Log("Item found, setting quest status to finished");
                         // remove the item from the inventory
                         story.variablesState["quest_id" + id] = "FINISHED";
                         Debug.Log("quest_id" + id);
-                        Debug.Log(story.variablesState["quest_id" + id]);   // set off trigger in ink to move to a different part of the story
+                        Debug.Log(story.variablesState["quest_id" + id]); // set off trigger in ink to move to a different part of the story
                         return true;
-                    } 
-                    else {
+                    }
+                    else
+                    {
                         Debug.Log("item not found in inventory, quest status remains unfinished");
-                        quests[id-1].finished = false;
+                        quests[id - 1].finished = false;
                         return false;
                     }
 
@@ -191,50 +205,61 @@ public class QuestManager : MonoBehaviour
                     Debug.Log("QUEST TYPE IS LOCATION");
                     /* approach: probably set invisible collider at the target location, each with their own ID (scriptable object?).if collided, then come back here to set story.variablestate("quest_id" + id) = "YES"
                     */
-                    if (QuestLocationTrigger.instance().LocationReached)    // bool set off upon reaching designated location
+                    if (QuestLocationTrigger.instance().LocationReached) // bool set off upon reaching designated location
                     {
                         Debug.Log("location reached, setting off dialogue trigger variable");
-                        story.variablesState["quest_id" + id] = "FINISHED";  // set off dialogue var to move on to submitquest
+                        story.variablesState["quest_id" + id] = "FINISHED"; // set off dialogue var to move on to submitquest
                         return true;
                     }
                     Debug.Log("quest mana: location not reached, bool still false");
                     return false;
-                    //break;
+                //break;
 
                 // TYPE : TALK
                 case "TALK":
-                    Debug.Log("QUEST TYPE IS TALK");
                     /* approach: place ink tag at the end of the dictated convo with the relevant NPC(s), if parses through said tag then come back here to set story.variablestate("quest_id" + id) = "YES"
                     */
                     return false;
-                    //break;
+                //break;
             }
-            Debug.Log("objective type was not GATHER (-1 detected)");
             return false;
         }
-        Debug.Log("no quests found in quest log ");
         return false;
     }
-        
+
     public void CompleteStep(int id, int step, bool objective = false)
     {
-        
         // check for quest type
-        if (!objective){
-            if (quests[id-1].quest_steps[step-1].quest_item_id != -1) {
+        if (!objective)
+        {
+            if (quests[id - 1].quest_steps[step - 1].quest_item_id != -1)
+            {
                 // check if the player has the item in their inventory
                 Debug.Log("Checking for item in inventory");
-                if (inventory.HasItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount)) {
-                    print ("Item found in inventory" + (quests[id-1].quest_steps[step-1].quest_item_id));
+                if (
+                    inventory.HasItem(
+                        quests[id - 1].quest_steps[step - 1].quest_item_id,
+                        quests[id - 1].quest_steps[step - 1].quest_item_amount
+                    )
+                )
+                {
+                    print(
+                        "Item found in inventory"
+                            + (quests[id - 1].quest_steps[step - 1].quest_item_id)
+                    );
 
                     // remove the item from the inventory
-                    inventory.RemoveItem(quests[id-1].quest_steps[step-1].quest_item_id, quests[id-1].quest_steps[step-1].quest_item_amount);
+                    inventory.RemoveItem(
+                        quests[id - 1].quest_steps[step - 1].quest_item_id,
+                        quests[id - 1].quest_steps[step - 1].quest_item_amount
+                    );
                     //story.variablesState["quest_id" + id] = "YES";
-                } else {
+                }
+                else
+                {
                     Debug.Log("item not found in inventory");
                     return;
                 }
-                
             }
         }
         // if (objective) {
@@ -248,13 +273,15 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Quest ID: " + id);
                 Debug.Log("Quest Step: " + step);
                 Debug.Log("Current Step: " + quests[i].current_step_number);
-                if (quests[i].current_step_number == step-1)
+                if (quests[i].current_step_number == step - 1)
                 {
                     Debug.Log("Step: " + step);
                     quests[i].current_step_number++;
                     if (quests[i].current_step_number == quests[i].quest_steps.Count)
                     {
-                        //QuestCompleted = true;      //---> likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
+                        // QuestCompleted = true;
+                        //   likely to change, QuestCompleted should be toggled true only when player has fulfilled all quest steps and hasnt
+                        //  submitted quest yet, and then after they submit it and RemoveQuest(id) is called, turn it back to false
                         RemoveQuest(id);
                     }
                 }
@@ -280,18 +307,18 @@ public class QuestManager : MonoBehaviour
 
     //===============================================================================================================//
 
-  /**
-        DrawText: This function draws the quests in the UI. It displays the title, description, current task, objective, item, amount, and reward of each quest.
-        Parameters: none
-        Return: void
-    */
+    /**
+          DrawText: This function draws the quests in the UI. It displays the title, description, current task, objective, item, amount, and reward of each quest.
+          Parameters: none
+          Return: void
+      */
 
-    public void RemoveQuest(int id)     //--note: was previously private, not public
+    public void RemoveQuest(int id) //--note: was previously private, not public
     {
         for (int i = quests.Count - 1; i >= 0; i--)
         {
             if (quests[i].id == id)
-            {                              
+            {
                 quests[i].finished = true;
                 quests.RemoveAt(i);
             }

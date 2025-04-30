@@ -10,10 +10,12 @@ public class QuestLocationTrigger : MonoBehaviour
     public static QuestLocationTrigger questLocationTrigger;
     public bool LocationReached;
 
-    public int id;  // the id of the associated quest
-    public int step;    // the specific step within that quest
+    public int id; // the id of the associated quest
+    public int step; // the specific step within that quest
+
     // Start is called before the first frame update
     public TextAsset inkJSON;
+
     void Awake()
     {
         questLocationTrigger = this;
@@ -23,22 +25,19 @@ public class QuestLocationTrigger : MonoBehaviour
     {
         return questLocationTrigger;
     }
+
     void Start()
     {
         story = DialogueSystem.Instance().currentStory;
-    
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("collider hit, checking quest step status... ");
-        if (QuestManager.Instance().CheckStart(id, step))   //location off-limit if quest step not acive yet.
+        if (QuestManager.Instance().CheckStart(id, step)) //location off-limit if quest step not acive yet.
         {
             if (other.CompareTag("Player"))
             {
@@ -47,7 +46,13 @@ public class QuestLocationTrigger : MonoBehaviour
                 // Issue qith quest manager: indexing doesnt work if quests are added out of order, if u add quest 10 as your first quest, it will throw index 9 at the quest list but since its the very first quest, the index should be 0
                 //story = DialogueSystem.GetDial().currentStory;
                 //QuestManager.Instance().CheckStatus(id,step, story);
-                Debug.Log("location reached, dialogue trigger " + "quest_id" + id + " switched to " + DialogueSystem.Instance().currentStory.variablesState["quest_id" + id]);
+                Debug.Log(
+                    "location reached, dialogue trigger "
+                        + "quest_id"
+                        + id
+                        + " switched to "
+                        + DialogueSystem.Instance().currentStory.variablesState["quest_id" + id]
+                );
                 LocationReached = true;
                 return;
             }

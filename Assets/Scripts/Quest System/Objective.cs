@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ObjectiveType 
+public enum ObjectiveType
 {
     Kill,
     Collect,
@@ -23,7 +23,6 @@ public class Objective : MonoBehaviour
 
     public Vector3 location;
 
-
     void Update()
     {
         if (objectiveType == ObjectiveType.Location)
@@ -33,7 +32,10 @@ public class Objective : MonoBehaviour
             if (Vector3.Distance(location, player.position) < 2)
             {
                 QuestManager.instance.CompleteCurrentStep(id);
-                
+
+                PlayerPrefs.SetFloat("playerPositionX", player.position.x);
+                PlayerPrefs.SetFloat("playerPositionY", player.position.y);
+
                 Destroy(gameObject);
             }
         }

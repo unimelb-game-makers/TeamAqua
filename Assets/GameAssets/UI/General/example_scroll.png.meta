@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a2045735b981048e49d97f4ed50cf514
+guid: 109519cc37a3628499b40a8e4232e90b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8428320334227218281
-    second: IMG_4923_0
+      213: -6868013847534359659
+    second: example_scroll_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_4923_0
+      name: example_scroll_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 48
-        width: 61
-        height: 93
+        x: 177
+        y: 547
+        width: 1559
+        height: 1728
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7906f29af47980b80800000000000000
-      internalID: -8428320334227218281
+      spriteID: 59b20414bc9efa0a0800000000000000
+      internalID: -6868013847534359659
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_4923_0: -8428320334227218281
+      example_scroll_0: -6868013847534359659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

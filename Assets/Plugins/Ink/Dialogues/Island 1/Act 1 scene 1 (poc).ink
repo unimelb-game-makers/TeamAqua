@@ -36,6 +36,8 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
     - questSteps == "FINISHED":
         //~checkQuestStatus(1, 1)
         -> SubmitQuest 
+    - questSteps == "SUBMITTED":
+        -> PostquestSubmit
 }
         
 ===main===
@@ -288,6 +290,10 @@ Isn’t that obvious? #speaker:Amelia #portrait:AmeliaSilly
 To outrun the floods. 
 Now come on, we need to go.
 Amelia takes Noelle’s hand, and drags her towards the rainforests deeper in-land. #speaker:Narrator
-
+~ quest_id1 = "SUBMITTED"
 ~ TurnOffBarrier(0)
 ->DONE
+
+===PostquestSubmit===
+What are you waiting for? let's go! #speaker:Amelia #portrait:AmeliaJoyous
+->END
