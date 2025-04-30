@@ -1,8 +1,18 @@
+using Cinemachine;
 using UnityEngine;
 using Popups;
+using UnityEditor.MemoryProfiler;
 
 public class GameFlow : MonoBehaviour
 {
+    [Header("UI")] 
+    [SerializeField] private UI ui;
+
+    [Header("Player")] 
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private Vector3 spawnPosition;
+    
     [Header("Managers")] 
     [SerializeField] private BarrierManager barrierManager;
     [SerializeField] private AudioManager audioManager;
@@ -14,20 +24,36 @@ public class GameFlow : MonoBehaviour
     [SerializeField] private DayManager dayManager;
     [SerializeField] private WaterManager waterManager;
 
-    [Header("Level")] [SerializeField] private Level level;
+    [Header("Level")] 
+    [SerializeField] private Level level;
 
-    [Header("UI")] [SerializeField] private UI ui;
 
     private void Awake()
     {
         InitUI();
+        InitPlayer();
         InitManagers();
         InitLevel();
     }
 
+    /// <summary>
+    /// Simply creates the UI.
+    /// </summary>
     private void InitUI()
     {
         Instantiate(ui);
+    }
+
+    /// <summary>
+    /// Spawns the player, then makes the camera look at them.
+    /// </summary>
+    private void InitPlayer()
+    {
+        PlayerController player = Instantiate(playerController);
+        player.transform.position = spawnPosition;
+        CinemachineVirtualCamera virtualCam = Instantiate(virtualCamera);
+        virtualCam.LookAt = player.transform;
+        virtualCam.Follow = player.transform;
     }
     
     /// <summary>
@@ -36,7 +62,7 @@ public class GameFlow : MonoBehaviour
     /// </summary>
     private void InitManagers()
     {
-        GameObject manager = new GameObject("Managers");
+        GameObject manager = new("Managers");
         DontDestroyOnLoad(manager);
         Instantiate(barrierManager, manager.transform);
         Instantiate(audioManager, manager.transform);
@@ -49,6 +75,9 @@ public class GameFlow : MonoBehaviour
         Instantiate(waterManager, manager.transform);
     }
 
+    /// <summary>
+    /// Simply creates the level.
+    /// </summary>
     private void InitLevel()
     {
         Instantiate(level);
