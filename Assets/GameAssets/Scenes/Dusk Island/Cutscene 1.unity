@@ -1774,9 +1774,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03d73978c9744dce90f3ab9d86ddf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueAudioPlayer: {fileID: 0}
   playerInputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   LoadGlobalJSON: {fileID: 4900000, guid: e9e06513af637584c9d7f55c00b27a53, type: 3}
   displaying: 0
+  npcData: {fileID: 0}
 --- !u!1 &848374391940203304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,9 +3418,6 @@ MonoBehaviour:
   defaultAudioInfo: {fileID: 11400000, guid: c62a60f7d48b41148b1afb30c7643ec5, type: 2}
   audioInfos:
   - {fileID: 11400000, guid: 768b1bab1b4644446b47322b2e8b4b09, type: 2}
-  - {fileID: 11400000, guid: a49a34d35621b0a4ea70396dd7ade2b0, type: 2}
-  - {fileID: 11400000, guid: 32c0af1bc2b63e541b8528b4ff8cacac, type: 2}
-  - {fileID: 11400000, guid: 581c0c2d15c4b2e40b54b27be33e96ab, type: 2}
   currentAudioInfo: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!222 &2658984949118225435
@@ -4931,6 +4930,7 @@ MonoBehaviour:
   journalPopup: {fileID: 318491484713840033}
   pausePopup: {fileID: 509115738970827244}
   dialoguePopup: {fileID: 6733426362691933388}
+  fadePopup: {fileID: 0}
 --- !u!114 &4321753618525271398
 MonoBehaviour:
   m_ObjectHideFlags: 0

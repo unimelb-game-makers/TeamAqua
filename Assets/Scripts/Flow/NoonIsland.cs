@@ -1,9 +1,8 @@
 using Cinemachine;
 using UnityEngine;
 using Popups;
-using UnityEditor.MemoryProfiler;
 
-public class GameFlow : MonoBehaviour
+public class NoonIsland : MonoBehaviour
 {
     [Header("UI")] 
     [SerializeField] private UI ui;
