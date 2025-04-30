@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed; //adjust movement speed
 
     [SerializeField]
-    private Transform spriteTransform;
+    private SpriteTransformer spriteTransform;
     private float speed; //freezes movement or resume movement depending on condition check
 
     private Rigidbody rb;
@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        if(moveInput != Vector3.zero)
-            saveDirection = moveInput;
         moveVelocity = moveInput * speed;
         if (inputProvider.can_move)    //Checks whether to freeze movement. This will be reworked later
         {                                                   

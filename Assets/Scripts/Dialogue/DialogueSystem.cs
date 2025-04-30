@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using Ink.Runtime;
+using TMPro;
+using UnityEngine;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -28,6 +28,8 @@ public class DialogueSystem : MonoBehaviour
     public static Action<string, List<Choice>> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
+
+    public NpcData npcData = null;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more
@@ -227,6 +229,7 @@ public class DialogueSystem : MonoBehaviour
     {
         Debug.Log("ExitDialogueMode called.....");
         yield return new WaitForSeconds(0.2f); //wait check to resolve all same-key-input errors
+        npcData = null;
         dialogueVariable.StopListening(currentStory);
         DialogueAudioManager.GetAudioMana().ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
@@ -280,6 +283,7 @@ public class DialogueSystem : MonoBehaviour
                     if (questID > 0)
                     {
                         //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
+                        npcData.HasQuest = false;
                         QuestManager.instance.RemoveQuest(questID);
                     }
                 }
