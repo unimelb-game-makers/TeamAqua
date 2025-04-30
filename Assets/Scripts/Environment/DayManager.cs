@@ -1,41 +1,92 @@
+using System;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 public class DayManager : MonoBehaviour
 {
-    [SerializeField]
-    public Light directionalLight;
+    private const float LIGHT_DURATION = 1.0f;
 
-    [SerializeField]
-    public Color targetColor = Color.black;
-    public DayCycle dayCycle;
-    private readonly float LIGHT_DURATION = 1.0f;
+    [Header("Scriptable Objects")] [SerializeField]
+    private PlayerSave playerSave;
 
-    private Color initialColor;
+    [Header("Night Settings")]
+    [SerializeField] private Color targetColor = Color.black;
+    
+    // Exposed Actions
+    public static Action<int> OnDayChanged;
 
-    public bool shouldChangeColor = false;
+    // Current Day and Night
+    private int _currentDay = 1;
+
+    private int CurrentDay
+    {
+        get => _currentDay;
+        set
+        {
+            if (_currentDay == value)
+            {
+                return;
+            }
+            _currentDay = value;
+            PlayerPrefs.SetInt("currentDay", _currentDay);
+            PlayerPrefs.Save();
+        }
+    }
+
+    private bool isNight = false;
+    
+    // Serialized Variables
+    private PlayerController _playerController;
+    private bool shouldChangeColor = false;
     private bool firstTime = true;
     private float lerpTime = 0f;
+    private Color initialColor;
+    private Light directionalLight;
 
+    
     private void Start()
     {
+        // TODO(Alex): We naively assume that there is only one light source for now.
+        directionalLight = FindFirstObjectByType<Light>();
+        _playerController = FindFirstObjectByType<PlayerController>();
         initialColor = directionalLight.color;
-
-        Assert.IsNotNull(dayCycle, "dayCycle field is null in DayNight object");
+        EnergyManager.OnEnergyChanged += CheckEnergy;
+        if (playerSave && playerSave.currentDay == 0)
+            CurrentDay = playerSave.currentDay;
     }
 
-    private void OnEnable()
+    private void CheckEnergy(float energyAmount)
     {
-        DayCycle.OnNightChange += OnNightChang;
+        if (energyAmount < 50f && !isNight)
+        {
+            SetNight(true);
+        }
     }
 
-    private void OnDisable()
+    private void FixedUpdate()
     {
-        DayCycle.OnNightChange -= OnNightChang;
+        if (isNight && Input.GetKeyDown(KeyCode.E) && Ship.isNearPlayer)
+        {
+            StartNewDay();
+        }
+        
+        if (shouldChangeColor && firstTime)
+        {
+            ChangeLight();
+        }
     }
 
-    private void OnNightChang(bool isNight)
+    private void StartNewDay()
     {
+        OnDayChanged?.Invoke(CurrentDay);
+        CurrentDay += 1;
+        SetNight(false);
+        _playerController.handleNextDay();
+        EnergyManager.Instance.OnNextDay();
+    }
+
+    private void SetNight(bool value)
+    {
+        isNight = value;
         if (isNight)
         {
             shouldChangeColor = true;
@@ -59,12 +110,8 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void OnDestroy()
     {
-        //Todo This needs to handle the day cycle
-        if (shouldChangeColor && firstTime)
-        {
-            ChangeLight();
-        }
+        EnergyManager.OnEnergyChanged -= CheckEnergy;
     }
 }
