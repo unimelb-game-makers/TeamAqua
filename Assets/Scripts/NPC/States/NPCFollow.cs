@@ -6,6 +6,7 @@ public class NPCFollow : NPCState
 {
     [SerializeField] State idleState;
     [SerializeField] State followIdleState;
+    [SerializeField] SpriteTransformer spriteTransformer;
     public GameObject target;
     public float targetDistance = 1.0f; // How far the NPC will reach the player before stopping
     public float maxDistance = 10.0f;
@@ -13,6 +14,7 @@ public class NPCFollow : NPCState
     
     Vector3 targetPosition;
     Vector3 curPosition;
+
     public override void Enter()
     {
         PlayStateAnimation();
@@ -48,9 +50,9 @@ public class NPCFollow : NPCState
 
         //Change direction that the sprite is facing
         if(curPosition.x < targetPosition.x){ //Face right
-            statemachine.transform.rotation = Quaternion.Euler(0,180,0);
+            spriteTransformer.flipX(true);
         }else{ //Face Left
-            statemachine.transform.rotation = Quaternion.identity;
+            spriteTransformer.flipX(false);
         }
     }
 }
