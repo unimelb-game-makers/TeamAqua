@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3811256775007498570}
   - component: {fileID: 8598276469370243906}
-  - component: {fileID: 2002243880080256038}
   m_Layer: 0
   m_Name: DayManager
   m_TagString: Untagged
@@ -45,22 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cd55d97d63b4451b46d6168f8bb2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionalLight: {fileID: 0}
+  playerSave: {fileID: 11400000, guid: 055a02550362f41f89f8b9829825b4b4, type: 2}
   targetColor: {r: 0, g: 0, b: 0, a: 1}
-  dayCycle: {fileID: 0}
-  shouldChangeColor: 0
---- !u!114 &2002243880080256038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143425961676221980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ab470f680740f34c971b0a0f0202fc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSave: {fileID: 0}
-  _currentDay: 1
-  playerController: {fileID: 0}

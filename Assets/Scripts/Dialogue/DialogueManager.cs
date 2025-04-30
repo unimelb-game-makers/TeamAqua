@@ -48,12 +48,6 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
         else
             instance = this;
-        if (instance != null)
-        {
-            Debug.LogWarning("Found more than one Dialogue Manager in the scene");
-        }
-        instance = this;
-
         dialogueVariable = new DialogueVariable(LoadGlobalJSON);
         dialogueAudioPlayer = GetComponent<DialogueAudioPlayer>();
     }

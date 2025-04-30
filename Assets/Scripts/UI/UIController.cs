@@ -11,12 +11,15 @@ namespace Popups
         [SerializeField] private DialoguePopup dialoguePopup;
         [SerializeField] private FadePopup fadePopup;
 
+        //TODO(Alex): PLEASE MOVE THIS OUT OF UI
+        public static bool Paused = false;
+
         protected override void InitPopup()
         {
             DialogueManager.OnDialogueStart += OnDialogueStart;
             DialogueManager.OnDialogueEnd += OnDialogueEnd;
         }
-
+        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,6 +32,16 @@ namespace Popups
             }
         }
 
+        private bool CanPause()
+        {
+            return !pausePopup.isShowing && !pausePopup.isAnimating;
+        }
+
+        private bool CanUnpause()
+        {
+            return pausePopup.isShowing && !pausePopup.isAnimating;
+        }
+
         private void TogglePause()
         {
             if (dialoguePopup.isShowing)
@@ -37,16 +50,21 @@ namespace Popups
                 StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
                 return;
             }
-            if (!pausePopup.isShowing && !pausePopup.isAnimating )
+
+            if (CanPause() && !Paused)
             {
                 if(journalPopup.isShowing)
                 {
                     journalPopup.HidePopup();
                 }
                 pausePopup.ShowPopup();
+                Paused = true;
             }
-            else if (pausePopup.isShowing && !pausePopup.isAnimating)
+            else if (CanUnpause() && Paused)
+            {
                 pausePopup.HidePopup();
+                Paused = false;
+            }
         }
 
         private void ToggleJournal()

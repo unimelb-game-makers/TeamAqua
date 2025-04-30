@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1518198145}
   - component: {fileID: 1518198144}
   m_Layer: 0
-  m_Name: GameFlow
+  m_Name: NoonIsland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
