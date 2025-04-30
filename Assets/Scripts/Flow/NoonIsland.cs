@@ -7,10 +7,13 @@ public class NoonIsland : MonoBehaviour
 {
     [Header("UI")] 
     [SerializeField] private UI ui;
-
+    
+    [Header("Cameras")] 
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    
     [Header("Player")] 
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private Vector3 spawnPosition;
     
     [Header("Managers")] 
@@ -45,9 +48,11 @@ public class NoonIsland : MonoBehaviour
     /// </summary>
     private void InitPlayer()
     {
-        PlayerController player = Instantiate(playerController);
-        player.transform.position = spawnPosition;
+        Camera _ = Instantiate(mainCamera);
         CinemachineVirtualCamera virtualCam = Instantiate(virtualCamera);
+        PlayerController player = Instantiate(playerController);
+        
+        player.transform.position = spawnPosition;
         virtualCam.LookAt = player.transform;
         virtualCam.Follow = player.transform;
     }
