@@ -1,6 +1,7 @@
 using Cinemachine;
 using UnityEngine;
 using Popups;
+using UnityEngine.SceneManagement;
 
 public class NoonIsland : MonoBehaviour
 {
@@ -22,10 +23,6 @@ public class NoonIsland : MonoBehaviour
     [SerializeField] private SpriteManager spriteManager;
     [SerializeField] private DayManager dayManager;
     [SerializeField] private WaterManager waterManager;
-
-    [Header("Level")] 
-    [SerializeField] private Level level;
-
 
     private void Awake()
     {
@@ -79,6 +76,6 @@ public class NoonIsland : MonoBehaviour
     /// </summary>
     private void InitLevel()
     {
-        Instantiate(level);
+        SceneManager.LoadScene("NoonIsland", LoadSceneMode.Additive);
     }
 }
