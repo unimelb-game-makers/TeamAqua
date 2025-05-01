@@ -1,11 +1,51 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RainControl : MonoBehaviour
 {
-    // Start is called before the first frame update
     public ParticleSystem rainParticle;
     public const float RAINCHANCE = 0.3f;
     private Coroutine stopRoutine;
-  
+
+
+    public void StartRain()
+    {
+        if (rainParticle != null && !rainParticle.isPlaying)
+        {
+            rainParticle.Play();
+        }
+    }
+
+    public void StartRainRandom()
+    {
+        float randomValue = Random.value;
+        if (randomValue < RAINCHANCE)
+        {
+            StartRain();
+        }
+    }
+
+    public void StopRain()
+    {
+        if (rainParticle != null && rainParticle.isPlaying)
+        {
+            rainParticle.Stop();
+        }
+    }
+
+    public void StopRainWithDelay(float delay)
+    {
+        if (stopRoutine != null)
+        {
+            StopCoroutine(stopRoutine);
+        }
+
+        stopRoutine = StartCoroutine(StopRainAfterDelay(delay));
+    }
+
+    private IEnumerator StopRainAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StopRain();
+    }
+}
