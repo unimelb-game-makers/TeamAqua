@@ -7,6 +7,9 @@ public class DayCycle : MonoBehaviour
     public static Action<int> OnDayChange;
     public PlayerSave playerSave;
 
+    public RainControl rainControl;
+
+
     public int _currentDay = 1;
     public int currentDay
     {
@@ -79,6 +82,9 @@ public class DayCycle : MonoBehaviour
 
         playerController.handleNextDay();
         EnergyManager.Instance.OnNextDay();
+        
+        rainControl.StopRain();
+        rainControl.StartRainRandom();
     }
 
     private void FixedUpdate()
