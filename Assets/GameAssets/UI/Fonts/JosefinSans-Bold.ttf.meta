@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69872d1bb11e141e0bcfd800a40de2e8
+guid: 229803da68f704cee974bcb7d20a23f9
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Hanalei Fill
+  - Josefin Sans
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
