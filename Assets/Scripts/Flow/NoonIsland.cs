@@ -81,6 +81,6 @@ public class NoonIsland : MonoBehaviour
     /// </summary>
     private void InitLevel()
     {
-        SceneManager.LoadScene("NoonIsland", LoadSceneMode.Additive);
+        SceneManager.LoadScene("NoonIslandEnvironment", LoadSceneMode.Additive);
     }
 }

@@ -1,12 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 using Kuroneko.UIDelivery;
+using Kuroneko.UtilityDelivery;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 
 namespace Popups
 {
@@ -62,6 +62,12 @@ namespace Popups
             }
         }
 
+        [Button]
+        public void Skip()
+        {
+            DialogueManager.Instance().SkipStory();
+        }
+
         public override void ShowPopup()
         {
             base.ShowPopup();
@@ -69,9 +75,9 @@ namespace Popups
             choicePopup.HidePopup();
         }
 
-        private void OnDialogueContinue(string story, List<Choice> choices)
+        private void OnDialogueContinue(string story, List<Choice> choices, bool skip)
         {
-            lineCoroutine = StartCoroutine(DisplayLine(story, choices));
+            lineCoroutine = StartCoroutine(DisplayLine(story, choices, skip));
         }
 
         private void OnDialogueTags(List<string> tags)
@@ -79,10 +85,19 @@ namespace Popups
             characterPopup.HandleTags(tags);
         }
 
-        private IEnumerator DisplayLine(string line, List<Choice> choices)
+        private IEnumerator DisplayLine(string line, List<Choice> choices, bool skip)
         {
             currentChoices = choices;
             currentLine = line;
+
+            if (skip)
+            {
+                dialogueText.SetText(line);
+                EndCoroutine();
+                yield break;
+            }
+            
+            fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
             dialogueText.text = line; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
@@ -121,6 +136,7 @@ namespace Popups
             {
                 choicePopup.Init(currentChoices);
                 choicePopup.ShowPopup();
+                fastForward.gameObject.SetActiveFast(false);
             }
 
             lineCoroutine = null;

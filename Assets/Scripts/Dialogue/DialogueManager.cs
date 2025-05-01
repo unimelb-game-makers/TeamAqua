@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     public bool displaying = false;
 
     public static Action OnDialogueStart;
-    public static Action<string, List<Choice>> OnDialogueContinue;
+    public static Action<string, List<Choice>, bool> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
 
@@ -139,7 +139,9 @@ public class DialogueManager : MonoBehaviour
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
+                    // When the scene changes, we need to manually call Exit Dialogue Mode
                     Cutscene_1.Instance.SceneChanger(SceneName);
+                    StartCoroutine(ExitDialogueMode());
                 }
             );
 
@@ -195,13 +197,37 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             string nextLine = currentStory.Continue();
-            OnDialogueContinue?.Invoke(nextLine, currentStory.currentChoices);
-            OnDialogueTags?.Invoke(currentStory.currentTags);
+            ShowStory(nextLine);
         }
         else
         {
-            StartCoroutine(ExitDialogueMode());
+            EndStory();
         }
+    }
+    
+    public void SkipStory()
+    {
+        Debug.Log("Skip");
+        string nextLine = string.Empty;
+        // Continues until we encounter a choice, or the story cannot continue
+        while (currentStory.canContinue && currentStory.currentChoices.Count == 0)
+            nextLine = currentStory.Continue();
+        // It will end the story if cannot continue anymore and there are no more choices
+        if (!currentStory.canContinue && currentStory.currentChoices.Count == 0)
+            EndStory();
+        else
+            ShowStory(nextLine, true);
+    }
+
+    private void ShowStory(string nextLine, bool skip = false)
+    {
+        OnDialogueContinue?.Invoke(nextLine, currentStory.currentChoices, skip);
+        OnDialogueTags?.Invoke(currentStory.currentTags);
+    }
+
+    private void EndStory()
+    {
+        StartCoroutine(ExitDialogueMode());
     }
 
     public void ChooseChoice(int choiceIndex)
