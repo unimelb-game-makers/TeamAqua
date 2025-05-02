@@ -260,7 +260,11 @@ public class DialogueManager : MonoBehaviour
                     if (questID > 0)
                     {
                         //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
-                        npcData.HasQuest = false;
+                        // NOTE(Alex): As of 2nd May, NPC Data is not being used currently.
+                        if (npcData)
+                        {
+                            npcData.HasQuest = false;
+                        }
                         QuestManager.instance.RemoveQuest(questID);
                     }
                 }
