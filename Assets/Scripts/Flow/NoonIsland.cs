@@ -1,31 +1,59 @@
 using Cinemachine;
-using UnityEngine;
 using Popups;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NoonIsland : MonoBehaviour
 {
-    [Header("UI")] 
-    [SerializeField] private UI ui;
-    
-    [Header("Cameras")] 
-    [SerializeField] private Camera mainCamera;
-    [SerializeField] private CinemachineVirtualCamera virtualCamera;
-    
-    [Header("Player")] 
-    [SerializeField] private PlayerController playerController;
-    [SerializeField] private Vector3 spawnPosition;
-    
-    [Header("Managers")] 
-    [SerializeField] private BarrierManager barrierManager;
-    [SerializeField] private AudioManager audioManager;
-    [SerializeField] private InventoryManager inventoryManager;
-    [SerializeField] private EnergyManager energyManager;
-    [SerializeField] private QuestManager questManager;
-    [SerializeField] private DialogueManager dialogueManager;
-    [SerializeField] private SpriteManager spriteManager;
-    [SerializeField] private DayManager dayManager;
-    [SerializeField] private WaterManager waterManager;
+    [Header("UI")]
+    [SerializeField]
+    private UI ui;
+
+    [Header("Cameras")]
+    [SerializeField]
+    private Camera mainCamera;
+
+    [SerializeField]
+    private CinemachineVirtualCamera virtualCamera;
+
+    [Header("Player")]
+    [SerializeField]
+    private PlayerController playerController;
+
+    [SerializeField]
+    private Vector3 spawnPosition;
+
+    [Header("Managers")]
+    [SerializeField]
+    private BarrierManager barrierManager;
+
+    [SerializeField]
+    private AudioManager audioManager;
+
+    [SerializeField]
+    private InventoryManager inventoryManager;
+
+    [SerializeField]
+    private EnergyManager energyManager;
+
+    [SerializeField]
+    private QuestManager questManager;
+
+    [SerializeField]
+    private DialogueManager dialogueManager;
+
+    [SerializeField]
+    private SpriteManager spriteManager;
+
+    [SerializeField]
+    private DayManager dayManager;
+
+    [SerializeField]
+    private WaterManager waterManager;
+
+    [Header("Level")]
+    [SerializeField]
+    private Level Noonisland_level;
 
     private void Awake()
     {
@@ -51,12 +79,12 @@ public class NoonIsland : MonoBehaviour
         Camera _ = Instantiate(mainCamera);
         CinemachineVirtualCamera virtualCam = Instantiate(virtualCamera);
         PlayerController player = Instantiate(playerController);
-        
+
         player.transform.position = spawnPosition;
         virtualCam.LookAt = player.transform;
         virtualCam.Follow = player.transform;
     }
-    
+
     /// <summary>
     /// Spawn the managers in a deterministic order so that we know what is loaded when.
     /// We want complete control over each of their flows.
@@ -82,5 +110,6 @@ public class NoonIsland : MonoBehaviour
     private void InitLevel()
     {
         SceneManager.LoadScene("NoonIslandEnvironment", LoadSceneMode.Additive);
+        Instantiate(Noonisland_level); //jumps into dialogue upon entering
     }
 }

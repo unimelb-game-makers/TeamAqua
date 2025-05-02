@@ -8,7 +8,9 @@ using UnityEngine.Serialization;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private DialogueAudioPlayer dialogueAudioPlayer;
+    [SerializeField]
+    private DialogueAudioPlayer dialogueAudioPlayer;
+
     [SerializeField]
     private InputProvider playerInputProvider;
 
@@ -140,7 +142,7 @@ public class DialogueManager : MonoBehaviour
                 (string SceneName) =>
                 {
                     // When the scene changes, we need to manually call Exit Dialogue Mode
-                    Cutscene_1.Instance.SceneChanger(SceneName);
+                    OnSceneDialogueStarter.Instance.SceneChanger(SceneName);
                     StartCoroutine(ExitDialogueMode());
                 }
             );
@@ -204,7 +206,7 @@ public class DialogueManager : MonoBehaviour
             EndStory();
         }
     }
-    
+
     public void SkipStory()
     {
         Debug.Log("Skip");
