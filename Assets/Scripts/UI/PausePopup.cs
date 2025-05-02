@@ -9,6 +9,7 @@ namespace Popups
         [SerializeField] private Button resumeButton;
         [SerializeField] private Button settingsButton;
         [SerializeField] private Button quitButton;
+        private UIController _controller;
     
         protected override void InitPopup()
         {
@@ -17,9 +18,14 @@ namespace Popups
             quitButton.onClick.AddListener(Quit);
         }
 
+        public void Init(UIController controller)
+        {
+            _controller = controller;
+        }
+        
         private void Resume()
         {
-            HidePopup();
+            _controller.TogglePause();
         }
 
         private void Settings()

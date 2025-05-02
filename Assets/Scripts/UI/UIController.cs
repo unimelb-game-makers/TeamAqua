@@ -18,6 +18,7 @@ namespace Popups
         {
             DialogueManager.OnDialogueStart += OnDialogueStart;
             DialogueManager.OnDialogueEnd += OnDialogueEnd;
+            pausePopup.Init(this);
         }
         
         private void Update()
@@ -41,8 +42,8 @@ namespace Popups
         {
             return pausePopup.isShowing && !pausePopup.isAnimating;
         }
-
-        private void TogglePause()
+        
+        public void TogglePause()
         {
             if (dialoguePopup.isShowing)
             {
@@ -53,6 +54,7 @@ namespace Popups
 
             if (CanPause() && !Paused)
             {
+                Time.timeScale = 0f;
                 if(journalPopup.isShowing)
                 {
                     journalPopup.HidePopup();
@@ -62,6 +64,7 @@ namespace Popups
             }
             else if (CanUnpause() && Paused)
             {
+                Time.timeScale = 1f;
                 pausePopup.HidePopup();
                 Paused = false;
             }
