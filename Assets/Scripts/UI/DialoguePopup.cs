@@ -141,6 +141,7 @@ namespace Popups
                     fastForward.gameObject.SetActiveFast(false);
             }
 
+            StopCoroutine(lineCoroutine);
             lineCoroutine = null;
         }
 
