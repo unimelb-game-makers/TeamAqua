@@ -33,15 +33,17 @@ public class EnergyManager : MonoBehaviour
 
         Assert.IsNotNull(playerSave, "playerSave field is null in EnergyManager object");
 
-        float savedEnergyAmount = playerSave.energy;
-        if (savedEnergyAmount == 0)
-        {
-            _energyAmount = MAX_ENERGY;
-        }
-        else
-        {
-            _energyAmount = savedEnergyAmount;
-        }
+        // This is actually bugged :D
+        // It saves indiscriminately of the player's inventory and such.
+        // float savedEnergyAmount = playerSave.energy;
+        // if (savedEnergyAmount == 0)
+        // {
+        //     _energyAmount = MAX_ENERGY;
+        // }
+        // else
+        // {
+        //     _energyAmount = savedEnergyAmount;
+        // }
     }
 
     private void Start()
