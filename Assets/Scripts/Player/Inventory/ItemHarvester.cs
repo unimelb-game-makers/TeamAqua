@@ -10,7 +10,7 @@ public class ItemHarvester : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && source != null && source.currentItem().amount > 0)
         {
-            Inventory.inventory.AddItem(source.HarvestResource());
+            InventoryManager.instance.AddItem(source.HarvestResource());
         }
     }
 

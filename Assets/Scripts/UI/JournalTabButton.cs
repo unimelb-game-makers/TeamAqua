@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class JournalTabButton : MonoBehaviour
     {

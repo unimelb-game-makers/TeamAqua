@@ -13,26 +13,26 @@ public class DialogueOn : UIState
     {
         Debug.Log("Entering dialogue mode");
         DialoguePanel.SetActive(true);
-        DialogueSystem.GetIsPlaying();
+        DialogueManager.GetIsPlaying();
     }
 
     public override void UIProcess()
     {
-        if (Input.GetKeyDown(KeyCode.E) && DialogueSystem.Instance().GetChoicesDisplay() /*&& a bunch of other conditions*/)
+        if (Input.GetKeyDown(KeyCode.E) && DialogueManager.Instance().GetChoicesDisplay() /*&& a bunch of other conditions*/)
         {
-            DialogueSystem.Instance().ContinueStory();
+            DialogueManager.Instance().ContinueStory();
             Debug.Log("story is continued");
         }  
 
-        if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying() && DialogueSystem.Instance().GetChoicesDisplay())
+        if (Input.GetKeyDown(KeyCode.Escape) && DialogueManager.GetIsPlaying() && DialogueManager.Instance().GetChoicesDisplay())
         {
-            StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+            StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
         }
     }
 
     public override void UIExit()
     {
-        StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+        StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
         DialoguePanel.SetActive(false);
         Debug.Log("exiting dialogue mode");
         

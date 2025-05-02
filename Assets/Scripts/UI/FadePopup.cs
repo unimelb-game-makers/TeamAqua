@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class FadePopup : Popup
     {
@@ -17,16 +17,19 @@ namespace UI
 
         protected override void InitPopup()
         {
-            // DayNight.OnDayChange += OnDayChange;
-            DayCycle.OnDayChange += OnDayChange;
+            DayManager.OnDayChanged += OnDayChange;
+            HidePopup();
         }
 
-        // private void OnDayChange(float previousDay, float nextDay)
         private void OnDayChange(int currentDay)
         {
             Debug.Log("Are we getting calleD??");
             // Start Fade In
             ShowPopup();
+            Color fadeColour = fadeImage.color;
+            fadeColour.a = 0f;
+            fadeImage.color = fadeColour;
+            
             dayText.text = "DAY " + currentDay;
             Fade(
                 1f,
@@ -45,10 +48,7 @@ namespace UI
                                 {
                                     Fade(
                                         0f,
-                                        () =>
-                                        {
-                                            HidePopup();
-                                        }
+                                        HidePopup
                                     );
                                 }
                             );
