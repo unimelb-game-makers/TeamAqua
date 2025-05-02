@@ -3,7 +3,7 @@ using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
 using UnityEngine;
 
-namespace UI
+namespace Popups
 {
     public class DialogueCharacterPopup : Popup
     {
@@ -65,7 +65,7 @@ namespace UI
                     leftCharacter.SetName(tagValue);
                     rightCharacter.gameObject.SetActiveFast(tagValue != "Noelle" && tagValue != "Narrator");
                     rightCharacter.SetName(tagValue);
-                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue == "Narrator" ? "Narrator" : tagValue);
+                    DialogueManager.Instance().DialogueAudioPlayer.SetCurrentAudioInfo(tagValue == "Narrator" ? "Narrator" : tagValue);
                     break;
 
                 case PORTRAIT_TAG:  //change speaker portrait depending on portrait tag
@@ -79,7 +79,7 @@ namespace UI
                         rightCharacter.PlayAnim(tagValue);
                     break;
                 case AUDIO_TAG:
-                    DialogueAudioManager.GetAudioMana().SetCurrentAudioInfo(tagValue);
+                    DialogueManager.Instance().DialogueAudioPlayer.SetCurrentAudioInfo(tagValue);
                     break;
                 default:
                     Debug.LogWarning("tag came in but is not currently being handled: " + inkTag);

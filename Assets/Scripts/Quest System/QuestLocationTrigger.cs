@@ -28,7 +28,7 @@ public class QuestLocationTrigger : MonoBehaviour
 
     void Start()
     {
-        story = DialogueSystem.Instance().currentStory;
+        story = DialogueManager.Instance().currentStory;
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class QuestLocationTrigger : MonoBehaviour
                         + "quest_id"
                         + id
                         + " switched to "
-                        + DialogueSystem.Instance().currentStory.variablesState["quest_id" + id]
+                        + DialogueManager.Instance().currentStory.variablesState["quest_id" + id]
                 );
                 LocationReached = true;
                 return;

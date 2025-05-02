@@ -1,19 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private InputProvider inputProvider;
-    [SerializeField] private float moveSpeed;       //adjust movement speed
-    [SerializeField] private Transform spriteTransform;
-    private float speed;    //freezes movement or resume movement depending on condition check
+    [SerializeField]
+    private InputProvider inputProvider;
+
+    [SerializeField]
+    private float moveSpeed; //adjust movement speed
+
+    [SerializeField]
+    private SpriteTransformer spriteTransform;
+    private float speed; //freezes movement or resume movement depending on condition check
 
     private Rigidbody rb;
     private Vector3 moveInput;
     private Vector3 moveVelocity;
-    private string currentAnimState;
+
     private Vector3 spriteScale;
+
+    private Vector3 spawnPoint;
 
     AnimController anim;
 
@@ -22,11 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<AnimController>();
-        
-        if(inputProvider.can_move == false){
+        spawnPoint = transform.position;
+
+        if (inputProvider.can_move == false)
+        {
             inputProvider.can_move = true;
         }
-        spriteScale = spriteTransform.localScale;
     }
 
     // Update is called once per frame
@@ -34,26 +43,28 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * speed;
-        if (inputProvider.can_move)    //Checks whether to freeze movement. This will be reworked later.
+        if (inputProvider.can_move)    //Checks whether to freeze movement. This will be reworked later
         {                                                   
             speed = moveSpeed;
             /*Play Animations here*/
             
-            if(moveInput.x > 0 && moveInput.z == 0){// Walk Right
+            if(moveInput.x > 0){// Walk Right
                 anim.ChangeAnimationState("Walk");
-                spriteTransform.localScale = new Vector3(-spriteScale.x, spriteScale.y, spriteScale.z);
+                spriteTransform.flipX(true);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
-            else if(moveInput.x < 0 && moveInput.z == 0){// Walk Left
+            else if(moveInput.x < 0){// Walk Left  && moveInput.z == 0
                 anim.ChangeAnimationState("Walk");
-                spriteTransform.localScale = spriteScale;
+                spriteTransform.flipX(false);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
-            }   
-            else if(moveInput.z > 0){// Walk Up
+            }
+            else if (moveInput.z > 0)
+            { // Walk Up
                 anim.ChangeAnimationState("Walk");
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
-            }   
-            else if(moveInput.z < 0){// Walk Down
+            }
+            else if (moveInput.z < 0)
+            { // Walk Down
                 anim.ChangeAnimationState("Walk");
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
@@ -69,7 +80,13 @@ public class PlayerController : MonoBehaviour
     }
 
     /*Handle Physics Calculations*/
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         rb.velocity = moveVelocity;
+    }
+
+    public void handleNextDay()
+    {
+        transform.position = spawnPoint;
     }
 }

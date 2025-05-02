@@ -13,9 +13,9 @@ public class Statemachine : MonoBehaviour
     {
         /*Call each state's start logic*/
         foreach(State childState in GetComponentsInChildren<State>()){
-            childState.Ready();
             childState.statemachine = this;
             StatesList.Add(childState);
+            childState.Ready();
         }
         currentState.Enter();
     }

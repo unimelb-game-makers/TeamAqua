@@ -5,7 +5,7 @@ using Kuroneko.UtilityDelivery;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace UI
+namespace Popups
 {
     public class InventoryPopup : Popup
     {
@@ -22,7 +22,7 @@ namespace UI
 
         private List<InventoryItem> GetData()
         {
-            return Inventory.inventory.inventoryItems;
+            return InventoryManager.instance.inventoryItems;
         }
 
         public override void ShowPopup()

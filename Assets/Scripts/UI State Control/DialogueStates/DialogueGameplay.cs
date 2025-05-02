@@ -25,7 +25,7 @@ each time state is called, call continuestory()
         Debug.Log("Entering dialogue mode");
         
         DialoguePanel.SetActive(true);
-        DialogueSystem.GetIsPlaying();
+        DialogueManager.GetIsPlaying();
     }
     public override void UIProcess()
     {
@@ -42,16 +42,16 @@ each time state is called, call continuestory()
         
         */ 
 
-        if (Input.GetKeyDown(KeyCode.Escape) && DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.Escape) && DialogueManager.GetIsPlaying())
         {
-            StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+            StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
             
         }
     }
 
     public override void UIExit()
     {
-        StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
+        StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
         Debug.Log("exiting dialogue mode");
     }
 

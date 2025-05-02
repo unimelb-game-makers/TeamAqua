@@ -1,21 +1,19 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemHarvester : MonoBehaviour
 {
-    [NonSerialized] public ItemHarvestSource source = null;
+    [NonSerialized]
+    public ItemHarvestSource source = null;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.E) && source != null && source.currentItem().amount > 0)
         {
-            Debug.Log($"currentItem.amount = {source.currentItem().amount}");
-            Inventory.inventory.AddItem(source.HarvestResource());
+            InventoryManager.instance.AddItem(source.HarvestResource());
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("ItemResource"))
@@ -23,6 +21,7 @@ public class ItemHarvester : MonoBehaviour
             source = other.gameObject.GetComponent<ItemHarvestSource>();
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("ItemResource") && source != null)

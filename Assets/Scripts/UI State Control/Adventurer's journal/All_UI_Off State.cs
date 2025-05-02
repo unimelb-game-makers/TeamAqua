@@ -33,13 +33,13 @@ public class All_UI_Off_State: UIState
 
     public override void UIProcess()
     {   // i dont know a better way to access list in c# than indexing tbh.....
-        if (Input.GetKeyDown(KeyCode.I) && !DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.I) && !DialogueManager.GetIsPlaying())
         {   //inventory
             UIstatemachine.ChangeUIState(inventoryState);
             Debug.Log("Going into inventory system");
         }
         
-        if (Input.GetKeyDown(KeyCode.J) && !DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.J) && !DialogueManager.GetIsPlaying())
         {   //quest
             UIstatemachine.ChangeUIState(questState);
         }
@@ -49,7 +49,7 @@ public class All_UI_Off_State: UIState
             UIstatemachine.ChangeUIState(journalState);
         }   */
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !DialogueSystem.GetIsPlaying())
+        if (Input.GetKeyDown(KeyCode.Escape) && !DialogueManager.GetIsPlaying())
         {   //pause
             //this.UIEnter();
             UIstatemachine.ChangeUIState(PauseOn);

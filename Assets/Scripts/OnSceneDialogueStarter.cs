@@ -22,7 +22,7 @@ public class OnSceneDialogueStarter : MonoBehaviour
 
     void Start()
     {
-        DialogueSystem.Instance().EnterDialogueMode(inkJSON, 0);
+        DialogueManager.Instance().EnterDialogueMode(inkJSON, 0);
         //AudioManager.Instance.Play("BGM_CUTSCENE_CEREMONY");
 
         // Create a temporary reference to the current scene.

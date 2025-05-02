@@ -1,41 +1,97 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UI;
 using UnityEngine;
+using Popups;
 
 public class NPCDialogueHandler : MonoBehaviour
 {
-    [NonSerialized] public NPCDialogue dialogueSource = null;
-    [SerializeField] public UIController UIcontroller = null;
+    [NonSerialized]
+    public NPCDialogue dialogueSource = null;
 
-    // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying() && !UIcontroller.pausePopup.isShowing /*&& not paused*/)
+        if (
+            Input.GetKeyDown(KeyCode.E)
+            && dialogueSource != null
+            && !DialogueManager.GetIsPlaying()
+            && !UIController.Paused
+        )
         {
             dialogueSource.PlayDialogue();
+            //AttachStory();
+            CheckTag();
         }
     }
-    
+
     void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Creature")) return;
+        if (!other.gameObject.CompareTag("Creature"))
+            return;
+
         if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
         {
             dialogueSource = npc.dialogue;
-            if(dialogueSource.HasQuest)
+            if (!dialogueSource) return;
+            if (dialogueSource.npcData && dialogueSource.npcData.HasQuest)
+            {
+                DialogueManager.Instance().npcData = dialogueSource.npcData;
                 dialogueSource.IndicateQuest();
+            }
             else
                 dialogueSource.IndicateDialogue();
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Creature") && dialogueSource != null)
         {
             dialogueSource.HideIndicators();
             dialogueSource = null;
+            DialogueManager.Instance().npcData = null;
+            DialogueManager.Instance().currentStory = null;
+        }
+    }
+
+    public void AttachStory()
+    {
+        //story = DialogueSystem.Instance().currentStory;
+        //questID = dialogueSource.npcData.questID;
+    }
+
+    private void CheckTag()
+    {
+        if (DialogueManager.Instance().currentStory == null)
+        {
+            Debug.Log("no storry found");
+            return;
+        }
+
+        // Defensive programming to avoid null exceptions
+        if (!dialogueSource) return;
+        if (!dialogueSource.npcData) return;
+
+        Debug.Log("story connected: " + DialogueManager.Instance().currentStory);
+        Debug.Log(
+            "[pre-switch]the quest variable is: "
+                + DialogueManager.Instance().currentStory.variablesState[
+                    dialogueSource.npcData.questID
+                ]
+        );
+
+        if (
+            (string)
+                DialogueManager.Instance().currentStory.variablesState[
+                    dialogueSource.npcData.questID
+                ] == "FINISHED"
+        )
+        {
+            dialogueSource.npcData.HasQuest = false;
+            Debug.Log(
+                "[post_switch]the quest variable is: "
+                    + DialogueManager.Instance().currentStory.variablesState[
+                        dialogueSource.npcData.questID
+                    ]
+            );
         }
     }
 }
