@@ -97,7 +97,8 @@ namespace Popups
                 yield break;
             }
             
-            fastForward.gameObject.SetActiveFast(true);
+            if (fastForward)
+                fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
             dialogueText.text = line; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
@@ -136,7 +137,8 @@ namespace Popups
             {
                 choicePopup.Init(currentChoices);
                 choicePopup.ShowPopup();
-                fastForward.gameObject.SetActiveFast(false);
+                if (fastForward)
+                    fastForward.gameObject.SetActiveFast(false);
             }
 
             lineCoroutine = null;
