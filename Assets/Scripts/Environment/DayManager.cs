@@ -82,6 +82,8 @@ public class DayManager : MonoBehaviour
         SetNight(false);
         _playerController.handleNextDay();
         EnergyManager.Instance.OnNextDay();
+        RainControl.Instance.StopRain();
+        RainControl.Instance.StartRainRandom();
     }
 
     private void SetNight(bool value)
