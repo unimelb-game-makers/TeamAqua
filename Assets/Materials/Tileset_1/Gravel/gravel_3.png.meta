@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gravel_3_0: 5320234265808186632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
