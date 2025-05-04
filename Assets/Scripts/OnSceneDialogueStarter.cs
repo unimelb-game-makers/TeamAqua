@@ -29,20 +29,7 @@ public class OnSceneDialogueStarter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            StartCoroutine(AudioManager.Instance.SwapBGM("BGM_CUTSCENE_INTO_THE_STORM", 1));
-            Debug.Log("music changed");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            AudioManager.Instance.Stop("BGM_CUTSCENE_CEREMONY");
-            Debug.Log("music stopped");
-        }
-    }
+    void Update() { }
 
     public void SceneChanger(string SceneName)
     {

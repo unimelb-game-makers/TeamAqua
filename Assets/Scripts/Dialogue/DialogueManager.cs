@@ -141,9 +141,16 @@ public class DialogueManager : MonoBehaviour
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
+                    //CURRENT BUG: noonisland needs to jump straight to dialogue but the exitdialogue
+                    // from the cutscene lingers and closes it
+
                     // When the scene changes, we need to manually call Exit Dialogue Mode
+                    if (currentStory.canContinue)
+                    {
+                        StartCoroutine(ExitDialogueMode());
+                        Debug.Log("end story called from ChangeCutscene()");
+                    }
                     OnSceneDialogueStarter.Instance.SceneChanger(SceneName);
-                    StartCoroutine(ExitDialogueMode());
                 }
             );
 
@@ -209,6 +216,8 @@ public class DialogueManager : MonoBehaviour
 
     public void SkipStory()
     {
+        // Current bug: skip story breaks quest checking, likely because it makes the function calling empty? needs testing
+
         Debug.Log("Skip");
         string nextLine = string.Empty;
         // Continues until we encounter a choice, or the story cannot continue
