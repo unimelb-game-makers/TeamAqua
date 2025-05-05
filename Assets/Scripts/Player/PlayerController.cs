@@ -1,10 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISaveable
 {
+    [SerializeField] private PlayerSave playerSave;
     [SerializeField]
     private InputProvider inputProvider;
 
@@ -36,6 +35,24 @@ public class PlayerController : MonoBehaviour
         {
             inputProvider.can_move = true;
         }
+        Register();
+    }
+
+    public void Register()
+    {
+        playerSave.Register(this);
+    }
+
+    public void Load(SaveSlot saveSlot)
+    {
+        transform.position = saveSlot.playerSaveData.position;
+    }
+
+    public SaveSlot Save(SaveSlot saveSlot)
+    {
+        SaveSlot save = saveSlot;
+        save.playerSaveData.position = transform.position;
+        return save;
     }
 
     // Update is called once per frame
