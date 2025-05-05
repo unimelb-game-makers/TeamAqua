@@ -11,9 +11,10 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
 ~ questSteps = quest_id1
 ~checkQuestStatus(1, 1)
 ~ questSteps = quest_id1
-~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_TRANSFORMATION", 4)
 //current quest step is {questSteps} and current quest_id var is {quest_id1}
 //conditional check, if var quest is empty, load main dialogue, if quest var < 10 (berries), go to incomplete quest, else, go to submit quest
+
+//~checkQuestStatus(1, 1)
 { 
     - questSteps == "":     // if empty, go to main
         -> main 
@@ -36,6 +37,8 @@ VAR questSteps = ""         // <-- //delcaring the local var ends up reseting wh
 //immediately enters dialogue. The shipwreck is on the beach and not blocking our view, preferably
 //should start immediately upon entering Noon Island, right after cutscene
 ===main===
+//placing bgm func here to prevent overlapping (needs more testing and is probably a bug rn)
+~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_TRANSFORMATION", 4)
 You find yourself on a beach. The sun glares over you, and your ship is in pieces around you. In stark contrast to the raging waters that overwhelmed you and your ship last night, calm waves now wash over shore. #speaker:Narrator
 The storms of yesterday seem to have died down for now. It seems you’ve landed on an island with large trees and forestry beyond the beach. Nearby, you see a collapsed tree… and a tail?
 //will later place cutscene art here (image on top of text box) of Amelia stuck under tree

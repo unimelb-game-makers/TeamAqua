@@ -222,7 +222,10 @@ public class DialogueManager : MonoBehaviour
         string nextLine = string.Empty;
         // Continues until we encounter a choice, or the story cannot continue
         while (currentStory.canContinue && currentStory.currentChoices.Count == 0)
+        {
             nextLine = currentStory.Continue();
+            OnDialogueTags?.Invoke(currentStory.currentTags);
+        }
         // It will end the story if cannot continue anymore and there are no more choices
         if (!currentStory.canContinue && currentStory.currentChoices.Count == 0)
             EndStory();
