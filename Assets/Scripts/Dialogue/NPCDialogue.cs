@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Parsed;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
@@ -12,11 +13,18 @@ public class NPCDialogue : MonoBehaviour
     public int DialogueTypeID;
     public GameObject dialogueCue;
     public GameObject questCue;
+    private SpriteRenderer sprite;
+    private Color color;
 
     [SerializeField]
     public NpcData npcData;
 
     //[SerializeField] public int questID;
+    void Awake()
+    {
+        sprite = questCue.GetComponent<SpriteRenderer>();
+        color = sprite.color;
+    }
 
     public void PlayDialogue()
     {
@@ -29,10 +37,20 @@ public class NPCDialogue : MonoBehaviour
     }
 
     // Called when HasQuest is true
-    public void IndicateQuest()
+    public void IndicateQuestUnaccepted()
     {
+        sprite.color = new Color(0f, 1f, 1f); // RGB(0, 255, 255);
         questCue.SetActive(true);
         dialogueCue.SetActive(false);
+        Debug.Log("indicating unaccepted quest icon");
+    }
+
+    public void IndicateQuestOngoing()
+    {
+        sprite.color = new Color(1f, 1f, 1f); // RGB(0, 0, 0);
+        questCue.SetActive(true);
+        dialogueCue.SetActive(false);
+        Debug.Log("indicating ongoing quest icon");
     }
 
     // Called when HasQuest is false
@@ -40,6 +58,7 @@ public class NPCDialogue : MonoBehaviour
     {
         questCue.SetActive(false);
         dialogueCue.SetActive(true);
+        Debug.Log("indicating dialogue icon");
     }
 
     // Called when Player exits NPC
@@ -47,5 +66,8 @@ public class NPCDialogue : MonoBehaviour
     {
         questCue.SetActive(false);
         dialogueCue.SetActive(false);
+        Debug.Log("hiding icon");
     }
+
+    //public void ChangeColor() { }
 }

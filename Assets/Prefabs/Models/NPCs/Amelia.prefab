@@ -387,7 +387,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 492b9988436bd45049a9a6bc52ac8fb0, type: 3}
-  m_Color: {r: 0.3207547, g: 1, b: 0.96436054, a: 1}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   DialogueTypeID: 0
   dialogueCue: {fileID: 3745413417900482826}
   questCue: {fileID: 0}
-  HasQuest: 0
+  npcData: {fileID: 0}
 --- !u!212 &7030872625127673495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -829,9 +829,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cabe368758ae221d8bab2aba1aa21bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 45715c65d01e4d7449751d42db72a62e, type: 3}
-  DialogueTypeID: 0
-  dialogueCue: {fileID: 3745413417900482826}
-  questCue: {fileID: 0}
-  npcData: {fileID: 0}
   billboard: 1

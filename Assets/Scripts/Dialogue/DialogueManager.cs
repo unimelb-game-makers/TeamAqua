@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
 
         if (DialogueTypeID == 0)
         {
-            OnDialogueStart?.Invoke();
+            OnDialogueStart?.Invoke(); //might wanna make this its own function;
             Time.timeScale = 1;
             //Debug.Log("time stopped");
             currentStory = new Story(inkJSON.text);
