@@ -31,7 +31,6 @@ public struct QuestSaveData
 [Serializable]
 public struct SaveSlot
 {
-    public string id;
     [HideLabel]
     public PlayerSaveData playerSaveData;
     [HideLabel]

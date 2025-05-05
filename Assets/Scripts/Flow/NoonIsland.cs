@@ -56,12 +56,16 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private Level noonIslandLevel;
 
+    [Header("Loading")]
+    [SerializeField] private PlayerSave playerSave;
+
     private void Awake()
     {
         InitUI();
         InitPlayer();
         InitManagers();
         InitLevel();
+        LoadData();
     }
 
     /// <summary>
@@ -112,5 +116,10 @@ public class NoonIsland : MonoBehaviour
     {
         SceneManager.LoadScene("NoonIslandEnvironment", LoadSceneMode.Additive);
         Instantiate(noonIslandLevel); //jumps into dialogue upon entering
+    }
+
+    private void LoadData()
+    {
+        playerSave.Load("Default");
     }
 }
