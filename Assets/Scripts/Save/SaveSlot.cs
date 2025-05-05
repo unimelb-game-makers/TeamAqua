@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
@@ -31,8 +32,12 @@ public struct QuestSaveData
 public struct SaveSlot
 {
     public string id;
+    [HideLabel]
     public PlayerSaveData playerSaveData;
+    [HideLabel]
     public WorldSaveData worldSaveData;
+    [HideLabel]
     public DialogueData dialogueSaveData;
+    [HideLabel]
     public QuestSaveData questData;
 }

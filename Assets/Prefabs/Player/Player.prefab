@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e49fcc87d03a041bc81d0c9ffd409c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSave: {fileID: 11400000, guid: 055a02550362f41f89f8b9829825b4b4, type: 2}
   inputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   moveSpeed: 1.2
   spriteTransform: {fileID: 6391069182455531222}

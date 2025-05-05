@@ -9,7 +9,7 @@ public class PlayerSave : ScriptableObject
 {
     [SerializeField] private bool overrideSaveData;
 
-    [ShowIf("overrideSaveData")] private SaveTemplate saveTemplate;
+    [ShowIf("overrideSaveData"), SerializeField] private SaveTemplate saveTemplate;
 
     [NonSerialized, ShowInInspector, ReadOnly] private SaveSlot _saveSlot = new();
 
