@@ -32,9 +32,18 @@ public class NPCDialogueHandler : MonoBehaviour
             dialogueSource = npc.dialogue;
             if (!dialogueSource)
                 return;
-            if (dialogueSource.npcData && dialogueSource.npcData.HasQuest)
+            if (
+                dialogueSource.npcData
+                && dialogueSource.npcData.HasQuest
+                && (string)
+                    DialogueManager.Instance().currentStory.variablesState[
+                        dialogueSource.npcData.questID
+                    ] != "NOT_FINISHED"
+            )
             {
                 DialogueManager.Instance().npcData = dialogueSource.npcData;
+                dialogueSource.IndicateQuestUnaccepted();
+                /*
                 if ( //bug: dialogue file isnt parsed in yet
                     // solution: make a new ondialogue fucntion in dialogue manager
                     (string)
@@ -45,10 +54,7 @@ public class NPCDialogueHandler : MonoBehaviour
                 {
                     dialogueSource.IndicateQuestOngoing();
                 }
-                else
-                {
-                    dialogueSource.IndicateQuestUnaccepted();
-                }
+                */
             }
             else
                 dialogueSource.IndicateDialogue();

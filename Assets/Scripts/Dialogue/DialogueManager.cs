@@ -73,15 +73,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void onDialogue() { }
-
     public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
     {
         //Time.timeScale = 0;         this works
 
         if (DialogueTypeID == 0)
         {
-            OnDialogueStart?.Invoke(); //might wanna make this its own function;
+            OnDialogueStart?.Invoke();
             Time.timeScale = 1;
             //Debug.Log("time stopped");
             currentStory = new Story(inkJSON.text);
@@ -123,6 +121,22 @@ public class DialogueManager : MonoBehaviour
                 (int id) =>
                 { // this is for starting a track during dialogue
                     QuestManager.instance.AddQuest(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "FinishQuest",
+                (int questID) =>
+                {
+                    if (questID > 0)
+                    {
+                        // NOTE(Alex): As of 2nd May, NPC Data is not being used currently.
+                        if (npcData)
+                        {
+                            npcData.HasQuest = false;
+                        }
+                        QuestManager.instance.RemoveQuest(questID);
+                    }
                 }
             );
 
@@ -181,6 +195,10 @@ public class DialogueManager : MonoBehaviour
                 { //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
                     Debug.Log("Function binded to ink at " + id + steps);
                     QuestManager.Instance().CheckStatus(id, steps, currentStory);
+                    if (!currentStory.canContinue)
+                    {
+                        StartCoroutine(ExitDialogueMode());
+                    }
                     //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
                 }
             );
@@ -263,35 +281,6 @@ public class DialogueManager : MonoBehaviour
         {
             for (int i = 0; i < selectedChoice.tags.Count; i++)
             {
-                if (selectedChoice.tags[i].Contains("quest"))
-                {
-                    // for substring 6
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(6));
-
-                    // give quest to player
-                    if (questID > 0)
-                    {
-                        QuestManager.instance.AddQuest(questID);
-                    }
-                }
-                //steven's change below, needs more testing
-                if (selectedChoice.tags[i].Contains("finish"))
-                {
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
-
-                    // finishes the quest upon interaction
-                    if (questID > 0)
-                    {
-                        //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
-                        // NOTE(Alex): As of 2nd May, NPC Data is not being used currently.
-                        if (npcData)
-                        {
-                            npcData.HasQuest = false;
-                        }
-                        QuestManager.instance.RemoveQuest(questID);
-                    }
-                }
-
                 if (selectedChoice.tags[i].Contains("done"))
                 {
                     StartCoroutine(DialogueManager.Instance().ExitDialogueMode());

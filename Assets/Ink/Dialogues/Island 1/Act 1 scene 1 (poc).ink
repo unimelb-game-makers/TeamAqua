@@ -3,6 +3,7 @@ EXTERNAL TurnOffBarrier(id)
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
 EXTERNAL SetQuest(id)
+EXTERNAL FinishQuest(questID)
 
 
 
@@ -149,6 +150,17 @@ It's been a little while. Hard to survive on this island when you’re as small 
 ~ SetQuest(1)
     ->DONE
     
+/*
+======= Quest by choice
+(<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>) #portrait:NoelleSmallSmile
+    +[yes take quest]
+        ~ quest_id1 = "NOT_FINISHED"
+        ~ SetQuest(1)
+        You accepted the quest! #speaker:Narrator
+        ->DONE
+    +[dont take it #done]
+        ->DONE
+*/
 /*dialogue ends here. tutorial also kicks in for journal ui, exploration and gathering resources. Then the player is released to do the gather 10 berries quests to submit to Amelia.
 
 At this point, Amelia shouldn’t be following us around yet for the npc behaviour. 
@@ -178,13 +190,13 @@ Maybe they’ll regrow by tomorrow? #speaker:Noelle #portrait:NoelleBigSmile
 ===SubmitQuest===
 //~checkQuestStatus(1, 1)
 Would you like to finish this quest? #speaker:Narrator
-    +[Finish quest?] -> CompleteQuest
+    +[Finish quest?]
+    -> CompleteQuest 
     +[Not yet #done]
     -> DONE
-
-
 ->DONE
 ===CompleteQuest===
+ ~FinishQuest(1)
 //UPON SUBMISSION OF 10 BERRIES TO AMELIA, next part continues.
 After you get the ten berries you need, you return back to Amelia, who's sitting on the sand next to the wreckage of your ship. #speaker:Narrator
 Please tell me you got me something edible. #speaker:Amelia #portrait:AmeliaNormal
