@@ -10,6 +10,7 @@ namespace Popups
 {
     public class QuestPopup : Popup
     {
+        [SerializeField] private ItemDatabase itemDatabase;
         [SerializeField] private TMP_Text titleText;
         [SerializeField] private TMP_Text questText;
         [SerializeField] private Button nextButton;
@@ -68,10 +69,9 @@ namespace Popups
                           + "<color=red>Current Objective:</color>" + "\n"  // Objective in red
                           +  quest.quest_steps[quest.current_step_number].objective + "\n";
                     
-            if (quest.quest_steps[quest.current_step_number].quest_item_id != -1)
+            if (quest.quest_steps[quest.current_step_number].RequiresItem() && itemDatabase.TryGetItem(quest.quest_steps[quest.current_step_number].quest_item_id, out Item item))
             {
-                // TODO: replace the item ID with the actual item name after implementing the inventory system and items etc
-                questText.text += "Item: " + quest.quest_steps[quest.current_step_number].quest_item_id + "\n";
+                questText.text += "Item: " + item.displayName + "\n";
                 questText.text += "Amount: " + quest.quest_steps[quest.current_step_number].quest_item_amount + "\n";
             }
 

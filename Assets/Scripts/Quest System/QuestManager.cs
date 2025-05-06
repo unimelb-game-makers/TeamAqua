@@ -230,7 +230,7 @@ public class QuestManager : MonoBehaviour
         // check for quest type
         if (!objective)
         {
-            if (quests[id - 1].quest_steps[step - 1].quest_item_id != -1)
+            if (quests[id - 1].quest_steps[step - 1].RequiresItem())
             {
                 // check if the player has the item in their inventory
                 Debug.Log("Checking for item in inventory");

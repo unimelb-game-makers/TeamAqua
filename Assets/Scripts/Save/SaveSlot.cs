@@ -17,6 +17,19 @@ public struct WorldSaveData
 }
 
 [Serializable]
+public struct ItemSaveData
+{
+    public string id;
+    public int quantity;
+}
+
+[Serializable]
+public struct InventorySaveData
+{
+    public ItemSaveData[] items;
+}
+
+[Serializable]
 public struct DialogueData
 {
     public List<string> seen;
@@ -33,6 +46,8 @@ public struct SaveSlot
 {
     [HideLabel]
     public PlayerSaveData playerSaveData;
+    [HideLabel] 
+    public InventorySaveData inventorySaveData;
     [HideLabel]
     public WorldSaveData worldSaveData;
     [HideLabel]

@@ -3,18 +3,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, ISaveable
 {
+    [SerializeField] private ItemDatabase itemDatabase;
+    [SerializeField] private PlayerSave playerSave;
     public static InventoryManager instance;
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
     private void Awake()
     {
         instance = this;
+        Register();
+    }
+
+    public void Register()
+    {
+        playerSave.Register(this);
+    }
+
+    public void Load(SaveSlot saveSlot)
+    {
+        InventorySaveData saveData = saveSlot.inventorySaveData;
+        foreach (ItemSaveData itemData in saveData.items)
+        {
+            if (itemDatabase.TryGetItem(itemData.id, out Item item))
+            {
+                AddItem(item, itemData.quantity);
+            }
+        }
+    }
+
+    public SaveSlot Save(SaveSlot saveSlot)
+    {
+        SaveSlot save = saveSlot;
+        ItemSaveData[] items = new ItemSaveData[inventoryItems.Count];
+        for (int i = 0; i < inventoryItems.Count; ++i)
+        {
+            items[i].id = inventoryItems[i].item.name;
+            items[i].quantity = inventoryItems[i].count;
+        }
+
+        save.inventorySaveData.items = items;
+        return save;
     }
 
     /*Get the inventory item data of an item*/
-    public InventoryItem GetItemData(Item item)
+    private InventoryItem GetItemData(Item item)
     {
         foreach (var inventoryItem in inventoryItems)
         {
@@ -28,24 +62,24 @@ public class InventoryManager : MonoBehaviour
         return null;
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, int amount = 1)
     {
         /*Go through inventory list and see if item already in*/
         InventoryItem inventoryItem = GetItemData(item);
         if (inventoryItem != null)
         {
-            inventoryItem.count++;
+            inventoryItem.count += amount;
         }
         /*Else, add to list*/
         else
         {
-            inventoryItem = new InventoryItem(item);
+            inventoryItem = new InventoryItem(item, amount);
             inventoryItems.Add(inventoryItem);
         }
     }
 
-    /*Returns 1 if successfully subtracted item. Else 0*/
-    public int SubtractItem(Item item, int amount)
+    /*Returns true if successfully subtracted item. Else false*/
+    public bool SubtractItem(Item item, int amount)
     {
         InventoryItem inventoryItem = GetItemData(item);
         if (inventoryItem != null)
@@ -53,20 +87,18 @@ public class InventoryManager : MonoBehaviour
             if (amount <= inventoryItem.count)
             {
                 inventoryItem.count -= amount;
-                return 1;
+                return true;
             }
-            else
-                return 0;
+            return false;
         }
-        else
-            return 0;
+        return false;
     }
 
-    public bool HasItem(int item_id, int amount)
+    public bool HasItem(string id, int amount)
     {
         foreach (var inventoryItem in inventoryItems)
         {
-            if (inventoryItem.item.itemID == item_id && inventoryItem.count >= amount)
+            if (inventoryItem.item.name == id && inventoryItem.count >= amount)
             {
                 return true;
             }
@@ -74,11 +106,11 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    public void RemoveItem(int item_id, int amount)
+    public void RemoveItem(string id, int amount)
     {
         foreach (var inventoryItem in inventoryItems)
         {
-            if (inventoryItem.item.itemID == item_id)
+            if (inventoryItem.item.name == id)
             {
                 inventoryItem.count -= amount;
                 if (inventoryItem.count <= 0)
@@ -102,9 +134,9 @@ public class InventoryItem
     public int count;
 
     /*Constructor used for adding new items to inventory list.*/
-    public InventoryItem(Item newItem)
+    public InventoryItem(Item newItem, int amount = 1)
     {
         item = newItem;
-        count = 1;
+        count = amount;
     }
 }

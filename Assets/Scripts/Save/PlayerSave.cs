@@ -46,10 +46,10 @@ public class PlayerSave : ScriptableObject
         }
 #endif
 
-        string fullPath = SavePath + GetFileName();
-
+        string fullPath = GetFullPath();
         if (File.Exists(fullPath))
         {
+            Debug.Log($"SAVE | Save file found at {fullPath}.");
             string json = File.ReadAllText(fullPath);
             _saveSlot = JsonUtility.FromJson<SaveSlot>(json);
         }
@@ -58,6 +58,13 @@ public class PlayerSave : ScriptableObject
             Debug.Log($"SAVE | Save file not found at {fullPath}. Creating empty save slot.");
             _saveSlot = new SaveSlot(); 
         }
+        
+        
+    }
+
+    private string GetFullPath()
+    {
+        return SavePath + GetFileName();
     }
 
     /// <summary>
@@ -66,7 +73,8 @@ public class PlayerSave : ScriptableObject
     /// <returns></returns>
     private string GetFileName()
     {
-        return string.IsNullOrEmpty(_saveSlotName) ? DEVELOP : _saveSlotName + ".json";
+        string file = string.IsNullOrEmpty(_saveSlotName) ? DEVELOP : _saveSlotName;
+        return file + ".json";
     }
 
     [Button]
@@ -79,10 +87,10 @@ public class PlayerSave : ScriptableObject
 
         string jsonString = JsonUtility.ToJson(_saveSlot);
 
-        using StreamWriter writer =
-            new (Application.dataPath + Path.AltDirectorySeparatorChar + GetFileName());
+        string fullPath = GetFullPath();
+        using StreamWriter writer = new(fullPath);
         
-        Debug.Log($"SAVE | Saving to {GetFileName()}");
+        Debug.Log($"SAVE | Saving to {fullPath}");
         
         writer.Write(jsonString);
     }

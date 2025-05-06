@@ -26,11 +26,16 @@ public class QuestStep
     public string description;
     public string objective;
     public string objective_type;
-    public int quest_item_id;
+    public string quest_item_id;
     public int quest_item_amount;
     public string location;
     public bool active;
     public bool finished;
+
+    public bool RequiresItem()
+    {
+        return !string.IsNullOrEmpty(quest_item_id);
+    }
 }
 
 [System.Serializable]
