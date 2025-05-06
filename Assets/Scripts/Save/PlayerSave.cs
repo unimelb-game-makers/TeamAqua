@@ -8,6 +8,8 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "PlayerSave", menuName = "ScriptableObjects/PlayerSave")]
 public class PlayerSave : ScriptableObject
 {
+    private const string DEVELOP = "develop";
+    
     [SerializeField] private bool overrideSaveData;
 
     [ShowIf("overrideSaveData"), SerializeField] private SaveTemplate saveTemplate;
@@ -19,7 +21,7 @@ public class PlayerSave : ScriptableObject
 
     private readonly string SavePath = Application.dataPath + Path.AltDirectorySeparatorChar + "Saves" +
                                        Path.AltDirectorySeparatorChar;
-
+    
     public void Register(ISaveable saveable)
     {
         saveables.Add(saveable);
@@ -34,7 +36,7 @@ public class PlayerSave : ScriptableObject
     /// Run at the start of the game. It will load up any values from the save slot.
     /// If the save file does not exist, it creates a new empty save slot.
     /// </summary>
-    public void Load(string saveSlot)
+    public void Load()
     {
 #if UNITY_EDITOR
         if (overrideSaveData)
@@ -44,7 +46,7 @@ public class PlayerSave : ScriptableObject
         }
 #endif
 
-        string fullPath = SavePath + saveSlot;
+        string fullPath = SavePath + GetFileName();
 
         if (File.Exists(fullPath))
         {
@@ -53,9 +55,18 @@ public class PlayerSave : ScriptableObject
         }
         else
         {
-            Debug.Log($"Save file not found at {fullPath}. Creating empty save slot.");
+            Debug.Log($"SAVE | Save file not found at {fullPath}. Creating empty save slot.");
             _saveSlot = new SaveSlot(); 
         }
+    }
+
+    /// <summary>
+    /// If there is no set save slot, it will just use develop.json
+    /// </summary>
+    /// <returns></returns>
+    private string GetFileName()
+    {
+        return string.IsNullOrEmpty(_saveSlotName) ? DEVELOP : _saveSlotName + ".json";
     }
 
     [Button]
@@ -67,10 +78,12 @@ public class PlayerSave : ScriptableObject
         }
 
         string jsonString = JsonUtility.ToJson(_saveSlot);
-        Debug.Log(jsonString);
 
         using StreamWriter writer =
-            new (Application.dataPath + Path.AltDirectorySeparatorChar + "SaveData.json");
+            new (Application.dataPath + Path.AltDirectorySeparatorChar + GetFileName());
+        
+        Debug.Log($"SAVE | Saving to {GetFileName()}");
+        
         writer.Write(jsonString);
     }
 }

@@ -80,6 +80,9 @@ public class DayManager : MonoBehaviour
         SetNight(false);
         _playerController.handleNextDay();
         EnergyManager.instance.OnNextDay();
+        
+        // Trigger Save whenever a new day is started
+        playerSave.Save();
     }
 
     private void SetNight(bool value)

@@ -120,6 +120,6 @@ public class NoonIsland : MonoBehaviour
 
     private void LoadData()
     {
-        playerSave.Load("Default");
+        playerSave.Load();
     }
 }
