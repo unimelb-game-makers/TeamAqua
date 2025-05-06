@@ -20,7 +20,7 @@ on:
 jobs:
   build:
     name: Build my project ✨
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         targetPlatform: [StandaloneWindows64]
