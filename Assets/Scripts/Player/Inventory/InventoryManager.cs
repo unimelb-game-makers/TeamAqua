@@ -12,13 +12,10 @@ public class InventoryManager : MonoBehaviour, ISaveable
 
     private void Awake()
     {
-        instance = this;
-        Register();
-    }
-
-    public void Register()
-    {
-        playerSave.Register(this);
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        else
+            instance = this;
     }
 
     public void Load(SaveSlot saveSlot)

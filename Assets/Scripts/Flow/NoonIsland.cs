@@ -98,15 +98,15 @@ public class NoonIsland : MonoBehaviour
     {
         GameObject manager = new("Managers");
         DontDestroyOnLoad(manager);
-        Instantiate(barrierManager, manager.transform);
-        Instantiate(audioManager, manager.transform);
-        Instantiate(inventoryManager, manager.transform);
-        Instantiate(energyManager, manager.transform);
-        Instantiate(questManager, manager.transform);
-        Instantiate(dialogueManager, manager.transform);
-        Instantiate(spriteManager, manager.transform);
-        Instantiate(dayManager, manager.transform);
-        Instantiate(waterManager, manager.transform);
+        Game.AddManager(Instantiate(barrierManager, manager.transform));
+        Game.AddManager(Instantiate(audioManager, manager.transform));
+        Game.AddManager(Instantiate(inventoryManager, manager.transform));
+        Game.AddManager(Instantiate(energyManager, manager.transform));
+        Game.AddManager(Instantiate(questManager, manager.transform));
+        Game.AddManager(Instantiate(dialogueManager, manager.transform));
+        Game.AddManager(Instantiate(spriteManager, manager.transform));
+        Game.AddManager(Instantiate(dayManager, manager.transform));
+        Game.AddManager(Instantiate(waterManager, manager.transform));
     }
 
     /// <summary>

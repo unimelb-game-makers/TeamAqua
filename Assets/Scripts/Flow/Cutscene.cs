@@ -40,9 +40,9 @@ public class Cutscene : MonoBehaviour
     {
         GameObject manager = new("Managers");
         DontDestroyOnLoad(manager);
-        Instantiate(audioManager, manager.transform);
-        Instantiate(dialogueManager, manager.transform);
-        Instantiate(spriteManager, manager.transform);
+        Game.AddManager(Instantiate(audioManager, manager.transform));
+        Game.AddManager(Instantiate(dialogueManager, manager.transform));
+        Game.AddManager(Instantiate(spriteManager, manager.transform));
     }
 
     /// <summary>

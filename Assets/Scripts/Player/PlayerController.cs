@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, ISaveable
 {
-    [SerializeField] private PlayerSave playerSave;
     [SerializeField]
     private InputProvider inputProvider;
 
@@ -35,12 +34,6 @@ public class PlayerController : MonoBehaviour, ISaveable
         {
             inputProvider.can_move = true;
         }
-        Register();
-    }
-
-    public void Register()
-    {
-        playerSave.Register(this);
     }
 
     public void Load(SaveSlot saveSlot)

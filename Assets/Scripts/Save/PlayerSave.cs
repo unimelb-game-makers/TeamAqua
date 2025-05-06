@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "PlayerSave", menuName = "ScriptableObjects/PlayerSave")]
 public class PlayerSave : ScriptableObject
@@ -17,16 +16,10 @@ public class PlayerSave : ScriptableObject
     private string _saveSlotName = string.Empty;
     [NonSerialized, ShowInInspector, ReadOnly] private SaveSlot _saveSlot = new();
 
-    private List<ISaveable> saveables = new();
 
-    private readonly string SavePath = Application.dataPath + Path.AltDirectorySeparatorChar + "Saves" +
+    private readonly string _savePath = Application.dataPath + Path.AltDirectorySeparatorChar + "Saves" +
                                        Path.AltDirectorySeparatorChar;
     
-    public void Register(ISaveable saveable)
-    {
-        saveables.Add(saveable);
-    }
-
     public void SetSaveSlot(string saveSlot)
     {
         _saveSlotName = saveSlot;
@@ -42,6 +35,7 @@ public class PlayerSave : ScriptableObject
         if (overrideSaveData)
         {
             _saveSlot = saveTemplate.saveSlot;
+            LoadSaveSlot();
             return;
         }
 #endif
@@ -58,13 +52,21 @@ public class PlayerSave : ScriptableObject
             Debug.Log($"SAVE | Save file not found at {fullPath}. Creating empty save slot.");
             _saveSlot = new SaveSlot(); 
         }
-        
-        
+
+        LoadSaveSlot();
+    }
+
+    private void LoadSaveSlot()
+    {
+        List<MonoBehaviour> managers = Game.managers;
+        foreach (MonoBehaviour manager in managers)
+            if (manager.TryGetComponent(out ISaveable saveable))
+                saveable.Load(_saveSlot);
     }
 
     private string GetFullPath()
     {
-        return SavePath + GetFileName();
+        return _savePath + GetFileName();
     }
 
     /// <summary>
@@ -80,10 +82,10 @@ public class PlayerSave : ScriptableObject
     [Button]
     public void Save()
     {
-        foreach (ISaveable saveable in saveables)
-        {
-            _saveSlot = saveable.Save(_saveSlot);
-        }
+        List<MonoBehaviour> managers = Game.managers;
+        foreach (MonoBehaviour manager in managers)
+            if (manager.TryGetComponent(out ISaveable saveable))
+                _saveSlot = saveable.Save(_saveSlot);
 
         string jsonString = JsonUtility.ToJson(_saveSlot);
 

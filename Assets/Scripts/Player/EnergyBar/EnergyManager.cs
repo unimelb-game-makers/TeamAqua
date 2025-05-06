@@ -19,11 +19,6 @@ public class EnergyManager : MonoBehaviour, ISaveable
             instance = this;
     }
 
-    public void Register()
-    {
-        playerSave.Register(this);
-    }
-
     public void Load(SaveSlot saveSlot)
     {
         _energyAmount = saveSlot.playerSaveData.energy;
@@ -38,7 +33,6 @@ public class EnergyManager : MonoBehaviour, ISaveable
     
     private void Start()
     {
-        Register();
         OnEnergyChanged?.Invoke(_energyAmount);
     }
 
