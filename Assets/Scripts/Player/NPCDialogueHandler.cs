@@ -32,14 +32,7 @@ public class NPCDialogueHandler : MonoBehaviour
             dialogueSource = npc.dialogue;
             if (!dialogueSource)
                 return;
-            if (
-                dialogueSource.npcData
-                && dialogueSource.npcData.HasQuest
-                && (string)
-                    DialogueManager.Instance().currentStory.variablesState[
-                        dialogueSource.npcData.questID
-                    ] != "NOT_FINISHED"
-            )
+            if (dialogueSource.npcData && dialogueSource.npcData.HasQuest)
             {
                 DialogueManager.Instance().npcData = dialogueSource.npcData;
                 dialogueSource.IndicateQuestUnaccepted();
