@@ -8,5 +8,13 @@ public class SaveTemplate : ScriptableObject
 {
     [TextArea]
     public string description;
-    public SaveSlot saveSlot = new();
+    [SerializeField] private Checkpoint checkpoint;
+    [SerializeField] private SaveSlot saveSlot = new();
+
+    public SaveSlot CreateSaveSlot()
+    {
+        SaveSlot save = saveSlot;
+        save.playerSaveData.position = checkpoint.position;
+        return save;
+    }
 }

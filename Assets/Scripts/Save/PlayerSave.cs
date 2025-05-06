@@ -34,7 +34,7 @@ public class PlayerSave : ScriptableObject
 #if UNITY_EDITOR
         if (overrideSaveData)
         {
-            _saveSlot = saveTemplate.saveSlot;
+            _saveSlot = saveTemplate.CreateSaveSlot();
             LoadSaveSlot();
             return;
         }
