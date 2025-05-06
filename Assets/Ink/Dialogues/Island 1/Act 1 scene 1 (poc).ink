@@ -2,6 +2,7 @@ EXTERNAL checkQuestStatus(id, steps)
 EXTERNAL TurnOffBarrier(id)
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
+EXTERNAL SetQuest(id)
 
 
 
@@ -145,7 +146,7 @@ It's been a little while. Hard to survive on this island when you’re as small 
 (I’ll need to find out more about this island if I want to survive.) #speaker:Noelle #portrait:NoelleSceptical
 (<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>) #portrait:NoelleSmallSmile
 ~ quest_id1 = "NOT_FINISHED"
-#questS:1
+~ SetQuest(1)
     ->DONE
     
 /*dialogue ends here. tutorial also kicks in for journal ui, exploration and gathering resources. Then the player is released to do the gather 10 berries quests to submit to Amelia.
@@ -177,7 +178,7 @@ Maybe they’ll regrow by tomorrow? #speaker:Noelle #portrait:NoelleBigSmile
 ===SubmitQuest===
 //~checkQuestStatus(1, 1)
 Would you like to finish this quest? #speaker:Narrator
-    +[Finish quest? #finish:1] -> CompleteQuest
+    +[Finish quest?] -> CompleteQuest
     +[Not yet #done]
     -> DONE
 

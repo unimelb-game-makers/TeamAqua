@@ -35,7 +35,8 @@ public class NPCDialogueHandler : MonoBehaviour
             if (dialogueSource.npcData && dialogueSource.npcData.HasQuest)
             {
                 DialogueManager.Instance().npcData = dialogueSource.npcData;
-                if (
+                if ( //bug: dialogue file isnt parsed in yet
+                    // solution: make a new ondialogue fucntion in dialogue manager
                     (string)
                         DialogueManager.Instance().currentStory.variablesState[
                             dialogueSource.npcData.questID

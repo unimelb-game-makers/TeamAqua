@@ -73,6 +73,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void onDialogue() { }
+
     public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
     {
         //Time.timeScale = 0;         this works
@@ -113,6 +115,14 @@ public class DialogueManager : MonoBehaviour
                 (string id) =>
                 { // this is for starting a track during dialogue
                     AudioManager.Instance.Play(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "SetQuest",
+                (int id) =>
+                { // this is for starting a track during dialogue
+                    QuestManager.instance.AddQuest(id);
                 }
             );
 
@@ -224,7 +234,6 @@ public class DialogueManager : MonoBehaviour
         while (currentStory.canContinue && currentStory.currentChoices.Count == 0)
         {
             nextLine = currentStory.Continue();
-            OnDialogueTags?.Invoke(currentStory.currentTags);
         }
         // It will end the story if cannot continue anymore and there are no more choices
         if (!currentStory.canContinue && currentStory.currentChoices.Count == 0)
