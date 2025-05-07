@@ -7,18 +7,23 @@ Once exited, show next indicator.
 
 */
 
-public class IndicatorMessage : MonoBehaviour
+public class TutorialIndicatorMessage : MonoBehaviour
 {
-    public IndicatorMessage nextIndicator;
-    public Animator anim;
+    public TutorialIndicatorMessage nextIndicator;
+    public Vector3 playerOffset; // position to spawn indicator from the player
+    private Animator anim;
 
     void Start(){
+        anim = GetComponent<Animator>();
         if(gameObject.activeSelf){
             StartIndicate();
         }
     }
 
-    void StartIndicate(){
+    void StartIndicate(Transform playerTransform = null){
+        if(playerTransform != null)
+            transform.position = playerTransform.position + playerOffset;
+        anim = GetComponent<Animator>();
         anim.SetBool("indicate", true);
     }
 
@@ -28,17 +33,17 @@ public class IndicatorMessage : MonoBehaviour
         transform.position = savePos;
     }
 
-    IEnumerator TransitionNextIndicator(){
+    IEnumerator TransitionNextIndicator(Transform playerTransform){
         yield return new WaitForSeconds(2.25f);
         nextIndicator.gameObject.SetActive(true);
-        nextIndicator.StartIndicate();
+        nextIndicator.StartIndicate(playerTransform);
     }
 
     private void OnTriggerExit(Collider other) {
         if(other.CompareTag("Player")){
             StopIndicate();
             if(nextIndicator != null){
-                StartCoroutine(TransitionNextIndicator());
+                StartCoroutine(TransitionNextIndicator(other.transform));
             }
         }
     }
