@@ -9,8 +9,10 @@ Once exited, show next indicator.
 
 public class TutorialIndicatorMessage : MonoBehaviour
 {
-    public TutorialIndicatorMessage nextIndicator;
-    public Vector3 playerOffset; // position to spawn indicator from the player
+    [SerializeField] TutorialIndicatorMessage nextIndicator;
+    [SerializeField] Vector3 playerOffset; // position to spawn indicator from the player
+    [SerializeField] Orb orb;
+
     private Animator anim;
 
     void Start(){
