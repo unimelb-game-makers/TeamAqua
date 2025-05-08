@@ -1,6 +1,6 @@
 using System;
-using UnityEngine;
 using Popups;
+using UnityEngine;
 
 public class NPCDialogueHandler : MonoBehaviour
 {
@@ -30,11 +30,24 @@ public class NPCDialogueHandler : MonoBehaviour
         if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
         {
             dialogueSource = npc.dialogue;
-            if (!dialogueSource) return;
+            if (!dialogueSource)
+                return;
             if (dialogueSource.npcData && dialogueSource.npcData.HasQuest)
             {
                 DialogueManager.Instance().npcData = dialogueSource.npcData;
-                dialogueSource.IndicateQuest();
+                dialogueSource.IndicateQuestUnaccepted();
+                /*
+                if ( //bug: dialogue file isnt parsed in yet
+                    // solution: make a new ondialogue fucntion in dialogue manager
+                    (string)
+                        DialogueManager.Instance().currentStory.variablesState[
+                            dialogueSource.npcData.questID
+                        ] == "NOT_FINISHED"
+                )
+                {
+                    dialogueSource.IndicateQuestOngoing();
+                }
+                */
             }
             else
                 dialogueSource.IndicateDialogue();
@@ -67,8 +80,10 @@ public class NPCDialogueHandler : MonoBehaviour
         }
 
         // Defensive programming to avoid null exceptions
-        if (!dialogueSource) return;
-        if (!dialogueSource.npcData) return;
+        if (!dialogueSource)
+            return;
+        if (!dialogueSource.npcData)
+            return;
 
         Debug.Log("story connected: " + DialogueManager.Instance().currentStory);
         Debug.Log(

@@ -59,9 +59,7 @@
   "[csharp]": {
     "editor.defaultFormatter": "csharpier.csharpier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
   "editor.formatOnSave": true,
   "dotnet.defaultSolution": "TeamAqua.sln",
   "C_Cpp_Runner.cCompilerPath": "gcc",
