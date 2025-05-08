@@ -27,9 +27,6 @@ public class OnSceneDialogueStarter : MonoBehaviour
         // Create a temporary reference to the current scene.
     }
 
-    // Update is called once per frame
-    void Update() { }
-
     public void SceneChanger(string SceneName)
     {
         //loads the next scene, its in a function so it can be called within ink.

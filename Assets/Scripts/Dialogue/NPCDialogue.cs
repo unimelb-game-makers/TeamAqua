@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Parsed;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
@@ -14,16 +13,16 @@ public class NPCDialogue : MonoBehaviour
     public GameObject dialogueCue;
     public GameObject questCue;
     private SpriteRenderer sprite;
-    private Color color;
 
     [SerializeField]
     public NpcData npcData;
+    private Color quest_unaccepted = new Color(0f, 1f, 1f); // RGB(0, 255, 255);
+    private Color quest_ongoing = new Color(1f, 1f, 1f); // RGB(0, 0, 0);
 
     //[SerializeField] public int questID;
     void Awake()
     {
         sprite = questCue.GetComponent<SpriteRenderer>();
-        color = sprite.color;
     }
 
     public void PlayDialogue()

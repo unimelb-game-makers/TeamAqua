@@ -53,7 +53,7 @@ public class NoonIsland : MonoBehaviour
 
     [Header("Level")]
     [SerializeField]
-    private Level Noonisland_level;
+    private Level Noonislandlevel;
 
     private void Awake()
     {
@@ -110,6 +110,6 @@ public class NoonIsland : MonoBehaviour
     private void InitLevel()
     {
         SceneManager.LoadScene("NoonIslandEnvironment", LoadSceneMode.Additive);
-        Instantiate(Noonisland_level); //jumps into dialogue upon entering
+        Instantiate(Noonislandlevel); //jumps into dialogue upon entering
     }
 }
