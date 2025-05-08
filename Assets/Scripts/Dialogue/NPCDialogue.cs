@@ -7,9 +7,7 @@ public class NPCDialogue : MonoBehaviour
 {
     [SerializeField]
     public TextAsset inkJSON;
-
-    [SerializeField]
-    public int DialogueTypeID;
+    [SerializeField] private DialogueMode dialogueMode = DialogueMode.Frozen;
     public GameObject dialogueCue;
     public GameObject questCue;
     private SpriteRenderer sprite;
@@ -27,7 +25,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void PlayDialogue()
     {
-        DialogueManager.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
+        // DialogueManager.Instance().EnterDialogueMode(inkJSON, dialogueMode);
         /*
         //QuestManager.Instance().CheckStep(questID, 1);
         //UIstatemachine.ChangeUIState(DialogueOn);

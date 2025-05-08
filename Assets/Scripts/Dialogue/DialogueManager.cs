@@ -2,11 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour, ISaveable
 {
     [SerializeField]
     private DialogueAudioPlayer dialogueAudioPlayer;
@@ -17,6 +16,12 @@ public class DialogueManager : MonoBehaviour
     [Header("Load Globals JSON")]
     [SerializeField]
     private TextAsset LoadGlobalJSON;
+
+    [Header("Dialogues")] 
+    private List<string> _seenScripts = new();
+    private string _scriptId;
+    private string _dialogueId;
+    [SerializeField] private DialogueDatabase dialogueDatabase;
 
     public Story currentStory;
 
@@ -64,25 +69,54 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueAudioPlayer.InitializeAudioDictionary();
     }
-
-    void Update()
+    
+    public void Load(SaveSlot saveSlot)
     {
-        if (!dialogueIsPlaying)
+        DialogueSaveData saveData = saveSlot.dialogueSaveData;
+        _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScriptId : saveData.scriptId;
+        _dialogueId = string.IsNullOrEmpty(saveData.dialogueId) ? dialogueDatabase.startDialogueId : saveData.dialogueId;
+        _seenScripts = saveData.seenScripts ?? new List<string>();
+    }
+
+    public SaveSlot Save(SaveSlot saveSlot)
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Single entry point into all scripts. Setting scriptId will override which script is shown
+    /// </summary>
+    /// <param name="scriptId"></param>
+    /// <param name="mode"></param>
+    public void EnterDialogue(string scriptId = "", DialogueMode mode = DialogueMode.Frozen)
+    {
+        if (_seenScripts.Contains(scriptId))
         {
+            Debug.Log($"DIALOGUE | Already seen {scriptId}, not showing it");
             return;
+        }
+        string id = string.IsNullOrEmpty(scriptId) ? _scriptId : scriptId;
+        if (dialogueDatabase.TryGetScript(id, out Script script))
+        {
+            EnterDialogueMode(script.script, mode);
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
+    private void PeekScript()
+    {
+        
+    }
+
+    private void EnterDialogueMode(TextAsset script, DialogueMode mode)
     {
         //Time.timeScale = 0;         this works
 
-        if (DialogueTypeID == 0)
+        if (mode == DialogueMode.Frozen)
         {
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
             //Debug.Log("time stopped");
-            currentStory = new Story(inkJSON.text);
+            currentStory = new Story(script.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false; // Setting the Input provider here.
             //UIinputProvider.instance().SendUIinput(5);
@@ -174,17 +208,23 @@ public class DialogueManager : MonoBehaviour
                         StartCoroutine(ExitDialogueMode());
                         Debug.Log("end story called from ChangeCutscene()");
                     }
-                    OnSceneDialogueStarter.Instance.SceneChanger(SceneName);
+                    SceneManager.LoadScene(SceneName);
+                    Debug.Log("scene changed to " + SceneManager.GetActiveScene());
                 }
             );
+            
+            currentStory.BindExternalFunction("FinishDialogue", (string dialogueid) =>
+            {
+                Debug.Log($"DIALOGUE | Finishing Dialogue ID {dialogueid}");
+            });
 
             ContinueStory();
         }
 
-        if (DialogueTypeID == 1)
+        else if (mode == DialogueMode.Moving)
         {
             //changine to UI state done in child trigger points
-            currentStory = new Story(inkJSON.text);
+            currentStory = new Story(script.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true; // Setting the Input provider here.
             dialogueVariable.StartListening(currentStory);
@@ -319,4 +359,5 @@ public class DialogueManager : MonoBehaviour
         }
         return variableValue;
     }
+
 }

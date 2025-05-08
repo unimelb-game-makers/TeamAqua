@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public struct PlayerSaveData
@@ -30,9 +31,11 @@ public struct InventorySaveData
 }
 
 [Serializable]
-public struct DialogueData
+public struct DialogueSaveData
 {
-    public List<string> seen;
+    public List<string> seenScripts;
+    public string scriptId;
+    public string dialogueId;
 }
 
 [Serializable]
@@ -51,7 +54,7 @@ public struct SaveSlot
     [HideLabel]
     public WorldSaveData worldSaveData;
     [HideLabel]
-    public DialogueData dialogueSaveData;
+    public DialogueSaveData dialogueSaveData;
     [HideLabel]
     public QuestSaveData questData;
 }

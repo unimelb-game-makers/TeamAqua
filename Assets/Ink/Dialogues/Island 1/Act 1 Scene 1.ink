@@ -4,34 +4,59 @@ EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
 EXTERNAL SetQuest(id)
 EXTERNAL FinishQuest(questID)
-
-
+EXTERNAL FinishDialogue(dialogueId)
 
 INCLUDE Global var storage/globals.ink
-//INCLUDE PoC post-quest.ink
-VAR questSteps = ""         // <-- //delcaring the local var ends up reseting whatever change we did make to it at the start, hence justifies the need to declare a global variable
-~ questSteps = quest_id1
-~checkQuestStatus(1, 1)
-~ questSteps = quest_id1
-//current quest step is {questSteps} and current quest_id var is {quest_id1}
-//conditional check, if var quest is empty, load main dialogue, if quest var < 10 (berries), go to incomplete quest, else, go to submit quest
 
-//~checkQuestStatus(1, 1)
+// Variable Setup
+CONST DIALOGUE_1 = "DIALOGUE_1"
+CONST DIALOGUE_2 = "DIALOGUE_2"
+CONST DIALOGUE_3 = "DIALOGUE_3"
+
+CONST QUEST_1 = "QUEST_1"
+CONST QUEST_2 = "QUEST_2"
+
+VAR quest_state = ""
+
+{
+    - dialogue_id == "DIALOGUE_1":
+        -> dialogue_1
+    - dialogue_id == "QUEST_1":
+        -> quest_1
+    - dialogue_id == "DIALOGUE_2":
+        -> dialogue_2
+}
+
+
+===dialogue_1===
+This is dialogue 1
+~ FinishDialogue(DIALOGUE_1)
+->quest_1
+
+===quest_1===
+~ quest_state = quest_id1
+~checkQuestStatus(1, 1)
+~ quest_state = quest_id1
 { 
-    - questSteps == "":     // if empty, go to main
+    - quest_state == "":
         -> main 
-    - questSteps == "NOT_ACCEPTED":
+    - quest_state == "NOT_ACCEPTED":
         -> TakeQuest
-    - questSteps == "NOT_FINISHED":   //================================ failed here ==========
-        //quest step is {questSteps} and current quest_id var is {quest_id1}
-        //~checkQuestStatus(1, 1)
+    - quest_state == "NOT_FINISHED":
         -> IncompleteQuest
-    - questSteps == "FINISHED":
-        //~checkQuestStatus(1, 1)
+    - quest_state == "FINISHED":
         -> SubmitQuest 
-    - questSteps == "SUBMITTED":
+    - quest_state == "SUBMITTED":
         -> PostquestSubmit
 }
+
+~ FinishDialogue(QUEST_1)
+->dialogue_2
+
+===dialogue_2===
+This is dialogue 2
+~ FinishDialogue(DIALOGUE_2)
+->END
 
 //---------------------------------================------------------------------
 

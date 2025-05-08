@@ -391,9 +391,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03d73978c9744dce90f3ab9d86ddf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueAudioPlayer: {fileID: 0}
+  dialogueAudioPlayer: {fileID: 5081490907297196794}
   playerInputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   LoadGlobalJSON: {fileID: 4900000, guid: e9e06513af637584c9d7f55c00b27a53, type: 3}
+  scriptId: ACT_1_SCENE_1
+  dialogueId: DIALOGUE_1
+  dialogues:
+  - id: CUTSCENE_1
+    script: {fileID: 4900000, guid: 3de097eb3c70cd7459bee63bcb9ad1a0, type: 3}
+  - id: ACT_1_SCENE_1
+    script: {fileID: 4900000, guid: 45715c65d01e4d7449751d42db72a62e, type: 3}
+  - id: ACT_2_SCENE_2
+    script: {fileID: 4900000, guid: 106b81ff23d7b4440a0c724bee388f65, type: 3}
   displaying: 0
   npcData: {fileID: 0}
 --- !u!114 &5081490907297196794
@@ -606,7 +615,7 @@ MonoBehaviour:
   UIstatemachine: {fileID: 0}
   TrigPoints: {fileID: 8539419991956684929}
   inkJSON: {fileID: 4900000, guid: 827708cd67d3ea84892465ce03e247b7, type: 3}
-  dialogueTypeID: 1
+  dialogueMode: 1
   dialogueTrigger: cutscene0
   dialTrigger: 1
   trigPoints: []
