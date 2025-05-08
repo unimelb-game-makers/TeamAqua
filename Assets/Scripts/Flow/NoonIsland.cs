@@ -2,6 +2,7 @@ using Cinemachine;
 using Popups;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class NoonIsland : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class NoonIsland : MonoBehaviour
 
     [Header("Level")]
     [SerializeField]
-    private Level Noonislandlevel;
+    private Level noonIslandLevel;
 
     private void Awake()
     {
@@ -110,6 +111,6 @@ public class NoonIsland : MonoBehaviour
     private void InitLevel()
     {
         SceneManager.LoadScene("NoonIslandEnvironment", LoadSceneMode.Additive);
-        Instantiate(Noonislandlevel); //jumps into dialogue upon entering
+        Instantiate(noonIslandLevel); //jumps into dialogue upon entering
     }
 }
