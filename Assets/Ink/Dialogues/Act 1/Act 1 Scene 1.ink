@@ -2,8 +2,8 @@ EXTERNAL checkQuestStatus(id, steps)
 EXTERNAL TurnOffBarrier(id)
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
-EXTERNAL SetQuest(id)
-EXTERNAL FinishQuest(questID)
+EXTERNAL AddQuest(id)
+EXTERNAL SubmitQuest(questId)
 EXTERNAL SetNextDialogue(dialogueId)
 
 INCLUDE ../Globals/Globals.ink
@@ -28,14 +28,13 @@ CONST QUEST_1 = "A1_S1_Q1"
 ->main
 
 ===quest_1===
-~checkQuestStatus(1, 1)
 {
     - quest_state == "ONGOING":
-        -> IncompleteQuest
-    - quest_state == "FINISHED":
-        -> SubmitQuest
+        -> ongoing_quest_1
+    - quest_state == "COMPLETED":
+        -> completed_quest_1
     - else:
-        -> TakeQuest
+        -> take_quest_1
 }
 
 ===dialogue_2===
@@ -147,15 +146,13 @@ Before she can leave however, her stomach rumbles.
 When was the last time you ate? #speaker:Noelle #portrait:NoelleUm
 It's been a little while. Hard to survive on this island when you’re as small as me. #speaker:Amelia #portrait:AmeliaNormal
 …It’d be pretty convenient if someone were to find food for you. #speaker:Noelle #portrait:NoelleSmallSmile
-~ quest_state = "NOT_ACCEPTED"
-->TakeQuest
+->take_quest_1
 
-===TakeQuest===
+===take_quest_1===
 …Fine. Find me some berries. Ten of them, and maybe I will consider joining your party. #speaker:Amelia #portrait:AmeliaNormal
 (I’ll need to find out more about this island if I want to survive.) #speaker:Noelle #portrait:NoelleSceptical
 (<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>) #portrait:NoelleSmallSmile
-~ quest_state = "NOT_FINISHED"
-~ SetQuest(1)
+~ AddQuest(QUEST_1)
     ->DONE
     
 /*
@@ -174,7 +171,7 @@ It's been a little while. Hard to survive on this island when you’re as small 
 At this point, Amelia shouldn’t be following us around yet for the npc behaviour. 
 Environment: a dirt path from the beach should lead into the forest, with patches of berries nearby to lead you into the side area, outside the opening of the forest.*/
 
-===IncompleteQuest===
+===ongoing_quest_1===
 //~checkQuestStatus(1, 1)
 //IF YOU TALK TO AMELIA BEFORE YOU GET THE 10 REQUIRED BERRIES:
 Remember, ten berries. You better hurry before I change my mind. #speaker:Amelia #portrait:AmeliaNormal
@@ -195,7 +192,7 @@ Maybe they’ll regrow by tomorrow? #speaker:Noelle #portrait:NoelleBigSmile
 =====================================================================    */ 
 //=====================================After quest completion===========================================    
 
-===SubmitQuest===
+==completed_quest_1===
 //~checkQuestStatus(1, 1)
 Would you like to finish this quest? #speaker:Narrator
     +[Finish quest?]
@@ -203,8 +200,9 @@ Would you like to finish this quest? #speaker:Narrator
     +[Not yet #done]
     -> DONE
 ->DONE
+
 ===CompleteQuest===
- ~FinishQuest(1)
+ ~ SubmitQuest(QUEST_1)
 //UPON SUBMISSION OF 10 BERRIES TO AMELIA, next part continues.
 After you get the ten berries you need, you return back to Amelia, who's sitting on the sand next to the wreckage of your ship. #speaker:Narrator
 Please tell me you got me something edible. #speaker:Amelia #portrait:AmeliaNormal

@@ -39,9 +39,24 @@ public struct DialogueSaveData
 }
 
 [Serializable]
+public struct QuestStepSaveData
+{
+    public string id;
+    public QuestState state;
+}
+
+[Serializable]
 public struct QuestSaveData
 {
-    public List<string> completed;
+    public string id;
+    public QuestStepSaveData[] steps;
+    public QuestState state;
+}
+
+[Serializable]
+public struct JournalSaveData
+{
+    public QuestSaveData[] quests;
 }
 
 [Serializable]
@@ -56,5 +71,5 @@ public struct SaveSlot
     [HideLabel]
     public DialogueSaveData dialogueSaveData;
     [HideLabel]
-    public QuestSaveData questData;
+    public JournalSaveData journalSaveData;
 }

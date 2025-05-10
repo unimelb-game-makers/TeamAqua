@@ -109,31 +109,24 @@ public class DialogueManager : MonoBehaviour, ISaveable
         // Set the dialogue id for the script
         if (currentStory.variablesState.GlobalVariableExistsWithName("dialogue_id"))
             currentStory.variablesState["dialogue_id"] = _dialogueId;
+        
+        // if it is a quest, make sure to update the quest state
+        if (_dialogueId.Contains('Q'))
+        {
+            QuestState state = QuestManager.instance.CheckQuest(_dialogueId);
+            currentStory.variablesState["quest_state"] = state.ToString();
+        }
 
         if (mode == DialogueMode.Frozen)
         {
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
-            //Debug.Log("time stopped");
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false; // Setting the Input provider here.
-            //UIinputProvider.instance().SendUIinput(5);
-            //dialoguePanel.SetActive(true);
-            currentStory.BindExternalFunction(
-                "checkQuestStatus",
-                (int id, int steps) =>
-                { //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
-                    Debug.Log("Function binded to ink at " + id + steps);
-                    QuestManager.Instance().CheckStatus(id, steps, currentStory);
-                    //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
-                }
-            );
             currentStory.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
                 {
-                    //currentStory.variablesState["cutscene0"] = "AAAAAA";
-                    //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
                     DialogueTriggerControl.instance().Trigger();
                 }
             );
@@ -148,21 +141,18 @@ public class DialogueManager : MonoBehaviour, ISaveable
             );
 
             currentStory.BindExternalFunction(
-                "SetQuest",
-                (int id) =>
-                { // this is for starting a track during dialogue
+                "AddQuest",
+                (string id) =>
+                {
                     QuestManager.instance.AddQuest(id);
                 }
             );
 
             currentStory.BindExternalFunction(
-                "FinishQuest",
-                (int questID) =>
+                "SubmitQuest",
+                (string questID) =>
                 {
-                    if (questID > 0)
-                    {
-                        QuestManager.instance.RemoveQuest(questID);
-                    }
+                    QuestManager.instance.SubmitQuest(questID);
                 }
             );
 
@@ -213,19 +203,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true; // Setting the Input provider here.
             Debug.Log("dialogue triggers collided");
-            currentStory.BindExternalFunction(
-                "checkQuestStatus",
-                (int id, int steps) =>
-                { //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
-                    Debug.Log("Function binded to ink at " + id + steps);
-                    QuestManager.Instance().CheckStatus(id, steps, currentStory);
-                    if (!currentStory.canContinue)
-                    {
-                        StartCoroutine(ExitDialogueMode());
-                    }
-                    //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
-                }
-            );
             currentStory.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
