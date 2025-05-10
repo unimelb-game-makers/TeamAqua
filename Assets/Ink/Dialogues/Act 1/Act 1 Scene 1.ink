@@ -15,35 +15,30 @@ CONST DIALOGUE_2 = "A1_S1_D2"
 
 CONST QUEST_1 = "A1_S1_Q1"
 
-CONST DIALOGUE_3 = "A1_S1_D3"
-
 {
     - dialogue_id == DIALOGUE_1:
         -> dialogue_1
-    - dialogue_id == DIALOGUE_2:
-        -> dialogue_2
     - dialogue_id == QUEST_1:
         -> quest_1
-    - dialogue_id == DIALOGUE_3:
-        -> dialogue_3
+    - dialogue_id == DIALOGUE_2:
+        -> dialogue_2
 }
 
 ===dialogue_1===
 ->main
 
-===dialogue_2===
--> TakeQuest
-
 ===quest_1===
 ~checkQuestStatus(1, 1)
 {
+    - quest_state == "ONGOING":
+        -> IncompleteQuest
     - quest_state == "FINISHED":
         -> SubmitQuest
     - else:
-        -> IncompleteQuest
+        -> TakeQuest
 }
 
-===dialogue_3===
+===dialogue_2===
 -> PostquestSubmit
 
 //---------------------------------================------------------------------

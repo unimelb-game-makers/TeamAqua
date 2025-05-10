@@ -22,23 +22,19 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private string _scriptId;
     private string _dialogueId;
     [SerializeField] private DialogueDatabase dialogueDatabase;
+    public string DialogueId => _dialogueId;
 
     public Story currentStory;
 
-    [SerializeField]
-    public bool dialogueIsPlaying { get; private set; }
+    private bool dialogueIsPlaying { get; set; }
     private DialogueVariable dialogueVariable;
 
-    private static DialogueManager instance;
-
-    public bool displaying = false;
+    public static DialogueManager instance;
 
     public static Action OnDialogueStart;
     public static Action<string, List<Choice>, bool> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
-
-    public NpcData npcData = null;
 
     public DialogueAudioPlayer DialogueAudioPlayer => dialogueAudioPlayer;
 
@@ -165,11 +161,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 {
                     if (questID > 0)
                     {
-                        // NOTE(Alex): As of 2nd May, NPC Data is not being used currently.
-                        if (npcData)
-                        {
-                            npcData.HasQuest = false;
-                        }
                         QuestManager.instance.RemoveQuest(questID);
                     }
                 }
@@ -252,7 +243,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         Debug.Log("ExitDialogueMode called.....");
         yield return new WaitForSeconds(0.2f); //wait check to resolve all same-key-input errors
-        npcData = null;
         dialogueVariable.StopListening(currentStory);
         dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
