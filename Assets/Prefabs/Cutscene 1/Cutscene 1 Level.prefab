@@ -89,4 +89,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7007e7c16f3dedf46b35d3fecb2d4b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptId: ACT_0_SCENE_1
+  script: {fileID: 11400000, guid: ed246c066b6f941b880cd5aa9c04eced, type: 2}

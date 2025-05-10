@@ -73,7 +73,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
-        _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScriptId : saveData.scriptId;
+        _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScript.name : saveData.scriptId;
         _dialogueId = saveData.dialogueId ?? string.Empty;
         _seenScripts = saveData.seenScripts ?? new List<string>();
     }
@@ -96,14 +96,13 @@ public class DialogueManager : MonoBehaviour, ISaveable
             return;
         }
         string id = string.IsNullOrEmpty(scriptId) ? _scriptId : scriptId;
-        if (!dialogueDatabase.TryGetScript(id, out Script script))
-            throw new KeyNotFoundException($"DIALOGUE | Could not find script {id}");
-        if (script.dialogueIds.Count == 0)
-            throw new InvalidOperationException($"DIALOGUE | Script {id} has no dialogue IDs.");
-        if (!script.dialogueIds.Contains(_dialogueId))
-            _dialogueId = script.dialogueIds[0];
+        DialogueScript dialogueScript = dialogueDatabase.GetScript(id);
+        // If we can't find any dialogue, then set it to the start of the script
+        // This lets us handle switching between two scripts
+        if (!dialogueScript.TryGetDialogue(_dialogueId, out _))
+            _dialogueId = dialogueScript.dialogues.Count > 0 ? dialogueScript.dialogues[0].name : string.Empty;
         
-        EnterDialogueMode(script.script, mode);
+        EnterDialogueMode(dialogueScript.inkFile, mode);
     }
 
     private void PeekScript()
@@ -117,7 +116,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
         // This loads in the global variables as well
         dialogueVariable.StartListening(currentStory);
         // Set the dialogue id for the script
-        currentStory.variablesState["dialogue_id"] = _dialogueId;
+        if (currentStory.variablesState.GlobalVariableExistsWithName("dialogue_id"))
+            currentStory.variablesState["dialogue_id"] = _dialogueId;
 
         if (mode == DialogueMode.Frozen)
         {
@@ -306,14 +306,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private void EndStory()
     {
         // Set the dialogueId to the next one in the database
-        if (dialogueDatabase.TryGetScript(_scriptId, out Script script))
-        {
-            string nextDialogue = script.GetNextDialogue(_dialogueId);
-            _dialogueId = nextDialogue;
-            // If we are done with the dialogues, then the script is done
-            if (string.IsNullOrEmpty(nextDialogue))
-                EndScript();
-        }
+        DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
+        string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
+        _dialogueId = nextDialogue;
+        // If we are done with the dialogues, then the script is done
+        if (string.IsNullOrEmpty(nextDialogue))
+            EndScript();
         StartCoroutine(ExitDialogueMode());
     }
 

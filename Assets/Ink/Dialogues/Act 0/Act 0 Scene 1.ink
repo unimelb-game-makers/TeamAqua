@@ -6,6 +6,9 @@
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL ChangeCutscene(SceneName)
 EXTERNAL PlayBGM(id)
+
+INCLUDE ../Globals/Globals.ink
+
 ~PlayBGM("BGM_CUTSCENE_CEREMONY")
 
 //---------------------------------------------SCRIPT----------------------------------------

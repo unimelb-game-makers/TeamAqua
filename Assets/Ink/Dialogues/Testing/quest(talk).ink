@@ -1,29 +1,28 @@
-INCLUDE ../Island 1/Global var storage/globals.ink
+INCLUDE ../Globals/Globals.ink
 EXTERNAL checkQuestStatus(id, step)
 VAR questSteps = ""
 
 
 ~checkQuestStatus(4, 1)     
 //indexing does not support just using the actual id of the quest
-~ questSteps = quest_id4
-current quest step is {questSteps} and current quest_id var is {quest_id1}
+current quest step is {quest_state}
 { 
-    - questSteps == "":     // if empty, go to main
+    - quest_state == "":     // if empty, go to main
         -> main 
     
-    - questSteps == "NO":
+    - quest_state == "NO":
         -> IncompleteQuest
-    - questSteps == "YES":
+    - quest_state == "YES":
         -> SubmitQuest 
 }
 
 ===main===
 this gives the 2nd quest, step 1 LOCATION, step 2 TALK #questS:2
-~ quest_id4 = "NO"
+~ quest_state = "NO"
 ->DONE
 
 ===IncompleteQuest===
-quest not completed yet, quest step is {questSteps} ; and quest_id is {quest_id4}
+quest not completed yet, quest step is {quest_state}
 ->DONE
 
 ===SubmitQuest===

@@ -12,17 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf1fc55081af4549a98671d5f49dbbc, type: 3}
   m_Name: Dialogue Database
   m_EditorClassIdentifier: 
-  startScriptId: ACT_1_SCENE_1
+  startScript: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   scripts:
-  - id: ACT_0_SCENE_1
-    script: {fileID: 4900000, guid: dd2e348e9ab9d41a7b8d6743063a403f, type: 3}
-    dialogueIds:
-    - DIALOGUE_1
-  - id: ACT_1_SCENE_1
-    script: {fileID: 4900000, guid: b00d32dab6b5747dfb0f8b07bef37478, type: 3}
-    dialogueIds:
-    - DIALOGUE_1
-    - QUEST_1
-  - id: ACT_1_SCENE_2
-    script: {fileID: 4900000, guid: 106b81ff23d7b4440a0c724bee388f65, type: 3}
-    dialogueIds: []
+  - {fileID: 11400000, guid: ed246c066b6f941b880cd5aa9c04eced, type: 2}
+  - {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
+  - {fileID: 11400000, guid: 45fc2c202ff2d4f069e1500821d8877b, type: 2}

@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 //NOTE: need sounds, maybe remove pausing.
 public class OnSceneDialogueStarter : MonoBehaviour
 {
-    public string scriptId;
+    public DialogueScript script;
 
     private void Start()
     {
-        DialogueManager.Instance().EnterDialogue(scriptId);
+        DialogueManager.Instance().EnterDialogue(script.name);
         //AudioManager.Instance.Play("BGM_CUTSCENE_CEREMONY");
         // Create a temporary reference to the current scene.
     }

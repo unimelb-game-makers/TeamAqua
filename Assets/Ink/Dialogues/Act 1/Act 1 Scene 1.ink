@@ -6,30 +6,26 @@ EXTERNAL SetQuest(id)
 EXTERNAL FinishQuest(questID)
 EXTERNAL SetNextDialogue(dialogueId)
 
-INCLUDE Global var storage/globals.ink
+INCLUDE ../Globals/Globals.ink
+
 
 // Variable Setup
-CONST DIALOGUE_1 = "DIALOGUE_1"
+CONST DIALOGUE_1 = "A1_S1_D1"
 
-CONST QUEST_1 = "QUEST_1"
+CONST QUEST_1 = "A1_S1_Q1"
 
-VAR quest_state = ""
 {
-    - dialogue_id == "DIALOGUE_1":
+    - dialogue_id == DIALOGUE_1:
         -> dialogue_1
-    - dialogue_id == "QUEST_1":
+    - dialogue_id == QUEST_1:
         -> quest_1
-    - dialogue_id == "DIALOGUE_2":
-        -> dialogue_2
 }
 
 ===dialogue_1===
 ->main
 
 ===quest_1===
-~ quest_state = quest_id1
 ~checkQuestStatus(1, 1)
-~ quest_state = quest_id1
 {
     - quest_state == "NOT_ACCEPTED":
         -> TakeQuest
@@ -40,10 +36,6 @@ VAR quest_state = ""
     - quest_state == "SUBMITTED":
         -> PostquestSubmit
 }
-
-===dialogue_2===
-This is dialogue 2
-->END
 
 //---------------------------------================------------------------------
 
@@ -151,14 +143,14 @@ Before she can leave however, her stomach rumbles.
 When was the last time you ate? #speaker:Noelle #portrait:NoelleUm
 It's been a little while. Hard to survive on this island when you’re as small as me. #speaker:Amelia #portrait:AmeliaNormal
 …It’d be pretty convenient if someone were to find food for you. #speaker:Noelle #portrait:NoelleSmallSmile
-~ quest_id1 = "NOT_ACCEPTED"
+~ quest_state = "NOT_ACCEPTED"
 ->TakeQuest
 
 ===TakeQuest===
 …Fine. Find me some berries. Ten of them, and maybe I will consider joining your party. #speaker:Amelia #portrait:AmeliaNormal
 (I’ll need to find out more about this island if I want to survive.) #speaker:Noelle #portrait:NoelleSceptical
 (<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>) #portrait:NoelleSmallSmile
-~ quest_id1 = "NOT_FINISHED"
+~ quest_state = "NOT_FINISHED"
 ~ SetQuest(1)
     ->DONE
     
@@ -235,7 +227,7 @@ Yep. Change of plans, I'm coming with you. #speaker:Amelia #portrait:AmeliaHosti
 But why? #speaker:Noelle #portrait:NoelleShocked
 Isn't that obvious? To survive the floods. Now come on, we need to go. #speaker:Amelia #portrait:AmeliaHostile
 Amelia nudges your hand, and leads you toward the forests deeper in-land. #speaker:Narrator
-~ quest_id1 = "SUBMITTED"
+~ quest_state = "SUBMITTED"
 ~ TurnOffBarrier(0)
 ->DONE
 //ends here. Next objective is to ‘find the forest settlement’. 
