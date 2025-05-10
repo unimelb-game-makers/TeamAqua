@@ -21,6 +21,9 @@ public class InventoryManager : MonoBehaviour, ISaveable
     public void Load(SaveSlot saveSlot)
     {
         InventorySaveData saveData = saveSlot.inventorySaveData;
+        if (saveData.items == null)
+            return;
+        
         foreach (ItemSaveData itemData in saveData.items)
         {
             if (itemDatabase.TryGetItem(itemData.id, out Item item))

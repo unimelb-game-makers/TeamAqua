@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf1fc55081af4549a98671d5f49dbbc, type: 3}
+  m_Name: Dialogue Database
+  m_EditorClassIdentifier: 
+  startScriptId: ACT_1_SCENE_1
+  scripts:
+  - id: ACT_0_SCENE_1
+    script: {fileID: 4900000, guid: dd2e348e9ab9d41a7b8d6743063a403f, type: 3}
+    dialogueIds:
+    - DIALOGUE_1
+  - id: ACT_1_SCENE_1
+    script: {fileID: 4900000, guid: b00d32dab6b5747dfb0f8b07bef37478, type: 3}
+    dialogueIds:
+    - DIALOGUE_1
+    - QUEST_1
+  - id: ACT_1_SCENE_2
+    script: {fileID: 4900000, guid: 106b81ff23d7b4440a0c724bee388f65, type: 3}
+    dialogueIds: []

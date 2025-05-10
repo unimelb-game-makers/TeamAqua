@@ -16,7 +16,7 @@ public class MainMenuPopup : Popup
 
     public void Continue()
     {
-        
+        // TODO(Alex): Add logic here to determine to show cutscene 1, or not
     }
 
     public void Load()

@@ -2,10 +2,11 @@
 
 VAR mat = ""
 VAR cutscene0 = ""
+
 VAR dialogue_id = ""
 
-
 //quest id stuffs below 
+VAR quest_state = ""
 VAR quest_id1 = ""
 VAR quest_id2 = ""
 VAR quest_id3 = ""

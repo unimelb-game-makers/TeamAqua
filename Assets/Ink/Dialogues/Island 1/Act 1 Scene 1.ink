@@ -4,20 +4,16 @@ EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
 EXTERNAL SetQuest(id)
 EXTERNAL FinishQuest(questID)
-EXTERNAL FinishDialogue(dialogueId)
+EXTERNAL SetNextDialogue(dialogueId)
 
 INCLUDE Global var storage/globals.ink
 
 // Variable Setup
 CONST DIALOGUE_1 = "DIALOGUE_1"
-CONST DIALOGUE_2 = "DIALOGUE_2"
-CONST DIALOGUE_3 = "DIALOGUE_3"
 
 CONST QUEST_1 = "QUEST_1"
-CONST QUEST_2 = "QUEST_2"
 
 VAR quest_state = ""
-
 {
     - dialogue_id == "DIALOGUE_1":
         -> dialogue_1
@@ -27,19 +23,14 @@ VAR quest_state = ""
         -> dialogue_2
 }
 
-
 ===dialogue_1===
-This is dialogue 1
-~ FinishDialogue(DIALOGUE_1)
-->quest_1
+->main
 
 ===quest_1===
 ~ quest_state = quest_id1
 ~checkQuestStatus(1, 1)
 ~ quest_state = quest_id1
-{ 
-    - quest_state == "":
-        -> main 
+{
     - quest_state == "NOT_ACCEPTED":
         -> TakeQuest
     - quest_state == "NOT_FINISHED":
@@ -50,12 +41,8 @@ This is dialogue 1
         -> PostquestSubmit
 }
 
-~ FinishDialogue(QUEST_1)
-->dialogue_2
-
 ===dialogue_2===
 This is dialogue 2
-~ FinishDialogue(DIALOGUE_2)
 ->END
 
 //---------------------------------================------------------------------

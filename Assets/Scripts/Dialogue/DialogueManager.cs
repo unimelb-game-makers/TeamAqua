@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
         _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScriptId : saveData.scriptId;
-        _dialogueId = string.IsNullOrEmpty(saveData.dialogueId) ? dialogueDatabase.startDialogueId : saveData.dialogueId;
+        _dialogueId = saveData.dialogueId ?? string.Empty;
         _seenScripts = saveData.seenScripts ?? new List<string>();
     }
 
@@ -96,10 +96,14 @@ public class DialogueManager : MonoBehaviour, ISaveable
             return;
         }
         string id = string.IsNullOrEmpty(scriptId) ? _scriptId : scriptId;
-        if (dialogueDatabase.TryGetScript(id, out Script script))
-        {
-            EnterDialogueMode(script.script, mode);
-        }
+        if (!dialogueDatabase.TryGetScript(id, out Script script))
+            throw new KeyNotFoundException($"DIALOGUE | Could not find script {id}");
+        if (script.dialogueIds.Count == 0)
+            throw new InvalidOperationException($"DIALOGUE | Script {id} has no dialogue IDs.");
+        if (!script.dialogueIds.Contains(_dialogueId))
+            _dialogueId = script.dialogueIds[0];
+        
+        EnterDialogueMode(script.script, mode);
     }
 
     private void PeekScript()
@@ -109,19 +113,21 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EnterDialogueMode(TextAsset script, DialogueMode mode)
     {
-        //Time.timeScale = 0;         this works
+        currentStory = new Story(script.text);
+        // This loads in the global variables as well
+        dialogueVariable.StartListening(currentStory);
+        // Set the dialogue id for the script
+        currentStory.variablesState["dialogue_id"] = _dialogueId;
 
         if (mode == DialogueMode.Frozen)
         {
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
             //Debug.Log("time stopped");
-            currentStory = new Story(script.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false; // Setting the Input provider here.
             //UIinputProvider.instance().SendUIinput(5);
             //dialoguePanel.SetActive(true);
-            dialogueVariable.StartListening(currentStory);
             currentStory.BindExternalFunction(
                 "checkQuestStatus",
                 (int id, int steps) =>
@@ -212,22 +218,14 @@ public class DialogueManager : MonoBehaviour, ISaveable
                     Debug.Log("scene changed to " + SceneManager.GetActiveScene());
                 }
             );
-            
-            currentStory.BindExternalFunction("FinishDialogue", (string dialogueid) =>
-            {
-                Debug.Log($"DIALOGUE | Finishing Dialogue ID {dialogueid}");
-            });
-
             ContinueStory();
         }
 
         else if (mode == DialogueMode.Moving)
         {
             //changine to UI state done in child trigger points
-            currentStory = new Story(script.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true; // Setting the Input provider here.
-            dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
             currentStory.BindExternalFunction(
                 "checkQuestStatus",
@@ -270,7 +268,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void ContinueStory()
     {
-        Debug.Log("ContinueStory called.....");
         if (currentStory.canContinue)
         {
             string nextLine = currentStory.Continue();
@@ -308,7 +305,26 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EndStory()
     {
+        // Set the dialogueId to the next one in the database
+        if (dialogueDatabase.TryGetScript(_scriptId, out Script script))
+        {
+            string nextDialogue = script.GetNextDialogue(_dialogueId);
+            _dialogueId = nextDialogue;
+            // If we are done with the dialogues, then the script is done
+            if (string.IsNullOrEmpty(nextDialogue))
+                EndScript();
+        }
         StartCoroutine(ExitDialogueMode());
+    }
+
+    private void EndScript()
+    {
+        string nextScript = dialogueDatabase.GetNextScript(_scriptId);
+        _scriptId = nextScript;
+        if (string.IsNullOrEmpty(nextScript))
+        {
+            Debug.Log("DIALOGUE | Finished all scripts.");
+        }
     }
 
     public void ChooseChoice(int choiceIndex)
