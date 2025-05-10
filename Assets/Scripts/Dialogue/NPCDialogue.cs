@@ -65,7 +65,7 @@ public class NPCDialogue : MonoBehaviour
 
     private void ShowQuestIndicator(string dialogueId)
     {
-        
+            
     }
 
     private void ShowDialogueIndicator()

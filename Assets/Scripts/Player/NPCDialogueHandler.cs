@@ -15,7 +15,6 @@ public class NPCDialogueHandler : MonoBehaviour
         if (UIController.Paused)
             return;
         _dialogueSource.PlayDialogue();
-        CheckTag();
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,23 +37,7 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             _dialogueSource.HideIndicators();
             _dialogueSource = null;
-            DialogueManager.Instance().npcData = null;
             DialogueManager.Instance().currentStory = null;
         }
-    }
-
-    private void CheckTag()
-    {
-        if (DialogueManager.Instance().currentStory == null)
-        {
-            Debug.Log("no storry found");
-            return;
-        }
-
-        // Defensive programming to avoid null exceptions
-        if (!_dialogueSource)
-            return;
-        if (!_dialogueSource.npcData)
-            return;
     }
 }
