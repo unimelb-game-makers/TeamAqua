@@ -1,11 +1,14 @@
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Quest/Quest", fileName = "Quest")]
 public class Quest : DialogueNode
 {
     public string title;
+    [TextArea]
     public string description;
+    [InlineEditor]
     public List<QuestStep> steps = new List<QuestStep>();
     public QuestReward reward;
 

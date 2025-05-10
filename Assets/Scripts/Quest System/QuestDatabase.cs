@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "ScriptableObjects/Quests/Quest Database", fileName = "Quest Database")]
+[CreateAssetMenu(menuName = "ScriptableObjects/Quest/Quest Database", fileName = "Quest Database")]
 public class QuestDatabase : ScriptableObject
 {
     [InlineEditor] public List<Quest> quests;
