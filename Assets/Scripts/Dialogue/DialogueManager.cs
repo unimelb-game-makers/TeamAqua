@@ -105,11 +105,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
         EnterDialogueMode(dialogueScript.inkFile, mode);
     }
 
-    private void PeekScript()
-    {
-        
-    }
-
     private void EnterDialogueMode(TextAsset script, DialogueMode mode)
     {
         currentStory = new Story(script.text);
@@ -317,6 +312,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EndScript()
     {
+        // TODO(Alex): Don't actually set the next script here.
         string nextScript = dialogueDatabase.GetNextScript(_scriptId);
         _scriptId = nextScript;
         if (string.IsNullOrEmpty(nextScript))

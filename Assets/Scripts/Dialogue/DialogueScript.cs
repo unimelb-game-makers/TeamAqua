@@ -35,6 +35,9 @@ public class DialogueScript : ScriptableObject
         {
             return string.Empty;
         }
+
+        if (dialogue.infinite)
+            return dialogue.name;
         int index = dialogues.IndexOf(dialogue);
         return index + 1 >= dialogues.Count ? string.Empty : dialogues[index + 1].name;
     }
