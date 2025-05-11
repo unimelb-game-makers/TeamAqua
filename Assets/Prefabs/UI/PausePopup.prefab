@@ -461,6 +461,7 @@ MonoBehaviour:
   showSequence: {fileID: 0}
   hideSequence: {fileID: 0}
   resetSequence: {fileID: 0}
+  playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}
   resumeButton: {fileID: 476321151299167838}
   settingsButton: {fileID: 3646204048416809576}
   mainMenuButton: {fileID: 4932246419389192302}

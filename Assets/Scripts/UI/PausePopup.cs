@@ -7,6 +7,7 @@ namespace Popups
 {
     public class PausePopup : Popup
     {
+        [SerializeField] private PlayerSave playerSave;
         [SerializeField] private Button resumeButton;
         [SerializeField] private Button settingsButton;
         [SerializeField] private Button mainMenuButton;
@@ -39,12 +40,14 @@ namespace Popups
         private void MainMenu()
         {
             // Need to unpause when going back out
+            playerSave.Save();
             _controller.TogglePause();
             SceneManager.LoadScene("Start");
         }
 
         private void Quit()
         {
+            playerSave.Save();
             Application.Quit();
         }
     }
