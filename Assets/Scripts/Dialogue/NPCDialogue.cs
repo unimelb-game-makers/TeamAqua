@@ -35,13 +35,16 @@ public class NPCDialogue : MonoBehaviour
         return false;
     }
 
-    public void PlayDialogue()
+    public bool PlayDialogue()
     {
         string dialogue = DialogueManager.instance.DialogueId;
         if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
         {
             DialogueManager.instance.EnterDialogue(trigger.dialogue, trigger.mode);
+            return true;
         }
+
+        return false;
     }
 
     public void ShowIndicator()

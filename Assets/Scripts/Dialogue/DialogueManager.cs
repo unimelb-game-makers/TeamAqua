@@ -197,15 +197,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
-                    //CURRENT BUG: noonisland needs to jump straight to dialogue but the exitdialogue
-                    // from the cutscene lingers and closes it
-
-                    // When the scene changes, we need to manually call Exit Dialogue Mode
-                    if (currentStory.canContinue)
-                    {
-                        StartCoroutine(ExitDialogueMode());
-                        Debug.Log("end story called from ChangeCutscene()");
-                    }
+                    EndStory();
                     SceneManager.LoadScene(SceneName);
                     Debug.Log("scene changed to " + SceneManager.GetActiveScene());
                 }
@@ -232,7 +224,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         }
     }
 
-    public IEnumerator ExitDialogueMode()
+    private IEnumerator ExitDialogueMode()
     {
         Debug.Log("ExitDialogueMode called.....");
         yield return new WaitForSeconds(0.2f); //wait check to resolve all same-key-input errors
@@ -281,15 +273,20 @@ public class DialogueManager : MonoBehaviour, ISaveable
         OnDialogueTags?.Invoke(currentStory.currentTags);
     }
 
-    private void EndStory()
+    public void EndStory()
     {
         // Set the dialogueId to the next one in the database
         DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
-        string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
-        _dialogueId = nextDialogue;
-        // If we are done with the dialogues, then the script is done
-        if (string.IsNullOrEmpty(nextDialogue))
-            EndScript();
+        // If the dialogue is a quest, we only move to the next dialogue if it has been submitted 
+        bool canContinue = !_dialogueId.Contains("Q") || QuestManager.instance.IsSubmitted(_dialogueId);
+        if (canContinue)
+        {
+            string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
+            _dialogueId = nextDialogue;
+            // If we are done with the dialogues, then the script is done
+            if (string.IsNullOrEmpty(nextDialogue))
+                EndScript();
+        }
         StartCoroutine(ExitDialogueMode());
     }
 
@@ -316,7 +313,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             {
                 if (selectedChoice.tags[i].Contains("done"))
                 {
-                    StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
+                    EndStory();
                 }
             }
         }

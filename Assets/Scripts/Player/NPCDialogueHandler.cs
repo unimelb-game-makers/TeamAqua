@@ -15,7 +15,10 @@ public class NPCDialogueHandler : MonoBehaviour
         if (UIController.Paused)
             return;
         if (Input.GetKeyDown(KeyCode.E))
-            _dialogueSource.PlayDialogue();
+            if (_dialogueSource.PlayDialogue())
+            {
+                _dialogueSource.HideIndicators();
+            }
     }
 
     void OnTriggerEnter(Collider other)

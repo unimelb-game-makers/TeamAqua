@@ -125,6 +125,13 @@ public class QuestManager : MonoBehaviour, ISaveable
         _quests.Add(questTracker);
     }
 
+    public bool IsSubmitted(string questId)
+    {
+        if (TryGetActiveQuest(questId, out QuestTracker tracker))
+            return tracker.state == QuestState.Submitted;
+        return false;
+    }
+
     private bool TryGetActiveQuest(string questId, out QuestTracker tracker)
     {
         for (int i = 0; i < _quests.Count; ++i)
