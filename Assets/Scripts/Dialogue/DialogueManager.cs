@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,10 +19,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private TextAsset LoadGlobalJSON;
 
     [Header("Dialogues")] 
-    private List<string> _seenScripts = new();
-    private string _scriptId;
-    private string _dialogueId;
+    [NonSerialized, ShowInInspector, ReadOnly] private string _scriptId;
+    [NonSerialized, ShowInInspector, ReadOnly] private string _dialogueId;
     [SerializeField] private DialogueDatabase dialogueDatabase;
+    public string ScriptId => _scriptId;
     public string DialogueId => _dialogueId;
 
     public Story currentStory;
@@ -71,7 +72,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
         _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScript.name : saveData.scriptId;
         _dialogueId = saveData.dialogueId ?? string.Empty;
-        _seenScripts = saveData.seenScripts ?? new List<string>();
     }
 
     public SaveSlot Save(SaveSlot saveSlot)
@@ -89,11 +89,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         if (script == null)
             throw new NullReferenceException("DIALOGUE | Provided script is null");
-        if (_seenScripts.Contains(script.name))
-        {
-            Debug.Log($"DIALOGUE | Already seen {script.name}, not showing it");
-            return;
-        }
         // Go to the start of the next script
         DialogueNode node = script.dialogues.Count > 0 ? script.dialogues[0] : null;
         EnterDialogueMode(script, node, mode);
@@ -118,6 +113,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EnterDialogueMode(DialogueScript script, DialogueNode node, DialogueMode mode)
     {
+        // Don't play the script and node if it is already behind
+        if (dialogueDatabase.HasSeen(script, node))
+        {
+            Debug.Log($"DIALOGUE | Already seen {script.name}, not showing it");
+            return;
+        }
         currentStory = new Story(script.inkFile.text);
         _dialogueId = node != null ? node.name : string.Empty;
         // This loads in the global variables as well

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Dialogue Database", fileName = "Dialogue Database")]
@@ -31,6 +30,28 @@ public class DialogueDatabase : ScriptableObject
         int index = scripts.IndexOf(dialogueScript);
         // We will return empty if there are no more scripts
         return index + 1 >= scripts.Count ? string.Empty : scripts[index + 1].name;
+    }
+
+    /// <summary>
+    /// Checks whether the player has already seen a particular combination of script and nodes before.
+    /// </summary>
+    /// <param name="script"></param>
+    /// <param name="node"></param>
+    /// <returns></returns>
+    public bool HasSeen(DialogueScript script, DialogueNode node)
+    {
+        DialogueScript currentScript = GetScript(DialogueManager.instance.ScriptId);
+        script.TryGetDialogue(DialogueManager.instance.DialogueId, out DialogueNode currentDialogue);
+        // First compare the scripts
+        int currentScriptIndex = scripts.IndexOf(currentScript);
+        int scriptIndex = scripts.IndexOf(script);
+        int currentDialogueIndex = currentDialogue ? currentScript.dialogues.IndexOf(currentDialogue) : 0;
+        int dialogueIndex = node ? script.dialogues.IndexOf(node) : 0;
+        if (currentScriptIndex > scriptIndex)
+            return true;
+        if (currentDialogueIndex > dialogueIndex)
+            return true;
+        return false;
     }
 
     private void OnValidate()

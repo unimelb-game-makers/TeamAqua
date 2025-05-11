@@ -33,7 +33,6 @@ public struct InventorySaveData
 [Serializable]
 public struct DialogueSaveData
 {
-    public List<string> seenScripts;
     public string scriptId;
     public string dialogueId;
 }

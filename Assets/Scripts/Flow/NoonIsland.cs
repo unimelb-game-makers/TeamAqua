@@ -84,6 +84,7 @@ public class NoonIsland : MonoBehaviour
         Camera _ = Instantiate(mainCamera);
         CinemachineVirtualCamera virtualCam = Instantiate(virtualCamera);
         PlayerController player = Instantiate(playerController);
+        Game.AddManager(player);
 
         player.transform.position = spawnPosition;
         virtualCam.LookAt = player.transform;

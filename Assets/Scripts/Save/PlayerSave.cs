@@ -8,7 +8,8 @@ using UnityEngine;
 public class PlayerSave : ScriptableObject
 {
     private const string DEVELOP = "develop";
-    
+
+    [SerializeField] private SaveTemplate startSave;
     [SerializeField] private bool overrideSaveData;
 
     [ShowIf("overrideSaveData"), SerializeField] private SaveTemplate saveTemplate;
@@ -50,7 +51,7 @@ public class PlayerSave : ScriptableObject
         else
         {
             Debug.Log($"SAVE | Save file not found at {fullPath}. Creating empty save slot.");
-            _saveSlot = new SaveSlot(); 
+            _saveSlot = startSave.CreateSaveSlot();
         }
 
         LoadSaveSlot();
