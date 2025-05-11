@@ -9,7 +9,7 @@ public class OnSceneDialogueStarter : MonoBehaviour
 
     private void Start()
     {
-        DialogueManager.Instance().EnterDialogue(script.name);
+        DialogueManager.Instance().EnterDialogue(script);
         //AudioManager.Instance.Play("BGM_CUTSCENE_CEREMONY");
         // Create a temporary reference to the current scene.
     }

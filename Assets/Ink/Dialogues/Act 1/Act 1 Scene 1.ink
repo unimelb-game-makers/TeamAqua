@@ -33,8 +33,6 @@ CONST QUEST_1 = "A1_S1_Q1"
         -> ongoing_quest_1
     - quest_state == "COMPLETED":
         -> completed_quest_1
-    - else:
-        -> take_quest_1
 }
 
 ===dialogue_2===

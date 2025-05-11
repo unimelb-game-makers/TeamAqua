@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286773727a872479bb874945e14dbae6, type: 3}
   m_Name: A1_S1_D2
   m_EditorClassIdentifier: 
+  infinite: 1

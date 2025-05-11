@@ -105,22 +105,6 @@ public class InventoryManager : MonoBehaviour, ISaveable
         }
         return false;
     }
-
-    public void RemoveItem(string id, int amount)
-    {
-        foreach (var inventoryItem in inventoryItems)
-        {
-            if (inventoryItem.item.name == id)
-            {
-                inventoryItem.count -= amount;
-                if (inventoryItem.count <= 0)
-                {
-                    inventoryItems.Remove(inventoryItem);
-                }
-                return;
-            }
-        }
-    }
 }
 
 /*

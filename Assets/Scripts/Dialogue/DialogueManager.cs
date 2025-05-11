@@ -80,30 +80,46 @@ public class DialogueManager : MonoBehaviour, ISaveable
     }
 
     /// <summary>
-    /// Single entry point into all scripts. Setting scriptId will override which script is shown
+    /// Plays dialogue based on the script. It will always take the starting dialogue.
     /// </summary>
-    /// <param name="scriptId"></param>
+    /// <param name="script"></param>
     /// <param name="mode"></param>
-    public void EnterDialogue(string scriptId = "", DialogueMode mode = DialogueMode.Frozen)
+    /// <exception cref="NullReferenceException"></exception>
+    public void EnterDialogue(DialogueScript script, DialogueMode mode = DialogueMode.Frozen)
     {
-        if (_seenScripts.Contains(scriptId))
+        if (script == null)
+            throw new NullReferenceException("DIALOGUE | Provided script is null");
+        if (_seenScripts.Contains(script.name))
         {
-            Debug.Log($"DIALOGUE | Already seen {scriptId}, not showing it");
+            Debug.Log($"DIALOGUE | Already seen {script.name}, not showing it");
             return;
         }
-        string id = string.IsNullOrEmpty(scriptId) ? _scriptId : scriptId;
-        DialogueScript dialogueScript = dialogueDatabase.GetScript(id);
-        // If we can't find any dialogue, then set it to the start of the script
-        // This lets us handle switching between two scripts
-        if (!dialogueScript.TryGetDialogue(_dialogueId, out _))
-            _dialogueId = dialogueScript.dialogues.Count > 0 ? dialogueScript.dialogues[0].name : string.Empty;
-        
-        EnterDialogueMode(dialogueScript.inkFile, mode);
+        // Go to the start of the next script
+        DialogueNode node = script.dialogues.Count > 0 ? script.dialogues[0] : null;
+        EnterDialogueMode(script, node, mode);
     }
 
-    private void EnterDialogueMode(TextAsset script, DialogueMode mode)
+    /// <summary>
+    /// Will play the current node for the script. If the current dialogue cannot be found, it will throw an error.
+    /// </summary>
+    /// <param name="node"></param>
+    /// <param name="mode"></param>
+    public void EnterDialogue(DialogueNode node, DialogueMode mode = DialogueMode.Frozen)
     {
-        currentStory = new Story(script.text);
+        DialogueScript script = dialogueDatabase.GetScript(_scriptId);
+        if (!script.TryGetDialogue(node.name, out _))
+        {
+            throw new InvalidOperationException(
+                $"DIALOGUE | Could not find Node '{node.name}' for Script {script.name}");
+        }
+
+        EnterDialogueMode(script, node, mode);
+    }
+
+    private void EnterDialogueMode(DialogueScript script, DialogueNode node, DialogueMode mode)
+    {
+        currentStory = new Story(script.inkFile.text);
+        _dialogueId = node != null ? node.name : string.Empty;
         // This loads in the global variables as well
         dialogueVariable.StartListening(currentStory);
         // Set the dialogue id for the script
@@ -114,7 +130,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         if (_dialogueId.Contains('Q'))
         {
             QuestState state = QuestManager.instance.CheckQuest(_dialogueId);
-            currentStory.variablesState["quest_state"] = state.ToString();
+            currentStory.variablesState["quest_state"] = state.ToString().ToUpper();
         }
 
         if (mode == DialogueMode.Frozen)

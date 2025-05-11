@@ -157,10 +157,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7555173281025391573, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}
-      propertyPath: npcData
-      value: 
-      objectReference: {fileID: 11400000, guid: a37b9579015d9304a86f464b7f5b2ad2, type: 2}
-    - target: {fileID: 7555173281025391573, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}
       propertyPath: questID
       value: quest_id1
       objectReference: {fileID: 0}
@@ -168,10 +164,6 @@ PrefabInstance:
       propertyPath: HasQuest
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7555173281025391573, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}
-      propertyPath: questCue
-      value: 
-      objectReference: {fileID: 3431411953265948677}
     - target: {fileID: 7555173281025391573, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}
       propertyPath: UIstatemachine
       value: 
@@ -202,11 +194,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}
---- !u!1 &3431411953265948677 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5995393299236919148, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}
-  m_PrefabInstance: {fileID: 8983899011688968041}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5314553491522298883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3849503128907647850, guid: 937de99fd5fdaa748ab8beb026345b54, type: 3}

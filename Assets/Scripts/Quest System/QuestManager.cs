@@ -6,6 +6,8 @@ using UnityEngine;
 [Serializable]
 public enum QuestState
 {
+    // Hasn't been picked up yet
+    Ready,
     // Ongoing means there are still things that can be done
     Ongoing,
     // Finished means that it has been completed, but hasn't been submitted
@@ -18,7 +20,7 @@ public enum QuestState
 public class QuestStepTracker
 {
     public QuestStep step;
-    public QuestState state = QuestState.Ongoing;
+    public QuestState state = QuestState.Ready;
 }
 
 [Serializable]
@@ -26,7 +28,7 @@ public class QuestTracker
 {
     public Quest quest;
     public List<QuestStepTracker> steps = new();
-    public QuestState state = QuestState.Ongoing;
+    public QuestState state = QuestState.Ready;
 }
 
 public class QuestManager : MonoBehaviour, ISaveable
@@ -114,6 +116,12 @@ public class QuestManager : MonoBehaviour, ISaveable
         }
         QuestTracker questTracker = new ();
         questTracker.quest = quest;
+        for (int i = 0; i < quest.steps.Count; ++i)
+        {
+            QuestStepTracker step = new();
+            step.step = quest.steps[i];
+            questTracker.steps.Add(step);
+        }
         _quests.Add(questTracker);
     }
 
@@ -140,7 +148,7 @@ public class QuestManager : MonoBehaviour, ISaveable
             return tracker.state;
         }
 
-        return QuestState.Ongoing;
+        return QuestState.Ready;
     }
 
     private void UpdateState(QuestTracker tracker)
@@ -163,7 +171,6 @@ public class QuestManager : MonoBehaviour, ISaveable
                         if (!hasItem)
                             state = QuestState.Ongoing;
                     }
-                    
                     break;
                 // If location and talk are still ongoing, then the quest is still ongoing
                 case QuestType.Location:

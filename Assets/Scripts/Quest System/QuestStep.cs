@@ -25,7 +25,7 @@ public class QuestStep : ScriptableObject
                 {
                     if (!InventoryManager.instance.HasItem(requiredItems[i].item.name, requiredItems[i].amount))
                         throw new InvalidOperationException($"QUEST | Could not resolve {name} due to lack of items");
-                    InventoryManager.instance.RemoveItem(requiredItems[i].item.name, requiredItems[i].amount);
+                    InventoryManager.instance.SubtractItem(requiredItems[i].item, requiredItems[i].amount);
                 }
                 break;
         }
