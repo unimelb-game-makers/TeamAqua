@@ -23,8 +23,13 @@ public class PlayerController : MonoBehaviour, ISaveable
 
     AnimController anim;
 
+    private void Awake()
+    {
+        Game.AddManager(this);
+    }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<AnimController>();
@@ -98,5 +103,10 @@ public class PlayerController : MonoBehaviour, ISaveable
     public void handleNextDay()
     {
         transform.position = spawnPoint;
+    }
+
+    private void OnDestroy()
+    {
+        Game.RemoveManager(this);
     }
 }

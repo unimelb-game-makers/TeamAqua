@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Popups
@@ -70,7 +71,8 @@ namespace Popups
         public void Load(string fileName)
         {
             _mainMenu.playerSave.SetSaveSlot(fileName);
-
+            //TODO: We assume that everytime they load, they will go into the main scene.
+            SceneManager.LoadScene("NoonIsland");
         }
 
         private void Back()

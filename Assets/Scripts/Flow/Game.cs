@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Game
 {
-    private const bool DEBUG = false;
     public static List<MonoBehaviour> managers = new();
 
     // This is pretty bad code, but oh well :D
@@ -23,5 +22,10 @@ public class Game
 
             managers.AddOnce(behaviour);
         }
+    }
+
+    public static void RemoveManager(MonoBehaviour behaviour)
+    {
+        managers.Remove(behaviour);
     }
 }

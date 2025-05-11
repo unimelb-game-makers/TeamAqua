@@ -40,7 +40,7 @@ namespace Popups
         {
             _mainMenu.playerSave.StartNewGame();
             // NOTE(Alex): Hardcoded because I'm fucking lazy
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Cutscene 1");
         }
 
         private void Continue()

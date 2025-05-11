@@ -202,7 +202,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
-                    EndStory();
                     SceneManager.LoadScene(SceneName);
                     Debug.Log("scene changed to " + SceneManager.GetActiveScene());
                 }
@@ -280,6 +279,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EndStory()
     {
+        Debug.Log("DIALOGUE | Ending Story");
         // Set the dialogueId to the next one in the database
         DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
         // If the dialogue is a quest, we only move to the next dialogue if it has been submitted 
@@ -300,6 +300,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         // TODO(Alex): Don't actually set the next script here.
         string nextScript = dialogueDatabase.GetNextScript(_scriptId);
         _scriptId = nextScript;
+        Debug.Log($"DIALOGUE | Setting next script to {_scriptId}");
         if (string.IsNullOrEmpty(nextScript))
         {
             Debug.Log("DIALOGUE | Finished all scripts.");
@@ -308,21 +309,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void ChooseChoice(int choiceIndex)
     {
-        // Retrieve the selected choice
-        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
-
-        // Check if the selected choice has the "quest" tag
-        if (selectedChoice.tags != null)
-        {
-            for (int i = 0; i < selectedChoice.tags.Count; i++)
-            {
-                if (selectedChoice.tags[i].Contains("done"))
-                {
-                    EndStory();
-                }
-            }
-        }
-
         // Now process the choice and continue the story
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
