@@ -1,26 +1,31 @@
 using Kuroneko.UIDelivery;
-using UnityEngine.SceneManagement;
+using UnityEngine;
 
-public class MainMenuPopup : Popup
+namespace Popups
 {
-    protected override void InitPopup()
+    public class MainMenuPopup : Popup
     {
+        public PlayerSave playerSave;
+        [SerializeField] private StartPopup startPopup;
+        [SerializeField] private SavePopup savePopup;
         
-    }
+        protected override void InitPopup()
+        {
+            startPopup.Init(this);
+            savePopup.Init(this);
+            ShowStartPopup();
+        }
 
-    public void NewGame()
-    {
-        // NOTE(Alex): Hardcoded because I'm fucking lazy
-        SceneManager.LoadScene(1);
-    }
+        public void ShowSavePopup()
+        {
+            startPopup.HidePopup();
+            savePopup.ShowPopup();
+        }
 
-    public void Continue()
-    {
-        // TODO(Alex): Add logic here to determine to show cutscene 1, or not
-    }
-
-    public void Load()
-    {
-        
+        public void ShowStartPopup()
+        {
+            startPopup.ShowPopup();
+            savePopup.HidePopup();
+        }
     }
 }

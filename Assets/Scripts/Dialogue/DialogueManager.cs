@@ -76,7 +76,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public SaveSlot Save(SaveSlot saveSlot)
     {
-        throw new NotImplementedException();
+        SaveSlot save = saveSlot;
+        save.dialogueSaveData.scriptId = _scriptId;
+        save.dialogueSaveData.dialogueId = _dialogueId;
+        return save;
     }
 
     /// <summary>
@@ -120,6 +123,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             return;
         }
         currentStory = new Story(script.inkFile.text);
+        _scriptId = script.name;
         _dialogueId = node != null ? node.name : string.Empty;
         // This loads in the global variables as well
         dialogueVariable.StartListening(currentStory);
@@ -274,7 +278,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         OnDialogueTags?.Invoke(currentStory.currentTags);
     }
 
-    public void EndStory()
+    private void EndStory()
     {
         // Set the dialogueId to the next one in the database
         DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);

@@ -40,6 +40,9 @@ public class DialogueDatabase : ScriptableObject
     /// <returns></returns>
     public bool HasSeen(DialogueScript script, DialogueNode node)
     {
+        // If we haven't started anything, then we haven't seen anything.
+        if (string.IsNullOrEmpty(DialogueManager.instance.ScriptId))
+            return false;
         DialogueScript currentScript = GetScript(DialogueManager.instance.ScriptId);
         script.TryGetDialogue(DialogueManager.instance.DialogueId, out DialogueNode currentDialogue);
         // First compare the scripts
