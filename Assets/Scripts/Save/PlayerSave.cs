@@ -135,6 +135,7 @@ public class PlayerSave : ScriptableObject
 
         string jsonString = JsonUtility.ToJson(_saveSlot);
 
+        Directory.CreateDirectory(SavePath);
         string fullPath = GetFullPath(GetFileName());
         using StreamWriter writer = new(fullPath);
         
