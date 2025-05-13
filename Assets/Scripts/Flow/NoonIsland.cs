@@ -56,12 +56,16 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private Level noonIslandLevel;
 
+    [Header("Loading")]
+    [SerializeField] private PlayerSave playerSave;
+
     private void Awake()
     {
         InitUI();
         InitPlayer();
         InitManagers();
         InitLevel();
+        LoadData();
     }
 
     /// <summary>
@@ -94,15 +98,15 @@ public class NoonIsland : MonoBehaviour
     {
         GameObject manager = new("Managers");
         DontDestroyOnLoad(manager);
-        Instantiate(barrierManager, manager.transform);
-        Instantiate(audioManager, manager.transform);
-        Instantiate(inventoryManager, manager.transform);
-        Instantiate(energyManager, manager.transform);
-        Instantiate(questManager, manager.transform);
-        Instantiate(dialogueManager, manager.transform);
-        Instantiate(spriteManager, manager.transform);
-        Instantiate(dayManager, manager.transform);
-        Instantiate(waterManager, manager.transform);
+        Game.AddManager(Instantiate(barrierManager, manager.transform));
+        Game.AddManager(Instantiate(audioManager, manager.transform));
+        Game.AddManager(Instantiate(inventoryManager, manager.transform));
+        Game.AddManager(Instantiate(energyManager, manager.transform));
+        Game.AddManager(Instantiate(questManager, manager.transform));
+        Game.AddManager(Instantiate(dialogueManager, manager.transform));
+        Game.AddManager(Instantiate(spriteManager, manager.transform));
+        Game.AddManager(Instantiate(dayManager, manager.transform));
+        Game.AddManager(Instantiate(waterManager, manager.transform));
     }
 
     /// <summary>
@@ -112,5 +116,10 @@ public class NoonIsland : MonoBehaviour
     {
         SceneManager.LoadScene("NoonIslandEnvironment", LoadSceneMode.Additive);
         Instantiate(noonIslandLevel); //jumps into dialogue upon entering
+    }
+
+    private void LoadData()
+    {
+        playerSave.Load();
     }
 }

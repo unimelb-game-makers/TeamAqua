@@ -50,8 +50,6 @@ public class DayManager : MonoBehaviour
         _playerController = FindFirstObjectByType<PlayerController>();
         initialColor = directionalLight.color;
         EnergyManager.OnEnergyChanged += CheckEnergy;
-        if (playerSave && playerSave.currentDay == 0)
-            CurrentDay = playerSave.currentDay;
     }
 
     private void CheckEnergy(float energyAmount)
@@ -81,7 +79,10 @@ public class DayManager : MonoBehaviour
         CurrentDay += 1;
         SetNight(false);
         _playerController.handleNextDay();
-        EnergyManager.Instance.OnNextDay();
+        EnergyManager.instance.OnNextDay();
+        
+        // Trigger Save whenever a new day is started
+        playerSave.Save();
     }
 
     private void SetNight(bool value)

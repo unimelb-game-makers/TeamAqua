@@ -5,32 +5,12 @@ using UnityEngine.SceneManagement;
 //NOTE: need sounds, maybe remove pausing.
 public class OnSceneDialogueStarter : MonoBehaviour
 {
-    public static OnSceneDialogueStarter Instance;
+    public DialogueScript script;
 
-    //public UnityEngine.UI.Image background;
-    //  public Sprite[] sprites;
-    [SerializeField]
-    public TextAsset inkJSON;
-
-    private void Awake()
+    private void Start()
     {
-        if (Instance != null && Instance != this)
-            Destroy(gameObject);
-        else
-            Instance = this;
-    }
-
-    void Start()
-    {
-        DialogueManager.Instance().EnterDialogueMode(inkJSON, 0);
+        DialogueManager.Instance().EnterDialogue(script);
         //AudioManager.Instance.Play("BGM_CUTSCENE_CEREMONY");
         // Create a temporary reference to the current scene.
-    }
-
-    public void SceneChanger(string SceneName)
-    {
-        //loads the next scene, its in a function so it can be called within ink.
-        SceneManager.LoadScene(SceneName);
-        Debug.Log("scene changed to " + SceneManager.GetActiveScene());
     }
 }

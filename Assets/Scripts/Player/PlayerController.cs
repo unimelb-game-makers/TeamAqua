@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISaveable
 {
     [SerializeField]
     private InputProvider inputProvider;
@@ -25,8 +23,13 @@ public class PlayerController : MonoBehaviour
 
     AnimController anim;
 
+    private void Awake()
+    {
+        Game.AddManager(this);
+    }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<AnimController>();
@@ -36,6 +39,18 @@ public class PlayerController : MonoBehaviour
         {
             inputProvider.can_move = true;
         }
+    }
+
+    public void Load(SaveSlot saveSlot)
+    {
+        transform.position = saveSlot.playerSaveData.position;
+    }
+
+    public SaveSlot Save(SaveSlot saveSlot)
+    {
+        SaveSlot save = saveSlot;
+        save.playerSaveData.position = transform.position;
+        return save;
     }
 
     // Update is called once per frame
@@ -88,5 +103,10 @@ public class PlayerController : MonoBehaviour
     public void handleNextDay()
     {
         transform.position = spawnPoint;
+    }
+
+    private void OnDestroy()
+    {
+        Game.RemoveManager(this);
     }
 }

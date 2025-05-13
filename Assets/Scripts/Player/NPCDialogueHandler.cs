@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class NPCDialogueHandler : MonoBehaviour
 {
-    [NonSerialized]
-    public NPCDialogue dialogueSource = null;
+    private NPCDialogue _dialogueSource = null;
 
     private void Update()
     {
-        if (
-            Input.GetKeyDown(KeyCode.E)
-            && dialogueSource != null
-            && !DialogueManager.GetIsPlaying()
-            && !UIController.Paused
-        )
-        {
-            dialogueSource.PlayDialogue();
-            //AttachStory();
-            CheckTag();
-        }
+        if (_dialogueSource == null)
+            return;
+        if (DialogueManager.GetIsPlaying())
+            return;
+        if (UIController.Paused)
+            return;
+        if (Input.GetKeyDown(KeyCode.E))
+            if (_dialogueSource.PlayDialogue())
+            {
+                _dialogueSource.HideIndicators();
+            }
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,86 +26,22 @@ public class NPCDialogueHandler : MonoBehaviour
         if (!other.gameObject.CompareTag("Creature"))
             return;
 
-        if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
+        if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
         {
-            dialogueSource = npc.dialogue;
-            if (!dialogueSource)
+            _dialogueSource = dialogue;
+            if (!_dialogueSource)
                 return;
-            if (dialogueSource.npcData && dialogueSource.npcData.HasQuest)
-            {
-                DialogueManager.Instance().npcData = dialogueSource.npcData;
-                dialogueSource.IndicateQuestUnaccepted();
-                /*
-                if ( //bug: dialogue file isnt parsed in yet
-                    // solution: make a new ondialogue fucntion in dialogue manager
-                    (string)
-                        DialogueManager.Instance().currentStory.variablesState[
-                            dialogueSource.npcData.questID
-                        ] == "NOT_FINISHED"
-                )
-                {
-                    dialogueSource.IndicateQuestOngoing();
-                }
-                */
-            }
-            else
-                dialogueSource.IndicateDialogue();
+            _dialogueSource.ShowIndicator();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Creature") && dialogueSource != null)
+        if (other.gameObject.CompareTag("Creature") && _dialogueSource != null)
         {
-            dialogueSource.HideIndicators();
-            dialogueSource = null;
-            DialogueManager.Instance().npcData = null;
+            _dialogueSource.HideIndicators();
+            _dialogueSource = null;
             DialogueManager.Instance().currentStory = null;
-        }
-    }
-
-    public void AttachStory()
-    {
-        //story = DialogueSystem.Instance().currentStory;
-        //questID = dialogueSource.npcData.questID;
-    }
-
-    private void CheckTag()
-    {
-        if (DialogueManager.Instance().currentStory == null)
-        {
-            Debug.Log("no storry found");
-            return;
-        }
-
-        // Defensive programming to avoid null exceptions
-        if (!dialogueSource)
-            return;
-        if (!dialogueSource.npcData)
-            return;
-
-        Debug.Log("story connected: " + DialogueManager.Instance().currentStory);
-        Debug.Log(
-            "[pre-switch]the quest variable is: "
-                + DialogueManager.Instance().currentStory.variablesState[
-                    dialogueSource.npcData.questID
-                ]
-        );
-
-        if (
-            (string)
-                DialogueManager.Instance().currentStory.variablesState[
-                    dialogueSource.npcData.questID
-                ] == "FINISHED"
-        )
-        {
-            dialogueSource.npcData.HasQuest = false;
-            Debug.Log(
-                "[post_switch]the quest variable is: "
-                    + DialogueManager.Instance().currentStory.variablesState[
-                        dialogueSource.npcData.questID
-                    ]
-            );
         }
     }
 }

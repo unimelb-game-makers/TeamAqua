@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2b1020b86724d3ca3ac9e673132c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: {fileID: 4900000, guid: 0ba599a0e22d94e56bd5a86370b13df6, type: 3}
-  QuestCompleted: 0
+  questDatabase: {fileID: 11400000, guid: 3c3336e99d34b43d284658d62c98365b, type: 2}
