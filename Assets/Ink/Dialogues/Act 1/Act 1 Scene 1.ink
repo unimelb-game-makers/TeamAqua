@@ -2,63 +2,41 @@ EXTERNAL checkQuestStatus(id, steps)
 EXTERNAL TurnOffBarrier(id)
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
-EXTERNAL SetQuest(id)
-EXTERNAL FinishQuest(questID)
-EXTERNAL FinishDialogue(dialogueId)
+EXTERNAL AddQuest(id)
+EXTERNAL SubmitQuest(questId)
+EXTERNAL SetNextDialogue(dialogueId)
 
 INCLUDE ../Globals/Globals.ink
 
+
 // Variable Setup
-CONST DIALOGUE_1 = "DIALOGUE_1"
-CONST DIALOGUE_2 = "DIALOGUE_2"
-CONST DIALOGUE_3 = "DIALOGUE_3"
+CONST DIALOGUE_1 = "A1_S1_D1"
+CONST DIALOGUE_2 = "A1_S1_D2"
 
-CONST QUEST_1 = "QUEST_1"
-CONST QUEST_2 = "QUEST_2"
-
-//VAR quest_state = ""
+CONST QUEST_1 = "A1_S1_Q1"
 
 {
-    - dialogue_id == "DIALOGUE_1":
+    - dialogue_id == DIALOGUE_1:
         -> dialogue_1
-    - dialogue_id == "QUEST_1":
+    - dialogue_id == QUEST_1:
         -> quest_1
-    - dialogue_id == "DIALOGUE_2":
+    - dialogue_id == DIALOGUE_2:
         -> dialogue_2
 }
 
-
 ===dialogue_1===
-This is dialogue 1
-~ FinishDialogue(DIALOGUE_1)
-->quest_1
+->main
 
 ===quest_1===
-/*
-~ quest_state = quest_id1
-~checkQuestStatus(1, 1)
-~ quest_state = quest_id1
-*/
-{ 
-    - quest_state == "":
-        -> main 
-    - quest_state == "NOT_ACCEPTED":
-        -> TakeQuest
-    - quest_state == "NOT_FINISHED":
-        -> IncompleteQuest
-    - quest_state == "FINISHED":
-        -> SubmitQuest 
-    - quest_state == "SUBMITTED":
-        -> PostquestSubmit
+{
+    - quest_state == "ONGOING":
+        -> ongoing_quest_1
+    - quest_state == "COMPLETED":
+        -> completed_quest_1
 }
 
-~ FinishDialogue(QUEST_1)
-->dialogue_2
-
 ===dialogue_2===
-This is dialogue 2
-~ FinishDialogue(DIALOGUE_2)
-->END
+-> PostquestSubmit
 
 //---------------------------------================------------------------------
 
@@ -257,4 +235,3 @@ Amelia nudges your hand, and leads you toward the forests deeper in-land. #speak
 ===PostquestSubmit===
 What are you waiting for? let's go! #speaker:Amelia #portrait:AmeliaHappy
 ->END
-

@@ -6,7 +6,7 @@ EXTERNAL SetQuest(id)
 EXTERNAL FinishQuest(questID)
 EXTERNAL FinishDialogue(dialogueId)
 
-INCLUDE ../Island 1/Global var storage/globals.ink
+INCLUDE ../Globals/Globals.ink
 
 
 
@@ -14,40 +14,24 @@ INCLUDE ../Island 1/Global var storage/globals.ink
 
 /*
 MIGHT WANNA SPLIT EACH ORB KNOT INTO THEIR OWN SCRIPT
-
-
-
-
 */
-
-
-
-
-
 
 
 
 
 // Variable Setup
-CONST DIALOGUE_1 = "DIALOGUE_1"
-CONST DIALOGUE_2 = "DIALOGUE_2"
-CONST DIALOGUE_3 = "DIALOGUE_3"
+CONST DIALOGUE_1 = "A0_S2_D1"
+CONST DIALOGUE_2 = "A0_S2_D2"
+CONST DIALOGUE_3 = "A0_S2_D3"
 
-CONST QUEST_1 = "QUEST_1"
-CONST QUEST_2 = "QUEST_2"
-
-VAR quest_state = ""
-
-/*
 {
     - dialogue_id == "DIALOGUE_1":
-        -> dialogue_1
-    - dialogue_id == "QUEST_1":
-        -> quest_1
+        -> A0_S2_O1
     - dialogue_id == "DIALOGUE_2":
-        -> dialogue_2
+        -> A0_S2_O2
+    - dialogue_id == "DIALOGUE_3":
+        -> A0_S2_O3
 }
-*/
 
 // fades into noelle standing in the dream realm
 // movement tutorial
@@ -61,8 +45,6 @@ VAR quest_state = ""
 In just one night; your family, your home…
 …Who knows what happened to me in that storm? #speaker:noelle
 It might be better if I just…
-
-// ~enable next dialogue_id
 ->DONE
 
 
@@ -71,8 +53,6 @@ It might be better if I just…
 You try to push the memories of your family’s betrayal aside. #speaker:narrator
 The glow of these strange objects seem to calm your mind a little.
 That is, until familiar voices float from them.
-
-// ~enable next dialogue_id
 ->DONE
 
 
@@ -95,8 +75,6 @@ Now, you’ll cease to exist in records. Turned into the very kind of monster th
 <i>Which is why we never leave our Island of Dusk.</i> 
 You’ve only seen drawings of such creatures in books; <i>animals,</i> as they were also called, with threatening features and the ability to speak like humans do. #speaker:narrator
 And now… you are neither. A hybrid of the two that is even more monstrous than any child could imagine.
-
-// ~enable next dialogue_id
 ->END
 //final sun exit icon
 //fade into main scene and act 1

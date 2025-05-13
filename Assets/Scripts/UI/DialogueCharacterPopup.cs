@@ -58,7 +58,7 @@ namespace Popups
                     case SPEAKER_TAG: //change speaker name depending on the speaker tag
                         // Noelle only apperas on the left
                         // Other characters only appear on the right
-                        leftCharacter.gameObject.SetActiveFast(tagValue == "Noelle");
+                        leftCharacter.gameObject.SetActiveFast(tagValue.Contains("Noelle"));
                         leftCharacter.SetName(tagValue);
                         rightCharacter.gameObject.SetActiveFast(
                             tagValue != "Noelle" && tagValue != "Narrator"
