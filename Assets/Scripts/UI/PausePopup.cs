@@ -1,13 +1,16 @@
 using Kuroneko.UIDelivery;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Popups
 {
     public class PausePopup : Popup
     {
+        [SerializeField] private PlayerSave playerSave;
         [SerializeField] private Button resumeButton;
         [SerializeField] private Button settingsButton;
+        [SerializeField] private Button mainMenuButton;
         [SerializeField] private Button quitButton;
         private UIController _controller;
     
@@ -15,6 +18,7 @@ namespace Popups
         {
             resumeButton.onClick.AddListener(Resume);
             settingsButton.onClick.AddListener(Settings);
+            mainMenuButton.onClick.AddListener(MainMenu);
             quitButton.onClick.AddListener(Quit);
         }
 
@@ -33,8 +37,17 @@ namespace Popups
         
         }
 
+        private void MainMenu()
+        {
+            // Need to unpause when going back out
+            playerSave.Save();
+            _controller.TogglePause();
+            SceneManager.LoadScene("Start");
+        }
+
         private void Quit()
         {
+            playerSave.Save();
             Application.Quit();
         }
     }

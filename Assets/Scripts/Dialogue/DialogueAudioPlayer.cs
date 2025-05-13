@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using Random = UnityEngine.Random;
 
 public class DialogueAudioPlayer : MonoBehaviour
 {
     [Header("Audio")]
     [SerializeField] public DialougeAudioInfo defaultAudioInfo;
-    [SerializeField] public DialougeAudioInfo[] audioInfos;
+    [SerializeField] public DialougeAudioInfo[] audioInfos = Array.Empty<DialougeAudioInfo>();
     public DialougeAudioInfo currentAudioInfo;
-    private Dictionary<string, DialougeAudioInfo> audioInfoDictionary;
+    private Dictionary<string, DialougeAudioInfo> audioInfoDictionary = new();
     public AudioSource audioSource;
 
     private bool HashApproach = true; //-> set to true if want predictable-ish dialogue speech

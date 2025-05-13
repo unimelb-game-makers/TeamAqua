@@ -55,11 +55,6 @@ namespace Popups
                      id = int.Parse(tagValue); --> try to convert tagvalue to int
                     break;
                     */
-                    case "questS": //---> this handles dialogue-based quest giving
-                        QuestManager.instance.AddQuest(int.Parse(tagValue));
-                        Debug.Log("questS working on C#-end");
-                        break;
-
                     case SPEAKER_TAG: //change speaker name depending on the speaker tag
                         // Noelle only apperas on the left
                         // Other characters only appear on the right

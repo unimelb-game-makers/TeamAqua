@@ -35,20 +35,18 @@ namespace Popups
 
         private bool CanPause()
         {
-            return !pausePopup.isShowing && !pausePopup.isAnimating;
+            return !pausePopup.isShowing && !pausePopup.isAnimating && !dialoguePopup.isShowing;
         }
 
         private bool CanUnpause()
         {
-            return pausePopup.isShowing && !pausePopup.isAnimating;
+            return pausePopup.isShowing && !pausePopup.isAnimating && !dialoguePopup.isShowing;
         }
         
         public void TogglePause()
         {
             if (dialoguePopup.isShowing)
             {
-                dialoguePopup.HidePopup();
-                StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
                 return;
             }
 
