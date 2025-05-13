@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Sirenix.OdinInspector;
 
 namespace Popups
 {
@@ -96,7 +96,7 @@ namespace Popups
                 EndCoroutine();
                 yield break;
             }
-            
+
             if (fastForward)
                 fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
@@ -118,7 +118,9 @@ namespace Popups
                 else
                 {
                     if (dialogueText.maxVisibleCharacters < dialogueText.text.Length)
-                            DialogueManager.Instance().DialogueAudioPlayer.PlayDialogueSound(
+                        DialogueManager
+                            .Instance()
+                            .DialogueAudioPlayer.PlayDialogueSound(
                                 dialogueText.maxVisibleCharacters,
                                 dialogueText.text[dialogueText.maxVisibleCharacters]
                             );
@@ -141,8 +143,11 @@ namespace Popups
                     fastForward.gameObject.SetActiveFast(false);
             }
 
-            StopCoroutine(lineCoroutine);
-            lineCoroutine = null;
+            if (lineCoroutine != null)
+            {
+                StopCoroutine(lineCoroutine);
+                lineCoroutine = null;
+            }
         }
 
         private void OnDestroy()

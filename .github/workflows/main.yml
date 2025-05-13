@@ -18,46 +18,12 @@ on:
     branches:
       - main
 jobs:
-
-  # check if the variables and secrets are set
-  validation:
-    name : Check secret and variable
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check Unity License
-        run: |
-          if [ -z "${{ secrets.UNITY_LICENSE }}" ]; then
-            echo "UNITY_LICENSE is not set"
-            exit 1
-          fi
-
-      - name: Check Unity Email
-        run: |
-          if [ -z "${{ secrets.UNITY_EMAIL }}" ]; then
-            echo "UNITY_EMAIL is not set"
-            exit 1
-          fi
-
-      - name: Check Unity Password
-        run: |
-          if [ -z "${{ secrets.UNITY_PASSWORD }}" ]; then
-            echo "UNITY_PASSWORD is not set"
-            exit 1
-          fi
-      - name: Check Unity Version
-        run: |
-          if [ -z "${{ vars.UNITY_VERSION }}" ]; then
-            echo "UNITY_VERSION is not set"
-            exit 1
-          fi
-  
-
   build:
     name: Build my project ✨
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        targetPlatform: [WebGL, StandaloneWindows64]
+        targetPlatform: [StandaloneWindows64]
 
         
     steps:

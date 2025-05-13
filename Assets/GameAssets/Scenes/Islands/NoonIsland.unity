@@ -162,6 +162,8 @@ MonoBehaviour:
   spriteManager: {fileID: 7950111352964691694, guid: 375aadee5f9c84339a75d3b078688e02, type: 3}
   dayManager: {fileID: 8598276469370243906, guid: 2e1bf93a0e730453098448622e287423, type: 3}
   waterManager: {fileID: 3745968092491913952, guid: 2643d9c1ca4af4c70a32d5fa7db43739, type: 3}
+  noonIslandLevel: {fileID: -8733244638997691217, guid: 5f16854720499f0489f576e81765265d, type: 3}
+  playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}
 --- !u!4 &1518198145
 Transform:
   m_ObjectHideFlags: 0

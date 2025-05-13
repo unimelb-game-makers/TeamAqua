@@ -3,15 +3,23 @@ using UnityEngine;
 
 public class Cutscene : MonoBehaviour
 {
-    [Header("Level")] 
-    [SerializeField] private UI ui;
-    
-    [Header("Managers")] 
-    [SerializeField] private AudioManager audioManager;
-    [SerializeField] private DialogueManager dialogueManager;
-    [SerializeField] private SpriteManager spriteManager;
+    [Header("Level")]
+    [SerializeField]
+    private UI ui;
 
-    [Header("Level")] [SerializeField] private Level level;
+    [Header("Managers")]
+    [SerializeField]
+    private AudioManager audioManager;
+
+    [SerializeField]
+    private DialogueManager dialogueManager;
+
+    [SerializeField]
+    private SpriteManager spriteManager;
+
+    [Header("Level")]
+    [SerializeField]
+    private Level level;
 
     private void Awake()
     {
@@ -19,7 +27,7 @@ public class Cutscene : MonoBehaviour
         InitManagers();
         InitLevel();
     }
-    
+
     /// <summary>
     /// Simply creates the UI.
     /// </summary>
@@ -27,16 +35,16 @@ public class Cutscene : MonoBehaviour
     {
         Instantiate(ui);
     }
-    
+
     private void InitManagers()
     {
         GameObject manager = new("Managers");
         DontDestroyOnLoad(manager);
-        Instantiate(audioManager, manager.transform);
-        Instantiate(dialogueManager, manager.transform);
-        Instantiate(spriteManager, manager.transform);
+        Game.AddManager(Instantiate(audioManager, manager.transform));
+        Game.AddManager(Instantiate(dialogueManager, manager.transform));
+        Game.AddManager(Instantiate(spriteManager, manager.transform));
     }
-    
+
     /// <summary>
     /// Simply creates the level.
     /// </summary>

@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
-using TMPro;
+using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour, ISaveable
 {
-    [SerializeField] private DialogueAudioPlayer dialogueAudioPlayer;
+    [SerializeField]
+    private DialogueAudioPlayer dialogueAudioPlayer;
+
     [SerializeField]
     private InputProvider playerInputProvider;
 
@@ -16,22 +18,24 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private TextAsset LoadGlobalJSON;
 
+    [Header("Dialogues")] 
+    [NonSerialized, ShowInInspector, ReadOnly] private string _scriptId;
+    [NonSerialized, ShowInInspector, ReadOnly] private string _dialogueId;
+    [SerializeField] private DialogueDatabase dialogueDatabase;
+    public string ScriptId => _scriptId;
+    public string DialogueId => _dialogueId;
+
     public Story currentStory;
 
-    [SerializeField]
-    public bool dialogueIsPlaying { get; private set; }
+    private bool dialogueIsPlaying { get; set; }
     private DialogueVariable dialogueVariable;
 
-    private static DialogueManager instance;
-
-    public bool displaying = false;
+    public static DialogueManager instance;
 
     public static Action OnDialogueStart;
     public static Action<string, List<Choice>, bool> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
-
-    public NpcData npcData = null;
 
     public DialogueAudioPlayer DialogueAudioPlayer => dialogueAudioPlayer;
 
@@ -62,45 +66,88 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueAudioPlayer.InitializeAudioDictionary();
     }
-
-    void Update()
+    
+    public void Load(SaveSlot saveSlot)
     {
-        if (!dialogueIsPlaying)
-        {
-            return;
-        }
+        DialogueSaveData saveData = saveSlot.dialogueSaveData;
+        _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScript.name : saveData.scriptId;
+        _dialogueId = saveData.dialogueId ?? string.Empty;
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, int DialogueTypeID)
+    public SaveSlot Save(SaveSlot saveSlot)
     {
-        //Time.timeScale = 0;         this works
+        SaveSlot save = saveSlot;
+        save.dialogueSaveData.scriptId = _scriptId;
+        save.dialogueSaveData.dialogueId = _dialogueId;
+        return save;
+    }
 
-        if (DialogueTypeID == 0)
+    /// <summary>
+    /// Plays dialogue based on the script. It will always take the starting dialogue.
+    /// </summary>
+    /// <param name="script"></param>
+    /// <param name="mode"></param>
+    /// <exception cref="NullReferenceException"></exception>
+    public void EnterDialogue(DialogueScript script, DialogueMode mode = DialogueMode.Frozen)
+    {
+        if (script == null)
+            throw new NullReferenceException("DIALOGUE | Provided script is null");
+        // Go to the start of the next script
+        DialogueNode node = script.dialogues.Count > 0 ? script.dialogues[0] : null;
+        EnterDialogueMode(script, node, mode);
+    }
+
+    /// <summary>
+    /// Will play the current node for the script. If the current dialogue cannot be found, it will throw an error.
+    /// </summary>
+    /// <param name="node"></param>
+    /// <param name="mode"></param>
+    public void EnterDialogue(DialogueNode node, DialogueMode mode = DialogueMode.Frozen)
+    {
+        DialogueScript script = dialogueDatabase.GetScript(_scriptId);
+        if (!script.TryGetDialogue(node.name, out _))
+        {
+            throw new InvalidOperationException(
+                $"DIALOGUE | Could not find Node '{node.name}' for Script {script.name}");
+        }
+
+        EnterDialogueMode(script, node, mode);
+    }
+
+    private void EnterDialogueMode(DialogueScript script, DialogueNode node, DialogueMode mode)
+    {
+        // Don't play the script and node if it is already behind
+        if (dialogueDatabase.HasSeen(script, node))
+        {
+            Debug.Log($"DIALOGUE | Already seen {script.name}, not showing it");
+            return;
+        }
+        currentStory = new Story(script.inkFile.text);
+        _scriptId = script.name;
+        _dialogueId = node != null ? node.name : string.Empty;
+        // This loads in the global variables as well
+        dialogueVariable.StartListening(currentStory);
+        // Set the dialogue id for the script
+        if (currentStory.variablesState.GlobalVariableExistsWithName("dialogue_id"))
+            currentStory.variablesState["dialogue_id"] = _dialogueId;
+        
+        // if it is a quest, make sure to update the quest state
+        if (_dialogueId.Contains('Q'))
+        {
+            QuestState state = QuestManager.instance.CheckQuest(_dialogueId);
+            currentStory.variablesState["quest_state"] = state.ToString().ToUpper();
+        }
+
+        if (mode == DialogueMode.Frozen)
         {
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
-            //Debug.Log("time stopped");
-            currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = false; // Setting the Input provider here.
-            //UIinputProvider.instance().SendUIinput(5);
-            //dialoguePanel.SetActive(true);
-            dialogueVariable.StartListening(currentStory);
-            currentStory.BindExternalFunction(
-                "checkQuestStatus",
-                (int id, int steps) =>
-                { //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
-                    Debug.Log("Function binded to ink at " + id + steps);
-                    QuestManager.Instance().CheckStatus(id, steps, currentStory);
-                    //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
-                }
-            );
             currentStory.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
                 {
-                    //currentStory.variablesState["cutscene0"] = "AAAAAA";
-                    //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
                     DialogueTriggerControl.instance().Trigger();
                 }
             );
@@ -111,6 +158,22 @@ public class DialogueManager : MonoBehaviour
                 (string id) =>
                 { // this is for starting a track during dialogue
                     AudioManager.Instance.Play(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "AddQuest",
+                (string id) =>
+                {
+                    QuestManager.instance.AddQuest(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "SubmitQuest",
+                (string questID) =>
+                {
+                    QuestManager.instance.SubmitQuest(questID);
                 }
             );
 
@@ -139,32 +202,19 @@ public class DialogueManager : MonoBehaviour
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
-                    // When the scene changes, we need to manually call Exit Dialogue Mode
-                    Cutscene_1.Instance.SceneChanger(SceneName);
-                    StartCoroutine(ExitDialogueMode());
+                    SceneManager.LoadScene(SceneName);
+                    Debug.Log("scene changed to " + SceneManager.GetActiveScene());
                 }
             );
-
             ContinueStory();
         }
 
-        if (DialogueTypeID == 1)
+        else if (mode == DialogueMode.Moving)
         {
             //changine to UI state done in child trigger points
-            currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             playerInputProvider.can_move = true; // Setting the Input provider here.
-            dialogueVariable.StartListening(currentStory);
             Debug.Log("dialogue triggers collided");
-            currentStory.BindExternalFunction(
-                "checkQuestStatus",
-                (int id, int steps) =>
-                { //binds the CompleteStep function to ink, calls it in certain parts of the ink script (in knot IncompleteSteps for now)
-                    Debug.Log("Function binded to ink at " + id + steps);
-                    QuestManager.Instance().CheckStatus(id, steps, currentStory);
-                    //currentStory.variablesState["quest_id1"] = "YES";   //this might solve the issue actually, if we can link 'steps' from completestep to inventory
-                }
-            );
             currentStory.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
@@ -178,11 +228,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public IEnumerator ExitDialogueMode()
+    private IEnumerator ExitDialogueMode()
     {
         Debug.Log("ExitDialogueMode called.....");
         yield return new WaitForSeconds(0.2f); //wait check to resolve all same-key-input errors
-        npcData = null;
         dialogueVariable.StopListening(currentStory);
         dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         //currentStory.UnbindExternalFunction("checkQuestStatus");
@@ -193,7 +242,6 @@ public class DialogueManager : MonoBehaviour
 
     public void ContinueStory()
     {
-        Debug.Log("ContinueStory called.....");
         if (currentStory.canContinue)
         {
             string nextLine = currentStory.Continue();
@@ -204,14 +252,18 @@ public class DialogueManager : MonoBehaviour
             EndStory();
         }
     }
-    
+
     public void SkipStory()
     {
+        // Current bug: skip story breaks quest checking, likely because it makes the function calling empty? needs testing
+
         Debug.Log("Skip");
         string nextLine = string.Empty;
         // Continues until we encounter a choice, or the story cannot continue
         while (currentStory.canContinue && currentStory.currentChoices.Count == 0)
+        {
             nextLine = currentStory.Continue();
+        }
         // It will end the story if cannot continue anymore and there are no more choices
         if (!currentStory.canContinue && currentStory.currentChoices.Count == 0)
             EndStory();
@@ -227,55 +279,36 @@ public class DialogueManager : MonoBehaviour
 
     private void EndStory()
     {
+        Debug.Log("DIALOGUE | Ending Story");
+        // Set the dialogueId to the next one in the database
+        DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
+        // If the dialogue is a quest, we only move to the next dialogue if it has been submitted 
+        bool canContinue = !_dialogueId.Contains("Q") || QuestManager.instance.IsSubmitted(_dialogueId);
+        if (canContinue)
+        {
+            string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
+            _dialogueId = nextDialogue;
+            // If we are done with the dialogues, then the script is done
+            if (string.IsNullOrEmpty(nextDialogue))
+                EndScript();
+        }
         StartCoroutine(ExitDialogueMode());
+    }
+
+    private void EndScript()
+    {
+        // TODO(Alex): Don't actually set the next script here.
+        string nextScript = dialogueDatabase.GetNextScript(_scriptId);
+        _scriptId = nextScript;
+        Debug.Log($"DIALOGUE | Setting next script to {_scriptId}");
+        if (string.IsNullOrEmpty(nextScript))
+        {
+            Debug.Log("DIALOGUE | Finished all scripts.");
+        }
     }
 
     public void ChooseChoice(int choiceIndex)
     {
-        // Retrieve the selected choice
-        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
-
-        // Check if the selected choice has the "quest" tag
-        if (selectedChoice.tags != null)
-        {
-            for (int i = 0; i < selectedChoice.tags.Count; i++)
-            {
-                if (selectedChoice.tags[i].Contains("quest"))
-                {
-                    // for substring 6
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(6));
-
-                    // give quest to player
-                    if (questID > 0)
-                    {
-                        QuestManager.instance.AddQuest(questID);
-                    }
-                }
-                //steven's change below, needs more testing
-                if (selectedChoice.tags[i].Contains("finish"))
-                {
-                    int questID = int.Parse(selectedChoice.tags[i].Substring(7));
-
-                    // finishes the quest upon interaction
-                    if (questID > 0)
-                    {
-                        //NPCDialogue.instance().HasQuest = false;    // not working rn, will wait for quest-inventory integration
-                        // NOTE(Alex): As of 2nd May, NPC Data is not being used currently.
-                        if (npcData)
-                        {
-                            npcData.HasQuest = false;
-                        }
-                        QuestManager.instance.RemoveQuest(questID);
-                    }
-                }
-
-                if (selectedChoice.tags[i].Contains("done"))
-                {
-                    StartCoroutine(DialogueManager.Instance().ExitDialogueMode());
-                }
-            }
-        }
-
         // Now process the choice and continue the story
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
@@ -307,4 +340,5 @@ public class DialogueManager : MonoBehaviour
         }
         return variableValue;
     }
+
 }
