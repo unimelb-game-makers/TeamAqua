@@ -15,5 +15,6 @@ MonoBehaviour:
   startScript: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   scripts:
   - {fileID: 11400000, guid: ed246c066b6f941b880cd5aa9c04eced, type: 2}
+  - {fileID: 11400000, guid: 9740f0a2cd2d6c94fb0e53630f2a47af, type: 2}
   - {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   - {fileID: 11400000, guid: 45fc2c202ff2d4f069e1500821d8877b, type: 2}

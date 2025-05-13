@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
-  m_Name: A1_S2
+  m_Script: {fileID: 11500000, guid: 286773727a872479bb874945e14dbae6, type: 3}
+  m_Name: A1_S2_D1
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 33200dae5378a2342b771cbdae19330d, type: 3}
-  dialogues: []
+  infinite: 1
