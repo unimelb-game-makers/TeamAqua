@@ -7,14 +7,15 @@ using UnityEngine;
 public class QuestStep : ScriptableObject
 {
     public QuestType type = QuestType.Gather;
+
     [TextArea]
     public string description = string.Empty;
-    [ShowIf("type", QuestType.Gather)] 
+
+    [ShowIf("type", QuestType.Gather)]
     public List<QuestItem> requiredItems = new();
-    [ShowIf("type", QuestType.Location)] 
-    public string locationId = string.Empty;
-    [ShowIf("type", QuestType.Talk)] 
-    public string npcId = string.Empty;
+
+    [ShowIf("type", QuestType.Action)]
+    public string actionId = string.Empty;
 
     public void Resolve()
     {
@@ -23,9 +24,19 @@ public class QuestStep : ScriptableObject
             case QuestType.Gather:
                 for (int i = 0; i < requiredItems.Count; ++i)
                 {
-                    if (!InventoryManager.instance.HasItem(requiredItems[i].item.name, requiredItems[i].amount))
-                        throw new InvalidOperationException($"QUEST | Could not resolve {name} due to lack of items");
-                    InventoryManager.instance.SubtractItem(requiredItems[i].item, requiredItems[i].amount);
+                    if (
+                        !InventoryManager.instance.HasItem(
+                            requiredItems[i].item.name,
+                            requiredItems[i].amount
+                        )
+                    )
+                        throw new InvalidOperationException(
+                            $"QUEST | Could not resolve {name} due to lack of items"
+                        );
+                    InventoryManager.instance.SubtractItem(
+                        requiredItems[i].item,
+                        requiredItems[i].amount
+                    );
                 }
                 break;
         }

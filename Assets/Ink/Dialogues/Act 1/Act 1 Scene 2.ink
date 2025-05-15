@@ -96,6 +96,7 @@ Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amel
 You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
 …Knock yourself out, I suppose. #portrait:AmeliaNormal
 //puzzle tutorial appears here. Player gets to solve it. After which dialogue continues
+~ AddQuest(QUEST_1)
 ->DONE
 
 ===ongoing_quest_1===
@@ -103,6 +104,7 @@ You haven't solved the puzzle yet!
 ->DONE
 
 ===completed_quest_1===
+~SubmitQuest(QUEST_1)
 …? #speaker:Amelia #portrait:AmeliaSilly
 Amelia studies you like you’re an alien. #speaker:Narrator 
 It’d take twenty men to move that! How on earth did you—? #speaker:Amelia #portrait:AmeliaSilly
@@ -152,9 +154,9 @@ We aren’t doing anything suspicious! #speaker:Amelia
 (It’s clear that this girl isn’t just going to let us off easy, but maybe we can get closer to what we need, this way.)
 
 //new objective: follow the strange girl into the forest
-->END
+->DONE
 
 
 ===PostquestSubmit===
 Lets follow her!    #speaker:Amelia
-->DONE
+->END
