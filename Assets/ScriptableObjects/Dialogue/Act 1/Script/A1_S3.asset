@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkFile: {fileID: 4900000, guid: 77e384fd2a14e3a45ac47c9524e20b7d, type: 3}
   dialogues:
-  - {fileID: 11400000, guid: d78171af0639ced469a2b6dd526ef7db, type: 2}
-  - {fileID: 11400000, guid: 87a6a8b0266d51445996d326dd9cef85, type: 2}
-  - {fileID: 11400000, guid: 72903fd51c858a04b8372d2c50a653ac, type: 2}
+  - {fileID: 11400000, guid: 516cc53674a583d4194f0cb40bc17a78, type: 2}
+  - {fileID: 11400000, guid: 59b9f780b1fa0b44abbd7dff9740b37d, type: 2}
+  - {fileID: 11400000, guid: 07e4e86765595ae41adc254114694e63, type: 2}
