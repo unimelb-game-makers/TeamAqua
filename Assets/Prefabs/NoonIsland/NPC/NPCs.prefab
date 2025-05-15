@@ -470,6 +470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villager-F
       objectReference: {fileID: 0}
+    - target: {fileID: 6704491050600095578, guid: 3b40b068bfb975d488a31344db291c28, type: 3}
+      propertyPath: npcData
+      value: 
+      objectReference: {fileID: 11400000, guid: da3509ebb975e1845bfe2f9533a9d8c4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -11,8 +11,12 @@ INCLUDE ../Globals/Globals.ink
 
 // Variable Setup
 CONST DIALOGUE_1 = "A1_S2_D1"
-CONST QUEST_1 = "A1_S2_Q1"
 CONST DIALOGUE_2 = "A1_S2_D2"
+CONST DIALOGUE_3 = "A1_S2_D3"
+CONST DIALOGUE_4 = "A1_S2_D4"
+CONST DIALOGUE_5 = "A1_S2_D5"
+CONST QUEST_1 = "A1_S2_Q1"
+CONST DIALOGUE_6 = "A1_S2_D6"
 
 {
     - dialogue_id == DIALOGUE_1:
@@ -26,7 +30,8 @@ CONST DIALOGUE_2 = "A1_S2_D2"
 
 // outline of main branches
 ===dialogue_1===
-->A1_S2_D1_1
+->A1_S2_D1
+
 
 ===quest_1===
 {
@@ -48,7 +53,7 @@ Run into a puzzle > puzzle tutorial
 Cross into Viridi Settlement, meet Amaya
 */
 
-===A1_S2_D1_1===
+===A1_S2_D1===
 //follow the path and reach a certain point in the forest
 So, what's your plan for getting out of here before the disaster? #speaker:Amelia #portrait:AmeliaNormal
 My plan… Well, I guess the first step is trying to fix my ship. #speaker:Noelle #portrait:NoelleSceptical
@@ -86,6 +91,7 @@ Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amel
     ->quest
 +[Let me take a look.]
     ->quest
+    
 ===quest===
 You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
 …Knock yourself out, I suppose. #portrait:AmeliaNormal

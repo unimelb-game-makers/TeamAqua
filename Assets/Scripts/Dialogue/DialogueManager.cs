@@ -18,10 +18,15 @@ public class DialogueManager : MonoBehaviour, ISaveable
     [SerializeField]
     private TextAsset LoadGlobalJSON;
 
-    [Header("Dialogues")] 
-    [NonSerialized, ShowInInspector, ReadOnly] private string _scriptId;
-    [NonSerialized, ShowInInspector, ReadOnly] private string _dialogueId;
-    [SerializeField] private DialogueDatabase dialogueDatabase;
+    [Header("Dialogues")]
+    [NonSerialized, ShowInInspector, ReadOnly]
+    private string _scriptId;
+
+    [NonSerialized, ShowInInspector, ReadOnly]
+    private string _dialogueId;
+
+    [SerializeField]
+    private DialogueDatabase dialogueDatabase;
     public string ScriptId => _scriptId;
     public string DialogueId => _dialogueId;
 
@@ -66,11 +71,13 @@ public class DialogueManager : MonoBehaviour, ISaveable
         dialogueIsPlaying = false;
         dialogueAudioPlayer.InitializeAudioDictionary();
     }
-    
+
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
-        _scriptId = string.IsNullOrEmpty(saveData.scriptId) ? dialogueDatabase.startScript.name : saveData.scriptId;
+        _scriptId = string.IsNullOrEmpty(saveData.scriptId)
+            ? dialogueDatabase.startScript.name
+            : saveData.scriptId;
         _dialogueId = saveData.dialogueId ?? string.Empty;
     }
 
@@ -108,7 +115,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
         if (!script.TryGetDialogue(node.name, out _))
         {
             throw new InvalidOperationException(
-                $"DIALOGUE | Could not find Node '{node.name}' for Script {script.name}");
+                $"DIALOGUE | Could not find Node '{node.name}' for Script {script.name}"
+            );
         }
 
         EnterDialogueMode(script, node, mode);
@@ -130,7 +138,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         // Set the dialogue id for the script
         if (currentStory.variablesState.GlobalVariableExistsWithName("dialogue_id"))
             currentStory.variablesState["dialogue_id"] = _dialogueId;
-        
+
         // if it is a quest, make sure to update the quest state
         if (_dialogueId.Contains('Q'))
         {
@@ -208,7 +216,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
             );
             ContinueStory();
         }
-
         else if (mode == DialogueMode.Moving)
         {
             //changine to UI state done in child trigger points
@@ -282,8 +289,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
         Debug.Log("DIALOGUE | Ending Story");
         // Set the dialogueId to the next one in the database
         DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
-        // If the dialogue is a quest, we only move to the next dialogue if it has been submitted 
-        bool canContinue = !_dialogueId.Contains("Q") || QuestManager.instance.IsSubmitted(_dialogueId);
+        // If the dialogue is a quest, we only move to the next dialogue if it has been submitted
+        bool canContinue =
+            !_dialogueId.Contains("Q") || QuestManager.instance.IsSubmitted(_dialogueId);
         if (canContinue)
         {
             string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
@@ -298,10 +306,15 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private void EndScript()
     {
         // TODO(Alex): Don't actually set the next script here.
-        string nextScript = dialogueDatabase.GetNextScript(_scriptId);
-        _scriptId = nextScript;
+        DialogueScript nextScript = dialogueDatabase.GetNextScript(_scriptId);
+        _scriptId = nextScript ? nextScript.name : string.Empty;
+        if (nextScript)
+        {
+            DialogueNode node = nextScript.dialogues.Count > 0 ? nextScript.dialogues[0] : null;
+            _dialogueId = node ? node.name : string.Empty;
+        }
         Debug.Log($"DIALOGUE | Setting next script to {_scriptId}");
-        if (string.IsNullOrEmpty(nextScript))
+        if (!nextScript)
         {
             Debug.Log("DIALOGUE | Finished all scripts.");
         }
@@ -340,5 +353,4 @@ public class DialogueManager : MonoBehaviour, ISaveable
         }
         return variableValue;
     }
-
 }
