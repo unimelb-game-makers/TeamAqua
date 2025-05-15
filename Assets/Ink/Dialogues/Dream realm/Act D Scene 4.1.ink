@@ -11,8 +11,8 @@ INCLUDE ../Globals/Globals.ink
 
 
 // Variable Setup
-CONST DIALOGUE_1 = "A1_S4_01"
-CONST DIALOGUE_2 = "A1_S4_02"
+CONST DIALOGUE_1 = "A1_S4.1_D1"
+CONST DIALOGUE_2 = "A1_S4.1_D2"
 
 {
     - dialogue_id == "DIALOGUE_1":
