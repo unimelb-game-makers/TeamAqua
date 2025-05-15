@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
-  m_Name: ElderData
+  m_Name: OrenData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 4579906c17336ea48bb5ca4951df8162, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 56713f13b35643a4a8b16d5f38ecbf86, type: 2}
+    mode: 0

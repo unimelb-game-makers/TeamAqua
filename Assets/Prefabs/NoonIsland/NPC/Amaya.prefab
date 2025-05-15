@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmayaModel
       objectReference: {fileID: 0}
+    - target: {fileID: 5721314071206917751, guid: f8c5774bb34a2af4c81ba417f3cdd25b, type: 3}
+      propertyPath: npcData
+      value: 
+      objectReference: {fileID: 11400000, guid: 014eb81874a806c44ad5de1603c6572a, type: 2}
     - target: {fileID: 9098568279135157093, guid: f8c5774bb34a2af4c81ba417f3cdd25b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.74
