@@ -1,8 +1,35 @@
+EXTERNAL checkQuestStatus(id, steps)
+EXTERNAL TurnOffBarrier(id)
+EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
+EXTERNAL PlayBGM(id)
+EXTERNAL AddQuest(id)
+EXTERNAL SubmitQuest(questId)
+EXTERNAL SetNextDialogue(dialogueId)
+
+INCLUDE ../Globals/Globals.ink
+
+
+// Variable Setup
+CONST DIALOGUE_1 = "A1_S4_D1"
+
+
+{
+    - dialogue_id == DIALOGUE_1:
+        -> dialogue_1
+
+}
+
+// outline of main branches
+===dialogue_1===
+->A1_S4_D1_1
+
+/*
 SCENE 4 ✅
 Listen to Oren’s story
 Dream realm 4.1
+*/
 
-===scenefour===
+===A1_S4_D1_1===
 //oren is somewhere off to the side of the village. If there’s a river in the forest that’s what they’re next to
 //he’s surrounded by a crowd
 
@@ -174,3 +201,5 @@ Good. #speaker:amaya
 …If you do, I’ll find out. #speaker:amaya
     //-> scenefoursleep
     ->DONE
+
+// no repeat post-dialgoue

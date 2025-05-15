@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cd55d97d63b4451b46d6168f8bb2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSave: {fileID: 11400000, guid: 055a02550362f41f89f8b9829825b4b4, type: 2}
+  playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}
   targetColor: {r: 0, g: 0, b: 0, a: 1}

@@ -12,7 +12,6 @@ INCLUDE ../Globals/Globals.ink
 // Variable Setup
 CONST DIALOGUE_1 = "A0_S1_D1"
 
-
 {
     - dialogue_id == DIALOGUE_1:
         -> dialogue_1

@@ -9,7 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 286773727a872479bb874945e14dbae6, type: 3}
-  m_Name: A1_S2_D1
+  m_Script: {fileID: 11500000, guid: 4a0a81e8bdfc8454c8af0111505c283a, type: 3}
+  m_Name: A1_S3_Q1 1
   m_EditorClassIdentifier: 
   infinite: 0
+  title: Solve the ancient ruins again
+  description: solve puzzle
+  steps:
+  - {fileID: 11400000, guid: 7bde6a348cadbe44cb59611178b9cf80, type: 2}
+  reward:
+    exp: 0
+    gold: 0
+    item: []

@@ -10,12 +10,10 @@ INCLUDE ../Globals/Globals.ink
 
 
 // Variable Setup
-CONST DIALOGUE_1 = "A1_S1_D1"
-CONST DIALOGUE_2 = "A1_S1_D2"
+CONST DIALOGUE_1 = "A1_S2_D1"
+CONST QUEST_1 = "A1_S2_Q1"
+CONST DIALOGUE_2 = "A1_S2_D2"
 
-CONST QUEST_1 = "A1_S1_Q1"
-
-/*
 {
     - dialogue_id == DIALOGUE_1:
         -> dialogue_1
@@ -23,10 +21,12 @@ CONST QUEST_1 = "A1_S1_Q1"
         -> quest_1
     - dialogue_id == DIALOGUE_2:
         -> dialogue_2
-}*/
-/*
+}
+
+
+// outline of main branches
 ===dialogue_1===
-->main
+->A1_S2_D1_1
 
 ===quest_1===
 {
@@ -38,95 +38,117 @@ CONST QUEST_1 = "A1_S1_Q1"
 
 ===dialogue_2===
 -> PostquestSubmit
-*/
+
+
+
+/*
 SCENE 2 ✅
 Walk into the forest area
 Run into a puzzle > puzzle tutorial 
-Cross into Viridi Settlement, meet amaya
+Cross into Viridi Settlement, meet Amaya
+*/
 
+===A1_S2_D1_1===
 //follow the path and reach a certain point in the forest
-So, what's your plan for getting out of here before the disaster? #speaker:amelia #portrait:amelianormal
-My plan… Well, I guess the first step is trying to fix my ship. #speaker:noelle #portrait:noellesceptical
-Are you sure you can fix it? It looks pretty bad. #speaker:amelia #portrait:amelianormal
-I mean I’ve never built a ship alone before, but I can try. My home island’s practices are all about wayfaring. #speaker:noelle #portrait:noellesmallsmile
-The mess I saw wasn’t looking very functional. #speaker:amelia #portrait:ameliahostile
-…We’re going to need a lot of supplies. Mainly wood, fabric for sails, iron, rope and glue. Do we have any of that around here? #speaker:noelle #portrait:noellesceptical
-There are plenty of settlements around. We should be able to get wood the easiest, since the forest’s close by. #speaker:amelia #portrait:amelianormal
+So, what's your plan for getting out of here before the disaster? #speaker:Amelia #portrait:AmeliaNormal
+My plan… Well, I guess the first step is trying to fix my ship. #speaker:Noelle #portrait:NoelleSceptical
+Are you sure you can fix it? It looks pretty bad. #speaker:Amelia #portrait:AmeliaNormal
+I mean I’ve never built a ship alone before, but I can try. My home island’s practices are all about wayfaring. #speaker:Noelle #portrait:NoelleSmallSmile
+The mess I saw wasn’t looking very functional. #speaker:Amelia #portrait:AmeliaHostile
+…We’re going to need a lot of supplies. Mainly wood, fabric for sails, iron, rope and glue. Do we have any of that around here? #speaker:Noelle #portrait:NoelleSceptical
+There are plenty of settlements around. We should be able to get wood the easiest, since the forest’s close by. #speaker:Amelia #portrait:AmeliaNormal
 //keep walking down the path
 //once we reach a point on the road, dialogue triggers again and it rains for 60 seconds.
-Ah! Gosh, the weather’s been getting worse lately. #speaker:amelia #portrait:ameliahostile
-Why's that? #speaker:noelle #portrait:noelleum
-The Great Disaster obviously. Do you live under a rock? #speaker:amelia #portrait:amelianormal
-Um… #speaker:noelle #portrait:noelleum
-You seriously don’t know about the great floods? #speaker:amelia #portrait:ameliahostile
-I’ve only heard stories about them. We don’t talk much about the thing that causes it. #speaker:noelle #portrait:noelleum
-I’m sure someone else can do a better job of explaining it, but all you need to know is that the Great Disaster is the creature behind it all. #speaker:amelia #portrait:amelianormal
+Ah! Gosh, the weather’s been getting worse lately. #speaker:Amelia #portrait:AmeliaHostile
+Why's that? #speaker:Noelle #portrait:NoelleUm
+The Great Disaster obviously. Do you live under a rock? #speaker:Amelia #portrait:AmeliaNormal
+Um… #speaker:Noelle #portrait:NoelleUm
+You seriously don’t know about the great floods? #speaker:Amelia #portrait:AmeliaHostile
+I’ve only heard stories about them. We don’t talk much about the thing that causes it. #speaker:Noelle #portrait:NoelleUm
+I’m sure someone else can do a better job of explaining it, but all you need to know is that the Great Disaster is the creature behind it all. #speaker:Amelia #portrait:AmeliaNormal
 With the weather getting worse and the waves getting stronger… It’s a sign that the floods are about to come, soon.
-(…Already?) #speaker:noelle #portrait:noelleshocked
+(…Already?) #speaker:Noelle #portrait:NoelleShocked
 (Dusk Island… their preparations aren’t completely done yet.)
-How much longer do we have? #speaker:noelle #portrait:noellesceptical
-Two to four weeks, at most. You okay? #speaker:amelia #portrait:amelianormal
+How much longer do we have? #speaker:Noelle #portrait:NoelleSceptical
+Two to four weeks, at most. You okay? #speaker:Amelia #portrait:AmeliaNormal
 +[Yeah, just thinking.]
+    ->A1_S2_D1_2
 +[Just counting the days.]
-You’re so weird. #speaker:amelia #portrait:amelianormal
+You’re so weird. #speaker:Amelia #portrait:AmeliaNormal
+    ->A1_S2_D1_2
 
 /*after this point we need to walk further. Next dialogue is prompted when we reach the first puzzle.
 Many creatures roam around the wild forest. Not interactable for now*/
-
-Upon seeing the ruin, Amelia gets frustrated. This place appears to be a dead end. #speaker:narrator
-Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:amelia #portrait:ameliahostile
+===A1_S2_D1_2===
+Upon seeing the ruin, Amelia gets frustrated. This place appears to be a dead end. #speaker:Narrator
+Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amelia #portrait:AmeliaHostile
 +[Is it a puzzle?]
+    ->quest
 +[Let me take a look.]
-You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:amelia #portrait:ameliahostile
-…Knock yourself out, I suppose. #portrait:amelianormal
+    ->quest
+===quest===
+You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
+…Knock yourself out, I suppose. #portrait:AmeliaNormal
 //puzzle tutorial appears here. Player gets to solve it. After which dialogue continues
-…? #speaker:amelia #portrait:ameliasilly
-Amelia studies you like you’re an alien. #speaker:narrator 
-It’d take twenty men to move that! How on earth did you—? #speaker:amelia #portrait:ameliasilly
-...You’re interesting. #portrait:amelianormal
-Thank you? #speaker:noelle #portrait:noellewhat
-The blocks were pretty heavy, but after putting your weight into it, they budged. #speaker:narrator
+->DONE
+
+===ongoing_quest_1===
+You haven't solved the puzzle yet!
+->DONE
+
+===completed_quest_1===
+…? #speaker:Amelia #portrait:AmeliaSilly
+Amelia studies you like you’re an alien. #speaker:Narrator 
+It’d take twenty men to move that! How on earth did you—? #speaker:Amelia #portrait:AmeliaSilly
+...You’re interesting. #portrait:AmeliaNormal
+Thank you? #speaker:Noelle #portrait:NoelleWhat
+The blocks were pretty heavy, but after putting your weight into it, they budged. #speaker:Narrator
 To be honest, the hardest part was adjusting them to the right place since they’re so huge. 
 But you’re happy to be of use.
-…So, you said the settlement was through this way? #speaker:noelle #portrait:noellebigsmile
-Yeah, It's not far from here. Let’s go. #speaker:amelia #portrait:amelianormal
+…So, you said the settlement was through this way? #speaker:Noelle #portrait:NoelleBigSmile
+Yeah, It's not far from here. Let’s go. #speaker:Amelia #portrait:AmeliaNormal
 
 //same objective of finding the viridi settlement (doesn’t change). Player follows the path, terrain becomes more leafy and wild, entering viridi forest
 
-We shouldn’t be too far off from the settlement now, I’m starting to recognise these plants. #speaker:amelia #portrait:amelianormal
-That's good— #speaker:noelle #portrait:noellesmallsmile
-You hear rustling and see a figure amidst the trees. #speaker:narrator
-Who are you? What are you doing here!? #speaker:amaya
-Who are <b>you?</b> #speaker:noelle #portrait:noellewhat
-<b>I’m</b> the one asking questions. Why are the two of you here? #speaker:amaya
+We shouldn’t be too far off from the settlement now, I’m starting to recognise these plants. #speaker:Amelia #portrait:AmeliaNormal
+That's good— #speaker:Noelle #portrait:NoelleSmallSmile
+You hear rustling and see a figure amidst the trees. #speaker:Narrator
+Who are you? What are you doing here!? #speaker:Amaya
+Who are <b>you?</b> #speaker:Noelle #portrait:NoelleWhat
+<b>I’m</b> the one asking questions. Why are the two of you here? #speaker:Amaya
 +[Introduce yourself.]
     -> choiceintroyourself
 +[Stay silent.]
     -> choicestaysilent
 
 ===choiceintroyourself===
-I’m from the Tempest family; Noelle Tempest. #speaker:noelle
-Tempest…? That’s a strange name. #speaker:amaya
-Is it? #speaker:noelle
+I’m from the Tempest family; Noelle Tempest. #speaker:Noelle
+Tempest…? That’s a strange name. #speaker:Amaya
+Is it? #speaker:Noelle
     -> choicestaysilent
 
 ===choicestaysilent===
-…You’re not from here. #speaker:amaya
+…You’re not from here. #speaker:Amaya
 Why are you sneaking around? What do you want?
-We’re looking for something. #speaker:amelia
-Both of you? #speaker:amaya
-The person seems to give you both a once-over. You try to explain. #speaker:narrator
-It’s about my ship— #speaker:noelle
-—Only to stop when they step out into the light. Hair the color of foliage. Eyes as sharp as iron. #speaker:narrator
-…Surely you’d rather spend your time preparing for the Great Disaster, instead of milling around our territory like this? #speaker:amaya
-I’m sorry— The great <i>what?</i> #speaker:noelle
+We’re looking for something. #speaker:Amelia
+Both of you? #speaker:Amaya
+The person seems to give you both a once-over. You try to explain. #speaker:Narrator
+It’s about my ship— #speaker:Noelle
+—Only to stop when they step out into the light. Hair the color of foliage. Eyes as sharp as iron. #speaker:Narrator
+…Surely you’d rather spend your time preparing for the Great Disaster, instead of milling around our territory like this? #speaker:Amaya
+I’m sorry— The great <i>what?</i> #speaker:Noelle
 I’m just looking for a way to repair my boat.
-And hey, who are <i>you?</i> You never told us! #speaker:amelia
-And a dragon. Interesting. #speaker:amaya
+And hey, who are <i>you?</i> You never told us! #speaker:Amelia
+And a dragon. Interesting. #speaker:Amaya
 Far from your pack, are you? You two are certainly suspicious.
-We aren’t doing anything suspicious! #speaker:amelia
-…I think it’s better if we just go along here to avoid a fight. #speaker:noelle
+We aren’t doing anything suspicious! #speaker:Amelia
+…I think it’s better if we just go along here to avoid a fight. #speaker:Noelle
 (It’s clear that this girl isn’t just going to let us off easy, but maybe we can get closer to what we need, this way.)
 
 //new objective: follow the strange girl into the forest
 ->END
+
+
+===PostquestSubmit===
+Lets follow her!    #speaker:Amelia
+->DONE

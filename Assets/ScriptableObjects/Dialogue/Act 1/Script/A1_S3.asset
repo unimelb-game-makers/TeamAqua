@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ea8d497446f47ab9c22c6cff567464, type: 3}
-  m_Name: Quest Database
+  m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
+  m_Name: A1_S3
   m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
+  inkFile: {fileID: 4900000, guid: 77e384fd2a14e3a45ac47c9524e20b7d, type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: d78171af0639ced469a2b6dd526ef7db, type: 2}
   - {fileID: 11400000, guid: 87a6a8b0266d51445996d326dd9cef85, type: 2}
-  - {fileID: 11400000, guid: 59b9f780b1fa0b44abbd7dff9740b37d, type: 2}
+  - {fileID: 11400000, guid: 72903fd51c858a04b8372d2c50a653ac, type: 2}

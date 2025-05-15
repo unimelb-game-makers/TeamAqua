@@ -1,15 +1,52 @@
+EXTERNAL checkQuestStatus(id, steps)
+EXTERNAL TurnOffBarrier(id)
+EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
+EXTERNAL PlayBGM(id)
+EXTERNAL AddQuest(id)
+EXTERNAL SubmitQuest(questId)
+EXTERNAL SetNextDialogue(dialogueId)
 
-// Logic not added in yet
+INCLUDE ../Globals/Globals.ink
 
 
+// Variable Setup
+CONST DIALOGUE_1 = "A1_S3_D1"
+CONST QUEST_1 = "A1_S3_Q1"
+CONST DIALOGUE_2 = "A1_S3_D2"
+
+{
+    - dialogue_id == DIALOGUE_1:
+        -> dialogue_1
+    - dialogue_id == QUEST_1:
+        -> quest_1
+    - dialogue_id == DIALOGUE_2:
+        -> dialogue_2
+}
 
 
+// outline of main branches
+===dialogue_1===
+->A1_S3_D1_1
 
+===quest_1===
+{
+    - quest_state == "ONGOING":
+        -> ongoing_quest_1
+    - quest_state == "COMPLETED":
+        -> completed_quest_1
+}
+
+===dialogue_2===
+-> PostquestSubmit
+
+
+===A1_S3_D1_1===
+/*
 SCENE 3 ✅
 Follow amaya (invisible wall to not let us get away) > come across puzzle > solve puzzle
 Reach the settlement, meet chione 
 Explore settlement and ‘listen to oren’s story’
-
+*/
 The three of you make your way further into the forest, where the trees grow thicker and another ruin appears ahead. #speaker:narrator.
 Amaya stops walking and gestures for you to go forward.
 You got past a puzzle before we ran into each other, right? Show me how you did it. #speaker:amaya
@@ -26,10 +63,20 @@ I guess someone like me must not be common around here? #speaker:noelle
 No, but this lady’s pretty strange, too! #speaker:amelia
 What are you two whispering about? #speaker:amaya
 Nothing! #speaker:amelia
+->TakeQuest
+
+
+===TakeQuest===
 Well, go on then. #speaker:amaya
+->DONE
 
 //solve puzzle, which then prompts the screen to fade and everyone’s now on the other side
 
+===ongoing_quest_1===
+I'm waiting! #speaker:amaya
+->DONE
+
+===completed_quest_1===
 So you really can move them on your own… #speaker:amaya
 I know you Krakenfolk are strong, but I didn’t realize it’d be to this extent. 
 (There’s that term again!) #speaker:noelle
@@ -151,6 +198,10 @@ He’s our local storyteller! Hosts shows very often based on some history and o
 (Oren, huh…?) #speaker:noelle
 Sure, I’ll definitely have a look.
    //-> scenefour
-   ->END
+   ->DONE
+   
+===PostquestSubmit===
+Let's go!
+->END
 
 
