@@ -57,7 +57,9 @@ public class Puzzle : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             playerEntered = false;
             puzzleCam.gameObject.SetActive(false);
-            AudioManager.Instance.Stop("PUZZLE_ENTER");
+
+            if(AudioManager.Instance != null)
+                AudioManager.Instance.Stop("PUZZLE_ENTER");
             
             //Reset the puzzle if it is not completed
             if(!isFinished())
