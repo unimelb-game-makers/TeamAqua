@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Orb : MonoBehaviour
 {
@@ -30,8 +31,9 @@ public class Orb : MonoBehaviour
     private void Update() {
         transform.Rotate(0,0,rotateSpeed*Time.deltaTime);
 
-        if(playerIn && Input.GetKeyDown(KeyCode.E)){
-            Debug.Log("Enter Island");
+        if(playerIn && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene("NoonIsland");
         }
     }
 

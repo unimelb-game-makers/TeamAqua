@@ -1478,91 +1478,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 1782939141}
   bloom: {fileID: 0}
---- !u!1001 &1800598988
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.389167
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.6383286
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.0742874
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306620006358448608, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2372742851206032733, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_Name
-      value: Managers
-      objectReference: {fileID: 0}
-    - target: {fileID: 2787580236368457027, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3718456815580867920, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5174391932027479980, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6138091236475130428, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6814033297966310961, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222596301919843546, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7605395225366640446, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b7dc2ec23dd8bf645ba862762b7d756d, type: 3}
 --- !u!1 &2048882829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46462a33adb14e023a4642052e45bf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 846364756214676985, guid: 3d92d8b7d7e944d87b9f2517f96522f1, type: 3}
   BG_MUSIC_1: BGM_A_DREAM
 --- !u!4 &2048882831
 Transform:
@@ -1654,4 +1570,3 @@ SceneRoots:
   - {fileID: 2107807864}
   - {fileID: 881370473}
   - {fileID: 2048882831}
-  - {fileID: 1800598988}
