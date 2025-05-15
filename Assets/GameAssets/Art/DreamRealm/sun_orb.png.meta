@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 878932a84c1adcc838d6008b60a20c9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8473062628402148102
+    second: sun_orb_0
+  - first:
+      213: 6511910551511327956
+    second: sun_orb_1
+  - first:
+      213: 4027182766178063929
+    second: sun_orb_2
+  - first:
+      213: 8209612772889168740
+    second: sun_orb_3
+  - first:
+      213: -5638880589843418355
+    second: sun_orb_4
+  - first:
+      213: -3314406089253938467
+    second: sun_orb_5
+  - first:
+      213: -9142195197074085258
+    second: sun_orb_6
+  - first:
+      213: -943644340819991988
+    second: sun_orb_7
+  - first:
+      213: 633023319087246244
+    second: sun_orb_8
+  - first:
+      213: -5713485645790247273
+    second: sun_orb_9
+  - first:
+      213: 6099777131282060086
+    second: sun_orb_10
+  - first:
+      213: 2393969790413390733
+    second: sun_orb_11
+  - first:
+      213: -6746957249814400817
+    second: sun_orb_12
+  - first:
+      213: -4905067336315793847
+    second: sun_orb_13
+  - first:
+      213: -5688546766340026074
+    second: sun_orb_14
+  - first:
+      213: -5567624985999823171
+    second: sun_orb_15
+  - first:
+      213: -8699935542164814075
+    second: sun_orb_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sun_orb_0
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1421
+        width: 233
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6033c8d719d569570800000000000000
+      internalID: 8473062628402148102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_1
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1695
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d463ff1524fe5a50800000000000000
+      internalID: 6511910551511327956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_2
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1322
+        width: 268
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9365e9f836d63e730800000000000000
+      internalID: 4027182766178063929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_3
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1449
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b819f02576ee170800000000000000
+      internalID: 8209612772889168740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_4
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1376
+        width: 262
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03b987cafbaeb1b0800000000000000
+      internalID: -5638880589843418355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_5
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1415
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda90a8e83dd002d0800000000000000
+      internalID: -3314406089253938467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_6
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1209
+        width: 256
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67aed1bd7e5602180800000000000000
+      internalID: -9142195197074085258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_7
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1139
+        width: 261
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42ed1fb87087e2f0800000000000000
+      internalID: -943644340819991988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_8
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 422
+        width: 1002
+        height: 988
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abebb4da53f8c800800000000000000
+      internalID: 633023319087246244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_9
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 923
+        width: 340
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7960165931f95b0b0800000000000000
+      internalID: -5713485645790247273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 838
+        width: 293
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6335e1f9bf2c6a450800000000000000
+      internalID: 6099777131282060086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1054
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d834b9037d6193120800000000000000
+      internalID: 2393969790413390733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_12
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 492
+        width: 328
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0f012d02efd52a0800000000000000
+      internalID: -6746957249814400817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_13
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 605
+        width: 257
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e868bee33bdebb0800000000000000
+      internalID: -4905067336315793847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_14
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 138
+        width: 293
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6211b10fad83e01b0800000000000000
+      internalID: -5688546766340026074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_15
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 67
+        width: 267
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe24e2e292dbb2b0800000000000000
+      internalID: -5567624985999823171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sun_orb_16
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 296
+        width: 263
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5078878f7be934780800000000000000
+      internalID: -8699935542164814075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sun_orb_0: 8473062628402148102
+      sun_orb_1: 6511910551511327956
+      sun_orb_10: 6099777131282060086
+      sun_orb_11: 2393969790413390733
+      sun_orb_12: -6746957249814400817
+      sun_orb_13: -4905067336315793847
+      sun_orb_14: -5688546766340026074
+      sun_orb_15: -5567624985999823171
+      sun_orb_16: -8699935542164814075
+      sun_orb_2: 4027182766178063929
+      sun_orb_3: 8209612772889168740
+      sun_orb_4: -5638880589843418355
+      sun_orb_5: -3314406089253938467
+      sun_orb_6: -9142195197074085258
+      sun_orb_7: -943644340819991988
+      sun_orb_8: 633023319087246244
+      sun_orb_9: -5713485645790247273
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
