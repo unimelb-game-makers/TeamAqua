@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 using Sirenix.OdinInspector;
 public class DayManager : MonoBehaviour
 {
+    public static DayManager instance;
     private const float LIGHT_DURATION = 1.0f;
 
     [Header("Scriptable Objects")] [SerializeField]
@@ -49,6 +50,13 @@ public class DayManager : MonoBehaviour
     private Color initialColor;
     private Light directionalLight;
 
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        else
+            instance = this;
+    }
     
     private void Start()
     {
@@ -69,18 +77,18 @@ public class DayManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isNight && Input.GetKeyDown(KeyCode.E) && Ship.isNearPlayer)
-        {
-            StartNewDay();
-        }
-        
         if (shouldChangeColor && firstTime)
         {
             ChangeLight();
         }
     }
 
-    private void StartNewDay()
+    public bool CanChangeDay()
+    {
+        return isNight;
+    }
+
+    public void StartNewDay()
     {
         OnDayChanged?.Invoke(CurrentDay);
         CurrentDay += 1;
