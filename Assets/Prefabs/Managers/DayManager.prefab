@@ -48,6 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSave: {fileID: 0}
   targetColor: {r: 0, g: 0, b: 0, a: 1}
+  skyboxMaterial: {fileID: 2100000, guid: 8b7dd0809c7c6498789fa32a61eaa6cb, type: 2}
+  dayExposure: 1
+  nightExposure: 0.6
   rainParticle: {fileID: 120597304278371587}
 --- !u!198 &120597304278371587
 ParticleSystem:
