@@ -152,7 +152,7 @@ MonoBehaviour:
   mainCamera: {fileID: 638780728366863376, guid: 59a82f5c242131d428c2384b197641c7, type: 3}
   virtualCamera: {fileID: 1461360232175612280, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
   playerController: {fileID: 3131800856402837910, guid: cc0b3ac5b3701f7438bd167201a55c6b, type: 3}
-  spawnPosition: {x: 1.773, y: 0.352, z: -9.395}
+  spawnPosition: {x: 4, y: 0.352, z: 0}
   barrierManager: {fileID: 3892012368044402201, guid: 3fd9bfee0b87d4ed2992ff89305e2ad2, type: 3}
   audioManager: {fileID: 846364756214676985, guid: 3d92d8b7d7e944d87b9f2517f96522f1, type: 3}
   inventoryManager: {fileID: 2672985565273775945, guid: f6b66d64c0f2a4e72a39357d64457d62, type: 3}
@@ -162,6 +162,7 @@ MonoBehaviour:
   spriteManager: {fileID: 7950111352964691694, guid: 375aadee5f9c84339a75d3b078688e02, type: 3}
   dayManager: {fileID: 8598276469370243906, guid: 2e1bf93a0e730453098448622e287423, type: 3}
   waterManager: {fileID: 3745968092491913952, guid: 2643d9c1ca4af4c70a32d5fa7db43739, type: 3}
+  cameraManager: {fileID: 1816969181835477934, guid: 9d2affce72d2d4bb99d04de46b4abb7d, type: 3}
   noonIslandLevel: {fileID: -8733244638997691217, guid: 5f16854720499f0489f576e81765265d, type: 3}
   playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}
 --- !u!4 &1518198145

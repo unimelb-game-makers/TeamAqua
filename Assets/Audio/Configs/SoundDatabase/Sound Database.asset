@@ -33,3 +33,5 @@ MonoBehaviour:
     config: {fileID: 11400000, guid: 04eb81ef9e74a6f40a4c70187eda6dac, type: 2}
   - id: BGM_CUTSCENE_TRANSFORMATION
     config: {fileID: 11400000, guid: 0fc4828cd08aa1b47aa07f67652fce47, type: 2}
+  - id: BGM_A_DREAM
+    config: {fileID: 11400000, guid: 4f52c9bcd57c756d99d35b2177186d0a, type: 2}

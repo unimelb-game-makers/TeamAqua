@@ -24,7 +24,7 @@ public class SpriteTransformer : MonoBehaviour
     }
 
     void Update(){
-        if(billboard == false)
+        if(billboard == false || SpriteManager.spriteManager == null)
             return;
         // Choose which axis to rotate on.
         if(SpriteManager.spriteManager.freezeXYAxis == true){

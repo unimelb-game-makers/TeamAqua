@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/GameAssets/Art/Environment/Materials/tribal_house_1.mat.meta
+guid: 357c733f7e128ef219cd83402fa6ebf9
+========
+guid: 716916954584f9b4392e7bbcf1d05d5f
+>>>>>>>> main:Assets/ScriptableObjects/Items/Fruit.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

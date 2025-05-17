@@ -3066,8 +3066,10 @@ MonoBehaviour:
   showSequence: {fileID: 0}
   hideSequence: {fileID: 0}
   resetSequence: {fileID: 0}
+  playerSave: {fileID: 0}
   resumeButton: {fileID: 532765793181060588}
   settingsButton: {fileID: 8468959322942154673}
+  mainMenuButton: {fileID: 8468959322942154673}
   quitButton: {fileID: 272840669935747698}
 --- !u!1 &4081316291320106683
 GameObject:
@@ -6438,6 +6440,7 @@ MonoBehaviour:
   showSequence: {fileID: 0}
   hideSequence: {fileID: 0}
   resetSequence: {fileID: 0}
+  itemDatabase: {fileID: 0}
   titleText: {fileID: 5791421982737788813}
   questText: {fileID: 6396080176565992631}
   nextButton: {fileID: 8622686194190844343}
@@ -6873,8 +6876,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is an example of text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c60ca70d55e94e839fd92974b05ffd4, type: 2}
-  m_sharedMaterial: {fileID: -6245147879248726382, guid: 5c60ca70d55e94e839fd92974b05ffd4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

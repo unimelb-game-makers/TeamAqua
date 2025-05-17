@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Tileset_1/Grass/grass_0.mat.meta
+guid: 98757b9eb334549f8bcff5d28da5f1ea
+========
 guid: b07322a5e3c00c84db09b03da559872e
+>>>>>>>> main:Assets/ScriptableObjects/Items/Stone.asset.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
