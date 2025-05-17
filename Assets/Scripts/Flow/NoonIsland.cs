@@ -82,10 +82,10 @@ public class NoonIsland : MonoBehaviour
     private void InitPlayer()
     {
         Camera _ = Instantiate(mainCamera);
-        CameraManager camManager = Instantiate(cameraManager);
         PlayerController player = Instantiate(playerController);
-
+        CameraManager camManager = Instantiate(cameraManager);
         camManager.SetPlayer(player);
+        Game.AddManager(camManager);
     }
 
     /// <summary>
@@ -105,7 +105,6 @@ public class NoonIsland : MonoBehaviour
         Game.AddManager(Instantiate(spriteManager, manager.transform));
         Game.AddManager(Instantiate(dayManager, manager.transform));
         Game.AddManager(Instantiate(waterManager, manager.transform));
-        Game.AddManager(Instantiate(cameraManager, manager.transform));
     }
 
     /// <summary>
