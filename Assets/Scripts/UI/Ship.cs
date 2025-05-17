@@ -6,15 +6,15 @@ public class Ship : MonoBehaviour
 {
     public static bool isNearPlayer = false;
     public GameObject uiPanel;
+
     // Start is called before the first frame update
     void Start()
     {
         SphereCollider collider = gameObject.AddComponent<SphereCollider>();
-        collider.isTrigger = true; 
+        collider.isTrigger = true;
         collider.radius = 1f;
 
         uiPanel.SetActive(false);
-    
     }
 
     // Update is called once per frame
@@ -24,7 +24,6 @@ public class Ship : MonoBehaviour
         {
             isNearPlayer = true;
             uiPanel.SetActive(true);
-            Debug.Log("Player entered the ship.");
         }
     }
 
@@ -34,7 +33,6 @@ public class Ship : MonoBehaviour
         {
             isNearPlayer = false;
             uiPanel.SetActive(false);
-            Debug.Log("Player exited the ship.");
         }
     }
 }

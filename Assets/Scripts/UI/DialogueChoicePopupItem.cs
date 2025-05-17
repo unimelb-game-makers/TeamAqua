@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class DialogueChoicePopupItem : MonoBehaviour
     {
@@ -19,7 +19,7 @@ namespace UI
 
         private void OnClick()
         {
-            DialogueSystem.Instance().ChooseChoice(data.index);
+            DialogueManager.Instance().ChooseChoice(data.index);
         }
         
         public void Init(Choice choice)

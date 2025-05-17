@@ -10,7 +10,7 @@ public class DialogueTriggerControl : UIState
     public static DialogueTriggerControl inst;
     public GameObject TrigPoints;
     public TextAsset inkJSON;
-    public int dialogueTypeID;
+    public DialogueMode dialogueMode = DialogueMode.Moving;
     public string dialogueTrigger;
     Story story; //= DialogueSystem.GetDial().currentStory;        //might want to access the story from dialogue sys instead?
     public bool dialTrigger;
@@ -115,7 +115,7 @@ public class DialogueTriggerControl : UIState
             if (other.CompareTag("Player"))
             {
                 Debug.Log("entering parent dialogue trigger, onwards are child triggers");
-                DialogueSystem.Instance().EnterDialogueMode(inkJSON, dialogueTypeID);
+                // DialogueManager.Instance().EnterDialogueMode(inkJSON, dialogueMode);
                 //dialoguePanel.SetActive(true);
             }
         }

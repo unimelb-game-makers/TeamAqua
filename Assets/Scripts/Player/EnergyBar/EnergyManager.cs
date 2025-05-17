@@ -1,29 +1,44 @@
 using System;
 using UnityEngine;
+using UnityEngine.Assertions;
 
-public class EnergyManager : MonoBehaviour
+public class EnergyManager : MonoBehaviour, ISaveable
 {
+    public static EnergyManager instance;
     public const float MAX_ENERGY = 100f;
-    public static EnergyManager Instance;
     public static Action<float> OnEnergyChanged;
-    
-    private float energyAmount = 100;
-    
+    [SerializeField] private PlayerSave playerSave;
+
+    private float _energyAmount = 100;
+
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (instance != null && instance != this)
             Destroy(gameObject);
         else
-            Instance = this;
-        energyAmount = MAX_ENERGY;
+            instance = this;
     }
 
+    public void Load(SaveSlot saveSlot)
+    {
+        _energyAmount = saveSlot.playerSaveData.energy;
+    }
+
+    public SaveSlot Save(SaveSlot saveSlot)
+    {
+        SaveSlot save = saveSlot;
+        save.playerSaveData.energy = _energyAmount;
+        return save;
+    }
+    
     private void Start()
     {
-        OnEnergyChanged?.Invoke(energyAmount);
+        OnEnergyChanged?.Invoke(_energyAmount);
     }
 
-    private void Update()
+#if UNITY_EDITOR
+    // Debug logic
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -31,16 +46,29 @@ public class EnergyManager : MonoBehaviour
         }
     }
     
-    public void LoseEnergy (float loss)
+#endif
+
+    public void LoseEnergy(float loss)
     {
-        energyAmount -= loss;
-        OnEnergyChanged?.Invoke(energyAmount);
+        if (_energyAmount == 0)
+        {
+            return;
+        }
+
+        _energyAmount = Math.Max(_energyAmount - loss, 0);
+        OnEnergyChanged?.Invoke(_energyAmount);
     }
 
-    public void GainEnergy ( float healingAmount)
+    public void OnNextDay()
     {
-        energyAmount += healingAmount;
-        energyAmount = Mathf.Clamp(energyAmount, 0, MAX_ENERGY);
-        OnEnergyChanged?.Invoke(energyAmount);
+        _energyAmount = MAX_ENERGY;
+        OnEnergyChanged?.Invoke(_energyAmount);
+    }
+
+    public void GainEnergy(float healingAmount)
+    {
+        _energyAmount += healingAmount;
+        _energyAmount = Mathf.Clamp(_energyAmount, 0, MAX_ENERGY);
+        OnEnergyChanged?.Invoke(_energyAmount);
     }
 }

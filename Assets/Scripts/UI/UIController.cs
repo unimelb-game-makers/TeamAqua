@@ -1,7 +1,7 @@
 using Kuroneko.UIDelivery;
 using UnityEngine;
 
-namespace UI
+namespace Popups
 {
     public class UIController : Popup
     {
@@ -11,12 +11,16 @@ namespace UI
         [SerializeField] private DialoguePopup dialoguePopup;
         [SerializeField] private FadePopup fadePopup;
 
+        //TODO(Alex): PLEASE MOVE THIS OUT OF UI
+        public static bool Paused = false;
+
         protected override void InitPopup()
         {
-            DialogueSystem.OnDialogueStart += OnDialogueStart;
-            DialogueSystem.OnDialogueEnd += OnDialogueEnd;
+            DialogueManager.OnDialogueStart += OnDialogueStart;
+            DialogueManager.OnDialogueEnd += OnDialogueEnd;
+            pausePopup.Init(this);
         }
-
+        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,24 +33,39 @@ namespace UI
             }
         }
 
-        private void TogglePause()
+        private bool CanPause()
+        {
+            return !pausePopup.isShowing && !pausePopup.isAnimating && !dialoguePopup.isShowing;
+        }
+
+        private bool CanUnpause()
+        {
+            return pausePopup.isShowing && !pausePopup.isAnimating && !dialoguePopup.isShowing;
+        }
+        
+        public void TogglePause()
         {
             if (dialoguePopup.isShowing)
             {
-                dialoguePopup.HidePopup();
-                StartCoroutine(DialogueSystem.Instance().ExitDialogueMode());
                 return;
             }
-            if (!pausePopup.isShowing && !pausePopup.isAnimating )
+
+            if (CanPause() && !Paused)
             {
+                Time.timeScale = 0f;
                 if(journalPopup.isShowing)
                 {
                     journalPopup.HidePopup();
                 }
                 pausePopup.ShowPopup();
+                Paused = true;
             }
-            else if (pausePopup.isShowing && !pausePopup.isAnimating)
+            else if (CanUnpause() && Paused)
+            {
+                Time.timeScale = 1f;
                 pausePopup.HidePopup();
+                Paused = false;
+            }
         }
 
         private void ToggleJournal()
@@ -78,8 +97,8 @@ namespace UI
 
         private void OnDestroy()
         {
-            DialogueSystem.OnDialogueStart -= OnDialogueStart;
-            DialogueSystem.OnDialogueEnd -= OnDialogueEnd; 
+            DialogueManager.OnDialogueStart -= OnDialogueStart;
+            DialogueManager.OnDialogueEnd -= OnDialogueEnd; 
         }
     }
 }

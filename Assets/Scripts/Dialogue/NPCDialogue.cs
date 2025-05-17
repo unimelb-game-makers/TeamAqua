@@ -1,42 +1,77 @@
-using System.Collections;
-using System.Collections.Generic;
-using Ink.Parsed;
+using Popups;
 using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    [SerializeField] public TextAsset inkJSON;
-    [SerializeField] public int DialogueTypeID;
-    public GameObject dialogueCue;
-    public GameObject questCue;
-    [SerializeField] public bool HasQuest;      //  <--- really unstable way to do things rn, will wait for quest- inventory integration before continuing
+    [SerializeField] private NpcData npcData;
+    [SerializeField] private IndicatorPopup indicatorPopup;
 
-    //[SerializeField] public int questID;
-
-    public void PlayDialogue(){
-        DialogueSystem.Instance().EnterDialogueMode(inkJSON, DialogueTypeID);
-        /*
-        //QuestManager.Instance().CheckStep(questID, 1);
-        //UIstatemachine.ChangeUIState(DialogueOn);
-        //DialogueSystem.SetSpeakerName(gameObject.name); 
-        */
+    private void Awake()
+    {
+        if (npcData == null)
+        {
+            Debug.LogError($"DIALOGUE | {name} does not have an NpcData scriptable attached");
+            enabled = false;
+        }
+        if (indicatorPopup == null)
+        {
+            Debug.LogError($"DIALOGUE | {name} does not have an IndicatorPopup attached");
+            enabled = false;
+        }
     }
 
-    // Called when HasQuest is true
-    public void IndicateQuest(){
-        questCue.SetActive(true);
-        dialogueCue.SetActive(false);
+    private bool TryGetTrigger(string dialogueId, out DialogueTrigger trigger)
+    {
+        for (int i = 0; i < npcData.dialogues.Count; ++i)
+        {
+            if (npcData.dialogues[i].dialogue.name == dialogueId)
+            {
+                trigger = npcData.dialogues[i];
+                return true;
+            }
+        }
+
+        trigger = null;
+        return false;
     }
 
-    // Called when HasQuest is false
-    public void IndicateDialogue(){
-        questCue.SetActive(false);
-        dialogueCue.SetActive(true);
+    public bool PlayDialogue()
+    {
+        string dialogue = DialogueManager.instance.DialogueId;
+        if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
+        {
+            DialogueManager.instance.EnterDialogue(trigger.dialogue, trigger.mode);
+            return true;
+        }
+
+        return false;
     }
 
-    // Called when Player exits NPC
-    public void HideIndicators(){
-        questCue.SetActive(false);
-        dialogueCue.SetActive(false);
+    public void ShowIndicator()
+    {
+        string dialogue = DialogueManager.instance.DialogueId;
+        if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
+        {
+            if (trigger.dialogue.name.Contains('Q'))
+                ShowQuestIndicator(trigger.dialogue.name);
+            else
+                ShowDialogueIndicator();
+        }
+    }
+
+    private void ShowQuestIndicator(string dialogueId)
+    {
+        QuestState state = QuestManager.instance.CheckQuest(dialogueId);
+        indicatorPopup.ShowQuest(state);
+    }
+
+    private void ShowDialogueIndicator()
+    {
+        indicatorPopup.ShowDialogue();
+    }
+    
+    public void HideIndicators()
+    {
+        indicatorPopup.HidePopup();
     }
 }

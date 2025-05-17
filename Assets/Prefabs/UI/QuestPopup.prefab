@@ -54,6 +54,7 @@ MonoBehaviour:
   showSequence: {fileID: 0}
   hideSequence: {fileID: 0}
   resetSequence: {fileID: 0}
+  itemDatabase: {fileID: 11400000, guid: 796c4845618e94aa182b83a585edf1f0, type: 2}
   titleText: {fileID: 4516374708926129535}
   questText: {fileID: 5200322991226694000}
   nextButton: {fileID: 935932262281748097}

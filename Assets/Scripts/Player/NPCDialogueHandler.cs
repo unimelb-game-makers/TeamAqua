@@ -1,41 +1,47 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UI;
+using Popups;
 using UnityEngine;
 
 public class NPCDialogueHandler : MonoBehaviour
 {
-    [NonSerialized] public NPCDialogue dialogueSource = null;
-    [SerializeField] public UIController UIcontroller = null;
+    private NPCDialogue _dialogueSource = null;
 
-    // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialogueSource != null && !DialogueSystem.GetIsPlaying() && !UIcontroller.pausePopup.isShowing /*&& not paused*/)
-        {
-            dialogueSource.PlayDialogue();
-        }
+        if (_dialogueSource == null)
+            return;
+        if (DialogueManager.GetIsPlaying())
+            return;
+        if (UIController.Paused)
+            return;
+        if (Input.GetKeyDown(KeyCode.E))
+            if (_dialogueSource.PlayDialogue())
+            {
+                _dialogueSource.HideIndicators();
+            }
     }
-    
+
     void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Creature")) return;
-        if (other.gameObject.TryGetComponent(out NPC npc) && npc.dialogue)
+        if (!other.gameObject.CompareTag("Creature"))
+            return;
+
+        if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
         {
-            dialogueSource = npc.dialogue;
-            if(dialogueSource.HasQuest)
-                dialogueSource.IndicateQuest();
-            else
-                dialogueSource.IndicateDialogue();
+            _dialogueSource = dialogue;
+            if (!_dialogueSource)
+                return;
+            _dialogueSource.ShowIndicator();
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Creature") && dialogueSource != null)
+        if (other.gameObject.CompareTag("Creature") && _dialogueSource != null)
         {
-            dialogueSource.HideIndicators();
-            dialogueSource = null;
+            _dialogueSource.HideIndicators();
+            _dialogueSource = null;
+            DialogueManager.Instance().currentStory = null;
         }
     }
 }

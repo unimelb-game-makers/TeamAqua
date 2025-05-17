@@ -1,34 +1,42 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 using Kuroneko.UIDelivery;
+using Kuroneko.UtilityDelivery;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class DialoguePopup : Popup
     {
         [Header("Setup")]
-        [SerializeField] private float typeSpeed = 0.04f;
-        
+        [SerializeField]
+        private float typeSpeed = 0.04f;
+
         [Header("UI Components")]
-        [SerializeField] private TMP_Text dialogueText;
-        [SerializeField] private DialogueCharacterPopup characterPopup;
-        [SerializeField] private DialogueChoicePopup choicePopup;
-        [SerializeField] private Image fastForward;
+        [SerializeField]
+        private TMP_Text dialogueText;
+
+        [SerializeField]
+        private DialogueCharacterPopup characterPopup;
+
+        [SerializeField]
+        private DialogueChoicePopup choicePopup;
+
+        [SerializeField]
+        private Image fastForward;
 
         private Coroutine lineCoroutine = null;
         private string currentLine;
         private List<Choice> currentChoices = new List<Choice>();
-        
+
         protected override void InitPopup()
         {
-            DialogueSystem.OnDialogueContinue += OnDialogueContinue;
-            DialogueSystem.OnDialogueTags += OnDialogueTags;
+            DialogueManager.OnDialogueContinue += OnDialogueContinue;
+            DialogueManager.OnDialogueTags += OnDialogueTags;
         }
 
         private void Update()
@@ -50,8 +58,14 @@ namespace UI
             // Else, continue if there are no choices
             else if (currentChoices.Count == 0)
             {
-                DialogueSystem.Instance().ContinueStory();
+                DialogueManager.Instance().ContinueStory();
             }
+        }
+
+        [Button]
+        public void Skip()
+        {
+            DialogueManager.Instance().SkipStory();
         }
 
         public override void ShowPopup()
@@ -61,22 +75,32 @@ namespace UI
             choicePopup.HidePopup();
         }
 
-        private void OnDialogueContinue(string story, List<Choice> choices)
+        private void OnDialogueContinue(string story, List<Choice> choices, bool skip)
         {
-            lineCoroutine = StartCoroutine(DisplayLine(story, choices));
+            lineCoroutine = StartCoroutine(DisplayLine(story, choices, skip));
         }
 
         private void OnDialogueTags(List<string> tags)
         {
             characterPopup.HandleTags(tags);
         }
-        
-        private IEnumerator DisplayLine(string line, List<Choice> choices)
+
+        private IEnumerator DisplayLine(string line, List<Choice> choices, bool skip)
         {
             currentChoices = choices;
             currentLine = line;
+
+            if (skip)
+            {
+                dialogueText.SetText(line);
+                EndCoroutine();
+                yield break;
+            }
+
+            if (fastForward)
+                fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
-            dialogueText.text = line;   //set text to full line, but set visible characters to 0
+            dialogueText.text = line; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
             bool isRichText = false;
             foreach (char letter in line.ToCharArray())
@@ -90,17 +114,21 @@ namespace UI
                         isRichText = false;
                     }
                 }
-
                 // otherwise, loads letters normally
                 else
                 {
                     if (dialogueText.maxVisibleCharacters < dialogueText.text.Length)
-                        DialogueAudioManager.GetAudioMana().PlayDialogueSound(dialogueText.maxVisibleCharacters, dialogueText.text[dialogueText.maxVisibleCharacters]);
+                        DialogueManager
+                            .Instance()
+                            .DialogueAudioPlayer.PlayDialogueSound(
+                                dialogueText.maxVisibleCharacters,
+                                dialogueText.text[dialogueText.maxVisibleCharacters]
+                            );
                     dialogueText.maxVisibleCharacters++;
-                    yield return new WaitForSeconds(typeSpeed);         // -> use if not freezing time
+                    yield return new WaitForSeconds(typeSpeed); // -> use if not freezing time
                 }
             }
-            
+
             EndCoroutine();
         }
 
@@ -111,15 +139,21 @@ namespace UI
             {
                 choicePopup.Init(currentChoices);
                 choicePopup.ShowPopup();
+                if (fastForward)
+                    fastForward.gameObject.SetActiveFast(false);
             }
 
-            lineCoroutine = null; 
+            if (lineCoroutine != null)
+            {
+                StopCoroutine(lineCoroutine);
+                lineCoroutine = null;
+            }
         }
-        
+
         private void OnDestroy()
         {
-            DialogueSystem.OnDialogueContinue -= OnDialogueContinue;
-            DialogueSystem.OnDialogueTags -= OnDialogueTags;
+            DialogueManager.OnDialogueContinue -= OnDialogueContinue;
+            DialogueManager.OnDialogueTags -= OnDialogueTags;
         }
     }
 }

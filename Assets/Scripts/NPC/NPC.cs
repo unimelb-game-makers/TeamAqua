@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// TODO: This is not really used.
 public class NPC : MonoBehaviour
 {
-    public NPCDialogue dialogue;
-    public Statemachine statemachine;
 }

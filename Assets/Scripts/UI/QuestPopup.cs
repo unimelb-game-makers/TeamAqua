@@ -1,23 +1,26 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Popups
 {
     public class QuestPopup : Popup
     {
+        [SerializeField] private ItemDatabase itemDatabase;
         [SerializeField] private TMP_Text titleText;
         [SerializeField] private TMP_Text questText;
         [SerializeField] private Button nextButton;
         [SerializeField] private Button previousButton;
         [SerializeField] private Button cancelButton;
 
-        private List<QuestData> questData = new();
-        private int index = 0;
+        private List<QuestTracker> _questData = new();
+        private int _index = 0;
+        
         protected override void InitPopup()
         {
             Debug.Log("QuestPopup InitPopup");
@@ -30,16 +33,16 @@ namespace UI
             cancelButton.gameObject.SetActiveFast(false);
         }
 
-        private List<QuestData> GetData()
+        private List<QuestTracker> GetData()
         {
-            return QuestManager.instance.GetQuests().Where(q => !q.finished).ToList();
+            return QuestManager.instance.Quests.Where(q => q.state != QuestState.Submitted).ToList();
         }
 
         public override void ShowPopup()
         {
             base.ShowPopup();
-            questData = GetData();
-            if (questData.Count == 0)
+            _questData = GetData();
+            if (_questData.Count == 0)
             {
                 titleText.text = "Quests";
                 questText.text = "No Quests,  You're All Done!";
@@ -52,42 +55,46 @@ namespace UI
 
         private void ShowQuest(int nextIndex)
         {
-            index = nextIndex; 
+            _index = nextIndex; 
             // Activate the buttons
-            nextButton.gameObject.SetActiveFast(index < questData.Count - 1);
-            previousButton.gameObject.SetActiveFast(index > 0);
+            nextButton.gameObject.SetActiveFast(_index < _questData.Count - 1);
+            previousButton.gameObject.SetActiveFast(_index > 0);
             
-            QuestData quest = questData[index];
-            questText.text = "";
-            titleText.text = quest.title;
-            // write the quest into the questText
-            questText.text = quest.description + "\n" 
-                          + "Task: " 
-                          + quest.quest_steps[quest.current_step_number].description + "\n"
-                          + "Step: " + (quest.current_step_number + 1) + "/" + quest.quest_steps.Count + "\n"
-                          + "<color=red>Current Objective:</color>" + "\n"  // Objective in red
-                          +  quest.quest_steps[quest.current_step_number].objective + "\n";
-                    
-            if (quest.quest_steps[quest.current_step_number].quest_item_id != -1)
+            Quest quest = _questData[_index].quest;
+            StringBuilder questBody = new();
+            
+            titleText.SetText(quest.title);
+            questBody.AppendLine(quest.description);
+            for (int i = 0; i < quest.steps.Count; ++i)
             {
-                // TODO: replace the item ID with the actual item name after implementing the inventory system and items etc
-                questText.text += "Item: " + quest.quest_steps[quest.current_step_number].quest_item_id + "\n";
-                questText.text += "Amount: " + quest.quest_steps[quest.current_step_number].quest_item_amount + "\n";
+                questBody.AppendLine($"Task: {quest.steps[i].description}");
+                if (quest.steps[i].type == QuestType.Gather)
+                {
+                    List<QuestItem> items = quest.steps[i].requiredItems;
+                    for (int j = 0; j < items.Count; ++j)
+                    {
+                        if (itemDatabase.TryGetItem(items[j].item.name, out Item item))
+                        {
+                            questBody.AppendLine($"Item: {item.displayName}");
+                            questBody.AppendLine($"Amount: {items[j].amount}");
+                        }
+                    }
+                }
             }
 
-            questText.text += "\n"
-                              + "<color=green>Reward: " + quest.reward.exp + " exp " + quest.reward.gold +
-                              " gold</color>";
+            questBody.AppendLine();
+            questBody.AppendLine("<color=green>Reward: " + quest.reward.exp + " exp " + quest.reward.gold + " gold</color>");
+            questText.SetText(questBody.ToString());
         }
 
         private void NextQuest()
         {
-            ShowQuest(index + 1);
+            ShowQuest(_index + 1);
         }
 
         private void PreviousQuest()
         {
-            ShowQuest(index - 1);
+            ShowQuest(_index - 1);
         }
 
         private void CancelQuest()
