@@ -167,7 +167,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Elder_Quest_0: 2148080700761021886
+      Elder_Quest_1: -8164949547835460517
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

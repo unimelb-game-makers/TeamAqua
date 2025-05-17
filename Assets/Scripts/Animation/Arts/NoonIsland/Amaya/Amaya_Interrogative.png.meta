@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Amaya_Interrogative_0: -3658391850437983989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: da3509ebb975e1845bfe2f9533a9d8c4, type: 2}
+  npcData: {fileID: 11400000, guid: ce372943af1d249efa9676e0f4629d50, type: 2}
   indicatorPopup: {fileID: 309174934279223052}
 --- !u!1001 &380665551565427630
 PrefabInstance:

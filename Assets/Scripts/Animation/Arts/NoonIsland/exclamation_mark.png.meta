@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      exclamation_mark_0: 6962826606374208346
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
