@@ -10,15 +10,21 @@ public class CameraManager : MonoBehaviour
     public GameObject[] cameras;
 
     public int currentCamera = 0;
-private void Awake() {
-  if (instance != null && instance != this) {
-    Destroy(gameObject);
-  } else {
-    instance = this;
-  }
-}
-    private void Start() {
-        CameraManager.cameraManager = this;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    private void Start() 
+    {
         SetCamera(currentCamera);
     }
 
