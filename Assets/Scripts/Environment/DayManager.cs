@@ -13,6 +13,9 @@ public class DayManager : MonoBehaviour
 
     [Header("Night Settings")]
     [SerializeField] private Color targetColor = Color.black;
+    [SerializeField] private Material skyboxMaterial;
+    [SerializeField] private float dayExposure = 1f;
+    [SerializeField] private float nightExposure = 0.6f;
     
     // Exposed Actions
     public static Action<int> OnDayChanged;
@@ -49,6 +52,8 @@ public class DayManager : MonoBehaviour
     private float lerpTime = 0f;
     private Color initialColor;
     private Light directionalLight;
+    private static readonly int Exposure = Shader.PropertyToID("_Exposure");
+    private Material _runtimeSkyboxMaterial;
 
     private void Awake()
     {
@@ -65,6 +70,9 @@ public class DayManager : MonoBehaviour
         _playerController = FindFirstObjectByType<PlayerController>();
         initialColor = directionalLight.color;
         EnergyManager.OnEnergyChanged += CheckEnergy;
+        
+        _runtimeSkyboxMaterial = new Material(skyboxMaterial);
+        RenderSettings.skybox = _runtimeSkyboxMaterial;
     }
 
     private void CheckEnergy(float energyAmount)
@@ -121,6 +129,7 @@ public class DayManager : MonoBehaviour
         else
         {
             firstTime = false;
+            _runtimeSkyboxMaterial.SetFloat(Exposure, dayExposure);
             directionalLight.color = initialColor;
         }
     }
@@ -129,9 +138,12 @@ public class DayManager : MonoBehaviour
     {
         lerpTime += Time.deltaTime / LIGHT_DURATION;
         directionalLight.color = Color.Lerp(initialColor, targetColor, lerpTime);
+        float exposure = Mathf.Lerp(dayExposure, nightExposure, lerpTime);
+        _runtimeSkyboxMaterial.SetFloat(Exposure, exposure);
         if (lerpTime >= 1f)
         {
             directionalLight.color = targetColor;
+            _runtimeSkyboxMaterial.SetFloat(Exposure, nightExposure);
             firstTime = false;
         }
     }
@@ -141,6 +153,12 @@ public class DayManager : MonoBehaviour
         EnergyManager.OnEnergyChanged -= CheckEnergy;
     }
 
+    [Button]
+    private void DebugNight()
+    {
+        SetNight(true);
+    }
+    
     [Button]
     public void StartRain()
     {

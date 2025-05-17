@@ -3,6 +3,7 @@ using UnityEngine;
 public class Ship : MonoBehaviour
 {
     public GameObject uiPanel;
+    private bool _nearPlayer = false;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class Ship : MonoBehaviour
 
     private void Update()
     {
-        if (DayManager.instance.CanChangeDay() && Input.GetKeyDown(KeyCode.E))
+        if (_nearPlayer && DayManager.instance.CanChangeDay() && Input.GetKeyDown(KeyCode.E))
             DayManager.instance.StartNewDay();
     }
 
@@ -23,6 +24,7 @@ public class Ship : MonoBehaviour
     {
         if (other.CompareTag("Player") && DayManager.instance.CanChangeDay())
         {
+            _nearPlayer = true;
             uiPanel.SetActive(true);
         }
     }
@@ -31,6 +33,7 @@ public class Ship : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            _nearPlayer = false;
             uiPanel.SetActive(false);
         }
     }
