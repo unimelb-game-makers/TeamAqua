@@ -18,7 +18,7 @@ public class NPCDialogue : MonoBehaviour
         }
         if (indicatorPopup == null)
         {
-            Debug.LogError($"DIALOGUE | {name} does not have an IndicatorPopup attached");
+            Debug.Log($"DIALOGUE | {name} does not have an IndicatorPopup attached");
             enabled = false;
         }
     }
