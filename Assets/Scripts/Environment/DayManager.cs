@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using Sirenix.OdinInspector;
-public class DayManager : MonoBehaviour
+
+public class DayManager : MonoBehaviour, ISaveable
 {
     public static DayManager instance;
     private const float LIGHT_DURATION = 1.0f;
@@ -27,21 +28,6 @@ public class DayManager : MonoBehaviour
 
     // Current Day and Night
     private int _currentDay = 1;
-
-    private int CurrentDay
-    {
-        get => _currentDay;
-        set
-        {
-            if (_currentDay == value)
-            {
-                return;
-            }
-            _currentDay = value;
-            PlayerPrefs.SetInt("currentDay", _currentDay);
-            PlayerPrefs.Save();
-        }
-    }
 
     private bool isNight = false;
     
@@ -75,6 +61,18 @@ public class DayManager : MonoBehaviour
         RenderSettings.skybox = _runtimeSkyboxMaterial;
     }
 
+    public void Load(SaveSlot saveSlot)
+    {
+        _currentDay = saveSlot.worldSaveData.currentDay;
+    }
+
+    public SaveSlot Save(SaveSlot saveSlot)
+    {
+        SaveSlot save = saveSlot;
+        save.worldSaveData.currentDay = _currentDay;
+        return save;
+    }
+
     private void CheckEnergy(float energyAmount)
     {
         if (energyAmount < 50f && !isNight)
@@ -98,8 +96,8 @@ public class DayManager : MonoBehaviour
 
     public void StartNewDay()
     {
-        OnDayChanged?.Invoke(CurrentDay);
-        CurrentDay += 1;
+        OnDayChanged?.Invoke(_currentDay);
+        _currentDay += 1;
         SetNight(false);
         _playerController.handleNextDay();
         RainWithDelay(false, 2.0f);
