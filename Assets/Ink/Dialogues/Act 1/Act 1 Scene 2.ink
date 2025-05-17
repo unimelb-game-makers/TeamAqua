@@ -17,14 +17,24 @@ CONST DIALOGUE_4 = "A1_S2_D4"
 CONST DIALOGUE_5 = "A1_S2_D5"
 CONST QUEST_1 = "A1_S2_Q1"
 CONST DIALOGUE_6 = "A1_S2_D6"
-
+CONST DIALOGUE_7 = "A1_S2_D7"
 {
     - dialogue_id == DIALOGUE_1:
         -> dialogue_1
-    - dialogue_id == QUEST_1:
-        -> quest_1
     - dialogue_id == DIALOGUE_2:
         -> dialogue_2
+    - dialogue_id == DIALOGUE_3:
+        -> dialogue_3
+    - dialogue_id == DIALOGUE_4:
+        -> dialogue_4
+    - dialogue_id == DIALOGUE_5:
+        -> dialogue_5
+    - dialogue_id == QUEST_1:
+        -> quest_1
+    - dialogue_id == DIALOGUE_6:
+        -> dialogue_6
+    - dialogue_id == DIALOGUE_7:
+        -> dialogue_7
 }
 
 
@@ -32,6 +42,17 @@ CONST DIALOGUE_6 = "A1_S2_D6"
 ===dialogue_1===
 ->A1_S2_D1
 
+===dialogue_2===
+->A1_S2_D2
+
+===dialogue_3===
+->A1_S2_D3
+
+===dialogue_4===
+->A1_S2_D4
+
+===dialogue_5===
+->A1_S2_D5
 
 ===quest_1===
 {
@@ -41,7 +62,10 @@ CONST DIALOGUE_6 = "A1_S2_D6"
         -> completed_quest_1
 }
 
-===dialogue_2===
+===dialogue_6===
+-> A1_S2_D6
+
+===dialogue_7===
 -> PostquestSubmit
 
 
@@ -53,20 +77,33 @@ Run into a puzzle > puzzle tutorial
 Cross into Viridi Settlement, meet Amaya
 */
 
+
+
+// first orb on beach
 ===A1_S2_D1===
 //follow the path and reach a certain point in the forest
 So, what's your plan for getting out of here before the disaster? #speaker:Amelia #portrait:AmeliaNormal
 My plan… Well, I guess the first step is trying to fix my ship. #speaker:Noelle #portrait:NoelleSceptical
 Are you sure you can fix it? It looks pretty bad. #speaker:Amelia #portrait:AmeliaNormal
 I mean I’ve never built a ship alone before, but I can try. My home island’s practices are all about wayfaring. #speaker:Noelle #portrait:NoelleSmallSmile
+->DONE
+
+===A1_S2_D2===
 The mess I saw wasn’t looking very functional. #speaker:Amelia #portrait:AmeliaHostile
 …We’re going to need a lot of supplies. Mainly wood, fabric for sails, iron, rope and glue. Do we have any of that around here? #speaker:Noelle #portrait:NoelleSceptical
 There are plenty of settlements around. We should be able to get wood the easiest, since the forest’s close by. #speaker:Amelia #portrait:AmeliaNormal
+->DONE
+
+===A1_S2_D3===
 //keep walking down the path
 //once we reach a point on the road, dialogue triggers again and it rains for 60 seconds.
 Ah! Gosh, the weather’s been getting worse lately. #speaker:Amelia #portrait:AmeliaHostile
 Why's that? #speaker:Noelle #portrait:NoelleUm
 The Great Disaster obviously. Do you live under a rock? #speaker:Amelia #portrait:AmeliaNormal
+->DONE
+
+
+===A1_S2_D4
 Um… #speaker:Noelle #portrait:NoelleUm
 You seriously don’t know about the great floods? #speaker:Amelia #portrait:AmeliaHostile
 I’ve only heard stories about them. We don’t talk much about the thing that causes it. #speaker:Noelle #portrait:NoelleUm
@@ -77,21 +114,22 @@ With the weather getting worse and the waves getting stronger… It’s a sign t
 How much longer do we have? #speaker:Noelle #portrait:NoelleSceptical
 Two to four weeks, at most. You okay? #speaker:Amelia #portrait:AmeliaNormal
 +[Yeah, just thinking.]
-    ->A1_S2_D1_2
+    ->DONE
 +[Just counting the days.]
 You’re so weird. #speaker:Amelia #portrait:AmeliaNormal
-    ->A1_S2_D1_2
+    ->DONE
 
 /*after this point we need to walk further. Next dialogue is prompted when we reach the first puzzle.
 Many creatures roam around the wild forest. Not interactable for now*/
-===A1_S2_D1_2===
+
+// orb right outside puzzle entrance
+===A1_S2_D5===
 Upon seeing the ruin, Amelia gets frustrated. This place appears to be a dead end. #speaker:Narrator
 Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amelia #portrait:AmeliaHostile
 +[Is it a puzzle?]
     ->quest
 +[Let me take a look.]
     ->quest
-    
 ===quest===
 You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
 …Knock yourself out, I suppose. #portrait:AmeliaNormal
@@ -99,6 +137,8 @@ You? Solving these ancient ruins? Do you know how heavy those blocks are? #speak
 ~ AddQuest(QUEST_1)
 ->DONE
 
+
+// quests   --- orb right outside puzzle 1 exit
 ===ongoing_quest_1===
 You haven't solved the puzzle yet!
 ->DONE
@@ -115,7 +155,10 @@ To be honest, the hardest part was adjusting them to the right place since they�
 But you’re happy to be of use.
 …So, you said the settlement was through this way? #speaker:Noelle #portrait:NoelleBigSmile
 Yeah, It's not far from here. Let’s go. #speaker:Amelia #portrait:AmeliaNormal
+->DONE
 
+// orb in between puzzle 1 and puzzle 2 / around where amaya is
+===A1_S2_D6===
 //same objective of finding the viridi settlement (doesn’t change). Player follows the path, terrain becomes more leafy and wild, entering viridi forest
 
 We shouldn’t be too far off from the settlement now, I’m starting to recognise these plants. #speaker:Amelia #portrait:AmeliaNormal
@@ -152,7 +195,6 @@ Far from your pack, are you? You two are certainly suspicious.
 We aren’t doing anything suspicious! #speaker:Amelia
 …I think it’s better if we just go along here to avoid a fight. #speaker:Noelle
 (It’s clear that this girl isn’t just going to let us off easy, but maybe we can get closer to what we need, this way.)
-
 //new objective: follow the strange girl into the forest
 ->DONE
 

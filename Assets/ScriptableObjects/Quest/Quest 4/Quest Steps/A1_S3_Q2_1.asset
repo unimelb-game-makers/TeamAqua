@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
-  m_Name: A1S2_OrbData 1
+  m_Script: {fileID: 11500000, guid: fe4569890fe614cc9a2803bbff4ba4f2, type: 3}
+  m_Name: A1_S3_Q2_1
   m_EditorClassIdentifier: 
-  dialogues:
-  - dialogue: {fileID: 11400000, guid: d78171af0639ced469a2b6dd526ef7db, type: 2}
-    mode: 0
+  type: 1
+  description: Talk to the villages
+  requiredItems:
+  - item: {fileID: 11400000, guid: 716916954584f9b4392e7bbcf1d05d5f, type: 2}
+    amount: 10
+  actionId: 

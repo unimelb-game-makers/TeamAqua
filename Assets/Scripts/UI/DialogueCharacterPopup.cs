@@ -64,11 +64,18 @@ namespace Popups
                             tagValue != "Noelle" && tagValue != "Narrator"
                         );
                         rightCharacter.SetName(tagValue);
+
                         DialogueManager
                             .Instance()
                             .DialogueAudioPlayer.SetCurrentAudioInfo(
                                 tagValue == "Narrator" ? "Narrator" : tagValue
                             );
+
+                        /*
+                        if (PORTRAIT_TAG != null)
+                        {
+                            leftCharacter.PlayAnim(tagValue + "Idle");
+                        }*/
                         break;
 
                     case PORTRAIT_TAG: //change speaker portrait depending on portrait tag
