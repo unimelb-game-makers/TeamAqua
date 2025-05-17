@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
+using Sirenix.OdinInspector;
 public class DayManager : MonoBehaviour
 {
     private const float LIGHT_DURATION = 1.0f;
@@ -13,6 +15,11 @@ public class DayManager : MonoBehaviour
     
     // Exposed Actions
     public static Action<int> OnDayChanged;
+
+    public ParticleSystem rainParticle;
+    public const float RAINCHANCE = 0.3f;
+
+    private Coroutine rainRoutine;
 
     // Current Day and Night
     private int _currentDay = 1;
@@ -79,6 +86,16 @@ public class DayManager : MonoBehaviour
         CurrentDay += 1;
         SetNight(false);
         _playerController.handleNextDay();
+        RainWithDelay(false, 2.0f);
+        float randomValue = Random.value;
+        if (randomValue < RAINCHANCE)
+        {
+            RainWithDelay(true, 2.0f); //wait 2s, so rain starts after screen blacked out 
+            Debug.Log("Rain starts!");
+        }
+        else {
+            Debug.Log("No rain");
+        }
         EnergyManager.instance.OnNextDay();
         
         // Trigger Save whenever a new day is started
@@ -115,4 +132,45 @@ public class DayManager : MonoBehaviour
     {
         EnergyManager.OnEnergyChanged -= CheckEnergy;
     }
+
+    [Button]
+    public void StartRain()
+    {
+        if (rainParticle != null && !rainParticle.isPlaying)
+        {
+            rainParticle.Play();
+        }
+    }
+
+    public void StopRain()
+    {
+        if (rainParticle != null && rainParticle.isPlaying)
+        {
+            rainParticle.Stop();
+        }
+    }
+
+    public void RainWithDelay(bool startRain, float delay)
+    {
+        if (rainRoutine != null)
+        {
+            StopCoroutine(rainRoutine);
+        }
+
+        rainRoutine = StartCoroutine(RainAfterDelay(startRain, delay));
+    }
+
+    private IEnumerator RainAfterDelay(bool startRain, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if(startRain) 
+        {
+            StartRain();
+        }
+        else
+        {
+            StopRain();
+        }
+    }
+
 }
