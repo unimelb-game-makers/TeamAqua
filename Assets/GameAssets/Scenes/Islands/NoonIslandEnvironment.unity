@@ -569,6 +569,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.397
       objectReference: {fileID: 0}
+    - target: {fileID: 7723603649819008272, guid: b8f07a267d96644b3b26157d41dd12c8, type: 3}
+      propertyPath: m_Name
+      value: Quest Trigger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
