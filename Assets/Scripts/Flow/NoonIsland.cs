@@ -82,11 +82,10 @@ public class NoonIsland : MonoBehaviour
     private void InitPlayer()
     {
         Camera _ = Instantiate(mainCamera);
-        CinemachineVirtualCamera virtualCam = Instantiate(virtualCamera);
+        CameraManager camManager = Instantiate(cameraManager);
         PlayerController player = Instantiate(playerController);
 
-        virtualCam.LookAt = player.transform;
-        virtualCam.Follow = player.transform;
+        camManager.SetPlayer(player);
     }
 
     /// <summary>

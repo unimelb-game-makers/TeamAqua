@@ -28,6 +28,15 @@ public class CameraManager : MonoBehaviour
         SetCamera(currentCamera);
     }
 
+    // Set follow and aim for each camera at player
+    public void SetPlayer(PlayerController player){
+        foreach(GameObject camOBJ in cameras){
+            CinemachineVirtualCamera vc = camOBJ.GetComponent<CinemachineVirtualCamera>();
+            vc.LookAt = player.transform;
+            vc.Follow = player.transform;
+        }
+    }
+
     public void SetCamera(int idx){
         currentCamera = idx;
         for(int i = 0; i<cameras.Length; i++){
