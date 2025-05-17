@@ -21,9 +21,6 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private PlayerController playerController;
 
-    [SerializeField]
-    private Vector3 spawnPosition;
-
     [Header("Managers")]
     [SerializeField]
     private BarrierManager barrierManager;
@@ -51,6 +48,9 @@ public class NoonIsland : MonoBehaviour
 
     [SerializeField]
     private WaterManager waterManager;
+
+    [SerializeField]
+    private CameraManager cameraManager;
 
     [Header("Level")]
     [SerializeField]
@@ -82,12 +82,10 @@ public class NoonIsland : MonoBehaviour
     private void InitPlayer()
     {
         Camera _ = Instantiate(mainCamera);
-        CinemachineVirtualCamera virtualCam = Instantiate(virtualCamera);
         PlayerController player = Instantiate(playerController);
-
-        player.transform.position = spawnPosition;
-        virtualCam.LookAt = player.transform;
-        virtualCam.Follow = player.transform;
+        CameraManager camManager = Instantiate(cameraManager);
+        camManager.SetPlayer(player);
+        Game.AddManager(camManager);
     }
 
     /// <summary>

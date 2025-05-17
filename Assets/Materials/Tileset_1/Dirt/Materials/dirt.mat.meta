@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Tileset_1/Dirt/Materials/dirt.mat.meta
+guid: a1db56b1ff5507444a707bf49a45ac06
+========
+guid: 82e4600ac01682b4c8ccc3df687b8e12
+>>>>>>>> main:Assets/ScriptableObjects/Items/Mushroom.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
