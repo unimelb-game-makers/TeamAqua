@@ -14,7 +14,7 @@ public class CameraSwitch : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("Player")){
-            CameraManager.cameraManager.SetCamera(switchBack);
+            CameraManager.instance.SetCamera(switchBack);
         }
     }
 }
