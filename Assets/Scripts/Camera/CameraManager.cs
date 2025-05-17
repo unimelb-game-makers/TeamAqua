@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public static CameraManager cameraManager;
+    public static CameraManager instance;
 
     public GameObject[] cameras;
 
