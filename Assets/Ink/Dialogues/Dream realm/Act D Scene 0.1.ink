@@ -15,13 +15,10 @@ CONST DIALOGUE_2 = "A0_S2_D2"
 CONST DIALOGUE_3 = "A0_S2_D3"
 {
     - dialogue_id == DIALOGUE_1:
-        a
         -> dialogue_1
     - dialogue_id == DIALOGUE_2:
-        b
         -> dialogue_2
-        - dialogue_id == DIALOGUE_3:
-        c
+    - dialogue_id == DIALOGUE_3:
         -> dialogue_3
 }
 
@@ -30,7 +27,6 @@ CONST DIALOGUE_3 = "A0_S2_D3"
 // click first orb to start dialogue below
 
 ===dialogue_1===
-a
 ->A0_S2_O1
 
 ===dialogue_2===

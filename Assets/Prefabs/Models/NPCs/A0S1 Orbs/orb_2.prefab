@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7957123908019092424}
   m_Layer: 0
   m_Name: orb_2
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9037184501490070000}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.881, y: 1.2067709, z: 0.96}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4133e545cb30ae7bda9ac4d4b58e4139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextOrb: {fileID: 0}
+  nextOrb: {fileID: 6810622046796303858, guid: dd599fe6aff71d6408ad72274facd791, type: 3}
   normalRotationSpeed: 10
   fastRotationSpeed: 20
   spriteRenderer: {fileID: 1145755616250646036}
