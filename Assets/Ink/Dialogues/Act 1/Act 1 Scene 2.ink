@@ -17,7 +17,6 @@ CONST DIALOGUE_4 = "A1_S2_D4"
 CONST DIALOGUE_5 = "A1_S2_D5"
 CONST QUEST_1 = "A1_S2_Q1"
 CONST DIALOGUE_6 = "A1_S2_D6"
-CONST DIALOGUE_7 = "A1_S2_D7"
 {
     - dialogue_id == DIALOGUE_1:
         -> dialogue_1
@@ -33,8 +32,6 @@ CONST DIALOGUE_7 = "A1_S2_D7"
         -> quest_1
     - dialogue_id == DIALOGUE_6:
         -> dialogue_6
-    - dialogue_id == DIALOGUE_7:
-        -> dialogue_7
 }
 
 
@@ -156,6 +153,8 @@ But you’re happy to be of use.
 …So, you said the settlement was through this way? #speaker:Noelle #portrait:NoelleBigSmile
 Yeah, It's not far from here. Let’s go. #speaker:Amelia #portrait:AmeliaNormal
 ->DONE
+
+
 
 // orb in between puzzle 1 and puzzle 2 / around where amaya is
 ===A1_S2_D6===

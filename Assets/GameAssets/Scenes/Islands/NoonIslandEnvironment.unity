@@ -746,7 +746,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4896328455448339265, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
@@ -928,6 +929,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1262192729276981572, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
+      propertyPath: harvestList.Array.data[0].itemResource
+      value: 
+      objectReference: {fileID: 11400000, guid: c81be45d3a8c44373a4c4bbe94342434, type: 2}
+    - target: {fileID: 1262192729276981572, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
+      propertyPath: harvestList.Array.data[1].itemResource
+      value: 
+      objectReference: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
     - target: {fileID: 3112719109613161523, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
