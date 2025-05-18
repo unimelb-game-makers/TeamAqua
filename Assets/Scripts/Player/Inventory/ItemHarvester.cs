@@ -8,9 +8,12 @@ public class ItemHarvester : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.E) && source != null && source.currentItem().amount > 0)
+        if (Input.GetKeyDown(KeyCode.E) && source != null)
         {
-            InventoryManager.instance.AddItem(source.HarvestResource());
+            if (source.HarvestResource(out Item item))
+            {
+                InventoryManager.instance.AddItem(item);
+            }
         }
     }
 

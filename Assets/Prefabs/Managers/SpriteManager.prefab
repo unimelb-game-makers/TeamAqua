@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   billboard: 1
-  freezeXYAxis: 1
+  freezeXYAxis: 0
