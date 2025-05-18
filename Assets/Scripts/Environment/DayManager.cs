@@ -1,8 +1,11 @@
 using System;
+using System.Collections;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
+using Sirenix.OdinInspector;
 public class DayManager : MonoBehaviour
 {
+    public static DayManager instance;
     private const float LIGHT_DURATION = 1.0f;
 
     [Header("Scriptable Objects")] [SerializeField]
@@ -10,9 +13,17 @@ public class DayManager : MonoBehaviour
 
     [Header("Night Settings")]
     [SerializeField] private Color targetColor = Color.black;
+    [SerializeField] private Material skyboxMaterial;
+    [SerializeField] private float dayExposure = 1f;
+    [SerializeField] private float nightExposure = 0.6f;
     
     // Exposed Actions
     public static Action<int> OnDayChanged;
+
+    public ParticleSystem rainParticle;
+    public const float RAINCHANCE = 0.3f;
+
+    private Coroutine rainRoutine;
 
     // Current Day and Night
     private int _currentDay = 1;
@@ -41,7 +52,16 @@ public class DayManager : MonoBehaviour
     private float lerpTime = 0f;
     private Color initialColor;
     private Light directionalLight;
+    private static readonly int Exposure = Shader.PropertyToID("_Exposure");
+    private Material _runtimeSkyboxMaterial;
 
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        else
+            instance = this;
+    }
     
     private void Start()
     {
@@ -50,6 +70,9 @@ public class DayManager : MonoBehaviour
         _playerController = FindFirstObjectByType<PlayerController>();
         initialColor = directionalLight.color;
         EnergyManager.OnEnergyChanged += CheckEnergy;
+        
+        _runtimeSkyboxMaterial = new Material(skyboxMaterial);
+        RenderSettings.skybox = _runtimeSkyboxMaterial;
     }
 
     private void CheckEnergy(float energyAmount)
@@ -62,23 +85,33 @@ public class DayManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isNight && Input.GetKeyDown(KeyCode.E) && Ship.isNearPlayer)
-        {
-            StartNewDay();
-        }
-        
         if (shouldChangeColor && firstTime)
         {
             ChangeLight();
         }
     }
 
-    private void StartNewDay()
+    public bool CanChangeDay()
+    {
+        return isNight;
+    }
+
+    public void StartNewDay()
     {
         OnDayChanged?.Invoke(CurrentDay);
         CurrentDay += 1;
         SetNight(false);
         _playerController.handleNextDay();
+        RainWithDelay(false, 2.0f);
+        float randomValue = Random.value;
+        if (randomValue < RAINCHANCE)
+        {
+            RainWithDelay(true, 2.0f); //wait 2s, so rain starts after screen blacked out 
+            Debug.Log("Rain starts!");
+        }
+        else {
+            Debug.Log("No rain");
+        }
         EnergyManager.instance.OnNextDay();
         
         // Trigger Save whenever a new day is started
@@ -96,6 +129,7 @@ public class DayManager : MonoBehaviour
         else
         {
             firstTime = false;
+            _runtimeSkyboxMaterial.SetFloat(Exposure, dayExposure);
             directionalLight.color = initialColor;
         }
     }
@@ -104,9 +138,12 @@ public class DayManager : MonoBehaviour
     {
         lerpTime += Time.deltaTime / LIGHT_DURATION;
         directionalLight.color = Color.Lerp(initialColor, targetColor, lerpTime);
+        float exposure = Mathf.Lerp(dayExposure, nightExposure, lerpTime);
+        _runtimeSkyboxMaterial.SetFloat(Exposure, exposure);
         if (lerpTime >= 1f)
         {
             directionalLight.color = targetColor;
+            _runtimeSkyboxMaterial.SetFloat(Exposure, nightExposure);
             firstTime = false;
         }
     }
@@ -115,4 +152,51 @@ public class DayManager : MonoBehaviour
     {
         EnergyManager.OnEnergyChanged -= CheckEnergy;
     }
+
+    [Button]
+    private void DebugNight()
+    {
+        SetNight(true);
+    }
+    
+    [Button]
+    public void StartRain()
+    {
+        if (rainParticle != null && !rainParticle.isPlaying)
+        {
+            rainParticle.Play();
+        }
+    }
+
+    public void StopRain()
+    {
+        if (rainParticle != null && rainParticle.isPlaying)
+        {
+            rainParticle.Stop();
+        }
+    }
+
+    public void RainWithDelay(bool startRain, float delay)
+    {
+        if (rainRoutine != null)
+        {
+            StopCoroutine(rainRoutine);
+        }
+
+        rainRoutine = StartCoroutine(RainAfterDelay(startRain, delay));
+    }
+
+    private IEnumerator RainAfterDelay(bool startRain, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if(startRain) 
+        {
+            StartRain();
+        }
+        else
+        {
+            StopRain();
+        }
+    }
+
 }

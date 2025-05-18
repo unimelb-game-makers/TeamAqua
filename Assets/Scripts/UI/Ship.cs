@@ -1,28 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-    public static bool isNearPlayer = false;
     public GameObject uiPanel;
+    private bool _nearPlayer = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        SphereCollider collider = gameObject.AddComponent<SphereCollider>();
-        collider.isTrigger = true;
-        collider.radius = 1f;
+        SphereCollider trigger = gameObject.AddComponent<SphereCollider>();
+        trigger.isTrigger = true;
+        trigger.radius = 1f;
 
         uiPanel.SetActive(false);
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        if (_nearPlayer && DayManager.instance.CanChangeDay() && Input.GetKeyDown(KeyCode.E))
+            DayManager.instance.StartNewDay();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Ensure player has "Player" tag
+        if (other.CompareTag("Player") && DayManager.instance.CanChangeDay())
         {
-            isNearPlayer = true;
+            _nearPlayer = true;
             uiPanel.SetActive(true);
         }
     }
@@ -31,7 +33,7 @@ public class Ship : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isNearPlayer = false;
+            _nearPlayer = false;
             uiPanel.SetActive(false);
         }
     }
