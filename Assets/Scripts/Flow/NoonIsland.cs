@@ -60,6 +60,9 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private PlayerSave playerSave;
 
+    //public string BG_MUSIC_1 = "BGM_A_DREAM";
+    public string PREV_MUSIC = "BGM_A_DREAM";
+
     private void Awake()
     {
         InitUI();
@@ -67,6 +70,11 @@ public class NoonIsland : MonoBehaviour
         InitManagers();
         InitLevel();
         LoadData();
+    }
+
+    private void Start()
+    {
+        AudioManager.Instance.Stop(PREV_MUSIC);
     }
 
     /// <summary>
