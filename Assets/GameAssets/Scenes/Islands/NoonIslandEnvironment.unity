@@ -937,6 +937,10 @@ PrefabInstance:
       propertyPath: harvestList.Array.data[1].itemResource
       value: 
       objectReference: {fileID: 11400000, guid: 5cdd000a14610c743938f4d1ff286dbd, type: 2}
+    - target: {fileID: 1847061405371929724, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
+      propertyPath: harvestList.Array.data[0].itemResource
+      value: 
+      objectReference: {fileID: 11400000, guid: c81be45d3a8c44373a4c4bbe94342434, type: 2}
     - target: {fileID: 3112719109613161523, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -997,6 +1001,10 @@ PrefabInstance:
       propertyPath: questStep
       value: 
       objectReference: {fileID: 11400000, guid: 87010c797de7123489f0bd14469613ed, type: 2}
+    - target: {fileID: 8983414139400844343, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
+      propertyPath: harvestList.Array.data[0].itemResource
+      value: 
+      objectReference: {fileID: 11400000, guid: 617e8ba5cecdd45bea36b695342d20ba, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
