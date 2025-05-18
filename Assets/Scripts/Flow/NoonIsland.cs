@@ -57,7 +57,8 @@ public class NoonIsland : MonoBehaviour
     private Level noonIslandLevel;
 
     [Header("Loading")]
-    [SerializeField] private PlayerSave playerSave;
+    [SerializeField]
+    private PlayerSave playerSave;
 
     private void Awake()
     {

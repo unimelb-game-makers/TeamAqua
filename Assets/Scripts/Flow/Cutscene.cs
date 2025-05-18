@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Cutscene : MonoBehaviour
 {
-    [Header("Level")]
+    [Header("UI")]
     [SerializeField]
     private UI ui;
 

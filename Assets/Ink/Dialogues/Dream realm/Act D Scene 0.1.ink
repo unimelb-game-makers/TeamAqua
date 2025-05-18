@@ -2,42 +2,42 @@ EXTERNAL checkQuestStatus(id, steps)
 EXTERNAL TurnOffBarrier(id)
 EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
 EXTERNAL PlayBGM(id)
-EXTERNAL SetQuest(id)
-EXTERNAL FinishQuest(questID)
-EXTERNAL FinishDialogue(dialogueId)
+EXTERNAL AddQuest(id)
+EXTERNAL SubmitQuest(questId)
+EXTERNAL SetNextDialogue(dialogueId)
 
 INCLUDE ../Globals/Globals.ink
-
-
-
-
-
-/*
-MIGHT WANNA SPLIT EACH ORB KNOT INTO THEIR OWN SCRIPT
-*/
-
-
 
 
 // Variable Setup
 CONST DIALOGUE_1 = "A0_S2_D1"
 CONST DIALOGUE_2 = "A0_S2_D2"
 CONST DIALOGUE_3 = "A0_S2_D3"
-
 {
-    - dialogue_id == "DIALOGUE_1":
-        -> A0_S2_O1
-    - dialogue_id == "DIALOGUE_2":
-        -> A0_S2_O2
-    - dialogue_id == "DIALOGUE_3":
-        -> A0_S2_O3
+    - dialogue_id == DIALOGUE_1:
+        a
+        -> dialogue_1
+    - dialogue_id == DIALOGUE_2:
+        b
+        -> dialogue_2
+        - dialogue_id == DIALOGUE_3:
+        c
+        -> dialogue_3
 }
 
 // fades into Noelle standing in the dream realm
 // movement tutorial
 // click first orb to start dialogue below
 
+===dialogue_1===
+a
+->A0_S2_O1
 
+===dialogue_2===
+->A0_S2_O2
+
+===dialogue_3===
+->A0_S2_O3
 
 
 ===A0_S2_O1===
