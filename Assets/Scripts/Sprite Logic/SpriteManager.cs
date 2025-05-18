@@ -11,8 +11,8 @@ public class SpriteManager : MonoBehaviour
     [SerializeField] public bool billboard = true; // Whether the sprites billboard at all.
     [SerializeField] public bool freezeXYAxis = true; // Which axis the sprites are being rotated on.
 
-    // Start is called before the first frame update
-    void Start()
+    // Setting the singleton
+    void Awake()
     {
         instance = this;
     }

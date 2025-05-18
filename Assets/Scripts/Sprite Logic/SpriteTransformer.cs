@@ -30,7 +30,6 @@ public class SpriteTransformer : MonoBehaviour
         // Choose which axis to rotate on.
         if(SpriteManager.instance.freezeXYAxis == true){
             transform.localRotation = Quaternion.Euler(0f, Camera.main.transform.localRotation.eulerAngles.y, 0f);
-            print("here");
         } else{
             transform.localRotation = Camera.main.transform.rotation;
         }

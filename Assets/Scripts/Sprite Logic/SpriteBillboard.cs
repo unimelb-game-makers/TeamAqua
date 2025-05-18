@@ -8,7 +8,7 @@ public class SpriteBillboard : MonoBehaviour
     void Update()
     {
         // Choose which axis to rotate on.
-        if(SpriteManager.instance = null) return;
+        if(SpriteManager.instance == null) return;
         if(SpriteManager.instance.freezeXYAxis == true){
             transform.rotation = Quaternion.Euler(0f, Camera.main.transform.rotation.eulerAngles.y, 0f);
         } else{
