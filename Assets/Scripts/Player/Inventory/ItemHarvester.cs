@@ -5,6 +5,7 @@ public class ItemHarvester : MonoBehaviour
 {
     [NonSerialized]
     public ItemHarvestSource source = null;
+    private ItemHarvestSource oldSource = null;
 
     void FixedUpdate()
     {
@@ -21,15 +22,19 @@ public class ItemHarvester : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ItemResource"))
         {
+            if(source != null) oldSource = source; // If there already was a source, remember which one it was
             source = other.gameObject.GetComponent<ItemHarvestSource>();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("ItemResource") && source != null)
+        if (other.gameObject.CompareTag("ItemResource"))
         {
-            source = null;
+            if (source == oldSource) // Exited the source with no new source entered
+                source = null;
+            else                     // Exited the source but there is a new source
+                oldSource = source;
         }
     }
 }
