@@ -1310,7 +1310,7 @@ MonoBehaviour:
   audioManager: {fileID: 846364756214676985, guid: 3d92d8b7d7e944d87b9f2517f96522f1, type: 3}
   dialogueManager: {fileID: 7517199300883449166, guid: f55363f2d36d34a9f8ea0da4eeea4602, type: 3}
   BG_MUSIC_1: BGM_A_DREAM
-  playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}
+  playerSave: {fileID: 11400000, guid: e4143bacf07a37f4189aaf98b1cefc06, type: 2}
 --- !u!4 &2048882831
 Transform:
   m_ObjectHideFlags: 0
