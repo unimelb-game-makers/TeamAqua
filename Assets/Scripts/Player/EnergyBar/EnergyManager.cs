@@ -19,6 +19,11 @@ public class EnergyManager : MonoBehaviour, ISaveable
             instance = this;
     }
 
+    public bool HasEnergy(float energy)
+    {
+        return _energyAmount >= energy;
+    }
+
     public void Load(SaveSlot saveSlot)
     {
         _energyAmount = saveSlot.playerSaveData.energy;
