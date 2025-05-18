@@ -165,6 +165,8 @@ public class QuestManager : MonoBehaviour, ISaveable
     private void UpdateState(QuestTracker tracker)
     {
         // Don't bother if it has already been submitted
+        //if (tracker.state != QuestState.Submitted || tracker.state != QuestState.Completed)
+        //{        }
         if (tracker.state == QuestState.Submitted)
             return;
         QuestState state = QuestState.Completed;

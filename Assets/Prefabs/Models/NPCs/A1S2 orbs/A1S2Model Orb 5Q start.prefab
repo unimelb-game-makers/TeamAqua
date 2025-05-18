@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 5853464214771285245}
   - component: {fileID: 2173215235260455163}
   m_Layer: 0
-  m_Name: A1S2Model Orb 5Q
+  m_Name: A1S2Model Orb 5Q start
   m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
