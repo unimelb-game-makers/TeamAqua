@@ -22,7 +22,7 @@ public class ItemHarvester : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ItemResource"))
         {
-            if(source != null) oldSource = source;
+            if(source != null) oldSource = source; // If there already was a source, remember which one it was
             source = other.gameObject.GetComponent<ItemHarvestSource>();
         }
     }
@@ -31,9 +31,9 @@ public class ItemHarvester : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ItemResource")) 
         {
-            if (source == oldSource)
+            if (source == oldSource) // Exited the source with no new source entered
                 source = null;
-            else
+            else                     // Exited the source but there is a new source
                 oldSource = source;
         }
     }
