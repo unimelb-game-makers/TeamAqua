@@ -90,7 +90,11 @@ PrefabInstance:
     - target: {fileID: 2472901909849844298, guid: e479ef14f4dcb5b438116d0bceb28643, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 203173835009406062}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472857554485580082, guid: e479ef14f4dcb5b438116d0bceb28643, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8734974864902195459, guid: e479ef14f4dcb5b438116d0bceb28643, type: 3}
       propertyPath: m_Name
       value: A1S2 Orb 4
@@ -100,17 +104,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e479ef14f4dcb5b438116d0bceb28643, type: 3}
---- !u!114 &203173835009406062 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2600966472655807890, guid: e479ef14f4dcb5b438116d0bceb28643, type: 3}
-  m_PrefabInstance: {fileID: 2794954980975055356}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4520629988514440242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: e479ef14f4dcb5b438116d0bceb28643, type: 3}
@@ -167,7 +160,7 @@ PrefabInstance:
     - target: {fileID: 2867321208421181713, guid: f1f8c32659644dc498985349dd4d9a71, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 1235146770413849126}
+      objectReference: {fileID: 0}
     - target: {fileID: 3594847492383757554, guid: f1f8c32659644dc498985349dd4d9a71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -197,17 +190,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1f8c32659644dc498985349dd4d9a71, type: 3}
---- !u!114 &1235146770413849126 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2414839126609553097, guid: f1f8c32659644dc498985349dd4d9a71, type: 3}
-  m_PrefabInstance: {fileID: 3505810510307912943}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2941424155509152033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: f1f8c32659644dc498985349dd4d9a71, type: 3}
@@ -264,11 +246,11 @@ PrefabInstance:
     - target: {fileID: 3324121538504112027, guid: 1f0f90e4465ea82498496fae6065541d, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 2036172045550996234}
+      objectReference: {fileID: 0}
     - target: {fileID: 4973944305127741558, guid: 1f0f90e4465ea82498496fae6065541d, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 2036172045550996234}
+      objectReference: {fileID: 0}
     - target: {fileID: 6906692155079980150, guid: 1f0f90e4465ea82498496fae6065541d, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -282,17 +264,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0f90e4465ea82498496fae6065541d, type: 3}
---- !u!114 &2036172045550996234 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2911674997567567939, guid: 1f0f90e4465ea82498496fae6065541d, type: 3}
-  m_PrefabInstance: {fileID: 3758736936492299081}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &3196600186706642567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: 1f0f90e4465ea82498496fae6065541d, type: 3}
@@ -309,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 1143677927672873408, guid: 2c51f9cf9d476aa419320e592526e128, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 3729567695354095089}
+      objectReference: {fileID: 0}
     - target: {fileID: 1512652506410566485, guid: 2c51f9cf9d476aa419320e592526e128, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -370,6 +341,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3206399874292554303, guid: 2c51f9cf9d476aa419320e592526e128, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8734974864902195459, guid: 2c51f9cf9d476aa419320e592526e128, type: 3}
       propertyPath: m_Name
       value: A1S2 Orb 6
@@ -384,17 +359,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: 2c51f9cf9d476aa419320e592526e128, type: 3}
   m_PrefabInstance: {fileID: 4203196685370420201}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3729567695354095089 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 690976067971714584, guid: 2c51f9cf9d476aa419320e592526e128, type: 3}
-  m_PrefabInstance: {fileID: 4203196685370420201}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4374113183410096068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -443,10 +407,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6895080805951276944, guid: ccb1339a7f3faaa47a88f88f84ce44b9, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7898667862148173934, guid: ccb1339a7f3faaa47a88f88f84ce44b9, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 6298198622400174194}
+      objectReference: {fileID: 0}
     - target: {fileID: 8734974864902195459, guid: ccb1339a7f3faaa47a88f88f84ce44b9, type: 3}
       propertyPath: m_Name
       value: A1S2 Orb 3
@@ -461,17 +429,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: ccb1339a7f3faaa47a88f88f84ce44b9, type: 3}
   m_PrefabInstance: {fileID: 4374113183410096068}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6298198622400174194 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7769917192036376502, guid: ccb1339a7f3faaa47a88f88f84ce44b9, type: 3}
-  m_PrefabInstance: {fileID: 4374113183410096068}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5931630360735878795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,7 +480,11 @@ PrefabInstance:
     - target: {fileID: 5768276752495759460, guid: 3e0fd587ec632814eb54be8b2c959bd8, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 294305527659712823}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686623085870296950, guid: 3e0fd587ec632814eb54be8b2c959bd8, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8734974864902195459, guid: 3e0fd587ec632814eb54be8b2c959bd8, type: 3}
       propertyPath: m_Name
       value: A1S2 Orb 2
@@ -533,17 +494,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e0fd587ec632814eb54be8b2c959bd8, type: 3}
---- !u!114 &294305527659712823 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6216365186794839996, guid: 3e0fd587ec632814eb54be8b2c959bd8, type: 3}
-  m_PrefabInstance: {fileID: 5931630360735878795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5342482847247514437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: 3e0fd587ec632814eb54be8b2c959bd8, type: 3}
@@ -557,6 +507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8167178499236001703}
     m_Modifications:
+    - target: {fileID: 1296929261487254634, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1762365109400483278, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -620,7 +574,7 @@ PrefabInstance:
     - target: {fileID: 8427210755943519261, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 425788974973553180}
+      objectReference: {fileID: 0}
     - target: {fileID: 8734974864902195459, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
       propertyPath: m_Name
       value: A1S2 Orb 5Q
@@ -630,17 +584,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
---- !u!114 &425788974973553180 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8267071378444311493, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
-  m_PrefabInstance: {fileID: 8598002049028411865}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8009389110784484375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: 047baf72b4be40940b6a01688cdec401, type: 3}
@@ -717,7 +660,11 @@ PrefabInstance:
     - target: {fileID: 2038443304342448670, guid: 29bdc0239c12e8d439a9b9c1b3d249ad, type: 3}
       propertyPath: indicatorPopup
       value: 
-      objectReference: {fileID: 7144895153354004724}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699097746201027566, guid: 29bdc0239c12e8d439a9b9c1b3d249ad, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8734974864902195459, guid: 29bdc0239c12e8d439a9b9c1b3d249ad, type: 3}
       propertyPath: m_Name
       value: A1S2 Orb 5
@@ -732,14 +679,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1762365109400483278, guid: 29bdc0239c12e8d439a9b9c1b3d249ad, type: 3}
   m_PrefabInstance: {fileID: 8729167112283372850}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7144895153354004724 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1874622744499283398, guid: 29bdc0239c12e8d439a9b9c1b3d249ad, type: 3}
-  m_PrefabInstance: {fileID: 8729167112283372850}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

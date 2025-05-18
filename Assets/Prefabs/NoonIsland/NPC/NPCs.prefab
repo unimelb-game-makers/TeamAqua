@@ -311,10 +311,6 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3353914300411494672, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3464204515350161589, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
       propertyPath: m_Name
       value: A1S2 Orbs
@@ -323,28 +319,8 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4382840465296907670, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
-      propertyPath: m_Size.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382840465296907670, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
-      propertyPath: m_Size.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382840465296907670, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
-      propertyPath: m_Size.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382840465296907670, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6006693263600451790, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
       propertyPath: m_Size.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6974786913524303158, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
-      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7134765818928431188, guid: bc4932de3aba6d649bad6155c8ab0549, type: 3}
