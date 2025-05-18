@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: ce372943af1d249efa9676e0f4629d50, type: 2}
+  npcData: {fileID: 11400000, guid: f7d6295f2b43de946a4c8f2fc2032562, type: 2}
   indicatorPopup: {fileID: 8961343683913608125}
 --- !u!1 &9132572337707985328
 GameObject:

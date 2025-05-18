@@ -156,9 +156,12 @@ I hope you understand; we only take as much as we need, and regularly give back 
 But enough about that— I can still ‘keep an eye’ on you even when we aren’t talking, so feel free to explore around.
 Maybe even listen to Oren’s stories, while you’re at it! I’ll catch you later once arrangements are confirmed with Amaya and Silas.
 
+
+
 //quest objective: talk to villagers (0/3)
 //you can talk to them in any order but if it’s easier you can keep the same objective but make each convo linear
 
+//one
 The weather has really gotten worse lately, it’s been raining so much! #speaker:carti
 I hope it stops soon before it affects the forest.
 I wonder where Chione has been going off to lately; she says she’s been searching for herbs? #speaker:bri

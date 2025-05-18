@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0a925ac8631f841acbe174054e8af4, type: 3}
-  m_Name: NoonIslandSave
+  m_Script: {fileID: 11500000, guid: 286773727a872479bb874945e14dbae6, type: 3}
+  m_Name: A1_S3_5A_D2
   m_EditorClassIdentifier: 
-  startSave: {fileID: 11400000, guid: 7ac517875a12144419359f87deb5729d, type: 2}
-  overrideSaveData: 1
-  saveTemplate: {fileID: 11400000, guid: 707dcbdd804ae094cb4863fed2462c2e, type: 2}
+  infinite: 0
