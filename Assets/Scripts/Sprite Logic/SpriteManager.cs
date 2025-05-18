@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpriteManager : MonoBehaviour
 {
-    public static SpriteManager spriteManager;
+    public static SpriteManager instance;
 
     // Following variables going to be checked by all the Sprites that have SpriteBillboard.cs script.
     // As a way to set ALL sprites to follow the same billboard rules.
@@ -14,6 +14,6 @@ public class SpriteManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteManager = this;
+        instance = this;
     }
 }

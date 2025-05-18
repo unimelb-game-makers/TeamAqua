@@ -24,11 +24,13 @@ public class SpriteTransformer : MonoBehaviour
     }
 
     void Update(){
-        if(billboard == false || SpriteManager.spriteManager == null)
+        if(billboard == false || SpriteManager.instance == null)
             return;
+        //print($"Billboard = {billboard}, SpriteManager = {SpriteManager.instance}");
         // Choose which axis to rotate on.
-        if(SpriteManager.spriteManager.freezeXYAxis == true){
+        if(SpriteManager.instance.freezeXYAxis == true){
             transform.localRotation = Quaternion.Euler(0f, Camera.main.transform.localRotation.eulerAngles.y, 0f);
+            print("here");
         } else{
             transform.localRotation = Camera.main.transform.rotation;
         }
