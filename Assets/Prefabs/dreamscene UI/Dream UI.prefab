@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIController
       objectReference: {fileID: 0}
+    - target: {fileID: 3887843194793254439, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4385237360188784910, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -167,13 +171,29 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5029134964957060889, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029134964957060889, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029134964957060889, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 342.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029134964957060889, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 5236316010689037707, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.668
       objectReference: {fileID: 0}
     - target: {fileID: 5236316010689037707, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5955308526053910206, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_Pivot.x
@@ -254,6 +274,22 @@ PrefabInstance:
     - target: {fileID: 5955308526053910206, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049170339103665168, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049170339103665168, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049170339103665168, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 57.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049170339103665168, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 9202199072197027974, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_IsActive
