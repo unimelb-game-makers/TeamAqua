@@ -7,8 +7,7 @@ Make sure to set the gameobject tag to "ItemResource".
 
 public class ItemHarvestSource : MonoBehaviour
 {
-    [SerializeField]
-    HarvestData[] harvestList;
+    [SerializeField] private HarvestData[] harvestList = Array.Empty<HarvestData>();
     private int itemIDX = 0;
     private Vector3 orig_scale; //save value of the original scale for tweening
     float popFactor = 0.8f;
@@ -18,37 +17,41 @@ public class ItemHarvestSource : MonoBehaviour
         orig_scale = transform.localScale;
     }
 
-    public Item HarvestResource()
-    { //it seems the bug bill showed on 28th nov was because we have nothing to stop amountClicks from going below 0,
-        // so ive put a an if statement here to check, however, returning null in else is blasting errors like crazy (every frame after item harvested) so i (or someone else) will need to find an alternative in that else statement.
-        if (itemIDX < harvestList.Length)
-        {
-            currentItem().amount -= 1;
-            pop();
-            if (currentItem().amount == 0)
-            {
-                if (itemIDX + 1 >= harvestList.Length)
-                    gameObject.SetActive(false);
-                else
-                    itemIDX++;
-            }
-            if (EnergyManager.instance != null)
-                EnergyManager.instance.LoseEnergy(currentItem().energyCost);
-
-            AudioManager.Instance.Play(currentItem().AudioName);
-            //Debug.Log($"Harvested Item: {currentItem().itemResource.name}");
-            return currentItem().itemResource;
-        }
-        else
-            return null;
-    }
-
-    public HarvestData currentItem()
+    public bool HarvestResource(out Item item)
     {
-        return harvestList[itemIDX];
+        // If we are past the list, then return
+        if (!CanHarvest())
+        {
+            item = null;
+            return false;
+        }
+
+        HarvestData currentItem = harvestList[itemIDX];
+        currentItem.amount -= 1;
+        Pop();
+        if (currentItem.amount == 0)
+        {
+            if (itemIDX + 1 >= harvestList.Length)
+                gameObject.SetActive(false);
+            else
+                itemIDX++;
+        }
+        if (EnergyManager.instance != null)
+            EnergyManager.instance.LoseEnergy(currentItem.energyCost);
+
+        AudioManager.Instance.Play(currentItem.AudioName);
+        item = currentItem.itemResource;
+        return true;
     }
 
-    void pop()
+    private bool CanHarvest()
+    {
+        if (itemIDX >= harvestList.Length)
+            return false;
+        return harvestList[itemIDX].amount > 0 && EnergyManager.instance.HasEnergy(harvestList[itemIDX].energyCost);
+    }
+
+    private void Pop()
     {
         LeanTween
             .scale(gameObject, orig_scale * popFactor, 0.1f)
