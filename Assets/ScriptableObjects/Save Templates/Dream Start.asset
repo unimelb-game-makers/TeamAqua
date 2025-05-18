@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 
   checkpoint: {fileID: 11400000, guid: fdb076080996a8d47a3b315e3a5c4d24, type: 2}
-  script: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
-  dialogue: {fileID: 11400000, guid: e9f39fa8b272b4038b3e9c80af2c02fb, type: 2}
+  script: {fileID: 11400000, guid: 9740f0a2cd2d6c94fb0e53630f2a47af, type: 2}
+  dialogue: {fileID: 11400000, guid: 12de411e431576e4b97e3e3a148d67e3, type: 2}
   ongoingQuests: []
   energy: 100
   day: 1
