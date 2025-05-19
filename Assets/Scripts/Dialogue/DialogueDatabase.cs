@@ -7,7 +7,7 @@ using UnityEngine;
 public class DialogueDatabase : ScriptableObject
 {
     public DialogueScript startScript;
-    
+
     [InlineEditor]
     public List<DialogueScript> scripts;
 
@@ -17,19 +17,19 @@ public class DialogueDatabase : ScriptableObject
         {
             if (scripts[i].name == id)
             {
-                return  scripts[i];
+                return scripts[i];
             }
         }
 
         throw new KeyNotFoundException($"DIALOGUE | Script '{id}' not found in the list.");
     }
-    
-    public string GetNextScript(string scriptId)
+
+    public DialogueScript GetNextScript(string scriptId)
     {
         DialogueScript dialogueScript = GetScript(scriptId);
         int index = scripts.IndexOf(dialogueScript);
         // We will return empty if there are no more scripts
-        return index + 1 >= scripts.Count ? string.Empty : scripts[index + 1].name;
+        return index + 1 >= scripts.Count ? null : scripts[index + 1];
     }
 
     /// <summary>
@@ -44,11 +44,16 @@ public class DialogueDatabase : ScriptableObject
         if (string.IsNullOrEmpty(DialogueManager.instance.ScriptId))
             return false;
         DialogueScript currentScript = GetScript(DialogueManager.instance.ScriptId);
-        script.TryGetDialogue(DialogueManager.instance.DialogueId, out DialogueNode currentDialogue);
+        script.TryGetDialogue(
+            DialogueManager.instance.DialogueId,
+            out DialogueNode currentDialogue
+        );
         // First compare the scripts
         int currentScriptIndex = scripts.IndexOf(currentScript);
         int scriptIndex = scripts.IndexOf(script);
-        int currentDialogueIndex = currentDialogue ? currentScript.dialogues.IndexOf(currentDialogue) : 0;
+        int currentDialogueIndex = currentDialogue
+            ? currentScript.dialogues.IndexOf(currentDialogue)
+            : 0;
         int dialogueIndex = node ? script.dialogues.IndexOf(node) : 0;
         if (currentScriptIndex > scriptIndex)
             return true;
@@ -66,12 +71,16 @@ public class DialogueDatabase : ScriptableObject
             if (scripts[i] == null)
                 continue;
             if (scriptIds.Contains(scripts[i].name))
-                throw new InvalidOperationException($"DIALOGUE | Duplicate script name detected: '{scripts[i].name}'");
+                throw new InvalidOperationException(
+                    $"DIALOGUE | Duplicate script name detected: '{scripts[i].name}'"
+                );
             scriptIds.Add(scripts[i].name);
             for (int j = 0; j < scripts[i].dialogues.Count; ++j)
             {
                 if (dialogueIds.Contains(scripts[i].dialogues[j].name))
-                    throw new InvalidOperationException($"DIALOGUE | Duplicate dialogue name detected: '{scripts[i].dialogues[j].name}'");
+                    throw new InvalidOperationException(
+                        $"DIALOGUE | Duplicate dialogue name detected: '{scripts[i].dialogues[j].name}'"
+                    );
                 dialogueIds.Add(scripts[i].dialogues[j].name);
             }
         }

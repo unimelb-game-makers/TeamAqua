@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6dc934060e142679408e9d47c517be, type: 3}
   m_Name: Empty
   m_EditorClassIdentifier: 
-  description: 
+  description: Start of Noonisland
   checkpoint: {fileID: 11400000, guid: 8b99bc7916d7b4d27913ab9314ac93e1, type: 2}
   script: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   dialogue: {fileID: 11400000, guid: e9f39fa8b272b4038b3e9c80af2c02fb, type: 2}
   ongoingQuests: []
   energy: 100
+  day: 1

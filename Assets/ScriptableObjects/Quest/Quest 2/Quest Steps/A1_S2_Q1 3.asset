@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4569890fe614cc9a2803bbff4ba4f2, type: 3}
+  m_Name: A1_S2_Q1 3
+  m_EditorClassIdentifier: 
+  type: 1
+  description: Solve the ancient ruins
+  requiredItems:
+  - item: {fileID: 11400000, guid: 716916954584f9b4392e7bbcf1d05d5f, type: 2}
+    amount: 10
+  locationId: 
+  npcId: 

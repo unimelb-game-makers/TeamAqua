@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc934060e142679408e9d47c517be, type: 3}
+  m_Name: Dream Start
+  m_EditorClassIdentifier: 
+  description: 
+  checkpoint: {fileID: 11400000, guid: fdb076080996a8d47a3b315e3a5c4d24, type: 2}
+  script: {fileID: 11400000, guid: 9740f0a2cd2d6c94fb0e53630f2a47af, type: 2}
+  dialogue: {fileID: 11400000, guid: 12de411e431576e4b97e3e3a148d67e3, type: 2}
+  ongoingQuests: []
+  energy: 100
+  day: 1

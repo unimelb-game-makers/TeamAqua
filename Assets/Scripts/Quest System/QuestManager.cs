@@ -8,10 +8,13 @@ public enum QuestState
 {
     // Hasn't been picked up yet
     Ready,
+
     // Ongoing means there are still things that can be done
     Ongoing,
+
     // Finished means that it has been completed, but hasn't been submitted
     Completed,
+
     // Submitted means that it has been fully sent through
     Submitted,
 }
@@ -35,7 +38,7 @@ public class QuestManager : MonoBehaviour, ISaveable
 {
     // Singleton instance
     public static QuestManager instance;
-    
+
     [SerializeField]
     private QuestDatabase questDatabase;
 
@@ -111,10 +114,11 @@ public class QuestManager : MonoBehaviour, ISaveable
             if (_quests[i].quest == quest)
             {
                 throw new InvalidOperationException(
-                    $"QUEST | Trying to add Quest {quest.name}, but it has already been added");
+                    $"QUEST | Trying to add Quest {quest.name}, but it has already been added"
+                );
             }
         }
-        QuestTracker questTracker = new ();
+        QuestTracker questTracker = new();
         questTracker.quest = quest;
         for (int i = 0; i < quest.steps.Count; ++i)
         {
@@ -161,6 +165,8 @@ public class QuestManager : MonoBehaviour, ISaveable
     private void UpdateState(QuestTracker tracker)
     {
         // Don't bother if it has already been submitted
+        //if (tracker.state != QuestState.Submitted || tracker.state != QuestState.Completed)
+        //{        }
         if (tracker.state == QuestState.Submitted)
             return;
         QuestState state = QuestState.Completed;
@@ -173,16 +179,20 @@ public class QuestManager : MonoBehaviour, ISaveable
                     List<QuestItem> requiredItems = stepTracker.step.requiredItems;
                     for (int j = 0; j < requiredItems.Count; ++j)
                     {
-                        bool hasItem =
-                            InventoryManager.instance.HasItem(requiredItems[j].item.name, requiredItems[j].amount);
+                        bool hasItem = InventoryManager.instance.HasItem(
+                            requiredItems[j].item.name,
+                            requiredItems[j].amount
+                        );
                         if (!hasItem)
                             state = QuestState.Ongoing;
                     }
                     break;
                 // If location and talk are still ongoing, then the quest is still ongoing
-                case QuestType.Location:
-                case QuestType.Talk:
-                    if (stepTracker.state == QuestState.Ongoing)
+                case QuestType.Action:
+                    if (
+                        stepTracker.state == QuestState.Ongoing
+                        || stepTracker.state == QuestState.Ready
+                    )
                         state = QuestState.Ongoing;
                     break;
             }
@@ -195,10 +205,18 @@ public class QuestManager : MonoBehaviour, ISaveable
     {
         // Go through all the possible step ids and mark it as completed
         for (int i = 0; i < _quests.Count; ++i)
-            if (_quests[i].state == QuestState.Ongoing)
-                for (int j = 0; j < _quests[i].steps.Count; ++j)
-                    if (_quests[i].steps[j].step == step)
-                        _quests[i].steps[j].state = QuestState.Completed;
+        {
+            if (_quests[i].state != QuestState.Ongoing)
+            {
+                continue;
+            }
+
+            for (int j = 0; j < _quests[i].steps.Count; ++j)
+            {
+                if (_quests[i].steps[j].step == step)
+                    _quests[i].steps[j].state = QuestState.Completed;
+            }
+        }
     }
 
     public void SubmitQuest(string questId)
@@ -213,4 +231,6 @@ public class QuestManager : MonoBehaviour, ISaveable
 
         tracker.state = QuestState.Submitted;
     }
+
+    public void CompletePuzzleStep(string puzzleId) { }
 }

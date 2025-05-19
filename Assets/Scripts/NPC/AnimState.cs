@@ -7,16 +7,19 @@ public class AnimState : MonoBehaviour
 {
     public AnimController animController;
 
-    [SerializeField] String _animation;
+    [SerializeField]
+    String _animation;
 
     public void Start()
     {
-        if(animController == null){
+        if (animController == null)
+        {
             animController = GetComponentInParent<AnimController>();
         }
     }
 
-    public void playAnim(){
+    public void playAnim()
+    {
         animController.ChangeAnimationState(_animation);
     }
 }

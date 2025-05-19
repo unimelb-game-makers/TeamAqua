@@ -144,9 +144,9 @@ Before she can leave however, her stomach rumbles.
 When was the last time you ate? #speaker:Noelle #portrait:NoelleUm
 It's been a little while. Hard to survive on this island when you’re as small as me. #speaker:Amelia #portrait:AmeliaNormal
 …It’d be pretty convenient if someone were to find food for you. #speaker:Noelle #portrait:NoelleSmallSmile
-->take_quest_1
+->TakeQuest
 
-===take_quest_1===
+===TakeQuest===
 …Fine. Find me some berries. Ten of them, and maybe I will consider joining your party. #speaker:Amelia #portrait:AmeliaNormal
 (I’ll need to find out more about this island if I want to survive.) #speaker:Noelle #portrait:NoelleSceptical
 (<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>) #portrait:NoelleSmallSmile
@@ -235,4 +235,3 @@ Amelia nudges your hand, and leads you toward the forests deeper in-land. #speak
 ===PostquestSubmit===
 What are you waiting for? let's go! #speaker:Amelia #portrait:AmeliaHappy
 ->END
-

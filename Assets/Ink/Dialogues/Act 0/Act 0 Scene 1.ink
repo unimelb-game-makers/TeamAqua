@@ -9,9 +9,18 @@ EXTERNAL PlayBGM(id)
 
 INCLUDE ../Globals/Globals.ink
 
+// Variable Setup
+CONST DIALOGUE_1 = "A0_S1_D1"
+
+{
+    - dialogue_id == DIALOGUE_1:
+        -> dialogue_1
+}
+
+===dialogue_1===
 ~PlayBGM("BGM_CUTSCENE_CEREMONY")
 
-//---------------------------------------------SCRIPT----------------------------------------
+//--------------------------------SCRIPT------------------
 
 /*i think the typing sound for the prologue text works well! Makes it ominous. All the audio is in red font so that it's easy for you to ref and remove*/
 

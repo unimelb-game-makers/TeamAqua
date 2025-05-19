@@ -1,133 +1,203 @@
+EXTERNAL checkQuestStatus(id, steps)
+EXTERNAL TurnOffBarrier(id)
+EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
+EXTERNAL PlayBGM(id)
+EXTERNAL AddQuest(id)
+EXTERNAL SubmitQuest(questId)
+EXTERNAL SetNextDialogue(dialogueId)
 
-//interactions: dialogue cont, choices, 
-//global ink:
-//dev approval: in progress
-
-
-
-START:
-//to start this file: walk further into forest
-
-
-You and Amelia walk through the thickets of the rainforests. 
-Ahead you spot a clearing. 
-I don’t know about this - a lot of humans live in these parts. #speaker:Amelia #portrait:AmeliaAngry
-I would honestly rather chance it with the plants, #speaker:Amelia #portrait:AmeliaNeutral
-but if you think we might be able to find some ship parts, I won’t stop. 
-Do you want to head into the clearing? #speaker:Narrator
-+[Yes, we can't afford to waste time.]
-    -> choiceYeswecantaffordtowastetime
-+[No better to be safe than sorry]
-    -> choiceNobettertobesafethansorry
-    
-===choiceNobettertobesafethansorry=== //if player chooses for Noelle & Amelia to move on past clearing
-Thank goodness. Now come on! #speaker:Amelia #portrait:AmeliaJoyous
-You and Amelia move on past the clearing, and deeper into the woods. #speaker:Narrator
-Ahead of you lies some barbed vines blocking your way. Venus flytrap-like plants stand on either side of the vines, menacingly.
-Do you try to hack through them?
-+[Sure, why not?]
-    -> choiceSurewhynot
-+[No thanks.]
-    -> choiceNothanks
-    
-===choiceNothanks===
-It would most likely be futile anyway. #speaker:Narrator
-->DONE
-    
-===choiceSurewhynot===
-You and Amelia attempt to hack and slash and bite through the vines, but to no avail. #speaker:Narrator
-
-The venus fly trap plants start to growl. // start sound effect
-
-It would likely be futile—and hazardous—to keep going. #speaker:Narrator
-Oh come on! #speaker:Amelia #portrait:AmeliaAngry
-Well it looks like we can’t go any further in that way. #speaker:Amelia
-Not unless we had fire.
-I don’t suppose you can— #speaker:Noelle #portrait:NoelleDispleased
-Breathe fire? No. Maybe an ember or two, but that’s about it. #speaker:Amelia #portrait:AmeliaSilly
-I would have to practice for like a gajillion hours #speaker:Amelia #portrait:Silly
-to be able to breathe even one large flame. #speaker:Amelia #portrait:Neutral
-And we don't have the time for that right now.
-So can we please go somewhere else? #speaker:Amelia #portrait:AmeliaNeutral
-->DONE
+INCLUDE ../Globals/Globals.ink
 
 
-===choiceYeswecantaffordtowastetime=== //if player chooses for Noelle and Amelia #portrait:AmeliaJoyful to pass through clearing
-Augh, fine. #speaker:Amelia #portrait:AmeliaJoyful 
-You and Amelia enter the clearing, and spot several treetops. 
-Stop! # speaker:Elder
-An elderly figure jumps down from the tallest tree to block your way. 
-State your name and your purpose. Now. #speaker:Elder
-We don’t want any trouble, we’re just passing through. speaker: Amelia #portrait:AmeliaJoyful
-Wouldn’t be the first time an outsider came through with that story. #speaker:Elder
-I will ask you again: #speaker:Elder
-Several cloaked figures in masks appear from the trees and crowd around Noelle and Amelia, spears raised. 
-Name and purpose. Now. #speaker:Elder
-It appears that you’re in a tight spot. How do you wish to deescalate the situation: #speaker:Narrator
-+[Say nothing.]
-    ->choiceSaynothing
-//+[Run.]
-   // -> choiceRun
-+[Say the truth]
-    -> choiceSaythetruth
+// Variable Setup
+CONST DIALOGUE_1 = "A1_S2_D1"
+CONST DIALOGUE_2 = "A1_S2_D2"
+CONST DIALOGUE_3 = "A1_S2_D3"
+CONST DIALOGUE_4 = "A1_S2_D4"
+CONST DIALOGUE_5 = "A1_S2_D5"
+CONST QUEST_1 = "A1_S2_Q1"
+CONST DIALOGUE_6 = "A1_S2_D6"
+{
+    - dialogue_id == DIALOGUE_1:
+        -> dialogue_1
+    - dialogue_id == DIALOGUE_2:
+        -> dialogue_2
+    - dialogue_id == DIALOGUE_3:
+        -> dialogue_3
+    - dialogue_id == DIALOGUE_4:
+        -> dialogue_4
+    - dialogue_id == DIALOGUE_5:
+        -> dialogue_5
+    - dialogue_id == QUEST_1:
+        -> quest_1
+    - dialogue_id == DIALOGUE_6:
+        -> dialogue_6
+}
 
-===choiceSaynothing===
-You heard her the first time. Now let us leave. #speaker:Amelia #portrait:AmeliaNeutral
-I can’t have outsiders knowing where we live. #speaker:Elder
-->DONE
+
+// outline of main branches
+===dialogue_1===
+->A1_S2_D1
+
+===dialogue_2===
+->A1_S2_D2
+
+===dialogue_3===
+->A1_S2_D3
+
+===dialogue_4===
+->A1_S2_D4
+
+===dialogue_5===
+->A1_S2_D5
+
+===quest_1===
+{
+    - quest_state == "ONGOING":
+        -> ongoing_quest_1
+    - quest_state == "COMPLETED":
+        -> completed_quest_1
+}
+
+===dialogue_6===
+-> A1_S2_D6
+
+===dialogue_7===
+-> PostquestSubmit
+
+
 
 /*
-===choiceRun===
-//NOTE: delayed to alpha
-Noelle glances at Amelia, and Amelia nods understandingly. 
-You both make a run for the thickets. 
-After them! #speaker: Elder
-->DONE
+SCENE 2 ✅
+Walk into the forest area
+Run into a puzzle > puzzle tutorial 
+Cross into Viridi Settlement, meet Amaya
 */
 
-===choiceSaythetruth
-My name is Noelle Tempest, and this is Amelia. #speaker:Noelle #portrait:NoellePleased
-My ship capsized on shores not far from this settlement,
-and we only wish to gather parts necessary to build a new ship capable of escaping the approaching floods. #speaker:Noelle #portrait:NoelleDistant
-Please, I beg you, let us leave, and we will never disturb your peace again. #speaker:Noelle #portrait:NoellePleased
-Elder motions to the cloaked figures. #speaker:Narrator #portrait:ElderNeutral
-They lower their weapons. 
-I see. What a noble quest, #speaker:Elder #portrait:ElderNeutral
-and you have my sympathy for being marooned the way you have been. 
-However, I can’t let you leave. #speaker:Elder #portrait:ElderNeutral
-I’m sorry, could you repeat that? #speaker:Noelle #portrait:NoelleConfused
-Don’t think I heard you properly the first time.
-Oh it’s no mistake. #speaker:Elder #portrait:ElderNeutral
-Simply put, you are both outsiders,
-and you both know where we live now.
-Therefore, neither of you can leave.
-You are free to contribute to our community, 
-and to co-exist with us.
-But your life outside of this settlement ends today.
-You don’t understand though— the floods are coming! #speaker:Amelia #portrait:AmeliaAngry
-The water’s rising around here as we speak! 
-Surely someone as supposedbly in tune with the land as you are #speaker:Amelia #portrait:AmeliaNeutral 
-would have already realised that? #speaker:Amelia #portrait:Angry
-Oh I am already aware of the floods. #speaker:Elder #portrait:ElderNeutral
-But fret not—
-we live high enough in the treetops that our home is at no risk of being washed away. #speaker:Elder #portrait:ElderNeutral
-Do you really think being a little bit higher off the ground is gonna save you? #speaker:Amelia #portrait:AmeliaAngry
-I am quite confident. #speaker:Elder #portrait:ElderNeutral
-And even if we all ultimately perish, such is the circle of life.
-And you have no issue about putting everyone’s lives on the line? #speaker:Noelle #portrait:NoelleDispleased
-People you’re supposed to protect. #speaker:Noelle #portrait:NoelleAngry
-I don’t see the harm in trusting in the natural order. #speaker:Elder #portrait:ElderNeutral 
-Whether we live or die isn’t our choice after all. #speaker:Elder #portrait:ElderNeutral
-Besides, we live with the land, we only take what we need.
-To try to uproot everything we hold dear just to resist the call of The Great Disaster is sacrilege.
-Do you even hear yourselves?! #speaker:Amelia #portrait:AmeliaNeutral
-The Great Disaster is going to kill us all! #speaker:Amelia #portrait:AmeliaAngry
-All I hear is two outsiders shouting about things they do not understand. #speaker:Elder #portrait:ElderNeutral
-But that will fade in time I’m sure.
-For now, take a look around, and get to know us. 
-After all, whether you like it or not, this is your home now. #speaker:Elder #portrait:ElderNeutral
-The cloaked figures jump up the rope ladders—all but one. Instead they move to the entrance of the settlement, blocking the only exit out.  #speaker:Narrator
-The elder slowly climbs up the middle rope ladder, leaving Amelia and Noelle alone. 
 
-//function call to end prototype here
-    -> END
+
+// first orb on beach
+===A1_S2_D1===
+//follow the path and reach a certain point in the forest
+So, what's your plan for getting out of here before the disaster? #speaker:Amelia #portrait:AmeliaNormal
+My plan… Well, I guess the first step is trying to fix my ship. #speaker:Noelle #portrait:NoelleSceptical
+Are you sure you can fix it? It looks pretty bad. #speaker:Amelia #portrait:AmeliaNormal
+I mean I’ve never built a ship alone before, but I can try. My home island’s practices are all about wayfaring. #speaker:Noelle #portrait:NoelleSmallSmile
+->DONE
+
+===A1_S2_D2===
+The mess I saw wasn’t looking very functional. #speaker:Amelia #portrait:AmeliaHostile
+…We’re going to need a lot of supplies. Mainly wood, fabric for sails, iron, rope and glue. Do we have any of that around here? #speaker:Noelle #portrait:NoelleSceptical
+There are plenty of settlements around. We should be able to get wood the easiest, since the forest’s close by. #speaker:Amelia #portrait:AmeliaNormal
+->DONE
+
+===A1_S2_D3===
+//keep walking down the path
+//once we reach a point on the road, dialogue triggers again and it rains for 60 seconds.
+Ah! Gosh, the weather’s been getting worse lately. #speaker:Amelia #portrait:AmeliaHostile
+Why's that? #speaker:Noelle #portrait:NoelleUm
+The Great Disaster obviously. Do you live under a rock? #speaker:Amelia #portrait:AmeliaNormal
+->DONE
+
+
+===A1_S2_D4===
+Um… #speaker:Noelle #portrait:NoelleUm
+You seriously don’t know about the great floods? #speaker:Amelia #portrait:AmeliaHostile
+I’ve only heard stories about them. We don’t talk much about the thing that causes it. #speaker:Noelle #portrait:NoelleUm
+I’m sure someone else can do a better job of explaining it, but all you need to know is that the Great Disaster is the creature behind it all. #speaker:Amelia #portrait:AmeliaNormal
+With the weather getting worse and the waves getting stronger… It’s a sign that the floods are about to come, soon.
+(…Already?) #speaker:Noelle #portrait:NoelleShocked
+(Dusk Island… their preparations aren’t completely done yet.)
+How much longer do we have? #speaker:Noelle #portrait:NoelleSceptical
+Two to four weeks, at most. You okay? #speaker:Amelia #portrait:AmeliaNormal
++[Yeah, just thinking.]
+    ->DONE
++[Just counting the days.]
+You’re so weird. #speaker:Amelia #portrait:AmeliaNormal
+    ->DONE
+
+/*after this point we need to walk further. Next dialogue is prompted when we reach the first puzzle.
+Many creatures roam around the wild forest. Not interactable for now*/
+
+// orb right outside puzzle entrance
+===A1_S2_D5===
+Upon seeing the ruin, Amelia gets frustrated. This place appears to be a dead end. #speaker:Narrator
+Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amelia #portrait:AmeliaHostile
++[Is it a puzzle?]
+    ->quest
++[Let me take a look.]
+    ->quest
+===quest===
+You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
+…Knock yourself out, I suppose. #portrait:AmeliaNormal
+//puzzle tutorial appears here. Player gets to solve it. After which dialogue continues
+~ AddQuest(QUEST_1)
+->DONE
+
+
+// quests   --- orb right outside puzzle 1 exit
+===ongoing_quest_1===
+You haven't solved the puzzle yet!
+->DONE
+
+===completed_quest_1===
+~SubmitQuest(QUEST_1)
+…? #speaker:Amelia #portrait:AmeliaSilly
+Amelia studies you like you’re an alien. #speaker:Narrator 
+It’d take twenty men to move that! How on earth did you—? #speaker:Amelia #portrait:AmeliaSilly
+...You’re interesting. #portrait:AmeliaNormal
+Thank you? #speaker:Noelle #portrait:NoelleWhat
+The blocks were pretty heavy, but after putting your weight into it, they budged. #speaker:Narrator
+To be honest, the hardest part was adjusting them to the right place since they’re so huge. 
+But you’re happy to be of use.
+…So, you said the settlement was through this way? #speaker:Noelle #portrait:NoelleBigSmile
+Yeah, It's not far from here. Let’s go. #speaker:Amelia #portrait:AmeliaNormal
+->DONE
+
+
+
+// orb in between puzzle 1 and puzzle 2 / around where amaya is
+===A1_S2_D6===
+//same objective of finding the viridi settlement (doesn’t change). Player follows the path, terrain becomes more leafy and wild, entering viridi forest
+
+We shouldn’t be too far off from the settlement now, I’m starting to recognise these plants. #speaker:Amelia #portrait:AmeliaNormal
+That's good— #speaker:Noelle #portrait:NoelleSmallSmile
+You hear rustling and see a figure amidst the trees. #speaker:Narrator
+Who are you? What are you doing here!? #speaker:Amaya
+Who are <b>you?</b> #speaker:Noelle #portrait:NoelleWhat
+<b>I’m</b> the one asking questions. Why are the two of you here? #speaker:Amaya
++[Introduce yourself.]
+    -> choiceintroyourself
++[Stay silent.]
+    -> choicestaysilent
+
+===choiceintroyourself===
+I’m from the Tempest family; Noelle Tempest. #speaker:Noelle
+Tempest…? That’s a strange name. #speaker:Amaya
+Is it? #speaker:Noelle
+    -> choicestaysilent
+
+===choicestaysilent===
+…You’re not from here. #speaker:Amaya
+Why are you sneaking around? What do you want?
+We’re looking for something. #speaker:Amelia
+Both of you? #speaker:Amaya
+The person seems to give you both a once-over. You try to explain. #speaker:Narrator
+It’s about my ship— #speaker:Noelle
+—Only to stop when they step out into the light. Hair the color of foliage. Eyes as sharp as iron. #speaker:Narrator
+…Surely you’d rather spend your time preparing for the Great Disaster, instead of milling around our territory like this? #speaker:Amaya
+I’m sorry— The great <i>what?</i> #speaker:Noelle
+I’m just looking for a way to repair my boat.
+And hey, who are <i>you?</i> You never told us! #speaker:Amelia
+And a dragon. Interesting. #speaker:Amaya
+Far from your pack, are you? You two are certainly suspicious.
+We aren’t doing anything suspicious! #speaker:Amelia
+…I think it’s better if we just go along here to avoid a fight. #speaker:Noelle
+(It’s clear that this girl isn’t just going to let us off easy, but maybe we can get closer to what we need, this way.)
+//new objective: follow the strange girl into the forest
+->DONE
+
+
+===PostquestSubmit===
+Lets follow her!    #speaker:Amelia
+->END

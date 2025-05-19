@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDatabase: {fileID: 11400000, guid: 796c4845618e94aa182b83a585edf1f0, type: 2}
-  playerSave: {fileID: 11400000, guid: 055a02550362f41f89f8b9829825b4b4, type: 2}
+  playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}
   inventoryItems: []

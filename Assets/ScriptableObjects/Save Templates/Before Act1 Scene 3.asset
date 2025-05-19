@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc934060e142679408e9d47c517be, type: 3}
+  m_Name: Before Act1 Scene 3
+  m_EditorClassIdentifier: 
+  description: 
+  checkpoint: {fileID: 11400000, guid: 8b99bc7916d7b4d27913ab9314ac93e1, type: 2}
+  script: {fileID: 11400000, guid: ab444411094a9ca47872ceae3efb1d1c, type: 2}
+  dialogue: {fileID: 11400000, guid: 516cc53674a583d4194f0cb40bc17a78, type: 2}
+  ongoingQuests: []
+  energy: 100
+  day: 1

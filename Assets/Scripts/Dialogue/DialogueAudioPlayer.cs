@@ -8,13 +8,17 @@ using Random = UnityEngine.Random;
 public class DialogueAudioPlayer : MonoBehaviour
 {
     [Header("Audio")]
-    [SerializeField] public DialougeAudioInfo defaultAudioInfo;
-    [SerializeField] public DialougeAudioInfo[] audioInfos = Array.Empty<DialougeAudioInfo>();
+    [SerializeField]
+    public DialougeAudioInfo defaultAudioInfo;
+
+    [SerializeField]
+    public DialougeAudioInfo[] audioInfos = Array.Empty<DialougeAudioInfo>();
     public DialougeAudioInfo currentAudioInfo;
     private Dictionary<string, DialougeAudioInfo> audioInfoDictionary = new();
     public AudioSource audioSource;
 
     private bool HashApproach = true; //-> set to true if want predictable-ish dialogue speech
+
     // Start is called before the first frame update
 
 
@@ -22,11 +26,14 @@ public class DialogueAudioPlayer : MonoBehaviour
 
     // Audio-related stuffs below
     public void InitializeAudioDictionary()
-    {   //sets up audio dictionary, map each char to an audio frequency
+    { //sets up audio dictionary, map each char to an audio frequency
         audioSource = this.gameObject.AddComponent<AudioSource>();
         currentAudioInfo = defaultAudioInfo;
-        
-        audioInfoDictionary = new Dictionary<string, DialougeAudioInfo> { { defaultAudioInfo.id, defaultAudioInfo } };
+
+        audioInfoDictionary = new Dictionary<string, DialougeAudioInfo>
+        {
+            { defaultAudioInfo.id, defaultAudioInfo },
+        };
         foreach (DialougeAudioInfo audioInfo in audioInfos)
         {
             audioInfoDictionary.Add(audioInfo.id, audioInfo);
@@ -34,7 +41,7 @@ public class DialogueAudioPlayer : MonoBehaviour
     }
 
     public void SetCurrentAudioInfo(string id)
-    {   // plays the audio associated with the given id
+    { // plays the audio associated with the given id
         DialougeAudioInfo audioInfo = null;
         audioInfoDictionary.TryGetValue(id, out audioInfo);
         if (audioInfo != null)
@@ -48,8 +55,7 @@ public class DialogueAudioPlayer : MonoBehaviour
     }
 
     public void PlayDialogueSound(int currentDisplayedCharCount, char currentCharacter)
-    {   // plays the audio for [number] of characters that loads on the screen
-
+    { // plays the audio for [number] of characters that loads on the screen
         // set variables for the below based on config
         AudioClip[] dialogueTypingSounds = currentAudioInfo.dialogueTypingSounds;
         int AudioFrequency = currentAudioInfo.AudioFrequency;
@@ -68,17 +74,17 @@ public class DialogueAudioPlayer : MonoBehaviour
 
             //creating predictable speech by hashcode
             if (HashApproach)
-            {   
+            {
                 //generate hashcode for each characters
                 int hashcode = currentCharacter.GetHashCode();
                 //sound clip
                 int predictableIndex = hashcode % dialogueTypingSounds.Length;
                 soundClip = dialogueTypingSounds[predictableIndex];
                 //pitch
-                int minPitchInt = (int) (minPitch * 100);
-                int maxPitchInt = (int) (maxPitch * 100);
+                int minPitchInt = (int)(minPitch * 100);
+                int maxPitchInt = (int)(maxPitch * 100);
                 int pitchRangeInt = maxPitchInt - minPitchInt;
-                
+
                 //cant divide by 0, no range so skip selection
                 if (pitchRangeInt != 0)
                 {
@@ -86,12 +92,10 @@ public class DialogueAudioPlayer : MonoBehaviour
                     float predictablePitch = predictablePitchInt / 100f;
                     audioSource.pitch = predictablePitch;
                 }
-
                 else
-                {       //set pitch to either minPitch or maxPitch
+                { //set pitch to either minPitch or maxPitch
                     audioSource.pitch = minPitch;
                 }
-
             }
             else
             {
@@ -101,7 +105,7 @@ public class DialogueAudioPlayer : MonoBehaviour
                 //pitch
                 audioSource.pitch = Random.Range(minPitch, maxPitch);
             }
-            
+
             //play sounds
             audioSource.PlayOneShot(soundClip);
         }

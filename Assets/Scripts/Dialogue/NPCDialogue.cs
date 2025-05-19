@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    [SerializeField] private NpcData npcData;
-    [SerializeField] private IndicatorPopup indicatorPopup;
+    [SerializeField]
+    private NpcData npcData;
+
+    [SerializeField]
+    private IndicatorPopup indicatorPopup;
 
     private void Awake()
     {
@@ -15,7 +18,7 @@ public class NPCDialogue : MonoBehaviour
         }
         if (indicatorPopup == null)
         {
-            Debug.LogError($"DIALOGUE | {name} does not have an IndicatorPopup attached");
+            Debug.Log($"DIALOGUE | {name} does not have an IndicatorPopup attached");
             enabled = false;
         }
     }
@@ -69,7 +72,7 @@ public class NPCDialogue : MonoBehaviour
     {
         indicatorPopup.ShowDialogue();
     }
-    
+
     public void HideIndicators()
     {
         indicatorPopup.HidePopup();
