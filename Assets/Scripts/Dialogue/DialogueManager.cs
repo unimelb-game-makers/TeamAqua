@@ -237,6 +237,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
+                    EndStory();
                     SceneManager.LoadScene(SceneName);
                     Debug.Log("scene changed to " + SceneManager.GetActiveScene());
                 }
@@ -261,20 +262,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
             //ContinueStory();
         }
     }
-
-    private IEnumerator ExitDialogueMode()
-    {
-        Debug.Log("ExitDialogueMode called.....");
-        yield return new WaitForSeconds(0.2f); //wait check to resolve all same-key-input errors
-        dialogueVariable.StopListening(currentStory);
-        dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
-        //currentStory.UnbindExternalFunction("checkQuestStatus");
-        dialogueIsPlaying = false;
-        playerInputProvider.can_move = true; // Setting the Input Provider Here.
-        OnDialogueEnd?.Invoke();
-    }
-
-    public bool CanContinue() => currentStory.canContinue;
 
     public void ContinueStory()
     {
@@ -333,7 +320,13 @@ public class DialogueManager : MonoBehaviour, ISaveable
             if (string.IsNullOrEmpty(nextDialogue))
                 EndScript();
         }
-        StartCoroutine(ExitDialogueMode());
+        
+        // Dialogue Manager specific stuff
+        dialogueVariable.StopListening(currentStory);
+        dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
+        dialogueIsPlaying = false;
+        playerInputProvider.can_move = true; // Setting the Input Provider Here.
+        OnDialogueEnd?.Invoke();
     }
 
     private void EndScript()
