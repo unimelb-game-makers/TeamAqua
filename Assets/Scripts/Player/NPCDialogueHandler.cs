@@ -23,7 +23,7 @@ public class NPCDialogueHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Creature"))
+        if (!(other.gameObject.CompareTag("Creature")||other.gameObject.CompareTag("DialogueEvent")))
             return;
 
         if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
