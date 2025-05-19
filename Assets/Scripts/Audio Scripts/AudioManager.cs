@@ -16,27 +16,11 @@ public class AudioManager : MonoBehaviour
         else
             Instance = this;
     }
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            StartCoroutine(SwapBGM("BGM_ISLAND_SUNEATER", 1));
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            StartCoroutine(SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", 0));
-        }
-    }
 
     public IEnumerator SwapBGM(string clipName, float fadeSpeed)
     {
         if ( string.IsNullOrEmpty(_currentBgm) && soundDatabase.TryGetSound(_currentBgm, out Sound current))
         {
-
-
-            // didnt seem to get pass this if statement
-
             // Stops the current playing BGM
             AudioSource source = current.config.Get();
             Debug.Log("audio manager: first if statement passed");
@@ -90,5 +74,11 @@ public class AudioManager : MonoBehaviour
             sound.config.Stop(instanceId);
         else
             Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+    }
+
+    public void StopAll()
+    {
+        foreach(Sound sound in soundDatabase.sounds)
+            sound.config.Stop();
     }
 }

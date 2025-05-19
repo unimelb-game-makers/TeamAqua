@@ -16,8 +16,7 @@ public class DreamScene : MonoBehaviour
 
     [SerializeField]
     private DialogueManager dialogueManager;
-    public string BG_MUSIC_1 = "BGM_A_DREAM";
-    public string PREV_MUSIC = "BGM_CUTSCENE_TRANSFORMATION";
+    public const string BG_MUSIC_1 = "BGM_A_DREAM";
 
     [Header("Loading")]
     [SerializeField]
@@ -27,7 +26,6 @@ public class DreamScene : MonoBehaviour
     {
         InitManagers();
         InitUI();
-        LoadData();
     }
 
     /// <summary>
@@ -46,14 +44,8 @@ public class DreamScene : MonoBehaviour
         Game.AddManager(Instantiate(dialogueManager, manager.transform));
     }
 
-    private void LoadData()
-    {
-        playerSave.Load();
-    }
-
     private void Start()
     {
-        AudioManager.Instance.Stop(PREV_MUSIC);
         AudioManager.Instance.Play(BG_MUSIC_1);
     }
 

@@ -22,7 +22,7 @@ namespace Popups
             // Could show more in the UI. Needs a redesign
             if (exists)
             {
-                SaveSlot saveData = savePopup.Save.GetSaveData(fileName);
+                SaveSlot saveData = SaveManager.instance.GetSaveData(fileName);
                 title.SetText($"Day: {saveData.worldSaveData.currentDay}");
             }
             else

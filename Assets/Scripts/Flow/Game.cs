@@ -7,7 +7,7 @@ public class Game
     public static List<MonoBehaviour> managers = new();
 
     // This is pretty bad code, but oh well :D
-    public static void AddManager(MonoBehaviour behaviour)
+    public static void AddManager(MonoBehaviour behaviour, bool force = false)
     {
         if (behaviour)
         {
@@ -16,6 +16,11 @@ public class Game
             {
                 if (managers[i].GetType() == behaviour.GetType())
                 {
+                    if (force)
+                    {
+                        managers.RemoveAt(i);
+                        managers.Add(behaviour);
+                    }
                     return;
                 }
             }

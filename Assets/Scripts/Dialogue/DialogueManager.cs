@@ -72,6 +72,13 @@ public class DialogueManager : MonoBehaviour, ISaveable
         dialogueAudioPlayer.InitializeAudioDictionary();
     }
 
+
+    public void ResetDialogue()
+    {
+        _scriptId = string.Empty;
+        _dialogueId = string.Empty;
+    }
+    
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;

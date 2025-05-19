@@ -9,9 +9,6 @@ public class DayManager : MonoBehaviour, ISaveable
     public static DayManager instance;
     private const float LIGHT_DURATION = 1.0f;
 
-    [Header("Scriptable Objects")] [SerializeField]
-    private PlayerSave playerSave;
-
     [Header("Night Settings")]
     [SerializeField] private Color targetColor = Color.black;
     [SerializeField] private Material skyboxMaterial;
@@ -113,7 +110,7 @@ public class DayManager : MonoBehaviour, ISaveable
         EnergyManager.instance.OnNextDay();
         
         // Trigger Save whenever a new day is started
-        playerSave.Save();
+        SaveManager.instance.Save();
     }
 
     private void SetNight(bool value)
