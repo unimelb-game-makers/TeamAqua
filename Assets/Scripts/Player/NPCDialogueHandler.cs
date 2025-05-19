@@ -10,7 +10,7 @@ public class NPCDialogueHandler : MonoBehaviour
     {
         if (_dialogueSource == null)
             return;
-        if (DialogueManager.GetIsPlaying())
+        if (DialogueManager.instance.GetIsPlaying())
             return;
         if (UIController.Paused)
             return;

@@ -39,7 +39,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public Story currentStory;
 
-    private bool dialogueIsPlaying { get; set; }
     private DialogueVariable dialogueVariable;
 
     public static DialogueManager instance;
@@ -81,7 +80,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void Start()
     {
-        dialogueIsPlaying = false;
         dialogueAudioPlayer.InitializeAudioDictionary();
     }
 
@@ -177,7 +175,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
         {
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
-            dialogueIsPlaying = true;
             playerInputProvider.can_move = false; // Setting the Input provider here.
             currentStory.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
@@ -247,7 +244,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
         else if (mode == DialogueMode.Moving)
         {
             //changine to UI state done in child trigger points
-            dialogueIsPlaying = true;
             playerInputProvider.can_move = true; // Setting the Input provider here.
             Debug.Log("dialogue triggers collided");
             currentStory.BindExternalFunction(
@@ -302,8 +298,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EndStory()
     {
-        // Only end a story that is ongoing
-        if (State != DialogueState.Ongoing)
+        // Only end a story that is not ended
+        if (State == DialogueState.Ended)
             return;
         Debug.Log("DIALOGUE | Ending Story");
         State = DialogueState.Ended;
@@ -324,9 +320,15 @@ public class DialogueManager : MonoBehaviour, ISaveable
         // Dialogue Manager specific stuff
         dialogueVariable.StopListening(currentStory);
         dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
-        dialogueIsPlaying = false;
         playerInputProvider.can_move = true; // Setting the Input Provider Here.
         OnDialogueEnd?.Invoke();
+        StartCoroutine(ResetDialogueState());
+    }
+    
+    private IEnumerator ResetDialogueState()
+    {
+        yield return new WaitForSeconds(0.2f);
+        State = DialogueState.None;
     }
 
     private void EndScript()
@@ -353,19 +355,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
         ContinueStory();
     }
 
-    public static bool GetIsPlaying()
+    public bool GetIsPlaying()
     {
         // check if dialogue is playing or not, call this when status check needed.
-        return instance.dialogueIsPlaying;
-    }
-
-    public bool GetChoicesDisplay()
-    {
-        if (currentStory.currentChoices.Count == 0)
-        {
-            return true;
-        }
-        return false;
+        return State != DialogueState.None;
     }
 
     // Varibales stuffs, incomplete rn, pending scope from narrative designer
