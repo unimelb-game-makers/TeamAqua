@@ -1308,9 +1308,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 7458556548371516668, guid: ab20036d2e1d3c94d8182730a1cb0463, type: 3}
   audioManager: {fileID: 846364756214676985, guid: 3d92d8b7d7e944d87b9f2517f96522f1, type: 3}
+  dreamScript: {fileID: 11400000, guid: 9740f0a2cd2d6c94fb0e53630f2a47af, type: 2}
+  dreamNode: {fileID: 11400000, guid: 12de411e431576e4b97e3e3a148d67e3, type: 2}
   dialogueManager: {fileID: 7517199300883449166, guid: f55363f2d36d34a9f8ea0da4eeea4602, type: 3}
   BG_MUSIC_1: BGM_A_DREAM
-  playerSave: {fileID: 11400000, guid: e4143bacf07a37f4189aaf98b1cefc06, type: 2}
+  PREV_MUSIC: BGM_CUTSCENE_TRANSFORMATION
 --- !u!4 &2048882831
 Transform:
   m_ObjectHideFlags: 0
