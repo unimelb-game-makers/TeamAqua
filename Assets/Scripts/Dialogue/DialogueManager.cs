@@ -231,6 +231,61 @@ public class DialogueManager : MonoBehaviour, ISaveable
                     DialogueTriggerControl.instance().Trigger();
                 }
             );
+
+            currentStory.BindExternalFunction(
+                "PlayBGM",
+                (string id) =>
+                { // this is for starting a track during dialogue
+                    AudioManager.Instance.Play(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "AddQuest",
+                (string id) =>
+                {
+                    QuestManager.instance.AddQuest(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "SubmitQuest",
+                (string questID) =>
+                {
+                    QuestManager.instance.SubmitQuest(questID);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "SwapBGM",
+                (string new_id, string old_id, int FadeSpeed) =>
+                { // this is for switching out tracks mid-dialogue
+                    //StartCoroutine(AudioManager.Instance.SwapBGM(id, FadeSpeed));
+                    AudioManager.Instance.Stop(old_id);
+                    AudioManager.Instance.Play(new_id);
+                    Debug.Log("binded audio function works");
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "TurnOffBarrier",
+                (int id) =>
+                {
+                    //currentStory.variablesState["cutscene0"] = "AAAAAA";
+                    //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
+                    BarrierManager.Instance.TurnOffBarrier(id);
+                }
+            );
+
+            currentStory.BindExternalFunction(
+                "ChangeCutscene",
+                (string SceneName) =>
+                {
+                    SceneManager.LoadScene(SceneName);
+                    Debug.Log("scene changed to " + SceneManager.GetActiveScene());
+                }
+            );
+            ContinueStory();
             //ContinueStory();
         }
     }

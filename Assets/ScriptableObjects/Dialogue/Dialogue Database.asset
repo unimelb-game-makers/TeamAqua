@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf1fc55081af4549a98671d5f49dbbc, type: 3}
   m_Name: Dialogue Database
   m_EditorClassIdentifier: 
-  startScript: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
+  startScript: {fileID: 11400000, guid: ed246c066b6f941b880cd5aa9c04eced, type: 2}
   scripts:
   - {fileID: 11400000, guid: ed246c066b6f941b880cd5aa9c04eced, type: 2}
   - {fileID: 11400000, guid: 9740f0a2cd2d6c94fb0e53630f2a47af, type: 2}
