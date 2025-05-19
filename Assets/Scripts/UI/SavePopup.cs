@@ -16,7 +16,6 @@ namespace Popups
         private List<SavePopupItem> _saves = new();
 
         private MainMenuPopup _mainMenu;
-        public PlayerSave Save => _mainMenu.playerSave;
 
         protected override void InitPopup()
         {
@@ -70,7 +69,7 @@ namespace Popups
 
         public void Load(string fileName)
         {
-            _mainMenu.playerSave.SetSaveSlot(fileName);
+            SaveManager.instance.SetSaveSlot(fileName);
             //TODO: We assume that everytime they load, they will go into the main scene.
             SceneManager.LoadScene("NoonIsland");
         }

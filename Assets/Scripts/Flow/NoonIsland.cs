@@ -52,6 +52,9 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private CameraManager cameraManager;
 
+    [SerializeField]
+    private SaveManager saveManager;
+
     [Header("Level")]
     [SerializeField]
     private Level noonIslandLevel;
@@ -60,11 +63,11 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private PlayerSave playerSave;
 
-    //public string BG_MUSIC_1 = "BGM_A_DREAM";
-    public string PREV_MUSIC = "BGM_A_DREAM";
+    private Transform _managers;
 
     private void Awake()
     {
+        InitHolder();
         InitUI();
         InitPlayer();
         InitManagers();
@@ -72,9 +75,11 @@ public class NoonIsland : MonoBehaviour
         LoadData();
     }
 
-    private void Start()
+    private void InitHolder()
     {
-        AudioManager.Instance.Stop(PREV_MUSIC);
+        GameObject managers = new ("Managers");
+        _managers = managers.transform;
+        DontDestroyOnLoad(_managers);
     }
 
     /// <summary>
@@ -92,9 +97,8 @@ public class NoonIsland : MonoBehaviour
     {
         Camera _ = Instantiate(mainCamera);
         PlayerController player = Instantiate(playerController);
-        CameraManager camManager = Instantiate(cameraManager);
-        camManager.SetPlayer(player);
-        Game.AddManager(camManager);
+        Game.AddManager(Instantiate(cameraManager, _managers));
+        CameraManager.instance.SetPlayer(player);
     }
 
     /// <summary>
@@ -103,17 +107,17 @@ public class NoonIsland : MonoBehaviour
     /// </summary>
     private void InitManagers()
     {
-        GameObject manager = new("Managers");
-        DontDestroyOnLoad(manager);
-        Game.AddManager(Instantiate(barrierManager, manager.transform));
-        Game.AddManager(Instantiate(audioManager, manager.transform));
-        Game.AddManager(Instantiate(inventoryManager, manager.transform));
-        Game.AddManager(Instantiate(energyManager, manager.transform));
-        Game.AddManager(Instantiate(questManager, manager.transform));
-        Game.AddManager(Instantiate(dialogueManager, manager.transform));
-        Game.AddManager(Instantiate(spriteManager, manager.transform));
-        Game.AddManager(Instantiate(dayManager, manager.transform));
-        Game.AddManager(Instantiate(waterManager, manager.transform));
+        Game.AddManager(Instantiate(barrierManager, _managers));
+        Game.AddManager(Instantiate(audioManager, _managers));
+        Game.AddManager(Instantiate(inventoryManager, _managers));
+        Game.AddManager(Instantiate(energyManager, _managers));
+        Game.AddManager(Instantiate(questManager, _managers));
+        Game.AddManager(Instantiate(dialogueManager, _managers));
+        Game.AddManager(Instantiate(spriteManager, _managers));
+        Game.AddManager(Instantiate(dayManager, _managers));
+        Game.AddManager(Instantiate(waterManager, _managers));
+        // Save Manager is special as it is present in the first scene and isn't added to the _manager pool.
+        Instantiate(saveManager, _managers);
     }
 
     /// <summary>
@@ -127,6 +131,6 @@ public class NoonIsland : MonoBehaviour
 
     private void LoadData()
     {
-        playerSave.Load();
+        SaveManager.instance.Load();
     }
 }

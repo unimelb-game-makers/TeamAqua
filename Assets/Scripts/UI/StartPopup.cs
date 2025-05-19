@@ -28,30 +28,33 @@ namespace Popups
         public override void ShowPopup()
         {
             base.ShowPopup();
-            bool hasLoad = PlayerPrefs.HasKey(PlayerSave.SAVE_KEY);
-            bool canLoad = hasLoad && PlayerSave.HasSave(PlayerPrefs.GetString(PlayerSave.SAVE_KEY));
+            bool hasKey = PlayerPrefs.HasKey(PlayerSave.SAVE_KEY);
+            bool hasSave = hasKey && PlayerSave.HasSave(PlayerPrefs.GetString(PlayerSave.SAVE_KEY));
             bool hasEmptySave = PlayerSave.HasEmptySave();
             newGameButton.interactable = hasEmptySave;
-            loadButton.interactable = canLoad;
+            continueButton.interactable = hasSave;
+            loadButton.interactable = hasSave;
         }
         
 
         private void NewGame()
         {
-            _mainMenu.playerSave.StartNewGame();
+            SaveManager.instance.StartNewGame();
             // NOTE(Alex): Hardcoded because I'm fucking lazy
             SceneManager.LoadScene("Cutscene 1");
         }
 
         private void Continue()
         {
-            _mainMenu.ShowSavePopup();
+            string saveSlot = PlayerPrefs.GetString(PlayerSave.SAVE_KEY);
+            SaveManager.instance.SetSaveSlot(saveSlot);
+            // Make assumption that once the save file is made, they are already in NoonIsland
+            SceneManager.LoadScene("NoonIsland");
         }
 
         private void Load()
         {
-            string saveSlot = PlayerPrefs.GetString(PlayerSave.SAVE_KEY);
-            _mainMenu.playerSave.SetSaveSlot(saveSlot);
+            _mainMenu.ShowSavePopup();
         }
     }
 }

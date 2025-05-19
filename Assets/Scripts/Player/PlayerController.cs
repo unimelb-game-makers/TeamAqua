@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour, ISaveable
 
     private void Awake()
     {
-        Game.AddManager(this);
+        Game.AddManager(this, true);
     }
 
     // Start is called before the first frame update

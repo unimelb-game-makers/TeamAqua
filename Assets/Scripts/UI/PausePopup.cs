@@ -40,14 +40,15 @@ namespace Popups
         private void MainMenu()
         {
             // Need to unpause when going back out
-            playerSave.Save();
+            SaveManager.instance.Save();
+            AudioManager.Instance.StopAll();
             _controller.TogglePause();
             SceneManager.LoadScene("Start");
         }
 
         private void Quit()
         {
-            playerSave.Save();
+            SaveManager.instance.Save();
             Application.Quit();
         }
     }

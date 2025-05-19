@@ -5,7 +5,6 @@ namespace Popups
 {
     public class MainMenuPopup : Popup
     {
-        public PlayerSave playerSave;
         [SerializeField] private StartPopup startPopup;
         [SerializeField] private SavePopup savePopup;
         

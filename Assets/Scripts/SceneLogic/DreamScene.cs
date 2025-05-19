@@ -14,20 +14,22 @@ public class DreamScene : MonoBehaviour
     [SerializeField]
     private AudioManager audioManager;
 
+    [Header("Dialogue")] 
+    [SerializeField]
+    private DialogueScript dreamScript;
+    
+    [SerializeField]
+    private DialogueNode dreamNode;
+
     [SerializeField]
     private DialogueManager dialogueManager;
     public string BG_MUSIC_1 = "BGM_A_DREAM";
     public string PREV_MUSIC = "BGM_CUTSCENE_TRANSFORMATION";
 
-    [Header("Loading")]
-    [SerializeField]
-    private PlayerSave playerSave;
-
     private void Awake()
     {
         InitManagers();
         InitUI();
-        LoadData();
     }
 
     /// <summary>
@@ -44,11 +46,7 @@ public class DreamScene : MonoBehaviour
         DontDestroyOnLoad(manager);
         Game.AddManager(Instantiate(audioManager, manager.transform));
         Game.AddManager(Instantiate(dialogueManager, manager.transform));
-    }
-
-    private void LoadData()
-    {
-        playerSave.Load();
+        DialogueManager.instance.SetDialogue(dreamScript, dreamNode);
     }
 
     private void Start()

@@ -6,6 +6,13 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum DialogueState
+{
+    None,
+    Ongoing,
+    Ended,
+}
+
 public class DialogueManager : MonoBehaviour, ISaveable
 {
     [SerializeField]
@@ -42,6 +49,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
 
+    public DialogueState State
+    {
+        get;
+        private set;
+    } = DialogueState.None;
+
     public DialogueAudioPlayer DialogueAudioPlayer => dialogueAudioPlayer;
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
@@ -72,6 +85,18 @@ public class DialogueManager : MonoBehaviour, ISaveable
         dialogueAudioPlayer.InitializeAudioDictionary();
     }
 
+    public void SetDialogue(DialogueScript script, DialogueNode node)
+    {
+        _scriptId = script.name;
+        _dialogueId = node.name;
+    }
+
+    public void ResetDialogue()
+    {
+        _scriptId = string.Empty;
+        _dialogueId = string.Empty;
+    }
+    
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
@@ -130,6 +155,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
             Debug.Log($"DIALOGUE | Already seen {script.name}, not showing it");
             return;
         }
+
+        State = DialogueState.Ongoing;
         currentStory = new Story(script.inkFile.text);
         _scriptId = script.name;
         _dialogueId = node != null ? node.name : string.Empty;
@@ -247,6 +274,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
         OnDialogueEnd?.Invoke();
     }
 
+    public bool CanContinue() => currentStory.canContinue;
+
     public void ContinueStory()
     {
         if (currentStory.canContinue)
@@ -286,7 +315,11 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void EndStory()
     {
+        // Only end a story that is ongoing
+        if (State != DialogueState.Ongoing)
+            return;
         Debug.Log("DIALOGUE | Ending Story");
+        State = DialogueState.Ended;
         // Set the dialogueId to the next one in the database
         DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
         // If the dialogue is a quest, we only move to the next dialogue if it has been submitted

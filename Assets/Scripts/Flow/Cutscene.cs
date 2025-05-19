@@ -43,6 +43,10 @@ public class Cutscene : MonoBehaviour
         Game.AddManager(Instantiate(audioManager, manager.transform));
         Game.AddManager(Instantiate(dialogueManager, manager.transform));
         Game.AddManager(Instantiate(spriteManager, manager.transform));
+        
+        // We want to reset the dialogue in case the player starts again from the same game
+        // This is because we don't call PlayerSave.Load()
+        DialogueManager.instance.ResetDialogue();
     }
 
     /// <summary>
