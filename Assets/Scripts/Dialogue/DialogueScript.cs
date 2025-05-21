@@ -28,7 +28,6 @@ public class DialogueScript : ScriptableObject
         return false;
     }
     
-
     public string GetNextDialogue(string dialogueId)
     {
         if (!TryGetDialogue(dialogueId, out DialogueNode dialogue))

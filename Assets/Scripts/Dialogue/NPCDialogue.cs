@@ -23,11 +23,13 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
-    private bool TryGetTrigger(string dialogueId, out DialogueTrigger trigger)
+    private bool TryGetTrigger(out DialogueTrigger trigger)
     {
+        string curDialogueId = DialogueManager.instance.DialogueId;
+
         for (int i = 0; i < npcData.dialogues.Count; ++i)
-        {
-            if (npcData.dialogues[i].dialogue.name == dialogueId)
+        {   // Check if current dialogue
+            if (npcData.dialogues[i].dialogue.name == curDialogueId)
             {
                 trigger = npcData.dialogues[i];
                 return true;
@@ -37,11 +39,10 @@ public class NPCDialogue : MonoBehaviour
         trigger = null;
         return false;
     }
-
+    
     public bool PlayDialogue()
     {
-        string dialogue = DialogueManager.instance.DialogueId;
-        if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
+        if (TryGetTrigger(out DialogueTrigger trigger))
         {
             DialogueManager.instance.EnterDialogue(trigger.dialogue, trigger.mode);
             return true;
@@ -52,8 +53,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void ShowIndicator()
     {
-        string dialogue = DialogueManager.instance.DialogueId;
-        if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
+        if (TryGetTrigger(out DialogueTrigger trigger))
         {
             if (trigger.dialogue.name.Contains('Q'))
                 ShowQuestIndicator(trigger.dialogue.name);
