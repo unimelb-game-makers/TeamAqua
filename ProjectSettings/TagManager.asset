@@ -9,6 +9,7 @@ TagManager:
   - ItemResource
   - SwitchInteractible
   - FloorTile
+  - DialogueTrigger
   layers:
   - Default
   - TransparentFX

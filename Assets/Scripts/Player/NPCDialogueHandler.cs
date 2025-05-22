@@ -23,15 +23,19 @@ public class NPCDialogueHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!(other.gameObject.CompareTag("Creature")||other.gameObject.CompareTag("DialogueEvent")))
-            return;
-
-        if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
-        {
-            _dialogueSource = dialogue;
-            if (!_dialogueSource)
-                return;
-            _dialogueSource.ShowIndicator();
+        if (other.gameObject.CompareTag("Creature")){
+            if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
+            {
+                _dialogueSource = dialogue;
+                if (!_dialogueSource)
+                    return;
+                _dialogueSource.ShowIndicator();
+            }
+        } else if (other.gameObject.CompareTag("DialogueTrigger")){
+            if (other.gameObject.TryGetComponent(out DialogueTriggerPoint dialogueTrig))
+            {
+                dialogueTrig.TriggerDialogue();
+            }
         }
     }
 
