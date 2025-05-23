@@ -9,9 +9,6 @@ public enum QuestState
     // Hasn't been picked up yet
     Ready,
 
-    //in the Quest Node
-    TakeQuest,
-
     // Ongoing means there are still things that can be done
     Ongoing,
 
