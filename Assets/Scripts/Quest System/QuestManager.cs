@@ -130,7 +130,7 @@ public class QuestManager : MonoBehaviour, ISaveable
             questTracker.steps.Add(step);
         }
         _quests.Add(questTracker);
-        questTracker.state = QuestState.TakeQuest;
+        questTracker.state = QuestState.Ongoing; //the moment u take a quest, it becomes ongoing
     }
 
     public bool IsSubmitted(string questId)
@@ -219,7 +219,7 @@ public class QuestManager : MonoBehaviour, ISaveable
         */
         for (int i = 0; i < _quests.Count; ++i)
         {
-            if (_quests[i].state != QuestState.TakeQuest)
+            if (_quests[i].state != QuestState.Ongoing)
             {
                 Debug.Log("ONGOING | QuestState is: " + _quests[i].state);
                 continue;
