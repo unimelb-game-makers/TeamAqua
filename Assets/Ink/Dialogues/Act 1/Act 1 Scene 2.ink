@@ -53,6 +53,8 @@ CONST DIALOGUE_6 = "A1_S2_D6"
 
 ===quest_1===
 {
+    // - quest_state == "READY":
+    //     -> quest
     - quest_state == "ONGOING":
         -> ongoing_quest_1
     - quest_state == "COMPLETED":
@@ -119,6 +121,7 @@ You’re so weird. #speaker:Amelia #portrait:AmeliaNormal
 /*after this point we need to walk further. Next dialogue is prompted when we reach the first puzzle.
 Many creatures roam around the wild forest. Not interactable for now*/
 
+
 // orb right outside puzzle entrance
 ===A1_S2_D5===
 Upon seeing the ruin, Amelia gets frustrated. This place appears to be a dead end. #speaker:Narrator
@@ -127,6 +130,9 @@ Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amel
     ->quest
 +[Let me take a look.]
     ->quest
+    
+    
+// take quest here
 ===quest===
 You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
 …Knock yourself out, I suppose. #portrait:AmeliaNormal

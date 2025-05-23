@@ -9,6 +9,9 @@ public enum QuestState
     // Hasn't been picked up yet
     Ready,
 
+    //in the Quest Node
+    TakeQuest,
+
     // Ongoing means there are still things that can be done
     Ongoing,
 
@@ -127,6 +130,7 @@ public class QuestManager : MonoBehaviour, ISaveable
             questTracker.steps.Add(step);
         }
         _quests.Add(questTracker);
+        questTracker.state = QuestState.TakeQuest;
     }
 
     public bool IsSubmitted(string questId)
@@ -156,6 +160,7 @@ public class QuestManager : MonoBehaviour, ISaveable
         if (TryGetActiveQuest(questId, out QuestTracker tracker))
         {
             UpdateState(tracker);
+            Debug.Log("tracker.state is: " + tracker.state);
             return tracker.state;
         }
 
@@ -169,6 +174,10 @@ public class QuestManager : MonoBehaviour, ISaveable
         //{        }
         if (tracker.state == QuestState.Submitted)
             return;
+        // if (tracker.state == QuestState.TakeQuest)
+        // {
+        //     return;
+        // }
         QuestState state = QuestState.Completed;
         for (int i = 0; i < tracker.steps.Count; ++i)
         {
@@ -204,18 +213,37 @@ public class QuestManager : MonoBehaviour, ISaveable
     public void CompleteStep(QuestStep step)
     {
         // Go through all the possible step ids and mark it as completed
+
+        /*
+        REFRACTOR THIS SO YOU DONT HAVE TO BE IN A QUEST NODE TO COMPLETE a quest
+        */
         for (int i = 0; i < _quests.Count; ++i)
         {
-            if (_quests[i].state != QuestState.Ongoing)
+            if (_quests[i].state != QuestState.TakeQuest)
             {
+                Debug.Log("ONGOING | QuestState is: " + _quests[i].state);
                 continue;
             }
+
+            // if (_quests[i].state == QuestState.Ready)
+            // {
+            //     Debug.Log("ONGOING | QuestState is: " + _quests[i].state);
+            //     continue;
+            // }
 
             for (int j = 0; j < _quests[i].steps.Count; ++j)
             {
                 if (_quests[i].steps[j].step == step)
+                {
                     _quests[i].steps[j].state = QuestState.Completed;
+                    Debug.Log("CompleteStep: QuestState is: " + _quests[i].steps[j].state);
+                }
+                Debug.Log(
+                    "CompleteStep (out side if): QuestState is: " + _quests[i].steps[j].state
+                );
             }
+            //CheckQuest(something something string id);
+            //UpdateState(_quests[i]);
         }
     }
 
