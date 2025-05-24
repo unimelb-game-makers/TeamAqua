@@ -65,7 +65,6 @@ public class NPCDialogue : MonoBehaviour
     private void ShowQuestIndicator(string dialogueId)
     {
         QuestState state = QuestManager.instance.CheckQuest(dialogueId);
-        Debug.Log("On trigger | quest state is: " + state);
         indicatorPopup.ShowQuest(state);
     }
 
