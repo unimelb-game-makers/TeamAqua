@@ -214,7 +214,6 @@ public class QuestManager : MonoBehaviour, ISaveable
         {
             if (_quests[i].state != QuestState.Ongoing)
             {
-                Debug.Log("ONGOING | QuestState is: " + _quests[i].state);
                 continue;
             }
 
