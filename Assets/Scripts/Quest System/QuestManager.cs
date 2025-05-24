@@ -222,12 +222,6 @@ public class QuestManager : MonoBehaviour, ISaveable
                 continue;
             }
 
-            // if (_quests[i].state == QuestState.Ready)
-            // {
-            //     Debug.Log("ONGOING | QuestState is: " + _quests[i].state);
-            //     continue;
-            // }
-
             for (int j = 0; j < _quests[i].steps.Count; ++j)
             {
                 if (_quests[i].steps[j].step == step)
