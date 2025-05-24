@@ -230,8 +230,6 @@ public class QuestManager : MonoBehaviour, ISaveable
                 }
                 );
             }
-            //CheckQuest(something something string id);
-            //UpdateState(_quests[i]);
         }
     }
 
