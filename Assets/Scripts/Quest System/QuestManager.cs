@@ -171,10 +171,6 @@ public class QuestManager : MonoBehaviour, ISaveable
         //{        }
         if (tracker.state == QuestState.Submitted)
             return;
-        // if (tracker.state == QuestState.TakeQuest)
-        // {
-        //     return;
-        // }
         QuestState state = QuestState.Completed;
         for (int i = 0; i < tracker.steps.Count; ++i)
         {
