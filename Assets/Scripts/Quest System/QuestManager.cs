@@ -227,7 +227,6 @@ public class QuestManager : MonoBehaviour, ISaveable
                 if (_quests[i].steps[j].step == step)
                 {
                     _quests[i].steps[j].state = QuestState.Completed;
-                    Debug.Log("CompleteStep: QuestState is: " + _quests[i].steps[j].state);
                 }
                 Debug.Log(
                     "CompleteStep (out side if): QuestState is: " + _quests[i].steps[j].state
