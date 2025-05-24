@@ -13,7 +13,6 @@ public class QuestTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             QuestManager.instance.CompleteStep(questStep);
-            Debug.Log("quest step is: " + questStep);
         }
     }
 }
