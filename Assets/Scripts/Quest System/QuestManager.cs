@@ -157,7 +157,6 @@ public class QuestManager : MonoBehaviour, ISaveable
         if (TryGetActiveQuest(questId, out QuestTracker tracker))
         {
             UpdateState(tracker);
-            Debug.Log("tracker.state is: " + tracker.state);
             return tracker.state;
         }
 
