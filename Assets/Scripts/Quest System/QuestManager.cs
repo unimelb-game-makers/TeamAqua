@@ -222,7 +222,6 @@ public class QuestManager : MonoBehaviour, ISaveable
                 {
                     _quests[i].steps[j].state = QuestState.Completed;
                 }
-                );
             }
         }
     }
