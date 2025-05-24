@@ -53,8 +53,6 @@ CONST DIALOGUE_6 = "A1_S2_D6"
 
 ===quest_1===
 {
-    // - quest_state == "READY":
-    //     -> quest
     - quest_state == "ONGOING":
         -> ongoing_quest_1
     - quest_state == "COMPLETED":
