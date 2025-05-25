@@ -7,7 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Quest/Quest Database", fileName = "Quest Database")]
 public class QuestDatabase : ScriptableObject
 {
-    [InlineEditor] public List<Quest> quests;
+    [InlineEditor]
+    public List<Quest> quests;
 
     public Quest GetQuest(string id)
     {

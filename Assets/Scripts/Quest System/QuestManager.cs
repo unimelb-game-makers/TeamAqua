@@ -240,4 +240,9 @@ public class QuestManager : MonoBehaviour, ISaveable
     }
 
     public void CompletePuzzleStep(string puzzleId) { }
+
+    public void AddReward(Quest quest)
+    {
+        //InventoryManager.instance.AddItem(quest.reward.item.item);
+    }
 }
