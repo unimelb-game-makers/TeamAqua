@@ -96,16 +96,29 @@ namespace Popups
             }
 
             questBody.AppendLine();
+            questBody.AppendLine("<color=green>Reward: " + "</color>");
             for (int j = 0; j < quest.reward.item.Count; ++j)
             {
-                questBody.AppendLine(
-                    "<color=green>Reward: "
-                        + "</color>"
-                        + quest.reward.item[j].item.displayName
-                        + ": "
-                        + quest.reward.item[j].amount
-                );
-                questText.SetText(questBody.ToString());
+                if (quest.reward.item[j].amount > 1)
+                {
+                    questBody.AppendLine(
+                        "* "
+                            + quest.reward.item[j].amount
+                            + " "
+                            + quest.reward.item[j].item.displayName
+                            + "s"
+                    );
+                }
+                else
+                {
+                    questBody.AppendLine(
+                        "* "
+                            + quest.reward.item[j].amount
+                            + " "
+                            + quest.reward.item[j].item.displayName
+                    );
+                    questText.SetText(questBody.ToString());
+                }
             }
         }
 
