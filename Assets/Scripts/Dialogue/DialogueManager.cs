@@ -48,11 +48,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public static Action<List<string>> OnDialogueTags;
     public static Action OnDialogueEnd;
 
-    public DialogueState State
-    {
-        get;
-        private set;
-    } = DialogueState.None;
+    public DialogueState State { get; private set; } = DialogueState.None;
 
     public DialogueAudioPlayer DialogueAudioPlayer => dialogueAudioPlayer;
 
@@ -94,7 +90,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         _scriptId = string.Empty;
         _dialogueId = string.Empty;
     }
-    
+
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
@@ -316,7 +312,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             if (string.IsNullOrEmpty(nextDialogue))
                 EndScript();
         }
-        
+
         // Dialogue Manager specific stuff
         dialogueVariable.StopListening(currentStory);
         dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
@@ -324,7 +320,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         OnDialogueEnd?.Invoke();
         StartCoroutine(ResetDialogueState());
     }
-    
+
     private IEnumerator ResetDialogueState()
     {
         yield return new WaitForSeconds(0.2f);

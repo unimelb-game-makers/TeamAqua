@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour, ISaveable
 {
-    [SerializeField] private ItemDatabase itemDatabase;
-    [SerializeField] private PlayerSave playerSave;
+    [SerializeField]
+    private ItemDatabase itemDatabase;
+
+    [SerializeField]
+    private PlayerSave playerSave;
     public static InventoryManager instance;
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
@@ -23,7 +26,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         InventorySaveData saveData = saveSlot.inventorySaveData;
         if (saveData.items == null)
             return;
-        
+
         foreach (ItemSaveData itemData in saveData.items)
         {
             if (itemDatabase.TryGetItem(itemData.id, out Item item))
