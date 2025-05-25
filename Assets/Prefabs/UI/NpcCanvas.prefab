@@ -58,9 +58,9 @@ MonoBehaviour:
   questIndicators:
   - state: 0
     indicator: {fileID: 5433662993312806670}
-  - state: 2
+  - state: 1
     indicator: {fileID: 879273155227599194}
-  - state: 3
+  - state: 2
     indicator: {fileID: 6365781760897832587}
 --- !u!1 &4624775981883850116
 GameObject:

@@ -235,14 +235,21 @@ public class QuestManager : MonoBehaviour, ISaveable
             tracker.steps[i].step.Resolve();
             tracker.steps[i].state = QuestState.Submitted;
         }
+        AddReward(tracker.quest);
 
         tracker.state = QuestState.Submitted;
     }
 
-    public void CompletePuzzleStep(string puzzleId) { }
-
     public void AddReward(Quest quest)
     {
-        //InventoryManager.instance.AddItem(quest.reward.item.item);
+        for (int i = 0; i < quest.reward.item.Count; ++i)
+        {
+            InventoryManager.instance.AddItem(
+                quest.reward.item[i].item,
+                quest.reward.item[i].amount
+            );
+        }
     }
+
+    public void CompletePuzzleStep(string puzzleId) { }
 }

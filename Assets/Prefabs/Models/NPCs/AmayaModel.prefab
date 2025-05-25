@@ -619,11 +619,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
       propertyPath: questIndicators.Array.data[1].state
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
       propertyPath: questIndicators.Array.data[2].state
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
       propertyPath: questIndicators.Array.data[1].indicator
