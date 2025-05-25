@@ -117,9 +117,9 @@ namespace Popups
                             + " "
                             + quest.reward.item[j].item.displayName
                     );
-                    questText.SetText(questBody.ToString());
                 }
             }
+            questText.SetText(questBody.ToString());
         }
 
         private void NextQuest()
