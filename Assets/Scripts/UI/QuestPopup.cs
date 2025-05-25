@@ -11,23 +11,34 @@ namespace Popups
 {
     public class QuestPopup : Popup
     {
-        [SerializeField] private ItemDatabase itemDatabase;
-        [SerializeField] private TMP_Text titleText;
-        [SerializeField] private TMP_Text questText;
-        [SerializeField] private Button nextButton;
-        [SerializeField] private Button previousButton;
-        [SerializeField] private Button cancelButton;
+        [SerializeField]
+        private ItemDatabase itemDatabase;
+
+        [SerializeField]
+        private TMP_Text titleText;
+
+        [SerializeField]
+        private TMP_Text questText;
+
+        [SerializeField]
+        private Button nextButton;
+
+        [SerializeField]
+        private Button previousButton;
+
+        [SerializeField]
+        private Button cancelButton;
 
         private List<QuestTracker> _questData = new();
         private int _index = 0;
-        
+
         protected override void InitPopup()
         {
             Debug.Log("QuestPopup InitPopup");
             nextButton.onClick.AddListener(NextQuest);
             previousButton.onClick.AddListener(PreviousQuest);
             cancelButton.onClick.AddListener(CancelQuest);
-            
+
             nextButton.gameObject.SetActiveFast(false);
             previousButton.gameObject.SetActiveFast(false);
             cancelButton.gameObject.SetActiveFast(false);
@@ -35,7 +46,9 @@ namespace Popups
 
         private List<QuestTracker> GetData()
         {
-            return QuestManager.instance.Quests.Where(q => q.state != QuestState.Submitted).ToList();
+            return QuestManager
+                .instance.Quests.Where(q => q.state != QuestState.Submitted)
+                .ToList();
         }
 
         public override void ShowPopup()
@@ -55,14 +68,14 @@ namespace Popups
 
         private void ShowQuest(int nextIndex)
         {
-            _index = nextIndex; 
+            _index = nextIndex;
             // Activate the buttons
             nextButton.gameObject.SetActiveFast(_index < _questData.Count - 1);
             previousButton.gameObject.SetActiveFast(_index > 0);
-            
+
             Quest quest = _questData[_index].quest;
             StringBuilder questBody = new();
-            
+
             titleText.SetText(quest.title);
             questBody.AppendLine(quest.description);
             for (int i = 0; i < quest.steps.Count; ++i)
@@ -83,7 +96,29 @@ namespace Popups
             }
 
             questBody.AppendLine();
-            questBody.AppendLine("<color=green>Reward: " + quest.reward.exp + " exp " + quest.reward.gold + " gold</color>");
+            questBody.AppendLine("<color=green>Reward: " + "</color>");
+            for (int j = 0; j < quest.reward.item.Count; ++j)
+            {
+                if (quest.reward.item[j].amount > 1)
+                {
+                    questBody.AppendLine(
+                        "* "
+                            + quest.reward.item[j].amount
+                            + " "
+                            + quest.reward.item[j].item.displayName
+                            + "s"
+                    );
+                }
+                else
+                {
+                    questBody.AppendLine(
+                        "* "
+                            + quest.reward.item[j].amount
+                            + " "
+                            + quest.reward.item[j].item.displayName
+                    );
+                }
+            }
             questText.SetText(questBody.ToString());
         }
 
@@ -97,9 +132,6 @@ namespace Popups
             ShowQuest(_index - 1);
         }
 
-        private void CancelQuest()
-        {
-            
-        }
+        private void CancelQuest() { }
     }
 }
