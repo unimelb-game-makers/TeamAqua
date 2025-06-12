@@ -127,6 +127,7 @@ public class QuestManager : MonoBehaviour, ISaveable
             questTracker.steps.Add(step);
         }
         _quests.Add(questTracker);
+        questTracker.state = QuestState.Ongoing; //the moment u take a quest, it becomes ongoing
     }
 
     public bool IsSubmitted(string questId)
@@ -204,6 +205,10 @@ public class QuestManager : MonoBehaviour, ISaveable
     public void CompleteStep(QuestStep step)
     {
         // Go through all the possible step ids and mark it as completed
+
+        /*
+        REFRACTOR THIS SO YOU DONT HAVE TO BE IN A QUEST NODE TO COMPLETE a quest
+        */
         for (int i = 0; i < _quests.Count; ++i)
         {
             if (_quests[i].state != QuestState.Ongoing)
@@ -214,7 +219,9 @@ public class QuestManager : MonoBehaviour, ISaveable
             for (int j = 0; j < _quests[i].steps.Count; ++j)
             {
                 if (_quests[i].steps[j].step == step)
+                {
                     _quests[i].steps[j].state = QuestState.Completed;
+                }
             }
         }
     }
@@ -228,8 +235,20 @@ public class QuestManager : MonoBehaviour, ISaveable
             tracker.steps[i].step.Resolve();
             tracker.steps[i].state = QuestState.Submitted;
         }
+        AddReward(tracker.quest);
 
         tracker.state = QuestState.Submitted;
+    }
+
+    public void AddReward(Quest quest)
+    {
+        for (int i = 0; i < quest.reward.item.Count; ++i)
+        {
+            InventoryManager.instance.AddItem(
+                quest.reward.item[i].item,
+                quest.reward.item[i].amount
+            );
+        }
     }
 
     public void CompletePuzzleStep(string puzzleId) { }

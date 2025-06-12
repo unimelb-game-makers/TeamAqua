@@ -264,6 +264,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1637856562310513692}
     m_Modifications:
+    - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+      propertyPath: questIndicators.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+      propertyPath: questIndicators.Array.data[1].state
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+      propertyPath: questIndicators.Array.data[2].state
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+      propertyPath: questIndicators.Array.data[1].indicator
+      value: 
+      objectReference: {fileID: 1535993922303308507}
+    - target: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+      propertyPath: questIndicators.Array.data[2].indicator
+      value: 
+      objectReference: {fileID: 4698645136892306698}
     - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -362,6 +382,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
   m_PrefabInstance: {fileID: 1829371926916428673}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1535993922303308507 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 879273155227599194, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+  m_PrefabInstance: {fileID: 1829371926916428673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1756739930120197923 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
@@ -373,3 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &4698645136892306698 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6365781760897832587, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
+  m_PrefabInstance: {fileID: 1829371926916428673}
+  m_PrefabAsset: {fileID: 0}

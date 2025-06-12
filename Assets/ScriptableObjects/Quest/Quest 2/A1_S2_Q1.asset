@@ -18,6 +18,6 @@ MonoBehaviour:
   steps:
   - {fileID: 11400000, guid: 87010c797de7123489f0bd14469613ed, type: 2}
   reward:
-    exp: 0
-    gold: 0
-    item: []
+    item:
+    - item: {fileID: 11400000, guid: 4078885f24c69430b932f1c50cb7a5aa, type: 2}
+      amount: 1
