@@ -16,11 +16,9 @@ public class ResetBlock : MonoBehaviour
             return;
         // Count the seconds the player is on the switch
         timeActivated += Time.deltaTime;
-        Debug.Log($"time = {timeActivated}");
         // Time activated hit 3 seconds
         if(timeActivated >= 2){
             puzzle.ResetPuzzle();
-            Debug.Log(puzzle);
         }
     }
 
