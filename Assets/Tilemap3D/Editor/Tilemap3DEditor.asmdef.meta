@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7f97033643c1e864689e0dfcace0a101
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/Editor/Tilemap3DEditor.asmdef
+  uploadId: 592028

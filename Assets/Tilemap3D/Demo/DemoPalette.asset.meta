@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0da73c4f1d0cbf54996458d120dc03d5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/Demo/DemoPalette.asset
+  uploadId: 592028

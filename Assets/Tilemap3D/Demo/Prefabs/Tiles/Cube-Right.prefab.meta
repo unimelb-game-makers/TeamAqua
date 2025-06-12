@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 67e6503f01765ec4bbf75dcbc1088495
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/Demo/Prefabs/Tiles/Cube-Right.prefab
+  uploadId: 592028

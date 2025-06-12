@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db93a95592bc84a49a78bf2c3dcb7293
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/Demo/Prefabs/Tiles/Cube-Front.prefab
+  uploadId: 592028
