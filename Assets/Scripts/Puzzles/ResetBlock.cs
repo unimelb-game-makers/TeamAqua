@@ -18,8 +18,9 @@ public class ResetBlock : MonoBehaviour
         timeActivated += Time.deltaTime;
         Debug.Log($"time = {timeActivated}");
         // Time activated hit 3 seconds
-        if(timeActivated >= 3){
+        if(timeActivated >= 2){
             puzzle.ResetPuzzle();
+            Debug.Log(puzzle);
         }
     }
 
