@@ -11,6 +11,8 @@ public class Puzzle : MonoBehaviour
     public GameObject door;
     public Switch[] switches;
     public List<PushBlock> pushBlocks = new List<PushBlock>();
+    public ResetBlock resetBlock;
+
     private bool playerEntered = false;
 
     private void Start() {
@@ -22,9 +24,10 @@ public class Puzzle : MonoBehaviour
         foreach(var _switch in switches){
             _switch.puzzle = this;
         }
+        resetBlock.puzzle = this;
     }
 
-    private void ResetPuzzle(){
+    public void ResetPuzzle(){
         foreach(var pb in pushBlocks){
             pb.transform.position = pb.startPos;
         }
@@ -49,7 +52,9 @@ public class Puzzle : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             playerEntered = true;
             puzzleCam.gameObject.SetActive(true);
-            AudioManager.Instance.Play("PUZZLE_ENTER");
+            
+            if(AudioManager.Instance != null)
+                AudioManager.Instance.Play("PUZZLE_ENTER");
             //AudioManager.Instance.SwapBGM("id", 5);
         }
     }

@@ -965,6 +965,10 @@ PrefabInstance:
       propertyPath: harvestList.Array.data[0].itemResource
       value: 
       objectReference: {fileID: 11400000, guid: c81be45d3a8c44373a4c4bbe94342434, type: 2}
+    - target: {fileID: 2772484869927336440, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 3112719109613161523, guid: 2b1cb4ab878bc4a03984d02f62ff660c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
