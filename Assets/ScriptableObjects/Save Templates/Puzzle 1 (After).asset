@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a6dc934060e142679408e9d47c517be, type: 3}
-  m_Name: Puzzle 1
+  m_Name: Puzzle 1 (After)
   m_EditorClassIdentifier: 
   description: After completing the first quest.
   checkpoint: {fileID: 11400000, guid: 08e96ecff55c14ab699e180da071e5ad, type: 2}
   script: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   dialogue: {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
+  dialogueNodes: []
   ongoingQuests: []
+  puzzleCompleteData:
+  - {fileID: 11400000, guid: 22ea451df0ace46168e45055faba2230, type: 2}
   energy: 100
   day: 1

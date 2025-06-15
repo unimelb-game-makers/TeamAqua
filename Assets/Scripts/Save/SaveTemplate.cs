@@ -13,7 +13,9 @@ public class SaveTemplate : ScriptableObject
     [SerializeField] private Checkpoint checkpoint;
     [SerializeField] private DialogueScript script;
     [SerializeField] private DialogueNode dialogue;
-    [SerializeField] private List<Quest> ongoingQuests;
+    [SerializeField] private DialogueNode[] dialogueNodes;
+    [SerializeField] private List<Quest> ongoingQuests = new();
+    [SerializeField] private List<PuzzleCompleteData> puzzleCompleteData = new();
     [SerializeField] private int energy = 100;
     [SerializeField] private int day = 1;
 
@@ -23,7 +25,6 @@ public class SaveTemplate : ScriptableObject
         save.playerSaveData.position = checkpoint.position;
         save.playerSaveData.energy = energy;
         save.worldSaveData.currentDay = day;
-        save.worldSaveData.puzzles = Array.Empty<PuzzleSaveData>();
         save.dialogueSaveData.scriptId = script.name;
         save.dialogueSaveData.dialogueId = dialogue.name;
         QuestSaveData[] quests = new QuestSaveData[ongoingQuests.Count];
@@ -41,6 +42,13 @@ public class SaveTemplate : ScriptableObject
             quests[i].steps = steps;
         }
 
+        PuzzleSaveData[] puzzles = new PuzzleSaveData[puzzleCompleteData.Count];
+        for (int i = 0; i < puzzleCompleteData.Count; ++i)
+        {
+            puzzles[i] = puzzleCompleteData[i].saveData;
+        }
+
+        save.worldSaveData.puzzles = puzzles;
         save.journalSaveData.quests = quests;
         return save;
     }
