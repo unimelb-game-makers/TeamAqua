@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,6 +23,7 @@ public class SaveTemplate : ScriptableObject
         save.playerSaveData.position = checkpoint.position;
         save.playerSaveData.energy = energy;
         save.worldSaveData.currentDay = day;
+        save.worldSaveData.puzzles = Array.Empty<PuzzleSaveData>();
         save.dialogueSaveData.scriptId = script.name;
         save.dialogueSaveData.dialogueId = dialogue.name;
         QuestSaveData[] quests = new QuestSaveData[ongoingQuests.Count];
