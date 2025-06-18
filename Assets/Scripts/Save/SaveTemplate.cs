@@ -15,7 +15,7 @@ public class SaveTemplate : ScriptableObject
     [SerializeField] private DialogueNode dialogue;
     [SerializeField] private DialogueNode[] dialogueNodes;
     [SerializeField] private List<Quest> ongoingQuests = new();
-    [SerializeField] private List<PuzzleCompleteData> puzzleCompleteData = new();
+    [SerializeField] private List<PuzzleData> puzzleCompleteData = new();
     [SerializeField] private int energy = 100;
     [SerializeField] private int day = 1;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Puzzle : MonoBehaviour
 {
-    public string id;
+    [SerializeField] private PuzzleData data;
     public CinemachineVirtualCamera puzzleCam;
     public GameObject door;
     public Switch[] switches;
@@ -14,6 +14,18 @@ public class Puzzle : MonoBehaviour
 
     private bool playerEntered = false;
     private bool _completed = false;
+
+    public string ID => data.name;
+
+    private void Awake()
+    {
+        if (!data)
+        {
+            Debug.LogError($"PUZZLE | {name} is missing a puzzle data object.");
+            enabled = false;
+        }
+    }
+    
     
     private void Start() 
     {
@@ -35,16 +47,13 @@ public class Puzzle : MonoBehaviour
     private void Load()
     {
         // If no save data for the puzzle, then return
-        if (!PuzzleManager.instance.TryGetSaveData(id, out PuzzleSaveData saveData)) return;
-        
-        // Don't bother loading if the puzzle is not completed
-        if (!saveData.completed) return;
+        if (!PuzzleManager.instance.TryGetSaveData(data.name, out PuzzleSaveData saveData)) return;
         
         // If there is a mismatch between the saved blocks and the current, don't try saving, let it override next time
         if (saveData.blocks.Length != pushBlocks.Count) return;
         
-        // If it is completed and there are the right number of push blocks, load in the right state
-        _completed = true;
+        // Set completed and the push block locations
+        _completed = saveData.completed;
         Vector3 doorPos = door.transform.position;
         doorPos.y = GetClosedDoorPosition();
         door.transform.position = doorPos;
@@ -57,7 +66,7 @@ public class Puzzle : MonoBehaviour
     public PuzzleSaveData GetSaveData()
     {
         PuzzleSaveData saveData = new PuzzleSaveData();
-        saveData.id = id;
+        saveData.id = data.name;
         saveData.completed = _completed;
         saveData.blocks = new PuzzleBlockSaveData[pushBlocks.Count];
         for (int i = 0; i < pushBlocks.Count; ++i)
