@@ -26,7 +26,7 @@ jobs:
   build-Windows:
     name: Build Windows 
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' # Temporarily disabling for pull requests
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request' 
     strategy:
       matrix:
         targetPlatform: [StandaloneWindows64]
@@ -81,12 +81,13 @@ jobs:
 
   # Build on multiple platforms 
   build-multiple-platforms:
-    name: Build on multiple platforms
+    needs: [build-Windows]
+    name: Build on Linux/Macos
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || github.event_name == 'pull_request' # Temporarily allowing pull requests for testing
     strategy:
       matrix: 
-        targetPlatform: [StandaloneWindows64, StandaloneLinux64, StandaloneOSX]
+        targetPlatform: [StandaloneLinux64, StandaloneOSX]
     steps:
       # Checkout
       - name: Checkout repository
@@ -141,12 +142,29 @@ jobs:
     name: Deploy to Steam
     runs-on: ubuntu-latest
     steps:
+      - name: Download Windows build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-StandaloneWindows64
+          path: build/StandaloneWindows64
+
+      - name: Download Linux build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-StandaloneLinux64
+          path: build/StandaloneLinux64
+
+      - name: Download macOS build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-StandaloneOSX
+          path: build/StandaloneOSX
+
       - name: Deploy to Steam
         uses: game-ci/steam-deploy@v3
-        
         with:
-          username: ${{ secrets.STEAM_USERNAME }}          
-          configVdf: ${{ secrets.STEAM_CONFIG_VDF }}          
+          username: ${{ secrets.STEAM_USERNAME }}
+          configVdf: ${{ secrets.STEAM_CONFIG_VDF }}
           appId: ${{ vars.STEAM_APP_ID }}
           buildDescription: ${{ github.event.head_commit.message }}
           rootPath: build
