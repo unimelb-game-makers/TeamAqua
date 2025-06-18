@@ -84,7 +84,7 @@ jobs:
     needs: [build-Windows]
     name: Build on Linux/Macos
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'pull_request' # Temporarily allowing pull requests for testing
+    if: github.event_name == 'push' 
     strategy:
       matrix: 
         targetPlatform: [StandaloneLinux64, StandaloneOSX]
