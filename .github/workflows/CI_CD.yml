@@ -83,7 +83,7 @@ jobs:
   build-multiple-platforms:
     name: Build on multiple platforms
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'pull request' # Temporarily allowing pull requests for testing
+    if: github.event_name == 'push' || github.event_name == 'pull_request' # Temporarily allowing pull requests for testing
     strategy:
       matrix: 
         targetPlatform: [StandaloneWindows64, StandaloneLinux64, StandaloneOSX]
