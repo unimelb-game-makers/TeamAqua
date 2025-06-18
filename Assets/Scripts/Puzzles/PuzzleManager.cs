@@ -6,6 +6,7 @@ public class PuzzleManager : MonoBehaviour, ISaveable
 {
     public static PuzzleManager instance;
     private Dictionary<string, PuzzleSaveData> _saveData = new Dictionary<string, PuzzleSaveData>();
+    private List<Puzzle> _puzzles = new();
     
     private void Awake()
     {
@@ -17,6 +18,11 @@ public class PuzzleManager : MonoBehaviour, ISaveable
         {
             instance = this;
         }
+    }
+
+    public void Register(Puzzle puzzle)
+    {
+        _puzzles.Add(puzzle);
     }
     
     public void Load(SaveSlot saveSlot)
@@ -35,11 +41,10 @@ public class PuzzleManager : MonoBehaviour, ISaveable
     public SaveSlot Save(SaveSlot saveSlot)
     {
         SaveSlot save = saveSlot;
-        Puzzle[] puzzles = FindObjectsByType<Puzzle>(FindObjectsSortMode.None);
-        PuzzleSaveData[] saveData = new PuzzleSaveData[puzzles.Length];
+        PuzzleSaveData[] saveData = new PuzzleSaveData[_puzzles.Count];
         
         int index = 0;
-        foreach (Puzzle puzzle in puzzles)
+        foreach (Puzzle puzzle in _puzzles)
         {
             saveData[index] = puzzle.GetSaveData();
             index++;
