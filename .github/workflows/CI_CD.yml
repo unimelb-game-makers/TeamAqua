@@ -143,7 +143,7 @@ jobs:
     steps:
       - name: Deploy to Steam
         uses: game-ci/steam-deploy@v3
-        if: ${{ secrets.STEAM_USERNAME && secrets.STEAM_CONFIG_VDF && vars.STEAM_APP_ID }}
+        
         with:
           username: ${{ secrets.STEAM_USERNAME }}          
           configVdf: ${{ secrets.STEAM_CONFIG_VDF }}          
