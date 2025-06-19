@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f9cd09202ec4f298898b1138e22974, type: 3}
+  m_Name: Puzzle 2
+  m_EditorClassIdentifier: 
+  id: P_1
+  saveData:
+    id: P_1
+    completed: 1
+    blocks:
+    - position: {x: 17.125, y: 1, z: 20.375}
+    - position: {x: 16.625, y: 1, z: 20.375}

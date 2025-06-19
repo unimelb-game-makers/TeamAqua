@@ -15,6 +15,22 @@ public struct PlayerSaveData
 public struct WorldSaveData
 {
     public int currentDay;
+    public PuzzleSaveData[] puzzles;
+}
+
+[Serializable]
+public struct PuzzleSaveData
+{
+    
+    public string id;
+    public bool completed;
+    public PuzzleBlockSaveData[] blocks;
+}
+
+[Serializable]
+public struct PuzzleBlockSaveData
+{
+    public Vector3 position;
 }
 
 [Serializable]

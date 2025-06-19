@@ -109,7 +109,7 @@ public class SaveManager : MonoBehaviour
             if (manager.TryGetComponent(out ISaveable saveable))
                 _saveSlot = saveable.Save(_saveSlot);
 
-        string jsonString = JsonUtility.ToJson(_saveSlot);
+        string jsonString = JsonUtility.ToJson(_saveSlot, true);
 
         Directory.CreateDirectory(PlayerSave.GetSavePath());
         string fullPath = PlayerSave.GetFullPath(GetFileName());
