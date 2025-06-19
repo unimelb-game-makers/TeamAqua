@@ -59,5 +59,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7614808639443455982, guid: 3481c2f1de67e8550a80be5d8004f3b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8560755751642608051}
   m_SourcePrefab: {fileID: 100100000, guid: 3481c2f1de67e8550a80be5d8004f3b5, type: 3}
+--- !u!1 &536497047642510189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7614808639443455982, guid: 3481c2f1de67e8550a80be5d8004f3b5, type: 3}
+  m_PrefabInstance: {fileID: 7989167091722574979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8560755751642608051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536497047642510189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40f6d2a89dd87741a207dde2007cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourcePrefab: {fileID: 0}
+  placementOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  scaleOffset: {x: 1, y: 1, z: 1}
+  tilemap: {fileID: 0}
+  layer: {fileID: 0}
+  gridCellPosition: {x: 0, y: 0, z: 0}
