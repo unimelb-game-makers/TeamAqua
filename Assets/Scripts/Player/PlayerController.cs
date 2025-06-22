@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+/*
+Change this controller to either Kinematic or improve movement physics.
+*/
 public class PlayerController : MonoBehaviour, ISaveable
 {
     [SerializeField]
