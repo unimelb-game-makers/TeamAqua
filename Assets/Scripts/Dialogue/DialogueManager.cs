@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private string _dialogueId;
 
     [SerializeField]
-    private DialogueDatabase dialogueDatabase;
+    public DialoguePool dialogueDatabase;
     public string ScriptId => _scriptId;
     public string DialogueId => _dialogueId;
 
@@ -330,6 +330,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private void EndScript()
     {
         // TODO(Alex): Don't actually set the next script here.
+
+        // remove need to get next script
         DialogueScript nextScript = dialogueDatabase.GetNextScript(_scriptId);
         _scriptId = nextScript ? nextScript.name : string.Empty;
         if (nextScript)
