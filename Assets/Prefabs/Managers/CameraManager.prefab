@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameras:
-  - {fileID: 1675457334326957490}
-  - {fileID: 2695024939824023562}
-  currentCamera: 0
+  - angle: 1
+    camera: {fileID: 1675457334326957490}
+  - angle: 2
+    camera: {fileID: 2695024939824023562}
+  currentAngle: 2
 --- !u!1001 &1175488349989481672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +62,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508985908542454138, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_Name
-      value: Camera 0
+      value: MidAngle
+      objectReference: {fileID: 0}
+    - target: {fileID: 508985908542454138, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1461360232175612280, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_Enabled
@@ -88,31 +94,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.50499916
+      value: -6.508
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3809996
+      value: 1.2739999
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7840004
+      value: -6.105
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98543453
+      value: 0.9854346
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.17005523
+      value: 0.17005521
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.000000086149434
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0000000148667
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -151,11 +157,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 508985908542454138, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_Name
-      value: Camera 1
+      value: HighAngle
       objectReference: {fileID: 0}
     - target: {fileID: 508985908542454138, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 692453111357096919, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_FollowOffset.y
@@ -167,15 +173,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.50499916
+      value: -6.508
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.481
+      value: 2.374
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2859993
+      value: -5.035
       objectReference: {fileID: 0}
     - target: {fileID: 8964284755716428037, guid: ff573b2687324b24792ddf9e46981f6a, type: 3}
       propertyPath: m_LocalRotation.w
