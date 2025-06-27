@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 using Sirenix.OdinInspector;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -123,6 +124,39 @@ public class DialogueManager : MonoBehaviour, ISaveable
         EnterDialogueMode(script, node, mode);
     }
 
+    // find a script according to the input node that the script contains
+    public void TryFindScript(string dialogueId)
+    {
+        Debug.Log("TFS triggered"); // fails to trigger
+        DialogueNode node = null;
+        for (int i = 0; i < dialogueDatabase.dialogueBranches.Count; i++)
+        {
+            for (int j = 0; j < dialogueDatabase.dialogueBranches[i].dialogues.Count; j++)
+            {
+                if (dialogueDatabase.dialogueBranches[i].dialogues[j].name == dialogueId)
+                {
+                    node = dialogueDatabase.dialogueBranches[i].dialogues[j];
+                    Debug.Log(
+                        "TFS | found node at script: " + dialogueDatabase.dialogueBranches[i].name
+                    );
+
+                    if (node == dialogueDatabase.dialogueBranches[i].dialogues[j])
+                    {
+                        Debug.Log(
+                            "TFS | node found is: "
+                                + node.name
+                                + " | at script: "
+                                + dialogueDatabase.dialogueBranches[i].name
+                        );
+                        SetDialogue(dialogueDatabase.dialogueBranches[i], node);
+                    }
+                    else
+                        Debug.Log("TFS | cant find node");
+                }
+            }
+        }
+    }
+
     /// <summary>
     /// Will play the current node for the script. If the current dialogue cannot be found, it will throw an error.
     /// </summary>
@@ -130,6 +164,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
     /// <param name="mode"></param>
     public void EnterDialogue(DialogueNode node, DialogueMode mode = DialogueMode.Frozen)
     {
+        Debug.Log("EnterDialogue");
+        TryFindScript(node.name);
         DialogueScript script = dialogueDatabase.GetScript(_scriptId);
         if (!script.TryGetDialogue(node.name, out _))
         {

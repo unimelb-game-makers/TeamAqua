@@ -25,11 +25,26 @@ public class NPCDialogue : MonoBehaviour
 
     private bool TryGetTrigger(string dialogueId, out DialogueTrigger trigger)
     {
+        DialogueManager.instance.TryFindScript(dialogueId);
+        dialogueId = DialogueManager.instance.DialogueId;
+        // how to switch out dialogueid first
         for (int i = 0; i < npcData.dialogues.Count; ++i)
         {
+            Debug.Log(
+                "TRIGGER | dialogue name is: "
+                    + npcData.dialogues[i].dialogue.name
+                    + " | at script: "
+                    + DialogueManager.instance.ScriptId
+            );
             if (npcData.dialogues[i].dialogue.name == dialogueId)
             {
                 trigger = npcData.dialogues[i];
+                Debug.Log(
+                    "TRIGGER | dialogue found: "
+                        + trigger.dialogue.name
+                        + " | at script: "
+                        + DialogueManager.instance.ScriptId
+                );
                 return true;
             }
         }
@@ -52,6 +67,10 @@ public class NPCDialogue : MonoBehaviour
 
     public void ShowIndicator()
     {
+        // how to call tryfindscript and intercept this signal
+
+        // DialogueManager.instance.TryFindScript()
+
         string dialogue = DialogueManager.instance.DialogueId;
         if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
         {
@@ -59,6 +78,10 @@ public class NPCDialogue : MonoBehaviour
                 ShowQuestIndicator(trigger.dialogue.name);
             else
                 ShowDialogueIndicator();
+        }
+        else
+        {
+            Debug.Log("could not fetch trigger");
         }
     }
 
