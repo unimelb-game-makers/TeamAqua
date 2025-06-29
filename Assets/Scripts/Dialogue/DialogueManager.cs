@@ -125,9 +125,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
     }
 
     // find a script according to the input node that the script contains
-    public void TryFindScript(string dialogueId)
+    private bool TryFindScript(string dialogueId, out DialogueScript scriptID)
     {
-        Debug.Log("TFS triggered"); // fails to trigger
+        Debug.Log("TFS triggered");
         DialogueNode node = null;
         for (int i = 0; i < dialogueDatabase.dialogueBranches.Count; i++)
         {
@@ -136,10 +136,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 if (dialogueDatabase.dialogueBranches[i].dialogues[j].name == dialogueId)
                 {
                     node = dialogueDatabase.dialogueBranches[i].dialogues[j];
-                    Debug.Log(
-                        "TFS | found node at script: " + dialogueDatabase.dialogueBranches[i].name
-                    );
-
                     if (node == dialogueDatabase.dialogueBranches[i].dialogues[j])
                     {
                         Debug.Log(
@@ -148,13 +144,18 @@ public class DialogueManager : MonoBehaviour, ISaveable
                                 + " | at script: "
                                 + dialogueDatabase.dialogueBranches[i].name
                         );
-                        SetDialogue(dialogueDatabase.dialogueBranches[i], node);
+                        scriptID = dialogueDatabase.dialogueBranches[i];
+                        return true;
                     }
                     else
                         Debug.Log("TFS | cant find node");
                 }
+                else
+                    Debug.Log("TFS | no name match");
             }
         }
+        scriptID = null;
+        return false;
     }
 
     /// <summary>
@@ -165,7 +166,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public void EnterDialogue(DialogueNode node, DialogueMode mode = DialogueMode.Frozen)
     {
         Debug.Log("EnterDialogue");
-        TryFindScript(node.name);
+        // TryFindScript(node.name);
         DialogueScript script = dialogueDatabase.GetScript(_scriptId);
         if (!script.TryGetDialogue(node.name, out _))
         {
@@ -186,6 +187,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             return;
         }
 
+        script.currentNode = node;
         State = DialogueState.Ongoing;
         currentStory = new Story(script.inkFile.text);
         _scriptId = script.name;
@@ -340,10 +342,14 @@ public class DialogueManager : MonoBehaviour, ISaveable
         // If the dialogue is a quest, we only move to the next dialogue if it has been submitted
         bool canContinue =
             !_dialogueId.Contains("Q") || QuestManager.instance.IsSubmitted(_dialogueId);
+
         if (canContinue)
         {
             string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
             _dialogueId = nextDialogue;
+            dialogueScript.TryGetDialogue(_dialogueId, out DialogueNode newNode);
+            dialogueScript.currentNode = newNode;
+            Debug.Log("DIALOGUE | Nextdialogue id is: " + _dialogueId + "|aka|" + nextDialogue);
             // If we are done with the dialogues, then the script is done
             if (string.IsNullOrEmpty(nextDialogue))
                 EndScript();
@@ -361,6 +367,30 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         yield return new WaitForSeconds(0.2f);
         State = DialogueState.None;
+    }
+
+    public void SwitchScript(string dialogueId)
+    {
+        if (!TryFindScript(dialogueId, out DialogueScript nextScript))
+        {
+            return;
+        }
+
+        _scriptId = nextScript ? nextScript.name : string.Empty;
+        if (nextScript)
+        {
+            nextScript.TryGetDialogue(dialogueId, out DialogueNode currentNode);
+            int currentIndex = nextScript.dialogues.IndexOf(currentNode);
+            DialogueNode node =
+                nextScript.dialogues.Count > 0 ? nextScript.dialogues[currentIndex] : null;
+            _dialogueId = node ? node.name : string.Empty;
+        }
+
+        Debug.Log($"DIALOGUE | switching new script to {_scriptId}");
+        if (!nextScript)
+        {
+            Debug.Log("DIALOGUE | Finished all scripts.");
+        }
     }
 
     private void EndScript()

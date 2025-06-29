@@ -6,6 +6,9 @@ public class DialogueScript : ScriptableObject
 {
     public TextAsset inkFile;
     public List<DialogueNode> dialogues;
+    public DialogueNode currentNode;
+
+    // each script keeps a currentNode, next time a node in this script is called, it should be this node
 
     /// <summary>
     /// No need to throw an error here, assume that dialogues can be falsy
@@ -27,7 +30,6 @@ public class DialogueScript : ScriptableObject
         dialogueNode = null;
         return false;
     }
-    
 
     public string GetNextDialogue(string dialogueId)
     {
