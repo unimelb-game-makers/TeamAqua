@@ -381,15 +381,17 @@ public class DialogueManager : MonoBehaviour, ISaveable
         if (nextScript)
         {
             nextScript.TryGetDialogue(dialogueId, out DialogueNode currentNode);
-
+            _dialogueId = nextScript.activeNode ? nextScript.activeNode.name : string.Empty;
             // this breaks HasSeen as it sets the dialogue node of the dialogue system to the one passed from npcdata[0]
-            int currentIndex = nextScript.dialogues.IndexOf(currentNode);
-            DialogueNode node =
-                nextScript.dialogues.Count > 0 ? nextScript.dialogues[currentIndex] : null;
-            _dialogueId = node ? node.name : string.Empty;
+            // FIXED above, HasSeen checks independently on a different currentNode of each script
+            // Current issue: it still only takes the first node, so it breaks for dialogue holders with > 1 node
+            // int currentIndex = nextScript.dialogues.IndexOf(currentNode);
+            // DialogueNode node =
+            //     nextScript.dialogues.Count > 0 ? nextScript.dialogues[currentIndex] : null;
+            // _dialogueId = node ? node.name : string.Empty;
         }
 
-        Debug.Log($"DIALOGUE | switching new script to {_scriptId}");
+        Debug.Log($"DIALOGUE | switching new script to {_scriptId} and new node to {_dialogueId}");
         if (!nextScript)
         {
             Debug.Log("DIALOGUE | Finished all scripts.");
