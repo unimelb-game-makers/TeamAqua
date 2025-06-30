@@ -43,23 +43,54 @@ public class DialoguePool : ScriptableObject
         // If we haven't started anything, then we haven't seen anything.
         if (string.IsNullOrEmpty(DialogueManager.instance.ScriptId))
             return false;
+
         DialogueScript currentScript = GetScript(DialogueManager.instance.ScriptId);
         script.TryGetDialogue(
             DialogueManager.instance.DialogueId,
             out DialogueNode currentDialogue
         );
 
-        // First compare the dialogueBranches
-        int currentScriptIndex = dialogueBranches.IndexOf(currentScript);
-        int scriptIndex = dialogueBranches.IndexOf(script);
+        // Steven: no need to check script as we switch between them
+        // // First compare the dialogueBranches
+        // int currentScriptIndex = dialogueBranches.IndexOf(currentScript);
+        // int scriptIndex = dialogueBranches.IndexOf(script);
+
+        // compare dialogue nodes
         int currentDialogueIndex = currentDialogue
             ? currentScript.dialogues.IndexOf(currentDialogue)
             : 0;
         int dialogueIndex = node ? script.dialogues.IndexOf(node) : 0;
-        if (currentScriptIndex > scriptIndex)
-            return true;
+
+        // if (currentScriptIndex > scriptIndex)
+        //     return true;
+        Debug.Log(
+            $"SEEN | current dialogue: {currentDialogue.name}|[{currentDialogueIndex}] and passed dialogue: {node.name}|[{dialogueIndex}]"
+        );
         if (currentDialogueIndex > dialogueIndex)
             return true;
+        return false;
+    }
+
+    public bool NodeValid(DialogueScript script, DialogueNode node)
+    {
+        /// current BUG: might be a save slot thingo but first noonisland dialogue skipped
+        /// already tried deleting develop.js and checking save templates
+        ///
+        // valid if node is the script's active node
+        if (script.activeNode == null)
+        {
+            Debug.Log("First node");
+            script.activeNode = script.dialogues[0];
+        }
+
+        if (node == script.activeNode)
+        {
+            Debug.Log($"POOL | node [{node.name}] is valid");
+            return true;
+        }
+
+        // false if the node has passed or not active yet
+        Debug.Log($"POOL | node [{node.name}] is NOT valid");
         return false;
     }
 

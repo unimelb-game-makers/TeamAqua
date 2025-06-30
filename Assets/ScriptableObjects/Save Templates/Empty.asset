@@ -16,6 +16,7 @@ MonoBehaviour:
   checkpoint: {fileID: 11400000, guid: 8b99bc7916d7b4d27913ab9314ac93e1, type: 2}
   script: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   dialogue: {fileID: 11400000, guid: e9f39fa8b272b4038b3e9c80af2c02fb, type: 2}
-  ongoingQuests: []
+  ongoingQuests:
+  - {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
   energy: 100
   day: 1

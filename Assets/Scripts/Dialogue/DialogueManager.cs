@@ -78,6 +78,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private void Start()
     {
         dialogueAudioPlayer.InitializeAudioDictionary();
+        Debug.Log(Application.persistentDataPath);
     }
 
     public void SetDialogue(DialogueScript script, DialogueNode node)
@@ -121,6 +122,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             throw new NullReferenceException("DIALOGUE | Provided script is null");
         // Go to the start of the next script
         DialogueNode node = script.dialogues.Count > 0 ? script.dialogues[0] : null;
+        script.activeNode = node;
         EnterDialogueMode(script, node, mode);
     }
 
@@ -165,7 +167,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     /// <param name="mode"></param>
     public void EnterDialogue(DialogueNode node, DialogueMode mode = DialogueMode.Frozen)
     {
-        Debug.Log("EnterDialogue");
+        Debug.Log($"EnterDialogue: {node.name}");
         // TryFindScript(node.name);
         DialogueScript script = dialogueDatabase.GetScript(_scriptId);
         if (!script.TryGetDialogue(node.name, out _))
@@ -174,20 +176,19 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 $"DIALOGUE | Could not find Node '{node.name}' for Script {script.name}"
             );
         }
-
         EnterDialogueMode(script, node, mode);
     }
 
     private void EnterDialogueMode(DialogueScript script, DialogueNode node, DialogueMode mode)
     {
         // Don't play the script and node if it is already behind
-        if (dialogueDatabase.HasSeen(script, node))
+        if (!dialogueDatabase.NodeValid(script, node))
         {
-            Debug.Log($"DIALOGUE | Already seen {script.name}, not showing it");
+            // this is failing rn
+            Debug.Log($"DIALOGUE | Already seen {script.name} and {node.name}, not showing it");
             return;
         }
-
-        script.currentNode = node;
+        Debug.Log($"NOW PLAYING | script: {script.name} and node: {node.name}");
         State = DialogueState.Ongoing;
         currentStory = new Story(script.inkFile.text);
         _scriptId = script.name;
@@ -348,8 +349,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
             string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
             _dialogueId = nextDialogue;
             dialogueScript.TryGetDialogue(_dialogueId, out DialogueNode newNode);
-            dialogueScript.currentNode = newNode;
-            Debug.Log("DIALOGUE | Nextdialogue id is: " + _dialogueId + "|aka|" + nextDialogue);
+            dialogueScript.activeNode = newNode;
+            Debug.Log($"DIALOGUE | Nextdialogue id is: {_dialogueId}");
             // If we are done with the dialogues, then the script is done
             if (string.IsNullOrEmpty(nextDialogue))
                 EndScript();
@@ -380,6 +381,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
         if (nextScript)
         {
             nextScript.TryGetDialogue(dialogueId, out DialogueNode currentNode);
+
+            // this breaks HasSeen as it sets the dialogue node of the dialogue system to the one passed from npcdata[0]
             int currentIndex = nextScript.dialogues.IndexOf(currentNode);
             DialogueNode node =
                 nextScript.dialogues.Count > 0 ? nextScript.dialogues[currentIndex] : null;

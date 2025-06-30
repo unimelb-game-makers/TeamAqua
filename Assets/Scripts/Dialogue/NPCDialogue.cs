@@ -33,12 +33,12 @@ public class NPCDialogue : MonoBehaviour
             if (npcData.dialogues[i].dialogue.name == dialogueId)
             {
                 trigger = npcData.dialogues[i];
-                Debug.Log(
-                    "TRIGGER | dialogue found: "
-                        + trigger.dialogue.name
-                        + " | at scipt: "
-                        + DialogueManager.instance.ScriptId
-                );
+                // Debug.Log(
+                //     "TRIGGER | dialogue found: "
+                //         + trigger.dialogue.name
+                //         + " | at scipt: "
+                //         + DialogueManager.instance.ScriptId
+                // );
                 return true;
             }
         }
@@ -108,7 +108,7 @@ public class NPCDialogue : MonoBehaviour
         string dialogue = DialogueManager.instance.DialogueId;
         // DialogueManager.instance.TryFindScript(dialoguet);
         // string dialogue = DialogueManager.instance.DialogueId;
-        // Debug.Log("dialouget is: " + dialoguet + " and dialogue is: " + dialogue);
+        Debug.Log($"ialogue is: {dialogue}");
 
         if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
         {

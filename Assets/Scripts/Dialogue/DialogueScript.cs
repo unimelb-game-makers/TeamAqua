@@ -6,7 +6,7 @@ public class DialogueScript : ScriptableObject
 {
     public TextAsset inkFile;
     public List<DialogueNode> dialogues;
-    public DialogueNode currentNode;
+    public DialogueNode activeNode;
 
     // each script keeps a currentNode, next time a node in this script is called, it should be this node
 
