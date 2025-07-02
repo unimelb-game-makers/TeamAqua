@@ -12,11 +12,6 @@ public class TerrainSwitch : MonoBehaviour
     public GameObject[] openScenes;
     public GameObject[] closeScenes;
 
-    [SerializeField] private TerrainSwitch prevSwitch;
-    [SerializeField] private TerrainSwitch nextSwitch;
-    
-    private bool playerPassed = false; // Check if the player has already gone through the current terrain
-
     private void OnTriggerEnter(Collider other) {
         if(!other.CompareTag("Player"))
             return;
