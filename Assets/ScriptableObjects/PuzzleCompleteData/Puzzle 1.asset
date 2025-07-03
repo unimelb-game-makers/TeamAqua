@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveData:
     id: Puzzle 1
-    completed: 1
+    completed: 0
     blocks:
-    - position: {x: 17.125, y: 1, z: 20.375}
-    - position: {x: 16.625, y: 1, z: 20.375}
+    - position: {x: 3.75, y: 0.75, z: 24}
+    - position: {x: 4, y: 0.75, z: 24.25}
