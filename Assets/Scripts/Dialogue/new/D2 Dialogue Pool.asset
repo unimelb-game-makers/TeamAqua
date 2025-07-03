@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affda5d30205fc94496a3587fbe8fc0a, type: 3}
   m_Name: D2 Dialogue Pool
   m_EditorClassIdentifier: 
-  startScript: {fileID: 0}
-  dialogueBranches: []
+  startScript: {fileID: 11400000, guid: ab444411094a9ca47872ceae3efb1d1c, type: 2}
+  dialogueBranches:
+  - {fileID: 11400000, guid: ab444411094a9ca47872ceae3efb1d1c, type: 2}
+  - {fileID: 11400000, guid: 7e6493b7b5180dc44a29feadb4b7dbd6, type: 2}
+  - {fileID: 11400000, guid: 20e576f2c75de824e9f7ffa1251cd61c, type: 2}

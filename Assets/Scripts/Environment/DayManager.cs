@@ -106,7 +106,7 @@ public class DayManager : MonoBehaviour, ISaveable
     {
         OnDayChanged?.Invoke(_currentDay);
         _currentDay += 1;
-        dayStoryManager.currentDay += 1;
+        dayStoryManager.GetNextDay(_currentDay);
         SetNight(false);
         _playerController.handleNextDay();
         RainWithDelay(false, 2.0f);
