@@ -395,6 +395,7 @@ MonoBehaviour:
   playerInputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   LoadGlobalJSON: {fileID: 4900000, guid: e9e06513af637584c9d7f55c00b27a53, type: 3}
   dialogueDatabase: {fileID: 11400000, guid: e8836d24cefbe0742ad7ca931ab86937, type: 2}
+  dayDatabase: {fileID: 11400000, guid: 3d271355fc8fa3949bc0355ad03e2f94, type: 2}
 --- !u!114 &5081490907297196794
 MonoBehaviour:
   m_ObjectHideFlags: 0

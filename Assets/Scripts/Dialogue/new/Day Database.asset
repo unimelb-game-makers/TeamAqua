@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Day Database
   m_EditorClassIdentifier: 
   days:
+  - {fileID: 11400000, guid: e767f936306664f0ea03129934d142cf, type: 2}
   - {fileID: 11400000, guid: 9ce994fe719074546b470ea367c79631, type: 2}
   - {fileID: 11400000, guid: be832d4affa25e34ebecdc3bd5cee147, type: 2}

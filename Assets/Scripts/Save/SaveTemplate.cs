@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,8 +23,19 @@ public class SaveTemplate : ScriptableObject
         save.playerSaveData.position = checkpoint.position;
         save.playerSaveData.energy = energy;
         save.worldSaveData.currentDay = day;
-        save.dialogueSaveData.scriptId = script.name;
-        save.dialogueSaveData.dialogueId = dialogue.name;
+        if (script && dialogue)
+        {
+            DialogueNodeSaveData nodeSaveData = new DialogueNodeSaveData();
+            nodeSaveData.scriptId = script.name;
+            nodeSaveData.dialogueId = dialogue.name;
+            save.dialogueSaveData.activeDialogues = new DialogueNodeSaveData[1];
+            save.dialogueSaveData.activeDialogues[0] = nodeSaveData;
+        }
+        else
+        {
+            save.dialogueSaveData.activeDialogues = Array.Empty<DialogueNodeSaveData>();
+        }
+            
         QuestSaveData[] quests = new QuestSaveData[ongoingQuests.Count];
         for(int i=0; i< quests.Length; ++i)
         {

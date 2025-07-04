@@ -30,12 +30,7 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             // call TryFindScript here, issue is trygettrigger in showindicator() fails
             _dialogueSource = dialogue;
-            if (!_dialogueSource)
-            {
-                Debug.Log("could not fetch _dialogueSource");
-                return;
-            }
-            _dialogueSource.CheckScript();
+            _dialogueSource.ShowIndicator();
         }
     }
 

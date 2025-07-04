@@ -8,5 +8,5 @@ public class Day : ScriptableObject
 {
     public DialoguePool dialoguePool;
     public List<Quest> mainQuests;
-    public List<Quest> SubQuests;
+    public List<Quest> subQuests;
 }

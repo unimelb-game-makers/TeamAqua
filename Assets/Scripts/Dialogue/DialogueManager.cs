@@ -14,6 +14,20 @@ public enum DialogueState
     Ended,
 }
 
+public class DialogueStory
+{
+    public Story story;
+    public DialogueScript script;
+    public DialogueNode node;
+
+    public DialogueStory(Story story, DialogueScript script, DialogueNode node)
+    {
+        this.story = story;
+        this.script = script;
+        this.node = node;
+    }
+}
+
 public class DialogueManager : MonoBehaviour, ISaveable
 {
     [SerializeField]
@@ -27,18 +41,15 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private TextAsset LoadGlobalJSON;
 
     [Header("Dialogues")]
-    [NonSerialized, ShowInInspector, ReadOnly]
-    private string _scriptId;
-
-    [NonSerialized, ShowInInspector, ReadOnly]
-    private string _dialogueId;
 
     [SerializeField]
     public DialoguePool dialogueDatabase;
-    public string ScriptId => _scriptId;
-    public string DialogueId => _dialogueId;
 
-    public Story currentStory;
+    [SerializeField] public DayDatabase dayDatabase;
+    
+    private Dictionary<DialogueScript, DialogueNode> _activeDialogues = new();
+
+    public DialogueStory currentStory;
 
     private DialogueVariable dialogueVariable;
 
@@ -83,30 +94,64 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void SetDialogue(DialogueScript script, DialogueNode node)
     {
-        _scriptId = script.name;
-        _dialogueId = node.name;
+        if (_activeDialogues.TryGetValue(script, out _))
+            _activeDialogues[script] = node;
+        else
+            throw new Exception("Tried to enter dialogue, but not registered as an active dialogue");
     }
 
     public void ResetDialogue()
     {
-        _scriptId = string.Empty;
-        _dialogueId = string.Empty;
+        SetDay(0);
+    }
+
+    /// <summary>
+    /// Populates active dialogue with the first nodes of the scripts in the target day
+    /// </summary>
+    /// <param name="day"></param>
+    private void SetDay(int day)
+    {
+        _activeDialogues = new Dictionary<DialogueScript, DialogueNode>();
+        DialoguePool pool = dayDatabase.GetDay(day).dialoguePool;
+        foreach (DialogueScript script in pool.dialogueBranches)
+            _activeDialogues.Add(script, script.GetFirstNode());
     }
 
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
-        _scriptId = string.IsNullOrEmpty(saveData.scriptId)
-            ? dialogueDatabase.startScript.name
-            : saveData.scriptId;
-        _dialogueId = saveData.dialogueId ?? string.Empty;
+        WorldSaveData worldSaveData = saveSlot.worldSaveData;
+        
+        // Initialise our current active dialogues with the current dialogues in the day
+        SetDay(worldSaveData.currentDay);
+
+        for (int i = 0; i < saveData.activeDialogues.Length; ++i)
+        {
+            string scriptId = saveData.activeDialogues[i].scriptId;
+            string dialogueId = saveData.activeDialogues[i].dialogueId;
+            DialogueScript script = dialogueDatabase.GetScript(scriptId);
+            if (_activeDialogues.ContainsKey(script) && script.TryGetDialogue(dialogueId, out DialogueNode node))
+            {
+                _activeDialogues[script] = node;
+            }
+        }
     }
 
     public SaveSlot Save(SaveSlot saveSlot)
     {
         SaveSlot save = saveSlot;
-        save.dialogueSaveData.scriptId = _scriptId;
-        save.dialogueSaveData.dialogueId = _dialogueId;
+        save.dialogueSaveData.activeDialogues = new DialogueNodeSaveData[_activeDialogues.Count];
+        int i = 0;
+        foreach (KeyValuePair<DialogueScript, DialogueNode> dialogue in _activeDialogues)
+        {
+            DialogueNodeSaveData nodeSaveData = new()
+            {
+                scriptId = dialogue.Key.name,
+                dialogueId = dialogue.Value.name
+            };
+            save.dialogueSaveData.activeDialogues[i] = nodeSaveData;
+            i += 1;
+        }
         return save;
     }
 
@@ -122,42 +167,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
             throw new NullReferenceException("DIALOGUE | Provided script is null");
         // Go to the start of the next script
         DialogueNode node = script.dialogues.Count > 0 ? script.dialogues[0] : null;
-        script.activeNode = node;
-        EnterDialogueMode(script, node, mode);
-    }
 
-    // find a script according to the input node that the script contains
-    private bool TryFindScript(string dialogueId, out DialogueScript scriptID)
-    {
-        Debug.Log("TFS triggered");
-        DialogueNode node = null;
-        for (int i = 0; i < dialogueDatabase.dialogueBranches.Count; i++)
-        {
-            for (int j = 0; j < dialogueDatabase.dialogueBranches[i].dialogues.Count; j++)
-            {
-                if (dialogueDatabase.dialogueBranches[i].dialogues[j].name == dialogueId)
-                {
-                    node = dialogueDatabase.dialogueBranches[i].dialogues[j];
-                    if (node == dialogueDatabase.dialogueBranches[i].dialogues[j])
-                    {
-                        Debug.Log(
-                            "TFS | node found is: "
-                                + node.name
-                                + " | at script: "
-                                + dialogueDatabase.dialogueBranches[i].name
-                        );
-                        scriptID = dialogueDatabase.dialogueBranches[i];
-                        return true;
-                    }
-                    else
-                        Debug.Log("TFS | cant find node");
-                }
-                else
-                    Debug.Log("TFS | no name match");
-            }
-        }
-        scriptID = null;
-        return false;
+        EnterDialogueMode(script, node, mode);
     }
 
     /// <summary>
@@ -168,13 +179,21 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public void EnterDialogue(DialogueNode node, DialogueMode mode = DialogueMode.Frozen)
     {
         Debug.Log($"EnterDialogue: {node.name}");
-        // TryFindScript(node.name);
-        DialogueScript script = dialogueDatabase.GetScript(_scriptId);
-        if (!script.TryGetDialogue(node.name, out _))
+
+        DialogueScript script = null;
+        foreach (KeyValuePair<DialogueScript, DialogueNode> dialogue in _activeDialogues)
         {
-            throw new InvalidOperationException(
-                $"DIALOGUE | Could not find Node '{node.name}' for Script {script.name}"
-            );
+            if (dialogue.Value == node)
+            {
+                script = dialogue.Key;
+                break;
+            }
+        }
+
+        if (!script)
+        {
+            Debug.LogError($"Tried to enter {node.name}, but not in active dialogues");
+            return;
         }
         EnterDialogueMode(script, node, mode);
     }
@@ -182,28 +201,28 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private void EnterDialogueMode(DialogueScript script, DialogueNode node, DialogueMode mode)
     {
         // Don't play the script and node if it is already behind
-        if (!dialogueDatabase.NodeValid(script, node))
+        if (!CanPlayDialogue(node))
         {
-            // this is failing rn
             Debug.Log($"DIALOGUE | Already seen {script.name} and {node.name}, not showing it");
             return;
         }
         Debug.Log($"NOW PLAYING | script: {script.name} and node: {node.name}");
         State = DialogueState.Ongoing;
-        currentStory = new Story(script.inkFile.text);
-        _scriptId = script.name;
-        _dialogueId = node != null ? node.name : string.Empty;
+        currentStory = new DialogueStory(new Story(script.inkFile.text), script, node);
+        SetDialogue(script, node);
         // This loads in the global variables as well
-        dialogueVariable.StartListening(currentStory);
+        dialogueVariable.StartListening(currentStory.story);
+
+        string dialogueId = node ? node.name : string.Empty;
         // Set the dialogue id for the script
-        if (currentStory.variablesState.GlobalVariableExistsWithName("dialogue_id"))
-            currentStory.variablesState["dialogue_id"] = _dialogueId;
+        if (currentStory.story.variablesState.GlobalVariableExistsWithName("dialogue_id"))
+            currentStory.story.variablesState["dialogue_id"] = dialogueId;
 
         // if it is a quest, make sure to update the quest state
-        if (_dialogueId.Contains('Q'))
+        if (dialogueId.Contains('Q'))
         {
-            QuestState state = QuestManager.instance.CheckQuest(_dialogueId);
-            currentStory.variablesState["quest_state"] = state.ToString().ToUpper();
+            QuestState state = QuestManager.instance.CheckQuest(dialogueId);
+            currentStory.story.variablesState["quest_state"] = state.ToString().ToUpper();
         }
 
         if (mode == DialogueMode.Frozen)
@@ -211,16 +230,16 @@ public class DialogueManager : MonoBehaviour, ISaveable
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
             playerInputProvider.can_move = false; // Setting the Input provider here.
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
                 {
                     DialogueTriggerControl.instance().Trigger();
                 }
             );
-            //currentStory.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps
+            //currentStory.story.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps
 
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "PlayBGM",
                 (string id) =>
                 { // this is for starting a track during dialogue
@@ -228,7 +247,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "AddQuest",
                 (string id) =>
                 {
@@ -236,7 +255,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "SubmitQuest",
                 (string questID) =>
                 {
@@ -244,7 +263,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "SwapBGM",
                 (string new_id, string old_id, int FadeSpeed) =>
                 { // this is for switching out tracks mid-dialogue
@@ -255,17 +274,17 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "TurnOffBarrier",
                 (int id) =>
                 {
-                    //currentStory.variablesState["cutscene0"] = "AAAAAA";
-                    //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
+                    //currentStory.story.variablesState["cutscene0"] = "AAAAAA";
+                    //Debug.Log("dialogue trigger state is now " + currentStory.story.variablesState["cutscene0"]);
                     BarrierManager.Instance.TurnOffBarrier(id);
                 }
             );
 
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
@@ -281,7 +300,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             //changine to UI state done in child trigger points
             playerInputProvider.can_move = true; // Setting the Input provider here.
             Debug.Log("dialogue triggers collided");
-            currentStory.BindExternalFunction(
+            currentStory.story.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
                 {
@@ -296,9 +315,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void ContinueStory()
     {
-        if (currentStory.canContinue)
+        if (currentStory.story.canContinue)
         {
-            string nextLine = currentStory.Continue();
+            string nextLine = currentStory.story.Continue();
             ShowStory(nextLine);
         }
         else
@@ -314,12 +333,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
         Debug.Log("Skip");
         string nextLine = string.Empty;
         // Continues until we encounter a choice, or the story cannot continue
-        while (currentStory.canContinue && currentStory.currentChoices.Count == 0)
+        while (currentStory.story.canContinue && currentStory.story.currentChoices.Count == 0)
         {
-            nextLine = currentStory.Continue();
+            nextLine = currentStory.story.Continue();
         }
         // It will end the story if cannot continue anymore and there are no more choices
-        if (!currentStory.canContinue && currentStory.currentChoices.Count == 0)
+        if (!currentStory.story.canContinue && currentStory.story.currentChoices.Count == 0)
             EndStory();
         else
             ShowStory(nextLine, true);
@@ -327,8 +346,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void ShowStory(string nextLine, bool skip = false)
     {
-        OnDialogueContinue?.Invoke(nextLine, currentStory.currentChoices, skip);
-        OnDialogueTags?.Invoke(currentStory.currentTags);
+        OnDialogueContinue?.Invoke(nextLine, currentStory.story.currentChoices, skip);
+        OnDialogueTags?.Invoke(currentStory.story.currentTags);
     }
 
     private void EndStory()
@@ -338,26 +357,21 @@ public class DialogueManager : MonoBehaviour, ISaveable
             return;
         Debug.Log("DIALOGUE | Ending Story");
         State = DialogueState.Ended;
-        // Set the dialogueId to the next one in the database
-        DialogueScript dialogueScript = dialogueDatabase.GetScript(_scriptId);
+
+        // Get the current node of our dialogue script and set it to the next node, if possible
+        DialogueNode currentNode = _activeDialogues[currentStory.script];
         // If the dialogue is a quest, we only move to the next dialogue if it has been submitted
         bool canContinue =
-            !_dialogueId.Contains("Q") || QuestManager.instance.IsSubmitted(_dialogueId);
+            !currentNode.name.Contains("Q") || QuestManager.instance.IsSubmitted(currentNode.name);
 
         if (canContinue)
         {
-            string nextDialogue = dialogueScript.GetNextDialogue(_dialogueId);
-            _dialogueId = nextDialogue;
-            dialogueScript.TryGetDialogue(_dialogueId, out DialogueNode newNode);
-            dialogueScript.activeNode = newNode;
-            Debug.Log($"DIALOGUE | Nextdialogue id is: {_dialogueId}");
-            // If we are done with the dialogues, then the script is done
-            if (string.IsNullOrEmpty(nextDialogue))
-                EndScript();
+            DialogueNode nextDialogue = currentStory.script.GetNextDialogue(currentNode.name);
+            SetDialogue(currentStory.script, nextDialogue);
         }
 
         // Dialogue Manager specific stuff
-        dialogueVariable.StopListening(currentStory);
+        dialogueVariable.StopListening(currentStory.story);
         dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         playerInputProvider.can_move = true; // Setting the Input Provider Here.
         OnDialogueEnd?.Invoke();
@@ -370,57 +384,27 @@ public class DialogueManager : MonoBehaviour, ISaveable
         State = DialogueState.None;
     }
 
-    public void SwitchScript(string dialogueId)
+    
+    /// <summary>
+    /// This function checks whether the dialogue to be played is the next active node of one of the scripts
+    /// in active dialogues.
+    /// </summary>
+    /// <param name="dialogue"></param>
+    public bool CanPlayDialogue(DialogueNode dialogue)
     {
-        if (!TryFindScript(dialogueId, out DialogueScript nextScript))
+        // Loop over all of our current active dialogues. If this matches one of the active dialogues, then we can play it
+        Dictionary<DialogueScript, DialogueNode>.ValueCollection activeDialogueNodes = _activeDialogues.Values;
+        foreach (DialogueNode node in activeDialogueNodes)
         {
-            return;
+            if (node == dialogue) return true;
         }
-
-        _scriptId = nextScript ? nextScript.name : string.Empty;
-        if (nextScript)
-        {
-            nextScript.TryGetDialogue(dialogueId, out DialogueNode currentNode);
-            _dialogueId = nextScript.activeNode ? nextScript.activeNode.name : string.Empty;
-            // this breaks HasSeen as it sets the dialogue node of the dialogue system to the one passed from npcdata[0]
-            // FIXED above, HasSeen checks independently on a different currentNode of each script
-            // Current issue: it still only takes the first node, so it breaks for dialogue holders with > 1 node
-            // int currentIndex = nextScript.dialogues.IndexOf(currentNode);
-            // DialogueNode node =
-            //     nextScript.dialogues.Count > 0 ? nextScript.dialogues[currentIndex] : null;
-            // _dialogueId = node ? node.name : string.Empty;
-        }
-
-        Debug.Log($"DIALOGUE | switching new script to {_scriptId} and new node to {_dialogueId}");
-        if (!nextScript)
-        {
-            Debug.Log("DIALOGUE | Finished all scripts.");
-        }
-    }
-
-    private void EndScript()
-    {
-        // TODO(Alex): Don't actually set the next script here.
-
-        // remove need to get next script
-        DialogueScript nextScript = dialogueDatabase.GetNextScript(_scriptId);
-        _scriptId = nextScript ? nextScript.name : string.Empty;
-        if (nextScript)
-        {
-            DialogueNode node = nextScript.dialogues.Count > 0 ? nextScript.dialogues[0] : null;
-            _dialogueId = node ? node.name : string.Empty;
-        }
-        Debug.Log($"DIALOGUE | Setting next script to {_scriptId}");
-        if (!nextScript)
-        {
-            Debug.Log("DIALOGUE | Finished all scripts.");
-        }
+        return false;
     }
 
     public void ChooseChoice(int choiceIndex)
     {
         // Now process the choice and continue the story
-        currentStory.ChooseChoiceIndex(choiceIndex);
+        currentStory.story.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }
 

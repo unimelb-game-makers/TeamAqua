@@ -31,10 +31,16 @@ public struct InventorySaveData
 }
 
 [Serializable]
-public struct DialogueSaveData
+public struct DialogueNodeSaveData
 {
     public string scriptId;
     public string dialogueId;
+}
+
+[Serializable]
+public struct DialogueSaveData
+{
+    public DialogueNodeSaveData[] activeDialogues;
 }
 
 [Serializable]
