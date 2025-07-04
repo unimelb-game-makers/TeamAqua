@@ -56,7 +56,6 @@ public class NPCDialogue : MonoBehaviour
         return true;
     }
 
-
     /// <summary>
     /// Returns the first dialogue that is active in DialogueManager
     /// </summary>
@@ -82,7 +81,7 @@ public class NPCDialogue : MonoBehaviour
         // If there is no active dialogue, don't show an indicator
         if (!TryGetActiveDialogue(out DialogueTrigger trigger))
             return;
-        
+
         if (trigger.dialogue.name.Contains('Q'))
             ShowQuestIndicator(trigger.dialogue.name);
         else

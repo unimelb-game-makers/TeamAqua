@@ -41,12 +41,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private TextAsset LoadGlobalJSON;
 
     [Header("Dialogues")]
-
     [SerializeField]
     public DialoguePool dialogueDatabase;
 
-    [SerializeField] public DayDatabase dayDatabase;
-    
+    [SerializeField]
+    public DayDatabase dayDatabase;
+
     private Dictionary<DialogueScript, DialogueNode> _activeDialogues = new();
 
     public DialogueStory currentStory;
@@ -97,7 +97,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
         if (_activeDialogues.TryGetValue(script, out _))
             _activeDialogues[script] = node;
         else
-            throw new Exception("Tried to enter dialogue, but not registered as an active dialogue");
+            throw new Exception(
+                "Tried to enter dialogue, but not registered as an active dialogue"
+            );
     }
 
     public void ResetDialogue()
@@ -109,19 +111,20 @@ public class DialogueManager : MonoBehaviour, ISaveable
     /// Populates active dialogue with the first nodes of the scripts in the target day
     /// </summary>
     /// <param name="day"></param>
-    private void SetDay(int day)
+    public void SetDay(int day)
     {
         _activeDialogues = new Dictionary<DialogueScript, DialogueNode>();
         DialoguePool pool = dayDatabase.GetDay(day).dialoguePool;
         foreach (DialogueScript script in pool.dialogueBranches)
             _activeDialogues.Add(script, script.GetFirstNode());
+        Debug.Log($"Setting day to {dayDatabase.GetDay(day).name}");
     }
 
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
         WorldSaveData worldSaveData = saveSlot.worldSaveData;
-        
+
         // Initialise our current active dialogues with the current dialogues in the day
         SetDay(worldSaveData.currentDay);
 
@@ -130,7 +133,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
             string scriptId = saveData.activeDialogues[i].scriptId;
             string dialogueId = saveData.activeDialogues[i].dialogueId;
             DialogueScript script = dialogueDatabase.GetScript(scriptId);
-            if (_activeDialogues.ContainsKey(script) && script.TryGetDialogue(dialogueId, out DialogueNode node))
+            if (
+                _activeDialogues.ContainsKey(script)
+                && script.TryGetDialogue(dialogueId, out DialogueNode node)
+            )
             {
                 _activeDialogues[script] = node;
             }
@@ -147,7 +153,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             DialogueNodeSaveData nodeSaveData = new()
             {
                 scriptId = dialogue.Key.name,
-                dialogueId = dialogue.Value.name
+                dialogueId = dialogue.Value.name,
             };
             save.dialogueSaveData.activeDialogues[i] = nodeSaveData;
             i += 1;
@@ -384,7 +390,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
         State = DialogueState.None;
     }
 
-    
     /// <summary>
     /// This function checks whether the dialogue to be played is the next active node of one of the scripts
     /// in active dialogues.
@@ -393,10 +398,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public bool CanPlayDialogue(DialogueNode dialogue)
     {
         // Loop over all of our current active dialogues. If this matches one of the active dialogues, then we can play it
-        Dictionary<DialogueScript, DialogueNode>.ValueCollection activeDialogueNodes = _activeDialogues.Values;
+        Dictionary<DialogueScript, DialogueNode>.ValueCollection activeDialogueNodes =
+            _activeDialogues.Values;
         foreach (DialogueNode node in activeDialogueNodes)
         {
-            if (node == dialogue) return true;
+            if (node == dialogue)
+                return true;
         }
         return false;
     }

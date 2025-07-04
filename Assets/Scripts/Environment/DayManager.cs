@@ -10,8 +10,8 @@ public class DayManager : MonoBehaviour, ISaveable
     private const float LIGHT_DURATION = 1.0f;
 
     [Header("Day Story Flow")]
-    [SerializeField]
-    public DayStoryManager dayStoryManager;
+    // [SerializeField]
+    // public DayStoryManager dayStoryManager;
 
     [Header("Night Settings")]
     [SerializeField]
@@ -106,7 +106,8 @@ public class DayManager : MonoBehaviour, ISaveable
     {
         OnDayChanged?.Invoke(_currentDay);
         _currentDay += 1;
-        dayStoryManager.GetNextDay(_currentDay);
+        // dayStoryManager.GetNextDay(_currentDay);
+        DialogueManager.instance.SetDay(_currentDay); // _currentDay starts index at 1
         SetNight(false);
         _playerController.handleNextDay();
         RainWithDelay(false, 2.0f);

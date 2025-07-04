@@ -10,16 +10,28 @@ public class SaveTemplate : ScriptableObject
 {
     [TextArea]
     public string description;
-    [SerializeField] private Checkpoint checkpoint;
-    [SerializeField] private DialogueScript script;
-    [SerializeField] private DialogueNode dialogue;
-    [SerializeField] private List<Quest> ongoingQuests;
-    [SerializeField] private int energy = 100;
-    [SerializeField] private int day = 1;
+
+    [SerializeField]
+    private Checkpoint checkpoint;
+
+    [SerializeField]
+    private DialogueScript script;
+
+    [SerializeField]
+    private DialogueNode dialogue;
+
+    [SerializeField]
+    private List<Quest> ongoingQuests;
+
+    [SerializeField]
+    private int energy = 100;
+
+    [SerializeField]
+    private int day = 1;
 
     public SaveSlot CreateSaveSlot()
     {
-        SaveSlot save = new ();
+        SaveSlot save = new();
         save.playerSaveData.position = checkpoint.position;
         save.playerSaveData.energy = energy;
         save.worldSaveData.currentDay = day;
@@ -35,9 +47,9 @@ public class SaveTemplate : ScriptableObject
         {
             save.dialogueSaveData.activeDialogues = Array.Empty<DialogueNodeSaveData>();
         }
-            
+
         QuestSaveData[] quests = new QuestSaveData[ongoingQuests.Count];
-        for(int i=0; i< quests.Length; ++i)
+        for (int i = 0; i < quests.Length; ++i)
         {
             quests[i].id = ongoingQuests[i].name;
             quests[i].state = QuestState.Ongoing;
