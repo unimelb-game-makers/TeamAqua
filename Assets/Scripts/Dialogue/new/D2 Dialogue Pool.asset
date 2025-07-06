@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueBranches:
   - {fileID: 11400000, guid: ab444411094a9ca47872ceae3efb1d1c, type: 2}
   - {fileID: 11400000, guid: 7e6493b7b5180dc44a29feadb4b7dbd6, type: 2}
-  - {fileID: 11400000, guid: 20e576f2c75de824e9f7ffa1251cd61c, type: 2}
+  - {fileID: 11400000, guid: ba85e4713258e5f40bec4efbaf887895, type: 2}
