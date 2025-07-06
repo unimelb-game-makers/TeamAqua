@@ -162,6 +162,7 @@ MonoBehaviour:
   dayManager: {fileID: 8598276469370243906, guid: 2e1bf93a0e730453098448622e287423, type: 3}
   waterManager: {fileID: 3745968092491913952, guid: 2643d9c1ca4af4c70a32d5fa7db43739, type: 3}
   cameraManager: {fileID: 1816969181835477934, guid: 9d2affce72d2d4bb99d04de46b4abb7d, type: 3}
+  puzzleManager: {fileID: 1727171839073140675, guid: fb8971623226b4206b2e107e77b3493c, type: 3}
   saveManager: {fileID: 4612952912080801291, guid: b58d4c72f9e004927844955df1bd1658, type: 3}
   noonIslandLevel: {fileID: -8733244638997691217, guid: 5f16854720499f0489f576e81765265d, type: 3}
   playerSave: {fileID: 11400000, guid: 649a08bfc0a414f3dacbc05b7d8e7d99, type: 2}

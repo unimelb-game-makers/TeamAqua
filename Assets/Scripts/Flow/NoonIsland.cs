@@ -53,6 +53,9 @@ public class NoonIsland : MonoBehaviour
     private CameraManager cameraManager;
 
     [SerializeField]
+    private PuzzleManager puzzleManager;
+
+    [SerializeField]
     private SaveManager saveManager;
 
     [Header("Level")]
@@ -116,6 +119,7 @@ public class NoonIsland : MonoBehaviour
         Game.AddManager(Instantiate(spriteManager, _managers));
         Game.AddManager(Instantiate(dayManager, _managers));
         Game.AddManager(Instantiate(waterManager, _managers));
+        Game.AddManager(Instantiate(puzzleManager, _managers));
         // Save Manager is special as it is present in the first scene and isn't added to the _manager pool.
         Instantiate(saveManager, _managers);
     }

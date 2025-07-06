@@ -29,6 +29,10 @@ public class SaveTemplate : ScriptableObject
     [SerializeField]
     private int day = 1;
 
+    [SerializeField] 
+    private List<PuzzleData> puzzleCompleteData = new();
+
+
     public SaveSlot CreateSaveSlot()
     {
         SaveSlot save = new();
@@ -63,6 +67,13 @@ public class SaveTemplate : ScriptableObject
             quests[i].steps = steps;
         }
 
+        PuzzleSaveData[] puzzles = new PuzzleSaveData[puzzleCompleteData.Count];
+        for (int i = 0; i < puzzleCompleteData.Count; ++i)
+        {
+            puzzles[i] = puzzleCompleteData[i].saveData;
+        }
+
+        save.worldSaveData.puzzles = puzzles;
         save.journalSaveData.quests = quests;
         return save;
     }
