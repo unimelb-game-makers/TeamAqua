@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4164fa216a3fcd4eb274e27e0972151, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f3a0a0995c422340b474aef8284b5b7, type: 3}
   m_Name: Day 2
   m_EditorClassIdentifier: 
   dialoguePool: {fileID: 11400000, guid: b83f2495299a9c84680d06fba82d848e, type: 2}
   mainQuests:
   - {fileID: 11400000, guid: 59b9f780b1fa0b44abbd7dff9740b37d, type: 2}
-  SubQuests:
-  - {fileID: 0}
+  subQuests: []

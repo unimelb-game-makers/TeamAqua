@@ -28,7 +28,6 @@ public class NPCDialogueHandler : MonoBehaviour
 
         if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
         {
-            // call TryFindScript here, issue is trygettrigger in showindicator() fails
             _dialogueSource = dialogue;
             _dialogueSource.ShowIndicator();
         }

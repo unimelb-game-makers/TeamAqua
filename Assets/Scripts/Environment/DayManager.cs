@@ -9,10 +9,6 @@ public class DayManager : MonoBehaviour, ISaveable
     public static DayManager instance;
     private const float LIGHT_DURATION = 1.0f;
 
-    [Header("Day Story Flow")]
-    // [SerializeField]
-    // public DayStoryManager dayStoryManager;
-
     [Header("Night Settings")]
     [SerializeField]
     private Color targetColor = Color.black;

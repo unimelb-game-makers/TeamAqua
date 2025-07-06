@@ -25,24 +25,15 @@ public class NPCDialogue : MonoBehaviour
 
     private bool TryGetTrigger(string dialogueId, out DialogueTrigger trigger)
     {
-        // dialogueId = DialogueManager.instance.DialogueId;
-        // how to switch out dialogueid first
         Debug.Log("dialogue node id is: " + dialogueId);
         for (int i = 0; i < npcData.dialogues.Count; ++i)
         {
             if (npcData.dialogues[i].dialogue.name == dialogueId)
             {
                 trigger = npcData.dialogues[i];
-                // Debug.Log(
-                //     "TRIGGER | dialogue found: "
-                //         + trigger.dialogue.name
-                //         + " | at scipt: "
-                //         + DialogueManager.instance.ScriptId
-                // );
                 return true;
             }
         }
-        Debug.Log("TGT | failed");
         trigger = null;
         return false;
     }
