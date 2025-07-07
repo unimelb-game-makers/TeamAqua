@@ -10,25 +10,50 @@ public class SaveTemplate : ScriptableObject
 {
     [TextArea]
     public string description;
-    [SerializeField] private Checkpoint checkpoint;
-    [SerializeField] private DialogueScript script;
-    [SerializeField] private DialogueNode dialogue;
-    [SerializeField] private DialogueNode[] dialogueNodes;
-    [SerializeField] private List<Quest> ongoingQuests = new();
-    [SerializeField] private List<PuzzleData> puzzleCompleteData = new();
-    [SerializeField] private int energy = 100;
-    [SerializeField] private int day = 1;
+
+    [SerializeField]
+    private Checkpoint checkpoint;
+
+    [SerializeField]
+    private DialogueScript script;
+
+    [SerializeField]
+    private DialogueNode dialogue;
+
+    [SerializeField]
+    private List<Quest> ongoingQuests;
+
+    [SerializeField]
+    private int energy = 100;
+
+    [SerializeField]
+    private int day = 1;
+
+    [SerializeField] 
+    private List<PuzzleData> puzzleCompleteData = new();
+
 
     public SaveSlot CreateSaveSlot()
     {
-        SaveSlot save = new ();
+        SaveSlot save = new();
         save.playerSaveData.position = checkpoint.position;
         save.playerSaveData.energy = energy;
         save.worldSaveData.currentDay = day;
-        save.dialogueSaveData.scriptId = script.name;
-        save.dialogueSaveData.dialogueId = dialogue.name;
+        if (script && dialogue)
+        {
+            DialogueNodeSaveData nodeSaveData = new DialogueNodeSaveData();
+            nodeSaveData.scriptId = script.name;
+            nodeSaveData.dialogueId = dialogue.name;
+            save.dialogueSaveData.activeDialogues = new DialogueNodeSaveData[1];
+            save.dialogueSaveData.activeDialogues[0] = nodeSaveData;
+        }
+        else
+        {
+            save.dialogueSaveData.activeDialogues = Array.Empty<DialogueNodeSaveData>();
+        }
+
         QuestSaveData[] quests = new QuestSaveData[ongoingQuests.Count];
-        for(int i=0; i< quests.Length; ++i)
+        for (int i = 0; i < quests.Length; ++i)
         {
             quests[i].id = ongoingQuests[i].name;
             quests[i].state = QuestState.Ongoing;

@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2239674247933325158, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: npcData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e8ce2246ec051e4aa224dd85ed21e74, type: 2}
     - target: {fileID: 2355609443342444368, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_Size.z
       value: 0.2

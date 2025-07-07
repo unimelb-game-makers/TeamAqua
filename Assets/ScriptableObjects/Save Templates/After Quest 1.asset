@@ -18,3 +18,4 @@ MonoBehaviour:
   dialogue: {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
   ongoingQuests: []
   energy: 100
+  day: 1

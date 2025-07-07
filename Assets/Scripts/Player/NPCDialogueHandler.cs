@@ -29,8 +29,6 @@ public class NPCDialogueHandler : MonoBehaviour
         if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
         {
             _dialogueSource = dialogue;
-            if (!_dialogueSource)
-                return;
             _dialogueSource.ShowIndicator();
         }
     }

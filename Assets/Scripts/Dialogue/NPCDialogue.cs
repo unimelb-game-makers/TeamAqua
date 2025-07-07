@@ -25,9 +25,38 @@ public class NPCDialogue : MonoBehaviour
 
     private bool TryGetTrigger(string dialogueId, out DialogueTrigger trigger)
     {
+        Debug.Log("dialogue node id is: " + dialogueId);
         for (int i = 0; i < npcData.dialogues.Count; ++i)
         {
             if (npcData.dialogues[i].dialogue.name == dialogueId)
+            {
+                trigger = npcData.dialogues[i];
+                return true;
+            }
+        }
+        trigger = null;
+        return false;
+    }
+
+    public bool PlayDialogue()
+    {
+        // If there is no active dialogue, don't show an indicator
+        if (!TryGetActiveDialogue(out DialogueTrigger trigger))
+            return false;
+        DialogueManager.instance.EnterDialogue(trigger.dialogue, trigger.mode);
+        return true;
+    }
+
+    /// <summary>
+    /// Returns the first dialogue that is active in DialogueManager
+    /// </summary>
+    /// <param name="trigger"></param>
+    /// <returns></returns>
+    private bool TryGetActiveDialogue(out DialogueTrigger trigger)
+    {
+        for (int i = 0; i < npcData.dialogues.Count; ++i)
+        {
+            if (DialogueManager.instance.CanPlayDialogue(npcData.dialogues[i].dialogue))
             {
                 trigger = npcData.dialogues[i];
                 return true;
@@ -38,28 +67,16 @@ public class NPCDialogue : MonoBehaviour
         return false;
     }
 
-    public bool PlayDialogue()
-    {
-        string dialogue = DialogueManager.instance.DialogueId;
-        if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
-        {
-            DialogueManager.instance.EnterDialogue(trigger.dialogue, trigger.mode);
-            return true;
-        }
-
-        return false;
-    }
-
     public void ShowIndicator()
     {
-        string dialogue = DialogueManager.instance.DialogueId;
-        if (TryGetTrigger(dialogue, out DialogueTrigger trigger))
-        {
-            if (trigger.dialogue.name.Contains('Q'))
-                ShowQuestIndicator(trigger.dialogue.name);
-            else
-                ShowDialogueIndicator();
-        }
+        // If there is no active dialogue, don't show an indicator
+        if (!TryGetActiveDialogue(out DialogueTrigger trigger))
+            return;
+
+        if (trigger.dialogue.name.Contains('Q'))
+            ShowQuestIndicator(trigger.dialogue.name);
+        else
+            ShowDialogueIndicator();
     }
 
     private void ShowQuestIndicator(string dialogueId)
