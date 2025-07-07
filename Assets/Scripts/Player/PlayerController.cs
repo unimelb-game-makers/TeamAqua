@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour, ISaveable
 
     [SerializeField]
     private SpriteTransformer spriteTransform;
+
+    [SerializeField]
+    private float groundCheckDistance = 0.32f;
     private float speed; //freezes movement or resume movement depending on condition check
 
     private Rigidbody rb;
@@ -97,7 +100,29 @@ public class PlayerController : MonoBehaviour, ISaveable
     /*Handle Physics Calculations*/
     void FixedUpdate()
     {
-        rb.velocity = moveVelocity;
+       // 1) Default to flat ground
+        Vector3 groundNormal = Vector3.up;
+
+        // 2) Raycast down to sample the slope normal
+        if (Physics.Raycast(
+                transform.position,
+                Vector3.down,
+                out RaycastHit hit,
+                groundCheckDistance
+            ))
+        {
+            groundNormal = hit.normal;
+        }
+
+        // 3) Project the *unit* input direction onto that plane
+        Vector3 slopeDir = Vector3.ProjectOnPlane(moveInput, groundNormal).normalized;
+
+        // 4) Build the final velocity vector
+        Vector3 finalVel = slopeDir * moveSpeed;
+        finalVel.y = rb.velocity.y;  // preserve gravity/jumps
+
+        // 5) Apply
+        rb.velocity = finalVel;
     }
 
     public void handleNextDay()
