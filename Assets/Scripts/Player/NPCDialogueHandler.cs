@@ -39,7 +39,6 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             _dialogueSource.HideIndicators();
             _dialogueSource = null;
-            DialogueManager.Instance().currentStory = null;
         }
     }
 }
