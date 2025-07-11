@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private Dictionary<DialogueScript, DialogueNode> _activeDialogues = new();
 
-    public DialogueStory currentStory;
+    private DialogueStory _currentStory;
 
     private DialogueVariable dialogueVariable;
 
@@ -212,21 +212,21 @@ public class DialogueManager : MonoBehaviour, ISaveable
         }
         Debug.Log($"NOW PLAYING | script: {script.name} and node: {node.name}");
         State = DialogueState.Ongoing;
-        currentStory = new DialogueStory(new Story(script.inkFile.text), script, node);
+        _currentStory = new DialogueStory(new Story(script.inkFile.text), script, node);
         SetDialogue(script, node);
         // This loads in the global variables as well
-        dialogueVariable.StartListening(currentStory.story);
+        dialogueVariable.StartListening(_currentStory.story);
 
         string dialogueId = node ? node.name : string.Empty;
         // Set the dialogue id for the script
-        if (currentStory.story.variablesState.GlobalVariableExistsWithName("dialogue_id"))
-            currentStory.story.variablesState["dialogue_id"] = dialogueId;
+        if (_currentStory.story.variablesState.GlobalVariableExistsWithName("dialogue_id"))
+            _currentStory.story.variablesState["dialogue_id"] = dialogueId;
 
         // if it is a quest, make sure to update the quest state
         if (dialogueId.Contains('Q'))
         {
             QuestState state = QuestManager.instance.CheckQuest(dialogueId);
-            currentStory.story.variablesState["quest_state"] = state.ToString().ToUpper();
+            _currentStory.story.variablesState["quest_state"] = state.ToString().ToUpper();
         }
 
         if (mode == DialogueMode.Frozen)
@@ -234,7 +234,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
             playerInputProvider.can_move = false; // Setting the Input provider here.
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
                 {
@@ -243,7 +243,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             );
             //currentStory.story.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps
 
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "PlayBGM",
                 (string id) =>
                 { // this is for starting a track during dialogue
@@ -251,7 +251,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "AddQuest",
                 (string id) =>
                 {
@@ -259,7 +259,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "SubmitQuest",
                 (string questID) =>
                 {
@@ -267,7 +267,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "SwapBGM",
                 (string new_id, string old_id, int FadeSpeed) =>
                 { // this is for switching out tracks mid-dialogue
@@ -278,7 +278,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "TurnOffBarrier",
                 (int id) =>
                 {
@@ -288,7 +288,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
                 }
             );
 
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "ChangeCutscene",
                 (string SceneName) =>
                 {
@@ -304,7 +304,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
             //changine to UI state done in child trigger points
             playerInputProvider.can_move = true; // Setting the Input provider here.
             Debug.Log("dialogue triggers collided");
-            currentStory.story.BindExternalFunction(
+            _currentStory.story.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
                 {
@@ -319,9 +319,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void ContinueStory()
     {
-        if (currentStory.story.canContinue)
+        if (_currentStory.story.canContinue)
         {
-            string nextLine = currentStory.story.Continue();
+            string nextLine = _currentStory.story.Continue();
             ShowStory(nextLine);
         }
         else
@@ -337,12 +337,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
         Debug.Log("Skip");
         string nextLine = string.Empty;
         // Continues until we encounter a choice, or the story cannot continue
-        while (currentStory.story.canContinue && currentStory.story.currentChoices.Count == 0)
+        while (_currentStory.story.canContinue && _currentStory.story.currentChoices.Count == 0)
         {
-            nextLine = currentStory.story.Continue();
+            nextLine = _currentStory.story.Continue();
         }
         // It will end the story if cannot continue anymore and there are no more choices
-        if (!currentStory.story.canContinue && currentStory.story.currentChoices.Count == 0)
+        if (!_currentStory.story.canContinue && _currentStory.story.currentChoices.Count == 0)
             EndStory();
         else
             ShowStory(nextLine, true);
@@ -350,8 +350,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void ShowStory(string nextLine, bool skip = false)
     {
-        OnDialogueContinue?.Invoke(nextLine, currentStory.story.currentChoices, skip);
-        OnDialogueTags?.Invoke(currentStory.story.currentTags);
+        OnDialogueContinue?.Invoke(nextLine, _currentStory.story.currentChoices, skip);
+        OnDialogueTags?.Invoke(_currentStory.story.currentTags);
     }
 
     private void EndStory()
@@ -363,19 +363,19 @@ public class DialogueManager : MonoBehaviour, ISaveable
         State = DialogueState.Ended;
 
         // Get the current node of our dialogue script and set it to the next node, if possible
-        DialogueNode currentNode = _activeDialogues[currentStory.script];
+        DialogueNode currentNode = _activeDialogues[_currentStory.script];
         // If the dialogue is a quest, we only move to the next dialogue if it has been submitted
         bool canContinue =
             !currentNode.name.Contains("Q") || QuestManager.instance.IsSubmitted(currentNode.name);
 
         if (canContinue)
         {
-            DialogueNode nextDialogue = currentStory.script.GetNextDialogue(currentNode.name);
-            SetDialogue(currentStory.script, nextDialogue);
+            DialogueNode nextDialogue = _currentStory.script.GetNextDialogue(currentNode.name);
+            SetDialogue(_currentStory.script, nextDialogue);
         }
 
         // Dialogue Manager specific stuff
-        dialogueVariable.StopListening(currentStory.story);
+        dialogueVariable.StopListening(_currentStory.story);
         dialogueAudioPlayer.ExitAudio(); //stops audio on exit, mainly to cut audio off if player uses ESC to exit in the middle of dialogue
         playerInputProvider.can_move = true; // Setting the Input Provider Here.
         OnDialogueEnd?.Invoke();
@@ -409,7 +409,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public void ChooseChoice(int choiceIndex)
     {
         // Now process the choice and continue the story
-        currentStory.story.ChooseChoiceIndex(choiceIndex);
+        _currentStory.story.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }
 
