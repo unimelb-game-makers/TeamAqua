@@ -65,6 +65,7 @@ namespace Popups
         [Button]
         public void Skip()
         {
+            EndCoroutine();
             DialogueManager.Instance().SkipStory();
         }
 
