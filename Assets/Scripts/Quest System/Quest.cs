@@ -14,6 +14,9 @@ public class Quest : DialogueNode
     public List<QuestStep> steps = new List<QuestStep>();
     public QuestReward reward;
 
+    [ShowInInspector]
+    public int EndingPoint = 0; // set to 0 for main quests, set to 1 or > for sub quests
+
     public QuestStep GetStep(string id)
     {
         for (int i = 0; i < steps.Count; ++i)
