@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6dc934060e142679408e9d47c517be, type: 3}
   m_Name: Ongoing Q1 Q2
   m_EditorClassIdentifier: 
-  description: Quest 1 and quest 2 are ongoing
-  checkpoint: {fileID: 11400000, guid: 08e96ecff55c14ab699e180da071e5ad, type: 2}
+  description: Quest 1 is ongoing, we spawn at the first beach orb and move our way
+    up to the second quest
+  checkpoint: {fileID: 11400000, guid: 1651896b2813d0c478c2a2fcb782f0ca, type: 2}
   script: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
   dialogue: {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
   ongoingQuests:
   - {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
-  - {fileID: 11400000, guid: 87a6a8b0266d51445996d326dd9cef85, type: 2}
   energy: 100
   day: 1
   puzzleCompleteData: []
