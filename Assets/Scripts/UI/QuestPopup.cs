@@ -77,6 +77,8 @@ namespace Popups
             StringBuilder questBody = new();
 
             titleText.SetText(quest.title);
+
+            // quest details
             questBody.AppendLine(quest.description);
             for (int i = 0; i < quest.steps.Count; ++i)
             {
@@ -96,6 +98,7 @@ namespace Popups
             }
 
             questBody.AppendLine();
+            // quest rewards
             questBody.AppendLine("<color=green>Reward: " + "</color>");
             for (int j = 0; j < quest.reward.item.Count; ++j)
             {
