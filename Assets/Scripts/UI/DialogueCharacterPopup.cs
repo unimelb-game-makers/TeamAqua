@@ -65,7 +65,8 @@ namespace Popups
                      id = int.Parse(tagValue); --> try to convert tagvalue to int
                     break;
                     */
-                    case SPEAKER_TAG: //change speaker name depending on the speaker tag
+                    case SPEAKER_TAG:
+                        //change speaker name depending on the speaker tag
                         // Noelle only apperas on the left
                         // Other characters only appear on the right
                         leftCharacter.gameObject.SetActiveFast(tagValue.Contains("Noelle"));
@@ -168,6 +169,26 @@ namespace Popups
                 SceneManager.LoadScene(SceneName);
                 Debug.Log("scene changed to " + SceneManager.GetActiveScene());
             }
+        }
+
+        public void SetSpeaker(string name)
+        {
+            //change speaker name depending on the speaker tag
+            // Noelle only apperas on the left
+            // Other characters only appear on the right
+            leftCharacter.gameObject.SetActiveFast(name.Contains("Noelle"));
+            leftCharacter.SetName(name);
+            rightCharacter.gameObject.SetActiveFast(name != "Noelle" && name != "Narrator");
+            rightCharacter.SetName(name);
+            PlayAudio(name == "Narrator" ? "Narrator" : name);
+            // DialogueManager
+            //     .Instance()
+            //     .DialogueAudioPlayer.SetCurrentAudioInfo(name == "Narrator" ? "Narrator" : name);
+        }
+
+        public void PlayAudio(string audioName)
+        {
+            DialogueManager.Instance().DialogueAudioPlayer.SetCurrentAudioInfo(audioName);
         }
     }
 }

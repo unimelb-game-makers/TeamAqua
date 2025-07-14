@@ -5,6 +5,7 @@ using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
 using Sirenix.OdinInspector;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,8 @@ namespace Popups
         private Coroutine lineCoroutine = null;
         private string currentLine;
         private List<Choice> currentChoices = new List<Choice>();
+        string lineOne,
+            lineTwo;
 
         protected override void InitPopup()
         {
@@ -79,6 +82,7 @@ namespace Popups
 
         private void OnDialogueContinue(string story, List<Choice> choices, bool skip)
         {
+            Debug.Log("lineCoroutine is: " + lineCoroutine);
             lineCoroutine = StartCoroutine(DisplayLine(story, choices, skip));
         }
 
@@ -94,12 +98,21 @@ namespace Popups
 
         private IEnumerator DisplayLine(string line, List<Choice> choices, bool skip)
         {
+            string[] splits = line.Split(':', 2);
+            lineOne = splits[0].Trim();
+            lineTwo = splits[1].Trim();
+            Debug.Log("line is: " + line);
+            Debug.Log("lineOne is: " + lineOne);
+            Debug.Log("lineTwo is: " + lineTwo);
+            ShowDialogue(lineOne, lineTwo);
+
+            // Then something like
             currentChoices = choices;
-            currentLine = line;
+            currentLine = lineTwo;
 
             if (skip)
             {
-                dialogueText.SetText(line);
+                dialogueText.SetText(lineTwo);
                 EndCoroutine();
                 yield break;
             }
@@ -107,10 +120,10 @@ namespace Popups
             if (fastForward)
                 fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
-            dialogueText.text = line; //set text to full line, but set visible characters to 0
+            dialogueText.text = lineTwo; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
             bool isRichText = false;
-            foreach (char letter in line.ToCharArray())
+            foreach (char letter in lineTwo.ToCharArray())
             {
                 //check for rich text
                 if (letter == '<' || isRichText)
@@ -137,6 +150,13 @@ namespace Popups
             }
 
             EndCoroutine();
+        }
+
+        public void ShowDialogue(string speaker, string line)
+        {
+            ShowPopup();
+            characterPopup.SetSpeaker(speaker);
+            characterPopup.PlayAudio(speaker);
         }
 
         private void EndCoroutine()

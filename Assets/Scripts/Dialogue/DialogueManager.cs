@@ -326,6 +326,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         if (_currentStory.story.canContinue)
         {
             string nextLine = _currentStory.story.Continue();
+            Debug.Log("nextLine is: " + nextLine);
             ShowStory(nextLine);
         }
         else

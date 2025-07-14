@@ -1,3 +1,3 @@
 ===PostquestSubmit===
-What are you waiting for? let's go! #speaker:Amelia #portrait:AmeliaHappy
+Amelia: What are you waiting for? let's go! #portrait:AmeliaHappy
 ->END
