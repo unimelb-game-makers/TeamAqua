@@ -1,7 +1,6 @@
 
 ===main===
-//placing bgm func here to prevent overlapping (needs more testing and is probably a bug rn)
-// EVENT:SwapBGM:"BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_TRANSFORMATION", 4
+EVENT:SwapBGM:BGM_ISLAND_FLUTTERING_CRITTER, BGM_CUTSCENE_TRANSFORMATION
 // ~SwapBGM("BGM_ISLAND_FLUTTERING_CRITTER", "BGM_CUTSCENE_TRANSFORMATION", 4)
 You find yourself on a beach. The sun glares over you, and your ship is in pieces around you. In stark contrast to the raging waters that overwhelmed you and your ship last night, calm waves now wash over shore. #speaker:Narrator
 The storms of yesterday seem to have died down for now. It seems you’ve landed on an island with large trees and forestry beyond the beach. Nearby, you see a collapsed tree… and a tail?
@@ -107,5 +106,5 @@ It's been a little while. Hard to survive on this island when you’re as small 
 …Fine. Find me some berries. Ten of them, and maybe I will consider joining your party. #speaker:Amelia #portrait:AmeliaNormal
 (I’ll need to find out more about this island if I want to survive.) #speaker:Noelle #portrait:NoelleSceptical
 (<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>) #portrait:NoelleSmallSmile
-//EVENT:AddQuest:QUEST_1 ~ AddQuest(QUEST_1)
+EVENT:AddQuest:QUEST_1 //~ AddQuest(QUEST_1)
     ->DONE

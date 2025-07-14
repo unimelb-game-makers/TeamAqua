@@ -1,11 +1,3 @@
-EXTERNAL checkQuestStatus(id, steps)
-EXTERNAL TurnOffBarrier(id)
-EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
-EXTERNAL PlayBGM(id)
-EXTERNAL AddQuest(id)
-EXTERNAL SubmitQuest(questId)
-EXTERNAL SetNextDialogue(dialogueId)
-
 INCLUDE ../../Globals/Globals.ink
 INCLUDE A1_S1_D1.ink
 INCLUDE A1_S1_D2.ink
