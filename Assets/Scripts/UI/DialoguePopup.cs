@@ -37,6 +37,7 @@ namespace Popups
         {
             DialogueManager.OnDialogueContinue += OnDialogueContinue;
             DialogueManager.OnDialogueTags += OnDialogueTags;
+            DialogueManager.OnDialogueEvents += OnDialogueEvents;
         }
 
         private void Update()
@@ -84,6 +85,11 @@ namespace Popups
         private void OnDialogueTags(List<string> tags)
         {
             characterPopup.HandleTags(tags);
+        }
+
+        private void OnDialogueEvents(string events)
+        {
+            characterPopup.HandleEvents(events);
         }
 
         private IEnumerator DisplayLine(string line, List<Choice> choices, bool skip)
@@ -155,6 +161,7 @@ namespace Popups
         {
             DialogueManager.OnDialogueContinue -= OnDialogueContinue;
             DialogueManager.OnDialogueTags -= OnDialogueTags;
+            DialogueManager.OnDialogueEvents -= OnDialogueEvents;
         }
     }
 }

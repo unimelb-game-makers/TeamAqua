@@ -9,7 +9,7 @@ Would you like to finish this quest? #speaker:Narrator
 ->DONE
 
 ===CompleteQuest===
-//EVENT:SubmitQuest:QUEST_1  ~ SubmitQuest(QUEST_1)
+EVENT:SubmitQuest:QUEST_1  //~ SubmitQuest(QUEST_1)
 //UPON SUBMISSION OF 10 BERRIES TO AMELIA, next part continues.
 After you get the ten berries you need, you return back to Amelia, who's sitting on the sand next to the wreckage of your ship. #speaker:Narrator
 Please tell me you got me something edible. #speaker:Amelia #portrait:AmeliaNormal
@@ -36,7 +36,7 @@ Yep. Change of plans, I'm coming with you. #speaker:Amelia #portrait:AmeliaHosti
 But why? #speaker:Noelle #portrait:NoelleShocked
 Isn't that obvious? To survive the floods. Now come on, we need to go. #speaker:Amelia #portrait:AmeliaHostile
 Amelia nudges your hand, and leads you toward the forests deeper in-land. #speaker:Narrator
-// ~ quest_state = "SUBMITTED"  //remove this, change in EVENT:SubmitQuest
+ ~ quest_state = "SUBMITTED"  //remove this, change in EVENT:SubmitQuest
 
 ->DONE
 //ends here. Next objective is to ‘find the forest settlement’. 

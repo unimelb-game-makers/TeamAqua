@@ -56,6 +56,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public static Action OnDialogueStart;
     public static Action<string, List<Choice>, bool> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
+    public static Action<string> OnDialogueEvents;
     public static Action OnDialogueEnd;
 
     public DialogueState State { get; private set; } = DialogueState.None;
@@ -234,6 +235,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
             playerInputProvider.can_move = false; // Setting the Input provider here.
+
+            // PUT IN AN INK FUNC PROCESSOR FUNCTION HERE
+
             _currentStory.story.BindExternalFunction(
                 "SetOffDial2ndVarTrig",
                 () =>
@@ -352,9 +356,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         OnDialogueContinue?.Invoke(nextLine, _currentStory.story.currentChoices, skip);
         OnDialogueTags?.Invoke(_currentStory.story.currentTags);
+        OnDialogueEvents?.Invoke(nextLine);
     }
 
-    private void EndStory()
+    public void EndStory()
     {
         // Only end a story that is not ended
         if (State == DialogueState.Ended)
