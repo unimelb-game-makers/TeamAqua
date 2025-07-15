@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     public SoundDatabase soundDatabase;
-    
+
     private string _currentBgm = string.Empty;
 
     private void Awake()
@@ -19,7 +19,10 @@ public class AudioManager : MonoBehaviour
 
     public IEnumerator SwapBGM(string clipName, float fadeSpeed)
     {
-        if ( string.IsNullOrEmpty(_currentBgm) && soundDatabase.TryGetSound(_currentBgm, out Sound current))
+        if (
+            string.IsNullOrEmpty(_currentBgm)
+            && soundDatabase.TryGetSound(_currentBgm, out Sound current)
+        )
         {
             // Stops the current playing BGM
             AudioSource source = current.config.Get();
@@ -41,15 +44,17 @@ public class AudioManager : MonoBehaviour
         // Stop(_currentBgm);
         _currentBgm = clipName;
         Play(_currentBgm);
-        Debug.Log("bgm changed to " + _currentBgm );
+        Debug.Log("bgm changed to " + _currentBgm);
     }
-    
+
     public void Play(string clipName, string instanceId = "")
     {
         if (soundDatabase.TryGetSound(clipName, out Sound sound))
             sound.config.Play(instanceId);
         else
-            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+            Debug.LogWarning(
+                $"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!"
+            );
     }
 
     public void Pause(string clipName, string instanceId = "")
@@ -57,7 +62,9 @@ public class AudioManager : MonoBehaviour
         if (soundDatabase.TryGetSound(clipName, out Sound sound))
             sound.config.Pause(instanceId);
         else
-            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+            Debug.LogWarning(
+                $"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!"
+            );
     }
 
     public void Resume(string clipName, string instanceId = "")
@@ -65,20 +72,24 @@ public class AudioManager : MonoBehaviour
         if (soundDatabase.TryGetSound(clipName, out Sound sound))
             sound.config.Resume(instanceId);
         else
-            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+            Debug.LogWarning(
+                $"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!"
+            );
     }
 
     public void Stop(string clipName, string instanceId = "")
     {
-        if (soundDatabase.TryGetSound(clipName, out Sound sound))       //this check passed 2/11/25
+        if (soundDatabase.TryGetSound(clipName, out Sound sound)) //this check passed 2/11/25
             sound.config.Stop(instanceId);
         else
-            Debug.LogWarning($"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!");
+            Debug.LogWarning(
+                $"AudioDelivery | {clipName} could not be found in {soundDatabase.name}!"
+            );
     }
 
     public void StopAll()
     {
-        foreach(Sound sound in soundDatabase.sounds)
+        foreach (Sound sound in soundDatabase.sounds)
             sound.config.Stop();
     }
 }

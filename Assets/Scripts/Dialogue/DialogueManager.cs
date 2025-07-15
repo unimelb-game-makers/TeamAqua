@@ -56,12 +56,19 @@ public class DialogueManager : MonoBehaviour, ISaveable
     public static Action OnDialogueStart;
     public static Action<string, List<Choice>, bool> OnDialogueContinue;
     public static Action<List<string>> OnDialogueTags;
-    public static Action<string> OnDialogueEvents;
     public static Action OnDialogueEnd;
 
     public DialogueState State { get; private set; } = DialogueState.None;
 
     public DialogueAudioPlayer DialogueAudioPlayer => dialogueAudioPlayer;
+
+    // EVENT FUNCTIONS
+    private const string EVENT = "EVENT";
+    private const string SWAPBGM = "SwapBGM";
+    private const string PLAYBGM = "PlayBGM";
+    private const string ADDQUEST = "AddQuest";
+    private const string SUBMITQUEST = "SubmitQuest";
+    private const string CHANGECUTSCENE = "ChangeCutscene";
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
     // Use for: summoning emotes(!, ?, ..., and more) during dialogue, triggering certain animation during dialogues, and more
@@ -325,8 +332,8 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         if (_currentStory.story.canContinue)
         {
+            Debug.Log("continuing");
             string nextLine = _currentStory.story.Continue();
-            Debug.Log("nextLine is: " + nextLine);
             ShowStory(nextLine);
         }
         else
@@ -337,7 +344,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void SkipStory()
     {
-        // Current bug: skip story breaks quest checking, likely because it makes the function calling empty? needs testing
+        // Current bug: skip story skips over all EVENTs
 
         Debug.Log("Skip");
         string nextLine = string.Empty;
@@ -345,6 +352,11 @@ public class DialogueManager : MonoBehaviour, ISaveable
         while (_currentStory.story.canContinue && _currentStory.story.currentChoices.Count == 0)
         {
             nextLine = _currentStory.story.Continue();
+            Debug.Log("nextline is: " + nextLine);
+            if (nextLine.StartsWith("EVENT"))
+            {
+                HandleEvents(nextLine);
+            }
         }
         // It will end the story if cannot continue anymore and there are no more choices
         if (!_currentStory.story.canContinue && _currentStory.story.currentChoices.Count == 0)
@@ -355,9 +367,70 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void ShowStory(string nextLine, bool skip = false)
     {
-        OnDialogueContinue?.Invoke(nextLine, _currentStory.story.currentChoices, skip);
-        OnDialogueTags?.Invoke(_currentStory.story.currentTags);
-        OnDialogueEvents?.Invoke(nextLine);
+        Debug.Log("SHOW STORY IS: " + nextLine);
+        if (nextLine.StartsWith("EVENT"))
+        {
+            HandleEvents(nextLine);
+            ContinueStory();
+        }
+        else
+        {
+            OnDialogueContinue?.Invoke(nextLine, _currentStory.story.currentChoices, skip);
+            OnDialogueTags?.Invoke(_currentStory.story.currentTags);
+        }
+    }
+
+    public void HandleEvents(string events)
+    {
+        if (!events.StartsWith("EVENT"))
+            return;
+        string[] splits = events.Split(':', 2);
+        string lineOne = splits[0].Trim();
+        string lineTwo = splits[1].Trim();
+        if (lineOne.StartsWith(EVENT))
+        {
+            ProcessEvent(lineTwo);
+        }
+    }
+
+    private void ProcessEvent(string eventId)
+    {
+        if (eventId.StartsWith(SWAPBGM))
+        {
+            string[] splits = eventId.Split(':', 2);
+            string param = splits[1];
+            string[] inputs = param.Split(',', 2);
+            string new_id = inputs[0].Trim();
+            string old_id = inputs[1].Trim();
+            AudioManager.Instance.Stop(old_id);
+            AudioManager.Instance.Play(new_id);
+        }
+        else if (eventId.StartsWith(PLAYBGM))
+        {
+            string[] splits = eventId.Split(':', 2);
+            string id = splits[1].Trim();
+            AudioManager.Instance.Play(id);
+        }
+        else if (eventId.StartsWith(ADDQUEST))
+        {
+            string[] splits = eventId.Split(':', 2);
+            string questID = splits[1].Trim();
+            QuestManager.instance.AddQuest(questID);
+        }
+        else if (eventId.StartsWith(SUBMITQUEST))
+        {
+            string[] splits = eventId.Split(':', 2);
+            string questID = splits[1].Trim();
+            QuestManager.instance.SubmitQuest(questID);
+        }
+        else if (eventId.StartsWith(CHANGECUTSCENE))
+        {
+            string[] splits = eventId.Split(':', 2);
+            string SceneName = splits[1].Trim();
+            DialogueManager.instance.EndStory();
+            SceneManager.LoadScene(SceneName);
+            Debug.Log("scene changed to " + SceneManager.GetActiveScene());
+        }
     }
 
     public void EndStory()
@@ -416,7 +489,11 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         // Now process the choice and continue the story
         _currentStory.story.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
+        if (_currentStory.story.canContinue)
+        {
+            _currentStory.story.Continue();
+            ContinueStory();
+        }
     }
 
     public bool GetIsPlaying()
@@ -425,7 +502,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         return State != DialogueState.None;
     }
 
-    // Varibales stuffs, incomplete rn, pending scope from narrative designer
+    // Variables stuffs, incomplete rn, pending scope from narrative designer
     public Ink.Runtime.Object GetVariableState(string variableName)
     {
         Ink.Runtime.Object variableValue = null;

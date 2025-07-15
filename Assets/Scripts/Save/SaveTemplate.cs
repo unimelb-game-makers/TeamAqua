@@ -29,9 +29,8 @@ public class SaveTemplate : ScriptableObject
     [SerializeField]
     private int day = 1;
 
-    [SerializeField] 
+    [SerializeField]
     private List<PuzzleData> puzzleCompleteData = new();
-
 
     public SaveSlot CreateSaveSlot()
     {

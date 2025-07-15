@@ -6,6 +6,7 @@ You’ve never been outside of Dusk Island before, so you aren’t quite sure wh
 Amelia: Hey! What are you doing just standing there? Get me out of here!  
 Narrator: What do you do? Do you help the creature?  
     +[Yes]  
+        
         -> choiceYessaveAmelia  
     +[No]  
         -> choiceNodont  
@@ -99,5 +100,6 @@ Noelle: …It’d be pretty convenient if someone were to find food for you.
 Amelia: …Fine. Find me some berries. Ten of them, and maybe I will consider joining your party.  
 Noelle: (I’ll need to find out more about this island if I want to survive.)  
 Noelle: (<i>But for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.</i>)  
-EVENT:AddQuest:QUEST_1  
+// EVENT:AddQuest:{QUEST_1} 
+EVENT:AddQuest:A1_S1_Q1 
     ->DONE

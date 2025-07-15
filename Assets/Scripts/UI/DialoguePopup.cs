@@ -5,7 +5,6 @@ using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
 using Sirenix.OdinInspector;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,14 +32,11 @@ namespace Popups
         private Coroutine lineCoroutine = null;
         private string currentLine;
         private List<Choice> currentChoices = new List<Choice>();
-        string lineOne,
-            lineTwo;
 
         protected override void InitPopup()
         {
             DialogueManager.OnDialogueContinue += OnDialogueContinue;
             DialogueManager.OnDialogueTags += OnDialogueTags;
-            DialogueManager.OnDialogueEvents += OnDialogueEvents;
         }
 
         private void Update()
@@ -82,7 +78,6 @@ namespace Popups
 
         private void OnDialogueContinue(string story, List<Choice> choices, bool skip)
         {
-            Debug.Log("lineCoroutine is: " + lineCoroutine);
             lineCoroutine = StartCoroutine(DisplayLine(story, choices, skip));
         }
 
@@ -91,28 +86,14 @@ namespace Popups
             characterPopup.HandleTags(tags);
         }
 
-        private void OnDialogueEvents(string events)
-        {
-            characterPopup.HandleEvents(events);
-        }
-
         private IEnumerator DisplayLine(string line, List<Choice> choices, bool skip)
         {
-            string[] splits = line.Split(':', 2);
-            lineOne = splits[0].Trim();
-            lineTwo = splits[1].Trim();
-            Debug.Log("line is: " + line);
-            Debug.Log("lineOne is: " + lineOne);
-            Debug.Log("lineTwo is: " + lineTwo);
-            ShowDialogue(lineOne, lineTwo);
-
-            // Then something like
             currentChoices = choices;
-            currentLine = lineTwo;
+            currentLine = line;
 
             if (skip)
             {
-                dialogueText.SetText(lineTwo);
+                dialogueText.SetText(line);
                 EndCoroutine();
                 yield break;
             }
@@ -120,10 +101,10 @@ namespace Popups
             if (fastForward)
                 fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
-            dialogueText.text = lineTwo; //set text to full line, but set visible characters to 0
+            dialogueText.text = line; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
             bool isRichText = false;
-            foreach (char letter in lineTwo.ToCharArray())
+            foreach (char letter in line.ToCharArray())
             {
                 //check for rich text
                 if (letter == '<' || isRichText)
@@ -152,13 +133,6 @@ namespace Popups
             EndCoroutine();
         }
 
-        public void ShowDialogue(string speaker, string line)
-        {
-            ShowPopup();
-            characterPopup.SetSpeaker(speaker);
-            characterPopup.PlayAudio(speaker);
-        }
-
         private void EndCoroutine()
         {
             dialogueText.maxVisibleCharacters = currentLine.Length;
@@ -181,7 +155,6 @@ namespace Popups
         {
             DialogueManager.OnDialogueContinue -= OnDialogueContinue;
             DialogueManager.OnDialogueTags -= OnDialogueTags;
-            DialogueManager.OnDialogueEvents -= OnDialogueEvents;
         }
     }
 }
