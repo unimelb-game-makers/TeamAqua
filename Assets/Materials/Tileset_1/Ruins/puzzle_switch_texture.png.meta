@@ -167,7 +167,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      puzzle_switch_texture_0: -8009421353832521069
+      puzzle_switch_texture_1: 671723925242263252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

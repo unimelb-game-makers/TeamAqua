@@ -5,7 +5,7 @@ using UnityEngine;
 
 [Serializable]
 public class CameraData{ // Change this to class with methods
-    public enum CameraAngle {LowAngle, MidAngle, HighAngle};
+    public enum CameraAngle {LowAngle, MidAngle, HighAngle, MidAngleWide};
     public CameraAngle angle;
     public GameObject camera;
 

@@ -126,6 +126,11 @@ namespace Tilemap3DEditor.Utilities
             Material[] materialsArray = materials.ToArray(typeof(Material)) as Material[];
             combinedObjectMeshRenderer.materials = materialsArray;
 
+            // Save the generated mesh (Added by Leo)
+            AssetDatabase.CreateAsset(combinedObjectMeshFilter.sharedMesh, $"Assets/Models/GeneratedMeshes/{newObjectName}.asset");
+            AssetDatabase.SaveAssets();
+            Debug.Log($"Saved {combinedObjectMeshFilter.sharedMesh} to Assets/Models/GeneratedMeshes");
+
             return combinedObject;
         }
 
