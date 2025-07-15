@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 //======== this is the script to call EnterDialogueMode for cutscene 1 ====================
 //NOTE: need sounds, maybe remove pausing.
