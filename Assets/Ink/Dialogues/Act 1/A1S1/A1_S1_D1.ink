@@ -1,7 +1,7 @@
 ===main===
 EVENT:SwapBGM:BGM_ISLAND_FLUTTERING_CRITTER, BGM_CUTSCENE_TRANSFORMATION  
 Narrator: You find yourself on a beach. The sun glares over you, and your ship is in pieces around you. In stark contrast to the raging waters that overwhelmed you and your ship last night, calm waves now wash over shore.  
-Narrator: The storms of yesterday seem to have died down for now. It seems you’ve landed on an island with large trees and forestry beyond the beach. Nearby, you see a collapsed tree… and a tail?  
+Narrator: The storms of yesterday seem to have died down for now. It seems you’ve landed on an island with large trees and forestry beyond the beach. Nearby, you see a collapsed tree… and a tail?
 You’ve never been outside of Dusk Island before, so you aren’t quite sure what creature it is. Before you can think of leaving, however, it spots you and cries out in pain.  
 Amelia: Hey! What are you doing just standing there? Get me out of here!  
 Narrator: What do you do? Do you help the creature?  
