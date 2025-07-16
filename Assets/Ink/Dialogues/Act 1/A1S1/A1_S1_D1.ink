@@ -1,3 +1,4 @@
+->A1_S1_D1
 ===A1_S1_D1===
 EVENT:SwapBGM:BGM_ISLAND_FLUTTERING_CRITTER, BGM_CUTSCENE_TRANSFORMATION  
 Narrator: You find yourself on a beach. The sun glares over you, and your ship is in pieces around you. In stark contrast to the raging waters that overwhelmed you and your ship last night, calm waves now wash over shore.  
