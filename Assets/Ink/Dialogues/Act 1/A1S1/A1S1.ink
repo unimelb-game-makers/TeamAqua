@@ -12,23 +12,17 @@ CONST QUEST_1 = "A1_S1_Q1"
 
 {
     - dialogue_id == DIALOGUE_1:
-        -> dialogue_1
+        -> A1_S1_D1
     - dialogue_id == QUEST_1:
-        -> quest_1
+        -> A1_S1_Q1
     - dialogue_id == DIALOGUE_2:
-        -> dialogue_2
+        -> A1_S1_D2
 }
 
-===dialogue_1===
-->main
-
-===quest_1===
+===A1_S1_Q1===
 {
     - quest_state == "ONGOING":
-        -> ongoing_quest_1
+        -> A1_S1_Q1_ONGOING
     - quest_state == "COMPLETED":
-        -> completed_quest_1
+        -> A1_S1_Q1_COMPLETED
 }
-
-===dialogue_2===
--> PostquestSubmit

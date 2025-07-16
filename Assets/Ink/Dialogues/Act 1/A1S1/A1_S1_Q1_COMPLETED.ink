@@ -1,4 +1,4 @@
-==completed_quest_1===
+==A1_S1_Q1_COMPLETED===
 Narrator: Would you like to finish this quest?  
     +[Finish quest?]  
     -> CompleteQuest   

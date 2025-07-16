@@ -241,73 +241,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         {
             OnDialogueStart?.Invoke();
             Time.timeScale = 1;
-            playerInputProvider.can_move = false; // Setting the Input provider here.
-
-            // PUT IN AN INK FUNC PROCESSOR FUNCTION HERE
-
-            _currentStory.story.BindExternalFunction(
-                "SetOffDial2ndVarTrig",
-                () =>
-                {
-                    DialogueTriggerControl.instance().Trigger();
-                }
-            );
-            //currentStory.story.variablesState["quest_id1"] = 10;  // <-- 10 is just a placeholder, it should actually be quest steps
-
-            _currentStory.story.BindExternalFunction(
-                "PlayBGM",
-                (string id) =>
-                { // this is for starting a track during dialogue
-                    AudioManager.Instance.Play(id);
-                }
-            );
-
-            _currentStory.story.BindExternalFunction(
-                "AddQuest",
-                (string id) =>
-                {
-                    QuestManager.instance.AddQuest(id);
-                }
-            );
-
-            _currentStory.story.BindExternalFunction(
-                "SubmitQuest",
-                (string questID) =>
-                {
-                    QuestManager.instance.SubmitQuest(questID);
-                }
-            );
-
-            _currentStory.story.BindExternalFunction(
-                "SwapBGM",
-                (string new_id, string old_id, int FadeSpeed) =>
-                { // this is for switching out tracks mid-dialogue
-                    //StartCoroutine(AudioManager.Instance.SwapBGM(id, FadeSpeed));
-                    AudioManager.Instance.Stop(old_id);
-                    AudioManager.Instance.Play(new_id);
-                    Debug.Log("binded audio function works");
-                }
-            );
-
-            _currentStory.story.BindExternalFunction(
-                "TurnOffBarrier",
-                (int id) =>
-                {
-                    //currentStory.story.variablesState["cutscene0"] = "AAAAAA";
-                    //Debug.Log("dialogue trigger state is now " + currentStory.story.variablesState["cutscene0"]);
-                    BarrierManager.Instance.TurnOffBarrier(id);
-                }
-            );
-
-            _currentStory.story.BindExternalFunction(
-                "ChangeCutscene",
-                (string SceneName) =>
-                {
-                    EndStory();
-                    SceneManager.LoadScene(SceneName);
-                    Debug.Log("scene changed to " + SceneManager.GetActiveScene());
-                }
-            );
+            playerInputProvider.can_move = false; // Setting the Input provider here
             ContinueStory();
         }
         else if (mode == DialogueMode.Moving)
@@ -315,16 +249,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
             //changine to UI state done in child trigger points
             playerInputProvider.can_move = true; // Setting the Input provider here.
             Debug.Log("dialogue triggers collided");
-            _currentStory.story.BindExternalFunction(
-                "SetOffDial2ndVarTrig",
-                () =>
-                {
-                    //currentStory.variablesState["cutscene0"] = "AAAAAA";
-                    //Debug.Log("dialogue trigger state is now " + currentStory.variablesState["cutscene0"]);
-                    DialogueTriggerControl.instance().Trigger();
-                }
-            );
-            //ContinueStory();
         }
     }
 
@@ -332,7 +256,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
     {
         if (_currentStory.story.canContinue)
         {
-            Debug.Log("continuing");
             string nextLine = _currentStory.story.Continue();
             ShowStory(nextLine);
         }
@@ -344,15 +267,12 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     public void SkipStory()
     {
-        // Current bug: skip story skips over all EVENTs
-
         Debug.Log("Skip");
         string nextLine = string.Empty;
         // Continues until we encounter a choice, or the story cannot continue
         while (_currentStory.story.canContinue && _currentStory.story.currentChoices.Count == 0)
         {
             nextLine = _currentStory.story.Continue();
-            Debug.Log("nextline is: " + nextLine);
             if (nextLine.StartsWith("EVENT"))
             {
                 HandleEvents(nextLine);
@@ -367,7 +287,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void ShowStory(string nextLine, bool skip = false)
     {
-        Debug.Log("SHOW STORY IS: " + nextLine);
         if (nextLine.StartsWith("EVENT"))
         {
             HandleEvents(nextLine);
@@ -395,10 +314,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
 
     private void ProcessEvent(string eventId)
     {
+        string[] splits = eventId.Split(':', 2);
+        string param = splits[1].Trim();
         if (eventId.StartsWith(SWAPBGM))
         {
-            string[] splits = eventId.Split(':', 2);
-            string param = splits[1];
             string[] inputs = param.Split(',', 2);
             string new_id = inputs[0].Trim();
             string old_id = inputs[1].Trim();
@@ -407,33 +326,25 @@ public class DialogueManager : MonoBehaviour, ISaveable
         }
         else if (eventId.StartsWith(PLAYBGM))
         {
-            string[] splits = eventId.Split(':', 2);
-            string id = splits[1].Trim();
-            AudioManager.Instance.Play(id);
+            AudioManager.Instance.Play(param);
         }
         else if (eventId.StartsWith(ADDQUEST))
         {
-            string[] splits = eventId.Split(':', 2);
-            string questID = splits[1].Trim();
-            QuestManager.instance.AddQuest(questID);
+            QuestManager.instance.AddQuest(param);
         }
         else if (eventId.StartsWith(SUBMITQUEST))
         {
-            string[] splits = eventId.Split(':', 2);
-            string questID = splits[1].Trim();
-            QuestManager.instance.SubmitQuest(questID);
+            QuestManager.instance.SubmitQuest(param);
         }
         else if (eventId.StartsWith(CHANGECUTSCENE))
         {
-            string[] splits = eventId.Split(':', 2);
-            string SceneName = splits[1].Trim();
-            DialogueManager.instance.EndStory();
-            SceneManager.LoadScene(SceneName);
+            EndStory();
+            SceneManager.LoadScene(param);
             Debug.Log("scene changed to " + SceneManager.GetActiveScene());
         }
     }
 
-    public void EndStory()
+    private void EndStory()
     {
         // Only end a story that is not ended
         if (State == DialogueState.Ended)
@@ -491,6 +402,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         _currentStory.story.ChooseChoiceIndex(choiceIndex);
         if (_currentStory.story.canContinue)
         {
+            // NOTE(Steven): For some reason, the story after selecting a choice was empty. So we've opted to force continue afterwards
             _currentStory.story.Continue();
             ContinueStory();
         }

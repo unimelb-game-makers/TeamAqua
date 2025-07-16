@@ -1,4 +1,4 @@
-===main===
+===A1_S1_D1===
 EVENT:SwapBGM:BGM_ISLAND_FLUTTERING_CRITTER, BGM_CUTSCENE_TRANSFORMATION  
 Narrator: You find yourself on a beach. The sun glares over you, and your ship is in pieces around you. In stark contrast to the raging waters that overwhelmed you and your ship last night, calm waves now wash over shore.  
 Narrator: The storms of yesterday seem to have died down for now. It seems you’ve landed on an island with large trees and forestry beyond the beach. Nearby, you see a collapsed tree… and a tail?

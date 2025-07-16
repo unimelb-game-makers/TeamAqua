@@ -119,7 +119,6 @@ namespace Popups
             dialogueText.text = dialogues; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
             bool isRichText = false;
-            Debug.Log("dialogue is: " + dialogues);
             foreach (char letter in dialogues.ToCharArray())
             {
                 //check for rich text
