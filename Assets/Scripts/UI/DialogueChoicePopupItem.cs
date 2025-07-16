@@ -7,7 +7,8 @@ namespace Popups
 {
     public class DialogueChoicePopupItem : MonoBehaviour
     {
-        [SerializeField] private TMP_Text text;
+        [SerializeField]
+        private TMP_Text text;
         private Choice data;
         private Button button;
 
@@ -21,7 +22,7 @@ namespace Popups
         {
             DialogueManager.Instance().ChooseChoice(data.index);
         }
-        
+
         public void Init(Choice choice)
         {
             data = choice;

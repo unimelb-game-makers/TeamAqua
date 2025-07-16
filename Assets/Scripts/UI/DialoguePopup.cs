@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Ink.Runtime;
 using Kuroneko.UIDelivery;
 using Kuroneko.UtilityDelivery;
@@ -32,6 +33,8 @@ namespace Popups
         private Coroutine lineCoroutine = null;
         private string currentLine;
         private List<Choice> currentChoices = new List<Choice>();
+        public string charName;
+        public string dialogues;
 
         protected override void InitPopup()
         {
@@ -88,12 +91,24 @@ namespace Popups
 
         private IEnumerator DisplayLine(string line, List<Choice> choices, bool skip)
         {
+            // checks if line is in Name:dialogue format
+            if (Regex.IsMatch(line, @"^[A-Z][a-zA-Z]*:"))
+            {
+                string[] splits = line.Split(":", 2);
+                charName = splits[0].Trim();
+                dialogues = splits[1].Trim();
+                currentLine = dialogues;
+                characterPopup.SetSpeaker(charName);
+            }
+            else
+            {
+                currentLine = line;
+                dialogues = line;
+            }
             currentChoices = choices;
-            currentLine = line;
-
             if (skip)
             {
-                dialogueText.SetText(line);
+                dialogueText.SetText(dialogues);
                 EndCoroutine();
                 yield break;
             }
@@ -101,10 +116,10 @@ namespace Popups
             if (fastForward)
                 fastForward.gameObject.SetActiveFast(true);
             choicePopup.HidePopup();
-            dialogueText.text = line; //set text to full line, but set visible characters to 0
+            dialogueText.text = dialogues; //set text to full line, but set visible characters to 0
             dialogueText.maxVisibleCharacters = 0;
             bool isRichText = false;
-            foreach (char letter in line.ToCharArray())
+            foreach (char letter in dialogues.ToCharArray())
             {
                 //check for rich text
                 if (letter == '<' || isRichText)
