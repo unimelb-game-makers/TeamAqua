@@ -8,15 +8,16 @@ namespace Popups
 {
     public class DialogueChoicePopup : Popup
     {
-        [SerializeField] private RectTransform popupHolder;
-        [SerializeField] private DialogueChoicePopupItem samplePopupItem;
+        [SerializeField]
+        private RectTransform popupHolder;
+
+        [SerializeField]
+        private DialogueChoicePopupItem samplePopupItem;
 
         private List<Choice> data = new();
         private List<DialogueChoicePopupItem> popupItems = new();
-        
-        protected override void InitPopup()
-        {
-        }
+
+        protected override void InitPopup() { }
 
         public void Init(List<Choice> choices)
         {
@@ -38,9 +39,9 @@ namespace Popups
                     popupItems.Add(item);
                 }
             }
-            
+
             samplePopupItem.gameObject.SetActiveFast(false);
-            
+
             for (int i = 0; i < popupItems.Count; i++)
                 popupItems[i].gameObject.SetActiveFast(false);
 
