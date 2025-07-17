@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf10f08426e62949be8a3cc11b3c056, type: 3}
+  m_Name: Foliage
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 2270942575764454514, guid: 2922e06694b3efc048d0f45f0cc84880, type: 3}
+  - {fileID: 8594671573769371877, guid: a67a2ab6a438a14ba9dcd1e78bbac88b, type: 3}
+  - {fileID: 4724415472139563955, guid: c1e2eee5e52397241b51d0869a27d8c8, type: 3}
+  - {fileID: 6082274607912619610, guid: da6996119f5948441a33404d8e8296c2, type: 3}
+  - {fileID: 1383135860950781944, guid: f794bf10a4598df438ac611fde3f673d, type: 3}
+  - {fileID: 6922258519159087534, guid: 48d1c5d37afdb5a4887fb02902e844d2, type: 3}
+  - {fileID: 3942780106311390040, guid: ac6f098ffb0150d3cb2035af8ddbe996, type: 3}
+  - {fileID: 7411296361861793183, guid: bc404b41f1389f34cbae6f2868bfd9e3, type: 3}
+  - {fileID: 5707009682826362450, guid: d3f794ad2b8a06864b7960496945ef64, type: 3}
+  - {fileID: 1599154142328650272, guid: 9bfd9119ac5ee724da1d4c86554c5ed0, type: 3}
