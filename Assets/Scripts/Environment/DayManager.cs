@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using Sirenix.OdinInspector;
 
 public class DayManager : MonoBehaviour, ISaveable
 {
@@ -10,11 +10,18 @@ public class DayManager : MonoBehaviour, ISaveable
     private const float LIGHT_DURATION = 1.0f;
 
     [Header("Night Settings")]
-    [SerializeField] private Color targetColor = Color.black;
-    [SerializeField] private Material skyboxMaterial;
-    [SerializeField] private float dayExposure = 1f;
-    [SerializeField] private float nightExposure = 0.6f;
-    
+    [SerializeField]
+    private Color targetColor = Color.black;
+
+    [SerializeField]
+    private Material skyboxMaterial;
+
+    [SerializeField]
+    private float dayExposure = 1f;
+
+    [SerializeField]
+    private float nightExposure = 0.6f;
+
     // Exposed Actions
     public static Action<int> OnDayChanged;
 
@@ -27,7 +34,7 @@ public class DayManager : MonoBehaviour, ISaveable
     private int _currentDay = 1;
 
     private bool isNight = false;
-    
+
     // Serialized Variables
     private PlayerController _playerController;
     private bool shouldChangeColor = false;
@@ -45,7 +52,7 @@ public class DayManager : MonoBehaviour, ISaveable
         else
             instance = this;
     }
-    
+
     private void Start()
     {
         // TODO(Alex): We naively assume that there is only one light source for now.
@@ -53,7 +60,7 @@ public class DayManager : MonoBehaviour, ISaveable
         _playerController = FindFirstObjectByType<PlayerController>();
         initialColor = directionalLight.color;
         EnergyManager.OnEnergyChanged += CheckEnergy;
-        
+
         _runtimeSkyboxMaterial = new Material(skyboxMaterial);
         RenderSettings.skybox = _runtimeSkyboxMaterial;
     }
@@ -95,20 +102,23 @@ public class DayManager : MonoBehaviour, ISaveable
     {
         OnDayChanged?.Invoke(_currentDay);
         _currentDay += 1;
+        // dayStoryManager.GetNextDay(_currentDay);
+        DialogueManager.instance.SetDay(_currentDay); // _currentDay starts index at 1
         SetNight(false);
         _playerController.handleNextDay();
         RainWithDelay(false, 2.0f);
         float randomValue = Random.value;
         if (randomValue < RAINCHANCE)
         {
-            RainWithDelay(true, 2.0f); //wait 2s, so rain starts after screen blacked out 
+            RainWithDelay(true, 2.0f); //wait 2s, so rain starts after screen blacked out
             Debug.Log("Rain starts!");
         }
-        else {
+        else
+        {
             Debug.Log("No rain");
         }
         EnergyManager.instance.OnNextDay();
-        
+
         // Trigger Save whenever a new day is started
         SaveManager.instance.Save();
     }
@@ -153,7 +163,7 @@ public class DayManager : MonoBehaviour, ISaveable
     {
         SetNight(true);
     }
-    
+
     [Button]
     public void StartRain()
     {
@@ -184,7 +194,7 @@ public class DayManager : MonoBehaviour, ISaveable
     private IEnumerator RainAfterDelay(bool startRain, float delay)
     {
         yield return new WaitForSeconds(delay);
-        if(startRain) 
+        if (startRain)
         {
             StartRain();
         }
@@ -193,5 +203,4 @@ public class DayManager : MonoBehaviour, ISaveable
             StopRain();
         }
     }
-
 }

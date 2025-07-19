@@ -9,6 +9,7 @@ EXTERNAL SetNextDialogue(dialogueId)
 INCLUDE ../Globals/Globals.ink
 
 
+
 // Variable Setup
 CONST DIALOGUE_1 = "A1_S1_D1"
 CONST DIALOGUE_2 = "A1_S1_D2"

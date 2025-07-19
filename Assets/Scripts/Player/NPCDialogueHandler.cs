@@ -29,8 +29,6 @@ public class NPCDialogueHandler : MonoBehaviour
         if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
         {
             _dialogueSource = dialogue;
-            if (!_dialogueSource)
-                return;
             _dialogueSource.ShowIndicator();
         }
     }
@@ -41,7 +39,6 @@ public class NPCDialogueHandler : MonoBehaviour
         {
             _dialogueSource.HideIndicators();
             _dialogueSource = null;
-            DialogueManager.Instance().currentStory = null;
         }
     }
 }

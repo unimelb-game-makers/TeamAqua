@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 286741087519335697}
   - component: {fileID: 9187045717532970881}
   - component: {fileID: 3800245460030639579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e49fcc87d03a041bc81d0c9ffd409c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSave: {fileID: 11400000, guid: 055a02550362f41f89f8b9829825b4b4, type: 2}
   inputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   moveSpeed: 1.2
   spriteTransform: {fileID: 6391069182455531222}
@@ -130,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d674e172e0d9f449bf24012d3656619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questID: 0
+  quest: {fileID: 0}
 --- !u!114 &9187045717532970881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +166,7 @@ GameObject:
   - component: {fileID: 7498922723279976638}
   - component: {fileID: 5514603575849100926}
   - component: {fileID: 6391069182455531222}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

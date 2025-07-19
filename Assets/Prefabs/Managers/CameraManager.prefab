@@ -51,11 +51,11 @@ MonoBehaviour:
   cameras:
   - angle: 1
     camera: {fileID: 1675457334326957490}
-  - angle: 3
+  - angle: 2
     camera: {fileID: 2695024939824023562}
   - angle: 0
     camera: {fileID: 5856978623114600624}
-  - angle: 2
+  - angle: 3
     camera: {fileID: 3015922566105897315}
   currentAngle: 2
 --- !u!1001 &1175488349989481672

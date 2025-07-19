@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.IO;
-using System.Diagnostics;
 
 namespace Ink.Runtime
 {
@@ -117,7 +117,6 @@ namespace Ink.Runtime
         /// <summary>
         /// Names of currently alive flows (not including the default flow)
         /// </summary>
-
         public List<string> aliveFlowNames
         {
             get { return state.aliveFlowNames; }
@@ -242,7 +241,8 @@ namespace Ink.Runtime
         /// <summary>
         /// Construct a Story object using a JSON string compiled through inklecate.
         /// </summary>
-        public Story(string jsonString) : this((Container)null)
+        public Story(string jsonString)
+            : this((Container)null)
         {
             Dictionary<string, object> rootObject = SimpleJson.TextToDictionary(jsonString);
 
@@ -762,7 +762,7 @@ namespace Ink.Runtime
         {
             NoChange,
             ExtendedBeyondNewline,
-            NewlineRemoved
+            NewlineRemoved,
         }
 
         OutputStateChange CalculateNewlineOutputStateChange(
@@ -2372,7 +2372,7 @@ namespace Ink.Runtime
             _externals[funcName] = new ExternalFunctionDef
             {
                 function = func,
-                lookaheadSafe = lookaheadSafe
+                lookaheadSafe = lookaheadSafe,
             };
         }
 

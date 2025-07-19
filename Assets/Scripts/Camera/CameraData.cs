@@ -16,7 +16,7 @@ public class CameraData{ // Change this to class with methods
     // Insert player to follow and look at
     public void SetPlayer(Transform playerTransform){
         CinemachineVirtualCamera vc = GetVirtualCamera();
-        vc.LookAt = playerTransform;
+        //vc.LookAt = playerTransform;
         vc.Follow = playerTransform;
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class DialogueScript : ScriptableObject
 {
     public TextAsset inkFile;
     public List<DialogueNode> dialogues;
+
+    // each script keeps a currentNode, next time a node in this script is called, it should be this node
 
     /// <summary>
     /// No need to throw an error here, assume that dialogues can be falsy
@@ -27,18 +30,27 @@ public class DialogueScript : ScriptableObject
         dialogueNode = null;
         return false;
     }
-    
 
-    public string GetNextDialogue(string dialogueId)
+    public DialogueNode GetNextDialogue(string dialogueId)
     {
         if (!TryGetDialogue(dialogueId, out DialogueNode dialogue))
         {
-            return string.Empty;
+            return null;
         }
 
         if (dialogue.infinite)
-            return dialogue.name;
+            return dialogue;
         int index = dialogues.IndexOf(dialogue);
-        return index + 1 >= dialogues.Count ? string.Empty : dialogues[index + 1].name;
+        return index + 1 >= dialogues.Count ? null : dialogues[index + 1];
+    }
+
+    public DialogueNode GetFirstNode()
+    {
+        if (dialogues.Count == 0)
+        {
+            throw new IndexOutOfRangeException("This is an empty dialogue script");
+        }
+
+        return dialogues[0];
     }
 }

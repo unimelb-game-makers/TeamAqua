@@ -21,7 +21,6 @@ public struct WorldSaveData
 [Serializable]
 public struct PuzzleSaveData
 {
-    
     public string id;
     public bool completed;
     public PuzzleBlockSaveData[] blocks;
@@ -47,10 +46,16 @@ public struct InventorySaveData
 }
 
 [Serializable]
-public struct DialogueSaveData
+public struct DialogueNodeSaveData
 {
     public string scriptId;
     public string dialogueId;
+}
+
+[Serializable]
+public struct DialogueSaveData
+{
+    public DialogueNodeSaveData[] activeDialogues;
 }
 
 [Serializable]
@@ -79,12 +84,16 @@ public struct SaveSlot
 {
     [HideLabel]
     public PlayerSaveData playerSaveData;
-    [HideLabel] 
+
+    [HideLabel]
     public InventorySaveData inventorySaveData;
+
     [HideLabel]
     public WorldSaveData worldSaveData;
+
     [HideLabel]
     public DialogueSaveData dialogueSaveData;
+
     [HideLabel]
     public JournalSaveData journalSaveData;
 }

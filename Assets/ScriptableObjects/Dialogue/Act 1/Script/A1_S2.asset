@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
   m_Name: A1_S2
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 33200dae5378a2342b771cbdae19330d, type: 3}
+  inkFile: {fileID: 4900000, guid: fd7c9467e9cf7614abb6bd96132dcb3f, type: 3}
   dialogues:
   - {fileID: 11400000, guid: d78171af0639ced469a2b6dd526ef7db, type: 2}
   - {fileID: 11400000, guid: 72903fd51c858a04b8372d2c50a653ac, type: 2}
