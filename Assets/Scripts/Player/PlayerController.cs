@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour, ISaveable
 {
@@ -23,6 +24,11 @@ public class PlayerController : MonoBehaviour, ISaveable
     private Vector3 spawnPoint;
 
     AnimController anim;
+
+    public Queue<Vector3> playerTrail = new Queue<Vector3>();
+    [SerializeField] private int maxTrailSteps = 100;
+    [SerializeField] private float trailInterval = 0.2f;
+    private float trailTimer = 0f;
 
     private void Awake()
     {
@@ -59,14 +65,16 @@ public class PlayerController : MonoBehaviour, ISaveable
     {
         moveInput = inputProvider.can_move ? new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")) : Vector3.zero;
         if (inputProvider.can_move)    //Checks whether to freeze movement. This will be reworked later
-        {                                                   
+        {
             /*Play Animations here*/
-            if(moveInput.x > 0){// Walk Right
+            if (moveInput.x > 0)
+            {// Walk Right
                 anim.ChangeAnimationState("Walk");
                 spriteTransform.flipX(true);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
             }
-            else if(moveInput.x < 0){// Walk Left  && moveInput.z == 0
+            else if (moveInput.x < 0)
+            {// Walk Left  && moveInput.z == 0
                 anim.ChangeAnimationState("Walk");
                 spriteTransform.flipX(false);
                 //AudioManager.Instance.Play("BGM_SFX_WALKING");
@@ -89,6 +97,22 @@ public class PlayerController : MonoBehaviour, ISaveable
             anim.ChangeAnimationState("Idle");
             //AudioManager.Instance.Stop("BGM_SFX_WALKING");
         }
+        
+        trailTimer += Time.deltaTime;
+        if (trailTimer >= trailInterval) {
+            trailTimer = 0f;
+
+            Vector3 currentPos = transform.position;
+
+            // Enqueue new position
+            playerTrail.Enqueue(currentPos);
+
+            // Limit trail length
+            if (playerTrail.Count > maxTrailSteps) {
+                playerTrail.Dequeue();
+            }
+        }
+
     }
 
     /*Handle Physics Calculations*/
