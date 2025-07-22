@@ -74,18 +74,34 @@ public class DayManager : MonoBehaviour, ISaveable
 
     public void RegisterNpc(NPC npc)
     {
+        if (!npc.id)
+        {
+            Debug.LogWarning($"NPC {npc.name} does not have an ID!");
+            return;
+        }
         Day currentDay = dayDatabase.GetDay(_currentDay);
         npc.gameObject.SetActiveFast(currentDay.worldDatabase.CanEnable(npc.id));
         _worldData.npcs.Add(npc.id, npc);
+
+        // If the NPC is Amelia, then we want to store it differently and set their position
+        if (npc.GetType() == typeof(Amelia))
+        {
+            _worldData.amelia = (Amelia)npc;
+            npc.transform.position = _worldData.ameliaSavePosition;
+        }
     }
 
     public void Load(SaveSlot saveSlot)
     {
+        // Reset the world data each time
+        _worldData = new WorldData();
+        
         // Init the day database
         dayDatabase.Init();
         
         _currentDay = saveSlot.worldSaveData.currentDay;
-        
+        _worldData.ameliaSavePosition = saveSlot.worldSaveData.ameliaPosition;
+
         // Enter the current day
         Day currentDay = dayDatabase.GetDay(_currentDay);
         currentDay.Enter(_worldData);
@@ -95,6 +111,7 @@ public class DayManager : MonoBehaviour, ISaveable
     {
         SaveSlot save = saveSlot;
         save.worldSaveData.currentDay = _currentDay;
+        save.worldSaveData.ameliaPosition = _worldData.amelia.transform.position;
         return save;
     }
 
