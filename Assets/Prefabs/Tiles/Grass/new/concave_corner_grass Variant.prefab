@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7136188773308254607, guid: 82d40a4ad8b7ed5c1a9add074c97a914, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7750626976165078128, guid: 82d40a4ad8b7ed5c1a9add074c97a914, type: 3}
       propertyPath: m_Name
       value: concave_corner_grass Variant

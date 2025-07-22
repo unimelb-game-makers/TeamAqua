@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: convex_corner_grass Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6601184908658064269, guid: 10924a99e288bade687c6e165acb7521, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6813607204452565939, guid: 10924a99e288bade687c6e165acb7521, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5707011

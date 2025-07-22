@@ -16,13 +16,15 @@ public class PlayerController : MonoBehaviour, ISaveable
     private float groundCheckDistance = 0.32f;
 
     private Rigidbody rb;
-    private Vector3 moveInput;
+    private Vector3 moveInput; // Catch player input
+    private Vector3 moveDirection; // Result after evaluating input conditions
 
     private Vector3 spriteScale;
 
     private Vector3 spawnPoint;
 
     AnimController anim;
+    EdgeDetector edgeDetector;
 
     private void Awake()
     {
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour, ISaveable
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<AnimController>();
+        edgeDetector = GetComponent<EdgeDetector>();
+
         spawnPoint = transform.position;
 
         if (inputProvider.can_move == false)
@@ -57,9 +61,10 @@ public class PlayerController : MonoBehaviour, ISaveable
     // Update is called once per frame
     void Update()
     {
-        moveInput = inputProvider.can_move ? new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")) : Vector3.zero;
-        if (inputProvider.can_move)    //Checks whether to freeze movement. This will be reworked later
-        {                                                   
+        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        if (inputProvider.can_move && edgeDetector.CanMoveInDirection(moveInput))
+        {   //  Checks whether to freeze movement. This will be reworked later
+            moveDirection = moveInput;
             /*Play Animations here*/
             if(moveInput.x > 0){// Walk Right
                 anim.ChangeAnimationState("Walk");
@@ -87,6 +92,7 @@ public class PlayerController : MonoBehaviour, ISaveable
         else
         {
             anim.ChangeAnimationState("Idle");
+            moveDirection = Vector3.zero;
             //AudioManager.Instance.Stop("BGM_SFX_WALKING");
         }
     }
@@ -109,7 +115,7 @@ public class PlayerController : MonoBehaviour, ISaveable
         }
 
         // 3) Project the *unit* input direction onto that plane
-        Vector3 slopeDir = Vector3.ProjectOnPlane(moveInput, groundNormal).normalized;
+        Vector3 slopeDir = Vector3.ProjectOnPlane(moveDirection, groundNormal).normalized;
 
         // 4) Build the final velocity vector
         Vector3 finalVel = slopeDir * moveSpeed;
