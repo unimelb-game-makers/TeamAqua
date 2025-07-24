@@ -15,6 +15,9 @@ public class SaveTemplate : ScriptableObject
     private Checkpoint checkpoint;
 
     [SerializeField]
+    private bool setAmeliaPosition = true;
+    
+    [SerializeField]
     private DialogueScript script;
 
     [SerializeField]
@@ -74,6 +77,10 @@ public class SaveTemplate : ScriptableObject
 
         save.worldSaveData.puzzles = puzzles;
         save.journalSaveData.quests = quests;
+
+        // If we opt to set amelia's position, then put them directly on the checkpoint as well
+        if (setAmeliaPosition)
+            save.worldSaveData.ameliaPosition = checkpoint.position;
         return save;
     }
 }

@@ -15,6 +15,7 @@ public struct PlayerSaveData
 public struct WorldSaveData
 {
     public int currentDay;
+    public Vector3 ameliaPosition;
     public PuzzleSaveData[] puzzles;
 }
 

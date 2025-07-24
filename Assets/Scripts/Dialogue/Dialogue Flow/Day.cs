@@ -9,6 +9,29 @@ public class Day : ScriptableObject
 {
     [InlineEditor]
     public DialoguePool dialoguePool;
+    [InlineEditor] 
+    public WorldDatabase worldDatabase;
     public List<Quest> mainQuests;
     public List<Quest> subQuests;
+
+    public void Init()
+    {
+        worldDatabase.Init();
+    }
+
+    /// <summary>
+    /// To be called when entering into a new day
+    /// </summary>
+    public void Enter(WorldData worldData)
+    {
+        worldDatabase.Enable(worldData);
+    }
+
+    /// <summary>
+    /// To be called when existing the current day
+    /// </summary>
+    public void Exit(WorldData worldData)
+    {
+        worldDatabase.Disable(worldData);
+    }
 }
