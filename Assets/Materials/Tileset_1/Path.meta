@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Tileset_1/Path.meta
 guid: 2a9b02bc3550fb9d7ac588bb6c5bd1b6
+========
+guid: d3fba79667e2e7540b0133db7670a478
+>>>>>>>> main:Assets/ScriptableObjects/Days/DayScriptable.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

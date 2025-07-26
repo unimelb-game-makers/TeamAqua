@@ -115,6 +115,7 @@ MonoBehaviour:
   targetDistance: 0.85
   maxDistance: 10
   speed: 1
+  stepThreshold: 0.2
 --- !u!1 &5191445546618985921
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f14a4b36195844bbc0a12986fb0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: {fileID: 11400000, guid: 191b92433a7a141d9b6f9bdf32c2b7a5, type: 2}
 --- !u!212 &6114710114193895355
 SpriteRenderer:
   m_ObjectHideFlags: 0

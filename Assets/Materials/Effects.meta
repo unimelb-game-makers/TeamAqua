@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Effects.meta
 guid: 63ab18704bca6f28faf4ad29870e1a31
+========
+guid: 97555b739f913d24e8d395b633d135a1
+>>>>>>>> main:Assets/ScriptableObjects/Days.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

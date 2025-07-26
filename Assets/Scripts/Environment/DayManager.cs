@@ -1,5 +1,9 @@
 using System;
 using System.Collections;
+<<<<<<< HEAD
+=======
+using Kuroneko.UtilityDelivery;
+>>>>>>> main
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -8,6 +12,9 @@ public class DayManager : MonoBehaviour, ISaveable
 {
     public static DayManager instance;
     private const float LIGHT_DURATION = 1.0f;
+
+    [SerializeField]
+    private DayDatabase dayDatabase;
 
     [Header("Night Settings")]
     [SerializeField]
@@ -44,6 +51,9 @@ public class DayManager : MonoBehaviour, ISaveable
     private Light directionalLight;
     private static readonly int Exposure = Shader.PropertyToID("_Exposure");
     private Material _runtimeSkyboxMaterial;
+    
+    // World Data
+    private WorldData _worldData = new();
 
     private void Awake()
     {
@@ -65,15 +75,46 @@ public class DayManager : MonoBehaviour, ISaveable
         RenderSettings.skybox = _runtimeSkyboxMaterial;
     }
 
+    public void RegisterNpc(NPC npc)
+    {
+        if (!npc.id)
+        {
+            Debug.LogWarning($"NPC {npc.name} does not have an ID!");
+            return;
+        }
+        Day currentDay = dayDatabase.GetDay(_currentDay);
+        npc.gameObject.SetActiveFast(currentDay.worldDatabase.CanEnable(npc.id));
+        _worldData.npcs.Add(npc.id, npc);
+
+        // If the NPC is Amelia, then we want to store it differently and set their position
+        if (npc.GetType() == typeof(Amelia))
+        {
+            _worldData.amelia = (Amelia)npc;
+            npc.transform.position = _worldData.ameliaSavePosition;
+        }
+    }
+
     public void Load(SaveSlot saveSlot)
     {
+        // Reset the world data each time
+        _worldData = new WorldData();
+        
+        // Init the day database
+        dayDatabase.Init();
+        
         _currentDay = saveSlot.worldSaveData.currentDay;
+        _worldData.ameliaSavePosition = saveSlot.worldSaveData.ameliaPosition;
+
+        // Enter the current day
+        Day currentDay = dayDatabase.GetDay(_currentDay);
+        currentDay.Enter(_worldData);
     }
 
     public SaveSlot Save(SaveSlot saveSlot)
     {
         SaveSlot save = saveSlot;
         save.worldSaveData.currentDay = _currentDay;
+        save.worldSaveData.ameliaPosition = _worldData.amelia.transform.position;
         return save;
     }
 
@@ -100,9 +141,23 @@ public class DayManager : MonoBehaviour, ISaveable
 
     public void StartNewDay()
     {
+        // Uninitialise the current day
+        Day previousDay = dayDatabase.GetDay(_currentDay);
+        previousDay.Exit(_worldData);
+        
+        // Change days
         OnDayChanged?.Invoke(_currentDay);
         _currentDay += 1;
+<<<<<<< HEAD
         // dayStoryManager.GetNextDay(_currentDay);
+=======
+        
+        // Initialise the next day
+        Day nextDay = dayDatabase.GetDay(_currentDay);
+        nextDay.Enter(_worldData);
+        
+        // Notify other managers
+>>>>>>> main
         DialogueManager.instance.SetDay(_currentDay); // _currentDay starts index at 1
         SetNight(false);
         _playerController.handleNextDay();
