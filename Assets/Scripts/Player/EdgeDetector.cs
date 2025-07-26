@@ -7,6 +7,7 @@ public class EdgeDetector : MonoBehaviour
 {
     [Header("Edge Detection")]
     [SerializeField] private float _edgeCheckDistance = 0.5f;
+    [SerializeField] private float _tiltAngle = 2.5f;
     [SerializeField] private float _edgeCheckRadius = 0.2f;
     [SerializeField] private int _edgeCheckRays = 3; // More rays = more precision
     [SerializeField] private float _edgeRaySpread = 30f; // Width of the ray fan
@@ -39,7 +40,7 @@ public class EdgeDetector : MonoBehaviour
         {
             float angle = -halfSpread + (i * angleStep); // Fix this angle
             Vector3 rayDir = Quaternion.Euler(0, angle, 0) * direction;
-            rayDir.y = -2.5f; // Angle slightly downward
+            rayDir.y = -1 * _tiltAngle; // Angle slightly downward
 
             if (_showDebugRays)
                 Debug.DrawRay(transform.position, rayDir.normalized * _edgeCheckDistance, Color.red, 0.1f);

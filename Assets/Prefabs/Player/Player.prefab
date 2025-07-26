@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6457662097140562778}
   - component: {fileID: 7409998503361624279}
   - component: {fileID: 3131800856402837910}
+  - component: {fileID: 7043276732856453295}
   - component: {fileID: 8893293428448203259}
   - component: {fileID: 286741087519335697}
   - component: {fileID: 9187045717532970881}
@@ -104,6 +105,27 @@ MonoBehaviour:
   inputProvider: {fileID: 11400000, guid: 56d05f6f40325fc459c9a2a4a6bd0ab0, type: 2}
   moveSpeed: 1.2
   spriteTransform: {fileID: 6391069182455531222}
+  groundCheckDistance: 0.32
+--- !u!114 &7043276732856453295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105800495383659587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2d545ae4699cb939f74cda070bffd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _edgeCheckDistance: 0.5
+  _edgeCheckRadius: 0.2
+  _edgeCheckRays: 3
+  _edgeRaySpread: 30
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  _showDebugRays: 1
 --- !u!114 &8893293428448203259
 MonoBehaviour:
   m_ObjectHideFlags: 0

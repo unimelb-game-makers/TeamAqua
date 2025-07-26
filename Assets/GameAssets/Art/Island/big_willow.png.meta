@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      big_willow_0: -491008071542548539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
