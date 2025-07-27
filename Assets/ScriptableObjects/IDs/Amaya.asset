@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9cab653044bf4d49a25d9827a6356cc, type: 3}
   m_Name: Amaya
   m_EditorClassIdentifier: 
+<<<<<<<< HEAD:Assets/ScriptableObjects/IDs/Amaya.asset
+========
+  dialoguePool: {fileID: 11400000, guid: b83f2495299a9c84680d06fba82d848e, type: 2}
+<<<<<<< HEAD
+=======
+  worldDatabase: {fileID: 11400000, guid: f1cb373854c5248b7948fafc7dab976b, type: 2}
+>>>>>>> main
+  mainQuests:
+  - {fileID: 11400000, guid: 59b9f780b1fa0b44abbd7dff9740b37d, type: 2}
+  subQuests: []
+>>>>>>>> refs/remotes/origin/update/map-update:Assets/ScriptableObjects/Days/DayScriptable/Day 2.asset

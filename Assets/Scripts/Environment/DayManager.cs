@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
+<<<<<<< HEAD
+=======
 using Kuroneko.UtilityDelivery;
+>>>>>>> main
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -145,12 +148,16 @@ public class DayManager : MonoBehaviour, ISaveable
         // Change days
         OnDayChanged?.Invoke(_currentDay);
         _currentDay += 1;
+<<<<<<< HEAD
+        // dayStoryManager.GetNextDay(_currentDay);
+=======
         
         // Initialise the next day
         Day nextDay = dayDatabase.GetDay(_currentDay);
         nextDay.Enter(_worldData);
         
         // Notify other managers
+>>>>>>> main
         DialogueManager.instance.SetDay(_currentDay); // _currentDay starts index at 1
         SetNight(false);
         _playerController.handleNextDay();
