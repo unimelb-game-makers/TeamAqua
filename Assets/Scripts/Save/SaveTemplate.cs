@@ -15,6 +15,9 @@ public class SaveTemplate : ScriptableObject
     private Checkpoint checkpoint;
 
     [SerializeField]
+    private bool setAmeliaPosition = true;
+    
+    [SerializeField]
     private DialogueScript script;
 
     [SerializeField]
