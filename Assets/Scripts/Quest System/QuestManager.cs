@@ -47,7 +47,7 @@ public class QuestManager : MonoBehaviour, ISaveable
 
     public List<QuestTracker> Quests => _quests;
 
-    private int FinalEPoint = 0;
+    private int FinalEndPoint = 0;
 
     private void Awake()
     {
@@ -81,7 +81,7 @@ public class QuestManager : MonoBehaviour, ISaveable
             }
         }
         // steven's bs
-        saveSlot.playerSaveData.EPoint = FinalEPoint;
+        saveSlot.playerSaveData.endPoint = FinalEndPoint;
     }
 
     public SaveSlot Save(SaveSlot saveSlot)
@@ -258,7 +258,8 @@ public class QuestManager : MonoBehaviour, ISaveable
 
     public void AddPoints(Quest quest)
     {
-        FinalEPoint += quest.EndingPoint;
+        FinalEndPoint += quest.EndingPoint;
+        Debug.Log($"END POINT | End point is now: {FinalEndPoint}");
     }
 
     public void CompletePuzzleStep(string puzzleId) { }
