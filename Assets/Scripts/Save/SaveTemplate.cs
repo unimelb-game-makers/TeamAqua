@@ -32,15 +32,11 @@ public class SaveTemplate : ScriptableObject
     [SerializeField]
     private List<PuzzleData> puzzleCompleteData = new();
 
-    [SerializeField]
-    public int FinalEndPoint = 0;
-
     public SaveSlot CreateSaveSlot()
     {
         SaveSlot save = new();
         save.playerSaveData.position = checkpoint.position;
         save.playerSaveData.energy = energy;
-        save.playerSaveData.endPoint = FinalEndPoint;
         save.worldSaveData.currentDay = day;
         if (script && dialogue)
         {
