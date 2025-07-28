@@ -15,18 +15,9 @@ public class SaveTemplate : ScriptableObject
     private Checkpoint checkpoint;
 
     [SerializeField]
-<<<<<<< HEAD
     private bool setAmeliaPosition = true;
     
     [SerializeField]
-=======
-<<<<<<< HEAD
-=======
-    private bool setAmeliaPosition = true;
-    
-    [SerializeField]
->>>>>>> main
->>>>>>> refs/remotes/origin/update/map-update
     private DialogueScript script;
 
     [SerializeField]

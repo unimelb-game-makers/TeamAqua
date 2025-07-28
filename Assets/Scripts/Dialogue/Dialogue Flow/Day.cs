@@ -9,10 +9,6 @@ public class Day : ScriptableObject
 {
     [InlineEditor]
     public DialoguePool dialoguePool;
-<<<<<<< HEAD
-    public List<Quest> mainQuests;
-    public List<Quest> subQuests;
-=======
     [InlineEditor] 
     public WorldDatabase worldDatabase;
     public List<Quest> mainQuests;
@@ -38,5 +34,4 @@ public class Day : ScriptableObject
     {
         worldDatabase.Disable(worldData);
     }
->>>>>>> main
 }

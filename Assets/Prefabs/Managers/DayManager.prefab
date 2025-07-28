@@ -46,11 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cd55d97d63b4451b46d6168f8bb2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  dayStoryManager: {fileID: -3975642283353257324, guid: 2c80cbf23ccdb03469fcf7d5c6029376, type: 3}
-=======
   dayDatabase: {fileID: 11400000, guid: 3d271355fc8fa3949bc0355ad03e2f94, type: 2}
->>>>>>> main
   targetColor: {r: 0, g: 0, b: 0, a: 1}
   skyboxMaterial: {fileID: 2100000, guid: 8b7dd0809c7c6498789fa32a61eaa6cb, type: 2}
   dayExposure: 1

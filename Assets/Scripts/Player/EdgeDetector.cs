@@ -47,20 +47,13 @@ public class EdgeDetector : MonoBehaviour
 
             if (!Physics.Raycast(transform.position, rayDir, _edgeCheckDistance, _groundLayer))
             {
-<<<<<<< HEAD
-                Debug.LogWarning($"Edge detected on ray {i} (angle: {angle}°)");
+                //Debug.LogWarning($"Edge detected on ray {i} (angle: {angle}°)");
                 return true; // Edge detected
             }
             //Debug.Log("here");
             
         }
         //Debug.Log("here");
-=======
-                //Debug.LogWarning($"Edge detected on ray {i} (angle: {angle}°)");
-                return true; // Edge detected
-            }            
-        }
->>>>>>> main
         return false; // No edge
     }
 }

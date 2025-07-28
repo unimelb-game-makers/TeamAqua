@@ -14,8 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSave: {fileID: 11400000, guid: 7ac517875a12144419359f87deb5729d, type: 2}
   overrideSaveData: 0
-<<<<<<< Updated upstream
-  saveTemplate: {fileID: 11400000, guid: 7ac517875a12144419359f87deb5729d, type: 2}
-=======
   saveTemplate: {fileID: 11400000, guid: eb9e5017ca7d04efaa7be3a28eb8b639, type: 2}
->>>>>>> Stashed changes
