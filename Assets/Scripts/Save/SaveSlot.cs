@@ -9,7 +9,6 @@ public struct PlayerSaveData
 {
     public Vector3 position;
     public float energy;
-    public int endPoint;
 }
 
 [Serializable]

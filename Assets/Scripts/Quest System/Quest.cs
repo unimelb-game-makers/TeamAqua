@@ -15,7 +15,7 @@ public class Quest : DialogueNode
     public QuestReward reward;
 
     [ShowInInspector]
-    public int EndingPoint = 0; // set to 0 for main quests, set to 1 or > for sub quests
+    public bool IsSubQuest;
 
     public QuestStep GetStep(string id)
     {

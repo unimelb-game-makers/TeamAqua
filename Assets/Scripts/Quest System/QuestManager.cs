@@ -47,8 +47,6 @@ public class QuestManager : MonoBehaviour, ISaveable
 
     public List<QuestTracker> Quests => _quests;
 
-    private int FinalEndPoint = 0;
-
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -80,8 +78,6 @@ public class QuestManager : MonoBehaviour, ISaveable
                 stepTracker.state = questSaves[i].steps[j].state;
             }
         }
-        // steven's bs
-        saveSlot.playerSaveData.endPoint = FinalEndPoint;
     }
 
     public SaveSlot Save(SaveSlot saveSlot)
@@ -254,8 +250,6 @@ public class QuestManager : MonoBehaviour, ISaveable
             tracker.steps[i].state = QuestState.Submitted;
         }
         AddReward(tracker.quest);
-        AddPoints(tracker.quest);
-
         tracker.state = QuestState.Submitted;
     }
 
@@ -270,10 +264,25 @@ public class QuestManager : MonoBehaviour, ISaveable
         }
     }
 
-    public void AddPoints(Quest quest)
+    public bool CheckSubquest(Quest quest)
     {
-        FinalEndPoint += quest.EndingPoint;
-        Debug.Log($"END POINT | End point is now: {FinalEndPoint}");
+        if (quest.IsSubQuest == true)
+            return true;
+        return false;
+    }
+
+    public int CheckCompleteSubQuests()
+    {
+        int TotalSubquests = 0;
+        for (int i = 0; i < _quests.Count; i++)
+        {
+            // check if subquest is completed
+            if (_quests[i].state == QuestState.Submitted && _quests[i].quest.IsSubQuest == true)
+            {
+                TotalSubquests++;
+            }
+        }
+        return TotalSubquests;
     }
 
     public void CompletePuzzleStep(string puzzleId) { }

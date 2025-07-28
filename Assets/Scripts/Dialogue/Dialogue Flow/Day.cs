@@ -10,5 +10,4 @@ public class Day : ScriptableObject
     [InlineEditor]
     public DialoguePool dialoguePool;
     public List<Quest> mainQuests;
-    public List<Quest> subQuests;
 }
