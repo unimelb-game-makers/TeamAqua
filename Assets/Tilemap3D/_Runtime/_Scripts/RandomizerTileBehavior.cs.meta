@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f7a1d6fa3eeeca14f90aa350633cd3b0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/_Runtime/_Scripts/RandomizerTileBehavior.cs
+  uploadId: 592028

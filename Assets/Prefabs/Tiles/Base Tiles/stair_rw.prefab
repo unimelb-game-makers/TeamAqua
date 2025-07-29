@@ -59,6 +59,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d37ea3928e7d91f5b4ca2a1caf57b42, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6717832869772559642}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d37ea3928e7d91f5b4ca2a1caf57b42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4509859936990636311}
   m_SourcePrefab: {fileID: 100100000, guid: 3d37ea3928e7d91f5b4ca2a1caf57b42, type: 3}
 --- !u!1 &115588131576398433 stripped
 GameObject:
@@ -87,3 +90,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4219061740922156954, guid: 0d994305f736d1e32adda975b9b33d8d, type: 3}
+--- !u!114 &-4509859936990636311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115588131576398433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40f6d2a89dd87741a207dde2007cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourcePrefab: {fileID: 0}
+  placementOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  scaleOffset: {x: 1, y: 1, z: 1}
+  tilemap: {fileID: 0}
+  layer: {fileID: 0}
+  gridCellPosition: {x: 0, y: 0, z: 0}

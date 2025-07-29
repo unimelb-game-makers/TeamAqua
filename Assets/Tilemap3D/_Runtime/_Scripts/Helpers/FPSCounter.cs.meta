@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5815dbfe2e06be147b52ef1d6e263c85
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/_Runtime/_Scripts/Helpers/FPSCounter.cs
+  uploadId: 592028

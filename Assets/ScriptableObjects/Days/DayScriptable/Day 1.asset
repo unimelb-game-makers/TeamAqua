@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Day 1
   m_EditorClassIdentifier: 
   dialoguePool: {fileID: 11400000, guid: e8836d24cefbe0742ad7ca931ab86937, type: 2}
+<<<<<<< HEAD
+=======
   worldDatabase: {fileID: 11400000, guid: c7817eefea06941ebba54961d12d29f7, type: 2}
+>>>>>>> main
   mainQuests:
   - {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
   - {fileID: 11400000, guid: 87a6a8b0266d51445996d326dd9cef85, type: 2}

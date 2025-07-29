@@ -49,8 +49,11 @@ public class EdgeDetector : MonoBehaviour
             {
                 //Debug.LogWarning($"Edge detected on ray {i} (angle: {angle}°)");
                 return true; // Edge detected
-            }            
+            }
+            //Debug.Log("here");
+            
         }
+        //Debug.Log("here");
         return false; // No edge
     }
 }

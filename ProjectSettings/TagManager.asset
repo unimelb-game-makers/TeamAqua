@@ -9,6 +9,7 @@ TagManager:
   - ItemResource
   - SwitchInteractible
   - FloorTile
+  - TerrainZone
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - UI2
   - Player
   - Ground
-  - 
-  - 
+  - PlayerInteractible
+  - Puzzle
   - 
   - 
   - 

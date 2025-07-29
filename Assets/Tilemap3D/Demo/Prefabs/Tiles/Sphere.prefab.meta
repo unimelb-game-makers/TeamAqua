@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cfe0c646acaa2da409a4dab9d77d1ae0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/Demo/Prefabs/Tiles/Sphere.prefab
+  uploadId: 592028

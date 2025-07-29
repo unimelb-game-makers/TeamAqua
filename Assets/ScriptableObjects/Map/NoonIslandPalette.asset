@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf10f08426e62949be8a3cc11b3c056, type: 3}
+  m_Name: NoonIslandPalette
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 8198cdd6b445a6ac2828de17e38a0fb2, type: 2}
+  - {fileID: 11400000, guid: 677dca2e840adcb319fc50ab957ae7a4, type: 2}
+  - {fileID: 11400000, guid: bf4291d9243fde74392063779af36f99, type: 2}
+  - {fileID: 11400000, guid: 14ce0ceae9ff9902881fc070a583497a, type: 2}
+  - {fileID: 11400000, guid: 832af6b889ca663de842407f00471acf, type: 2}
+  - {fileID: 11400000, guid: 270a456ea13a1a7e9aa422eee20812f4, type: 2}
+  - {fileID: 11400000, guid: 26d80299d040f38d4bb639142cf34494, type: 2}
+  - {fileID: 72429873930918705, guid: d94a03afd6ab3514fb29cdfbcc87f646, type: 3}
+  - {fileID: 8913085199439940955, guid: 446819cce0888dc3fa626cab8948386f, type: 3}
+  - {fileID: 3970281551903013953, guid: f7f62c6fb070a1287b02159f8f94dc32, type: 3}
+  - {fileID: 8147481549572727321, guid: bbc38fbd6666c8cb490c38ca1a008a84, type: 3}
+  - {fileID: 7402310714224701519, guid: a3e81ead505bb50b289772057bc68f5a, type: 3}
+  - {fileID: 5415110791323417675, guid: 892b60d1ac6ce43e89aefaa40531a371, type: 3}
+  - {fileID: 1982326377408030505, guid: ff614e0ed6c124a63a1a630b0e4c4817, type: 3}
+  - {fileID: 7426142145658668950, guid: 37b5163ccae0f41b6ac51540bc5e8641, type: 3}
+  - {fileID: 5106008328764374430, guid: 98be64690536d5650b76bc9995861d18, type: 3}
+  - {fileID: 115588131576398433, guid: 491d9d2d10e5fd46397b136af6752b84, type: 3}
+  - {fileID: 11400000, guid: 0d7eb60f2b521c26592e9cb14d5edb9f, type: 2}
+  - {fileID: 72429873930918705, guid: 75e0c0ebd592bf369bdac665490d8796, type: 3}
+  - {fileID: 11400000, guid: 164e6b78e2cbf0ffa9dd960223fa1dac, type: 2}
+  - {fileID: 20591058275146361, guid: 5173162b6913ab221a8efe2a3a2958f4, type: 3}
+  - {fileID: 5278509074090261418, guid: d96be2cd75618cda1bd4772aab414d61, type: 3}
+  - {fileID: 8142123902636051715, guid: 642b1c4d6db0cc99e9a42c1322c9e2dd, type: 3}
+  - {fileID: 4547403455447591897, guid: c7c4139a3946a51d2a877264fe81a416, type: 3}
+  - {fileID: 7908831818615272254, guid: 20580bcebdb289384845c5219935c7cf, type: 3}
+  - {fileID: 6065976671447033833, guid: e0257f2d270b7c1c5afe55872ff59f81, type: 3}
+  - {fileID: 6065976671447033833, guid: e0257f2d270b7c1c5afe55872ff59f81, type: 3}
+  - {fileID: 6491962460444119251, guid: 560efdab6c8cf5f90879105074ee88c2, type: 3}
+  - {fileID: 7722549307811644877, guid: cbe9dbb345ed98d0d8eefe04b6c6bb9d, type: 3}
+  - {fileID: 7041698632139488706, guid: 0e7f21d34fd7c63d5aa5a2baf99c5273, type: 3}
