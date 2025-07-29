@@ -68,6 +68,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private const string PLAYBGM = "PlayBGM";
     private const string STOPBGM = "StopBGM";
     private const string ADDQUEST = "AddQuest";
+    private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string SUBMITQUEST = "SubmitQuest";
     private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string CHANGECUTSCENE = "ChangeCutscene";
@@ -337,6 +338,13 @@ public class DialogueManager : MonoBehaviour, ISaveable
         else if (eventId.StartsWith(ADDQUEST))
         {
             QuestManager.instance.AddQuest(param);
+        }
+        else if (eventId.StartsWith(SUBMITQUESTSTEP))
+        {
+            string[] inputs = param.Split(',', 2);
+            string questID = inputs[0].Trim();
+            string questStep = inputs[1].Trim();
+            QuestManager.instance.SubmitQuestStep(questID, questStep);
         }
         else if (eventId.StartsWith(SUBMITQUEST))
         {

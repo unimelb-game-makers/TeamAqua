@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6dc934060e142679408e9d47c517be, type: 3}
+  m_Name: Ongoing Q1 Q2
+  m_EditorClassIdentifier: 
+  description: Quest 1 is ongoing, we spawn at the first beach orb and move our way
+    up to the second quest
+  checkpoint: {fileID: 11400000, guid: 1651896b2813d0c478c2a2fcb782f0ca, type: 2}
+  script: {fileID: 11400000, guid: 5e0827f22745f4e2b873c0616c071e87, type: 2}
+  dialogue: {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
+  ongoingQuests:
+  - {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
+  energy: 100
+  day: 1
+  puzzleCompleteData: []

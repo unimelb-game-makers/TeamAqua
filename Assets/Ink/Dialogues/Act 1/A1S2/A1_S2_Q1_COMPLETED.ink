@@ -1,5 +1,5 @@
 ===A1_S2_Q1_COMPLETED===
-EVENT:SubmitQuest:A1_S2_D1
+EVENT:SubmitQuest:A1_S2_Q1
 …? #speaker:Amelia #portrait:AmeliaSilly
 Amelia studies you like you’re an alien. #speaker:Narrator 
 It’d take twenty men to move that! How on earth did you—? #speaker:Amelia #portrait:AmeliaSilly

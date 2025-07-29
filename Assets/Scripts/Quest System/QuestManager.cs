@@ -202,6 +202,20 @@ public class QuestManager : MonoBehaviour, ISaveable
         tracker.state = state;
     }
 
+    public void SubmitQuestStep(string questID, string questStep)
+    {
+        if (!TryGetActiveQuest(questID, out QuestTracker tracker))
+            return;
+        for (int i = 0; i < tracker.steps.Count; i++)
+        {
+            if (questStep == tracker.steps[i].step.name)
+            {
+                CompleteStep(tracker.steps[i].step);
+                return;
+            }
+        }
+    }
+
     public void CompleteStep(QuestStep step)
     {
         // Go through all the possible step ids and mark it as completed
@@ -236,7 +250,6 @@ public class QuestManager : MonoBehaviour, ISaveable
             tracker.steps[i].state = QuestState.Submitted;
         }
         AddReward(tracker.quest);
-
         tracker.state = QuestState.Submitted;
     }
 
@@ -249,6 +262,25 @@ public class QuestManager : MonoBehaviour, ISaveable
                 quest.reward.item[i].amount
             );
         }
+    }
+
+    public bool IsSubQuest(Quest quest)
+    {
+        return quest.IsSubQuest;
+    }
+
+    public int CheckCompleteSubQuests()
+    {
+        int TotalSubquests = 0;
+        for (int i = 0; i < _quests.Count; i++)
+        {
+            // check if subquest is completed
+            if (_quests[i].state == QuestState.Submitted && _quests[i].quest.IsSubQuest == true)
+            {
+                TotalSubquests++;
+            }
+        }
+        return TotalSubquests;
     }
 
     public void CompletePuzzleStep(string puzzleId) { }

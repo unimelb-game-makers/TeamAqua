@@ -9,10 +9,10 @@ public class Day : ScriptableObject
 {
     [InlineEditor]
     public DialoguePool dialoguePool;
-    [InlineEditor] 
+
+    [InlineEditor]
     public WorldDatabase worldDatabase;
     public List<Quest> mainQuests;
-    public List<Quest> subQuests;
 
     public void Init()
     {
