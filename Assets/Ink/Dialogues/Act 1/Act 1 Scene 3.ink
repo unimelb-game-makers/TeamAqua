@@ -1,11 +1,3 @@
-EXTERNAL checkQuestStatus(id, steps)
-EXTERNAL TurnOffBarrier(id)
-EXTERNAL SwapBGM(new_id, old_id, FadeSpeed)
-EXTERNAL PlayBGM(id)
-EXTERNAL AddQuest(id)
-EXTERNAL SubmitQuest(questId)
-EXTERNAL SetNextDialogue(dialogueId)
-
 INCLUDE ../Globals/Globals.ink
 
 
@@ -68,7 +60,7 @@ Nothing! #speaker:amelia
 
 ===TakeQuest===
 Well, go on then. #speaker:amaya
-~ AddQuest(QUEST_1)
+EVENT:AddQuest:A1_S3_Q1
 ->DONE
 
 //solve puzzle, which then prompts the screen to fade and everyone’s now on the other side
@@ -78,7 +70,7 @@ I'm waiting! #speaker:amaya
 ->DONE
 
 ===completed_quest_1===
-~ SubmitQuest(QUEST_1)
+EVENT:SubmitQuest:A1_S3_Q1
 So you really can move them on your own… #speaker:amaya
 I know you Krakenfolk are strong, but I didn’t realize it’d be to this extent. 
 (There’s that term again!) #speaker:noelle
