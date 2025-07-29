@@ -66,9 +66,11 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private const string EVENT = "EVENT";
     private const string SWAPBGM = "SwapBGM";
     private const string PLAYBGM = "PlayBGM";
+    private const string STOPBGM = "StopBGM";
     private const string ADDQUEST = "AddQuest";
     private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string SUBMITQUEST = "SubmitQuest";
+    private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string CHANGECUTSCENE = "ChangeCutscene";
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
@@ -328,6 +330,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
         else if (eventId.StartsWith(PLAYBGM))
         {
             AudioManager.Instance.Play(param);
+        }
+        else if (eventId.StartsWith(STOPBGM))
+        {
+            AudioManager.Instance.Stop(param);
         }
         else if (eventId.StartsWith(ADDQUEST))
         {
