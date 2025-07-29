@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02dca348c276f48e7b1b704e3d91832a
+guid: 98bfda819f85df3459876cc5d6e5aecc
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -126,7 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,7 +139,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -479,22 +479,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      noelle_back_idle_0: 5451381084239453000
-      noelle_back_idle_1: -603750923219073920
-      noelle_back_idle_10: 3621197578367621188
-      noelle_back_idle_11: -5353291437015567129
-      noelle_back_idle_12: -1225847487179035479
-      noelle_back_idle_13: 8503074421138452275
-      noelle_back_idle_14: -1917744032591888796
-      noelle_back_idle_2: 1949164405263381532
-      noelle_back_idle_3: -4121288562549594019
-      noelle_back_idle_4: -1620978039540472092
-      noelle_back_idle_5: -2969677912561556305
-      noelle_back_idle_6: -8256690481922717544
-      noelle_back_idle_7: -6366655698297469364
-      noelle_back_idle_8: 3689915100628480850
-      noelle_back_idle_9: -4631562278156677008
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: A1S4.1_Orb 1
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogue: {fileID: 11400000, guid: d9de120e537db3240a14b5b5de3e7fd0, type: 2}
+  - dialogue: {fileID: 11400000, guid: 16e336d1c633b3440ad2bbfa1b431b74, type: 2}
     mode: 0

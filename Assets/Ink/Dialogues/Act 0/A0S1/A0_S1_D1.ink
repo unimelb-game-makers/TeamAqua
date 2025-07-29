@@ -1,5 +1,5 @@
 ===A0_S1_D1===
-//play ceremony
+//play ceremony track until cutscene ends
 EVENT:PlayBGM:BGM_CUTSCENE_CEREMONY
 A birthday tune is hummed as you sit around a campfire with your family, embers floating by your feet. #cutscene:A0S1
 “We are gathered here today to celebrate the coming of age of our dear Noelle. Next in line to the Tempest family name,” #cutscene:A0S2
@@ -31,7 +31,6 @@ Your mother’s expression twists into something deeper than anger. #cutscene:A0
 “No, that’s impossible!”
 “At this point, anything is.”
 A chill runs down your spine as your mother turns to you. #cutscene:A0S15
-//track changes from royal to ominous here? Can fade out with a doom SFX
 “Now listen here, this is what happened—” 
 “Our darling Noelle was moments away from completing her coming of age ritual when a vicious monster attacked.”
 “The creature was ultimately slain by yours truly, but at the tragic cost of our daughter’s life.”
@@ -60,4 +59,5 @@ A giant wave crashes down— #cutscene:A0S23
 And everything goes black. #cutscene:A0S24
 //end ceremony bgm
 EVENT:StopBGM:BGM_CUTSCENE_CEREMONY
+//load into dream scene next
 ->DONE

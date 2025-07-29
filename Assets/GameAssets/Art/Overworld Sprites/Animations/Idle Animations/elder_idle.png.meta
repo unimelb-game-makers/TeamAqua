@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3b6d9d36885f45c1b6cb47ca01a9519
+guid: 2c9fc60f34de93a4c8d88ee9ee02d308
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -126,7 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,7 +139,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -479,22 +479,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      elder_idle_0: 7287866432882177755
-      elder_idle_1: 4469800222449640914
-      elder_idle_10: -831730002146378407
-      elder_idle_11: -6031251128362561273
-      elder_idle_12: 8119937238209695038
-      elder_idle_13: 7430149447006408178
-      elder_idle_14: 5198949279116444538
-      elder_idle_2: 6645787532553503069
-      elder_idle_3: 7905216406940316274
-      elder_idle_4: -5624260226643458261
-      elder_idle_5: 76931814700466211
-      elder_idle_6: -4047999631719643519
-      elder_idle_7: 2847881149123008090
-      elder_idle_8: -6672341518151895001
-      elder_idle_9: -1129153204444988766
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

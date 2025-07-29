@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0259433ed40ed439ab0c68f3e465f1e7
+guid: 8fcb974d5beb58449b7e682398fb4889
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -90,7 +90,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -103,7 +103,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -191,10 +191,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Elder_Angry_0: -3158395918928052142
-      Elder_Angry_1: -5547176984712759465
-      Elder_Angry_2: -9142810477191833701
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

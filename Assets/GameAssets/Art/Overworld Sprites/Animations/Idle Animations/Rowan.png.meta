@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e0f642d3c0f2497ca23a686f00b7dd7
+guid: d82c9f76bd435a74ea4feabb7037f136
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -93,7 +93,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -106,7 +106,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -215,11 +215,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Rowan_0: -9185397852184772472
-      Rowan_1: -3966931196583433128
-      Rowan_2: 3279665258264527547
-      Rowan_3: 2325857568734575551
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

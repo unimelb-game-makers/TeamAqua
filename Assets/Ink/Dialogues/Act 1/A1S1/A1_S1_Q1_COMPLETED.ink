@@ -1,38 +1,21 @@
-==A1_S1_Q1_COMPLETED===
-Narrator: Would you like to finish this quest?  
-    +[Finish quest?]  
-    -> CompleteQuest   
-    +[Not yet #done]  
-    -> DONE  
-->DONE  
+===A1_S1_Q1_COMPLETED===
+Narrator: Would you like to finish this quest?
++[Finish quest.]
+    -> CompleteQuestA1S1
++[Not yet.]
+    -> DONE
 
-===CompleteQuest===  
-EVENT:SubmitQuest:A1_S1_Q1  //~ SubmitQuest(QUEST_1)  
-//UPON SUBMISSION OF 10 BERRIES TO AMELIA, next part continues.  
-Narrator: After you get the ten berries you need, you return back to Amelia, who's sitting on the sand next to the wreckage of your ship.  
-Amelia: Please tell me you got me something edible.  
-Noelle: I think so? The fruit's a lot different around here compared to home.  
-Amelia: Huh. And where is your home?  
-Noelle: Dusk Island. It was until recently anyway…  
-Amelia: Sorry to hear about that. Is that why you were on the ship when the storms—  
-Amelia: …While I would love to keep chatting, gimme the berries, quickly!  
-Narrator: You hand over the berries, and Amelia hastily gobbles it all down, seeds, stems, skin and all.  
-Noelle: You must have been pretty hungry…  
-Amelia: That hit the spot! Anyway, see ya—  
-Noelle: Wait! I thought you said—  
-Amelia: I know what I said. But the reality is, I still barely know you. And if you can find that many berries in a short span of time, I'm sure you'll be able to survive fine on your own. I don't really travel in groups. Like ever. Period.  
-Noelle: But we had an agreement—  
-//add in a flash across the screen like lightning, start rain for 1 minute. audio lightningflash and ambience-audio rain at the same time  
-Narrator: The haunting roar of a monstrous beast echoes throughout the island. Whatever you had to say is forgotten in the moment. Rain begins to fall. Amelia looks up in horror.  
-Amelia: The Great Disaster…  
-Noelle: What—  
-Amelia: How long do you think it will take for us to build a new ship and escape the flood?  
-Noelle: I dunno— I haven't really built a ship on my own before.  
-Amelia: However long you think we need, cut that time in half. We need to hurry. Now.  
-Noelle: We?  
-Amelia: Yep. Change of plans, I'm coming with you.  
-Noelle: But why?  
-Amelia: Isn't that obvious? To survive the floods. Now come on, we need to go.  
-Narrator: Amelia nudges your hand, and leads you toward the forests deeper in-land.  
-~ quest_state = "SUBMITTED"
-->DONE  
+===CompleteQuestA1S1===
+EVENT:SubmitQuest:A1_S1_Q1
+//after submitting 10 berries to amelia
+Narrator: You return to Amelia with berries in hand. After sniffing them to make sure they're good, the dragon gulps them down, stem and all.
+Noelle: Did that suffice? #portrait:NoelleSmallSmile
+Amelia: Yeah. Did you get some for yourself? #portrait:AmeliaNeutral
+Noelle: Um, no… #portrait:NoelleUm
+Amelia: You should grab some as a snack. The walk up to the Viridi settlement is quite a trek. #portrait:AmeliaNeutral
+Noelle: So you'll join me? #portrait:NoelleSmallSmile
+Amelia: Might as well. I haven't visited the settlements in a while. And with the floods due soon, it'd be good to figure out where to go for shelter, next. #portrait:AmeliaNeutral
+Noelle: (Dusk sails for weeks until the Great Floods subside... So surely this island has their methods for getting through it, too.) #portrait:NoelleSkeptical
+Noelle: (All things considered, my situation could've been a lot worse after last night.) #portrait:NoelleSmallSmile
+Noelle: (And for the first ‘monster’ I’ve met… This creature doesn’t seem too bad at all.) #portrait:NoelleSmallSmile
+->DONE

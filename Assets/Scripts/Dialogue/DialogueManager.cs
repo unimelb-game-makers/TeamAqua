@@ -68,7 +68,6 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private const string PLAYBGM = "PlayBGM";
     private const string STOPBGM = "StopBGM";
     private const string ADDQUEST = "AddQuest";
-    private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string SUBMITQUEST = "SubmitQuest";
     private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string CHANGECUTSCENE = "ChangeCutscene";

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c46f432ebee114d28b93444bfbd32bbb
+guid: 56a98a63a927e2848858ef7f48489399
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -117,7 +117,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -130,7 +130,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -407,19 +407,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      NPC_4_0: 6520936677976288497
-      NPC_4_1: -3154794107873495799
-      NPC_4_10: -6548890778411664265
-      NPC_4_11: 7701140697796232470
-      NPC_4_2: 7136776023675228296
-      NPC_4_3: -2885051442067855518
-      NPC_4_4: 8598862035824900547
-      NPC_4_5: 2980856170115206387
-      NPC_4_6: 1976216517887099916
-      NPC_4_7: -6128682096654982143
-      NPC_4_8: -5851670953611841334
-      NPC_4_9: 6829558813400540104
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
