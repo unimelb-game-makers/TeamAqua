@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: e3b6d9d36885f45c1b6cb47ca01a9519
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7287866432882177755
+    second: elder_idle_0
+  - first:
+      213: 4469800222449640914
+    second: elder_idle_1
+  - first:
+      213: 6645787532553503069
+    second: elder_idle_2
+  - first:
+      213: 7905216406940316274
+    second: elder_idle_3
+  - first:
+      213: -5624260226643458261
+    second: elder_idle_4
+  - first:
+      213: 76931814700466211
+    second: elder_idle_5
+  - first:
+      213: -4047999631719643519
+    second: elder_idle_6
+  - first:
+      213: 2847881149123008090
+    second: elder_idle_7
+  - first:
+      213: -6672341518151895001
+    second: elder_idle_8
+  - first:
+      213: -1129153204444988766
+    second: elder_idle_9
+  - first:
+      213: -831730002146378407
+    second: elder_idle_10
+  - first:
+      213: -6031251128362561273
+    second: elder_idle_11
+  - first:
+      213: 8119937238209695038
+    second: elder_idle_12
+  - first:
+      213: 7430149447006408178
+    second: elder_idle_13
+  - first:
+      213: 5198949279116444538
+    second: elder_idle_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elder_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 659
+        width: 157
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd67f6e68e3b32560800000000000000
+      internalID: 7287866432882177755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 989
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5a21cce9be70e30800000000000000
+      internalID: 4469800222449640914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_2
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 659
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51429acc849a3c50800000000000000
+      internalID: 6645787532553503069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 989
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27274404078f4bd60800000000000000
+      internalID: 7905216406940316274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_4
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 989
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b270f8a5f1d92f1b0800000000000000
+      internalID: -5624260226643458261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_5
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 659
+        width: 158
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320c52fe311511100800000000000000
+      internalID: 76931814700466211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_6
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 989
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186407c38cd92d7c0800000000000000
+      internalID: -4047999631719643519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_7
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 659
+        width: 157
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56120001d4b58720800000000000000
+      internalID: 2847881149123008090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 329
+        width: 157
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7283776adb41763a0800000000000000
+      internalID: -6672341518151895001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aaff00a4217450f0800000000000000
+      internalID: -1129153204444988766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_10
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95db70148f91574f0800000000000000
+      internalID: -831730002146378407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 329
+        width: 157
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70196cebd01bc4ca0800000000000000
+      internalID: -6031251128362561273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_12
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 0
+        width: 157
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d84f995efcfa070800000000000000
+      internalID: 8119937238209695038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_13
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 329
+        width: 157
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fdc1e03e813d1760800000000000000
+      internalID: 7430149447006408178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elder_idle_14
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 329
+        width: 157
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73420bf2d0662840800000000000000
+      internalID: 5198949279116444538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      elder_idle_0: 7287866432882177755
+      elder_idle_1: 4469800222449640914
+      elder_idle_10: -831730002146378407
+      elder_idle_11: -6031251128362561273
+      elder_idle_12: 8119937238209695038
+      elder_idle_13: 7430149447006408178
+      elder_idle_14: 5198949279116444538
+      elder_idle_2: 6645787532553503069
+      elder_idle_3: 7905216406940316274
+      elder_idle_4: -5624260226643458261
+      elder_idle_5: 76931814700466211
+      elder_idle_6: -4047999631719643519
+      elder_idle_7: 2847881149123008090
+      elder_idle_8: -6672341518151895001
+      elder_idle_9: -1129153204444988766
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

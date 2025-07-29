@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 02dca348c276f48e7b1b704e3d91832a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5451381084239453000
+    second: noelle_back_idle_0
+  - first:
+      213: -603750923219073920
+    second: noelle_back_idle_1
+  - first:
+      213: 1949164405263381532
+    second: noelle_back_idle_2
+  - first:
+      213: -4121288562549594019
+    second: noelle_back_idle_3
+  - first:
+      213: -1620978039540472092
+    second: noelle_back_idle_4
+  - first:
+      213: -2969677912561556305
+    second: noelle_back_idle_5
+  - first:
+      213: -8256690481922717544
+    second: noelle_back_idle_6
+  - first:
+      213: -6366655698297469364
+    second: noelle_back_idle_7
+  - first:
+      213: 3689915100628480850
+    second: noelle_back_idle_8
+  - first:
+      213: -4631562278156677008
+    second: noelle_back_idle_9
+  - first:
+      213: 3621197578367621188
+    second: noelle_back_idle_10
+  - first:
+      213: -5353291437015567129
+    second: noelle_back_idle_11
+  - first:
+      213: -1225847487179035479
+    second: noelle_back_idle_12
+  - first:
+      213: 8503074421138452275
+    second: noelle_back_idle_13
+  - first:
+      213: -1917744032591888796
+    second: noelle_back_idle_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: noelle_back_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 195
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b5065a63237ab40800000000000000
+      internalID: 5451381084239453000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 196
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08486b0fbbb0f97f0800000000000000
+      internalID: -603750923219073920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 821
+        width: 196
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c143f8013b2dc0b10800000000000000
+      internalID: 1949164405263381532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 547
+        width: 197
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58e95c43ed3ec6c0800000000000000
+      internalID: -4121288562549594019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 821
+        width: 196
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e62b74bf012189e0800000000000000
+      internalID: -1620978039540472092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_5
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 547
+        width: 197
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4e17c2ca599c6d0800000000000000
+      internalID: -2969677912561556305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_6
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 821
+        width: 196
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898c5a4a0c75a6d80800000000000000
+      internalID: -8256690481922717544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_7
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 547
+        width: 196
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4643c7df5815a7a0800000000000000
+      internalID: -6366655698297469364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 195
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2537f48eb36353330800000000000000
+      internalID: 3689915100628480850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 195
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0705f57a5a269bfb0800000000000000
+      internalID: -4631562278156677008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_10
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 273
+        width: 196
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4485b18f204114230800000000000000
+      internalID: 3621197578367621188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 196
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4fb8d0dc945b5b0800000000000000
+      internalID: -5353291437015567129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 273
+        width: 196
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac63e9843aecfee0800000000000000
+      internalID: -1225847487179035479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_13
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 0
+        width: 196
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33feaa2822df00670800000000000000
+      internalID: 8503074421138452275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noelle_back_idle_14
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 273
+        width: 196
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e3c3786fdc265e0800000000000000
+      internalID: -1917744032591888796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      noelle_back_idle_0: 5451381084239453000
+      noelle_back_idle_1: -603750923219073920
+      noelle_back_idle_10: 3621197578367621188
+      noelle_back_idle_11: -5353291437015567129
+      noelle_back_idle_12: -1225847487179035479
+      noelle_back_idle_13: 8503074421138452275
+      noelle_back_idle_14: -1917744032591888796
+      noelle_back_idle_2: 1949164405263381532
+      noelle_back_idle_3: -4121288562549594019
+      noelle_back_idle_4: -1620978039540472092
+      noelle_back_idle_5: -2969677912561556305
+      noelle_back_idle_6: -8256690481922717544
+      noelle_back_idle_7: -6366655698297469364
+      noelle_back_idle_8: 3689915100628480850
+      noelle_back_idle_9: -4631562278156677008
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

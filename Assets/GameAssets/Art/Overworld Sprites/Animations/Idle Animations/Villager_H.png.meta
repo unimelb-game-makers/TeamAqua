@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 5ec4b486c29224a8ea0af2b42692ceef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3217635670975841428
+    second: Villager_H_0
+  - first:
+      213: 5651100216641818999
+    second: Villager_H_1
+  - first:
+      213: -5262416728408050859
+    second: Villager_H_2
+  - first:
+      213: 6367403100218397816
+    second: Villager_H_3
+  - first:
+      213: -6836888069940968997
+    second: Villager_H_4
+  - first:
+      213: -3638415686667723889
+    second: Villager_H_5
+  - first:
+      213: 1661520014509176737
+    second: Villager_H_6
+  - first:
+      213: -1413346873386633298
+    second: Villager_H_7
+  - first:
+      213: 8670399590056873486
+    second: Villager_H_8
+  - first:
+      213: 4285220957701942788
+    second: Villager_H_9
+  - first:
+      213: 9090398850564431488
+    second: Villager_H_10
+  - first:
+      213: -8785930507686055677
+    second: Villager_H_11
+  - first:
+      213: -152171505487892775
+    second: Villager_H_12
+  - first:
+      213: -7690129616014997090
+    second: Villager_H_13
+  - first:
+      213: -7992036698540035904
+    second: Villager_H_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Villager_H_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 803
+        width: 86
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bfbdea769a853d0800000000000000
+      internalID: -3217635670975841428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 535
+        width: 89
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771911bc4bdbc6e40800000000000000
+      internalID: 5651100216641818999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 803
+        width: 87
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5533a23fdd328f6b0800000000000000
+      internalID: -5262416728408050859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 535
+        width: 89
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8741d3a326f8d5850800000000000000
+      internalID: 6367403100218397816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_4
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 803
+        width: 88
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd10016168e7e11a0800000000000000
+      internalID: -6836888069940968997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 535
+        width: 88
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b16fac530c18dc0800000000000000
+      internalID: -3638415686667723889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 803
+        width: 88
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7750c66a7ee0710800000000000000
+      internalID: 1661520014509176737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 535
+        width: 87
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea77163c188c26ce0800000000000000
+      internalID: -1413346873386633298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 267
+        width: 86
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e480a4d72735870800000000000000
+      internalID: 8670399590056873486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 86
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e22e7c1c9287b30800000000000000
+      internalID: 4285220957701942788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 267
+        width: 87
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e13827795972e70800000000000000
+      internalID: 9090398850564431488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 86
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301fa1cc0ca121680800000000000000
+      internalID: -8785930507686055677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_12
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 267
+        width: 87
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de257e62d063edf0800000000000000
+      internalID: -152171505487892775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 86
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9907b8bbdb274590800000000000000
+      internalID: -7690129616014997090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager_H_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 267
+        width: 86
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0b2af57f4961190800000000000000
+      internalID: -7992036698540035904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Villager_H_0: -3217635670975841428
+      Villager_H_1: 5651100216641818999
+      Villager_H_10: 9090398850564431488
+      Villager_H_11: -8785930507686055677
+      Villager_H_12: -152171505487892775
+      Villager_H_13: -7690129616014997090
+      Villager_H_14: -7992036698540035904
+      Villager_H_2: -5262416728408050859
+      Villager_H_3: 6367403100218397816
+      Villager_H_4: -6836888069940968997
+      Villager_H_5: -3638415686667723889
+      Villager_H_6: 1661520014509176737
+      Villager_H_7: -1413346873386633298
+      Villager_H_8: 8670399590056873486
+      Villager_H_9: 4285220957701942788
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
