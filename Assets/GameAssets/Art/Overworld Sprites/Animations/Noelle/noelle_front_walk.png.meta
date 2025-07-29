@@ -138,19 +138,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -479,22 +466,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      noelle_front_walk_0: 7538436329306257981
-      noelle_front_walk_1: -7498282516713792341
-      noelle_front_walk_10: -7979554586465333860
-      noelle_front_walk_11: 8091434496676995299
-      noelle_front_walk_12: 3386727215205159087
-      noelle_front_walk_13: 7344221960711913263
-      noelle_front_walk_14: 1698166528637066727
-      noelle_front_walk_2: 5876775862986115912
-      noelle_front_walk_3: 40865374798034149
-      noelle_front_walk_4: -4135916946944815596
-      noelle_front_walk_5: 40138872995202595
-      noelle_front_walk_6: -3553598958079892541
-      noelle_front_walk_7: -7373551653839514385
-      noelle_front_walk_8: -3218578487830525482
-      noelle_front_walk_9: 5690895508525523801
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

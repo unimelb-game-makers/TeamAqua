@@ -138,19 +138,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -479,22 +466,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Miserable_Guy_0: -1904327534384178812
-      Miserable_Guy_1: -1440479251814759262
-      Miserable_Guy_10: -1346552780263901765
-      Miserable_Guy_11: 2908182402567138035
-      Miserable_Guy_12: -1762766003663411132
-      Miserable_Guy_13: 8033378283480632943
-      Miserable_Guy_14: -6429672071428244904
-      Miserable_Guy_2: 1460766189097590890
-      Miserable_Guy_3: 3396469217402081552
-      Miserable_Guy_4: -424199137381614133
-      Miserable_Guy_5: 7203085976228754246
-      Miserable_Guy_6: -4917223386457701864
-      Miserable_Guy_7: -3802715284193554676
-      Miserable_Guy_8: -2719904985987150560
-      Miserable_Guy_9: -5791590936189069568
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

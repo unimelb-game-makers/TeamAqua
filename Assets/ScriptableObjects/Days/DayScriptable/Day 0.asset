@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 920f6576d22bb4495acc8eed321e1b35, type: 3}
-  m_Name: Start
+  m_Script: {fileID: 11500000, guid: 8f3a0a0995c422340b474aef8284b5b7, type: 3}
+  m_Name: Day 0
   m_EditorClassIdentifier: 
-  position: {x: -6.4, y: 0.3, z: -3.093}
+  dialoguePool: {fileID: 11400000, guid: 789d0ada861994bff9a4065cb57cf3e5, type: 2}
+  worldDatabase: {fileID: 11400000, guid: 9d1f3259b4141419e82d72e5def77718, type: 2}
+  mainQuests: []
