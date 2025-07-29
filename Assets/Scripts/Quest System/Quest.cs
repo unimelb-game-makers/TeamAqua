@@ -14,6 +14,9 @@ public class Quest : DialogueNode
     public List<QuestStep> steps = new List<QuestStep>();
     public QuestReward reward;
 
+    [ShowInInspector]
+    public bool IsSubQuest;
+
     public QuestStep GetStep(string id)
     {
         for (int i = 0; i < steps.Count; ++i)

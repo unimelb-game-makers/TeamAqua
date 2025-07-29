@@ -11,5 +11,5 @@ Ugh, this thing again...  Looks like we’ll need to go around it. #speaker:Amel
 You? Solving these ancient ruins? Do you know how heavy those blocks are? #speaker:Amelia #portrait:AmeliaHostile
 …Knock yourself out, I suppose. #portrait:AmeliaNormal
 //puzzle tutorial appears here. Player gets to solve it. After which dialogue continues
-EVENT:AddQuest:A1_S2_D1
+EVENT:AddQuest:A1_S2_Q1
 ->DONE
