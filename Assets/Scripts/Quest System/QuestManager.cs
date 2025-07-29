@@ -264,11 +264,9 @@ public class QuestManager : MonoBehaviour, ISaveable
         }
     }
 
-    public bool CheckSubquest(Quest quest)
+    public bool IsSubQuest(Quest quest)
     {
-        if (quest.IsSubQuest == true)
-            return true;
-        return false;
+        return quest.IsSubQuest;
     }
 
     public int CheckCompleteSubQuests()
