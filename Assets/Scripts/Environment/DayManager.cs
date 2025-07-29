@@ -51,6 +51,7 @@ public class DayManager : MonoBehaviour, ISaveable
 
     // World Data
     private WorldData _worldData = new();
+    Day currentDay;
 
     private void Awake()
     {
@@ -79,7 +80,7 @@ public class DayManager : MonoBehaviour, ISaveable
             Debug.LogWarning($"NPC {npc.name} does not have an ID!");
             return;
         }
-        Day currentDay = dayDatabase.GetDay(_currentDay);
+        currentDay = dayDatabase.GetDay(_currentDay);
         npc.gameObject.SetActiveFast(currentDay.worldDatabase.CanEnable(npc.id));
         _worldData.npcs.Add(npc.id, npc);
 
@@ -123,6 +124,14 @@ public class DayManager : MonoBehaviour, ISaveable
         }
     }
 
+    private void CheckQuests()
+    {
+        if (currentDay.CheckMainQuests())
+            SetNight(true);
+        else
+            SetNight(false);
+    }
+
     private void FixedUpdate()
     {
         if (shouldChangeColor && firstTime)
@@ -133,6 +142,7 @@ public class DayManager : MonoBehaviour, ISaveable
 
     public bool CanChangeDay()
     {
+        CheckQuests();
         return isNight;
     }
 

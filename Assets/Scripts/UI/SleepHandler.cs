@@ -19,17 +19,6 @@ public class Ship : MonoBehaviour
         uiPanel.SetActive(false);
     }
 
-    /* SLEEP IDEA
-    Sleep handler script attached to player
-    - list of sleepable game objectsa
-    - on trigger check if its in the list
-    - check other conditions (quests)
-    - turn on sleep ui
-    - sleep
-    
-    
-     */
-
     private void Update()
     {
         if (_nearPlayer && DayManager.instance.CanChangeDay() && Input.GetKeyDown(KeyCode.E))
