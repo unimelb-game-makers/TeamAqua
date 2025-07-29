@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
-{
+{   
+    // Camera Manager Variables
     public static CameraManager instance;
 
-    public GameObject[] cameras;
+    public CameraData[] cameras;
 
-    public int currentCamera = 0;
+    public CameraData.CameraAngle currentAngle;
 
     private void Awake()
     {
@@ -25,26 +27,24 @@ public class CameraManager : MonoBehaviour
 
     private void Start() 
     {
-        SetCamera(currentCamera);
+        SetCamera(currentAngle);
     }
 
     // Set follow and aim for each camera at player
     public void SetPlayer(PlayerController player){
-        foreach(GameObject camOBJ in cameras){
-            CinemachineVirtualCamera vc = camOBJ.GetComponent<CinemachineVirtualCamera>();
-            vc.LookAt = player.transform;
-            vc.Follow = player.transform;
+        foreach(CameraData camOBJ in cameras){
+            camOBJ.SetPlayer(player.transform);
         }
     }
 
-    public void SetCamera(int idx){
-        currentCamera = idx;
+    // Go through the cameras and activate the one we want, and deactivate the rest.
+    public void SetCamera(CameraData.CameraAngle angle){
+        currentAngle = angle;
         for(int i = 0; i<cameras.Length; i++){
-            if(i == idx)
-                cameras[i].SetActive(true);
+            if(cameras[i].angle == angle)
+                cameras[i].SetCameraActive(true);
             else
-                cameras[i].SetActive(false);
-
+                cameras[i].SetCameraActive(false);
         }
     }
 }

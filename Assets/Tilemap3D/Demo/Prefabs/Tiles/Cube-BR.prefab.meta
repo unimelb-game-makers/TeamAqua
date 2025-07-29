@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2873b1f4d62774d468d5dc73c1143d0f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/Demo/Prefabs/Tiles/Cube-BR.prefab
+  uploadId: 592028

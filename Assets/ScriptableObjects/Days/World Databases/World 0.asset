@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03cf904e2f6e64abbbbaea778f82e168, type: 3}
   m_Name: World 0
   m_EditorClassIdentifier: 
+<<<<<<<< HEAD:Assets/ScriptableObjects/Days/World Databases/World 0.asset
   npcIds: []
+========
+  dialoguePool: {fileID: 11400000, guid: 789d0ada861994bff9a4065cb57cf3e5, type: 2}
+<<<<<<< HEAD
+=======
+  worldDatabase: {fileID: 11400000, guid: 4c9f5512a876746b697c212e5a242cf3, type: 2}
+>>>>>>> main
+  mainQuests: []
+  subQuests: []
+>>>>>>>> refs/remotes/origin/update/map-update:Assets/ScriptableObjects/Days/DayScriptable/Day 0.asset

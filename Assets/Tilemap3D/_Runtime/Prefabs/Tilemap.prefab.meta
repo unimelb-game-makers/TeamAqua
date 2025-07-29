@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6ee2c861176314a448e59afaea823acb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/_Runtime/Prefabs/Tilemap.prefab
+  uploadId: 592028

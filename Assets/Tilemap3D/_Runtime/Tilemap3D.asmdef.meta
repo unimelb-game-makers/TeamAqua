@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 24d15f88f3bba9a41b5e64dd22c759d9
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246118
+  packageName: Tilemap 3D
+  packageVersion: 1.0.1
+  assetPath: Assets/Tilemap3D/_Runtime/Tilemap3D.asmdef
+  uploadId: 592028

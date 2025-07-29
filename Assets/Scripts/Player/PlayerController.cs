@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour, ISaveable
         {
             moveDirection = Vector3.zero;
             anim.ChangeAnimationState("Idle");
+            moveDirection = Vector3.zero;
             //AudioManager.Instance.Stop("BGM_SFX_WALKING");
         }
         
