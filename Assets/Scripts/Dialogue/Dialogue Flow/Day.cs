@@ -12,7 +12,7 @@ public class Day : ScriptableObject
 
     [InlineEditor]
     public WorldDatabase worldDatabase;
-    public List<Quest> mainQuests;
+    public List<Quest> allQuests;
 
     public void Init()
     {
@@ -33,5 +33,20 @@ public class Day : ScriptableObject
     public void Exit(WorldData worldData)
     {
         worldDatabase.Disable(worldData);
+    }
+
+    public bool CheckMainQuests()
+    {
+        for (int i = 0; i < allQuests.Count; i++)
+        {
+            if (allQuests[i].IsSubQuest == false)
+            {
+                if (!QuestManager.instance.IsSubmitted(allQuests[i].name))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

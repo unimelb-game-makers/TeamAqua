@@ -48,7 +48,7 @@ public class DayManager : MonoBehaviour, ISaveable
     private Light directionalLight;
     private static readonly int Exposure = Shader.PropertyToID("_Exposure");
     private Material _runtimeSkyboxMaterial;
-    
+
     // World Data
     private WorldData _worldData = new();
 
@@ -95,10 +95,10 @@ public class DayManager : MonoBehaviour, ISaveable
     {
         // Reset the world data each time
         _worldData = new WorldData();
-        
+
         // Init the day database
         dayDatabase.Init();
-        
+
         _currentDay = saveSlot.worldSaveData.currentDay;
         _worldData.ameliaSavePosition = saveSlot.worldSaveData.ameliaPosition;
 
@@ -141,15 +141,15 @@ public class DayManager : MonoBehaviour, ISaveable
         // Uninitialise the current day
         Day previousDay = dayDatabase.GetDay(_currentDay);
         previousDay.Exit(_worldData);
-        
+
         // Change days
         OnDayChanged?.Invoke(_currentDay);
         _currentDay += 1;
-        
+
         // Initialise the next day
         Day nextDay = dayDatabase.GetDay(_currentDay);
         nextDay.Enter(_worldData);
-        
+
         // Notify other managers
         DialogueManager.instance.SetDay(_currentDay); // _currentDay starts index at 1
         SetNight(false);

@@ -1,9 +1,14 @@
+using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
     public GameObject uiPanel;
     private bool _nearPlayer = false;
+
+    [ShowInInspector]
+    public List<GameObject> SleepSpots;
 
     private void Start()
     {
@@ -14,16 +19,40 @@ public class Ship : MonoBehaviour
         uiPanel.SetActive(false);
     }
 
+    /* SLEEP IDEA
+    Sleep handler script attached to player
+    - list of sleepable game objectsa
+    - on trigger check if its in the list
+    - check other conditions (quests)
+    - turn on sleep ui
+    - sleep
+    
+    
+     */
+
     private void Update()
     {
         if (_nearPlayer && DayManager.instance.CanChangeDay() && Input.GetKeyDown(KeyCode.E))
             DayManager.instance.StartNewDay();
     }
 
+    private bool CanSleep(GameObject other)
+    {
+        for (int i = 0; i < SleepSpots.Count; i++)
+        {
+            if (other == SleepSpots[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && DayManager.instance.CanChangeDay())
         {
+            CanSleep(other.gameObject);
             _nearPlayer = true;
             uiPanel.SetActive(true);
         }
