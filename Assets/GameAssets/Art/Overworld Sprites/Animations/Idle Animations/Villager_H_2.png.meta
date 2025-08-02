@@ -287,7 +287,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Villager_H_2_0: 7179550506993080638
+      Villager_H_2_1: -9111931593748568936
+      Villager_H_2_2: -4934115004449089803
+      Villager_H_2_3: -2797287731589447584
+      Villager_H_2_4: -1394617492584003784
+      Villager_H_2_5: -5213415429640835562
+      Villager_H_2_6: -473868492893993276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Noelle_Default_0: -4848698889211978410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -479,7 +479,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      noelle_back_walk_0: 1488554585798758007
+      noelle_back_walk_1: 7922004877648534868
+      noelle_back_walk_10: 8457042075957458146
+      noelle_back_walk_11: -3110940342520686450
+      noelle_back_walk_12: -3577226200262994145
+      noelle_back_walk_13: -3581766884836072737
+      noelle_back_walk_14: -2612309752668600592
+      noelle_back_walk_2: -6697042026125068497
+      noelle_back_walk_3: -4432286221648497602
+      noelle_back_walk_4: 552395408458930141
+      noelle_back_walk_5: -992290268133611175
+      noelle_back_walk_6: -3619871373369609467
+      noelle_back_walk_7: 1942048117399860335
+      noelle_back_walk_8: 191000895091801221
+      noelle_back_walk_9: 8161368182956829319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

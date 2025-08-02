@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Noelle_Angry_0: 1443177432020307982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

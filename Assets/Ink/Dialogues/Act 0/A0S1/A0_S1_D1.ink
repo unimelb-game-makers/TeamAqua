@@ -60,4 +60,5 @@ And everything goes black. #cutscene:A0S24
 //end ceremony bgm
 EVENT:StopBGM:BGM_CUTSCENE_CEREMONY
 //load into dream scene next
+EVENT:ChangeCutscene:DreamIsland
 ->DONE

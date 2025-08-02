@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      viridi_five_Sprite_0: 5370871828515876020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

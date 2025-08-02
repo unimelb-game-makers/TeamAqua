@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      viridi_two_sprite_0: -1447154665976829779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cilian_Sprite_0: 5558510869443042073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
