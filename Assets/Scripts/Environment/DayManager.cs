@@ -91,7 +91,7 @@ public class DayManager : MonoBehaviour, ISaveable
         _worldData.npcs.Add(npc.id, npc);
 
         // If the NPC is Amelia, then we want to store it differently and set their position
-        if (npc.GetType() == typeof(Amelia))
+        if (npc.GetType() == typeof(Amelia) && _worldData.ameliaSavePosition != Vector3.zero)
         {
             _worldData.amelia = (Amelia)npc;
             npc.transform.position = _worldData.ameliaSavePosition;
