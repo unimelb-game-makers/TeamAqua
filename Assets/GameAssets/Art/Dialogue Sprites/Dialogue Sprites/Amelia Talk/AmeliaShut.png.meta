@@ -167,7 +167,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmeliaShut_0: -8348845934684354894
+      AmeliaShut_1: 3296071036736349834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

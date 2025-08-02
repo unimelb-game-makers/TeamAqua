@@ -1607,7 +1607,69 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Noelle_Idle_0: -5980161306769745637
+      Noelle_Idle_1: -6913438889786837843
+      Noelle_Idle_10: -7036980956516662188
+      Noelle_Idle_11: -5397243925097547247
+      Noelle_Idle_12: -3966268041224770929
+      Noelle_Idle_13: -269095171213370698
+      Noelle_Idle_14: -7171824519256913522
+      Noelle_Idle_15: -8412413397980960721
+      Noelle_Idle_16: 1534614693570790909
+      Noelle_Idle_17: 2356366404209466575
+      Noelle_Idle_18: -4599819881674805051
+      Noelle_Idle_19: 3926371435767898373
+      Noelle_Idle_2: -280509502587078937
+      Noelle_Idle_20: 3407062872682731274
+      Noelle_Idle_21: 3241252777902792575
+      Noelle_Idle_22: 7289403456853124913
+      Noelle_Idle_23: -3285411420151882904
+      Noelle_Idle_24: 8853718719098924325
+      Noelle_Idle_25: -3207812209700577201
+      Noelle_Idle_26: 5580635483173924157
+      Noelle_Idle_27: -7198093748355064465
+      Noelle_Idle_28: -1131362595952643845
+      Noelle_Idle_29: 1208271149072348710
+      Noelle_Idle_3: -8883150889589443245
+      Noelle_Idle_30: 7652764512531625465
+      Noelle_Idle_31: 221936278684792031
+      Noelle_Idle_32: 6491700202205872070
+      Noelle_Idle_33: 7979470518215151642
+      Noelle_Idle_34: -2875824709983674064
+      Noelle_Idle_35: -657876731515888161
+      Noelle_Idle_36: 8222166425940619129
+      Noelle_Idle_37: 7395577883868766633
+      Noelle_Idle_38: 7442356290493597621
+      Noelle_Idle_39: 5754134265474592145
+      Noelle_Idle_4: 6149142246027644003
+      Noelle_Idle_40: 6921837630548248568
+      Noelle_Idle_41: 2615347484375501063
+      Noelle_Idle_42: -6679852367334994390
+      Noelle_Idle_43: -1068003490379858654
+      Noelle_Idle_44: 7727207217821949358
+      Noelle_Idle_45: -5275306850038137617
+      Noelle_Idle_46: 8938956729384450560
+      Noelle_Idle_47: 5442588393493170771
+      Noelle_Idle_48: -653676399192224560
+      Noelle_Idle_49: 1141860717235549177
+      Noelle_Idle_5: 4932283021239728447
+      Noelle_Idle_50: -229988646965012366
+      Noelle_Idle_51: -2973060016991384045
+      Noelle_Idle_52: 7761150663051721074
+      Noelle_Idle_53: -92295409762673057
+      Noelle_Idle_54: 1539758266139410195
+      Noelle_Idle_55: -4876543132330888438
+      Noelle_Idle_56: 2913766946537647855
+      Noelle_Idle_57: 6553369221009691832
+      Noelle_Idle_58: 8352824592752429734
+      Noelle_Idle_59: 3936387555324192963
+      Noelle_Idle_6: -3136679502245523955
+      Noelle_Idle_60: -4627896491161031148
+      Noelle_Idle_61: -3539801659440623958
+      Noelle_Idle_7: 345512156528374437
+      Noelle_Idle_8: -4065580009299625982
+      Noelle_Idle_9: -2502874393861239307
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

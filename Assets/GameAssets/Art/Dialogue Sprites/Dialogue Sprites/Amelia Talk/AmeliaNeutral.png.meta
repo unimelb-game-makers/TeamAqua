@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmeliaNeutral_0: 7966711217661393246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

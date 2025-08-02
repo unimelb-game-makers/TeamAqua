@@ -479,7 +479,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Huntress_0: 5126121102192863849
+      Huntress_1: 7293573409256682313
+      Huntress_10: -2854998135140118571
+      Huntress_11: 4739104907057307032
+      Huntress_12: -7867304729505156570
+      Huntress_13: -2489829235562592032
+      Huntress_14: 2134312312088361153
+      Huntress_2: 6487099042791870337
+      Huntress_3: 7718617823775832268
+      Huntress_4: 7461731690501329050
+      Huntress_5: 5968561860526751206
+      Huntress_6: 2370776875646659126
+      Huntress_7: -5204734119072993899
+      Huntress_8: 6909116337769005196
+      Huntress_9: 5262481297346353684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

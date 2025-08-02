@@ -479,7 +479,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Villager_F_0: 5775938557191553440
+      Villager_F_1: 5942130400155121392
+      Villager_F_10: 988402821208237627
+      Villager_F_11: 2090299982954576
+      Villager_F_12: 6841290129397700317
+      Villager_F_13: 8481696065732363480
+      Villager_F_14: 1690047134523379166
+      Villager_F_2: -8469423625971975787
+      Villager_F_3: -8611560930399442126
+      Villager_F_4: 9039380791827688379
+      Villager_F_5: 2752856032876272717
+      Villager_F_6: -1198878122976180454
+      Villager_F_7: 6773151355399341930
+      Villager_F_8: -1139448109914046744
+      Villager_F_9: 7128770742683782302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

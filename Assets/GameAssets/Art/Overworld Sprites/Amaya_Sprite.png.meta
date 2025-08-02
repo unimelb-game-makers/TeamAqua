@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Amaya_Sprite_0: -6080457723907593775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

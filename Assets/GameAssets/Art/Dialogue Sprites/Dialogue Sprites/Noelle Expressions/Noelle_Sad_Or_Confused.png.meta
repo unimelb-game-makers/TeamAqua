@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Noelle_Sad_Or_Confused_0: 1879686782512494937
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

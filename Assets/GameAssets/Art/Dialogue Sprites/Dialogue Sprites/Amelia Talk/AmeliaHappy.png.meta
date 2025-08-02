@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmeliaHappy_0: 5433036600315312631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

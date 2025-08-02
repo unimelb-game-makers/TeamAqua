@@ -167,7 +167,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      human_one_Sprite_0: -2664960935309097388
+      human_one_Sprite_1: -4584608175527372415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
