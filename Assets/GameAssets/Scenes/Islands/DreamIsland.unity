@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 533159831}
   - component: {fileID: 533159830}
   - component: {fileID: 533159829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 857251422}
   - component: {fileID: 857251423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
