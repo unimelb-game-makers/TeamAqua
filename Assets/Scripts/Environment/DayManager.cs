@@ -79,6 +79,13 @@ public class DayManager : MonoBehaviour, ISaveable
             Debug.LogWarning($"NPC {npc.name} does not have an ID!");
             return;
         }
+        // If there is another NPC, then we want to log a warning
+        if (_worldData.npcs.ContainsKey(npc.id))
+        {
+            Debug.LogError($"Conflicting NPC ID: {npc.id} from {_worldData.npcs[npc.id]} and {npc.name}");
+            return;
+        }
+        
         Day currentDay = dayDatabase.GetDay(_currentDay);
         npc.gameObject.SetActiveFast(currentDay.worldDatabase.CanEnable(npc.id));
         _worldData.npcs.Add(npc.id, npc);
