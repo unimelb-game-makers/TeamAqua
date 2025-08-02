@@ -14,6 +14,9 @@ public class DreamScene : MonoBehaviour
     [SerializeField]
     private AudioManager audioManager;
 
+    [SerializeField]
+    private PrefabManager prefabManager;
+    
     [Header("Dialogue")] 
     [SerializeField]
     private DialogueScript dreamScript;
@@ -46,6 +49,7 @@ public class DreamScene : MonoBehaviour
         DontDestroyOnLoad(manager);
         Game.AddManager(Instantiate(audioManager, manager.transform));
         Game.AddManager(Instantiate(dialogueManager, manager.transform));
+        Game.AddManager(Instantiate(prefabManager, manager.transform));
         DialogueManager.instance.SetDialogue(dreamScript, dreamNode);
     }
 

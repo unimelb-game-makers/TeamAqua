@@ -6,7 +6,6 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField]
     private NpcData npcData;
 
-    [SerializeField]
     private IndicatorPopup indicatorPopup;
 
     private void Awake()
@@ -16,6 +15,13 @@ public class NPCDialogue : MonoBehaviour
             Debug.LogError($"DIALOGUE | {name} does not have an NpcData scriptable attached");
             enabled = false;
         }
+    }
+
+    private void Start()
+    {
+        GameObject npcCanvas = Instantiate(PrefabManager.instance.npcCanvasPrefab, transform);
+        indicatorPopup = npcCanvas.GetComponentInChildren<IndicatorPopup>();
+        
         if (indicatorPopup == null)
         {
             Debug.Log($"DIALOGUE | {name} does not have an IndicatorPopup attached");
