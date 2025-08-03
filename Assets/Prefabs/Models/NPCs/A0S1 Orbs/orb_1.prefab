@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 900176041637167720}
   - component: {fileID: 892819569008907549}
   - component: {fileID: 1676277541610643336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: orb_1
   m_TagString: Creature
   m_Icon: {fileID: 0}
@@ -32,8 +32,7 @@ Transform:
   m_LocalPosition: {x: 0.874, y: 1.2067709, z: -0.693}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 748809108581179934}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6525551566787925406
@@ -143,125 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcData: {fileID: 11400000, guid: 2d1eaad620c07bf40b5583c375bd3da0, type: 2}
-  indicatorPopup: {fileID: 1660877772001259347}
---- !u!1001 &1589368467308006385
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6940671351298962468}
-    m_Modifications:
-    - target: {fileID: 279910397016483503, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624775981883850116, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_Name
-      value: NpcCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013839138675313118, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
---- !u!224 &748809108581179934 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2047695105952262639, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-  m_PrefabInstance: {fileID: 1589368467308006385}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1660877772001259347 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 72635643223860386, guid: d351cbdbcaafa43659c47ef6d318190d, type: 3}
-  m_PrefabInstance: {fileID: 1589368467308006385}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3932165f9bc3e4dd8942c4a69005715d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  hasIndicator: 0

@@ -6,8 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Dialogue/Dialogue Pool", fileName = "Dialogue Pool")]
 public class DialoguePool : ScriptableObject
 {
-    public DialogueScript startScript;
-
     [InlineEditor]
     public List<DialogueScript> dialogueBranches;
 
