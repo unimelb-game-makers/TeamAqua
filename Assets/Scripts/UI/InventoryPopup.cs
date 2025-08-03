@@ -28,7 +28,8 @@ namespace Popups
         public override void ShowPopup()
         {
             base.ShowPopup();
-            List<InventoryItem> data = GetData();
+            List<InventoryItem> rawData = GetData();
+            List<InventoryItem> data = rawData.FindAll(item => item.count > 0);
             int itemsToSpawn = data.Count - items.Count;
             if (itemsToSpawn > 0)
             {
