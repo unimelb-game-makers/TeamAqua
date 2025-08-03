@@ -66,9 +66,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
     private const string EVENT = "EVENT";
     private const string SWAPBGM = "SwapBGM";
     private const string PLAYBGM = "PlayBGM";
+    private const string STOPBGM = "StopBGM";
     private const string ADDQUEST = "AddQuest";
-    private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string SUBMITQUEST = "SubmitQuest";
+    private const string SUBMITQUESTSTEP = "SubmitQuestStep";
     private const string CHANGECUTSCENE = "ChangeCutscene";
 
     // TODO: call C# code from ink file, possibly using tags too but unsure AND learn more about variables and conditions in ink
@@ -120,13 +121,25 @@ public class DialogueManager : MonoBehaviour, ISaveable
     /// <param name="day"></param>
     public void SetDay(int day)
     {
-        _activeDialogues = new Dictionary<DialogueScript, DialogueNode>();
-        DialoguePool pool = dayDatabase.GetDay(day).dialoguePool;
-        foreach (DialogueScript script in pool.dialogueBranches)
-            _activeDialogues.Add(script, script.GetFirstNode());
         Debug.Log($"Setting day to {dayDatabase.GetDay(day).name}");
+        DialoguePool pool = dayDatabase.GetDay(day).dialoguePool;
+        Load(pool);
     }
 
+    /// <summary>
+    /// Loads in active dialogue from custom scripts through DialoguePool
+    /// </summary>
+    public void Load(DialoguePool pool)
+    {
+        _activeDialogues = new Dictionary<DialogueScript, DialogueNode>();
+        foreach (DialogueScript script in pool.dialogueBranches)
+            _activeDialogues.Add(script, script.GetFirstNode());
+    }
+    
+    /// <summary>
+    /// Loads in active dialogue from save slot
+    /// </summary>
+    /// <param name="saveSlot"></param>
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
@@ -328,6 +341,10 @@ public class DialogueManager : MonoBehaviour, ISaveable
         else if (eventId.StartsWith(PLAYBGM))
         {
             AudioManager.Instance.Play(param);
+        }
+        else if (eventId.StartsWith(STOPBGM))
+        {
+            AudioManager.Instance.Stop(param);
         }
         else if (eventId.StartsWith(ADDQUEST))
         {

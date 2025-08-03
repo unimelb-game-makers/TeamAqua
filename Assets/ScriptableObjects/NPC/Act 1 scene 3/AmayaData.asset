@@ -15,7 +15,11 @@ MonoBehaviour:
   dialogues:
   - dialogue: {fileID: 11400000, guid: 516cc53674a583d4194f0cb40bc17a78, type: 2}
     mode: 0
-  - dialogue: {fileID: 11400000, guid: 59b9f780b1fa0b44abbd7dff9740b37d, type: 2}
+  - dialogue: {fileID: 11400000, guid: 77bef78d27861954e818e92ae7aa516e, type: 2}
     mode: 0
-  - dialogue: {fileID: 11400000, guid: 07e4e86765595ae41adc254114694e63, type: 2}
+  - dialogue: {fileID: 11400000, guid: 0f74a70469935ff4fa290b2392b2d140, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 756eb1edd697dc34498ff0fb00744186, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 42d292fa56f742341a17882b30edf598, type: 2}
     mode: 0

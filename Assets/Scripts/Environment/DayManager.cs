@@ -79,12 +79,19 @@ public class DayManager : MonoBehaviour, ISaveable
             Debug.LogWarning($"NPC {npc.name} does not have an ID!");
             return;
         }
+        // If there is another NPC, then we want to log a warning
+        if (_worldData.npcs.ContainsKey(npc.id))
+        {
+            Debug.LogError($"Conflicting NPC ID: {npc.id} from {_worldData.npcs[npc.id]} and {npc.name}");
+            return;
+        }
+        
         Day currentDay = dayDatabase.GetDay(_currentDay);
         npc.gameObject.SetActiveFast(currentDay.worldDatabase.CanEnable(npc.id));
         _worldData.npcs.Add(npc.id, npc);
 
         // If the NPC is Amelia, then we want to store it differently and set their position
-        if (npc.GetType() == typeof(Amelia))
+        if (npc.GetType() == typeof(Amelia) && _worldData.ameliaSavePosition != Vector3.zero)
         {
             _worldData.amelia = (Amelia)npc;
             npc.transform.position = _worldData.ameliaSavePosition;

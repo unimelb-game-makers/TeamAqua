@@ -21,10 +21,6 @@ public class NoonIsland : MonoBehaviour
     [SerializeField]
     private PlayerController playerController;
 
-    [Header("Managers")]
-    [SerializeField]
-    private BarrierManager barrierManager;
-
     [SerializeField]
     private AudioManager audioManager;
 
@@ -54,6 +50,9 @@ public class NoonIsland : MonoBehaviour
 
     [SerializeField]
     private PuzzleManager puzzleManager;
+
+    [SerializeField]
+    private PrefabManager prefabManager;
 
     [SerializeField]
     private SaveManager saveManager;
@@ -110,7 +109,6 @@ public class NoonIsland : MonoBehaviour
     /// </summary>
     private void InitManagers()
     {
-        Game.AddManager(Instantiate(barrierManager, _managers));
         Game.AddManager(Instantiate(audioManager, _managers));
         Game.AddManager(Instantiate(inventoryManager, _managers));
         Game.AddManager(Instantiate(energyManager, _managers));
@@ -120,6 +118,7 @@ public class NoonIsland : MonoBehaviour
         Game.AddManager(Instantiate(dayManager, _managers));
         Game.AddManager(Instantiate(waterManager, _managers));
         Game.AddManager(Instantiate(puzzleManager, _managers));
+        Game.AddManager(Instantiate(prefabManager, _managers));
         // Save Manager is special as it is present in the first scene and isn't added to the _manager pool.
         Instantiate(saveManager, _managers);
     }
