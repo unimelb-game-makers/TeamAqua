@@ -9,7 +9,7 @@ public class ItemHarvester : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.E) && source != null)
+        if (Input.GetKeyDown(KeyCode.E) && source != null && (DialogueManager.Instance().State == DialogueState.None))
         {
             if (source.HarvestResource(out Item item))
             {
