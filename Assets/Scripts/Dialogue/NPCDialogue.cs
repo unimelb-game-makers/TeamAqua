@@ -6,6 +6,9 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField]
     private NpcData npcData;
 
+    [SerializeField]
+    private bool hasIndicator = true;
+
     private IndicatorPopup indicatorPopup;
 
     private void Awake()
@@ -19,6 +22,7 @@ public class NPCDialogue : MonoBehaviour
 
     private void Start()
     {
+        if (!hasIndicator) return;
         GameObject npcCanvas = Instantiate(PrefabManager.instance.npcCanvasPrefab, transform);
         indicatorPopup = npcCanvas.GetComponentInChildren<IndicatorPopup>();
         
@@ -75,6 +79,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void ShowIndicator()
     {
+        if (!hasIndicator) return;
         // If there is no active dialogue, don't show an indicator
         if (!TryGetActiveDialogue(out DialogueTrigger trigger))
             return;
@@ -98,6 +103,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void HideIndicators()
     {
+        if (!hasIndicator) return;
         indicatorPopup.HidePopup();
     }
 }
