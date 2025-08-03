@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6810622046796303858}
   - component: {fileID: 1404869336186985978}
   - component: {fileID: 3764417031900659056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: orb_3
   m_TagString: Creature
   m_Icon: {fileID: 0}
@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcData: {fileID: 11400000, guid: 97b7c20bf1a98eb42b338fb263ec8739, type: 2}
+  hasIndicator: 0

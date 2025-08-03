@@ -121,13 +121,25 @@ public class DialogueManager : MonoBehaviour, ISaveable
     /// <param name="day"></param>
     public void SetDay(int day)
     {
-        _activeDialogues = new Dictionary<DialogueScript, DialogueNode>();
-        DialoguePool pool = dayDatabase.GetDay(day).dialoguePool;
-        foreach (DialogueScript script in pool.dialogueBranches)
-            _activeDialogues.Add(script, script.GetFirstNode());
         Debug.Log($"Setting day to {dayDatabase.GetDay(day).name}");
+        DialoguePool pool = dayDatabase.GetDay(day).dialoguePool;
+        Load(pool);
     }
 
+    /// <summary>
+    /// Loads in active dialogue from custom scripts through DialoguePool
+    /// </summary>
+    public void Load(DialoguePool pool)
+    {
+        _activeDialogues = new Dictionary<DialogueScript, DialogueNode>();
+        foreach (DialogueScript script in pool.dialogueBranches)
+            _activeDialogues.Add(script, script.GetFirstNode());
+    }
+    
+    /// <summary>
+    /// Loads in active dialogue from save slot
+    /// </summary>
+    /// <param name="saveSlot"></param>
     public void Load(SaveSlot saveSlot)
     {
         DialogueSaveData saveData = saveSlot.dialogueSaveData;
