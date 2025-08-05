@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf10f08426e62949be8a3cc11b3c056, type: 3}
   m_Name: Buildings
   m_EditorClassIdentifier: 
-  tiles: []
+  tiles:
+  - {fileID: 2574253327496163083, guid: 9c7105130a9a81b57b99ef1fdacd589a, type: 3}
+  - {fileID: 5399650857983122791, guid: 73e5ea1aa3e042b3baf1a06336624ec6, type: 3}
+  - {fileID: 5399650857983122791, guid: 9151e69542888b0858aa50cb656790da, type: 3}
+  - {fileID: 5399650857983122791, guid: 357476674ccd6cd38a995d97a30f4959, type: 3}
+  - {fileID: 5399650857983122791, guid: ea40c7f82d9fd25a683c5b349d778691, type: 3}
+  - {fileID: 5399650857983122791, guid: ce66cee1e7f1a5cfe8ad7cbc671a4822, type: 3}
+  - {fileID: 5399650857983122791, guid: 502344311cdfd9aeaa7e7ac84a4f27de, type: 3}
+  - {fileID: 5399650857983122791, guid: fe9c8111ff50dbb97a8678a1a9ae1d4b, type: 3}
+  - {fileID: 5399650857983122791, guid: fbe76511be6f9266cb6abb9550817bff, type: 3}
+  - {fileID: 5399650857983122791, guid: 6fd65f3928dda4e4aa9a2fb4822a7289, type: 3}
+  - {fileID: 381695202588941499, guid: c22399a9fa7193e4dbdd6fadf2dbbbb8, type: 3}
+  - {fileID: 4841429338152852500, guid: b0e767895097da9a4ac070dc41710e06, type: 3}
+  - {fileID: 1181210931528860486, guid: 6114ffa4b2f9148068a184fc018eb86c, type: 3}
+  - {fileID: 5399650857983122791, guid: 2eb5edc9105b0223d8a2722058eaa538, type: 3}
+  - {fileID: 8551251966180663129, guid: 1e7bad90d69ccad65973c3e9eb4d3498, type: 3}
+  - {fileID: 4620391020291953390, guid: 02d19f388020be9d08eb3afaea50865a, type: 3}
+  - {fileID: 5399650857983122791, guid: 48a6f74ef028d9fa48e9c19810764b62, type: 3}
+  - {fileID: 5399650857983122791, guid: 47f52235648b3e560946d666b76c5e7a, type: 3}
+  - {fileID: 5399650857983122791, guid: 3d59790e61d875539a46b77cc34c9f89, type: 3}
+  - {fileID: 5399650857983122791, guid: b3b43e80ec2334895ac860c32a63d3ab, type: 3}

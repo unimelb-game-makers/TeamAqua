@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 3821833219832569992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0000002104789, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.21, z: 0}
+  m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7597572194395273730}
@@ -131,10 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40f6d2a89dd87741a207dde2007cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourcePrefab: {fileID: 0}
+  sourcePrefab: {fileID: 8551251966180663129}
   placementOffset: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0}
   scaleOffset: {x: 1, y: 1, z: 1}
   tilemap: {fileID: 0}
   layer: {fileID: 0}
-  gridCellPosition: {x: 0, y: 0, z: 0}
+  gridCellPosition: {x: -16, y: 1, z: -12}
