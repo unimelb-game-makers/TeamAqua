@@ -4,7 +4,7 @@ Narrator: You find yourself on a beach. The sun glares over you, and your ship i
 Narrator: In contrast to the storm that swallowed you last night, calm waves now wash over the shore.
 Narrator: It seems like you've landed on a foreign island of some sort...
 Narrator: And nearby is a collapsed tree... and a tail?
-???: <b>—You!</b> Whoever's standing there! #cutscene:A1S2Amelia
+???: <b>—You!</b> Whoever's standing there!
 //cutscene art of amelia stuck under tree
 ???: Don't think I can't see you!
 Narrator: You've never been outside of Dusk before, so you aren't sure <i>what</i> that is.
