@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FadeController : MonoBehaviour
 {
     public static FadeController Instance;
-    public Image fadeImage;           // 黒パネル（自動生成される）
+    public Image fadeImage;           // automatically creates the black panel 
     public float fadeDuration = 0.5f;
 
     void Awake()
@@ -21,11 +21,11 @@ public class FadeController : MonoBehaviour
 
         if (fadeImage == null) fadeImage = CreateFullScreenBlackImage();
 
-        // 最初は黒 → 透明へフェードイン
+        // fade in gradually 
         SetAlpha(1f);
         StartCoroutine(Fade(1f, 0f, fadeDuration));
 
-        // 新シーンロード時も1フレーム黒を保持してからフェードイン
+        // wait until the load finishes and fadein 
         SceneManager.sceneLoaded += (scene, mode) =>
         {
             Instance.StartCoroutine(Instance.DelayedFadeIn());
@@ -60,7 +60,7 @@ public class FadeController : MonoBehaviour
 
     IEnumerator DelayedFadeIn()
     {
-        yield return null; // 1フレーム黒を維持
+        yield return null; // stay panel color as black duinr 1f
         yield return Fade(1f, 0f, fadeDuration);
     }
 
