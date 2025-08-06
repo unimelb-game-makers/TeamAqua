@@ -1051,9 +1051,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 501657568}
+  - {fileID: 631935712}
   - {fileID: 1600645783}
   - {fileID: 277327664}
-  - {fileID: 631935712}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1322785499
@@ -1376,6 +1376,10 @@ PrefabInstance:
       value: exit_orb
       objectReference: {fileID: 0}
     - target: {fileID: 1562517788976348934, guid: 982a98fe4392a264893f7c79d82be6bc, type: 3}
+      propertyPath: fader
+      value: 
+      objectReference: {fileID: 7887260112592955098, guid: eaec1dbd8619eaf45a7914e2867b5b4e, type: 3}
+    - target: {fileID: 1562517788976348934, guid: 982a98fe4392a264893f7c79d82be6bc, type: 3}
       propertyPath: postProcessVolume
       value: 
       objectReference: {fileID: 1782939143}
@@ -1476,6 +1480,10 @@ PrefabInstance:
       propertyPath: nextOrb
       value: 
       objectReference: {fileID: 631935713}
+    - target: {fileID: 6810622046796303858, guid: dd599fe6aff71d6408ad72274facd791, type: 3}
+      propertyPath: fadeController
+      value: 
+      objectReference: {fileID: 7887260112592955098, guid: eaec1dbd8619eaf45a7914e2867b5b4e, type: 3}
     - target: {fileID: 6810622046796303858, guid: dd599fe6aff71d6408ad72274facd791, type: 3}
       propertyPath: postProcessVolume
       value: 

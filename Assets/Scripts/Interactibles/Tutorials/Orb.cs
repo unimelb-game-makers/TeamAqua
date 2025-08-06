@@ -38,8 +38,8 @@ public class Orb : MonoBehaviour
         transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
 
         if (playerIn && Input.GetKeyDown(KeyCode.E) && (!nextOrb))
-        {
-            SceneManager.LoadScene("NoonIsland");
+        {   
+            FadeController.FadeToScene("NoonIsland");
         }
     }
 
