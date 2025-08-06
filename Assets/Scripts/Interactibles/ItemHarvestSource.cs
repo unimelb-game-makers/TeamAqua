@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 /*
 Make sure to set the gameobject tag to "ItemResource".
@@ -12,9 +13,31 @@ public class ItemHarvestSource : MonoBehaviour
     private Vector3 orig_scale; //save value of the original scale for tweening
     float popFactor = 0.8f;
 
-    void Start()
+    [SerializeField] private InteractablePopup interactablePopup;
+
+    private void Start()
     {
         orig_scale = transform.localScale;
+        if (interactablePopup == null)
+        {
+            Debug.LogError($"{name} is missing an InteractablePopup");
+        }
+        else
+        {
+            interactablePopup.HidePopup();
+        }
+    }
+
+    public void OnPlayerEnter()
+    {
+        if(interactablePopup)
+            interactablePopup.ShowPopup();
+    }
+
+    public void OnPlayerExit()
+    {
+        if(interactablePopup)
+            interactablePopup.HidePopup();
     }
 
     public bool HarvestResource(out Item item)

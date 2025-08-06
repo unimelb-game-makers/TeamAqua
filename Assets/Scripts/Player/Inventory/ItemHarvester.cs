@@ -1,17 +1,17 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemHarvester : MonoBehaviour
 {
-    [NonSerialized]
-    public ItemHarvestSource source = null;
-    private ItemHarvestSource oldSource = null;
+    private readonly List<ItemHarvestSource> _sources = new();
 
-    void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && source != null && (DialogueManager.Instance().State == DialogueState.None))
+        if (Input.GetKeyDown(KeyCode.E) && (DialogueManager.Instance().State == DialogueState.None) && _sources.Count > 0)
         {
-            if (source.HarvestResource(out Item item))
+            // Get the most recent source that entered
+            ItemHarvestSource mostRecentSource = _sources[^1];
+            if (mostRecentSource.HarvestResource(out Item item))
             {
                 InventoryManager.instance.AddItem(item);
             }
@@ -20,21 +20,34 @@ public class ItemHarvester : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("ItemResource"))
+        if (other.gameObject.CompareTag("ItemResource") && other.gameObject.TryGetComponent(out ItemHarvestSource source))
         {
-            if(source != null) oldSource = source; // If there already was a source, remember which one it was
-            source = other.gameObject.GetComponent<ItemHarvestSource>();
+            // Hide all sources
+            for (int i = 0; i < _sources.Count; ++i)
+                _sources[i].OnPlayerExit();
+
+            // Add the new source and show it 
+            _sources.Add(source);
+            source.OnPlayerEnter();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("ItemResource"))
+        if (other.gameObject.CompareTag("ItemResource") && other.gameObject.TryGetComponent(out ItemHarvestSource harvestSource))
         {
-            if (source == oldSource) // Exited the source with no new source entered
-                source = null;
-            else                     // Exited the source but there is a new source
-                oldSource = source;
+            // Remove the source from the list
+            harvestSource.OnPlayerExit();
+            _sources.Remove(harvestSource);
+            
+            // Show the most recent source and hide the others
+            for (int i = 0; i < _sources.Count; ++i)
+            {
+                if (i == _sources.Count - 1)
+                    _sources[i].OnPlayerEnter();
+                else
+                    _sources[i].OnPlayerExit();
+            }
         }
     }
 }
