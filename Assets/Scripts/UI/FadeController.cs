@@ -1,113 +1,95 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class FadeController : MonoBehaviour
 {
-    public static FadeController Instance;
-    public Image fadeImage;           // 黒パネル（自動生成される）
-    public float fadeDuration = 0.5f;
+    public enum Mode { Manual, AutoHideOnStart }
+
+    [Header("References")]
+    [SerializeField] private Image blackPanel; // Assign in Inspector
+
+    [Header("Settings")]
+    [SerializeField] private Mode mode = Mode.Manual;
+    [SerializeField] private float holdTime = 0.5f;
+    [SerializeField] private float fadeDuration = 0.5f;
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (blackPanel == null)
         {
-            Destroy(gameObject);
+            Debug.LogError("FadeController: 'blackPanel' not assigned.", this);
+            enabled = false;
             return;
         }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
 
-        if (fadeImage == null) fadeImage = CreateFullScreenBlackImage();
-
-        // 最初は黒 → 透明へフェードイン
-        SetAlpha(1f);
-        StartCoroutine(Fade(1f, 0f, fadeDuration));
-
-        // 新シーンロード時も1フレーム黒を保持してからフェードイン
-        SceneManager.sceneLoaded += (scene, mode) =>
+        if (mode == Mode.AutoHideOnStart)
         {
-            Instance.StartCoroutine(Instance.DelayedFadeIn());
-        };
+            SetAlpha(1f); // Start fully black
+        }
     }
 
-    public static void FadeToScene(string sceneName, float duration = -1f)
+    void Start()
     {
-        if (Instance == null)
+        if (mode == Mode.AutoHideOnStart)
         {
-            var go = new GameObject("~FadeController(Auto)");
-            Instance = go.AddComponent<FadeController>();
-            DontDestroyOnLoad(go);
+            StartCoroutine(FadeOutAfterDelay());
+        }
+    }
+
+    // === Public Methods ===
+
+    public void Show()
+    {
+        blackPanel.gameObject.SetActive(true);
+        StartCoroutine(Fade(1f));
+    }
+
+    public void Hide()
+    {
+        StartCoroutine(Fade(0f));
+    }
+
+    public void ShowWhileLoading(string nextScene)
+    {
+        StartCoroutine(Co_ShowWhileLoading(nextScene));
+    }
+
+    private IEnumerator Co_ShowWhileLoading(string nextScene)
+    {
+        yield return StartCoroutine(Fade(1f));
+        yield return new WaitForSeconds(holdTime);
+        SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Single);
+    }
+
+    private IEnumerator FadeOutAfterDelay()
+    {
+        yield return new WaitForSeconds(holdTime);
+        yield return StartCoroutine(Fade(0f));
+    }
+
+    private IEnumerator Fade(float targetAlpha)
+    {
+        float startAlpha = blackPanel.color.a;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / fadeDuration);
+            float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, t);
+            SetAlpha(newAlpha);
+            yield return null;
         }
 
-        if (duration > 0f) Instance.fadeDuration = duration;
-        Instance.StartCoroutine(Instance.FadeOutAndLoad(sceneName));
+        SetAlpha(targetAlpha);
     }
 
-    IEnumerator FadeOutAndLoad(string sceneName)
+    private void SetAlpha(float a)
     {
-        yield return Fade(0f, 1f, fadeDuration);
-
-        var op = SceneManager.LoadSceneAsync(sceneName);
-        op.allowSceneActivation = false;
-
-        while (op.progress < 0.9f)
-            yield return null;
-
-        op.allowSceneActivation = true;
-    }
-
-    IEnumerator DelayedFadeIn()
-    {
-        yield return null; // 1フレーム黒を維持
-        yield return Fade(1f, 0f, fadeDuration);
-    }
-
-    IEnumerator Fade(float from, float to, float duration)
-    {
-        float t = 0f;
-        while (t < duration)
-        {
-            t += Time.unscaledDeltaTime;
-            float a = Mathf.Lerp(from, to, t / duration);
-            SetAlpha(a);
-            yield return null;
-        }
-        SetAlpha(to);
-    }
-
-    void SetAlpha(float a)
-    {
-        if (!fadeImage) return;
-        var c = fadeImage.color;
-        fadeImage.color = new Color(c.r, c.g, c.b, Mathf.Clamp01(a));
-    }
-
-    Image CreateFullScreenBlackImage()
-    {
-        var canvasGO = new GameObject("FadeCanvas");
-        canvasGO.transform.SetParent(transform, false);
-        var canvas = canvasGO.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvas.overrideSorting = true;
-        canvas.sortingOrder = 32767;
-
-        canvasGO.AddComponent<CanvasScaler>();
-        canvasGO.AddComponent<GraphicRaycaster>();
-
-        var imgGO = new GameObject("FadeImage");
-        imgGO.transform.SetParent(canvasGO.transform, false);
-        var img = imgGO.AddComponent<Image>();
-        img.raycastTarget = false;
-
-        var rt = img.GetComponent<RectTransform>();
-        rt.anchorMin = Vector2.zero;
-        rt.anchorMax = Vector2.one;
-        rt.offsetMin = Vector2.zero;
-        rt.offsetMax = Vector2.zero;
-
-        img.color = Color.black;
-        return img;
+        var color = blackPanel.color;
+        color.a = a;
+        blackPanel.color = color;
     }
 }

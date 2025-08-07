@@ -39,7 +39,10 @@ public class Orb : MonoBehaviour
 
         if (playerIn && Input.GetKeyDown(KeyCode.E) && (!nextOrb))
         {   
-            FadeController.FadeToScene("NoonIsland");
+            var fader = FindFirstObjectByType<FadeController>();
+            if (fader != null)
+                fader.ShowWhileLoading("NoonIsland");
+
         }
     }
 

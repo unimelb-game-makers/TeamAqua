@@ -364,7 +364,9 @@ public class DialogueManager : MonoBehaviour, ISaveable
         else if (eventId.StartsWith(CHANGECUTSCENE))
         {
             EndStory();
-            SceneManager.LoadScene(param);
+            var fader = FindFirstObjectByType<FadeController>();
+            if (fader != null)
+                fader.ShowWhileLoading(param);
             Debug.Log("scene changed to " + SceneManager.GetActiveScene());
         }
     }
