@@ -10,7 +10,7 @@ Narrator: And nearby is a collapsed tree... and a tail?
 Narrator: You've never been outside of Dusk before, so you aren't sure <i>what</i> that is.
 Narrator: But if it isn't human, and it can speak... That means…
 //cutscene ends
-???: Help me get out of here! #portrait:AmeliaHostile
+???: Help me get out of here!#speaker:Amelia #portrait:AmeliaHostile 
 Narrator: What do you do? Do you help the creature?
 
 +[Yes]
@@ -33,7 +33,7 @@ Noelle: (How did I…?) #portrait:NoelleShocked
 Amelia: That's more like it. Thought I'd be a goner for a second. #portrait:AmeliaHappy
 Noelle: Are you hurt? #portrait:NoelleUm
 Narrator: Amelia looks up at you, finally taking in your appearance and gaining a complicated expression in her eyes.
-Amelia: <i>(Great. Of course it's a human that saves me.)</i> #portrati:AmeliaShut
+Amelia: <i>(Great. Of course it's a human that saves me.)</i> #portrait:AmeliaShut
 Amelia: Well, thanks and all. But this is where our meeting ends. #portrait:AmeliaNeutral
 Noelle: Wait! #portrait:NoelleUm
 Noelle: I don't have anywhere to go. #portrait:NoelleUm
