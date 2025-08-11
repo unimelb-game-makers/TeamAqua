@@ -135,7 +135,7 @@ public class DialogueManager : MonoBehaviour, ISaveable
         foreach (DialogueScript script in pool.dialogueBranches)
             _activeDialogues.Add(script, script.GetFirstNode());
     }
-    
+
     /// <summary>
     /// Loads in active dialogue from save slot
     /// </summary>
