@@ -398,18 +398,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 66.6
       objectReference: {fileID: 0}
-    - target: {fileID: 3578169495592799096, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578169495592799096, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3578169495592799096, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 66.6
-      objectReference: {fileID: 0}
     - target: {fileID: 3629773081272614676, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.894
@@ -481,18 +469,6 @@ PrefabInstance:
     - target: {fileID: 5280213605358499240, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 29.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503130972276414494, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.139997
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503130972276414494, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503130972276414494, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 67.75
       objectReference: {fileID: 0}
     - target: {fileID: 5503130972276414494, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,7 +859,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1026436169}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1678972797
 MonoBehaviour:
@@ -897,8 +873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 0}
-  indicatorPopup: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 014eb81874a806c44ad5de1603c6572a, type: 2}
+  hasIndicator: 1
 --- !u!135 &1678972798
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1229,3 +1205,4 @@ SceneRoots:
   - {fileID: 1147092203}
   - {fileID: 926517413}
   - {fileID: 1538406676}
+  - {fileID: 1678972796}
