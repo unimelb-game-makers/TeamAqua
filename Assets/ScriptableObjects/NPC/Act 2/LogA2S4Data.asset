@@ -10,14 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
-  m_Name: ShioneData
+  m_Name: LogA2S4Data
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogue: {fileID: 11400000, guid: 07e4e86765595ae41adc254114694e63, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: 024b2bec2e4ee1f42bec224d68d61c1f, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: 6b783fb8ee1aa6544922135371bc47ad, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: 4a9b6f19ef0c6724d9e35bac2f76d4e5, type: 2}
+  - dialogue: {fileID: 11400000, guid: 15f6493180b35e2429673e92471e1ecb, type: 2}
     mode: 0

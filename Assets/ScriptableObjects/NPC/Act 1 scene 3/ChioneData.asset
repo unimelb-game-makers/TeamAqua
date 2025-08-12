@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
+  m_Name: ChioneData
+  m_EditorClassIdentifier: 
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 07e4e86765595ae41adc254114694e63, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 024b2bec2e4ee1f42bec224d68d61c1f, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 6b783fb8ee1aa6544922135371bc47ad, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 4a9b6f19ef0c6724d9e35bac2f76d4e5, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 4c0c29282cb4e6d4b807c261c36532fc, type: 2}
+    mode: 0

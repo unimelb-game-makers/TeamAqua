@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: affda5d30205fc94496a3587fbe8fc0a, type: 3}
-  m_Name: D2 Dialogue Pool
+  m_Name: D4 Dialogue Pool 2
   m_EditorClassIdentifier: 
   dialogueBranches:
-  - {fileID: 11400000, guid: eb8e76f93b587d24fabab50e2c81ece4, type: 2}
-  - {fileID: 11400000, guid: 46b53d37d73134448beb1deb54fe0627, type: 2}
-  - {fileID: 11400000, guid: 5d9ac7e70fe10a742b0eb4f2cec09d54, type: 2}
-  - {fileID: 11400000, guid: 5021135678f12d642bae4a2f63b10c67, type: 2}
+  - {fileID: 11400000, guid: a06c90952e1157e4c8ee13f4e5cc106b, type: 2}
+  - {fileID: 11400000, guid: 8447c8259e6d6f647b631c6491214840, type: 2}
+  - {fileID: 11400000, guid: bd22e2557e6e785489618b6ffb5696e5, type: 2}

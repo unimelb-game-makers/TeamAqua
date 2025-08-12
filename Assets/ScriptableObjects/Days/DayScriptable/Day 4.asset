@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f3a0a0995c422340b474aef8284b5b7, type: 3}
-  m_Name: Day 2
+  m_Name: Day 4
   m_EditorClassIdentifier: 
-  dialoguePool: {fileID: 11400000, guid: b83f2495299a9c84680d06fba82d848e, type: 2}
+  dialoguePool: {fileID: 11400000, guid: 17acfd872d9060d42ae2e4a46f14443d, type: 2}
   worldDatabase: {fileID: 11400000, guid: f1cb373854c5248b7948fafc7dab976b, type: 2}
   mainQuests:
-  - {fileID: 11400000, guid: 295b90c04e70fdc49936d0626e6c6b3e, type: 2}
-  - {fileID: 11400000, guid: 920bcc80170d4564f8c39505141d66e9, type: 2}
+  - {fileID: 11400000, guid: 8e6e1d85c0056ef45acfd6249e0048ca, type: 2}
