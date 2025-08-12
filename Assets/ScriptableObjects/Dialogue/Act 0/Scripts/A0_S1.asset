@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
   m_Name: A0_S1
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: d4700f7ef420b49a7b2952529a4047aa, type: 3}
+  inkFile: {fileID: 4900000, guid: ccc0afd5a01546c45a46396f92508ffa, type: 3}
   dialogues:
   - {fileID: 11400000, guid: aacbf34d4bd6e57408987f00e19fc6d0, type: 2}

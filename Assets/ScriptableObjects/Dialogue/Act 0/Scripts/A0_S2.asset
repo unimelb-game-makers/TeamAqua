@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
   m_Name: A0_S2
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 608c91618dfffd7469b34354e969e6d2, type: 3}
+  inkFile: {fileID: 4900000, guid: a18dfc95c9740fc4aa4306be1c3a634b, type: 3}
   dialogues:
+  - {fileID: 11400000, guid: 100cb5709e55b0f47a71fecddab106b8, type: 2}
   - {fileID: 11400000, guid: 12de411e431576e4b97e3e3a148d67e3, type: 2}
   - {fileID: 11400000, guid: 7bd0b892beea9b54b91a21cf3a1d99b3, type: 2}
   - {fileID: 11400000, guid: dfe06ab5f7cdd564e8fbfe2a9117d5ec, type: 2}
