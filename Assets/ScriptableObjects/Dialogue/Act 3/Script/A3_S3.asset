@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
-  m_Name: A1_S3
+  m_Name: A3_S3
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 3472986512343104b8d770412e6ba963, type: 3}
+  inkFile: {fileID: 4900000, guid: 78217923cb8d4f8468779878f25a5d10, type: 3}
   dialogues:
-  - {fileID: 11400000, guid: 516cc53674a583d4194f0cb40bc17a78, type: 2}
-  - {fileID: 11400000, guid: 07e4e86765595ae41adc254114694e63, type: 2}
+  - {fileID: 11400000, guid: a3569420346ad104fa16dbb7f5bb7456, type: 2}
+  - {fileID: 11400000, guid: 5faa766c9c6611d4187b3aadbe3f21f6, type: 2}
