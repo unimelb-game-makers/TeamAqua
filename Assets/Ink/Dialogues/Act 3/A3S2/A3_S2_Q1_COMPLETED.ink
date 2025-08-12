@@ -5,7 +5,7 @@ Narrator: Would you like to finish this quest?
 +[Not yet.]
     -> DONE
     
-    ===CompleteQuestA3S2===
+===CompleteQuestA3S2===
 EVENT:SubmitQuest:A3_S2_Q1
 Narrator: You've found a couple of good looking sticks. The beetles seem happy with your offering.
 Beetle: Thank you, Kraken!
