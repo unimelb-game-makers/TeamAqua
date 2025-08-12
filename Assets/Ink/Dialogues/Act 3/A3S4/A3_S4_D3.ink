@@ -5,5 +5,5 @@ Narrator: Yet… it was hidden, not destroyed. You could imagine ten different w
 Narrator: Perhaps the culprit could not bring themself to do it. Why so?
 Note: “The journey will take at least twenty days. I’ve charted a course, but the Ichthyos say that this part of the ocean is where ‘lost things do not come back.’”
 Note: “My fool of a friend… Just what have we gotten ourselves into?”
-// NOTE IS NOW IN INVENTORY
+// NOTE IS NOW IN INVENTORY FUNCTION TO ADD TO INVENTORY
 -> DONE

@@ -13,14 +13,13 @@ Cillian: As Elder Silas might’ve informed, there are a couple of artifacts in 
 +[Not even by force?]
     -> choiceforce
 +[What is the mechanism like?]
-    -> choiceletsdoit
-    // -> choicemechanism
+    -> choicemechanism
 
 ===choiceforce===
 Cillian: Well… we didn’t want to damage it too much. And as it was made of metal, one can’t be sure if the item inside would survive such force, or even melting by fire. #portrait:Cillian
 ->afterchoiceA4S3
 
-===choiceletsdoit===
+===choicemechanism===
 Cillian: The box is made of metal, and seems to contain a type of puzzle element with its key. #portrait:Cillian
 ->afterchoiceA4S3
 
