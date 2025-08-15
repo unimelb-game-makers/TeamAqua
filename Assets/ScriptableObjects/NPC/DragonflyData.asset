@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
-  m_Name: AmeliaData
+  m_Name: DragonflyData
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogue: {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: 9414e23315e6e4943887285796da4459, type: 2}
+  - dialogue: {fileID: 11400000, guid: 9202e9f983f63554a8aa72dad6bef036, type: 2}
     mode: 0

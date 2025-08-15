@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
-  m_Name: AmeliaData
+  m_Name: MonsteratopsData
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogue: {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
+  - dialogue: {fileID: 11400000, guid: 6597089f2e72b8e41908c171c777895e, type: 2}
     mode: 0
-  - dialogue: {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
+  - dialogue: {fileID: 11400000, guid: 0b7e3b6485b82dc47b8a25eb8a624d47, type: 2}
     mode: 0
-  - dialogue: {fileID: 11400000, guid: 9414e23315e6e4943887285796da4459, type: 2}
+  - dialogue: {fileID: 11400000, guid: 02c91d34c6777924fa3a84c7237f0739, type: 2}
     mode: 0
