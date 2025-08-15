@@ -6,9 +6,9 @@ Narrator: Would you like to finish this quest?
     -> DONE
 
 ===CompleteQuestA1S1===
-EVENT:SubmitQuest:A1_S1_Q1
 //after submitting 10 berries to amelia
 Narrator: You return to Amelia with berries in hand. After sniffing them to make sure they're good, the dragon gulps them down, stem and all.
+EVENT:SubmitQuest:A1_S1_Q1
 Noelle: Did that suffice? #portrait:NoelleSmallSmile
 Amelia: Yeah. Did you get some for yourself? #portrait:AmeliaNeutral
 Noelle: Um, no… #portrait:NoelleUm
