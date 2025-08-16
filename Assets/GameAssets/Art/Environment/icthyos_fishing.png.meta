@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icthyos_fishing_0: -6714887099430431276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

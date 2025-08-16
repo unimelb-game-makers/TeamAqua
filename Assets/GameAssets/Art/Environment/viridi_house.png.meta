@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      viridi_house_0: -4032223935726367157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

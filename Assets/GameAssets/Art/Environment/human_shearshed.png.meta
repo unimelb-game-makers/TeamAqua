@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      human_shearshed_0: -2106777725372670168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

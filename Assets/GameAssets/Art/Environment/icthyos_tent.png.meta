@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icthyos_tent_0: -880686777779487123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
