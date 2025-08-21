@@ -51,7 +51,7 @@ MonoBehaviour:
   scaleOffset: {x: 1, y: 1, z: 1}
   tilemap: {fileID: 0}
   layer: {fileID: 0}
-  gridCellPosition: {x: 0, y: 0, z: 0}
+  gridCellPosition: {x: 136, y: 8, z: 273}
 --- !u!1 &7493977658668458682
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +78,7 @@ Transform:
   m_GameObject: {fileID: 7493977658668458682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.34, z: 0}
   m_LocalScale: {x: 0.075, y: 0.075, z: 0.075}
   m_ConstrainProportionsScale: 0
   m_Children: []
