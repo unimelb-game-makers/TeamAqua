@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
-  m_Name: ClaraData
+  m_Name: A5S2D3RiverData
   m_EditorClassIdentifier: 
   dialogues:
-  - dialogue: {fileID: 11400000, guid: ddc3c8d75d7d702448792b55b40d4271, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: fb8e9232866ec6e418c598dfca74dc8e, type: 2}
-    mode: 0
-  - dialogue: {fileID: 11400000, guid: 28efbce9f7a74b2489ce20ce734578e4, type: 2}
+  - dialogue: {fileID: 11400000, guid: ab9d11312fe31b4498cbbae3de7fd77d, type: 2}
     mode: 0
