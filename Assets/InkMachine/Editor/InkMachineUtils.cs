@@ -18,7 +18,7 @@ namespace InkMachine{
             GenerateInkLink(files, path);
         }
 
-        // Create linking ink file
+        // Create linking ink file and write ink script
         private static void GenerateInkLink(List<Object> files, string path){
             // Get the last 4 characters of path
             string fileName = path.Length >= 4 ? path.Substring(path.Length - 4) : path;
@@ -46,8 +46,9 @@ namespace InkMachine{
                 sb.AppendLine($"\t\t-> {days[i]}");
             }
             sb.AppendLine("}");
-            File.WriteAllText(inkFilePath, sb.ToString());
 
+            // Ink Script Done and write to file
+            File.WriteAllText(inkFilePath, sb.ToString());
             AssetDatabase.Refresh();
         }
 
