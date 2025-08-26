@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
   m_Name: A2_S3
   m_EditorClassIdentifier: 
-  inkFile: {fileID: 4900000, guid: 0310c89d326dcb3448f844bf40e63b9f, type: 3}
+  inkFile: {fileID: 4900000, guid: 16a6b9fe47e359f4c83fd701542c11f7, type: 3}
   dialogues:
-  - {fileID: 11400000, guid: e9f39fa8b272b4038b3e9c80af2c02fb, type: 2}
-  - {fileID: 11400000, guid: 3deca2b035b534974920b36054de3bc3, type: 2}
-  - {fileID: 11400000, guid: fcc9d266345bf49d0a409699c208f974, type: 2}
+  - {fileID: 11400000, guid: 77bef78d27861954e818e92ae7aa516e, type: 2}
+  - {fileID: 11400000, guid: 0f74a70469935ff4fa290b2392b2d140, type: 2}
+  - {fileID: 11400000, guid: 756eb1edd697dc34498ff0fb00744186, type: 2}
+  - {fileID: 11400000, guid: d89d6b490075c674eab32169274ba728, type: 2}
+  - {fileID: 11400000, guid: 42d292fa56f742341a17882b30edf598, type: 2}
+  - {fileID: 11400000, guid: 920bcc80170d4564f8c39505141d66e9, type: 2}

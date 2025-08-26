@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 199261024932402032}
   - component: {fileID: 100616013028039948}
   - component: {fileID: 2525054289269900745}
+  - component: {fileID: -1071984449274535034}
   m_Layer: 0
   m_Name: BeetleModel
   m_TagString: Creature
@@ -354,6 +355,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 100616013028039948}
+--- !u!114 &-1071984449274535034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289783057018902598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcData: {fileID: 11400000, guid: 778fe14bb38dddb4f9bb229ece9c1864, type: 2}
+  hasIndicator: 1
 --- !u!1 &4535966461188079630
 GameObject:
   m_ObjectHideFlags: 0

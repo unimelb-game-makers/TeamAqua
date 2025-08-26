@@ -506,6 +506,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.26
       objectReference: {fileID: 0}
+    - target: {fileID: 6481179155737450951, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: npcData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca3baa6f0925346a68935e82e1b7f8, type: 2}
     - target: {fileID: 7427667888605057039, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.3
@@ -526,6 +530,7 @@ PrefabInstance:
     - {fileID: 7898510365184586643, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
     - {fileID: 2899049361020758649, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
     - {fileID: 3381604587816822088, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+    - {fileID: 9143043048027709518, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
@@ -59045,7 +59050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: 014eb81874a806c44ad5de1603c6572a, type: 2}
+  npcData: {fileID: 0}
   hasIndicator: 1
 --- !u!135 &1678972798
 SphereCollider:

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77df82979a8e4a1b8000f18018e2180, type: 3}
+  m_Name: A3_S2
+  m_EditorClassIdentifier: 
+  inkFile: {fileID: 4900000, guid: 8cf3056a5eddd944d82c80e2e7f630a0, type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: befeb69327b83114eb38f4ab2f3dcfae, type: 2}
+  - {fileID: 11400000, guid: 9202e9f983f63554a8aa72dad6bef036, type: 2}
+  - {fileID: 11400000, guid: 1d324d66637a64e48ba88d130c50e7bf, type: 2}
+  - {fileID: 11400000, guid: a21e9d964b1c6e14dbce5f01135e1850, type: 2}

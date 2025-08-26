@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3a0a0995c422340b474aef8284b5b7, type: 3}
+  m_Name: Day 3
+  m_EditorClassIdentifier: 
+  dialoguePool: {fileID: 11400000, guid: 918bcf4cc517b38429e89f27b167658a, type: 2}
+  worldDatabase: {fileID: 11400000, guid: f1cb373854c5248b7948fafc7dab976b, type: 2}
+  mainQuests:
+  - {fileID: 11400000, guid: a21e9d964b1c6e14dbce5f01135e1850, type: 2}
+  - {fileID: 11400000, guid: 0b7e3b6485b82dc47b8a25eb8a624d47, type: 2}
