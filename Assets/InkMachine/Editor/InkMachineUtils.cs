@@ -6,6 +6,9 @@ using System.Text;
 
 namespace InkMachine{
     public class InkMachineUtils{
+        private static string curDialogueScriptPath;
+        private static string compiledJSONFilePath;
+
         // Take the files and place them into corresponding folder paths
         public static void SortFiles(List<Object> files){
             // Read days
@@ -30,8 +33,8 @@ namespace InkMachine{
             // Copy the files into the directory
             CopyFilesTo(files, inkScript_FP);
             // Create linking ink file
-            TextAsset inkLinkFile = GenerateInkLink(days, inkScript_FP, actSceneData.ActScene);
-            Debug.Log($"inkLinkFile = {inkLinkFile}");
+            string inkLinkFilePath = GenerateInkLink(days, inkScript_FP, actSceneData.ActScene);
+            Debug.Log($"inkLinkFile = {inkLinkFilePath}");
             // --> Create the Dialogue Nodes for each day <--
             List<DialogueNode> dialogueNodes = new List<DialogueNode>();
 
@@ -47,14 +50,38 @@ namespace InkMachine{
             // --> Create Dialogue Script for act <--
             DialogueScript dialogueScript = ScriptableObject.CreateInstance<DialogueScript>();
             dialogueScript.dialogues = dialogueNodes;
-
-            dialogueScript.inkFile = inkLinkFile;
-
-            AssetDatabase.CreateAsset(dialogueScript, $"{dialogueScript_FP}{actSceneData.Act_Scene}.asset");
+            
+            // Try and link the compiled json
+            compiledJSONFilePath = $"{inkScript_FP}{actSceneData.ActScene}.json";
+            EditorApplication.delayCall += () =>{
+                for (int i = 0; i < 10; i++){
+                    if(File.Exists(compiledJSONFilePath))
+                        dialogueScript.inkFile = AssetDatabase.LoadAssetAtPath<TextAsset>(compiledJSONFilePath);
+                    System.Threading.Thread.Sleep(100);
+                }
+            };
+            curDialogueScriptPath = $"{dialogueScript_FP}{actSceneData.Act_Scene}.asset";
+            AssetDatabase.CreateAsset(dialogueScript, curDialogueScriptPath);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
 
             Debug.Log($"dialogues = {dialogueScript.dialogues}, inkFile = {dialogueScript.inkFile}");
+        }
+
+        public static void HandleLog(string logString, string stackTrace, LogType type){
+            Debug.Log($"logString = {logString}");
+            if(logString.Contains("Ink compilation completed") && curDialogueScriptPath != null && compiledJSONFilePath != null){
+                DialogueScript dialogueScriptSO = AssetDatabase.LoadAssetAtPath<DialogueScript>(curDialogueScriptPath);
+                dialogueScriptSO.inkFile = AssetDatabase.LoadAssetAtPath<TextAsset>(compiledJSONFilePath);
+
+                EditorUtility.SetDirty(dialogueScriptSO);
+                AssetDatabase.SaveAssets();
+                                
+                curDialogueScriptPath = null;
+                compiledJSONFilePath = null;
+                
+                Debug.Log("Hit here");
+            }
         }
 
         // Read in and collect the list of days - A5_S2_D1, A5_S2_D2, etc
@@ -72,7 +99,7 @@ namespace InkMachine{
         }
 
         // Create linking ink file and write ink script
-        private static TextAsset GenerateInkLink(List<string> days, string path, string f_name){
+        private static string GenerateInkLink(List<string> days, string path, string f_name){
             // Get the last 4 characters of path
             string inkFilePath = $"{path}{f_name}.ink";
 
@@ -98,10 +125,7 @@ namespace InkMachine{
             AssetDatabase.Refresh();
             Debug.Log($"Generated {f_name}.ink at {inkFilePath}");
 
-            AssetDatabase.ImportAsset(inkFilePath, ImportAssetOptions.ForceUpdate);
-            TextAsset inkLinkTextAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(inkFilePath);
-
-            return inkLinkTextAsset;
+            return inkFilePath;
         }
 
         public static bool IsInkFile(Object obj)

@@ -20,6 +20,12 @@ namespace InkMachine{
             ScriptableObject target = this;
             so = new SerializedObject(target);
             filesProperty = so.FindProperty("InkFiles");
+            
+            Application.logMessageReceived += InkMachineUtils.HandleLog;
+        }
+
+        private void OnDisable(){
+            Application.logMessageReceived -= InkMachineUtils.HandleLog;
         }
 
         // Show the inspector GUI
