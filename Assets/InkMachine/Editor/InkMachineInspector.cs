@@ -8,8 +8,6 @@ namespace InkMachine{
     {
         public List<Object> InkFiles = new List<Object>();
 
-        private string filePath = "Assets/Ink/Dialogues/";
-
         SerializedProperty filesProperty;
         SerializedObject so;
 
@@ -26,8 +24,6 @@ namespace InkMachine{
 
         // Show the inspector GUI
         private void OnGUI() {
-            // File Path specification
-            filePath = EditorGUILayout.TextField("File Path", filePath);
             // List of file objects
             EditorGUILayout.PropertyField(filesProperty, true); // true to show children
             // Drag files box
@@ -37,7 +33,7 @@ namespace InkMachine{
             
             // Sort files button
             if (GUILayout.Button("Sort Files")){
-                InkMachineUtils.SortFiles(InkFiles, filePath);
+                InkMachineUtils.SortFiles(InkFiles);
             }
         }
 
