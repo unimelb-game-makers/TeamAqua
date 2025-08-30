@@ -5,11 +5,11 @@ Narrator: In contrast to the storm that swallowed you last night, calm waves now
 Narrator: It seems like you've landed on a foreign island of some sort...
 Narrator: And nearby is a collapsed tree... and a tail?
 ???: <b>—You!</b> Whoever's standing there!
-//cutscene art of amelia stuck under tree
+
 ???: Don't think I can't see you!
 Narrator: You've never been outside of Dusk before, so you aren't sure <i>what</i> that is.
 Narrator: But if it isn't human, and it can speak... That means…
-//cutscene ends
+
 ???: Help me get out of here!#speaker:Amelia #portrait:AmeliaHostile 
 Narrator: What do you do? Do you help the creature?
 
