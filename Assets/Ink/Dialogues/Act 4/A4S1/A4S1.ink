@@ -15,8 +15,8 @@ CONST DIALOGUE_4 = "A4_S1_D4"
         -> A4_S1_D1
     - dialogue_id == DIALOGUE_2:
         -> A4_S1_D2
-    - dialogue_id == DIALOGUE_1:
+    - dialogue_id == DIALOGUE_3:
         -> A4_S1_D3
-    - dialogue_id == DIALOGUE_2:
+    - dialogue_id == DIALOGUE_4:
         -> A4_S1_D4
 }
