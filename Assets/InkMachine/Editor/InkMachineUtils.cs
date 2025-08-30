@@ -6,6 +6,7 @@ using System.Text;
 
 namespace InkMachine{
     public class InkMachineUtils{
+        // Variables to store the paths of the newly generated DialogueScripts and Ink File Compilation
         private static string curDialogueScriptPath;
         private static string compiledJSONFilePath;
 
@@ -68,6 +69,7 @@ namespace InkMachine{
             Debug.Log($"dialogues = {dialogueScript.dialogues}, inkFile = {dialogueScript.inkFile}");
         }
 
+        // Check for ink compilation log message. If logged, then connect the ink json file to the Dialogue Script
         public static void HandleLog(string logString, string stackTrace, LogType type){
             Debug.Log($"logString = {logString}");
             if(logString.Contains("Ink compilation completed") && curDialogueScriptPath != null && compiledJSONFilePath != null){
@@ -79,7 +81,7 @@ namespace InkMachine{
                                 
                 curDialogueScriptPath = null;
                 compiledJSONFilePath = null;
-                
+
                 Debug.Log("Hit here");
             }
         }
