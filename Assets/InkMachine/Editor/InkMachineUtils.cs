@@ -30,19 +30,31 @@ namespace InkMachine{
             // Copy the files into the directory
             CopyFilesTo(files, inkScript_FP);
             // Create linking ink file
-            GenerateInkLink(days, inkScript_FP, actSceneData.ActScene);
-
+            TextAsset inkLinkFile = GenerateInkLink(days, inkScript_FP, actSceneData.ActScene);
+            Debug.Log($"inkLinkFile = {inkLinkFile}");
             // --> Create the Dialogue Nodes for each day <--
-            
+            List<DialogueNode> dialogueNodes = new List<DialogueNode>();
+
             CreateDirectory(dialogueNode_FP);
             foreach(string day in days){
                 DialogueNode dialogueNode = ScriptableObject.CreateInstance<DialogueNode>();
                 AssetDatabase.CreateAsset(dialogueNode, $"{dialogueNode_FP}{day}.asset");
+                dialogueNodes.Add(dialogueNode);
             }
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
-            // --> Create Dialogue Script for act <--
 
+            // --> Create Dialogue Script for act <--
+            DialogueScript dialogueScript = ScriptableObject.CreateInstance<DialogueScript>();
+            dialogueScript.dialogues = dialogueNodes;
+
+            dialogueScript.inkFile = inkLinkFile;
+
+            AssetDatabase.CreateAsset(dialogueScript, $"{dialogueScript_FP}{actSceneData.Act_Scene}.asset");
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+            Debug.Log($"dialogues = {dialogueScript.dialogues}, inkFile = {dialogueScript.inkFile}");
         }
 
         // Read in and collect the list of days - A5_S2_D1, A5_S2_D2, etc
@@ -60,7 +72,7 @@ namespace InkMachine{
         }
 
         // Create linking ink file and write ink script
-        private static void GenerateInkLink(List<string> days, string path, string f_name){
+        private static TextAsset GenerateInkLink(List<string> days, string path, string f_name){
             // Get the last 4 characters of path
             string inkFilePath = $"{path}{f_name}.ink";
 
@@ -85,6 +97,11 @@ namespace InkMachine{
             File.WriteAllText(inkFilePath, sb.ToString());
             AssetDatabase.Refresh();
             Debug.Log($"Generated {f_name}.ink at {inkFilePath}");
+
+            AssetDatabase.ImportAsset(inkFilePath, ImportAssetOptions.ForceUpdate);
+            TextAsset inkLinkTextAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(inkFilePath);
+
+            return inkLinkTextAsset;
         }
 
         public static bool IsInkFile(Object obj)
