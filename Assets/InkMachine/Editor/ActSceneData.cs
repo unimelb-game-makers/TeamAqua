@@ -17,7 +17,7 @@ namespace InkMachine{
                 return "Error";
             // get the first day
             string firstDay = days[0];
-            string actScene = firstDay.Substring(0, 5);
+            string actScene = firstDay.Substring(0, 5); // Only read and compare first 5 characters of the string: A5_S4
             // check if the day is shared with the rest of the files
             foreach(string day in days){
                 if(day.Contains(actScene) == false)

@@ -12,8 +12,29 @@ namespace InkMachine{
 
         // Take the files and place them into corresponding folder paths
         public static void SortFiles(List<Object> files){
+            // Filter days and quests
+            debugPrintList(files);
+            List<Object> questFiles = new List<Object>();
+            List<Object> dayFiles = new List<Object>();
+            foreach(Object obj in files){
+                // If filename has quest in it, pass it on to questFiles otherwise, pass to dayFiles
+                if(obj.name.Contains("Q")){
+                    questFiles.Add(obj);
+                } else{
+                    dayFiles.Add(obj);
+                }
+            }
+            // Filter out quests and pass on the days
+            Debug.Log("Quest Files: ");
+            debugPrintList(questFiles);
+
+            Debug.Log("Day Files: ");
+            debugPrintList(dayFiles);
+
+            return;
             // Read days
             List<string> days = GetDays(files);
+            Debug.Log("Days = " + days);
             // Read days and derive Act_Scene and Act
             ActSceneData actSceneData = new ActSceneData(days); // Contains 
 
@@ -21,7 +42,6 @@ namespace InkMachine{
                 Debug.LogError("Ink file days are not matching or valid");
                 return;
             }
-            
             // Derive paths
             string inkScript_FP = $"Assets/Ink/Dialogues/{actSceneData.Act}/{actSceneData.ActScene}/";
             string dialogueNode_FP = $"Assets/ScriptableObjects/Dialogue/{actSceneData.Act}/Dialogue/{actSceneData.ActScene}/";
@@ -36,6 +56,7 @@ namespace InkMachine{
             // Create linking ink file
             string inkLinkFilePath = GenerateInkLink(days, inkScript_FP, actSceneData.ActScene);
             Debug.Log($"inkLinkFile = {inkLinkFilePath}");
+
             // --> Create the Dialogue Nodes for each day <--
             List<DialogueNode> dialogueNodes = new List<DialogueNode>();
 
@@ -55,7 +76,8 @@ namespace InkMachine{
             // Try and link the compiled json
             compiledJSONFilePath = $"{inkScript_FP}{actSceneData.ActScene}.json";
             EditorApplication.delayCall += () =>{
-                for (int i = 0; i < 10; i++){
+                // Loops 10 times. If json not found, spawn a thread to sleep. Next loop to check again.
+                for (int i = 0; i < 10; i++) {
                     if(File.Exists(compiledJSONFilePath))
                         dialogueScript.inkFile = AssetDatabase.LoadAssetAtPath<TextAsset>(compiledJSONFilePath);
                     System.Threading.Thread.Sleep(100);
@@ -68,11 +90,19 @@ namespace InkMachine{
 
             Debug.Log($"dialogues = {dialogueScript.dialogues}, inkFile = {dialogueScript.inkFile}");
         }
+        
+        private static void debugPrintList(List<Object> ts) {
+            string final = "";
+            foreach(Object obj in ts) {
+                final += obj.name + " ";
+            }
+            Debug.Log(final);
+        }
 
         // Check for ink compilation log message. If logged, then connect the ink json file to the Dialogue Script
         public static void HandleLog(string logString, string stackTrace, LogType type){
-            Debug.Log($"logString = {logString}");
-            if(logString.Contains("Ink compilation completed") && curDialogueScriptPath != null && compiledJSONFilePath != null){
+            //Debug.Log($"logString = {logString}");
+            if(logString.Contains("Ink compilation completed") && curDialogueScriptPath != null && compiledJSONFilePath != null) {
                 DialogueScript dialogueScriptSO = AssetDatabase.LoadAssetAtPath<DialogueScript>(curDialogueScriptPath);
                 dialogueScriptSO.inkFile = AssetDatabase.LoadAssetAtPath<TextAsset>(compiledJSONFilePath);
 
