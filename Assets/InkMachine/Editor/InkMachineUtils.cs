@@ -29,6 +29,7 @@ namespace InkMachine{
             debugPrintList(questFiles);
             Debug.Log("Day Files: ");
             debugPrintList(dayFiles);
+            
             // Read Quests
             List<string> quests = GetInkList(questFiles);
             // Read days
@@ -148,17 +149,32 @@ namespace InkMachine{
                 sb.AppendLine($"CONST DIALOGUE_{i + 1} = \"{days[i]}\"");
             }
             for(int i = 0; i < quests.Count; i++){
-                sb.AppendLine($"CONST QUEST_{i+1} = \"{quests[i]}\"");
+                sb.AppendLine($"CONST QUEST_{i + 1} = \"{quests[i]}\"");
             }
             sb.AppendLine("{");
             for(int i = 0; i < days.Count; i++){
-                sb.AppendLine($"\t- dialogue_id == DIALOGUE_{i+1}:");
+                sb.AppendLine($"\t- dialogue_id == DIALOGUE_{i + 1}:");
                 sb.AppendLine($"\t\t-> {days[i]}");
             }
             sb.AppendLine("}");
             
             // Write the code blocks for each quest
-            
+            List<string> quests_cut = new List<string>(); // Store individual quests first => A2_S2_Q1, A2_S2_Q2, ...
+            foreach(string questFile in quests){
+                string quest = questFile.Substring(0, 8); // A2_S2_Q1_ONGOING => A2_S2_Q1
+                if(quests_cut.Contains(quest))
+                    continue;
+                quests_cut.Add(quest);
+            }
+            foreach(string quest in quests_cut){
+                sb.AppendLine($"==={quest}===");
+                sb.AppendLine("{");
+                sb.AppendLine("\t- quest_state == \"ONGOING\":");
+                sb.AppendLine($"\t\t-> {quest}_ONGOING");
+                sb.AppendLine("\t- quest_state == \"COMPLETED\":");
+                sb.AppendLine($"\t\t-> {quest}_COMPLETED");
+                sb.AppendLine("}");
+            }
 
             // Ink Script Done and write to file
             File.WriteAllText(inkFilePath, sb.ToString());
