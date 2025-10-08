@@ -22,10 +22,11 @@ public class NPCDialogue : MonoBehaviour
 
     private void Start()
     {
-        if (!hasIndicator) return;
+        if (!hasIndicator)
+            return;
         GameObject npcCanvas = Instantiate(PrefabManager.instance.npcCanvasPrefab, transform);
         indicatorPopup = npcCanvas.GetComponentInChildren<IndicatorPopup>();
-        
+
         if (indicatorPopup == null)
         {
             Debug.Log($"DIALOGUE | {name} does not have an IndicatorPopup attached");
@@ -79,7 +80,9 @@ public class NPCDialogue : MonoBehaviour
 
     public void ShowIndicator()
     {
-        if (!hasIndicator) return;
+        Debug.Log("showing indicator");
+        if (!hasIndicator)
+            return;
         // If there is no active dialogue, don't show an indicator
         if (!TryGetActiveDialogue(out DialogueTrigger trigger))
             return;
@@ -103,7 +106,8 @@ public class NPCDialogue : MonoBehaviour
 
     public void HideIndicators()
     {
-        if (!hasIndicator) return;
+        if (!hasIndicator)
+            return;
         indicatorPopup.HidePopup();
     }
 }
