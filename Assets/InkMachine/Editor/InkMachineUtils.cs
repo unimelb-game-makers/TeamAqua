@@ -46,7 +46,6 @@ namespace InkMachine{
             string inkScript_FP = $"Assets/Ink/Dialogues/{actSceneData.Act}/{actSceneData.ActScene}/";
             string dialogueNode_FP = $"Assets/ScriptableObjects/Dialogue/{actSceneData.Act}/Dialogue/{actSceneData.ActScene}/";
             string dialogueScript_FP = $"Assets/ScriptableObjects/Dialogue/{actSceneData.Act}/Script/";
-
             // --> Organise Ink Files <--
 
             // Assets/Ink/Dialogues/Act 5/A5S2
@@ -85,6 +84,18 @@ namespace InkMachine{
             };
             curDialogueScriptPath = $"{dialogueScript_FP}{actSceneData.Act_Scene}.asset";
             AssetDatabase.CreateAsset(dialogueScript, curDialogueScriptPath);
+
+            // --> Create the Quests and each Quest Step <--
+            List<string> questsSlice = QuestsSlice(quests);
+            foreach(string quest in questsSlice){
+                Quest questSO = ScriptableObject.CreateInstance<Quest>();
+                AssetDatabase.CreateAsset(questSO, $"{dialogueNode_FP}{quest}.asset");
+                
+                QuestStep questStepSO = ScriptableObject.CreateInstance<QuestStep>();
+                AssetDatabase.CreateAsset(questStepSO, $"{dialogueNode_FP}{quest}_1.asset");
+            }
+
+            // create assets at dialogueNode_FP
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
 
@@ -159,13 +170,7 @@ namespace InkMachine{
             sb.AppendLine("}");
             
             // Write the code blocks for each quest
-            List<string> quests_cut = new List<string>(); // Store individual quests first => A2_S2_Q1, A2_S2_Q2, ...
-            foreach(string questFile in quests){
-                string quest = questFile.Substring(0, 8); // A2_S2_Q1_ONGOING => A2_S2_Q1
-                if(quests_cut.Contains(quest))
-                    continue;
-                quests_cut.Add(quest);
-            }
+            List<string> quests_cut = QuestsSlice(quests); // Store individual quests first => A2_S2_Q1, A2_S2_Q2, ...
             foreach(string quest in quests_cut){
                 sb.AppendLine($"==={quest}===");
                 sb.AppendLine("{");
@@ -182,6 +187,18 @@ namespace InkMachine{
             Debug.Log($"Generated {f_name}.ink at {inkFilePath}");
 
             return inkFilePath;
+        }
+
+        // Store individual quests: A2_S2_Q1, A2_S2_Q2
+        public static List<string> QuestsSlice(List<string> quests){
+            List<string> quests_cut = new List<string>(); // Store individual quests first => A2_S2_Q1, A2_S2_Q2, ...
+            foreach(string questFile in quests){
+                string quest = questFile.Substring(0, 8); // A2_S2_Q1_ONGOING => A2_S2_Q1
+                if(quests_cut.Contains(quest))
+                    continue;
+                quests_cut.Add(quest);
+            }
+            return quests_cut;
         }
 
         public static bool IsInkFile(Object obj)
