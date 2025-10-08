@@ -27,13 +27,12 @@ namespace InkMachine{
             // Filter out quests and pass on the days
             Debug.Log("Quest Files: ");
             debugPrintList(questFiles);
-
             Debug.Log("Day Files: ");
             debugPrintList(dayFiles);
-
-            return;
+            // Read Quests
+            List<string> quests = GetInkList(questFiles);
             // Read days
-            List<string> days = GetDays(files);
+            List<string> days = GetInkList(dayFiles);
             Debug.Log("Days = " + days);
             // Read days and derive Act_Scene and Act
             ActSceneData actSceneData = new ActSceneData(days); // Contains 
@@ -54,7 +53,7 @@ namespace InkMachine{
             // Copy the files into the directory
             CopyFilesTo(files, inkScript_FP);
             // Create linking ink file
-            string inkLinkFilePath = GenerateInkLink(days, inkScript_FP, actSceneData.ActScene);
+            string inkLinkFilePath = GenerateInkLink(days, quests, inkScript_FP, actSceneData.ActScene);
             Debug.Log($"inkLinkFile = {inkLinkFilePath}");
 
             // --> Create the Dialogue Nodes for each day <--
@@ -117,33 +116,39 @@ namespace InkMachine{
         }
 
         // Read in and collect the list of days - A5_S2_D1, A5_S2_D2, etc
-        private static List<string> GetDays(List<Object> files){
-            List<string> days = new List<string>();
+        private static List<string> GetInkList(List<Object> files){
+            List<string> inks = new List<string>();
 
             // Write the include lines and make list of days
             foreach(Object file in files){
                 if (IsInkFile(file)){
                     string f_Name = file.name;
-                    days.Add(f_Name);
+                    inks.Add(f_Name);
                 }
             }
-            return days;
+            return inks;
         }
 
         // Create linking ink file and write ink script
-        private static string GenerateInkLink(List<string> days, string path, string f_name){
+        private static string GenerateInkLink(List<string> days, List<string> quests, string path, string f_name){
             // Get the last 4 characters of path
             string inkFilePath = $"{path}{f_name}.ink";
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("INCLUDE ../../Globals/Globals.ink");
-            // Write the include lines and make list of days
-            foreach(string day in days){
-                sb.AppendLine($"INCLUDE {day}.ink");
+            // Write the include lines and make list of days and quests
+            List<string> inkFileList = new List<string>();
+            inkFileList.AddRange(days);
+            inkFileList.AddRange(quests);
+            foreach(string inkFile in inkFileList){
+                sb.AppendLine($"INCLUDE {inkFile}.ink");
             }
             sb.AppendLine("// Variable Setup");
             for(int i = 0; i < days.Count; i++){
                 sb.AppendLine($"CONST DIALOGUE_{i + 1} = \"{days[i]}\"");
+            }
+            for(int i = 0; i < quests.Count; i++){
+                sb.AppendLine($"CONST QUEST_{i+1} = \"{quests[i]}\"");
             }
             sb.AppendLine("{");
             for(int i = 0; i < days.Count; i++){
@@ -152,6 +157,9 @@ namespace InkMachine{
             }
             sb.AppendLine("}");
             
+            // Write the code blocks for each quest
+            
+
             // Ink Script Done and write to file
             File.WriteAllText(inkFilePath, sb.ToString());
             AssetDatabase.Refresh();
