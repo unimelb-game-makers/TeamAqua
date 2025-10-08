@@ -28,6 +28,7 @@ public class NPCDialogueHandler : MonoBehaviour
 
         if (other.gameObject.TryGetComponent(out NPCDialogue dialogue))
         {
+            Debug.Log("fetching NPCDialogue from collided npc");
             _dialogueSource = dialogue;
             _dialogueSource.ShowIndicator();
         }
