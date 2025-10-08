@@ -6,50 +6,199 @@ using System.Text;
 
 namespace InkMachine{
     public class InkMachineUtils{
+        // Variables to store the paths of the newly generated DialogueScripts and Ink File Compilation
+        private static string curDialogueScriptPath;
+        private static string compiledJSONFilePath;
+
         // Take the files and place them into corresponding folder paths
-        public static void SortFiles(List<Object> files, string path){
-            // Assets/Ink/Dialogues/Act 5/A5S2
-            if(CreateDirectory(path)){
-                Debug.Log($"Created Directory {path}");
+        public static void SortFiles(List<Object> files){
+            // Filter days and quests
+            debugPrintList(files);
+            List<Object> questFiles = new List<Object>();
+            List<Object> dayFiles = new List<Object>();
+            foreach(Object obj in files){
+                // If filename has quest in it, pass it on to questFiles otherwise, pass to dayFiles
+                if(obj.name.Contains("Q")){
+                    questFiles.Add(obj);
+                } else{
+                    dayFiles.Add(obj);
+                }
             }
+            // Filter out quests and pass on the days
+            Debug.Log("Quest Files: ");
+            debugPrintList(questFiles);
+            Debug.Log("Day Files: ");
+            debugPrintList(dayFiles);
+            
+            // Read Quests
+            List<string> quests = GetInkList(questFiles);
+            // Read days
+            List<string> days = GetInkList(dayFiles);
+            Debug.Log("Days = " + days);
+            // Read days and derive Act_Scene and Act
+            ActSceneData actSceneData = new ActSceneData(days); // Contains 
+
+            if (actSceneData.ActScene == "Error"){
+                Debug.LogError("Ink file days are not matching or valid");
+                return;
+            }
+            // Derive paths
+            string inkScript_FP = $"Assets/Ink/Dialogues/{actSceneData.Act}/{actSceneData.ActScene}/";
+            string dialogueNode_FP = $"Assets/ScriptableObjects/Dialogue/{actSceneData.Act}/Dialogue/{actSceneData.ActScene}/";
+            string dialogueScript_FP = $"Assets/ScriptableObjects/Dialogue/{actSceneData.Act}/Script/";
+            // --> Organise Ink Files <--
+
+            // Assets/Ink/Dialogues/Act 5/A5S2
+            CreateDirectory(inkScript_FP);
             // Copy the files into the directory
-            CopyFilesTo(files, path);
+            CopyFilesTo(files, inkScript_FP);
             // Create linking ink file
-            GenerateInkLink(files, path);
+            string inkLinkFilePath = GenerateInkLink(days, quests, inkScript_FP, actSceneData.ActScene);
+            Debug.Log($"inkLinkFile = {inkLinkFilePath}");
+
+            // --> Create the Dialogue Nodes for each day <--
+            List<DialogueNode> dialogueNodes = new List<DialogueNode>();
+
+            CreateDirectory(dialogueNode_FP);
+            foreach(string day in days){
+                DialogueNode dialogueNode = ScriptableObject.CreateInstance<DialogueNode>();
+                AssetDatabase.CreateAsset(dialogueNode, $"{dialogueNode_FP}{day}.asset");
+                dialogueNodes.Add(dialogueNode);
+            }
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+            // --> Create Dialogue Script for act <--
+            DialogueScript dialogueScript = ScriptableObject.CreateInstance<DialogueScript>();
+            dialogueScript.dialogues = dialogueNodes;
+            
+            // Try and link the compiled json
+            compiledJSONFilePath = $"{inkScript_FP}{actSceneData.ActScene}.json";
+            EditorApplication.delayCall += () =>{
+                // Loops 10 times. If json not found, spawn a thread to sleep. Next loop to check again.
+                for (int i = 0; i < 10; i++) {
+                    if(File.Exists(compiledJSONFilePath))
+                        dialogueScript.inkFile = AssetDatabase.LoadAssetAtPath<TextAsset>(compiledJSONFilePath);
+                    System.Threading.Thread.Sleep(100);
+                }
+            };
+            curDialogueScriptPath = $"{dialogueScript_FP}{actSceneData.Act_Scene}.asset";
+            AssetDatabase.CreateAsset(dialogueScript, curDialogueScriptPath);
+
+            // --> Create the Quests and each Quest Step <--
+            List<string> questsSlice = QuestsSlice(quests);
+            foreach(string quest in questsSlice){
+                Quest questSO = ScriptableObject.CreateInstance<Quest>();
+                AssetDatabase.CreateAsset(questSO, $"{dialogueNode_FP}{quest}.asset");
+                
+                QuestStep questStepSO = ScriptableObject.CreateInstance<QuestStep>();
+                AssetDatabase.CreateAsset(questStepSO, $"{dialogueNode_FP}{quest}_1.asset");
+            }
+
+            // create assets at dialogueNode_FP
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+
+            Debug.Log($"dialogues = {dialogueScript.dialogues}, inkFile = {dialogueScript.inkFile}");
+        }
+        
+        private static void debugPrintList(List<Object> ts) {
+            string final = "";
+            foreach(Object obj in ts) {
+                final += obj.name + " ";
+            }
+            Debug.Log(final);
         }
 
-        // Create linking ink file and write ink script
-        private static void GenerateInkLink(List<Object> files, string path){
-            // Get the last 4 characters of path
-            string fileName = path.Length >= 4 ? path.Substring(path.Length - 4) : path;
-            string inkFilePath = $"{path}/{fileName}.ink";
+        // Check for ink compilation log message. If logged, then connect the ink json file to the Dialogue Script
+        public static void HandleLog(string logString, string stackTrace, LogType type){
+            //Debug.Log($"logString = {logString}");
+            if(logString.Contains("Ink compilation completed") && curDialogueScriptPath != null && compiledJSONFilePath != null) {
+                DialogueScript dialogueScriptSO = AssetDatabase.LoadAssetAtPath<DialogueScript>(curDialogueScriptPath);
+                dialogueScriptSO.inkFile = AssetDatabase.LoadAssetAtPath<TextAsset>(compiledJSONFilePath);
 
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("INCLUDE ../../Globals/Globals.ink");
-            List<string> days = new List<string>(); // Make list of days - A5_S2_D1, A5_S2_D2, etc
+                EditorUtility.SetDirty(dialogueScriptSO);
+                AssetDatabase.SaveAssets();
+                                
+                curDialogueScriptPath = null;
+                compiledJSONFilePath = null;
+
+                Debug.Log("Hit here");
+            }
+        }
+
+        // Read in and collect the list of days - A5_S2_D1, A5_S2_D2, etc
+        private static List<string> GetInkList(List<Object> files){
+            List<string> inks = new List<string>();
 
             // Write the include lines and make list of days
             foreach(Object file in files){
                 if (IsInkFile(file)){
                     string f_Name = file.name;
-                    sb.AppendLine($"INCLUDE {f_Name}.ink");
-                    days.Add(f_Name);
+                    inks.Add(f_Name);
                 }
+            }
+            return inks;
+        }
+
+        // Create linking ink file and write ink script
+        private static string GenerateInkLink(List<string> days, List<string> quests, string path, string f_name){
+            // Get the last 4 characters of path
+            string inkFilePath = $"{path}{f_name}.ink";
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("INCLUDE ../../Globals/Globals.ink");
+            // Write the include lines and make list of days and quests
+            List<string> inkFileList = new List<string>();
+            inkFileList.AddRange(days);
+            inkFileList.AddRange(quests);
+            foreach(string inkFile in inkFileList){
+                sb.AppendLine($"INCLUDE {inkFile}.ink");
             }
             sb.AppendLine("// Variable Setup");
             for(int i = 0; i < days.Count; i++){
                 sb.AppendLine($"CONST DIALOGUE_{i + 1} = \"{days[i]}\"");
             }
+            for(int i = 0; i < quests.Count; i++){
+                sb.AppendLine($"CONST QUEST_{i + 1} = \"{quests[i]}\"");
+            }
             sb.AppendLine("{");
             for(int i = 0; i < days.Count; i++){
-                sb.AppendLine($"\t- dialogue_id == DIALOGUE_{i+1}:");
+                sb.AppendLine($"\t- dialogue_id == DIALOGUE_{i + 1}:");
                 sb.AppendLine($"\t\t-> {days[i]}");
             }
             sb.AppendLine("}");
+            
+            // Write the code blocks for each quest
+            List<string> quests_cut = QuestsSlice(quests); // Store individual quests first => A2_S2_Q1, A2_S2_Q2, ...
+            foreach(string quest in quests_cut){
+                sb.AppendLine($"==={quest}===");
+                sb.AppendLine("{");
+                sb.AppendLine("\t- quest_state == \"ONGOING\":");
+                sb.AppendLine($"\t\t-> {quest}_ONGOING");
+                sb.AppendLine("\t- quest_state == \"COMPLETED\":");
+                sb.AppendLine($"\t\t-> {quest}_COMPLETED");
+                sb.AppendLine("}");
+            }
 
             // Ink Script Done and write to file
             File.WriteAllText(inkFilePath, sb.ToString());
             AssetDatabase.Refresh();
+            Debug.Log($"Generated {f_name}.ink at {inkFilePath}");
+
+            return inkFilePath;
+        }
+
+        // Store individual quests: A2_S2_Q1, A2_S2_Q2
+        public static List<string> QuestsSlice(List<string> quests){
+            List<string> quests_cut = new List<string>(); // Store individual quests first => A2_S2_Q1, A2_S2_Q2, ...
+            foreach(string questFile in quests){
+                string quest = questFile.Substring(0, 8); // A2_S2_Q1_ONGOING => A2_S2_Q1
+                if(quests_cut.Contains(quest))
+                    continue;
+                quests_cut.Add(quest);
+            }
+            return quests_cut;
         }
 
         public static bool IsInkFile(Object obj)
@@ -76,15 +225,14 @@ namespace InkMachine{
         }
 
         // Create a directory and return true and false whether it already exists
-        private static bool CreateDirectory(string path){
+        private static void CreateDirectory(string path){
             if (!Directory.Exists(path)){
                 Directory.CreateDirectory(path);
                 AssetDatabase.Refresh();
-                return true;
+                Debug.Log($"Created Directory {path}");
             }
             else{
                 Debug.LogWarning($"Directory already exists: {path}");
-                return false;
             }
         }
     }
