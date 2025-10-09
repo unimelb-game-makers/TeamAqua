@@ -3765,7 +3765,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -17187,8 +17187,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7767426287327969144}
-  - {fileID: 8930697281904174677}
   - {fileID: 2307430629967444561}
+  - {fileID: 8930697281904174677}
   - {fileID: 3083539460763013872}
   - {fileID: 6536862606678616902}
   - {fileID: 3255606166965828331}
@@ -44890,7 +44890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3090f6275a5dc47b07efa209707bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzle: {fileID: 0}
+  puzzle: {fileID: 909719489459420629}
   On: 0
 --- !u!114 &1122501251301608929
 MonoBehaviour:
@@ -49024,7 +49024,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

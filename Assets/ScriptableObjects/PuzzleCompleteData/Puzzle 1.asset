@@ -16,5 +16,5 @@ MonoBehaviour:
     id: Puzzle 1
     completed: 0
     blocks:
-    - position: {x: 3.75, y: 0.75, z: 24}
-    - position: {x: 4, y: 0.75, z: 24.25}
+    - position: {x: 3.75, y: 0.75, z: 24.25}
+    - position: {x: 4.25, y: 0.75, z: 24.25}

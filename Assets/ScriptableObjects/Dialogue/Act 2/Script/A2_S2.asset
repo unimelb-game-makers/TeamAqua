@@ -15,5 +15,5 @@ MonoBehaviour:
   inkFile: {fileID: 4900000, guid: 2d35fdc046e06d8468ea29e2085cbd1d, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 2ca4411b467c2634fbe0b1eb8f13afd4, type: 2}
-  - {fileID: 11400000, guid: 8d5fb201bc7c89e4dbd465c89d341de6, type: 2}
   - {fileID: 11400000, guid: 295b90c04e70fdc49936d0626e6c6b3e, type: 2}
+  - {fileID: 11400000, guid: 8d5fb201bc7c89e4dbd465c89d341de6, type: 2}
