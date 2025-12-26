@@ -254,5 +254,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: eb0b249782fb9614da6df085ad501b65, type: 2}
   hasIndicator: 1
