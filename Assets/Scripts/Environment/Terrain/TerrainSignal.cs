@@ -22,6 +22,7 @@ public class TerrainSignal : MonoBehaviour
         if(!other.CompareTag("Player"))
             return;
         // Send signal to switch
-        _switch.SwitchTerrain(status);
+        if (_switch)
+            _switch.SwitchTerrain(status);
     }
 }
