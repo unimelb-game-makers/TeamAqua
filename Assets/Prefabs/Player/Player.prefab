@@ -127,7 +127,7 @@ MonoBehaviour:
   _edgeRaySpread: 30
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   _showDebugRays: 1
 --- !u!114 &8893293428448203259
 MonoBehaviour:

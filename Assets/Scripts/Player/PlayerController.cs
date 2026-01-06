@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour, ISaveable
             moveDirection = Vector3.zero;
             //AudioManager.Instance.Stop("BGM_SFX_WALKING");
         }
+        //Debug.Log($"can move in direction = {edgeDetector.CanMoveInDirection(moveInput)}");
         
         trailTimer += Time.deltaTime;
         if (trailTimer >= trailInterval) {
