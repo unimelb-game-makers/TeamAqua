@@ -402,6 +402,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1045403013513955318, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1066019888951546923, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -774,6 +778,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5109470166717612074, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: m_TagString
+      value: Creature
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142465343932819039, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5183861077789871831, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 5280213605358499240, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.42
@@ -1085,6 +1101,10 @@ PrefabInstance:
     - target: {fileID: 8875762867814180809, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938216030242049398, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8940039283071836671, guid: 3b69a27f5b12b4623a509ee88446d64a, type: 3}
       propertyPath: m_Layer
