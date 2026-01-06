@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f14a4b36195844bbc0a12986fb0d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: {fileID: 11400000, guid: ce938f8d2321f3c2e92400542c704485, type: 2}
+  id: {fileID: 11400000, guid: d80ad5e1696c158d9a55146ef447002c, type: 2}
 --- !u!212 &4487584723463123736
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: 45849e2283de49d4a97a8c9e8eed73f7, type: 2}
+  npcData: {fileID: 11400000, guid: f370869c72409a14fab781eeaf97a12f, type: 2}
   hasIndicator: 1
 --- !u!1 &2033648852459820708
 GameObject:
