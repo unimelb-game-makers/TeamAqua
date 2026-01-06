@@ -185,4 +185,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374841327734c4991a322828237adc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcData: {fileID: 11400000, guid: 0151275d899f06348894c861b75e0ff7, type: 2}
+  npcData: {fileID: 11400000, guid: c1f5dc5acc72400ea8466de5f1dc0b6e, type: 2}
+  hasIndicator: 1
