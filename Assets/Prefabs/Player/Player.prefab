@@ -120,11 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2d545ae4699cb939f74cda070bffd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _edgeCheckDistance: 0.5
+  _edgeCheckDistance: 0.33
   _tiltAngle: 2.5
   _edgeCheckRadius: 0.2
   _edgeCheckRays: 3
-  _edgeRaySpread: 30
+  _edgeRaySpread: 45
   _groundLayer:
     serializedVersion: 2
     m_Bits: 1280
