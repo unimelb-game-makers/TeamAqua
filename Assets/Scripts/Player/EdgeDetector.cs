@@ -45,13 +45,13 @@ public class EdgeDetector : MonoBehaviour
             if (_showDebugRays)
                 Debug.DrawRay(transform.position, rayDir.normalized * _edgeCheckDistance, Color.red, 0.1f);
 
+            // If a ray does not hit, then there is an edge
             if (!Physics.Raycast(transform.position, rayDir, _edgeCheckDistance, _groundLayer))
             {
                 //Debug.LogWarning($"Edge detected on ray {i} (angle: {angle}°)");
                 return true; // Edge detected
             }
             //Debug.Log("here");
-            
         }
         //Debug.Log("here");
         return false; // No edge
