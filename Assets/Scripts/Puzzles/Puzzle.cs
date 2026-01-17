@@ -24,7 +24,8 @@ public class Puzzle : MonoBehaviour
             Debug.LogError($"PUZZLE | {name} is missing a puzzle data object.");
             enabled = false;
         }
-        PuzzleManager.instance.Register(this);
+        if(PuzzleManager.instance)
+            PuzzleManager.instance.Register(this);
     }
     
     private void Start() 
