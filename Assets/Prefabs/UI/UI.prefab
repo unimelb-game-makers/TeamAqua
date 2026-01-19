@@ -228,6 +228,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIController
       objectReference: {fileID: 0}
+    - target: {fileID: 3650033107239937816, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385237360188784910, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4385237360188784910, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5236316010689037707, guid: 63e3c2eae94724e17a03a6333789daf4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
