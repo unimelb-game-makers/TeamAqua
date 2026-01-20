@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affda5d30205fc94496a3587fbe8fc0a, type: 3}
+  m_Name: D5 Dialogue Pool
+  m_EditorClassIdentifier: 
+  dialogueBranches:
+  - {fileID: 11400000, guid: ac25d66ca19756b4f954cf0c8ce5e364, type: 2}
+  - {fileID: 11400000, guid: 12c4dcaf3b1f74c46ae21c3c283db3ca, type: 2}
+  - {fileID: 11400000, guid: 8232616e1f4fd434698b3de716bf13c6, type: 2}
+  - {fileID: 11400000, guid: 73d4a8fe786187c73b31000870d2eef2, type: 2}

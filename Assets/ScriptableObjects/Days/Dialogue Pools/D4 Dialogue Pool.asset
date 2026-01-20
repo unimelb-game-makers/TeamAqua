@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: affda5d30205fc94496a3587fbe8fc0a, type: 3}
-  m_Name: D4 Dialogue Pool 2
+  m_Name: D4 Dialogue Pool
   m_EditorClassIdentifier: 
   dialogueBranches:
   - {fileID: 11400000, guid: a06c90952e1157e4c8ee13f4e5cc106b, type: 2}

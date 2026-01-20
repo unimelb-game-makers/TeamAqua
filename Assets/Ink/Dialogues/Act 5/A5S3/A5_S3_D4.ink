@@ -9,7 +9,7 @@ Carti: Our traditions don't often promote traveling offshore, so it's probably a
     -> choicechatflora
 +[I'm glad.]
     -> choicechatflora
-===choicechatflora==÷
+===choicechatflora==
 Noelle: But it's mostly Chione's passion, I think, rather than my stories… #portrait:NoelleSmallSmile
 Noelle: It's too bad I couldn't show her actual specimens. #portrait:NoelleSad
 Bri: Well, even just a few words can ripple into a wave.
