@@ -17,7 +17,7 @@ namespace AutomateNPC {
 
         public static void HandleColliderLayer() { 
             LayerMask playerLayer = LayerMask.GetMask("Player");
-            string npcModelScript_FP = $"Assets/Prefabs/Models/NPCs";
+            string npcModelScript_FP = $"Assets/Prefabs/Models/NPCs"; // Path to NPC models folder
 
             string[] modelInfos = AssetDatabase.FindAssets("t:Prefab", new[] { npcModelScript_FP});
 
@@ -28,7 +28,7 @@ namespace AutomateNPC {
                 Debug.Log($"found file in models dir: {npcModelObj.name} of type: {npcModelObj.GetType()}");
                 foreach (Collider collider in  npcModelObj.GetComponents<Collider>())
                 {
-                    if (collider.isTrigger)
+                    if (collider.isTrigger) // if trigger, include Player layer
                     {
                         if ((collider.includeLayers & playerLayer) == 0)
                         {
@@ -36,7 +36,7 @@ namespace AutomateNPC {
                             Debug.Log($"Included Player layer to trigger collider on {npcModelObj.name}");
                         }  
                     }
-                    else
+                    else // if non-trigger, exclude Player layer
                     {
                         if ((collider.excludeLayers & playerLayer) == 0)
                         {
@@ -46,12 +46,6 @@ namespace AutomateNPC {
                     }
                 }            
             }
-        }
-
-
-        private void Awake()
-        {
-            HandleColliderLayer();
         }
     }
 }
