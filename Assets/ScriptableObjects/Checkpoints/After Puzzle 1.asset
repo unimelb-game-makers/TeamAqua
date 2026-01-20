@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 920f6576d22bb4495acc8eed321e1b35, type: 3}
-  m_Name: Before Puzzle 1
+  m_Name: After Puzzle 1
   m_EditorClassIdentifier: 
-  position: {x: 16.767574, y: 1.0910755, z: 19.389519}
+  position: {x: 3.5789266, y: 0.8410756, z: 26.17421}
