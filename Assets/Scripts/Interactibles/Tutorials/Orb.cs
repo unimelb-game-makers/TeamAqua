@@ -38,8 +38,11 @@ public class Orb : MonoBehaviour
         transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
 
         if (playerIn && Input.GetKeyDown(KeyCode.E) && (!nextOrb))
-        {
-            SceneManager.LoadScene("NoonIsland");
+        {   
+            var fader = FindFirstObjectByType<FadeController>();
+            if (fader != null)
+                fader.ShowWhileLoading("NoonIsland");
+
         }
     }
 

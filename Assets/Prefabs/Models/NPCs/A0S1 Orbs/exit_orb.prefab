@@ -105,6 +105,7 @@ MonoBehaviour:
   fastRotationSpeed: 20
   spriteRenderer: {fileID: 7861849858557249318}
   postProcessVolume: {fileID: 0}
+  fader: {fileID: 7887260112592955098, guid: eaec1dbd8619eaf45a7914e2867b5b4e, type: 3}
 --- !u!136 &4413375486834519721
 CapsuleCollider:
   m_ObjectHideFlags: 0
