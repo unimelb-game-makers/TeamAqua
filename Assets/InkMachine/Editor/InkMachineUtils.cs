@@ -69,6 +69,7 @@ namespace InkMachine{
             AssetDatabase.Refresh();
 
             // --> Create Dialogue Script for act <--
+            CreateDirectory(dialogueScript_FP);
             DialogueScript dialogueScript = ScriptableObject.CreateInstance<DialogueScript>();
             dialogueScript.dialogues = dialogueNodes;
             
