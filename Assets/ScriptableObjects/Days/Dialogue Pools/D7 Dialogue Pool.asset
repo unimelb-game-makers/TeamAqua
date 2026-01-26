@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: D7 Dialogue Pool
   m_EditorClassIdentifier: 
   dialogueBranches:
-  - {fileID: 11400000, guid: 82b4931719afb2b6fb687a106552834c, type: 2}
-  - {fileID: 11400000, guid: 223881ed5d986334ba407ca46aaf2253, type: 2}
-  - {fileID: 11400000, guid: 2fc5135bfab51798f9bb3d4178605350, type: 2}
-  - {fileID: 11400000, guid: b419024e287ec19b09c9379a70ae0c0a, type: 2}
-  - {fileID: 11400000, guid: 85f6c9c9a63e8427f8875080edb92690, type: 2}
+  - {fileID: 11400000, guid: f863fb1a7627e4f65b4e1d7c2811e6fb, type: 2}
+  - {fileID: 11400000, guid: 200c86884f217c780a1cc01f5b429e23, type: 2}
+  - {fileID: 11400000, guid: 57e744f6b5c071956b6965fc1e51d989, type: 2}
