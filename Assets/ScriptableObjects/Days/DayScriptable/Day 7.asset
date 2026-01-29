@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Day 7
   m_EditorClassIdentifier: 
   dialoguePool: {fileID: 11400000, guid: 293c4b85e2eba57d0b40984a421607c9, type: 2}
-  worldDatabase: {fileID: 0}
+  worldDatabase: {fileID: 11400000, guid: 7c2f1a14b5a2dffdca36b1e5ae5f202d, type: 2}
   mainQuests: []
