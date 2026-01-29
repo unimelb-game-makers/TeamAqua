@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03cf904e2f6e64abbbbaea778f82e168, type: 3}
-  m_Name: World 4 (Day 6)
+  m_Name: World 7
   m_EditorClassIdentifier: 
   npcIds:
-  - {fileID: 11400000, guid: d80ad5e1696c158d9a55146ef447002c, type: 2}
-  - {fileID: 11400000, guid: 191b92433a7a141d9b6f9bdf32c2b7a5, type: 2}
-  - {fileID: 11400000, guid: 35da565d656794f608a4382c16b278e6, type: 2}
-  - {fileID: 11400000, guid: bb709d6511748d2d081d8b9f1dcd44bb, type: 2}
-  - {fileID: 11400000, guid: bacba1e68263ac1d79465a2ef402c74f, type: 2}
   - {fileID: 11400000, guid: 2851e7cc8e0194f5c8e3d2515dbb8e04, type: 2}
-  - {fileID: 11400000, guid: 3277ea1b71558077bb2d53a97dec1b35, type: 2}
+  - {fileID: 11400000, guid: ebadc9e24a58ead4894731d4be52ee8d, type: 2}
   - {fileID: 11400000, guid: fd143563efac63448ac6d27786ecbfcd, type: 2}
+  - {fileID: 11400000, guid: 8a04fe6b38d07fc57b2d8e53bb61d889, type: 2}
+  - {fileID: 11400000, guid: d2594a82514e9796ca64172705bb5571, type: 2}
   - {fileID: 11400000, guid: 8b36c4733038037cc90fe09523430d6f, type: 2}
-  - {fileID: 11400000, guid: d92ea82281a5c58f78fae0a871b62136, type: 2}
-  - {fileID: 11400000, guid: 3fa1ab5f25ebbc0969c93e00637eaeda, type: 2}
