@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9cab653044bf4d49a25d9827a6356cc, type: 3}
-  m_Name: VillageItem
+  m_Name: Bench
   m_EditorClassIdentifier: 
