@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03cf904e2f6e64abbbbaea778f82e168, type: 3}
-  m_Name: World 2
+  m_Name: World 4
   m_EditorClassIdentifier: 
   npcIds:
   - {fileID: 11400000, guid: 2851e7cc8e0194f5c8e3d2515dbb8e04, type: 2}
-  - {fileID: 11400000, guid: c53c48841f0c94f71bdd4a0a7e45b5d6, type: 2}
-  - {fileID: 11400000, guid: 9162e462cb6689e9eabac3383378a4ff, type: 2}
-  - {fileID: 11400000, guid: 009ad5a4a69194fefa0df4522e124139, type: 2}
-  - {fileID: 11400000, guid: 3d4cd995a9fbb4a928c67b6fc128554d, type: 2}
-  - {fileID: 11400000, guid: 5ee4af01e781e470ca25177a931f95e3, type: 2}
   - {fileID: 11400000, guid: 1180c27b810024a3f9efacc5e4bcbf2a, type: 2}
   - {fileID: 11400000, guid: 191b92433a7a141d9b6f9bdf32c2b7a5, type: 2}
-  - {fileID: 11400000, guid: 3fa1ab5f25ebbc0969c93e00637eaeda, type: 2}
-  - {fileID: 11400000, guid: bdf109a88806e45c094a3351f227556c, type: 2}
-  - {fileID: 11400000, guid: c24d0028ff7f66b4cacbe4e9f3a9c1cb, type: 2}
+  - {fileID: 11400000, guid: d3fa16a94785f0042a9c39c6972cfd39, type: 2}
+  - {fileID: 11400000, guid: 6b90982497ff09d4b9012a347a60b48a, type: 2}
+  - {fileID: 11400000, guid: 08857898c9a3ec0a7b6fd0d5cb5579cf, type: 2}
+  - {fileID: 11400000, guid: a20fae61859eb9c4795a404763483ddd, type: 2}
