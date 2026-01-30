@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3a0a0995c422340b474aef8284b5b7, type: 3}
-  m_Name: Day 5
+  m_Script: {fileID: 11500000, guid: e9cab653044bf4d49a25d9827a6356cc, type: 3}
+  m_Name: Day 0 Orb 2
   m_EditorClassIdentifier: 
-  dialoguePool: {fileID: 11400000, guid: f4b93df4ac041b74c870bd14c9613a60, type: 2}
-  worldDatabase: {fileID: 11400000, guid: a186d08aa9444e750ba233c7e18cd662, type: 2}
-  mainQuests: []
