@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcIds:
   - {fileID: 11400000, guid: 2851e7cc8e0194f5c8e3d2515dbb8e04, type: 2}
-  - {fileID: 11400000, guid: bdf109a88806e45c094a3351f227556c, type: 2}
   - {fileID: 11400000, guid: 191b92433a7a141d9b6f9bdf32c2b7a5, type: 2}
   - {fileID: 11400000, guid: 1180c27b810024a3f9efacc5e4bcbf2a, type: 2}
   - {fileID: 11400000, guid: 65f3ec2ddbc834253a8fa0d207a8fd7d, type: 2}
+  - {fileID: 11400000, guid: dec5deccac5b5bece830dcf3cdf38263, type: 2}

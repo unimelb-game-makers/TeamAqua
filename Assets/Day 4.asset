@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Day 4
   m_EditorClassIdentifier: 
   dialoguePool: {fileID: 11400000, guid: 17acfd872d9060d42ae2e4a46f14443d, type: 2}
-  worldDatabase: {fileID: 11400000, guid: f1cb373854c5248b7948fafc7dab976b, type: 2}
+  worldDatabase: {fileID: 11400000, guid: 5e5b7d567537f7843be4cb1c8c18dd07, type: 2}
   mainQuests:
   - {fileID: 11400000, guid: 8e6e1d85c0056ef45acfd6249e0048ca, type: 2}
