@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: NorthIchthyosBeachFireplaceData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: ea969f52ddbd41f0d81e56524318d848, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: bce4439f8581a2c2ea148bbce7e93196, type: 2}
+    mode: 0

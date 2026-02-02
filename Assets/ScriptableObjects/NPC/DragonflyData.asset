@@ -15,3 +15,5 @@ MonoBehaviour:
   dialogues:
   - dialogue: {fileID: 11400000, guid: 9202e9f983f63554a8aa72dad6bef036, type: 2}
     mode: 0
+  - dialogue: {fileID: 11400000, guid: 82b950fb2b73b024dafee3374e3ea837, type: 2}
+    mode: 0

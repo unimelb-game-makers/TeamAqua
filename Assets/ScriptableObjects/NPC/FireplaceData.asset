@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: FireplaceData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 5892a8b099d36142883e7799af257ef2, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 7421618b003abc6c986f90e3b7e151fa, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: f9aeebc03d4a5adb4a2d1c583f417976, type: 2}
+    mode: 0

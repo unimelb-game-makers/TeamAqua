@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: SaoirseData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 1d5b801dcd8576a69bb4d27c461af1bf, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: e0e796485f402e44c9922f057da0a105, type: 2}
+    mode: 0
