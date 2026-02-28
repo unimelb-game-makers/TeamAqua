@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: BriData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 2ca4411b467c2634fbe0b1eb8f13afd4, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 8d5fb201bc7c89e4dbd465c89d341de6, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: bea05ed1b1b43674aa12572bd1627473, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 4579906c17336ea48bb5ca4951df8162, type: 2}
+    mode: 0

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: ZaleData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 2edbeeb86c809d23eb0535f10f8af75d, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: c7d64cde10675c9ef90683cf1b01553e, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: ba94fba31b43a9e5888367117706fefe, type: 2}
+    mode: 0

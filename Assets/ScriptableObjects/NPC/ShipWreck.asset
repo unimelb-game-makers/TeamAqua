@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: ShipWreck
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 848a82d67731ced4689e8d5dbe336b58, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 3e81e0eb161c3cb979adff5a040efb19, type: 2}
+    mode: 0

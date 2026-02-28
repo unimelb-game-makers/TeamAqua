@@ -21,3 +21,21 @@ MonoBehaviour:
     mode: 0
   - dialogue: {fileID: 11400000, guid: d1125e98cce12bf4bbd273fe5e22b614, type: 2}
     mode: 0
+  - dialogue: {fileID: 11400000, guid: 0c3b38015281c39468136da132e86bd9, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 8fe21ce432db10e49afd15cd659159b2, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 3cd70ffd358a83a0897e944a54049490, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 1f609ac18e3deade6a2a8357b05ae2ea, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: dba4e112860ce01b690a2ef17198efc3, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 33b8926d4a8b097b582f7e5041d993e9, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: ba79e7738dab6bef4b7c80238e0efd2c, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 4325208a60783abb792f29d807904329, type: 2}
+    mode: 0
+  - dialogue: {fileID: 11400000, guid: 82d502be437280c70969304675ebdee6, type: 2}
+    mode: 0

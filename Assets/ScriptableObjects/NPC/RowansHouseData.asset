@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9364898d0b0a84592c2be5bb71596e, type: 3}
   m_Name: RowansHouseData
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 29896ca3d11648a499a8bdfd611e991b, type: 2}
+    mode: 0
